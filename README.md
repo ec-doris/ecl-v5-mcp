@@ -1,6 +1,6 @@
 # Hello MCP Server
 
-A basic Node.js MCP server that provides a "hello" tool returning "Hello, world!".
+A basic Node.js MCP server that provides comprehensive ECL EC support.
 
 ## Installation
 
@@ -13,14 +13,14 @@ A basic Node.js MCP server that provides a "hello" tool returning "Hello, world!
 
 To run the server using stdio transport:
 ```bash
-node index.js
+node node_modules/ecl_v5_mcp/index.js
 ```
 
 This server is designed to be used with MCP clients that communicate via stdio.
 
 Configure the client to connect to this server for MCP tool calls.
 
-### VS Code Extension
+### VS Code .vscode/mcp.json Example
 ```json
 {
     "servers": {
@@ -34,3 +34,5 @@ Configure the client to connect to this server for MCP tool calls.
     }
 }
 ```
+
+be sure to use the full path of the `index.js` file. 
