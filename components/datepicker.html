@@ -1,0 +1,69 @@
+<h3 class="ecl-u-type-heading-3">Basic Datepicker</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-basic" class="ecl-form-label">Select a date</label>
+    <div class="ecl-help-block" id="datepicker-basic-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="datepicker-basic" first-day-of-week="1"></duet-date-picker>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Datepicker with Min and Max</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-minmax" class="ecl-form-label">Select a date (2024-2026)</label>
+    <div class="ecl-help-block" id="datepicker-minmax-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="datepicker-minmax" first-day-of-week="1" min="2024-01-01" max="2026-12-31"></duet-date-picker>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Disabled Datepicker</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-disabled" class="ecl-form-label ecl-form-label--disabled">Select a date</label>
+    <div class="ecl-help-block ecl-help-block--disabled" id="datepicker-disabled-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="datepicker-disabled" first-day-of-week="1" disabled></duet-date-picker>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Invalid Datepicker</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-invalid" class="ecl-form-label ecl-form-label--invalid">Select a date</label>
+    <div class="ecl-help-block" id="datepicker-invalid-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker ecl-datepicker--invalid" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY" aria-describedby="datepicker-invalid-invalid" aria-invalid="true" invalid>
+      <duet-date-picker identifier="datepicker-invalid" first-day-of-week="1"></duet-date-picker>
+    </div>
+    <div class="ecl-feedback-message" id="datepicker-invalid-invalid">
+      <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" data-ecl-icon aria-hidden="true"></span>
+      Error text
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Required Datepicker</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-required" class="ecl-form-label">Select a date<span class="ecl-form-label__required">*</span></label>
+    <div class="ecl-help-block" id="datepicker-required-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="datepicker-required" first-day-of-week="1" required></duet-date-picker>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Datepicker with Default Value</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label for="datepicker-default" class="ecl-form-label">Select a date</label>
+    <div class="ecl-help-block" id="datepicker-default-helper">Format: DD-MM-YYYY</div>
+    <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-value="2025-08-30" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="datepicker-default" first-day-of-week="1"></duet-date-picker>
+    </div>
+  </div>
+</div>

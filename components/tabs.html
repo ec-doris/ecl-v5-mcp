@@ -1,0 +1,80 @@
+<h3 class="ecl-u-type-heading-3">Tabs Component with Content</h3>
+<div class="ecl-u-mb-l">
+<div class="ecl-tabs" data-ecl-tabs="true" data-ecl-tabs-with-content data-ecl-auto-init="Tabs">
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a href="#tab-1" class="ecl-link ecl-tabs__link ecl-tabs__link--active" id="tabs-1" role="tab" aria-selected="true">Home</a>
+      </div>
+      <div class="ecl-tabs__item">
+        <a href="#tab-2" class="ecl-link ecl-tabs__link" id="tabs-2" role="tab" tabindex="-1" aria-selected="false">About</a>
+      </div>
+      <div class="ecl-tabs__item">
+        <a href="#tab-3" class="ecl-link ecl-tabs__link" id="tabs-3" role="tab" tabindex="-1" aria-selected="false">Services</a>
+      </div>
+      <div class="ecl-tabs__item">
+        <a href="#tab-4" class="ecl-link ecl-tabs__link" id="tabs-4" role="tab" tabindex="-1" aria-selected="false">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ecl-tabs-1" class="tab-content ecl-u-mt-l">
+  <h2 class="ecl-u-type-heading-2">Home Content</h2>
+  <p class="ecl-u-type-paragraph">Welcome to the home tab. This is the main content area that changes when you click on different tabs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<div id="ecl-tabs-2" class="tab-content ecl-u-mt-l" style="display: none;">
+  <h2 class="ecl-u-type-heading-2">About Content</h2>
+  <p class="ecl-u-type-paragraph">This is the about section. Here you can learn more about our organization and mission. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<div id="ecl-tabs-3" class="tab-content ecl-u-mt-l" style="display: none;">
+  <h2 class="ecl-u-type-heading-2">Services Content</h2>
+  <p class="ecl-u-type-paragraph">Explore our services and what we offer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<div id="ecl-tabs-4" class="tab-content ecl-u-mt-l" style="display: none;">
+  <h2 class="ecl-u-type-heading-2">Contact Content</h2>
+  <p class="ecl-u-type-paragraph">Get in touch with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.ecl-tabs__link');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Remove active class from all tabs
+      tabs.forEach(t => {
+        t.classList.remove('ecl-tabs__link--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      
+      // Add active class to clicked tab
+      this.classList.add('ecl-tabs__link--active');
+      this.setAttribute('aria-selected', 'true');
+      
+      // Hide all content
+      contents.forEach(content => {
+        content.style.display = 'none';
+      });
+      
+      // Show corresponding content
+      const targetId = this.getAttribute('href').substring(1);
+      const targetContent = document.getElementById('ecl-tabs-' + targetId.split('-')[1]);
+      if (targetContent) {
+        targetContent.style.display = 'block';
+      }
+    });
+  });
+});
+</script>
+</div>

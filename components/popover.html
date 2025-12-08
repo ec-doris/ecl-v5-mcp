@@ -1,0 +1,25 @@
+<h3 class="ecl-u-type-heading-3">Popover Component</h3>
+<p class="ecl-u-type-paragraph-m ecl-u-mb-l">The popover component displays additional content when triggered by a toggle element. Below is an example of a popover with a close button.</p>
+
+<div class="ecl-popover" data-ecl-auto-init="Popover">
+    <button class="ecl-button ecl-button--tertiary ecl-popover__toggle" type="button" aria-controls="popover-example" data-ecl-popover-toggle aria-expanded="false">
+        <span class="ecl-button__container">
+            <span class="ecl-button__icon-container">
+                <span class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
+            </span>
+            <span class="ecl-button__label" data-ecl-label="true">Popover</span>
+        </span>
+    </button>
+    <div id="popover-example" class="ecl-popover__container" hidden>
+        <div class="ecl-popover__scrollable">
+            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close aria-label="Close">
+                <span class="ecl-button__icon-container">
+                    <span class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="false" data-ecl-icon></span>
+                </span>
+            </button>
+            <div class="ecl-popover__content">
+                <p class="ecl-u-type-paragraph-m">Nulla est ad excepteur sint officia fugiat aute commodo ullamco amet culpa eiusmod labore. Esse nostrud aliqua pariatur pariatur officia non laboris cillum velit dolore in sit laboris fugiat.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<h3 class="ecl-u-type-heading-3">Basic Modal</h3>
+<button class="ecl-button ecl-button--secondary" id="modal-toggle">Modal toggle</button>
+<dialog data-ecl-auto-init="Modal" data-ecl-modal-toggle="modal-toggle" id="modal-example" aria-modal="true" class="ecl-modal ecl-modal--l" aria-labelledby="modal-example-header" aria-describedby="modal-example-body-scroll">
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header">
+        <div class="ecl-modal__header-content" id="modal-example-header">
+          Modal title
+        </div>
+        <button type="button" class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--icon-only ecl-modal__close" data-ecl-modal-close>
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Close</span>
+            <span class="wt-icon--close ecl-icon ecl-icon--close ecl-icon--m ecl-button__icon" data-ecl-icon aria-hidden="true"></span>
+          </span>
+        </button>
+      </header>
+      <div class="ecl-modal__body">
+        <div class="ecl-modal__body-scroll" id="modal-example-body-scroll" data-ecl-modal-scroll>
+          <p class="ecl-u-type-paragraph">Scrollable content: <br />Sed quam augue, volutpat sed dapibus in, accumsan a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum dui. Donec id posuere libero, sit amet egestas lorem. Aliquam finibus ipsum mauris, a molestie tortor laoreet. Morbi interdum orci arcu, tempor porta nisl elementum non. Morbi blandit risus sed turpis mollis mattis. Maecenas semper, risus nec sollicitudin aliquet, dui eros vehicula nulla, ac bibendum mauris mauris a lectus. Ut ut justo in sem vestibulum mollis. Pellentesque ac commodo erat. Phasellus vitae aliquet mi. Suspendisse sed nisl feugiat, porta ante a, finibus nisi.<br />Sed quam augue, volutpat sed dapibus in, accumsan a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum dui. Donec id posuere libero, sit amet egestas lorem. Aliquam finibus ipsum mauris, a molestie tortor laoreet. Morbi interdum orci arcu, tempor porta nisl elementum non. Morbi blandit risus sed turpis mollis mattis. Maecenas semper, risus nec sollicitudin aliquet, dui eros vehicula nulla, ac bibendum mauris mauris a lectus. Ut ut justo in sem vestibulum mollis. Pellentesque ac commodo erat. Phasellus vitae aliquet mi. Suspendisse sed nisl feugiat, porta ante a, finibus nisi.</p>
+        </div>
+        <div class="ecl-modal__body-overflow" aria-hidden="true"></div>
+        <div class="ecl-modal__body-fixed">
+          <div class="ecl-checkbox">
+            <input type="checkbox" name="checkbox-default" class="ecl-checkbox__input" id="checkbox-default-1" value="1" />
+            <label for="checkbox-default-1" class="ecl-checkbox__label">
+              <span class="ecl-checkbox__box">
+                <span class="wt-icon--check ecl-icon ecl-icon--check ecl-icon--xs ecl-checkbox__icon" aria-hidden="true"></span>
+              </span>
+              <span class="ecl-checkbox__text">Option label</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <footer class="ecl-modal__footer">
+        <div class="ecl-modal__footer-content">
+          <button type="button" class="ecl-button ecl-button--secondary ecl-modal__button" data-ecl-modal-close>
+            <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          </button>
+          <button type="submit" class="ecl-button ecl-button--primary ecl-modal__button">
+            <span class="ecl-button__label" data-ecl-label="true">Submit</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</dialog>

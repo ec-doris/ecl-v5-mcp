@@ -1,0 +1,96 @@
+<h3 class="ecl-u-type-heading-3">Range with Min/Max</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-minmax" min="0" max="100" value="50" aria-describedby="range-minmax-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-minmax-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Range with Step and Default Value</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-step" min="0" max="50" step="5" value="25" aria-describedby="range-step-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-step-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Disabled Range</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-disabled" min="0" max="100" value="50" disabled aria-describedby="range-disabled-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-disabled-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Invalid Range</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m ecl-range--invalid" id="range-invalid" min="0" max="100" value="50" aria-describedby="range-invalid-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-invalid-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Required Range</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-required" min="0" max="100" value="50" required aria-describedby="range-required-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-required-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Small Range</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--s" id="range-small" min="0" max="100" value="50" aria-describedby="range-small-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-small-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Large Range</h3>
+<div class="ecl-u-mb-l">
+    <div class="ecl-range-container" data-ecl-range-container>
+        <input data-ecl-range-input type="range" class="ecl-range ecl-range--l" id="range-large" min="0" max="100" value="50" aria-describedby="range-large-value">
+        <div class="ecl-range__bubble" data-ecl-range-bubble style="margin-top: -4px;">
+            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+        </div>
+        <div class="ecl-range__value" id="range-large-value">
+            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (typeof ECL !== 'undefined' && ECL.Range) {
+        document.querySelectorAll('[data-ecl-range-container]').forEach(el => ECL.Range.autoInit(el));
+    }
+</script>

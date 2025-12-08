@@ -1,0 +1,130 @@
+<h3 class="ecl-u-type-heading-3">Basic Select</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="select-basic">Select a country</label>
+    <div class="ecl-select__container">
+      <select class="ecl-select" data-ecl-auto-init="Select" id="select-basic" name="country">
+        <option value="1">Belgium</option>
+        <option value="2">France</option>
+        <option value="3">Germany</option>
+        <option value="4" selected>Italy</option>
+      </select>
+      <div class="ecl-select__icon">
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Disabled Select</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label ecl-form-label--disabled" for="select-disabled">Select a country</label>
+    <div class="ecl-select__container ecl-select__container--disabled">
+      <select class="ecl-select" data-ecl-auto-init="Select" id="select-disabled" name="country" disabled>
+        <option value="1">Belgium</option>
+        <option value="2">France</option>
+        <option value="3">Germany</option>
+        <option value="4" selected>Italy</option>
+      </select>
+      <div class="ecl-select__icon">
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button" disabled>
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Required Select</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="select-required">Select a country <span class="ecl-form-label__required">(required)</span></label>
+    <div class="ecl-select__container">
+      <select class="ecl-select" data-ecl-auto-init="Select" id="select-required" name="country" required>
+        <option value="">Please select</option>
+        <option value="1">Belgium</option>
+        <option value="2">France</option>
+        <option value="3">Germany</option>
+        <option value="4">Italy</option>
+      </select>
+      <div class="ecl-select__icon">
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Multiple Select</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="select-multiple">Select countries</label>
+    <div class="ecl-select__container">
+      <select class="ecl-select" data-ecl-auto-init="Select" data-ecl-select-multiple data-ecl-select-default="Choose options" data-ecl-select-search="Enter filter keyword" data-ecl-select-no-results="No results found" data-ecl-select-all="Select all" data-ecl-select-close="Apply" data-ecl-select-clear-all="Clear all" id="select-multiple" name="country" multiple>
+        <optgroup label="European countries">
+          <option value="1">Belgium</option>
+          <option value="2">France</option>
+          <option value="3" disabled>Luxembourg</option>
+          <option value="4">Germany</option>
+          <option value="5">Italy</option>
+        </optgroup>
+        <optgroup label="Non European countries">
+          <option value="6">China</option>
+          <option value="7">Japan</option>
+        </optgroup>
+        <option value="8">Standalone option</option>
+      </select>
+      <div class="ecl-select__icon">
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Select with Optgroups</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="select-optgroup">Select a country</label>
+    <div class="ecl-select__container">
+      <select class="ecl-select" data-ecl-auto-init="Select" id="select-optgroup" name="country">
+        <optgroup label="European countries">
+          <option value="1">Belgium</option>
+          <option value="2">France</option>
+          <option value="3" disabled>Luxembourg</option>
+          <option value="4">Germany</option>
+          <option value="5" selected>Bulgaria</option>
+        </optgroup>
+        <optgroup label="Non European countries">
+          <option value="6">China</option>
+        </optgroup>
+        <option value="7">Standalone option</option>
+      </select>
+      <div class="ecl-select__icon">
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
