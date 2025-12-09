@@ -1,4 +1,4 @@
-# Hello MCP Server
+# ECL v5 MCP Server
 
 A basic Node.js MCP server that provides comprehensive ECL EC support.
 
