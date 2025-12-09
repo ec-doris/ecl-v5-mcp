@@ -13,7 +13,7 @@ A basic Node.js MCP server that provides comprehensive ECL EC support.
 
 To run the server using stdio transport:
 ```bash
-node node_modules/ecl_v5_mcp/index.js
+node node_modules/ecl-v5-mcp/index.js
 ```
 
 This server is designed to be used with MCP clients that communicate via stdio.
@@ -28,7 +28,7 @@ Configure the client to connect to this server for MCP tool calls.
             "type": "stdio",
             "command": "node",
             "args": [
-                "/Users/xxx/ecl_v5_mcp/index.js"
+                "/Users/xxx/ecl-v5-mcp/index.js"
             ]
         }
     }
