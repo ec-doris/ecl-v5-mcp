@@ -5,9 +5,9 @@ A basic Node.js MCP server that provides comprehensive ECL EC support.
 ## Installation
 
 1. Install dependencies:
-   ```bash
-   npm install github:ec-doris/ecl-v5-mcp
-   ```
+```bash
+npm install github:ec-doris/ecl-v5-mcp
+```
 
 ## Running the Server
 
