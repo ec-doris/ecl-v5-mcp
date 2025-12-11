@@ -8,9 +8,11 @@ Copy the following folder from your node_modules into your project's assets fold
 __DIR__/assets/*
 ```
 
+- assets/ecl-ec-color-modes.css.map
 - assets/ecl-ec-print.css
 - assets/ecl-ec-print.css.map
 - assets/ecl-ec-utilities.css
+- assets/ecl-ec-utilities.css.map
 - assets/ecl-ec.css
 - assets/ecl-ec.css.map
 - assets/ecl-ec.js
