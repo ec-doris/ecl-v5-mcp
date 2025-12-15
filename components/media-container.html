@@ -1,102 +1,97 @@
-<h3 class="ecl-u-type-heading-3">Image Media Container</h3>
-<div class="ecl-u-mb-l">
-    <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Image media container</h3>
+<div class="ecl-u-mb-2xl">
+    <div class="ecl-media-container">
         <figure class="ecl-media-container__figure">
+            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
             <picture class="ecl-picture ecl-media-container__picture">
                 <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Jean Monnet banner">
             </picture>
-            <figcaption class="ecl-media-container__caption">
-                Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright
-            </figcaption>
+            <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright</figcaption>
         </figure>
     </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Video Media Container</h3>
-<div class="ecl-u-mb-l">
-    <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Video media container</h3>
+<div class="ecl-u-mb-2xl">
+    <div class="ecl-media-container">
         <figure class="ecl-media-container__figure">
             <div class="ecl-media-container__video-wrapper">
-                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" controls playsinline>
+                <!-- Sub component: video. Use the video component template; see video sub component for full markup guidance. -->
+                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" controls playsinline data-ecl-media-container-video>
                     <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4">
                 </video>
             </div>
-            <figcaption class="ecl-media-container__caption">
-                The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities. The Centre welcomes different interest groups to Brussels, or virtually, to help them better understand the role of the European Commission and how it impacts their daily lives. Visitors to the Centre in Brussels can enjoy a digital and multifunctional experience providing access to the latest initiatives.
-            </figcaption>
+            <figcaption class="ecl-media-container__caption">The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities. The Centre welcomes different interest groups to Brussels, or virtually, to help them better understand the role of the European Commission and how it impacts their daily lives. Visitors to the Centre in Brussels can enjoy a digital and multifunctional experience providing access to the latest initiatives.</figcaption>
         </figure>
     </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Embedded Video Media Container</h3>
-<div class="ecl-u-mb-l">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Embedded video media container</h3>
+<div class="ecl-u-mb-2xl">
     <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer" data-ecl-media-container-video-title="New digital strategy - Video player">
         <figure class="ecl-media-container__figure">
             <div class="ecl-media-container__media">
-                <iframe width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <figcaption class="ecl-media-container__caption">
-                The European Commission has put forward ambitious yet realistic proposals for a modern EU budget. It is time for an EU budget that reflects rapid developments in innovation, the economy, the environment and geopolitics, amongst others.
-            </figcaption>
+            <figcaption class="ecl-media-container__caption">The European Commission has put forward ambitious yet realistic proposals for a modern EU budget. It is time for an EU budget that reflects rapid developments in innovation, the economy, the environment and geopolitics, amongst others.</figcaption>
         </figure>
     </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Infographic with Expandable</h3>
-<div class="ecl-u-mb-l">
-    <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer" aria-describedby="expandable-example-content">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Infographic with expandable</h3>
+<div class="ecl-u-mb-2xl">
+    <div class="ecl-media-container" aria-describedby="expandable-example-content">
         <figure class="ecl-media-container__figure">
+            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
             <picture class="ecl-picture ecl-media-container__picture">
                 <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" alt="Infographic alt text">
             </picture>
-            <figcaption class="ecl-media-container__caption">
-                Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright
-            </figcaption>
+            <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright</figcaption>
         </figure>
+        <!-- Sub component: expandable. Use the expandable component template; see expandable sub component for full markup guidance. -->
         <div class="ecl-expandable ecl-media-container__expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-            <div class="ecl-expandable__button-container">
-                <button class="ecl-button ecl-button--secondary ecl-expandable__button" type="button" aria-expanded="false" aria-controls="expandable-example-content" data-ecl-expandable-toggle="true" data-ecl-label-expanded="Expanded" data-ecl-label-collapsed="Collapsed" data-ecl-expandable-button="true">
-                    <span class="ecl-button__container">
-                        <span class="ecl-button__label" data-ecl-label="true">Collapsed</span>
-                        <span class="ecl-button__icon-container">
-                            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-button__icon ecl-expandable__button-icon" focusable="false" aria-hidden="true" data-ecl-icon="true"></span>
-                        </span>
-                    </span>
-                </button>
-            </div>
-            <div class="ecl-expandable__content" id="expandable-example-content" hidden="hidden" data-ecl-expandable-content="true">
+            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
+            <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" data-ecl-expandable-toggle data-ecl-label-expanded="Expanded" data-ecl-label-collapsed="Collapsed" aria-expanded="false" aria-controls="expandable-example-content">
+                <span class="ecl-button__container">
+                    <span class="ecl-button__label" data-ecl-label="true">Collapsed</span>
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon></span>
+                </span>
+            </button>
+            <div class="ecl-expandable__content" id="expandable-example-content" hidden>
                 <p class="ecl-u-type-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et varius est. Sed elementum rutrum libero, at vulputate nisl posuere et. Morbi dui sem, rhoncus non fermentum eget, finibus non purus.</p>
             </div>
         </div>
     </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Autoplay Video Media Container</h3>
-<div class="ecl-u-mb-l">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Autoplay video media container</h3>
+<div class="ecl-u-mb-2xl">
     <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer">
         <figure class="ecl-media-container__figure">
             <div class="ecl-media-container__video-wrapper">
-                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" playsinline autoplay muted loop>
+                <!-- Sub component: video. Use the video component template; see video sub component for full markup guidance. -->
+                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" playsinline autoplay muted loop data-ecl-media-container-video>
                     <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4">
                 </video>
-                <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-media-container__play" type="button" aria-label="Play" data-ecl-media-container-play="true">
+                <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
+                <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__play ecl-button--icon-only" type="button" data-ecl-media-container-play>
                     <span class="ecl-button__container">
-                        <span class="ecl-button__icon-container">
-                            <span class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon="true"></span>
-                        </span>
+                        <span class="ecl-button__label" data-ecl-label="true">Play</span>
+                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline" data-ecl-icon></span>
                     </span>
                 </button>
-                <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-media-container__pause" type="button" aria-label="Pause" data-ecl-media-container-pause="true">
+                <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
+                <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__pause ecl-button--icon-only" type="button" data-ecl-media-container-pause>
                     <span class="ecl-button__container">
-                        <span class="ecl-button__icon-container">
-                            <span class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon="true"></span>
-                        </span>
+                        <span class="ecl-button__label" data-ecl-label="true">Pause</span>
+                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline" data-ecl-icon></span>
                     </span>
                 </button>
             </div>
-            <figcaption class="ecl-media-container__caption">
-                The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities.
-            </figcaption>
+            <figcaption class="ecl-media-container__caption">The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities.</figcaption>
         </figure>
     </div>
 </div>

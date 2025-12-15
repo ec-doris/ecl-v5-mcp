@@ -1,434 +1,452 @@
 <nav
-    aria-label="Main navigation"
-    class="ecl-menu"
-    data-ecl-auto-init="Menu"
-    data-ecl-menu
-    data-ecl-menu-label-close="Close"
-    data-ecl-menu-label-open="Menu"
-    data-ecl-menu-max-lines="2"
-    role="navigation">
-    <div class="ecl-menu__overlay"></div>
-    <div class="ecl-container ecl-menu__container">
+  class="ecl-menu"
+  data-ecl-menu
+  data-ecl-menu-max-lines="2"
+  data-ecl-auto-init="Menu"
+  data-ecl-menu-label-open="Menu"
+  data-ecl-menu-label-close="Close"
+  role="navigation"
+  aria-label="Main navigation"
+>
+  <div class="ecl-menu__overlay"></div>
+  <div class="ecl-container ecl-menu__container">
+    <!-- Sub component: button; use button sub component for full markup guidance. -->
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open ecl-button--icon-only"
+      data-ecl-menu-open
+      type="button"
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container">
+        <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+        <span
+          class="wt-icon--hamburger ecl-icon ecl-icon--m ecl-button__icon ecl-icon--hamburger"
+          data-ecl-icon
+          aria-hidden="true"
+        ></span>
+        <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+        <span
+          class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+          data-ecl-icon
+          aria-hidden="true"
+        ></span>
+        <span class="ecl-button__label" data-ecl-label="true">Menu</span>
+      </span>
+    </button>
+    <section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Menu">
+      <header class="ecl-menu__inner-header">
+        <!-- Sub component: button; use button sub component for full markup guidance. -->
         <button
-            aria-expanded="false"
-            class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open ecl-button--icon-only"
-            data-ecl-menu-open
-            type="button">
-            <span class="ecl-button__container">
-                <span
-                    aria-hidden="true"
-                    class="wt-icon--hamburger ecl-icon ecl-icon--m ecl-button__icon ecl-icon--hamburger"
-                    data-ecl-icon></span>
-                <span
-                    aria-hidden="true"
-                    class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-                    data-ecl-icon></span>
-                <span class="ecl-button__label" data-ecl-label="true">Menu</span>
-            </span>
+          class="ecl-button ecl-button--tertiary ecl-menu__close ecl-button--icon-only"
+          data-ecl-menu-close
+          type="submit"
+        >
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Close</span>
+            <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+            <span
+              class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+              data-ecl-icon
+              aria-hidden="true"
+            ></span>
+          </span>
         </button>
-        <section aria-label="Menu" class="ecl-menu__inner" data-ecl-menu-inner>
-            <header class="ecl-menu__inner-header">
-                <button
-                    class="ecl-button ecl-button--tertiary ecl-menu__close ecl-button--icon-only"
-                    data-ecl-menu-close
-                    type="submit">
-                    <span class="ecl-button__container">
-                        <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                        <span
-                            aria-hidden="true"
-                            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-                            data-ecl-icon></span>
-                    </span>
-                </button>
-                <div class="ecl-menu__title">Menu</div>
-                <button
-                    class="ecl-button ecl-button--tertiary ecl-menu__back"
-                    data-ecl-menu-back
-                    type="submit">
-                    <span class="ecl-button__container">
-                        <span
-                            aria-hidden="true"
-                            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                            data-ecl-icon></span>
-                        <span class="ecl-button__label" data-ecl-label="true">Back</span>
-                    </span>
-                </button>
-            </header>
-            <button
-                class="ecl-button ecl-button--tertiary ecl-menu__item ecl-menu__items-previous ecl-button--icon-only"
-                data-ecl-menu-items-previous
-                tabindex="-1"
-                type="button">
-                <span class="ecl-button__container">
-                    <span
-                        aria-hidden="true"
-                        class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                        data-ecl-icon></span>
-                    <span class="ecl-button__label" data-ecl-label="true">Previous items</span>
-                </span>
-            </button>
-            <button
-                class="ecl-button ecl-button--tertiary ecl-menu__item ecl-menu__items-next ecl-button--icon-only"
-                data-ecl-menu-items-next
-                tabindex="-1"
-                type="button">
-                <span class="ecl-button__container">
-                    <span
-                        aria-hidden="true"
-                        class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                        data-ecl-icon></span>
-                    <span class="ecl-button__label" data-ecl-label="true">Next items</span>
-                </span>
-            </button>
-            <ul class="ecl-menu__list" data-ecl-menu-list>
-                <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-item-demo-0">
-                    <a
-                        class="ecl-link ecl-link--standalone ecl-menu__link"
-                        data-ecl-menu-link
-                        href="#"
-                        id="ecl-menu-item-demo-0-link">
-                        Home
-                    </a>
-                </li>
-                <li
-                    aria-expanded="false"
-                    aria-haspopup
-                    class="ecl-menu__item ecl-menu__item--current ecl-menu__item--has-children"
-                    data-ecl-has-children
-                    data-ecl-menu-item
-                    id="ecl-menu-item-demo-1">
-                    <a
-                        class="ecl-link ecl-link--standalone ecl-menu__link ecl-menu__link--current"
-                        data-ecl-menu-link
-                        href="#"
-                        id="ecl-menu-item-demo-1-link">
-                        Principles, countries, history
-                    </a>
-                    <button
-                        aria-describedby="ecl-menu-item-demo-1-link"
-                        aria-expanded="false"
-                        aria-label="Access item's children"
-                        class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
-                        data-ecl-menu-caret
-                        type="button">
-                        <span class="ecl-button__container">
-                            <span
-                                aria-hidden="true"
-                                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
-                                data-ecl-icon></span>
-                        </span>
-                    </button>
-                    <div class="ecl-menu__mega" data-ecl-menu-mega>
-                        <ul class="ecl-menu__sublist">
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 2.1
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 2.2
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem ecl-menu__subitem--current" data-ecl-menu-subitem>
-                                <a
-                                    aria-current="page"
-                                    class="ecl-link ecl-link--standalone ecl-menu__sublink ecl-menu__sublink--current"
-                                    href="#">
-                                    Item 2.3
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 2.4
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 2.5
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 2.6
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a
-                                    class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink"
-                                    href="#">
-                                    <span class="ecl-link__label">Item 2.7</span>
-                                    <span
-                                        aria-hidden="false"
-                                        class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
-                                        role="img"
-                                        title="Link to an external domain"></span>
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem ecl-menu__see-all">
-                                <a
-                                    class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink"
-                                    href="#">
-                                    <span class="ecl-link__label">See all pages</span>
-                                    <span
-                                        aria-hidden="true"
-                                        class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li
-                    aria-expanded="false"
-                    aria-haspopup
-                    class="ecl-menu__item ecl-menu__item--has-children"
-                    data-ecl-has-children
-                    data-ecl-menu-item
-                    id="ecl-menu-item-demo-2">
-                    <a
-                        class="ecl-link ecl-link--standalone ecl-menu__link"
-                        data-ecl-menu-link
-                        href="#"
-                        id="ecl-menu-item-demo-2-link">
-                        Institutions, law, budget
-                    </a>
-                    <button
-                        aria-describedby="ecl-menu-item-demo-2-link"
-                        aria-expanded="false"
-                        aria-label="Access item's children"
-                        class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
-                        data-ecl-menu-caret
-                        type="button">
-                        <span class="ecl-button__container">
-                            <span
-                                aria-hidden="true"
-                                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
-                                data-ecl-icon></span>
-                        </span>
-                    </button>
-                    <div class="ecl-menu__mega" data-ecl-menu-mega>
-                        <ul class="ecl-menu__sublist">
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 3.1
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 3.2
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 3.3
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem ecl-menu__see-all">
-                                <a
-                                    class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink"
-                                    href="#">
-                                    <span class="ecl-link__label">See all pages</span>
-                                    <span
-                                        aria-hidden="true"
-                                        class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-item-demo-3">
-                    <a
-                        class="ecl-link ecl-link--standalone ecl-menu__link"
-                        data-ecl-menu-link
-                        href="#"
-                        id="ecl-menu-item-demo-3-link">
-                        Priorities and actions
-                    </a>
-                </li>
-                <li
-                    aria-expanded="false"
-                    aria-haspopup
-                    class="ecl-menu__item ecl-menu__item--has-children"
-                    data-ecl-has-children
-                    data-ecl-menu-item
-                    id="ecl-menu-item-demo-4">
-                    <a
-                        class="ecl-link ecl-link--standalone ecl-menu__link"
-                        data-ecl-menu-link
-                        href="#"
-                        id="ecl-menu-item-demo-4-link">
-                        News and events
-                    </a>
-                    <button
-                        aria-describedby="ecl-menu-item-demo-4-link"
-                        aria-expanded="false"
-                        aria-label="Access item's children"
-                        class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
-                        data-ecl-menu-caret
-                        type="button">
-                        <span class="ecl-button__container">
-                            <span
-                                aria-hidden="true"
-                                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
-                                data-ecl-icon></span>
-                        </span>
-                    </button>
-                    <div class="ecl-menu__mega" data-ecl-menu-mega>
-                        <ul class="ecl-menu__sublist">
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.1
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.2
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.3
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.4
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.5
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.6
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.7
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.8
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.9 with a very long label
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.10
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.11
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.12
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.13
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.14
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.15
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.16
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.17
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.18
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.19
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.20
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.21
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.22
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.23
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.24
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.25
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.26
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.27
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem>
-                                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="#">
-                                    Item 5.28
-                                </a>
-                            </li>
-                            <li class="ecl-menu__subitem ecl-menu__see-all">
-                                <a
-                                    class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink"
-                                    href="#">
-                                    <span class="ecl-link__label">See all pages</span>
-                                    <span
-                                        aria-hidden="true"
-                                        class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+        <div class="ecl-menu__title">Menu</div>
+        <!-- Sub component: button; use button sub component for full markup guidance. -->
+        <button
+          class="ecl-button ecl-button--tertiary ecl-menu__back"
+          data-ecl-menu-back
+          type="submit"
+        >
+          <span class="ecl-button__container">
+            <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+            <span
+              class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+              data-ecl-icon
+              aria-hidden="true"
+            ></span>
+            <span class="ecl-button__label" data-ecl-label="true">Back</span>
+          </span>
+        </button>
+      </header>
+      <!-- Sub component: button; use button sub component for full markup guidance. -->
+      <button
+        class="ecl-button ecl-button--tertiary ecl-menu__item ecl-menu__items-previous ecl-button--icon-only"
+        data-ecl-menu-items-previous
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+            data-ecl-icon
+            aria-hidden="true"
+          ></span>
+          <span class="ecl-button__label" data-ecl-label="true">Previous items</span>
+        </span>
+      </button>
+      <!-- Sub component: button; use button sub component for full markup guidance. -->
+      <button
+        class="ecl-button ecl-button--tertiary ecl-menu__item ecl-menu__items-next ecl-button--icon-only"
+        data-ecl-menu-items-next
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+            data-ecl-icon
+            aria-hidden="true"
+          ></span>
+          <span class="ecl-button__label" data-ecl-label="true">Next items</span>
+        </span>
+      </button>
+      <ul class="ecl-menu__list" data-ecl-menu-list>
+        <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-item-demo-0">
+          <!-- Sub component: link; use link sub component for full markup guidance. -->
+          <a
+            class="ecl-link ecl-link--standalone ecl-menu__link"
+            data-ecl-menu-link
+            href="/example"
+            id="ecl-menu-item-demo-0-link"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="ecl-menu__item ecl-menu__item--current ecl-menu__item--has-children"
+          data-ecl-menu-item
+          data-ecl-has-children
+          aria-haspopup
+          aria-expanded="false"
+          id="ecl-menu-item-demo-1"
+        >
+          <!-- Sub component: link; use link sub component for full markup guidance. -->
+          <a
+            class="ecl-link ecl-link--standalone ecl-menu__link ecl-menu__link--current"
+            data-ecl-menu-link
+            href="/example"
+            id="ecl-menu-item-demo-1-link"
+          >
+            Principles, countries, history
+          </a>
+          <!-- Sub component: button; use button sub component for full markup guidance. -->
+          <button
+            class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
+            data-ecl-menu-caret
+            type="button"
+            aria-label="Access item's children"
+            aria-describedby="ecl-menu-item-demo-1-link"
+            aria-expanded="false"
+          >
+            <span class="ecl-button__container">
+              <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+                aria-hidden="true"
+              ></span>
+            </span>
+          </button>
+          <div class="ecl-menu__mega" data-ecl-menu-mega>
+            <ul class="ecl-menu__sublist">
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 2.1</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 2.2</a>
+              </li>
+              <li class="ecl-menu__subitem ecl-menu__subitem--current" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a
+                  class="ecl-link ecl-link--standalone ecl-menu__sublink ecl-menu__sublink--current"
+                  aria-current="page"
+                  href="/example"
+                >
+                  Item 2.3
+                </a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 2.4</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 2.5</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 2.6</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink" href="/example">
+                  <span class="ecl-link__label">Item 2.7</span>
+                  <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+                  <span
+                    class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+                    role="img"
+                    title="Link to an external domain"
+                    aria-hidden="false"
+                  ></span>
+                </a>
+              </li>
+              <li class="ecl-menu__subitem ecl-menu__see-all">
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink" href="/example">
+                  <span class="ecl-link__label">See all pages</span>
+                  <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+                  <span
+                    class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </li>
             </ul>
-        </section>
-    </div>
+          </div>
+        </li>
+        <li
+          class="ecl-menu__item ecl-menu__item--has-children"
+          data-ecl-menu-item
+          data-ecl-has-children
+          aria-haspopup
+          aria-expanded="false"
+          id="ecl-menu-item-demo-2"
+        >
+          <!-- Sub component: link; use link sub component for full markup guidance. -->
+          <a
+            class="ecl-link ecl-link--standalone ecl-menu__link"
+            data-ecl-menu-link
+            href="/example"
+            id="ecl-menu-item-demo-2-link"
+          >
+            Institutions, law, budget
+          </a>
+          <!-- Sub component: button; use button sub component for full markup guidance. -->
+          <button
+            class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
+            data-ecl-menu-caret
+            type="button"
+            aria-label="Access item's children"
+            aria-describedby="ecl-menu-item-demo-2-link"
+            aria-expanded="false"
+          >
+            <span class="ecl-button__container">
+              <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+                aria-hidden="true"
+              ></span>
+            </span>
+          </button>
+          <div class="ecl-menu__mega" data-ecl-menu-mega>
+            <ul class="ecl-menu__sublist">
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 3.1</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 3.2</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 3.3</a>
+              </li>
+              <li class="ecl-menu__subitem ecl-menu__see-all">
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink" href="/example">
+                  <span class="ecl-link__label">See all pages</span>
+                  <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+                  <span
+                    class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-item-demo-3">
+          <!-- Sub component: link; use link sub component for full markup guidance. -->
+          <a
+            class="ecl-link ecl-link--standalone ecl-menu__link"
+            data-ecl-menu-link
+            href="/example"
+            id="ecl-menu-item-demo-3-link"
+          >
+            Priorities and actions
+          </a>
+        </li>
+        <li
+          class="ecl-menu__item ecl-menu__item--has-children"
+          data-ecl-menu-item
+          data-ecl-has-children
+          aria-haspopup
+          aria-expanded="false"
+          id="ecl-menu-item-demo-4"
+        >
+          <!-- Sub component: link; use link sub component for full markup guidance. -->
+          <a
+            class="ecl-link ecl-link--standalone ecl-menu__link"
+            data-ecl-menu-link
+            href="/example"
+            id="ecl-menu-item-demo-4-link"
+          >
+            News and events
+          </a>
+          <!-- Sub component: button; use button sub component for full markup guidance. -->
+          <button
+            class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-menu__button-caret"
+            data-ecl-menu-caret
+            type="button"
+            aria-label="Access item's children"
+            aria-describedby="ecl-menu-item-demo-4-link"
+            aria-expanded="false"
+          >
+            <span class="ecl-button__container">
+              <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+                aria-hidden="true"
+              ></span>
+            </span>
+          </button>
+          <div class="ecl-menu__mega" data-ecl-menu-mega>
+            <ul class="ecl-menu__sublist">
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.1</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.2</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.3</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.4</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.5</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.6</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.7</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.8</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.9 with a very long label</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.10</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.11</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.12</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.13</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.14</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.15</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.16</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.17</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.18</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.19</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.20</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.21</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.22</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.23</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.24</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.25</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.26</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.27</a>
+              </li>
+              <li class="ecl-menu__subitem" data-ecl-menu-subitem>
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-menu__sublink" href="/example">Item 5.28</a>
+              </li>
+              <li class="ecl-menu__subitem ecl-menu__see-all">
+                <!-- Sub component: link; use link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-menu__sublink" href="/example">
+                  <span class="ecl-link__label">See all pages</span>
+                  <!-- Sub component: icon; use icon sub component for full markup guidance. -->
+                  <span
+                    class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-link__icon ecl-icon--arrow-left"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
 </nav>

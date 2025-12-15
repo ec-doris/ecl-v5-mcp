@@ -1,169 +1,167 @@
-<h3 class="ecl-u-type-heading-3">Text Input Form Group</h3>
+<h3 class="ecl-u-type-heading-3">Text input with helper text</h3>
 <div class="ecl-u-mb-l">
-<div class="ecl-form-group">
-  <label class="ecl-form-label" for="text-input-demo" id="text-input-demo-label">Text Input Label</label>
-  <div class="ecl-help-block" id="text-input-demo-helper">This is optional help text for the text input.</div>
-  <input id="text-input-demo" class="ecl-text-input ecl-text-input--m" name="text-input-demo" type="text" placeholder="Enter some text">
-</div>
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="form-group-text" id="form-group-text-label">Your name<span class="ecl-form-label__required">(required)</span></label>
+    <div class="ecl-help-block" id="form-group-text-helper">Provide your full name as it appears on official documents.</div>
+    <!-- Sub component: text-input; see the text-input component for full markup guidance. -->
+    <input class="ecl-text-input ecl-text-input--m" id="form-group-text" name="form-group-text" type="text" placeholder="Jane Doe" required aria-describedby="form-group-text-helper">
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Textarea Form Group</h3>
+<h3 class="ecl-u-type-heading-3">Invalid text input with feedback</h3>
 <div class="ecl-u-mb-l">
-<div class="ecl-form-group">
-  <label class="ecl-form-label" for="textarea-demo" id="textarea-demo-label">Textarea Label</label>
-  <div class="ecl-help-block" id="textarea-demo-helper">This is optional help text for the textarea.</div>
-  <textarea id="textarea-demo" class="ecl-text-area ecl-text-area--m" name="textarea-demo" rows="4" placeholder="Enter some text"></textarea>
-</div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Select Form Group</h3>
-<div class="ecl-u-mb-l">
-<div class="ecl-form-group">
-  <label class="ecl-form-label" for="select-demo" id="select-demo-label">Select Label</label>
-  <div class="ecl-help-block" id="select-demo-helper">This is optional help text for the select.</div>
-  <div class="ecl-select__container ecl-select__container--m">
-    <select id="select-demo" class="ecl-select" name="select-demo">
-      <option value="">Please select</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-    </select>
-    <div class="ecl-select__icon">
-      <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-select__icon-shape" focusable="false" aria-hidden="true" data-ecl-icon></span>
+  <div class="ecl-form-group">
+    <label class="ecl-form-label ecl-form-label--invalid" for="form-group-email" id="form-group-email-label">Email address<span class="ecl-form-label__optional">(optional)</span></label>
+    <div class="ecl-help-block" id="form-group-email-helper">We use this to send confirmation updates.</div>
+    <!-- Sub component: text-input; see the text-input component for full markup guidance. -->
+    <input class="ecl-text-input ecl-text-input--invalid ecl-text-input--m" id="form-group-email" name="form-group-email" type="email" aria-invalid="true" aria-describedby="form-group-email-helper form-group-email-invalid">
+    <div class="ecl-feedback-message" id="form-group-email-invalid">
+      <!-- Sub component: icon; see the icon component for full markup guidance. -->
+      <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true" data-ecl-icon></span>Enter a valid email address.
     </div>
   </div>
 </div>
-</div>
 
-<h3 class="ecl-u-type-heading-3">Checkbox Group Form Group</h3>
+<h3 class="ecl-u-type-heading-3">Select inside a form group</h3>
 <div class="ecl-u-mb-l">
-<fieldset class="ecl-form-group" aria-describedby="checkbox-demo-helper">
-  <legend class="ecl-form-label" id="checkbox-demo-label">Checkbox Group Label</legend>
-  <div class="ecl-help-block" id="checkbox-demo-helper">This is optional help text for the checkbox group.</div>
-  <div class="ecl-checkbox">
-    <input class="ecl-checkbox__input" id="checkbox-demo-1" name="checkbox-demo" type="checkbox" value="option1">
-    <label class="ecl-checkbox__label" for="checkbox-demo-1">
-      <span class="ecl-checkbox__box">
-        <span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </span>
-      <span class="ecl-checkbox__text">Option 1</span>
-    </label>
-  </div>
-  <div class="ecl-checkbox">
-    <input class="ecl-checkbox__input" id="checkbox-demo-2" name="checkbox-demo" type="checkbox" value="option2">
-    <label class="ecl-checkbox__label" for="checkbox-demo-2">
-      <span class="ecl-checkbox__box">
-        <span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </span>
-      <span class="ecl-checkbox__text">Option 2</span>
-    </label>
-  </div>
-</fieldset>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Radio Group Form Group</h3>
-<div class="ecl-u-mb-l">
-<fieldset class="ecl-form-group" role="radiogroup" aria-describedby="radio-demo-helper">
-  <legend class="ecl-form-label" id="radio-demo-label">Radio Group Label</legend>
-  <div class="ecl-help-block" id="radio-demo-helper">This is optional help text for the radio group.</div>
-  <div class="ecl-radio">
-    <input class="ecl-radio__input" id="radio-demo-1" name="radio-demo" type="radio" value="option1">
-    <label class="ecl-radio__label" for="radio-demo-1">
-      <span class="ecl-radio__box">
-        <span class="ecl-radio__box-inner"></span>
-      </span>
-      <span class="ecl-radio__text">Option 1</span>
-    </label>
-  </div>
-  <div class="ecl-radio">
-    <input class="ecl-radio__input" id="radio-demo-2" name="radio-demo" type="radio" value="option2">
-    <label class="ecl-radio__label" for="radio-demo-2">
-      <span class="ecl-radio__box">
-        <span class="ecl-radio__box-inner"></span>
-      </span>
-      <span class="ecl-radio__text">Option 2</span>
-    </label>
-  </div>
-</fieldset>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Datepicker Form Group</h3>
-<div class="ecl-u-mb-l">
-<div class="ecl-form-group">
-  <label class="ecl-form-label" for="datepicker-demo" id="datepicker-demo-label">Datepicker Label</label>
-  <div class="ecl-help-block" id="datepicker-demo-helper">Format: DD-MM-YYYY</div>
-  <div class="ecl-datepicker" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle="" data-placeholder="DD-MM-YYYY">
-    <duet-date-picker identifier="datepicker-demo" first-day-of-week="1"></duet-date-picker>
-  </div>
-</div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">File Upload Form Group</h3>
-<div class="ecl-u-mb-l">
-<div class="ecl-form-group" data-ecl-autoinit="FileUpload" data-ecl-file-upload-group="true">
-  <div class="ecl-form-label" for="file-upload-demo" id="file-upload-demo-label">File Upload Label</div>
-  <div class="ecl-help-block" id="file-upload-demo-helper">Only txt, doc, docx, pdf files. Maximum size 5 MB.</div>
-  <input class="ecl-file-upload" data-ecl-auto-init="FileUpload" data-ecl-file-upload-input="" id="file-upload-demo" name="file-upload-demo" type="file">
-  <label class="ecl-file-upload__button-container" for="file-upload-demo">
-    <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button="" data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file">Choose file</span>
-  </label>
-  <ul class="ecl-file-upload__list" data-ecl-file-upload-list=""></ul>
-</div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Range Form Group</h3>
-<div class="ecl-u-mb-l">
-<div class="ecl-form-group" data-ecl-range="true" data-ecl-auto-init="Range">
-  <label class="ecl-form-label" for="range-demo" id="range-demo-label">Range Label</label>
-  <div class="ecl-help-block" id="range-demo-helper">This is optional help text for the range.</div>
-  <div class="ecl-range-container" data-ecl-range-container="">
-    <input id="range-demo" class="ecl-range ecl-range--m" name="range-demo" type="range" min="0" max="100" step="1" value="50" data-ecl-range-input="">
-    <div class="ecl-range__bubble" data-ecl-range-bubble="">
-      <span class="ecl-range__value-bubble" data-ecl-range-value-current=""></span>
-    </div>
-    <div class="ecl-range__value" id="range-demo-value">
-      Value: <span class="ecl-range__value-current" data-ecl-range-value-current="">50</span>
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="form-group-select" id="form-group-select-label">Preferred country<span class="ecl-form-label__optional">(optional)</span></label>
+    <div class="ecl-help-block" id="form-group-select-helper">Choose the destination for your application.</div>
+    <!-- Sub component: select; see the select component for full markup guidance. -->
+    <div class="ecl-select__container ecl-select__container--m">
+      <select class="ecl-select" data-ecl-auto-init="Select" id="form-group-select" name="form-group-select" aria-describedby="form-group-select-helper">
+        <option value="">Select a country</option>
+        <option value="be">Belgium</option>
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+        <option value="it">Italy</option>
+      </select>
+      <div class="ecl-select__icon">
+        <!-- Sub component: button; see the button component for full markup guidance. -->
+        <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
+            <!-- Sub component: icon; see the icon component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
+
+<h3 class="ecl-u-type-heading-3">Textarea with helper text</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="form-group-textarea" id="form-group-textarea-label">Additional details<span class="ecl-form-label__optional">(optional)</span></label>
+    <div class="ecl-help-block" id="form-group-textarea-helper">Share any extra context you think is relevant.</div>
+    <!-- Sub component: text-area; see the text-area component for full markup guidance. -->
+    <textarea class="ecl-text-area ecl-text-area--m" id="form-group-textarea" name="form-group-textarea" rows="4" aria-describedby="form-group-textarea-helper"></textarea>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Rating Field Form Group</h3>
+<h3 class="ecl-u-type-heading-3">Datepicker within form group</h3>
 <div class="ecl-u-mb-l">
-<fieldset class="ecl-form-group">
-  <legend class="ecl-form-label" id="rating-field-demo-label">Rating Field Label</legend>
-  <div class="ecl-help-block" id="rating-field-demo-helper">This is optional help text for the rating field.</div>
-  <div class="ecl-rating-field">
-    <input class="ecl-rating-field__input" id="rating-field-demo-5" name="rating-field-demo" type="radio" value="5">
-    <label class="ecl-rating-field__label" for="rating-field-demo-5">
-      <span class="ecl-rating-field__sr-label">5 stars</span>
-      <span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      <span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </label>
-    <input class="ecl-rating-field__input" id="rating-field-demo-4" name="rating-field-demo" type="radio" value="4">
-    <label class="ecl-rating-field__label" for="rating-field-demo-4">
-      <span class="ecl-rating-field__sr-label">4 stars</span>
-      <span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      <span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </label>
-    <input class="ecl-rating-field__input" id="rating-field-demo-3" name="rating-field-demo" type="radio" value="3">
-    <label class="ecl-rating-field__label" for="rating-field-demo-3">
-      <span class="ecl-rating-field__sr-label">3 stars</span>
-      <span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      <span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </label>
-    <input class="ecl-rating-field__input" id="rating-field-demo-2" name="rating-field-demo" type="radio" value="2">
-    <label class="ecl-rating-field__label" for="rating-field-demo-2">
-      <span class="ecl-rating-field__sr-label">2 stars</span>
-      <span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      <span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </label>
-    <input class="ecl-rating-field__input" id="rating-field-demo-1" name="rating-field-demo" type="radio" value="1">
-    <label class="ecl-rating-field__label" for="rating-field-demo-1">
-      <span class="ecl-rating-field__sr-label">1 star</span>
-      <span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      <span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </label>
+  <div class="ecl-form-group">
+    <label class="ecl-form-label" for="form-group-datepicker" id="form-group-datepicker-label">Choose a date<div class="ecl-help-block--hidden">Format: DD-MM-YYYY</div></label>
+    <div class="ecl-help-block" id="form-group-datepicker-helper" aria-hidden="true">Format: DD-MM-YYYY</div>
+    <!-- Sub component: datepicker; see the datepicker component for full markup guidance. -->
+    <div class="ecl-datepicker ecl-datepicker--m" aria-describedby="form-group-datepicker-helper" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
+      <duet-date-picker identifier="form-group-datepicker" first-day-of-week="1"></duet-date-picker>
+    </div>
   </div>
-</fieldset>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Checkbox group inside form group</h3>
+<div class="ecl-u-mb-l">
+  <fieldset class="ecl-form-group">
+    <legend class="ecl-form-label" id="form-group-checkbox-label">Select topics<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Pick at least one topic.</div></legend>
+    <div class="ecl-help-block" id="form-group-checkbox-helper" aria-hidden="true">Pick at least one topic.</div>
+    <!-- Sub component: checkbox; see the checkbox component for full markup guidance. -->
+    <div class="ecl-checkbox">
+      <input class="ecl-checkbox__input" id="form-group-checkbox-1" name="form-group-checkbox" type="checkbox" value="climate" required>
+      <label class="ecl-checkbox__label" for="form-group-checkbox-1"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true" data-ecl-icon></span></span><span class="ecl-checkbox__text">Climate action</span></label>
+    </div>
+    <div class="ecl-checkbox">
+      <input class="ecl-checkbox__input" id="form-group-checkbox-2" name="form-group-checkbox" type="checkbox" value="health" required>
+      <label class="ecl-checkbox__label" for="form-group-checkbox-2"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true" data-ecl-icon></span></span><span class="ecl-checkbox__text">Public health</span></label>
+    </div>
+    <div class="ecl-checkbox">
+      <input class="ecl-checkbox__input" id="form-group-checkbox-3" name="form-group-checkbox" type="checkbox" value="digital" required>
+      <label class="ecl-checkbox__label" for="form-group-checkbox-3"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true" data-ecl-icon></span></span><span class="ecl-checkbox__text">Digital transformation</span></label>
+    </div>
+  </fieldset>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Radio group with validation</h3>
+<div class="ecl-u-mb-l">
+  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true" aria-invalid="true">
+    <legend class="ecl-form-label ecl-form-label--invalid" id="form-group-radio-label">Select one option<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Choose one contact method.</div><div class="ecl-feedback-message--hidden">Select one option to continue.</div></legend>
+    <div class="ecl-help-block" id="form-group-radio-helper" aria-hidden="true">Choose one contact method.</div>
+    <!-- Sub component: radio; see the radio component for full markup guidance. -->
+    <div class="ecl-radio">
+      <input class="ecl-radio__input" id="form-group-radio-1" name="form-group-radio" type="radio" value="email" required>
+      <label class="ecl-radio__label" for="form-group-radio-1"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Email</span></label>
+    </div>
+    <div class="ecl-radio">
+      <input class="ecl-radio__input" id="form-group-radio-2" name="form-group-radio" type="radio" value="phone" required>
+      <label class="ecl-radio__label" for="form-group-radio-2"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Phone call</span></label>
+    </div>
+    <div class="ecl-feedback-message" id="form-group-radio-invalid" aria-hidden="true">
+      <!-- Sub component: icon; see the icon component for full markup guidance. -->
+      <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true" data-ecl-icon></span>Select one option to continue.
+    </div>
+  </fieldset>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Range inside form group</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group" data-ecl-range="true" data-ecl-auto-init="Range">
+    <label class="ecl-form-label" for="form-group-range" id="form-group-range-label">Satisfaction score<span class="ecl-form-label__optional">(optional)</span></label>
+    <div class="ecl-help-block" id="form-group-range-helper">Move the handle to set a value between 0 and 100.</div>
+    <!-- Sub component: range; see the range component for full markup guidance. -->
+    <div class="ecl-range-container" data-ecl-range-container>
+      <input class="ecl-range ecl-range--m" data-ecl-range-input id="form-group-range" name="form-group-range" type="range" min="0" max="100" step="10" value="30" aria-describedby="form-group-range-helper form-group-range-value">
+      <div class="ecl-range__bubble" data-ecl-range-bubble>
+        <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
+      </div>
+      <div class="ecl-range__value" id="form-group-range-value">Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span></div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">File upload within form group</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
+    <div class="ecl-form-label" for="form-group-file" id="form-group-file-label">Upload supporting document<span class="ecl-form-label__required">(required)</span></div>
+    <div class="ecl-help-block" id="form-group-file-helper">Accepted formats: PDF, DOCX, ODT. Maximum size 5 MB.</div>
+    <!-- Sub component: file-upload; see the file-upload component for full markup guidance. -->
+    <input class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="form-group-file" name="form-group-file" type="file" required aria-describedby="form-group-file-label form-group-file-helper">
+    <label class="ecl-file-upload__button-container" for="form-group-file">
+      <!-- Sub component: button; see the button component for full markup guidance. -->
+      <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file">Choose file</span>
+    </label>
+    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite"></ul>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Rating field as a grouped input</h3>
+<div class="ecl-u-mb-l">
+  <fieldset class="ecl-form-group">
+    <legend class="ecl-form-label" id="form-group-rating-label">Rate your experience<span class="ecl-form-label__optional">(optional)</span><div class="ecl-help-block--hidden">Select a score from 1 to 5.</div></legend>
+    <div class="ecl-help-block" id="form-group-rating-helper" aria-hidden="true">Select a score from 1 to 5.</div>
+    <!-- Sub component: rating-field; see the rating-field component for full markup guidance. -->
+    <div class="ecl-rating-field">
+      <input class="ecl-rating-field__input" id="form-group-rating-5" name="form-group-rating" type="radio" value="5">
+      <label class="ecl-rating-field__label" for="form-group-rating-5"><span class="ecl-rating-field__sr-label">5 stars</span><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true" data-ecl-icon></span><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true" data-ecl-icon></span></label>
+      <input class="ecl-rating-field__input" id="form-group-rating-4" name="form-group-rating" type="radio" value="4">
+      <label class="ecl-rating-field__label" for="form-group-rating-4"><span class="ecl-rating-field__sr-label">4 stars</span><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true" data-ecl-icon></span><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true" data-ecl-icon></span></label>
+      <input class="ecl-rating-field__input" id="form-group-rating-3" name="form-group-rating" type="radio" value="3">
+      <label class="ecl-rating-field__label" for="form-group-rating-3"><span class="ecl-rating-field__sr-label">3 stars</span><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true" data-ecl-icon></span><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true" data-ecl-icon></span></label>
+      <input class="ecl-rating-field__input" id="form-group-rating-2" name="form-group-rating" type="radio" value="2">
+      <label class="ecl-rating-field__label" for="form-group-rating-2"><span class="ecl-rating-field__sr-label">2 stars</span><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true" data-ecl-icon></span><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true" data-ecl-icon></span></label>
+      <input class="ecl-rating-field__input" id="form-group-rating-1" name="form-group-rating" type="radio" value="1">
+      <label class="ecl-rating-field__label" for="form-group-rating-1"><span class="ecl-rating-field__sr-label">1 star</span><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true" data-ecl-icon></span><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true" data-ecl-icon></span></label>
+    </div>
+  </fieldset>
 </div>

@@ -1,53 +1,74 @@
-<h3 class="ecl-u-type-heading-3">Default Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <p class="ecl-u-type-paragraph ecl-u-mr-m ecl-u-mb-s">This is a <a href="#" class="ecl-link">default link</a> in a paragraph.</p>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Links follow the structure in <code>link</code>; all examples below mirror that markup with ECL utility spacing.</p>
+
+<h3 class="ecl-u-type-heading-3">Inline link</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-l">
+    The European Commission is the executive of
+    <a href="/example" class="ecl-link">The European Union</a>
+    and promotes its general interest.
+</p>
+
+<h3 class="ecl-u-type-heading-3">Standalone and button variants</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+    <a href="/example" class="ecl-link ecl-link--standalone ecl-u-mr-m ecl-u-mb-s">Standalone link</a>
+    <a href="/example" class="ecl-link ecl-link--primary ecl-u-mr-m ecl-u-mb-s">Primary link</a>
+    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-u-mr-m ecl-u-mb-s">Call to action link</a>
+    <a href="/example" class="ecl-link ecl-link--primary-neutral ecl-u-mr-m ecl-u-mb-s">Neutral action link</a>
+    <a href="/example" class="ecl-link ecl-link--secondary ecl-u-mr-m ecl-u-mb-s">Secondary link</a>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Standalone Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-link--standalone ecl-u-mr-m ecl-u-mb-s">Standalone Link</a>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Primary Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-link--primary ecl-u-mr-m ecl-u-mb-s">Primary Link</a>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Primary Highlight Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-link--primary-highlight ecl-u-mr-m ecl-u-mb-s">Primary Highlight Link</a>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Secondary Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-link--secondary ecl-u-mr-m ecl-u-mb-s">Secondary Link</a>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Links with Icons</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-link--icon ecl-u-mr-m ecl-u-mb-s">
-        <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-        <span class="ecl-link__label">Link with Icon Before</span>
+<h3 class="ecl-u-type-heading-3">Links with icons</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Icons are sub components; reuse the icon template for full markup guidance.</p>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+    <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-u-mr-m ecl-u-mb-s">
+        <span class="ecl-link__label">Icon after</span>
+        <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+        <span aria-hidden="true" class="wt-icon--download ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--download"></span>
     </a>
-    <a href="#" class="ecl-link ecl-link--icon ecl-u-mr-m ecl-u-mb-s">
-        <span class="ecl-link__label">Link with Icon After</span>
-        <span class="wt-icon--download ecl-icon ecl-icon--xs ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
+    <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-u-mr-m ecl-u-mb-s">
+        <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
+        <span class="ecl-link__label">Icon before</span>
     </a>
-    <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-u-mr-m ecl-u-mb-s" aria-label="Download">
-        <span class="wt-icon--download ecl-icon ecl-icon--xs ecl-link__icon" focusable="false" aria-hidden="false" data-ecl-icon></span>
+    <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-u-mr-m ecl-u-mb-s" aria-label="Download file">
+        <span class="ecl-link__label">Download file</span>
+        <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+        <span aria-hidden="true" class="wt-icon--download ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--download"></span>
     </a>
 </div>
 
-<h3 class="ecl-u-type-heading-3">External Links</h3>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="#" class="ecl-link ecl-u-mr-m ecl-u-mb-s">External Link</a>
-    <a href="#" class="ecl-link ecl-link--standalone ecl-u-mr-m ecl-u-mb-s">Standalone External</a>
-    <a href="#" class="ecl-link ecl-link--primary ecl-u-mr-m ecl-u-mb-s">Primary External</a>
+<h3 class="ecl-u-type-heading-3">External link</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">External links append the external icon; follow the icon sub component for full markup guidance.</p>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+    <a href="https://europa.eu" class="ecl-link ecl-link--standalone ecl-link--icon ecl-u-mr-m ecl-u-mb-s">
+        <span class="ecl-link__label">Visit europa.eu</span>
+        <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+        <span aria-hidden="false" class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" role="img" title="Opens an external website"></span>
+    </a>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Inverted Links</h3>
-<div class="ecl-u-bg-grey ecl-u-pa-m ecl-u-mb-l">
-    <p class="ecl-u-type-paragraph ecl-u-mr-m ecl-u-mb-s">This is an <a href="#" class="ecl-link ecl-link--inverted">inverted link</a> on dark background.</p>
-    <a href="#" class="ecl-link ecl-link--standalone ecl-link--inverted ecl-u-mr-m ecl-u-mb-s">Inverted Standalone</a>
-    <a href="#" class="ecl-link ecl-link--primary ecl-link--inverted ecl-u-mr-m ecl-u-mb-s">Inverted Primary</a>
+<h3 class="ecl-u-type-heading-3">Link with indicator</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The indicator badge is a sub component; see the indicator component for full markup guidance.</p>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-link--icon-only ecl-u-mr-m ecl-u-mb-s" aria-label="3 unread updates">
+        <span class="ecl-link__label">3 unread updates</span>
+        <span class="ecl-link__icon-container">
+            <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+            <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
+            <!-- Sub component: indicator. Use the indicator component template for full markup guidance. -->
+            <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
+                <span class="ecl-indicator__value">3</span>
+                <span class="ecl-indicator__label">Unread items</span>
+            </span>
+        </span>
+    </a>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Inverted links</h3>
+<div class="ecl-u-bg-grey ecl-u-bg-dark ecl-u-type-color-white ecl-u-pa-m ecl-u-mb-l">
+    <p class="ecl-u-type-paragraph ecl-u-mb-s">Use inverted modifiers when links sit on a dark background.</p>
+    <div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start">
+        <a href="/example" class="ecl-link ecl-link--inverted ecl-u-mr-m ecl-u-mb-s">Inverted inline link</a>
+        <a href="/example" class="ecl-link ecl-link--standalone ecl-link--inverted ecl-u-mr-m ecl-u-mb-s">Inverted standalone</a>
+        <a href="/example" class="ecl-link ecl-link--primary ecl-link--inverted ecl-u-mr-m ecl-u-mb-s">Inverted primary link</a>
+    </div>
 </div>

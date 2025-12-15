@@ -1,70 +1,106 @@
-<h3 class="ecl-u-type-heading-3">Simple Breadcrumb</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Simple breadcrumb</h3>
+<div class="ecl-u-mb-xl">
+    <nav class="ecl-breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
+        <ol class="ecl-breadcrumb__container">
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
+                Current Page Label
+            </li>
+        </ol>
+    </nav>
+</div>
 
-<nav class="ecl-breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
-    <ol class="ecl-breadcrumb__container">
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Home</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Parent Page</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
-            Current Page
-        </li>
-    </ol>
-</nav>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Long breadcrumb with ellipsis</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The ellipsis reveals intermediate levels when activated; on small screens only the first, last, and current items stay visible.</p>
+<div class="ecl-u-mb-xl">
+    <nav class="ecl-breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true" data-ecl-auto-init="Breadcrumb">
+        <ol class="ecl-breadcrumb__container">
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__segment--ellipsis" data-ecl-breadcrumb-ellipsis aria-hidden="true">
+                <!-- Sub component: button. Use the button component template to render this button; see button sub component for full markup guidance. -->
+                <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--m ecl-breadcrumb__ellipsis" type="button" data-ecl-breadcrumb-ellipsis-button aria-label="Show more breadcrumb items">…</button>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label level 2</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label level 3</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label level 4</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label level 5</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
+                Current Page Label
+            </li>
+        </ol>
+    </nav>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Long Breadcrumb with Ellipsis</h3>
-<p class="ecl-u-type-paragraph ecl-u-type-s">On mobile devices, the ellipsis button is hidden and only the first link, last link, and current page are shown for better usability.</p>
-
-<nav class="ecl-breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true" data-ecl-auto-init="Breadcrumb">
-    <ol class="ecl-breadcrumb__container">
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Home</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment ecl-breadcrumb__segment--ellipsis" data-ecl-breadcrumb-ellipsis aria-hidden="true">
-            <button type="button" class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--m ecl-breadcrumb__ellipsis" data-ecl-breadcrumb-ellipsis-button aria-label="Show more breadcrumb items">…</button>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Parent Page 4</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Parent Page 5</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="expandable">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Parent Page 6</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
-            Current Page Label
-        </li>
-    </ol>
-</nav>
-
-<h3 class="ecl-u-type-heading-3">Breadcrumb with Custom Navigation Text</h3>
-
-<nav class="ecl-breadcrumb" aria-label="Breadcrumb navigation:" data-ecl-breadcrumb="true">
-    <ol class="ecl-breadcrumb__container">
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">European Commission</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Policies</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-breadcrumb__link">Digital Services</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
-            Europa Component Library
-        </li>
-    </ol>
-</nav>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Breadcrumb with custom navigation text</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Use the navigation label to announce the trail purpose to assistive technologies.</p>
+<div class="ecl-u-mb-xl">
+    <nav class="ecl-breadcrumb" aria-label="Breadcrumb navigation:" data-ecl-breadcrumb="true">
+        <ol class="ecl-breadcrumb__container">
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">European Commission</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Policies</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+                <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Digital Services</a>
+                <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+            </li>
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
+                Europa Component Library
+            </li>
+        </ol>
+    </nav>
+</div>

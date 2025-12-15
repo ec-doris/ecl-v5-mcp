@@ -1,8 +1,10 @@
-
-<h3 class="ecl-u-type-heading-3">Image Banner</h3>
-<section class="ecl-banner ecl-banner--m ecl-banner--h-left ecl-banner--v-center" id="banner-example-image" data-ecl-banner data-ecl-auto-init="Banner">
+<h3 class="ecl-u-type-heading-3">Banner with Image</h3>
+<section class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center" id="banner-example-image" data-ecl-banner data-ecl-auto-init="Banner">
     <figure class="ecl-banner__picture-container">
-        <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg" alt="alternative text" class="ecl-banner__picture ecl-banner__image">
+        <!-- Sub-component: Picture. Use the picture component template for full markup guidance. -->
+        <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
+            <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg" alt="alternative text" class="ecl-banner__image" />
+        </picture>
         <footer class="ecl-banner__credit" data-ecl-banner-footer>
             <div class="ecl-container">© Copyright</div>
         </footer>
@@ -12,18 +14,22 @@
             <div class="ecl-banner__content">
                 <div class="ecl-banner__title" id="banner-example-image-title">
                     <span class="ecl-banner__title-text">
-                        <a href="#" class="ecl-link ecl-banner__title-link">European Commission Initiatives</a>
+                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                        <a href="/example" class="ecl-link ecl-banner__title-link">Lorem ipsum</a>
                     </span>
                 </div>
                 <p class="ecl-banner__description" id="banner-example-image-description">
                     <span class="ecl-banner__description-text">
-                        <a href="#" class="ecl-link ecl-banner__description-link">Discover how the European Commission is driving innovation and sustainability across Europe.</a>
+                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                        <a href="/example" class="ecl-link ecl-banner__description-link">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a>
                     </span>
                 </p>
                 <div class="ecl-banner__cta">
-                    <a href="#" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-image-title">
-                        <span class="ecl-link__label">Learn more</span>
-                        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-link__icon" data-ecl-icon aria-hidden="true"></span>
+                    <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-image-title">
+                        <span class="ecl-link__label">CTA link</span>
+                        <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
                     </a>
                 </div>
             </div>
@@ -31,27 +37,30 @@
     </div>
 </section>
 
-<h3 class="ecl-u-type-heading-3">Video Banner</h3>
-<section class="ecl-banner ecl-banner--m ecl-banner--h-center ecl-banner--v-center" id="banner-example-video" data-ecl-banner data-ecl-auto-init="Banner">
+<h3 class="ecl-u-type-heading-3">Banner with Video</h3>
+<section class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center" id="banner-example-video" data-ecl-banner data-ecl-auto-init="Banner">
     <div class="ecl-banner__video-container">
-        <video class="ecl-banner__video" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" data-ecl-banner-video controls muted>
-            <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4">
+        <!-- Sub-component: Video. Use the video component template for full markup guidance. -->
+        <video class="ecl-video ecl-banner__video" data-ecl-banner-video autoplay muted loop playsinline poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg">
+            <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4" />
         </video>
         <div class="ecl-banner__credit" data-ecl-banner-footer>
             <div class="ecl-container">© Copyright</div>
         </div>
-        <button type="button" class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--m ecl-banner__play" data-ecl-banner-play aria-label="Play video">
+        <!-- Sub-component: Button. Use the button component template for full markup guidance. -->
+        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__play ecl-button--icon-only" data-ecl-banner-play type="button">
             <span class="ecl-button__container">
-                <span class="ecl-button__icon-container">
-                    <span class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon" data-ecl-icon aria-hidden="false"></span>
-                </span>
+                <span class="ecl-button__label" data-ecl-label="true">Play video</span>
+                <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
+                <span aria-hidden="true" class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline" data-ecl-icon></span>
             </span>
         </button>
-        <button type="button" class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--m ecl-banner__pause" data-ecl-banner-pause aria-label="Pause video">
+        <!-- Sub-component: Button. Use the button component template for full markup guidance. -->
+        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__pause ecl-button--icon-only" data-ecl-banner-pause type="button">
             <span class="ecl-button__container">
-                <span class="ecl-button__icon-container">
-                    <span class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon" data-ecl-icon aria-hidden="false"></span>
-                </span>
+                <span class="ecl-button__label" data-ecl-label="true">Pause video</span>
+                <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
+                <span aria-hidden="true" class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline" data-ecl-icon></span>
             </span>
         </button>
     </div>
@@ -60,93 +69,22 @@
             <div class="ecl-banner__content">
                 <div class="ecl-banner__title" id="banner-example-video-title">
                     <span class="ecl-banner__title-text">
-                        <a href="#" class="ecl-link ecl-banner__title-link">European Innovation</a>
+                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                        <a href="/example" class="ecl-link ecl-banner__title-link">Lorem ipsum</a>
                     </span>
                 </div>
                 <p class="ecl-banner__description" id="banner-example-video-description">
                     <span class="ecl-banner__description-text">
-                        <a href="#" class="ecl-link ecl-banner__description-link">Watch how European innovation is shaping the future of technology and sustainability.</a>
+                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                        <a href="/example" class="ecl-link ecl-banner__description-link">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a>
                     </span>
                 </p>
                 <div class="ecl-banner__cta">
-                    <a href="#" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-video-title">
-                        <span class="ecl-link__label">Watch now</span>
-                        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-link__icon" data-ecl-icon aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<h3 class="ecl-u-type-heading-3">Banner with Dark Background</h3>
-<section class="ecl-banner ecl-banner--m ecl-banner--h-right ecl-banner--v-bottom ecl-banner--box-bg-dark ecl-banner--color-light" id="banner-dark-bg" data-ecl-banner data-ecl-auto-init="Banner">
-    <figure class="ecl-banner__picture-container">
-        <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="European Parliament building" class="ecl-banner__picture ecl-banner__image">
-        <footer class="ecl-banner__credit" data-ecl-banner-footer>
-            <div class="ecl-container">© European Parliament</div>
-        </footer>
-    </figure>
-    <div class="ecl-container ecl-banner__info">
-        <div class="ecl-banner__container" data-ecl-banner-container>
-            <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="banner-dark-bg-title">
-                    <span class="ecl-banner__title-text">European Parliament</span>
-                </div>
-                <p class="ecl-banner__description" id="banner-dark-bg-description">
-                    <span class="ecl-banner__description-text">The heart of European democracy where decisions are made that affect millions of citizens across Europe.</span>
-                </p>
-                <div class="ecl-banner__cta">
-                    <a href="#" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-dark-bg-title">
-                        <span class="ecl-link__label">Visit Parliament</span>
-                        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-link__icon" data-ecl-icon aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<h3 class="ecl-u-type-heading-3">Small Banner</h3>
-<section class="ecl-banner ecl-banner--s ecl-banner--h-left ecl-banner--v-center" id="banner-small" data-ecl-banner data-ecl-auto-init="Banner">
-    <figure class="ecl-banner__picture-container">
-        <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" alt="European flag" class="ecl-banner__picture ecl-banner__image">
-    </figure>
-    <div class="ecl-container ecl-banner__info">
-        <div class="ecl-banner__container" data-ecl-banner-container>
-            <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="banner-small-title">
-                    <span class="ecl-banner__title-text">United in Diversity</span>
-                </div>
-                <p class="ecl-banner__description" id="banner-small-description">
-                    <span class="ecl-banner__description-text">The European Union represents peace, stability, and prosperity for its citizens.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<h3 class="ecl-u-type-heading-3">Large Banner</h3>
-<section class="ecl-banner ecl-banner--l ecl-banner--h-center ecl-banner--v-center ecl-banner--font-l" id="banner-large" data-ecl-banner data-ecl-auto-init="Banner">
-    <figure class="ecl-banner__picture-container">
-        <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" alt="European landscape" class="ecl-banner__picture ecl-banner__image">
-        <footer class="ecl-banner__credit" data-ecl-banner-footer>
-            <div class="ecl-container">© European Commission</div>
-        </footer>
-    </figure>
-    <div class="ecl-container ecl-banner__info">
-        <div class="ecl-banner__container" data-ecl-banner-container>
-            <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="banner-large-title">
-                    <span class="ecl-banner__title-text">Europe's Natural Heritage</span>
-                </div>
-                <p class="ecl-banner__description" id="banner-large-description">
-                    <span class="ecl-banner__description-text">Protecting and preserving Europe's diverse landscapes and biodiversity for future generations.</span>
-                </p>
-                <div class="ecl-banner__cta">
-                    <a href="#" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-large-title">
-                        <span class="ecl-link__label">Explore nature</span>
-                        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-link__icon" data-ecl-icon aria-hidden="true"></span>
+                    <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
+                    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-video-title">
+                        <span class="ecl-link__label">CTA link</span>
+                        <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
                     </a>
                 </div>
             </div>

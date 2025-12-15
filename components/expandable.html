@@ -1,32 +1,41 @@
-<h3 class="ecl-u-type-heading-3">Basic Expandable</h3>
-<div class="ecl-expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-    <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-example-content" data-ecl-expandable-toggle data-ecl-label-expanded="Expanded" data-ecl-label-collapsed="Collapsed" aria-expanded="false">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default expandable</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the expandable component to tuck away supporting details while keeping the primary narrative concise.</p>
+<div class="ecl-expandable ecl-u-mb-2xl" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
+    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
+    <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-default-content" data-ecl-expandable-toggle data-ecl-label-expanded="Hide details" data-ecl-label-collapsed="Show details" aria-expanded="false">
         <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Collapsed</span>
+            <span class="ecl-button__label" data-ecl-label="true">Show details</span>
+            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
             <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon aria-hidden="true"></span>
         </span>
     </button>
-    <div id="expandable-example-content" class="ecl-expandable__content" hidden>
-        <p class="ecl-u-type-paragraph-m">The EU is building an energy union that ensures Europe's energy supply is safe, viable and accessible to all. In doing so, it can boost the economy and attract investments that can create new jobs opportunities.</p>
+    <div id="expandable-default-content" class="ecl-expandable__content" hidden>
+        <p class="ecl-u-type-paragraph-m">The EU is building an energy union that ensures Europe&rsquo;s energy supply is safe, viable, and accessible to all. In doing so, it can boost the economy and attract investments that can create new jobs opportunities.</p>
     </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Expandable with Rich Content</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Expandable with rich content</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Pair the expandable with lists and calls to action while keeping the toggle and content containers aligned to the component specification.</p>
 <div class="ecl-expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
+    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
     <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-rich-content" data-ecl-expandable-toggle data-ecl-label-expanded="Show less" data-ecl-label-collapsed="Show more" aria-expanded="false">
         <span class="ecl-button__container">
             <span class="ecl-button__label" data-ecl-label="true">Show more</span>
+            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
             <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon aria-hidden="true"></span>
         </span>
     </button>
     <div id="expandable-rich-content" class="ecl-expandable__content" hidden>
         <p class="ecl-u-type-paragraph-m">The European Commission has identified key priorities for the coming years, focusing on sustainable growth, digital transformation, and strengthening the European social model.</p>
         <ul class="ecl-u-type-list-ul ecl-u-mt-m">
-            <li class="ecl-u-type-list-ul__item">Cross-border e-commerce</li>
-            <li class="ecl-u-type-list-ul__item">Digital content portability</li>
-            <li class="ecl-u-type-list-ul__item">Consumer protection in digital services</li>
-            <li class="ecl-u-type-list-ul__item">Digital skills and jobs</li>
+            <li class="ecl-u-type-list-ul__item">Cross-border e-commerce and consumer safeguards</li>
+            <li class="ecl-u-type-list-ul__item">Digital content portability across the Union</li>
+            <li class="ecl-u-type-list-ul__item">Connectivity, skills, and inclusion initiatives</li>
+            <li class="ecl-u-type-list-ul__item">Data protection and trustworthy AI</li>
         </ul>
-        <p class="ecl-u-type-paragraph-m ecl-u-mt-m"><a href="#" class="ecl-link">Learn more about the Digital Single Market</a></p>
+        <p class="ecl-u-type-paragraph-m ecl-u-mt-m">
+            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+            <a class="ecl-link" href="#">Learn more about the Digital Single Market</a>
+        </p>
     </div>
 </div>

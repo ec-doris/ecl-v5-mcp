@@ -1,12 +1,18 @@
-<h3 class="ecl-u-type-heading-3">Default Description List</h3>
-<dl class="ecl-description-list" data-ecl-description-list data-ecl-description-list-more-label="Show more items" data-ecl-description-list-visible-items="2" data-ecl-auto-init="DescriptionList">
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default description list</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the vertical description list to pair terms with rich content, including links, tags, and taxonomy values.</p>
+<dl class="ecl-description-list ecl-u-mb-3xl" data-ecl-description-list data-ecl-description-list-more-label="Show more items" data-ecl-description-list-visible-items="2" data-ecl-auto-init="DescriptionList">
     <dt class="ecl-description-list__term">Label 01</dt>
-    <dd class="ecl-description-list__definition">Descriptive text with <a href="/example" class="ecl-link">inline link</a></dd>
+    <dd class="ecl-description-list__definition">
+        Descriptive text with
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a class="ecl-link" href="/example">inline link</a>
+    </dd>
     <dt class="ecl-description-list__term">Label 02</dt>
     <dd class="ecl-description-list__definition ecl-description-list__definition--link">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link</a>
             </li>
         </ul>
     </dd>
@@ -16,8 +22,10 @@
     <dd class="ecl-description-list__definition ecl-description-list__definition--link">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
                     <span class="ecl-link__label">Standalone link</span>
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
                     <span aria-hidden="false" class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" role="img" title="Link to an external domain"></span>
                 </a>
             </li>
@@ -27,30 +35,131 @@
     <dd class="ecl-description-list__definition ecl-description-list__definition--inline">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 1</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 1</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 2</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 2</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 3</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 3</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 4</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 4</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 06</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--link">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Very very very very very very very very very very very very veryveryveryvery long standalone link that wraps in multiple lines</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 07</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--link">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--facebook ecl-icon ecl-icon--s ecl-link__icon ecl-icon--facebook"></span>
+                    <span class="ecl-link__label">social network 1</span>
+                </a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--twitter ecl-icon ecl-icon--s ecl-link__icon ecl-icon--twitter"></span>
+                    <span class="ecl-link__label">social network 2</span>
+                </a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--mastodon ecl-icon ecl-icon--s ecl-link__icon ecl-icon--mastodon"></span>
+                    <span class="ecl-link__label">social network 3</span>
+                </a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 08</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--tag">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Long link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Long link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 09</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--taxonomy">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
+            </li>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
             </li>
         </ul>
     </dd>
 </dl>
 
-<h3 class="ecl-u-type-heading-3">Horizontal Description List</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Horizontal description list</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Apply the horizontal variant when terms need to align alongside their content across the page.</p>
 <dl class="ecl-description-list ecl-description-list--horizontal" data-ecl-description-list data-ecl-description-list-more-label="Show more items" data-ecl-description-list-visible-items="2" data-ecl-auto-init="DescriptionList">
     <dt class="ecl-description-list__term">Label 01</dt>
-    <dd class="ecl-description-list__definition">Descriptive text with <a href="/example" class="ecl-link">inline link</a></dd>
+    <dd class="ecl-description-list__definition">
+        Descriptive text with
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a class="ecl-link" href="/example">inline link</a>
+    </dd>
     <dt class="ecl-description-list__term">Label 02</dt>
     <dd class="ecl-description-list__definition ecl-description-list__definition--link">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link</a>
             </li>
         </ul>
     </dd>
@@ -60,8 +169,10 @@
     <dd class="ecl-description-list__definition ecl-description-list__definition--link">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
                     <span class="ecl-link__label">Standalone link</span>
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
                     <span aria-hidden="false" class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" role="img" title="Link to an external domain"></span>
                 </a>
             </li>
@@ -71,16 +182,111 @@
     <dd class="ecl-description-list__definition ecl-description-list__definition--inline">
         <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 1</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 1</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 2</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 2</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 3</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 3</a>
             </li>
             <li class="ecl-description-list__definition-item">
-                <a href="/example" class="ecl-link ecl-link--standalone">Standalone link 4</a>
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Standalone link 4</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 06</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--link">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone" href="/example">Very very very very very very very very very very very very veryveryveryvery long standalone link that wraps in multiple lines</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 07</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--link">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--facebook ecl-icon ecl-icon--s ecl-link__icon ecl-icon--facebook"></span>
+                    <span class="ecl-link__label">social network 1</span>
+                </a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--twitter ecl-icon ecl-icon--s ecl-link__icon ecl-icon--twitter"></span>
+                    <span class="ecl-link__label">social network 2</span>
+                </a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                    <span aria-hidden="true" class="wt-icon--mastodon ecl-icon ecl-icon--s ecl-link__icon ecl-icon--mastodon"></span>
+                    <span class="ecl-link__label">social network 3</span>
+                </a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 08</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--tag">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Long link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Long link tag</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: tag. Use the tag component template; see tag sub component for full markup guidance. -->
+                <a class="ecl-tag" href="/example">Link tag</a>
+            </li>
+        </ul>
+    </dd>
+    <dt class="ecl-description-list__term">Label 09</dt>
+    <dd class="ecl-description-list__definition ecl-description-list__definition--taxonomy">
+        <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
+            </li>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">Taxonomy item</li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
+            </li>
+            <li class="ecl-description-list__definition-item">
+                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                <a class="ecl-link" href="/example">Taxonomy item</a>
             </li>
         </ul>
     </dd>

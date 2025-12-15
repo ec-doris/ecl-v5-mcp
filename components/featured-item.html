@@ -1,85 +1,100 @@
-<h3 class="ecl-u-type-heading-3">Default Featured Item</h3>
-<article class="ecl-featured-item ecl-u-mb-l">
-  <div class="ecl-featured-item__container">
-    <div class="ecl-featured-item__item">
-      <div class="ecl-featured-item__title" id="featured-item-example-title">Title: Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
-      <div class="ecl-featured-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" aria-describedby="featured-item-example-title">
-        <span class="ecl-link__label">Read more</span>
-        <span class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </a>
-    </div>
-    <div class="ecl-featured-item__item">
-      <div class="ecl-media-container ecl-featured-item__media_container">
-        <figure class="ecl-media-container__figure">
-          <picture class="ecl-picture ecl-media-container__picture">
-            <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Lorem ipsum dolor sit amet" />
-          </picture>
-          <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing.<br />@Copyright</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</article>
+<p class="ecl-u-type-paragraph ecl-u-mb-l">Featured items pair concise content with an optional media container. Keep the title, description, link, and media container structure exactly as defined in the <code>featured-item</code> template.</p>
 
-<h3 class="ecl-u-type-heading-3">Highlighted Featured Item</h3>
-<article class="ecl-featured-item ecl-featured-item--highlight ecl-u-mb-l">
-  <div class="ecl-featured-item__container">
-    <div class="ecl-featured-item__item">
-      <div class="ecl-featured-item__title" id="featured-item-highlighted-title">Title: Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
-      <div class="ecl-featured-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" aria-describedby="featured-item-highlighted-title">
-        <span class="ecl-link__label">Read more</span>
-        <span class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </a>
-    </div>
-    <div class="ecl-featured-item__item">
-      <div class="ecl-media-container ecl-featured-item__media_container">
-        <figure class="ecl-media-container__figure">
-          <picture class="ecl-picture ecl-media-container__picture">
-            <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Lorem ipsum dolor sit amet" />
-          </picture>
-          <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing.<br />@Copyright</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</article>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Static media on the left</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">Use the default layout with a standalone link and static media container; media sits on the left on larger screens while content stays on the right.</p>
+    <article class="ecl-featured-item ecl-color-mode--default">
+        <div class="ecl-featured-item__container">
+            <div class="ecl-featured-item__item">
+                <div class="ecl-featured-item__content">
+                    <div class="ecl-featured-item__info">
+                        <div class="ecl-featured-item__title" id="featured-item-default-title">Coordinate digital services across regions</div>
+                        <div class="ecl-featured-item__description">
+                            <p class="ecl-u-type-paragraph">Interoperable platforms let administrations launch updates quickly while maintaining reliable experiences for citizens and businesses.</p>
+                        </div>
+                    </div>
+                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                    <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" href="/example" aria-describedby="featured-item-default-title">
+                        <span class="ecl-link__label">Read the overview</span>
+                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="ecl-featured-item__item">
+                <!-- Sub component: media-container. Use the media-container component template; see media-container sub component for full markup guidance. -->
+                <div class="ecl-media-container ecl-featured-item__media_container">
+                    <figure class="ecl-media-container__figure">
+                        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+                        <picture class="ecl-picture ecl-media-container__picture">
+                            <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Colleagues reviewing a project roadmap">
+                        </picture>
+                        <figcaption class="ecl-media-container__caption">Project teams collaborate closely to keep cross-border services reliable.<br />@Copyright</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Featured Item with Media on Right</h3>
-<article class="ecl-featured-item ecl-u-mb-l">
-  <div class="ecl-featured-item__container ecl-featured-item__container--right">
-    <div class="ecl-featured-item__item">
-      <div class="ecl-featured-item__title" id="featured-item-right-title">Title: Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
-      <div class="ecl-featured-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" aria-describedby="featured-item-right-title">
-        <span class="ecl-link__label">Read more</span>
-        <span class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </a>
-    </div>
-    <div class="ecl-featured-item__item">
-      <div class="ecl-media-container ecl-featured-item__media_container">
-        <figure class="ecl-media-container__figure">
-          <picture class="ecl-picture ecl-media-container__picture">
-            <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Lorem ipsum dolor sit amet" />
-          </picture>
-          <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing.<br />@Copyright</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</article>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Highlighted item with media on the right</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">Use the highlight variant with right-aligned media when promoting a primary campaign; the standalone link stays inline with its icon.</p>
+    <article class="ecl-featured-item ecl-featured-item--highlight ecl-featured-item--dynamic ecl-featured-item--hcenter ecl-featured-item--vcenter ecl-color-mode--default">
+        <div class="ecl-featured-item__container ecl-featured-item__container--right">
+            <div class="ecl-featured-item__item">
+                <div class="ecl-featured-item__content">
+                    <div class="ecl-featured-item__info">
+                        <div class="ecl-featured-item__title" id="featured-item-highlight-title">Scale secure platforms for every member state</div>
+                        <div class="ecl-featured-item__description">
+                            <p class="ecl-u-type-paragraph">Shared components make it simple to apply governance, security, and accessibility updates across all participating administrations.</p>
+                        </div>
+                    </div>
+                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                    <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" href="/example" aria-describedby="featured-item-highlight-title">
+                        <span class="ecl-link__label">Discover the programme</span>
+                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="ecl-featured-item__item">
+                <!-- Sub component: media-container. Use the media-container component template; see media-container sub component for full markup guidance. -->
+                <div class="ecl-media-container ecl-featured-item__media_container">
+                    <figure class="ecl-media-container__figure">
+                        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+                        <picture class="ecl-picture ecl-media-container__picture">
+                            <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" alt="Aerial view of a connected city hub">
+                        </picture>
+                        <figcaption class="ecl-media-container__caption">Dynamic imagery fills the available space while keeping focus on the subject.<br />@Copyright</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Featured Item without Media</h3>
-<article class="ecl-featured-item ecl-u-mb-l">
-  <div class="ecl-featured-item__container">
-    <div class="ecl-featured-item__item">
-      <div class="ecl-featured-item__title" id="featured-item-no-media-title">Title: Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
-      <div class="ecl-featured-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" aria-describedby="featured-item-no-media-title">
-        <span class="ecl-link__label">Read more</span>
-        <span class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-      </a>
-    </div>
-  </div>
-</article>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Text-only featured item</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">When no media is available, keep the same title, description, and link layout so the pattern stays consistent.</p>
+    <article class="ecl-featured-item ecl-featured-item--hcenter ecl-featured-item--vcenter ecl-color-mode--default">
+        <div class="ecl-featured-item__container">
+            <div class="ecl-featured-item__item">
+                <div class="ecl-featured-item__content">
+                    <div class="ecl-featured-item__info">
+                        <div class="ecl-featured-item__title" id="featured-item-text-title">Share concise updates without media</div>
+                        <div class="ecl-featured-item__description">
+                            <p class="ecl-u-type-paragraph">Summaries, reminders, or short announcements still use the featured-item title, description, and link to keep page rhythm consistent.</p>
+                        </div>
+                    </div>
+                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+                    <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-featured-item__link" href="/example" aria-describedby="featured-item-text-title">
+                        <span class="ecl-link__label">View the detailed guidance</span>
+                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+                        <span aria-hidden="true" class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>

@@ -1,23 +1,51 @@
-<h3 class="ecl-u-type-heading-3">Default Date Block</h3>
-<time class="ecl-date-block" datetime="2024-09-26">
-    <span class="ecl-date-block__daytime">2024-09-26</span>
-    <span class="ecl-date-block__day" aria-hidden="true">26</span>
-    <abbr class="ecl-date-block__month" title="September" aria-hidden="true">Sep</abbr>
-    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-</time>
+<p class="ecl-u-type-paragraph ecl-u-mb-l">Date blocks expose a machine-readable date alongside the visual day, abbreviated month, and year. The markup below mirrors the structure defined in <code>date-block</code>.</p>
 
-<h3 class="ecl-u-type-heading-3">Ongoing Date Block</h3>
-<time class="ecl-date-block ecl-date-block--ongoing" datetime="2024-09-26">
-    <span class="ecl-date-block__daytime">2024-09-26</span>
-    <span class="ecl-date-block__day" aria-hidden="true">26</span>
-    <abbr class="ecl-date-block__month" title="September" aria-hidden="true">Sep</abbr>
-    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-</time>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default date block</h3>
+<div class="ecl-u-mb-l">
+    <time class="ecl-date-block" datetime="2024-09-26">
+        <span class="ecl-date-block__daytime">2024-09-26</span>
+        <span class="ecl-date-block__day" aria-hidden="true">26</span>
+        <abbr title="September" class="ecl-date-block__month" aria-hidden="true">Sep</abbr>
+        <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Past Date Block</h3>
-<time class="ecl-date-block ecl-date-block--past" datetime="2024-09-26">
-    <span class="ecl-date-block__daytime">2024-09-26</span>
-    <span class="ecl-date-block__day" aria-hidden="true">26</span>
-    <abbr class="ecl-date-block__month" title="September" aria-hidden="true">Sep</abbr>
-    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-</time>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Status variants</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Apply the modifier classes from the date-block template to represent ongoing, cancelled, and past states.</p>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+    <div class="ecl-u-mr-m ecl-u-mb-m">
+        <time class="ecl-date-block ecl-date-block--ongoing" datetime="2024-11-04">
+            <span class="ecl-date-block__daytime">2024-11-04</span>
+            <span class="ecl-date-block__day" aria-hidden="true">04</span>
+            <abbr title="November" class="ecl-date-block__month" aria-hidden="true">Nov</abbr>
+            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+        </time>
+    </div>
+    <div class="ecl-u-mr-m ecl-u-mb-m">
+        <time class="ecl-date-block ecl-date-block--cancelled" datetime="2024-06-18">
+            <span class="ecl-date-block__daytime">2024-06-18</span>
+            <span class="ecl-date-block__day" aria-hidden="true">18</span>
+            <abbr title="June" class="ecl-date-block__month" aria-hidden="true">Jun</abbr>
+            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+        </time>
+    </div>
+    <div class="ecl-u-mb-m">
+        <time class="ecl-date-block ecl-date-block--past" datetime="2024-03-12">
+            <span class="ecl-date-block__daytime">2024-03-12</span>
+            <span class="ecl-date-block__day" aria-hidden="true">12</span>
+            <abbr title="March" class="ecl-date-block__month" aria-hidden="true">Mar</abbr>
+            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+        </time>
+    </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Date without abbreviation</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">When the full month value matches the short label, the template renders a span rather than an abbreviation.</p>
+<div class="ecl-u-mb-l">
+    <time class="ecl-date-block" datetime="2024-05-09">
+        <span class="ecl-date-block__daytime">2024-05-09</span>
+        <span class="ecl-date-block__day" aria-hidden="true">09</span>
+        <span class="ecl-date-block__month">May</span>
+        <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+</div>

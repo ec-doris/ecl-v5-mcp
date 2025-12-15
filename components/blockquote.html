@@ -1,48 +1,69 @@
-<h3 class="ecl-u-type-heading-3">Basic Blockquote</h3>
-<figure class="ecl-blockquote">
-    <div class="ecl-blockquote__body">
-        <blockquote class="ecl-blockquote__quote">
-            <p class="ecl-blockquote__citation" lang="en">Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do.</p>
-            <footer class="ecl-blockquote__attribution">
-                <cite class="ecl-blockquote__author">Mark Twain</cite>
-            </footer>
-        </blockquote>
-    </div>
-</figure>
+<p class="ecl-u-type-paragraph ecl-u-mb-l">Blockquotes follow the structure defined in <code>blockquote</code>; use the figure, blockquote, citation, and attribution elements exactly as in the template, with language tags on the cited text.</p>
 
-<h3 class="ecl-u-type-heading-3">Blockquote with Image</h3>
-<figure class="ecl-blockquote">
-    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text" class="ecl-blockquote__image">
-    <div class="ecl-blockquote__body">
-        <blockquote class="ecl-blockquote__quote">
-            <p class="ecl-blockquote__citation" lang="en">The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</p>
-            <footer class="ecl-blockquote__attribution">
-                <cite class="ecl-blockquote__author">Steve Jobs</cite>
-            </footer>
-        </blockquote>
-    </div>
-</figure>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default blockquote</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">Use the base blockquote when quoting a single statement with a required author attribution.</p>
+    <figure class="ecl-blockquote ecl-color-mode--default">
+        <div class="ecl-blockquote__body">
+            <blockquote class="ecl-blockquote__quote">
+                <p class="ecl-blockquote__citation" lang="en">Twenty years from now you will be more disappointed by the things that you did not do than by the ones you did do.</p>
+                <footer class="ecl-blockquote__attribution">
+                    <cite class="ecl-blockquote__author">Mark Twain</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </figure>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Blockquote with Different Language</h3>
-<figure class="ecl-blockquote">
-    <div class="ecl-blockquote__body">
-        <blockquote class="ecl-blockquote__quote">
-            <p class="ecl-blockquote__citation" lang="fr">La vie est ce qui arrive quand vous êtes occupé à faire d'autres projets.</p>
-            <footer class="ecl-blockquote__attribution">
-                <cite class="ecl-blockquote__author">John Lennon</cite>
-            </footer>
-        </blockquote>
-    </div>
-</figure>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Blockquote with responsive image</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">When supplying an illustration, use the picture sub component with the blockquote image classes.</p>
+    <figure class="ecl-blockquote ecl-color-mode--default">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-blockquote__picture">
+            <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+            <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+            <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+            <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+            <img class="ecl-blockquote__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text">
+        </picture>
+        <div class="ecl-blockquote__body">
+            <blockquote class="ecl-blockquote__quote">
+                <p class="ecl-blockquote__citation" lang="en">The only way to do great work is to love what you do. If you have not found it yet, keep looking. Do not settle.</p>
+                <footer class="ecl-blockquote__attribution">
+                    <cite class="ecl-blockquote__author">Steve Jobs</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </figure>
+</div>
 
-<h3 class="ecl-u-type-heading-3">Blockquote with Color Mode</h3>
-<figure class="ecl-blockquote ecl-color-mode--dark">
-    <div class="ecl-blockquote__body">
-        <blockquote class="ecl-blockquote__quote">
-            <p class="ecl-blockquote__citation" lang="en">The best way to predict the future is to create it.</p>
-            <footer class="ecl-blockquote__attribution">
-                <cite class="ecl-blockquote__author">Peter Drucker</cite>
-            </footer>
-        </blockquote>
-    </div>
-</figure>
+<div class="ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Localized quotation</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">Match the citation language to the quoted content while preserving the blockquote skeleton.</p>
+    <figure class="ecl-blockquote ecl-color-mode--default">
+        <div class="ecl-blockquote__body">
+            <blockquote class="ecl-blockquote__quote">
+                <p class="ecl-blockquote__citation" lang="fr">La vie est ce qui arrive quand vous êtes occupé à faire d'autres projets.</p>
+                <footer class="ecl-blockquote__attribution">
+                    <cite class="ecl-blockquote__author">John Lennon</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </figure>
+</div>
+
+<div class="ecl-u-bg-dark ecl-u-type-color-white ecl-u-pa-l ecl-u-mb-2xl">
+    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Blockquote with dark color mode</h3>
+    <p class="ecl-u-type-paragraph ecl-u-mb-m">Apply the dark color mode when the blockquote sits on a dark surface.</p>
+    <figure class="ecl-blockquote ecl-color-mode--dark">
+        <div class="ecl-blockquote__body">
+            <blockquote class="ecl-blockquote__quote">
+                <p class="ecl-blockquote__citation" lang="en">The best way to predict the future is to create it.</p>
+                <footer class="ecl-blockquote__attribution">
+                    <cite class="ecl-blockquote__author">Peter Drucker</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </figure>
+</div>

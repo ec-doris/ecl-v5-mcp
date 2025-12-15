@@ -1,93 +1,104 @@
 <h3 class="ecl-u-type-heading-3">Default File Upload</h3>
 <div class="ecl-u-mb-l">
+  <!-- Sub component: form-group wrapper. See the form-group component for full markup guidance. -->
   <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
-    <label for="file-upload-default" class="ecl-form-label" id="file-upload-default-label">Upload a file <span class="ecl-form-label__required">(required)</span></label>
+    <div class="ecl-form-label" for="file-upload-default" id="file-upload-default-label">Upload a file <span class="ecl-form-label__required">(required)</span></div>
     <div class="ecl-help-block" id="file-upload-default-helper">
       Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.
     </div>
-    <input type="file" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-default" name="file-upload-name" required aria-describedby="file-upload-default-label file-upload-default-helper">
+    <input aria-describedby="file-upload-default-label file-upload-default-helper" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-default" name="file-upload-name" required type="file">
     <label class="ecl-file-upload__button-container" for="file-upload-default">
+      <!-- Sub component: button styling from the button component. See the button component for full markup guidance. -->
       <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file">
         Choose file
       </span>
     </label>
-    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite">
+    <ul aria-live="polite" class="ecl-file-upload__list" data-ecl-file-upload-list>
     </ul>
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Multiple File Upload</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Multiple File Upload</h3>
 <div class="ecl-u-mb-l">
+  <!-- Sub component: form-group wrapper. See the form-group component for full markup guidance. -->
   <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
-    <label for="file-upload-multiple" class="ecl-form-label" id="file-upload-multiple-label">Upload files <span class="ecl-form-label__required">(required)</span></label>
+    <div class="ecl-form-label" for="file-upload-multiple" id="file-upload-multiple-label">Upload files <span class="ecl-form-label__required">(required)</span></div>
     <div class="ecl-help-block" id="file-upload-multiple-helper">
-      Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br>Encrypted documents and those containing macros are not accepted.
+      Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.
     </div>
-    <input type="file" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-multiple" name="file-upload-name" required multiple aria-describedby="file-upload-multiple-label file-upload-multiple-helper">
+    <input aria-describedby="file-upload-multiple-label file-upload-multiple-helper" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-multiple" name="file-upload-name" multiple required type="file">
     <label class="ecl-file-upload__button-container" for="file-upload-multiple">
+      <!-- Sub component: button styling from the button component. See the button component for full markup guidance. -->
       <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose files" data-ecl-file-upload-label-replace="Replace files">
         Choose files
       </span>
     </label>
-    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite">
+    <ul aria-live="polite" class="ecl-file-upload__list" data-ecl-file-upload-list>
     </ul>
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Disabled File Upload</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Disabled File Upload</h3>
 <div class="ecl-u-mb-l">
+  <!-- Sub component: form-group wrapper. See the form-group component for full markup guidance. -->
   <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
-    <label for="file-upload-disabled" class="ecl-form-label ecl-form-label--disabled" id="file-upload-disabled-label">Upload a file</label>
+    <div class="ecl-form-label ecl-form-label--disabled" for="file-upload-disabled" id="file-upload-disabled-label">Upload a file <span class="ecl-form-label__required">(required)</span></div>
     <div class="ecl-help-block ecl-help-block--disabled" id="file-upload-disabled-helper">
-      This field is disabled.
+      Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.
     </div>
-    <input type="file" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-disabled" name="file-upload-name" disabled aria-describedby="file-upload-disabled-label file-upload-disabled-helper">
+    <input aria-describedby="file-upload-disabled-label file-upload-disabled-helper" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" disabled id="file-upload-disabled" name="file-upload-name" required type="file">
     <label class="ecl-file-upload__button-container" for="file-upload-disabled">
+      <!-- Sub component: button styling from the button component. See the button component for full markup guidance. -->
       <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file" disabled>
         Choose file
       </span>
     </label>
-    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite">
+    <ul aria-live="polite" class="ecl-file-upload__list" data-ecl-file-upload-list>
     </ul>
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Invalid File Upload</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Invalid File Upload</h3>
 <div class="ecl-u-mb-l">
+  <!-- Sub component: form-group wrapper. See the form-group component for full markup guidance. -->
   <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
-    <label for="file-upload-invalid" class="ecl-form-label ecl-form-label--invalid" id="file-upload-invalid-label">Upload a file <span class="ecl-form-label__required">(required)</span></label>
+    <div class="ecl-form-label ecl-form-label--invalid" for="file-upload-invalid" id="file-upload-invalid-label">Upload a file <span class="ecl-form-label__required">(required)</span></div>
     <div class="ecl-help-block" id="file-upload-invalid-helper">
       Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.
     </div>
-    <input type="file" class="ecl-file-upload ecl-file-upload--invalid" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-invalid" name="file-upload-name" required aria-describedby="file-upload-invalid-label file-upload-invalid-helper file-upload-invalid-invalid" aria-invalid="true">
+    <input aria-describedby="file-upload-invalid-label file-upload-invalid-helper file-upload-invalid-invalid" aria-invalid="true" class="ecl-file-upload ecl-file-upload--invalid" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-invalid" name="file-upload-name" required type="file">
     <label class="ecl-file-upload__button-container" for="file-upload-invalid">
+      <!-- Sub component: button styling from the button component. See the button component for full markup guidance. -->
       <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file">
         Choose file
       </span>
     </label>
-    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite">
+    <ul aria-live="polite" class="ecl-file-upload__list" data-ecl-file-upload-list>
     </ul>
     <div class="ecl-feedback-message" id="file-upload-invalid-invalid">
-      <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" data-ecl-icon aria-hidden="true"></span>
+      <!-- Sub component: icon used inside feedback message. See the icon component for full markup guidance. -->
+      <span aria-hidden="false" class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon ecl-icon--error-outline" role="img" title="Error"></span>
       Error text
     </div>
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Optional File Upload</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Optional File Upload</h3>
 <div class="ecl-u-mb-l">
+  <!-- Sub component: form-group wrapper. See the form-group component for full markup guidance. -->
   <div class="ecl-form-group" data-ecl-file-upload-group="true" data-ecl-autoinit="FileUpload">
-    <label for="file-upload-optional" class="ecl-form-label" id="file-upload-optional-label">Upload a file <span class="ecl-form-label__optional">(optional)</span></label>
+    <div class="ecl-form-label" for="file-upload-optional" id="file-upload-optional-label">Upload a file <span class="ecl-form-label__optional">(optional)</span></div>
     <div class="ecl-help-block" id="file-upload-optional-helper">
       Only <strong>txt doc docx pdf odt rtf</strong> files. Maximum size is <strong>5 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.
     </div>
-    <input type="file" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-optional" name="file-upload-name" aria-describedby="file-upload-optional-label file-upload-optional-helper">
+    <input aria-describedby="file-upload-optional-label file-upload-optional-helper" class="ecl-file-upload" data-ecl-file-upload-input data-ecl-auto-init="FileUpload" id="file-upload-optional" name="file-upload-name" type="file">
     <label class="ecl-file-upload__button-container" for="file-upload-optional">
+      <!-- Sub component: button styling from the button component. See the button component for full markup guidance. -->
       <span class="ecl-file-upload__button ecl-button ecl-button--primary" data-ecl-file-upload-button data-ecl-file-upload-label-choose="Choose file" data-ecl-file-upload-label-replace="Replace file">
         Choose file
       </span>
     </label>
-    <ul class="ecl-file-upload__list" data-ecl-file-upload-list aria-live="polite">
+    <ul aria-live="polite" class="ecl-file-upload__list" data-ecl-file-upload-list>
     </ul>
   </div>
 </div>
