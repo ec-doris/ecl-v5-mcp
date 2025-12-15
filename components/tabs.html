@@ -1,26 +1,55 @@
-<h3 class="ecl-u-type-heading-3">Tabs Component with Content</h3>
-<div class="ecl-u-mb-l">
+<!-- Tabs component with tabbed content behavior -->
+<!-- The data-ecl-tabs-with-content attribute enables content switching functionality -->
 <div class="ecl-tabs" data-ecl-tabs="true" data-ecl-tabs-with-content data-ecl-auto-init="Tabs">
   <div class="ecl-tabs__container">
     <div class="ecl-tabs__list" role="tablist">
+      <!-- Tab item 1 - Active by default -->
       <div class="ecl-tabs__item">
-        <a href="#tab-1" class="ecl-link ecl-tabs__link ecl-tabs__link--active" id="tabs-1" role="tab" aria-selected="true">Home</a>
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-1" class="ecl-link ecl-tabs__link ecl-tabs__link--active" id="tab-link-1" role="tab" aria-selected="true" aria-controls="ecl-tabs-item-1">Home</a>
       </div>
+
+      <!-- Tab item 2 -->
       <div class="ecl-tabs__item">
-        <a href="#tab-2" class="ecl-link ecl-tabs__link" id="tabs-2" role="tab" tabindex="-1" aria-selected="false">About</a>
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-2" class="ecl-link ecl-tabs__link" id="tab-link-2" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-2">Policies</a>
       </div>
+
+      <!-- Tab item 3 -->
       <div class="ecl-tabs__item">
-        <a href="#tab-3" class="ecl-link ecl-tabs__link" id="tabs-3" role="tab" tabindex="-1" aria-selected="false">Services</a>
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-3" class="ecl-link ecl-tabs__link" id="tab-link-3" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-3">Events</a>
       </div>
+
+      <!-- Tab item 4 -->
       <div class="ecl-tabs__item">
-        <a href="#tab-4" class="ecl-link ecl-tabs__link" id="tabs-4" role="tab" tabindex="-1" aria-selected="false">Contact</a>
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-4" class="ecl-link ecl-tabs__link" id="tab-link-4" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-4">Publications</a>
       </div>
+
+      <!-- Tab item 5 -->
+      <div class="ecl-tabs__item">
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-5" class="ecl-link ecl-tabs__link" id="tab-link-5" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-5">Statistics</a>
+      </div>
+
+      <!-- Tab item 6 -->
+      <div class="ecl-tabs__item">
+        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
+        <a href="#ecl-tabs-item-6" class="ecl-link ecl-tabs__link" id="tab-link-6" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-6">Resources</a>
+      </div>
+
+      <!-- More item placeholder - Used by responsive behavior -->
       <div class="ecl-tabs__item ecl-tabs__item--more"></div>
     </div>
 
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__toggle" type="button" tabindex="-1">
+    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
+    <!-- This button shows additional tabs in a dropdown on smaller screens -->
+    <!-- Initially hidden - JS will show it when tabs overflow -->
+    <button class="ecl-button ecl-button--tertiary ecl-tabs__toggle ecl-tabs__toggle--hidden" type="button" tabindex="-1" aria-expanded="false">
       <span class="ecl-button__container">
         <span class="ecl-button__label">Show 0 more items</span>
+        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
         <svg class="ecl-icon ecl-icon--fluid ecl-button__icon ecl-icon--rotate-180" focusable="false" aria-hidden="true" data-ecl-icon>
           <use xlink:href="/ecl-made-easy/assets/icons.svg#corner-arrow"></use>
         </svg>
@@ -28,16 +57,24 @@
     </button>
   </div>
 
+  <!-- Navigation controls for mobile view -->
   <div class="ecl-tabs__controls">
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden" type="button" aria-label="Previous" tabindex="-1">
+    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
+    <!-- Previous button for mobile navigation -->
+    <button class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden" type="button" aria-label="Previous">
       <span class="ecl-button__container">
+        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
         <svg class="ecl-icon ecl-icon--s ecl-button__icon ecl-icon--rotate-270" focusable="false" aria-hidden="true" data-ecl-icon>
           <use xlink:href="/ecl-made-easy/assets/icons.svg#corner-arrow"></use>
         </svg>
       </span>
     </button>
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden" type="button" aria-label="Next" tabindex="-1">
+
+    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
+    <!-- Next button for mobile navigation -->
+    <button class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden" type="button" aria-label="Next">
       <span class="ecl-button__container">
+        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
         <svg class="ecl-icon ecl-icon--s ecl-button__icon ecl-icon--rotate-90" focusable="false" aria-hidden="true" data-ecl-icon>
           <use xlink:href="/ecl-made-easy/assets/icons.svg#corner-arrow"></use>
         </svg>
@@ -46,43 +83,50 @@
   </div>
 </div>
 
-<div id="tab-1" class="tab-content ecl-u-mt-l">
-  <h2 class="ecl-u-type-heading-2">Home Content</h2>
-  <p class="ecl-u-type-paragraph">Welcome to the home tab. This is the main content area that changes when you click on different tabs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<!-- Tab panel 1 - Visible by default -->
+<div id="ecl-tabs-item-1" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-1">
+  <h2 class="ecl-u-type-heading-2">Home</h2>
+  <p class="ecl-u-type-paragraph">Welcome to our homepage. Here you will find the latest updates and information about our organization and activities. The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing the day-to-day business of the EU.</p>
+  <p class="ecl-u-type-paragraph">Our mission is to promote the general interest of the EU by proposing and enforcing legislation as well as by implementing policies and the EU budget. We work to ensure that EU policies and laws are applied correctly and deliver benefits for citizens, businesses, and the environment.</p>
+  <p class="ecl-u-type-paragraph">Stay informed about our latest initiatives, policy developments, and opportunities to engage with EU institutions.</p>
 </div>
 
-<div id="tab-2" class="tab-content ecl-u-mt-l" style="display: none;">
-  <h2 class="ecl-u-type-heading-2">About Content</h2>
-  <p class="ecl-u-type-paragraph">This is the about section. Here you can learn more about our organization and mission. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<!-- Tab panel 2 - Hidden by JavaScript on init -->
+<div id="ecl-tabs-item-2" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-2">
+  <h2 class="ecl-u-type-heading-2">Policies</h2>
+  <p class="ecl-u-type-paragraph">Explore the wide range of policies that shape the European Union. From environmental protection to digital transformation, our policies aim to improve the lives of citizens across Europe.</p>
+  <p class="ecl-u-type-paragraph">Key policy areas include climate action and the Green Deal, digital strategy and innovation, economic and monetary union, migration and asylum, trade and investment, and social affairs and employment. Each policy area addresses specific challenges and opportunities facing the EU and its member states.</p>
+  <p class="ecl-u-type-paragraph">We work closely with member states, stakeholders, and citizens to develop and implement effective policies that deliver tangible results.</p>
 </div>
 
-<div id="tab-3" class="tab-content ecl-u-mt-l" style="display: none;">
-  <h2 class="ecl-u-type-heading-2">Services Content</h2>
-  <p class="ecl-u-type-paragraph">Explore our services and what we offer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-  <h3 class="ecl-u-type-heading-3">Expandable Example</h3>
-  <div class="ecl-expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-    <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-services-content" data-ecl-expandable-toggle data-ecl-label-expanded="Show less" data-ecl-label-collapsed="Show more" aria-expanded="false">
-      <span class="ecl-button__label">Show more</span>
-    </button>
-    <div id="expandable-services-content" class="ecl-expandable__content" hidden>
-      <p class="ecl-u-type-paragraph">Additional services content that was hidden. This expandable component should work properly even if there are issues with the tabs JavaScript initialization.</p>
-      <ul class="ecl-u-type-paragraph">
-        <li>Service 1: Description of service 1</li>
-        <li>Service 2: Description of service 2</li>
-        <li>Service 3: Description of service 3</li>
-      </ul>
-    </div>
-  </div>
+<!-- Tab panel 3 - Hidden by JavaScript on init -->
+<div id="ecl-tabs-item-3" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-3">
+  <h2 class="ecl-u-type-heading-2">Events</h2>
+  <p class="ecl-u-type-paragraph">Discover upcoming events, conferences, and public consultations organized by the European Commission. These events provide opportunities for stakeholders, experts, and citizens to engage with EU policymaking.</p>
+  <p class="ecl-u-type-paragraph">Our events cover a diverse range of topics including climate change, digital transformation, economic policy, social inclusion, and international cooperation. Events may take place in person, online, or in hybrid format to maximize accessibility and participation.</p>
+  <p class="ecl-u-type-paragraph">Check back regularly for new event announcements and registration information. Your participation helps shape the future of European policy.</p>
 </div>
 
-<div id="tab-4" class="tab-content ecl-u-mt-l" style="display: none;">
-  <h2 class="ecl-u-type-heading-2">Contact Content</h2>
-  <p class="ecl-u-type-paragraph">Get in touch with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <p class="ecl-u-type-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<!-- Tab panel 4 - Hidden by JavaScript on init -->
+<div id="ecl-tabs-item-4" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-4">
+  <h2 class="ecl-u-type-heading-2">Publications</h2>
+  <p class="ecl-u-type-paragraph">Access our comprehensive collection of publications, including policy documents, reports, studies, and statistical data. These resources provide detailed information about EU activities and their impact.</p>
+  <p class="ecl-u-type-paragraph">Our publications are available in multiple languages and formats to ensure accessibility for all users. They cover topics such as annual reports, policy briefs, research studies, legal documents, and statistical yearbooks.</p>
+  <p class="ecl-u-type-paragraph">All publications are freely available to download and use in accordance with our open data policies and copyright regulations.</p>
 </div>
 
+<!-- Tab panel 5 - Hidden by JavaScript on init -->
+<div id="ecl-tabs-item-5" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-5">
+  <h2 class="ecl-u-type-heading-2">Statistics</h2>
+  <p class="ecl-u-type-paragraph">Explore comprehensive statistical data about the European Union, its member states, and key policy areas. Our statistics provide evidence-based insights to inform policymaking and public debate.</p>
+  <p class="ecl-u-type-paragraph">Eurostat, the statistical office of the European Union, produces and publishes high-quality statistics on a wide range of topics including economy and finance, population and social conditions, industry and services, agriculture and fisheries, international trade, and environment and energy.</p>
+  <p class="ecl-u-type-paragraph">Data is presented in user-friendly formats including interactive visualizations, downloadable datasets, and regular statistical releases.</p>
+</div>
+
+<!-- Tab panel 6 - Hidden by JavaScript on init -->
+<div id="ecl-tabs-item-6" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-6">
+  <h2 class="ecl-u-type-heading-2">Resources</h2>
+  <p class="ecl-u-type-paragraph">Access helpful resources including guidelines, toolkits, educational materials, and contact information. These resources support stakeholders in working with EU institutions and implementing EU policies.</p>
+  <p class="ecl-u-type-paragraph">Available resources include funding opportunities and grant programs, educational materials for schools and universities, guidelines for businesses and organizations, media resources and press kits, and contact directories for EU institutions and agencies.</p>
+  <p class="ecl-u-type-paragraph">Whether you are a researcher, journalist, educator, or citizen, you will find valuable resources to support your work and engagement with the EU.</p>
 </div>

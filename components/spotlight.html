@@ -1,25 +1,150 @@
-<section class="ecl-spotlight ecl-spotlight--anchor ecl-spotlight--font-l">
-  <div class="ecl-spotlight__header">
-    <div class="ecl-container">
-      In focus
+<p class="ecl-u-type-paragraph ecl-u-mb-l">The spotlight component highlights featured content with a full-width image, title, and optional header. The picture sub component provides responsive images across breakpoints.</p>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default spotlight with large font size</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">A full-featured spotlight with header, responsive image, title, visual anchor, and image credit. The large font size modifier is applied.</p>
+  <section class="ecl-spotlight ecl-spotlight--anchor ecl-spotlight--font-l">
+    <div class="ecl-spotlight__header">
+      <div class="ecl-container">In focus</div>
     </div>
-  </div>
-  <a href="#" class="ecl-spotlight__link">
+    <a href="/example" class="ecl-spotlight__link">
+      <figure class="ecl-spotlight__picture-container">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-spotlight__picture">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="all and (min-width: 1368px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="all and (min-width: 1140px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="all and (min-width: 996px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="all and (min-width: 768px)">
+          <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="alternative text" data-ecl-spotlight-image>
+        </picture>
+      </figure>
+      <div class="ecl-spotlight__container" data-ecl-spotlight-container>
+        <div class="ecl-container">
+          <div class="ecl-spotlight__title">Proin molestie sapien ut blandit</div>
+          <div class="ecl-spotlight__anchor" aria-hidden="true"></div>
+        </div>
+        <footer class="ecl-spotlight__credit">© European Union, 2024</footer>
+      </div>
+    </a>
+  </section>
+</div>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Spotlight with medium font size</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">A spotlight using the default medium font size without the font size modifier class.</p>
+  <section class="ecl-spotlight ecl-spotlight--anchor">
+    <div class="ecl-spotlight__header">
+      <div class="ecl-container">Featured story</div>
+    </div>
+    <a href="/example" class="ecl-spotlight__link">
+      <figure class="ecl-spotlight__picture-container">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-spotlight__picture">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" media="all and (min-width: 1368px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="all and (min-width: 1140px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="all and (min-width: 996px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="all and (min-width: 768px)">
+          <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" alt="Digital transformation illustration" data-ecl-spotlight-image>
+        </picture>
+      </figure>
+      <div class="ecl-spotlight__container" data-ecl-spotlight-container>
+        <div class="ecl-container">
+          <div class="ecl-spotlight__title">Building a sustainable digital future</div>
+          <div class="ecl-spotlight__anchor" aria-hidden="true"></div>
+        </div>
+        <footer class="ecl-spotlight__credit">Photo: European Commission</footer>
+      </div>
+    </a>
+  </section>
+</div>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Spotlight without visual anchor</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">Remove the visual anchor element by excluding the <code>ecl-spotlight--anchor</code> modifier class and the anchor div.</p>
+  <section class="ecl-spotlight ecl-spotlight--font-l">
+    <div class="ecl-spotlight__header">
+      <div class="ecl-container">Highlight</div>
+    </div>
+    <a href="/example" class="ecl-spotlight__link">
+      <figure class="ecl-spotlight__picture-container">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-spotlight__picture">
+          <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg" alt="Innovation hub" data-ecl-spotlight-image>
+        </picture>
+      </figure>
+      <div class="ecl-spotlight__container" data-ecl-spotlight-container>
+        <div class="ecl-container">
+          <div class="ecl-spotlight__title">Innovation and technology partnerships</div>
+        </div>
+        <footer class="ecl-spotlight__credit">Image credit: EU Digital</footer>
+      </div>
+    </a>
+  </section>
+</div>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Spotlight without header</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">Omit the header section entirely when context is clear from surrounding content.</p>
+  <section class="ecl-spotlight ecl-spotlight--anchor ecl-spotlight--font-l">
+    <a href="/example" class="ecl-spotlight__link">
+      <figure class="ecl-spotlight__picture-container">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-spotlight__picture">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg" media="all and (min-width: 1368px)">
+          <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="all and (min-width: 1140px)">
+          <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" alt="Collaborative workspace" data-ecl-spotlight-image>
+        </picture>
+      </figure>
+      <div class="ecl-spotlight__container" data-ecl-spotlight-container>
+        <div class="ecl-container">
+          <div class="ecl-spotlight__title">Empowering citizens through digital services</div>
+          <div class="ecl-spotlight__anchor" aria-hidden="true"></div>
+        </div>
+        <footer class="ecl-spotlight__credit">© EU, 2024</footer>
+      </div>
+    </a>
+  </section>
+</div>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Spotlight without link</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">When the spotlight is non-interactive, omit the link wrapper and use the section element directly around the content.</p>
+  <section class="ecl-spotlight ecl-spotlight--anchor">
+    <div class="ecl-spotlight__header">
+      <div class="ecl-container">Static display</div>
+    </div>
     <figure class="ecl-spotlight__picture-container">
+      <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
       <picture class="ecl-picture ecl-spotlight__picture">
-        <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="all and (min-width: 1368px)">
-        <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="all and (min-width: 1140px)">
-        <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="all and (min-width: 996px)">
-        <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="all and (min-width: 768px)">
-        <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="alternative text" data-ecl-spotlight-image>
+        <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg" alt="Policy framework" data-ecl-spotlight-image>
       </picture>
     </figure>
     <div class="ecl-spotlight__container" data-ecl-spotlight-container>
       <div class="ecl-container">
-        <div class="ecl-spotlight__title">Proin molestie sapien ut blandit</div>
+        <div class="ecl-spotlight__title">Green transition initiatives</div>
         <div class="ecl-spotlight__anchor" aria-hidden="true"></div>
       </div>
-      <footer class="ecl-spotlight__credit">Copyright</footer>
+      <footer class="ecl-spotlight__credit">Source: European Environment Agency</footer>
     </div>
-  </a>
-</section>
+  </section>
+</div>
+
+<div class="ecl-u-mb-2xl">
+  <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Minimal spotlight</h3>
+  <p class="ecl-u-type-paragraph ecl-u-mb-m">The simplest spotlight configuration with only image and title—no header, anchor, or credit.</p>
+  <section class="ecl-spotlight">
+    <a href="/example" class="ecl-spotlight__link">
+      <figure class="ecl-spotlight__picture-container">
+        <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-spotlight__picture">
+          <img class="ecl-spotlight__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image11.jpg" alt="European cities" data-ecl-spotlight-image>
+        </picture>
+      </figure>
+      <div class="ecl-spotlight__container" data-ecl-spotlight-container>
+        <div class="ecl-container">
+          <div class="ecl-spotlight__title">Connected European cities</div>
+        </div>
+      </div>
+    </a>
+  </section>
+</div>

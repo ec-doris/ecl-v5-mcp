@@ -1,54 +1,80 @@
 <h3 class="ecl-u-type-heading-3">Basic Picture with Responsive Sources</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">The picture element provides responsive images using multiple source elements with media queries. The browser selects the appropriate source based on viewport size.</p>
 <div class="ecl-u-mb-l">
-    <picture class="ecl-picture">
-        <source media="(min-width: 90rem)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg">
-        <source media="(min-width: 1140px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg">
-        <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg">
-        <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg">
-        <source media="(min-width: 480px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg">
-        <img alt="Image alternative text" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg">
-    </picture>
+  <picture class="ecl-picture">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="(min-width: 90rem)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text">
+  </picture>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Picture with Zoom Effect</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Add the <code>ecl-picture--zoom</code> modifier class to enable a zoom animation on hover or focus.</p>
 <div class="ecl-u-mb-l">
-    <picture class="ecl-picture ecl-picture--zoom">
-        <source media="(min-width: 90rem)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg">
-        <source media="(min-width: 1140px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg">
-        <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg">
-        <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg">
-        <source media="(min-width: 480px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg">
-        <img alt="Image alternative text" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg">
-    </picture>
+  <picture class="ecl-picture ecl-picture--zoom">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="(min-width: 90rem)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text">
+  </picture>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Picture with Lazy Loading</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">The <code>loading="lazy"</code> attribute defers loading of images until they are near the viewport, improving page performance.</p>
 <div class="ecl-u-mb-l">
-    <picture class="ecl-picture">
-        <source media="(min-width: 90rem)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg">
-        <source media="(min-width: 1140px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg">
-        <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg">
-        <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg">
-        <source media="(min-width: 480px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg">
-        <img alt="Image alternative text" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" loading="lazy">
-    </picture>
+  <picture class="ecl-picture">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="(min-width: 90rem)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text" loading="lazy">
+  </picture>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Simple Picture without Sources</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">A picture element can contain just an img element without source elements for simple use cases.</p>
 <div class="ecl-u-mb-l">
-    <picture class="ecl-picture">
-        <img alt="Simple image alternative text" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg">
-    </picture>
+  <picture class="ecl-picture">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Simple image alternative text">
+  </picture>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Picture with Extra Classes</h3>
+<h3 class="ecl-u-type-heading-3">Picture with Image Anchor</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">The image anchor controls the initial position when the image is cropped. Use the <code>--ecl-image-anchor</code> CSS custom property to set values like 'top left', '30% 50%', or '100px 20px'.</p>
+<div class="ecl-u-mb-l" style="max-width: 600px;">
+  <picture class="ecl-picture">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text" style="--ecl-image-anchor: top left; max-width: 100%; height: auto; display: block;">
+  </picture>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Picture with Extra Classes and Attributes</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Custom classes and data attributes can be added to both the picture and img elements for additional styling or functionality.</p>
 <div class="ecl-u-mb-l">
-    <picture class="ecl-picture custom-class custom-class--picture">
-        <source media="(min-width: 90rem)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg">
-        <source media="(min-width: 1140px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg">
-        <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg">
-        <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg">
-        <source media="(min-width: 480px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg">
-        <img alt="Image alternative text" class="custom-class custom-class--image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg">
-    </picture>
+  <picture class="ecl-picture custom-class custom-class--picture" data-test="data-test-value" data-test-1="data-test-value-1">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg" media="(min-width: 90rem)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" media="(min-width: 1140px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" media="(min-width: 996px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Image alternative text" class="custom-class custom-class--image">
+  </picture>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Picture with Empty Alt (Decorative Image)</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">For decorative images that don't convey meaningful content, use an empty <code>alt</code> attribute to hide the image from screen readers.</p>
+<div class="ecl-u-mb-l">
+  <picture class="ecl-picture">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" media="(min-width: 768px)">
+    <source srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" media="(min-width: 480px)">
+    <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="">
+  </picture>
 </div>

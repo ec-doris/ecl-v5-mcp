@@ -1,35 +1,34 @@
-<h3 class="ecl-u-type-heading-3">Basic Video</h3>
-<div class="ecl-u-mb-l">
-    <video class="ecl-video" controls playsinline poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm" type="video/webm">
-        Your browser does not support the video tag.
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Standard video</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Use the base video template with a poster image, a single MP4 source, and the aria label composed from the title and screen reader label values.</p>
+<div class="ecl-u-mb-xl">
+    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline>
+        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
     </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Video with Autoplay, Muted, and Loop</h3>
-<div class="ecl-u-mb-l">
-    <video class="ecl-video" controls playsinline autoplay muted loop poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm" type="video/webm">
-        Your browser does not support the video tag.
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Video with multiple sources and captions</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Add alternate encodings and caption tracks with the same structure as the twig file; each track follows the template attributes for language, label, and source.</p>
+<div class="ecl-u-mb-xl">
+    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" aria-label="Big Buck Bunny - Video" controls playsinline>
+        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
+        <source type="video/webm" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm">
+        <track kind="captions" label="English" src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-en.vtt" srclang="en">
+        <track kind="captions" label="French" src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-fr.vtt" srclang="fr">
     </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Video with Extra Classes</h3>
-<div class="ecl-u-mb-l">
-    <video class="ecl-video custom-class--video" controls playsinline poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm" type="video/webm">
-        Your browser does not support the video tag.
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Autoplaying looped video</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Combine autoplay, muted, and loop to mirror the optional parameters while keeping controls and the inline playback flag from the source template.</p>
+<div class="ecl-u-mb-xl">
+    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline autoplay muted loop>
+        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
     </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Video with Extra Attributes</h3>
-<div class="ecl-u-mb-l">
-    <video class="ecl-video" controls playsinline poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" data-test="data-test-value" data-test-1="data-test-value-1">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
-        <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm" type="video/webm">
-        Your browser does not support the video tag.
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Zoom poster with custom attributes</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Apply the zoom modifier and pass through extra classes or data attributes exactly as exposed by the twig parameters.</p>
+<div class="ecl-u-mb-xl">
+    <video class="ecl-video ecl-video--zoom custom-class--video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline data-test="data-test-value" data-test-1="data-test-value-1">
+        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
     </video>
 </div>

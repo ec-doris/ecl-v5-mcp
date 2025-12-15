@@ -1,111 +1,242 @@
-<h3 class="ecl-u-type-heading-3">Horizontal</h3>
-<div class="ecl-u-mb-l">
-    <div class="ecl-social-media-follow">
-        <p class="ecl-social-media-follow__description ecl-u-type-paragraph">Follow us</p>
-        <ul class="ecl-social-media-follow__list">
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--facebook wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Facebook</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--instagram wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Instagram</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--mastodon wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Mastodon</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--linkedin wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Linkedin</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--telegram wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--telegram" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Telegram</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--chain wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--chain" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Other</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Social Media Follow displays a list of social media network links. All examples below follow the <code>social-media-follow</code> component structure with ECL utility classes for spacing and typography.</p>
+
+<h3 class="ecl-u-type-heading-3">Horizontal (default)</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The default orientation displays links horizontally with optional description text.</p>
+<div class="ecl-social-media-follow ecl-social-media-follow--left ecl-u-mb-l">
+    <p class="ecl-social-media-follow__description">Follow us</p>
+    <ul class="ecl-social-media-follow__list">
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--facebook ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span> <span class="ecl-link__label">Facebook</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--instagram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span> <span class="ecl-link__label">Instagram</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span> <span class="ecl-link__label">Mastodon</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--linkedin ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span> <span class="ecl-link__label">Linkedin</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--telegram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--telegram" aria-hidden="true"></span> <span class="ecl-link__label">Telegram</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--chain ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--chain" aria-hidden="true"></span> <span class="ecl-link__label">Other</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Vertical</h3>
-<div class="ecl-u-mb-l">
-    <div class="ecl-social-media-follow ecl-social-media-follow--vertical">
-        <p class="ecl-social-media-follow__description ecl-u-type-paragraph">Follow us</p>
+<h3 class="ecl-u-type-heading-3">Horizontal with inline description</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The description can be displayed inline with the links using the <code>ecl-social-media-follow--description_inline</code> modifier.</p>
+<div class="ecl-social-media-follow ecl-social-media-follow--left ecl-social-media-follow--description_inline ecl-u-mb-l">
+    <p class="ecl-social-media-follow__description">Follow us</p>
+    <ul class="ecl-social-media-follow__list">
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--facebook ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span> <span class="ecl-link__label">Facebook</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--instagram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span> <span class="ecl-link__label">Instagram</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span> <span class="ecl-link__label">Mastodon</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--linkedin ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span> <span class="ecl-link__label">Linkedin</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Vertical orientation</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Use the <code>ecl-social-media-follow--vertical</code> modifier to stack links vertically.</p>
+<div class="ecl-social-media-follow ecl-social-media-follow--vertical ecl-social-media-follow--left ecl-u-mb-l">
+    <p class="ecl-social-media-follow__description">Follow us</p>
+    <ul class="ecl-social-media-follow__list">
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--facebook ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span> <span class="ecl-link__label">Facebook</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--instagram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span> <span class="ecl-link__label">Instagram</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span> <span class="ecl-link__label">Mastodon</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--linkedin ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span> <span class="ecl-link__label">Linkedin</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--telegram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--telegram" aria-hidden="true"></span> <span class="ecl-link__label">Telegram</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Right-aligned position</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Use <code>ecl-social-media-follow--right</code> to align the links to the right.</p>
+<div class="ecl-social-media-follow ecl-social-media-follow--right ecl-u-mb-l">
+    <p class="ecl-social-media-follow__description">Follow us</p>
+    <ul class="ecl-social-media-follow__list">
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--facebook ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span> <span class="ecl-link__label">Facebook</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--instagram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span> <span class="ecl-link__label">Instagram</span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span> <span class="ecl-link__label">Mastodon</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Icon-only variant</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Hide labels visually while keeping them accessible by using <code>ecl-link--icon-only</code> on each link. Ensure each link has an appropriate <code>aria-label</code>.</p>
+<div class="ecl-social-media-follow ecl-social-media-follow--left ecl-u-mb-l">
+    <p class="ecl-social-media-follow__description">Follow us</p>
+    <ul class="ecl-social-media-follow__list">
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-social-media-follow__link" aria-label="Facebook">
+                <span class="ecl-link__label">Facebook</span>
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--facebook ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-social-media-follow__link" aria-label="Instagram">
+                <span class="ecl-link__label">Instagram</span>
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--instagram ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-social-media-follow__link" aria-label="Mastodon">
+                <span class="ecl-link__label">Mastodon</span>
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li class="ecl-social-media-follow__item">
+            <!-- Sub component: link. Use the link component template for full markup guidance. -->
+            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--icon-only ecl-social-media-follow__link" aria-label="Linkedin">
+                <span class="ecl-link__label">Linkedin</span>
+                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                <span class="wt-icon-networks--linkedin ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Inverted for dark backgrounds</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">Use <code>ecl-link--inverted</code> on individual links when displaying on dark backgrounds.</p>
+<div class="ecl-u-bg-grey ecl-u-bg-dark ecl-u-type-color-white ecl-u-pa-m ecl-u-mb-l">
+    <div class="ecl-social-media-follow ecl-social-media-follow--left">
+        <p class="ecl-social-media-follow__description">Follow us</p>
         <ul class="ecl-social-media-follow__list">
             <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--facebook wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Facebook</span>
+                <!-- Sub component: link. Use the link component template for full markup guidance. -->
+                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--inverted ecl-social-media-follow__link">
+                    <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                    <span class="wt-icon-networks--facebook wt-icon--inverted ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--facebook" aria-hidden="true"></span> <span class="ecl-link__label">Facebook</span>
                 </a>
             </li>
             <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--instagram wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Instagram</span>
+                <!-- Sub component: link. Use the link component template for full markup guidance. -->
+                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--inverted ecl-social-media-follow__link">
+                    <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                    <span class="wt-icon-networks--instagram wt-icon--inverted ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--instagram" aria-hidden="true"></span> <span class="ecl-link__label">Instagram</span>
                 </a>
             </li>
             <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--mastodon wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Mastodon</span>
+                <!-- Sub component: link. Use the link component template for full markup guidance. -->
+                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--inverted ecl-social-media-follow__link">
+                    <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                    <span class="wt-icon-networks--mastodon wt-icon--inverted ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--mastodon" aria-hidden="true"></span> <span class="ecl-link__label">Mastodon</span>
                 </a>
             </li>
             <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--linkedin wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Linkedin</span>
+                <!-- Sub component: link. Use the link component template for full markup guidance. -->
+                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--inverted ecl-social-media-follow__link">
+                    <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                    <span class="wt-icon-networks--linkedin wt-icon--inverted ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--linkedin" aria-hidden="true"></span> <span class="ecl-link__label">Linkedin</span>
                 </a>
             </li>
             <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--telegram wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--telegram" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Telegram</span>
-                </a>
-            </li>
-            <li class="ecl-social-media-follow__item">
-                <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-social-media-follow__link">
-                    <span class="ecl-link__icon-container">
-                        <span class="wt-icon-networks--chain wt-icon--monochrome ecl-icon ecl-icon--s ecl-link__icon ecl-social-media-follow__icon ecl-icon-networks--chain" aria-hidden="true"></span>
-                    </span>
-                    <span class="ecl-link__label">Other</span>
+                <!-- Sub component: link. Use the link component template for full markup guidance. -->
+                <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-link--inverted ecl-social-media-follow__link">
+                    <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
+                    <span class="wt-icon-networks--telegram wt-icon--inverted ecl-icon ecl-icon--s ecl-social-media-follow__icon ecl-icon-networks--telegram" aria-hidden="true"></span> <span class="ecl-link__label">Telegram</span>
                 </a>
             </li>
         </ul>

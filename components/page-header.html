@@ -1,19 +1,26 @@
-<h3 class="ecl-u-type-heading-3">Default Page Header</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default page header</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The default variant features a background image, breadcrumb navigation, title, description, and meta information.</p>
 <div class="ecl-u-mb-xl">
-  <div class="ecl-page-header">
+  <div class="ecl-page-header ecl-page-header--image">
+    <!-- Sub component: picture. Use the picture component template to render this picture; see picture sub component for full markup guidance. -->
     <picture class="ecl-picture ecl-page-header__picture-background">
       <img class="ecl-page-header__background" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
     </picture>
     <div class="ecl-container ecl-page-header__container">
+      <!-- Sub component: breadcrumb. Use the breadcrumb component template to render this breadcrumb; see breadcrumb sub component for full markup guidance. -->
       <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
         <ol class="ecl-breadcrumb__container">
           <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
             <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
-        </li>
-        <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
-          <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+          </li>
+          <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+            <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
           </li>
           <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
             Current Page Label
@@ -28,11 +35,13 @@
         <li class="ecl-page-header__meta-item">News article</li>
         <li class="ecl-page-header__meta-item">10 March 2025</li>
         <li class="ecl-page-header__meta-item">
-          <span class="wt-icon--location ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
           Brussels
         </li>
         <li class="ecl-page-header__meta-item">
-          <span class="wt-icon--clock ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
           1 minute read
         </li>
         <li class="ecl-page-header__meta-item">Research Center</li>
@@ -41,19 +50,25 @@
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">News Page Header</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">News page header</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The news variant has the description displayed in a separate section below the main content.</p>
 <div class="ecl-u-mb-xl">
   <div class="ecl-page-header ecl-page-header--news">
     <div class="ecl-container ecl-page-header__container">
+      <!-- Sub component: breadcrumb. Use the breadcrumb component template to render this breadcrumb; see breadcrumb sub component for full markup guidance. -->
       <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
         <ol class="ecl-breadcrumb__container">
           <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
             <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
           </li>
           <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
             <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
           </li>
           <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
             Current Page Label
@@ -65,15 +80,21 @@
         <li class="ecl-page-header__meta-item">News article</li>
         <li class="ecl-page-header__meta-item">10 March 2025</li>
         <li class="ecl-page-header__meta-item">
-          <span class="wt-icon--location ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
           Brussels
         </li>
         <li class="ecl-page-header__meta-item">
-          <span class="wt-icon--clock ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
           1 minute read
         </li>
         <li class="ecl-page-header__meta-item">Research Center</li>
       </ul>
+      <!-- Sub component: picture. Use the picture component template to render this picture; see picture sub component for full markup guidance. -->
+      <picture class="ecl-picture ecl-page-header__picture-background">
+        <img class="ecl-page-header__background" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
+      </picture>
     </div>
     <div class="ecl-page-header__section-description">
       <div class="ecl-container">
@@ -85,23 +106,30 @@
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">50/50 Page Header</h3>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">50/50 page header</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The 50/50 variant displays content in a two-column layout with the background image on one side and information on the other. The description position can be set to "top" or "bottom".</p>
 <div class="ecl-u-mb-xl">
-  <div class="ecl-page-header ecl-page-header--50-50">
-    <picture class="ecl-picture ecl-page-header__picture-background">
-      <img class="ecl-page-header__background" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
-    </picture>
+  <div class="ecl-page-header ecl-page-header--50-50 ecl-page-header--image">
     <div class="ecl-page-header__container">
+      <!-- Sub component: picture. Use the picture component template to render this picture; see picture sub component for full markup guidance. -->
+      <picture class="ecl-picture ecl-page-header__picture-background">
+        <img class="ecl-page-header__background" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
+      </picture>
       <div class="ecl-page-header__section-info ecl-container">
+        <!-- Sub component: breadcrumb. Use the breadcrumb component template to render this breadcrumb; see breadcrumb sub component for full markup guidance. -->
         <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
           <ol class="ecl-breadcrumb__container">
             <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+              <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
               <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
-              <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
+              <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+              <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
             </li>
             <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+              <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
               <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
-              <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon" role="presentation" aria-hidden="true"></span>
+              <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+              <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
             </li>
             <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
               Current Page Label
@@ -120,11 +148,13 @@
           <li class="ecl-page-header__meta-item">News article</li>
           <li class="ecl-page-header__meta-item">10 March 2025</li>
           <li class="ecl-page-header__meta-item">
-            <span class="wt-icon--location ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
             Brussels
           </li>
           <li class="ecl-page-header__meta-item">
-            <span class="wt-icon--clock ecl-icon ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true"></span>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
             1 minute read
           </li>
           <li class="ecl-page-header__meta-item">Research Center</li>
@@ -137,6 +167,138 @@
           <p class="ecl-page-header__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec ullamcorper mi. Morbi interdum fermentum tempus. Nam nec rhoncus risus, <a class="ecl-link" href="/example">eget dictum elit</a>. Vestibulum gravida tincidunt venenatis.</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Page header with thumbnail</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">A page header can include a thumbnail image alongside the description.</p>
+<div class="ecl-u-mb-xl">
+  <div class="ecl-page-header ecl-page-header--image">
+    <!-- Sub component: picture. Use the picture component template to render this picture; see picture sub component for full markup guidance. -->
+    <picture class="ecl-picture ecl-page-header__picture-background">
+      <img class="ecl-page-header__background" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
+    </picture>
+    <div class="ecl-container ecl-page-header__container">
+      <!-- Sub component: breadcrumb. Use the breadcrumb component template to render this breadcrumb; see breadcrumb sub component for full markup guidance. -->
+      <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
+        <ol class="ecl-breadcrumb__container">
+          <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+            <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+          </li>
+          <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+            <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+          </li>
+          <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
+            Current Page Label
+          </li>
+        </ol>
+      </nav>
+      <h1 class="ecl-page-header__title">Consectetur adipiscing elit</h1>
+      <div class="ecl-page-header__description-container">
+        <!-- Sub component: picture. Use the picture component template to render this picture; see picture sub component for full markup guidance. -->
+        <picture class="ecl-picture ecl-page-header__picture-thumbnail">
+          <img class="ecl-page-header__description-thumbnail" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Europe flag">
+        </picture>
+        <p class="ecl-page-header__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec ullamcorper mi. Morbi interdum fermentum tempus. Nam nec rhoncus risus, <a class="ecl-link" href="/example">eget dictum elit</a>. Vestibulum gravida tincidunt venenatis.</p>
+      </div>
+      <ul class="ecl-page-header__meta">
+        <li class="ecl-page-header__meta-item">News article</li>
+        <li class="ecl-page-header__meta-item">10 March 2025</li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          Brussels
+        </li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          1 minute read
+        </li>
+        <li class="ecl-page-header__meta-item">Research Center</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Page header with large font size</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The title font size can be set to large by adding the <code class="ecl-u-type-code">ecl-page-header--font-l</code> modifier class.</p>
+<div class="ecl-u-mb-xl">
+  <div class="ecl-page-header ecl-page-header--font-l">
+    <div class="ecl-container ecl-page-header__container">
+      <!-- Sub component: breadcrumb. Use the breadcrumb component template to render this breadcrumb; see breadcrumb sub component for full markup guidance. -->
+      <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You are here:" data-ecl-breadcrumb="true">
+        <ol class="ecl-breadcrumb__container">
+          <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+            <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Home</a>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+          </li>
+          <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
+            <!-- Sub component: link. Use the link component template to render this link; see link sub component for full markup guidance. -->
+            <a class="ecl-link ecl-link--standalone ecl-breadcrumb__link" href="/example">Parent Page label</a>
+            <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--corner-arrow ecl-icon--fluid ecl-breadcrumb__icon" aria-hidden="true" role="presentation"></span>
+          </li>
+          <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static" aria-current="page">
+            Current Page Label
+          </li>
+        </ol>
+      </nav>
+      <h1 class="ecl-page-header__title">Consectetur adipiscing elit</h1>
+      <div class="ecl-page-header__description-container">
+        <p class="ecl-page-header__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec ullamcorper mi. Morbi interdum fermentum tempus. Nam nec rhoncus risus, <a class="ecl-link" href="/example">eget dictum elit</a>. Vestibulum gravida tincidunt venenatis.</p>
+      </div>
+      <ul class="ecl-page-header__meta">
+        <li class="ecl-page-header__meta-item">News article</li>
+        <li class="ecl-page-header__meta-item">10 March 2025</li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          Brussels
+        </li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          1 minute read
+        </li>
+        <li class="ecl-page-header__meta-item">Research Center</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Page header with hidden title (screen reader only)</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The title can be visually hidden but remain accessible to screen readers by adding the <code class="ecl-u-type-code">ecl-page-header__title--hidden</code> modifier class.</p>
+<div class="ecl-u-mb-xl">
+  <div class="ecl-page-header">
+    <div class="ecl-container ecl-page-header__container">
+      <h1 class="ecl-page-header__title ecl-page-header__title--hidden">Consectetur adipiscing elit</h1>
+      <div class="ecl-page-header__description-container">
+        <p class="ecl-page-header__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec ullamcorper mi. Morbi interdum fermentum tempus. Nam nec rhoncus risus, <a class="ecl-link" href="/example">eget dictum elit</a>. Vestibulum gravida tincidunt venenatis.</p>
+      </div>
+      <ul class="ecl-page-header__meta">
+        <li class="ecl-page-header__meta-item">News article</li>
+        <li class="ecl-page-header__meta-item">10 March 2025</li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--location ecl-icon ecl-icon--location ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          Brussels
+        </li>
+        <li class="ecl-page-header__meta-item">
+          <!-- Sub component: icon. Use the icon component template to render this icon; see icon sub component for full markup guidance. -->
+          <span class="wt-icon--clock ecl-icon ecl-icon--clock ecl-icon--2xs ecl-page-header__meta-icon" aria-hidden="true" role="presentation"></span>
+          1 minute read
+        </li>
+        <li class="ecl-page-header__meta-item">Research Center</li>
+      </ul>
     </div>
   </div>
 </div>

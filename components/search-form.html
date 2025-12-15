@@ -1,14 +1,40 @@
 <h3 class="ecl-u-type-heading-3">Search Form</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-s">The search form uses the <code>form-group</code> sub component wrapper for the text input field. See <code>form-group</code> for full markup guidance on the wrapper structure.</p>
 <div class="ecl-u-mb-l">
-<form class="ecl-search-form" role="search">
-  <div class="ecl-form-group">
-    <label class="ecl-form-label ecl-search-form__label" for="search-input-id" id="search-input-id-label">Search</label>
-    <input id="search-input-id" class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" name="search" type="search" placeholder="Placeholder text">
-  </div>
-  <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit" aria-label="Search">
-    <span class="ecl-button__icon-container">
-      <span class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon></span>
-    </span>
-  </button>
-</form>
+  <form class="ecl-search-form" role="search">
+    <!-- Sub component: form-group wrapper with text-input inside. See form-group for full markup guidance. -->
+    <div class="ecl-form-group">
+      <label class="ecl-form-label ecl-search-form__label" for="search-input-id" id="search-input-id-label">Search</label>
+      <!-- Sub component: text-input with type="search". See text-input for full markup guidance. -->
+      <input id="search-input-id" class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" name="search" type="search" placeholder="Placeholder text">
+    </div>
+    <!-- Sub component: button with icon. See button for full markup guidance. -->
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--icon-only ecl-search-form__button" type="submit">
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Search</span>
+        <!-- Sub component: icon. Use the icon component template for the icon markup. -->
+        <span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span>
+      </span>
+    </button>
+  </form>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Search Form (Disabled)</h3>
+<div class="ecl-u-mb-l">
+  <form class="ecl-search-form" role="search">
+    <!-- Sub component: form-group wrapper with text-input inside. See form-group for full markup guidance. -->
+    <div class="ecl-form-group">
+      <label class="ecl-form-label ecl-form-label--disabled ecl-search-form__label" for="search-input-id-disabled" id="search-input-id-disabled-label">Search</label>
+      <!-- Sub component: text-input with type="search". See text-input for full markup guidance. -->
+      <input id="search-input-id-disabled" class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" name="search" type="search" placeholder="Placeholder text" disabled>
+    </div>
+    <!-- Sub component: button with icon. See button for full markup guidance. -->
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-button--icon-only ecl-search-form__button" type="submit" disabled>
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Search</span>
+        <!-- Sub component: icon. Use the icon component template for the icon markup. -->
+        <span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span>
+      </span>
+    </button>
+  </form>
 </div>
