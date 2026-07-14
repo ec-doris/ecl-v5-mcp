@@ -1,51 +1,242 @@
-<p class="ecl-u-type-paragraph ecl-u-mb-l">Date blocks expose a machine-readable date alongside the visual day, abbreviated month, and year. The markup below mirrors the structure defined in <code>date-block</code>.</p>
-
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default date block</h3>
 <div class="ecl-u-mb-l">
-    <time class="ecl-date-block" datetime="2024-09-26">
-        <span class="ecl-date-block__daytime">2024-09-26</span>
-        <span class="ecl-date-block__day" aria-hidden="true">26</span>
-        <abbr title="September" class="ecl-date-block__month" aria-hidden="true">Sep</abbr>
-        <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-    </time>
+  <time class="ecl-date-block" datetime="2024-09-26">
+    <span class="ecl-date-block__daytime">2024-09-26</span>
+    <span class="ecl-date-block__day" aria-hidden="true">26</span>
+    <abbr title="September" class="ecl-date-block__month" aria-hidden="true"
+      >Sep</abbr
+    >
+    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+  </time>
 </div>
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Status variants</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Apply the modifier classes from the date-block template to represent ongoing, cancelled, and past states.</p>
 <div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
-    <div class="ecl-u-mr-m ecl-u-mb-m">
-        <time class="ecl-date-block ecl-date-block--ongoing" datetime="2024-11-04">
-            <span class="ecl-date-block__daytime">2024-11-04</span>
-            <span class="ecl-date-block__day" aria-hidden="true">04</span>
-            <abbr title="November" class="ecl-date-block__month" aria-hidden="true">Nov</abbr>
-            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-        </time>
-    </div>
-    <div class="ecl-u-mr-m ecl-u-mb-m">
-        <time class="ecl-date-block ecl-date-block--cancelled" datetime="2024-06-18">
-            <span class="ecl-date-block__daytime">2024-06-18</span>
-            <span class="ecl-date-block__day" aria-hidden="true">18</span>
-            <abbr title="June" class="ecl-date-block__month" aria-hidden="true">Jun</abbr>
-            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-        </time>
-    </div>
-    <div class="ecl-u-mb-m">
-        <time class="ecl-date-block ecl-date-block--past" datetime="2024-03-12">
-            <span class="ecl-date-block__daytime">2024-03-12</span>
-            <span class="ecl-date-block__day" aria-hidden="true">12</span>
-            <abbr title="March" class="ecl-date-block__month" aria-hidden="true">Mar</abbr>
-            <span class="ecl-date-block__year" aria-hidden="true">2024</span>
-        </time>
-    </div>
+  <div class="ecl-u-mr-m ecl-u-mb-m">
+    <time class="ecl-date-block ecl-date-block--ongoing" datetime="2024-11-04">
+      <span class="ecl-date-block__daytime">2024-11-04</span>
+      <span class="ecl-date-block__day" aria-hidden="true">04</span>
+      <abbr title="November" class="ecl-date-block__month" aria-hidden="true"
+        >Nov</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-u-mr-m ecl-u-mb-m">
+    <time
+      class="ecl-date-block ecl-date-block--cancelled"
+      datetime="2024-06-18"
+    >
+      <span class="ecl-date-block__daytime">2024-06-18</span>
+      <span class="ecl-date-block__day" aria-hidden="true">18</span>
+      <abbr title="June" class="ecl-date-block__month" aria-hidden="true"
+        >Jun</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-u-mb-m">
+    <time class="ecl-date-block ecl-date-block--past" datetime="2023-03-12">
+      <span class="ecl-date-block__daytime">2023-03-12</span>
+      <span class="ecl-date-block__day" aria-hidden="true">12</span>
+      <abbr title="March" class="ecl-date-block__month" aria-hidden="true"
+        >Mar</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2023</span>
+    </time>
+  </div>
 </div>
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Date without abbreviation</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">When the full month value matches the short label, the template renders a span rather than an abbreviation.</p>
 <div class="ecl-u-mb-l">
-    <time class="ecl-date-block" datetime="2024-05-09">
-        <span class="ecl-date-block__daytime">2024-05-09</span>
-        <span class="ecl-date-block__day" aria-hidden="true">09</span>
-        <span class="ecl-date-block__month">May</span>
-        <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+  <time class="ecl-date-block" datetime="2024-05-09">
+    <span class="ecl-date-block__daytime">2024-05-09</span>
+    <span class="ecl-date-block__day" aria-hidden="true">09</span>
+    <span class="ecl-date-block__month">May</span>
+    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+  </time>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Date without machine date</h3>
+<div class="ecl-u-mb-l">
+  <time class="ecl-date-block">
+    <span class="ecl-date-block__day" aria-hidden="true">15</span>
+    <abbr title="October" class="ecl-date-block__month" aria-hidden="true"
+      >Oct</abbr
+    >
+    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+  </time>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Extension hooks</h3>
+<div class="ecl-u-mb-l">
+  <time
+    class="ecl-date-block custom-date-block"
+    data-test="date-block"
+    data-preview
+    datetime="2024-12-02"
+  >
+    <span class="ecl-date-block__daytime">2024-12-02</span>
+    <span class="ecl-date-block__day" aria-hidden="true">02</span>
+    <abbr title="December" class="ecl-date-block__month" aria-hidden="true"
+      >Dec</abbr
+    >
+    <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+  </time>
+</div>
+
+<!-- Empty input and day-only input produce no date-block root in the tagged Twig. -->
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
+  <div class="ecl-color-mode--blue ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-01-01">
+      <span class="ecl-date-block__daytime">2024-01-01</span>
+      <span class="ecl-date-block__day" aria-hidden="true">01</span>
+      <abbr title="January" class="ecl-date-block__month" aria-hidden="true"
+        >Jan</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
     </time>
+  </div>
+  <div class="ecl-color-mode--green-dark ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-02-02">
+      <span class="ecl-date-block__daytime">2024-02-02</span>
+      <span class="ecl-date-block__day" aria-hidden="true">02</span>
+      <abbr title="February" class="ecl-date-block__month" aria-hidden="true"
+        >Feb</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--orange ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-03-03">
+      <span class="ecl-date-block__daytime">2024-03-03</span>
+      <span class="ecl-date-block__day" aria-hidden="true">03</span>
+      <abbr title="March" class="ecl-date-block__month" aria-hidden="true"
+        >Mar</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--green ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-04-04">
+      <span class="ecl-date-block__daytime">2024-04-04</span>
+      <span class="ecl-date-block__day" aria-hidden="true">04</span>
+      <abbr title="April" class="ecl-date-block__month" aria-hidden="true"
+        >Apr</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--purple ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-05-05">
+      <span class="ecl-date-block__daytime">2024-05-05</span>
+      <span class="ecl-date-block__day" aria-hidden="true">05</span>
+      <abbr title="May" class="ecl-date-block__month" aria-hidden="true"
+        >May</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--blue-navy ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-06-06">
+      <span class="ecl-date-block__daytime">2024-06-06</span>
+      <span class="ecl-date-block__day" aria-hidden="true">06</span>
+      <abbr title="June" class="ecl-date-block__month" aria-hidden="true"
+        >Jun</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--blue-electric ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-07-07">
+      <span class="ecl-date-block__daytime">2024-07-07</span>
+      <span class="ecl-date-block__day" aria-hidden="true">07</span>
+      <abbr title="July" class="ecl-date-block__month" aria-hidden="true"
+        >Jul</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--blue-ocean ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-08-08">
+      <span class="ecl-date-block__daytime">2024-08-08</span>
+      <span class="ecl-date-block__day" aria-hidden="true">08</span>
+      <abbr title="August" class="ecl-date-block__month" aria-hidden="true"
+        >Aug</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--green-lemon ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-09-09">
+      <span class="ecl-date-block__daytime">2024-09-09</span>
+      <span class="ecl-date-block__day" aria-hidden="true">09</span>
+      <abbr title="September" class="ecl-date-block__month" aria-hidden="true"
+        >Sep</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--green-pine ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-10-10">
+      <span class="ecl-date-block__daytime">2024-10-10</span>
+      <span class="ecl-date-block__day" aria-hidden="true">10</span>
+      <abbr title="October" class="ecl-date-block__month" aria-hidden="true"
+        >Oct</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--warm-grey ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-11-11">
+      <span class="ecl-date-block__daytime">2024-11-11</span>
+      <span class="ecl-date-block__day" aria-hidden="true">11</span>
+      <abbr title="November" class="ecl-date-block__month" aria-hidden="true"
+        >Nov</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--red-crayola ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2024-12-12">
+      <span class="ecl-date-block__daytime">2024-12-12</span>
+      <span class="ecl-date-block__day" aria-hidden="true">12</span>
+      <abbr title="December" class="ecl-date-block__month" aria-hidden="true"
+        >Dec</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2024</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--yellow-gold ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2025-01-13">
+      <span class="ecl-date-block__daytime">2025-01-13</span>
+      <span class="ecl-date-block__day" aria-hidden="true">13</span>
+      <abbr title="January" class="ecl-date-block__month" aria-hidden="true"
+        >Jan</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2025</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--purple-violet ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2025-02-14">
+      <span class="ecl-date-block__daytime">2025-02-14</span>
+      <span class="ecl-date-block__day" aria-hidden="true">14</span>
+      <abbr title="February" class="ecl-date-block__month" aria-hidden="true"
+        >Feb</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2025</span>
+    </time>
+  </div>
+  <div class="ecl-color-mode--red-tomato ecl-u-pa-s ecl-u-mr-s ecl-u-mb-s">
+    <time class="ecl-date-block" datetime="2025-03-15">
+      <span class="ecl-date-block__daytime">2025-03-15</span>
+      <span class="ecl-date-block__day" aria-hidden="true">15</span>
+      <abbr title="March" class="ecl-date-block__month" aria-hidden="true"
+        >Mar</abbr
+      >
+      <span class="ecl-date-block__year" aria-hidden="true">2025</span>
+    </time>
+  </div>
 </div>
