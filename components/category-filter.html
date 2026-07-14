@@ -1,273 +1,470 @@
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Category filter</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-l">Use the category filter to navigate nested categories with expandable buttons for parent items and links for destinations.</p>
-<div class="ecl-u-mb-2xl">
-    <nav class="ecl-category-filter" data-ecl-category-filter data-ecl-auto-init="CategoryFilter" aria-label="Category filter">
-        <ul class="ecl-category-filter__list">
+<!-- Default category filter: labelled tree, current link, parent buttons, level 1-4 nesting -->
+<nav
+  class="ecl-category-filter"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+        aria-current="true"
+      >
+        Item 1
+      </a>
+    </li>
+    <li class="ecl-category-filter__list-item">
+      <button
+        class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children"
+        aria-expanded="false"
+        aria-controls="category-filter-default-2"
+      >
+        Item 2 label
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow"
+        ></span>
+      </button>
+      <ul class="ecl-category-filter__list" id="category-filter-default-2">
+        <li class="ecl-category-filter__list-item">
+          <button
+            class="ecl-category-filter__item ecl-category-filter__item--level-2 ecl-category-filter__item--has-children"
+            aria-expanded="false"
+            aria-controls="category-filter-default-2-1"
+          >
+            <span
+              aria-hidden="true"
+              class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow"
+            ></span>
+            Item 2.1
+          </button>
+          <ul
+            class="ecl-category-filter__list"
+            id="category-filter-default-2-1"
+          >
             <li class="ecl-category-filter__list-item">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-category-filter__item ecl-category-filter__item--level-1" href="/example" aria-current="true">
-                    Item 1
-                </a>
+              <a
+                href="/example"
+                class="ecl-category-filter__item ecl-category-filter__item--level-3"
+              >
+                Item 2.1.1
+              </a>
             </li>
             <li class="ecl-category-filter__list-item">
-                <button class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-2">
-                    Item 2 label
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow" aria-hidden="true"></span>
-                </button>
-                <ul class="ecl-category-filter__list" id="category-filter-example-2">
-                    <li class="ecl-category-filter__list-item">
-                        <button class="ecl-category-filter__item ecl-category-filter__item--level-2 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-2-1">
-                            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                            <span class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow" aria-hidden="true"></span>
-                            Item 2.1
-                        </button>
-                        <ul class="ecl-category-filter__list" id="category-filter-example-2-1">
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 2.1.1
-                                </a>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <button class="ecl-category-filter__item ecl-category-filter__item--level-3 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-2-1-2">
-                                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                                    <span class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow" aria-hidden="true"></span>
-                                    Item 2.1.2
-                                </button>
-                                <ul class="ecl-category-filter__list" id="category-filter-example-2-1-2">
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 2.1.2 a
-                                        </a>
-                                    </li>
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 2.1.2 b
-                                        </a>
-                                    </li>
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 2.1.2 c
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 2.1.3
-                                </a>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 2.1.4
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.2
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.3
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.4
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.5
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.6
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 2.7
-                        </a>
-                    </li>
-                </ul>
+              <button
+                class="ecl-category-filter__item ecl-category-filter__item--level-3 ecl-category-filter__item--has-children"
+                aria-expanded="false"
+                aria-controls="category-filter-default-2-1-2"
+              >
+                <span
+                  aria-hidden="true"
+                  class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow"
+                ></span>
+                Item 2.1.2
+              </button>
+              <ul
+                class="ecl-category-filter__list"
+                id="category-filter-default-2-1-2"
+              >
+                <li class="ecl-category-filter__list-item">
+                  <a
+                    href="/example"
+                    class="ecl-category-filter__item ecl-category-filter__item--level-4"
+                  >
+                    Item 2.1.2 a
+                  </a>
+                </li>
+                <li class="ecl-category-filter__list-item">
+                  <a
+                    href="/example"
+                    class="ecl-category-filter__item ecl-category-filter__item--level-4"
+                  >
+                    Item 2.1.2 b
+                  </a>
+                </li>
+                <li class="ecl-category-filter__list-item">
+                  <a
+                    href="/example"
+                    class="ecl-category-filter__item ecl-category-filter__item--level-4"
+                  >
+                    Item 2.1.2 c
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="ecl-category-filter__list-item">
-                <button class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-3">
-                    Item 3 with a very long label
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow" aria-hidden="true"></span>
-                </button>
-                <ul class="ecl-category-filter__list" id="category-filter-example-3">
-                    <li class="ecl-category-filter__list-item">
-                        <button class="ecl-category-filter__item ecl-category-filter__item--level-2 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-3-1">
-                            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                            <span class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow" aria-hidden="true"></span>
-                            Item 3.1
-                        </button>
-                        <ul class="ecl-category-filter__list" id="category-filter-example-3-1">
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 3.1.1
-                                </a>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <button class="ecl-category-filter__item ecl-category-filter__item--level-3 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-3-1-2">
-                                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                                    <span class="wt-icon--solid-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-category-filter__item-icon ecl-icon--solid-arrow" aria-hidden="true"></span>
-                                    Item 3.1.2
-                                </button>
-                                <ul class="ecl-category-filter__list" id="category-filter-example-3-1-2">
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 3.1.2 a
-                                        </a>
-                                    </li>
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 3.1.2 b
-                                        </a>
-                                    </li>
-                                    <li class="ecl-category-filter__list-item">
-                                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                        <a class="ecl-category-filter__item ecl-category-filter__item--level-4" href="/example">
-                                            Item 3.1.2 c
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 3.1.3
-                                </a>
-                            </li>
-                            <li class="ecl-category-filter__list-item">
-                                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                                <a class="ecl-category-filter__item ecl-category-filter__item--level-3" href="/example">
-                                    Item 3.1.4
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 3.2
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 3.3
-                        </a>
-                    </li>
-                </ul>
+              <a
+                href="/example"
+                class="ecl-category-filter__item ecl-category-filter__item--level-3"
+              >
+                Item 2.1.3
+              </a>
             </li>
-            <li class="ecl-category-filter__list-item">
-                <button class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-example-4">
-                    Item 4 label
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow" aria-hidden="true"></span>
-                </button>
-                <ul class="ecl-category-filter__list" id="category-filter-example-4">
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.1
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.2
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.3 with a very long label going on 2 lines
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.4
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.5
-                        </a>
-                    </li>
-                    <li class="ecl-category-filter__list-item">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                            Item 4.6
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</div>
+          </ul>
+        </li>
+        <li class="ecl-category-filter__list-item">
+          <a
+            href="/example"
+            class="ecl-category-filter__item ecl-category-filter__item--level-2"
+          >
+            Item 2.2
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="ecl-category-filter__list-item">
+      <button
+        class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children"
+        aria-expanded="false"
+        aria-controls="category-filter-default-3"
+      >
+        Item 3 with a very long label
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow"
+        ></span>
+      </button>
+      <ul class="ecl-category-filter__list" id="category-filter-default-3">
+        <li class="ecl-category-filter__list-item">
+          <a
+            href="/example"
+            class="ecl-category-filter__item ecl-category-filter__item--level-2"
+          >
+            Item 3.1
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Compact category filter</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">A shorter tree without deep nesting.</p>
-<nav class="ecl-category-filter" data-ecl-category-filter data-ecl-auto-init="CategoryFilter" aria-label="Compact category filter">
-    <ul class="ecl-category-filter__list">
+<!-- Extension hooks: custom root class, valued and valueless attributes, item attributes, no aria-label -->
+<nav
+  class="ecl-category-filter custom-category-filter"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  data-test="category-filter"
+  data-category-filter-ready
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+        data-test-item="first"
+        data-track-current
+        aria-current="true"
+      >
+        Item with extra attributes
+      </a>
+    </li>
+    <li class="ecl-category-filter__list-item">
+      <button
+        class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children"
+        data-test-item="parent"
+        data-track-parent
+        aria-expanded="false"
+        aria-controls="category-filter-hooks-2"
+      >
+        Parent with extra attributes
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow"
+        ></span>
+      </button>
+      <ul class="ecl-category-filter__list" id="category-filter-hooks-2">
         <li class="ecl-category-filter__list-item">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a class="ecl-category-filter__item ecl-category-filter__item--level-1" href="/example">
-                Simple Item 1
-            </a>
+          <a
+            href="/example"
+            class="ecl-category-filter__item ecl-category-filter__item--level-2"
+          >
+            Child item
+          </a>
         </li>
-        <li class="ecl-category-filter__list-item">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a class="ecl-category-filter__item ecl-category-filter__item--level-1" href="/example">
-                Simple Item 2
-            </a>
-        </li>
-        <li class="ecl-category-filter__list-item">
-            <button class="ecl-category-filter__item ecl-category-filter__item--level-1 ecl-category-filter__item--has-children" aria-expanded="false" aria-controls="category-filter-compact-3">
-                Simple Item 3
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-category-filter__item-icon ecl-icon--corner-arrow" aria-hidden="true"></span>
-            </button>
-            <ul class="ecl-category-filter__list" id="category-filter-compact-3">
-                <li class="ecl-category-filter__list-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                        Simple Item 3.1
-                    </a>
-                </li>
-                <li class="ecl-category-filter__list-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-category-filter__item ecl-category-filter__item--level-2" href="/example">
-                        Simple Item 3.2
-                    </a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- Empty items: the Twig still renders the root nav and an empty list -->
+<nav
+  class="ecl-category-filter"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Empty category filter"
+>
+  <ul class="ecl-category-filter__list"></ul>
+</nav>
+
+<!-- EC color modes: each non-default mode is a reusable root configuration -->
+<nav
+  class="ecl-category-filter ecl-color-mode--blue"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Blue category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Blue item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--green-dark"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Green dark category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Green dark item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--orange"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Orange category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Orange item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--green"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Green category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Green item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--purple"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Purple category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Purple item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--blue-navy"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Blue navy category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Blue navy item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--blue-electric"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Blue electric category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Blue electric item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--blue-ocean"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Blue ocean category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Blue ocean item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--green-lemon"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Green lemon category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Green lemon item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--green-pine"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Green pine category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Green pine item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--warm-grey"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Warm grey category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Warm grey item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--red-crayola"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Red crayola category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Red crayola item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--yellow-gold"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Yellow gold category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Yellow gold item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--purple-violet"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Purple violet category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Purple violet item
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav
+  class="ecl-category-filter ecl-color-mode--red-tomato"
+  data-ecl-category-filter
+  data-ecl-auto-init="CategoryFilter"
+  aria-label="Red tomato category filter"
+>
+  <ul class="ecl-category-filter__list">
+    <li class="ecl-category-filter__list-item">
+      <a
+        href="/example"
+        class="ecl-category-filter__item ecl-category-filter__item--level-1"
+      >
+        Red tomato item
+      </a>
+    </li>
+  </ul>
 </nav>
