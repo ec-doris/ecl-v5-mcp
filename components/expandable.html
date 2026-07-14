@@ -1,41 +1,698 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default expandable</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the expandable component to tuck away supporting details while keeping the primary narrative concise.</p>
-<div class="ecl-expandable ecl-u-mb-2xl" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-default-content" data-ecl-expandable-toggle data-ecl-label-expanded="Hide details" data-ecl-label-collapsed="Show details" aria-expanded="false">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Show details</span>
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon aria-hidden="true"></span>
-        </span>
-    </button>
-    <div id="expandable-default-content" class="ecl-expandable__content" hidden>
-        <p class="ecl-u-type-paragraph-m">The EU is building an energy union that ensures Europe&rsquo;s energy supply is safe, viable, and accessible to all. In doing so, it can boost the economy and attract investments that can create new jobs opportunities.</p>
-    </div>
+<div
+  class="ecl-expandable ecl-u-mb-2xl"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-default-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide details"
+    data-ecl-label-collapsed="Show details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Show details</span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div id="expandable-default-content" class="ecl-expandable__content" hidden>
+    <p class="ecl-u-type-paragraph-m">
+      The EU is building an energy union that ensures Europe's energy supply is
+      safe, viable and accessible to all. In doing so, it can boost the economy
+      and attract investments that can create new jobs opportunities.
+    </p>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Expandable with rich content</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Pair the expandable with lists and calls to action while keeping the toggle and content containers aligned to the component specification.</p>
-<div class="ecl-expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" aria-controls="expandable-rich-content" data-ecl-expandable-toggle data-ecl-label-expanded="Show less" data-ecl-label-collapsed="Show more" aria-expanded="false">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Show more</span>
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon aria-hidden="true"></span>
-        </span>
-    </button>
-    <div id="expandable-rich-content" class="ecl-expandable__content" hidden>
-        <p class="ecl-u-type-paragraph-m">The European Commission has identified key priorities for the coming years, focusing on sustainable growth, digital transformation, and strengthening the European social model.</p>
-        <ul class="ecl-u-type-list-ul ecl-u-mt-m">
-            <li class="ecl-u-type-list-ul__item">Cross-border e-commerce and consumer safeguards</li>
-            <li class="ecl-u-type-list-ul__item">Digital content portability across the Union</li>
-            <li class="ecl-u-type-list-ul__item">Connectivity, skills, and inclusion initiatives</li>
-            <li class="ecl-u-type-list-ul__item">Data protection and trustworthy AI</li>
-        </ul>
-        <p class="ecl-u-type-paragraph-m ecl-u-mt-m">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a class="ecl-link" href="#">Learn more about the Digital Single Market</a>
-        </p>
-    </div>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Rich content and dropdown class</h3>
+<div
+  class="ecl-expandable ecl-u-mb-2xl"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-rich-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Show less"
+    data-ecl-label-collapsed="Show more"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Show more</span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-rich-content"
+    class="ecl-expandable__content ecl-u-pv-m"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">
+      The European Commission has identified key priorities for sustainable
+      growth, digital transformation and strengthening the European social
+      model.
+    </p>
+    <ul class="ecl-u-type-list-ul ecl-u-mt-m">
+      <li class="ecl-u-type-list-ul__item">
+        Cross-border e-commerce and consumer safeguards
+      </li>
+      <li class="ecl-u-type-list-ul__item">
+        Digital content portability across the Union
+      </li>
+      <li class="ecl-u-type-list-ul__item">
+        Connectivity, skills and inclusion initiatives
+      </li>
+    </ul>
+    <p class="ecl-u-type-paragraph-m ecl-u-mt-m">
+      <a class="ecl-link" href="#"
+        >Learn more about the Digital Single Market</a
+      >
+    </p>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Root and button extensions</h3>
+<div
+  class="ecl-expandable custom-expandable ecl-u-mb-2xl"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+  data-test="expandable-root"
+  data-ready
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle custom-toggle"
+    type="button"
+    aria-controls="expandable-extensions-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Close technical details"
+    data-ecl-label-collapsed="Open technical details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Open technical details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-extensions-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">
+      Extension attributes belong to the root while button options are still
+      rendered through the button component and the expandable toggle contract.
+    </p>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Empty content</h3>
+<div
+  class="ecl-expandable ecl-u-mb-2xl"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-empty-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide empty panel"
+    data-ecl-label-collapsed="Show empty panel"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show empty panel
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-empty-content"
+    class="ecl-expandable__content"
+    hidden
+  ></div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Edge case: empty labels and content
+</h3>
+<div
+  class="ecl-expandable ecl-u-mb-2xl"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-empty-labels-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded=""
+    data-ecl-label-collapsed=""
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true"></span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-empty-labels-content"
+    class="ecl-expandable__content"
+    hidden
+  ></div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC color modes</h3>
+<div
+  class="ecl-expandable ecl-color-mode--blue ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-blue-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide blue details"
+    data-ecl-label-collapsed="Show blue details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show blue details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div id="expandable-mode-blue-content" class="ecl-expandable__content" hidden>
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--blue-electric ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-blue-electric-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide electric blue details"
+    data-ecl-label-collapsed="Show electric blue details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show electric blue details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-blue-electric-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--blue-navy ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-blue-navy-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide navy details"
+    data-ecl-label-collapsed="Show navy details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show navy details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-blue-navy-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--blue-ocean ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-blue-ocean-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide ocean details"
+    data-ecl-label-collapsed="Show ocean details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show ocean details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-blue-ocean-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--green ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-green-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide green details"
+    data-ecl-label-collapsed="Show green details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show green details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-green-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--green-dark ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-green-dark-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide dark green details"
+    data-ecl-label-collapsed="Show dark green details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show dark green details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-green-dark-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--green-lemon ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-green-lemon-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide lemon details"
+    data-ecl-label-collapsed="Show lemon details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show lemon details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-green-lemon-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--green-pine ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-green-pine-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide pine details"
+    data-ecl-label-collapsed="Show pine details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show pine details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-green-pine-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--orange ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-orange-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide orange details"
+    data-ecl-label-collapsed="Show orange details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show orange details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-orange-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--purple ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-purple-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide purple details"
+    data-ecl-label-collapsed="Show purple details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show purple details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-purple-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--purple-violet ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-purple-violet-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide violet details"
+    data-ecl-label-collapsed="Show violet details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show violet details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-purple-violet-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--red-crayola ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-red-crayola-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide red details"
+    data-ecl-label-collapsed="Show red details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show red details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-red-crayola-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--red-tomato ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-red-tomato-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide tomato details"
+    data-ecl-label-collapsed="Show tomato details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show tomato details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-red-tomato-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--warm-grey ecl-u-mb-l"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-warm-grey-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide warm grey details"
+    data-ecl-label-collapsed="Show warm grey details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show warm grey details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-warm-grey-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
+</div>
+
+<div
+  class="ecl-expandable ecl-color-mode--yellow-gold"
+  data-ecl-expandable="true"
+  data-ecl-auto-init="Expandable"
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+    type="button"
+    aria-controls="expandable-mode-yellow-gold-content"
+    data-ecl-expandable-toggle
+    data-ecl-label-expanded="Hide gold details"
+    data-ecl-label-collapsed="Show gold details"
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">
+        Show gold details
+      </span>
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        data-ecl-icon
+        aria-hidden="true"
+      ></span>
+    </span>
+  </button>
+  <div
+    id="expandable-mode-yellow-gold-content"
+    class="ecl-expandable__content"
+    hidden
+  >
+    <p class="ecl-u-type-paragraph-m">Compact color mode example.</p>
+  </div>
 </div>
