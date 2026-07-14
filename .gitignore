@@ -60,3 +60,5 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+
+europa-component-library

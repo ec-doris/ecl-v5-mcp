@@ -1,13 +1,15 @@
 ECL EC Assets
 
-To start using ECL EC, you need to bring in the following assets into your project:
+To start using ECL EC, copy the bundled assets and local font fallbacks into your project:
 
-Copy the following folder from your node_modules into your project's assets folder:
+Copy these folders from the installed MCP package to the same paths in your project:
 
 ```
 __DIR__/assets/*
+__DIR__/fonts/*
 ```
 
+- assets/ecl-ec-color-modes.css
 - assets/ecl-ec-color-modes.css.map
 - assets/ecl-ec-print.css
 - assets/ecl-ec-print.css.map
@@ -22,6 +24,9 @@ __DIR__/assets/*
 - assets/favicon.svg
 - assets/logo-ec-negative-en.svg
 - assets/logo-ec-positive-en.svg
+- fonts/InterVariable.woff2
+- fonts/InterVariable-Italic.woff2
+- fonts/version.txt
 
 Then include the following code in the head of your HTML document:
 
@@ -31,6 +36,7 @@ Then include the following code in the head of your HTML document:
 <link rel="apple-touch-icon" href="assets/logo-ec-positive-en.svg">
 <link rel="stylesheet" href="assets/ecl-reset.css">
 <link rel="stylesheet" href="assets/ecl-ec.css">
+<link rel="stylesheet" href="assets/ecl-ec-color-modes.css">
 <link rel="stylesheet" href="assets/ecl-ec-utilities.css">
 <link rel="stylesheet" href="assets/ecl-ec-print.css" media="print">
 <style>
@@ -45,7 +51,9 @@ Then include the following code in the head of your HTML document:
 
 Ofcourse you can compile some of these files into your application's main CSS and JS files, but make sure to include all the necessary parts.
 
-The above code includes the necessary CSS and JavaScript files for the ECL EC theme. The reset and the utilties are important.
+The above code includes the necessary CSS and JavaScript files for the ECL EC theme. The reset and utilities are important. The color modes stylesheet enables the optional `ecl-color-mode--*` themes and has no effect until one of those classes is used.
+
+The main stylesheets try the WebTools-hosted Inter font first and then `../fonts/` as a local fallback. Keep `assets/` and `fonts/` as sibling folders so those fallback URLs resolve correctly.
 
 Datepickers are now made using the duet.js library. You need to load the duet.js script from unpkg.com as shown above.
 
