@@ -1,179 +1,326 @@
-<p class="ecl-u-type-paragraph ecl-u-mb-l">Content blocks combine labels, meta information, titles, descriptions, lists, and grouped calls-to-action. The markup below follows the <code>content-block</code> template structure exactly.</p>
-
-<div class="ecl-u-mb-2xl">
-    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Content block with labels, meta, lists, and grouped links</h3>
-    <p class="ecl-u-type-paragraph ecl-u-mb-m">This example shows the full structure: labels, primary meta, title link, description, secondary meta, description list, and grouped standalone links.</p>
-    <div class="ecl-content-block" data-ecl-auto-init="ContentBlock" data-ecl-content-block>
-        <ul class="ecl-content-block__label-container" aria-label="Labels">
-            <li class="ecl-content-block__label-item">
-                <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
-                <span class="ecl-label ecl-label--highlight">highlight</span>
-            </li>
-            <li class="ecl-content-block__label-item">
-                <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
-                <span class="ecl-label ecl-label--high">high importance</span>
-            </li>
+<!-- Default: full content with multiple labels, meta, lists, and grouped links -->
+<div
+  class="ecl-content-block"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <ul class="ecl-content-block__label-container" aria-label="Labels">
+    <li class="ecl-content-block__label-item">
+      <span class="ecl-label ecl-label--highlight">highlight</span>
+    </li>
+    <li class="ecl-content-block__label-item">
+      <span class="ecl-label ecl-label--high">high importance</span>
+    </li>
+  </ul>
+  <ul class="ecl-content-block__primary-meta-container">
+    <li class="ecl-content-block__primary-meta-item">PRIMARY META</li>
+    <li class="ecl-content-block__primary-meta-item">DD Month Year</li>
+  </ul>
+  <div class="ecl-content-block__title">
+    <a
+      class="ecl-link ecl-link--standalone"
+      data-ecl-title-link
+      href="/example"
+    >
+      Title
+    </a>
+  </div>
+  <div class="ecl-content-block__description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida
+    ipsum ut lorem cursus, quis tincidunt sem viverra.
+  </div>
+  <ul class="ecl-content-block__secondary-meta-container">
+    <li class="ecl-content-block__secondary-meta-item">
+      <span
+        class="wt-icon--calendar ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--calendar"
+        aria-hidden="true"
+      ></span>
+      <span class="ecl-content-block__secondary-meta-label">2018/10/22</span>
+    </li>
+    <li class="ecl-content-block__secondary-meta-item">
+      <span
+        class="wt-icon--location ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--location"
+        aria-hidden="true"
+      ></span>
+      <span class="ecl-content-block__secondary-meta-label">Luxembourg</span>
+    </li>
+    <li class="ecl-content-block__secondary-meta-item">
+      <span
+        class="wt-icon--clock ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--clock"
+        aria-hidden="true"
+      ></span>
+      <span class="ecl-content-block__secondary-meta-label">1 hour</span>
+    </li>
+  </ul>
+  <div class="ecl-content-block__list-container">
+    <dl class="ecl-description-list ecl-content-block__list">
+      <dt class="ecl-description-list__term">Standalone links</dt>
+      <dd
+        class="ecl-description-list__definition ecl-description-list__definition--link"
+      >
+        <ul class="ecl-description-list__definition-list">
+          <li class="ecl-description-list__definition-item">
+            <a class="ecl-link ecl-link--standalone" href="/example">
+              Lorem ipsum dolor sit amet
+            </a>
+          </li>
+          <li class="ecl-description-list__definition-item">
+            <a class="ecl-link ecl-link--standalone" href="/example">
+              Lorem ipsum dolor sit amet
+            </a>
+          </li>
         </ul>
-        <ul class="ecl-content-block__primary-meta-container">
-            <li class="ecl-content-block__primary-meta-item">PRIMARY META</li>
-            <li class="ecl-content-block__primary-meta-item">DD Month Year</li>
+      </dd>
+      <dt class="ecl-description-list__term">Standard text</dt>
+      <dd class="ecl-description-list__definition">
+        Lorem ipsum dolor sit amet,
+        <a class="ecl-link" href="/example">consectetur adipiscing elit</a>.
+      </dd>
+      <dt class="ecl-description-list__term">Links inline</dt>
+      <dd
+        class="ecl-description-list__definition ecl-description-list__definition--inline"
+      >
+        <ul class="ecl-description-list__definition-list">
+          <li class="ecl-description-list__definition-item">
+            <a class="ecl-link ecl-link--standalone" href="/example">
+              Lorem ipsum dolor sit amet
+            </a>
+          </li>
+          <li class="ecl-description-list__definition-item">
+            <a class="ecl-link ecl-link--standalone" href="/example">
+              Lorem ipsum dolor sit amet
+            </a>
+          </li>
         </ul>
-        <div class="ecl-content-block__title">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--standalone" href="/example" data-ecl-title-link>Resilient digital public services</a>
-        </div>
-        <div class="ecl-content-block__description">
-            <p class="ecl-u-type-paragraph">Modernise services with interoperable platforms and trusted data sharing to deliver seamless experiences for citizens and businesses.</p>
-        </div>
-        <ul class="ecl-content-block__secondary-meta-container">
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--calendar ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--calendar"></span>
-                <span class="ecl-content-block__secondary-meta-label">2018/10/22</span>
-            </li>
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--location ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--location"></span>
-                <span class="ecl-content-block__secondary-meta-label">Luxembourg</span>
-            </li>
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--clock ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--clock"></span>
-                <span class="ecl-content-block__secondary-meta-label">1 hour</span>
-            </li>
+      </dd>
+      <dt class="ecl-description-list__term">Taxonomy list</dt>
+      <dd
+        class="ecl-description-list__definition ecl-description-list__definition--taxonomy"
+      >
+        <ul class="ecl-description-list__definition-list">
+          <li class="ecl-description-list__definition-item">Taxonomy item 1</li>
+          <li class="ecl-description-list__definition-item">Taxonomy item 2</li>
+          <li class="ecl-description-list__definition-item">Taxonomy item 3</li>
         </ul>
-        <div class="ecl-content-block__list-container">
-            <!-- Sub component: description-list. Use the description-list component template; see description-list sub component for full markup guidance. -->
-            <dl class="ecl-description-list ecl-content-block__list">
-                <dt class="ecl-description-list__term">Standalone links</dt>
-                <dd class="ecl-description-list__definition ecl-description-list__definition--link">
-                    <ul class="ecl-description-list__definition-list">
-                        <li class="ecl-description-list__definition-item">
-                            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                            <a class="ecl-link ecl-link--standalone" href="/example">Digital strategy update</a>
-                        </li>
-                        <li class="ecl-description-list__definition-item">
-                            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                            <a class="ecl-link ecl-link--standalone" href="/example">Funding opportunities</a>
-                        </li>
-                    </ul>
-                </dd>
-                <dt class="ecl-description-list__term">Standard text</dt>
-                <dd class="ecl-description-list__definition">
-                    <p class="ecl-u-type-paragraph">Resources cover design guidelines, reusable components, and compliance updates for all institutions.</p>
-                </dd>
-                <dt class="ecl-description-list__term">Links inline</dt>
-                <dd class="ecl-description-list__definition ecl-description-list__definition--inline">
-                    <ul class="ecl-description-list__definition-list">
-                        <li class="ecl-description-list__definition-item">
-                            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                            <a class="ecl-link ecl-link--standalone" href="/example">Roadmap</a>
-                        </li>
-                        <li class="ecl-description-list__definition-item">
-                            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                            <a class="ecl-link ecl-link--standalone" href="/example">Milestones</a>
-                        </li>
-                    </ul>
-                </dd>
-                <dt class="ecl-description-list__term">Taxonomy list</dt>
-                <dd class="ecl-description-list__definition ecl-description-list__definition--taxonomy">
-                    <ul class="ecl-description-list__definition-list">
-                        <li class="ecl-description-list__definition-item">Digital government</li>
-                        <li class="ecl-description-list__definition-item">User experience</li>
-                        <li class="ecl-description-list__definition-item">Accessibility</li>
-                    </ul>
-                </dd>
-            </dl>
-        </div>
-        <div class="ecl-content-block__link-container">
-            <ul class="ecl-content-block__link-list">
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Primary link 1</a>
-                </li>
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Primary link 2</a>
-                </li>
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Primary link 3</a>
-                </li>
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Primary link 4</a>
-                </li>
-            </ul>
-            <ul class="ecl-content-block__link-list">
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Secondary link 1</a>
-                </li>
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Secondary link 2</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+      </dd>
+    </dl>
+    <dl
+      class="ecl-description-list ecl-description-list--horizontal ecl-content-block__list a-list-extra-class"
+    >
+      <dt class="ecl-description-list__term">Programme</dt>
+      <dd class="ecl-description-list__definition">Digital Europe</dd>
+      <dt class="ecl-description-list__term">Audience</dt>
+      <dd class="ecl-description-list__definition">Public authorities</dd>
+    </dl>
+  </div>
+  <div class="ecl-content-block__link-container">
+    <ul class="ecl-content-block__link-list">
+      <li class="ecl-content-block__link-item">
+        <a class="ecl-link ecl-link--standalone" href="/example">
+          Primary link 1
+        </a>
+      </li>
+      <li class="ecl-content-block__link-item">
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon"
+          href="/example"
+          data-test="data-test-value"
+          data-test-1="data-test-value-1"
+        >
+          Primary link 2
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-link__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </li>
+    </ul>
+    <ul class="ecl-content-block__link-list">
+      <li class="ecl-content-block__link-item">Plain secondary item</li>
+      <li class="ecl-content-block__link-item">
+        <a class="ecl-link ecl-link--standalone" href="/example">
+          Secondary link 2
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<div class="ecl-u-mb-2xl">
-    <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Content block with horizontal secondary meta</h3>
-    <p class="ecl-u-type-paragraph ecl-u-mb-m">This variation keeps the same structure while laying out the secondary meta horizontally and showing a single link group.</p>
-    <div class="ecl-content-block" data-ecl-auto-init="ContentBlock" data-ecl-content-block>
-        <ul class="ecl-content-block__primary-meta-container">
-            <li class="ecl-content-block__primary-meta-item">UPDATE</li>
-            <li class="ecl-content-block__primary-meta-item">14 March 2024</li>
-        </ul>
-        <div class="ecl-content-block__title">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--standalone" href="/example" data-ecl-title-link>Urban mobility consultation</a>
-        </div>
-        <div class="ecl-content-block__description">
-            <p class="ecl-u-type-paragraph">Share your feedback on sustainable transport pilots, inclusive city design, and funding priorities for the next programme cycle.</p>
-        </div>
-        <ul class="ecl-content-block__secondary-meta-container ecl-content-block__secondary-meta-container--horizontal">
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--calendar ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--calendar"></span>
-                <span class="ecl-content-block__secondary-meta-label">2024/03/14</span>
-            </li>
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--location ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--location"></span>
-                <span class="ecl-content-block__secondary-meta-label">Brussels</span>
-            </li>
-            <li class="ecl-content-block__secondary-meta-item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--clock ecl-icon ecl-icon--s ecl-content-block__secondary-meta-icon ecl-icon--clock"></span>
-                <span class="ecl-content-block__secondary-meta-label">45 minutes</span>
-            </li>
-        </ul>
-        <div class="ecl-content-block__list-container">
-            <!-- Sub component: description-list. Use the description-list component template; see description-list sub component for full markup guidance. -->
-            <dl class="ecl-description-list ecl-description-list--horizontal ecl-content-block__list">
-                <dt class="ecl-description-list__term">Topics</dt>
-                <dd class="ecl-description-list__definition">
-                    <p class="ecl-u-type-paragraph">Active mobility, public transport, zero-emission logistics.</p>
-                </dd>
-                <dt class="ecl-description-list__term">Audience</dt>
-                <dd class="ecl-description-list__definition">
-                    <p class="ecl-u-type-paragraph">Municipal teams, industry partners, and citizen groups.</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="ecl-content-block__link-container">
-            <ul class="ecl-content-block__link-list">
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Read the consultation brief</a>
-                </li>
-                <li class="ecl-content-block__link-item">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">Submit feedback</a>
-                </li>
-            </ul>
-        </div>
+<!-- Single-item branches, horizontal secondary meta, string title, and root extension hooks -->
+<div
+  class="ecl-content-block custom-class custom-class--test"
+  data-test="data-test-value"
+  data-test-flag
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__label-container" aria-label="Single label">
+    <div class="ecl-content-block__label-item">
+      <span class="ecl-label ecl-label--highlight">Single label</span>
     </div>
+  </div>
+  <div class="ecl-content-block__primary-meta-container">
+    <div class="ecl-content-block__primary-meta-item">Single primary meta</div>
+  </div>
+  <div class="ecl-content-block__title">Simple title</div>
+  <div class="ecl-content-block__description">
+    A single-content example keeps the div wrappers used when an input array has
+    one item.
+  </div>
+  <div
+    class="ecl-content-block__secondary-meta-container ecl-content-block__secondary-meta-container--horizontal"
+  >
+    <div class="ecl-content-block__secondary-meta-item">
+      <span class="ecl-content-block__secondary-meta-label">
+        Single secondary meta
+      </span>
+    </div>
+  </div>
+  <div class="ecl-content-block__link-container">
+    <div class="ecl-content-block__link-list">
+      <div class="ecl-content-block__link-item">
+        <a class="ecl-link ecl-link--standalone" href="#example">
+          Single link
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Flat multiple links branch -->
+<div
+  class="ecl-content-block"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Flat links</div>
+  <div class="ecl-content-block__link-container">
+    <ul class="ecl-content-block__link-list">
+      <li class="ecl-content-block__link-item">
+        <a class="ecl-link ecl-link--standalone" href="/example"
+          >First flat link</a
+        >
+      </li>
+      <li class="ecl-content-block__link-item">Plain flat item</li>
+      <li class="ecl-content-block__link-item">
+        <a class="ecl-link ecl-link--standalone" href="/example"
+          >Second flat link</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Empty/default root-only output -->
+<div
+  class="ecl-content-block"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+></div>
+
+<!-- EC color mode pass-through examples -->
+<div
+  class="ecl-content-block ecl-color-mode--blue"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Blue mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--blue-electric"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Blue electric mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--blue-navy"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Blue navy mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--blue-ocean"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Blue ocean mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--green"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Green mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--green-dark"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Green dark mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--green-lemon"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Green lemon mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--green-pine"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Green pine mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--orange"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Orange mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--purple"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Purple mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--purple-violet"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Purple violet mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--red-crayola"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Red crayola mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--red-tomato"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Red tomato mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--warm-grey"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Warm grey mode</div>
+</div>
+<div
+  class="ecl-content-block ecl-color-mode--yellow-gold"
+  data-ecl-auto-init="ContentBlock"
+  data-ecl-content-block
+>
+  <div class="ecl-content-block__title">Yellow gold mode</div>
 </div>
