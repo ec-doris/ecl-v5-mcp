@@ -1,93 +1,397 @@
-<h3 class="ecl-u-type-heading-3">Banner with Image</h3>
-<section class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center" id="banner-example-image" data-ecl-banner data-ecl-auto-init="Banner">
-    <figure class="ecl-banner__picture-container">
-        <!-- Sub-component: Picture. Use the picture component template for full markup guidance. -->
-        <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
-            <img src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg" alt="alternative text" class="ecl-banner__image" />
-        </picture>
-        <footer class="ecl-banner__credit" data-ecl-banner-footer>
-            <div class="ecl-container">© Copyright</div>
-        </footer>
-    </figure>
-    <div class="ecl-container ecl-banner__info">
-        <div class="ecl-banner__container" data-ecl-banner-container>
-            <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="banner-example-image-title">
-                    <span class="ecl-banner__title-text">
-                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                        <a href="/example" class="ecl-link ecl-banner__title-link">Lorem ipsum</a>
-                    </span>
-                </div>
-                <p class="ecl-banner__description" id="banner-example-image-description">
-                    <span class="ecl-banner__description-text">
-                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                        <a href="/example" class="ecl-link ecl-banner__description-link">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a>
-                    </span>
-                </p>
-                <div class="ecl-banner__cta">
-                    <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-image-title">
-                        <span class="ecl-link__label">CTA link</span>
-                        <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
-                    </a>
-                </div>
-            </div>
+<h3 class="ecl-u-type-heading-3">Image banner</h3>
+<section
+  class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
+  id="banner-example-image"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+>
+  <figure class="ecl-banner__picture-container">
+    <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
+      <source
+        srcset="
+          https://inno-ecl.s3.amazonaws.com/media/examples/example-image8-large.jpg
+        "
+        media="(min-width: 996px)"
+        type="image/jpeg"
+      />
+      <img
+        style="--ecl-image-anchor: center"
+        class="ecl-banner__image"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+        alt="alternative text"
+      />
+    </picture>
+    <footer class="ecl-banner__credit" data-ecl-banner-footer>
+      <div class="ecl-container">© Copyright</div>
+    </footer>
+  </figure>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <div class="ecl-banner__title" id="banner-example-image-title">
+          <span class="ecl-banner__title-text">
+            <a
+              href="/example"
+              class="ecl-link custom-title-link-class ecl-banner__title-link"
+              >Lorem ipsum</a
+            >
+          </span>
         </div>
+        <p
+          class="ecl-banner__description"
+          id="banner-example-image-description"
+        >
+          <span class="ecl-banner__description-text">
+            <a
+              href="/example"
+              class="ecl-link custom-description-link-class ecl-banner__description-link"
+              >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor.</a
+            >
+          </span>
+        </p>
+        <div class="ecl-banner__cta">
+          <a
+            href="/example"
+            class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta custom-cta-link-class"
+            aria-describedby="banner-example-image-title"
+            data-cta="primary"
+          >
+            <span class="ecl-link__label">CTA link</span>
+            <span
+              aria-hidden="true"
+              class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+            ></span>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<h3 class="ecl-u-type-heading-3">Banner with Video</h3>
-<section class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center" id="banner-example-video" data-ecl-banner data-ecl-auto-init="Banner">
-    <div class="ecl-banner__video-container">
-        <!-- Sub-component: Video. Use the video component template for full markup guidance. -->
-        <video class="ecl-video ecl-banner__video" data-ecl-banner-video autoplay muted loop playsinline poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg">
-            <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4" />
-        </video>
-        <div class="ecl-banner__credit" data-ecl-banner-footer>
-            <div class="ecl-container">© Copyright</div>
-        </div>
-        <!-- Sub-component: Button. Use the button component template for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__play ecl-button--icon-only" data-ecl-banner-play type="button">
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Play video</span>
-                <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline" data-ecl-icon></span>
-            </span>
-        </button>
-        <!-- Sub-component: Button. Use the button component template for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__pause ecl-button--icon-only" data-ecl-banner-pause type="button">
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Pause video</span>
-                <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline" data-ecl-icon></span>
-            </span>
-        </button>
+<h3 class="ecl-u-type-heading-3">Video banner</h3>
+<section
+  class="ecl-banner ecl-banner--l ecl-banner--font-l ecl-banner--font-weight-bold ecl-banner--box-bg-dark ecl-banner--color-light ecl-banner--h-right ecl-banner--v-bottom ecl-banner--overlay"
+  id="banner-example-video"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+>
+  <div class="ecl-banner__video-container">
+    <video
+      class="ecl-video ecl-banner__video custom-video-class"
+      poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg"
+      aria-label="Video banner - decorative background"
+      playsinline
+      autoplay
+      muted
+      loop
+      data-test-extra-attribute
+      data-ecl-banner-video
+    >
+      <source
+        type="video/mp4"
+        src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4"
+      />
+      <track
+        kind="captions"
+        label="English"
+        src="/captions/banner-en.vtt"
+        srclang="en"
+      />
+    </video>
+    <div class="ecl-banner__credit" data-ecl-banner-footer>
+      <div class="ecl-container">© Copyright</div>
     </div>
-    <div class="ecl-container ecl-banner__info">
-        <div class="ecl-banner__container" data-ecl-banner-container>
-            <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="banner-example-video-title">
-                    <span class="ecl-banner__title-text">
-                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                        <a href="/example" class="ecl-link ecl-banner__title-link">Lorem ipsum</a>
-                    </span>
-                </div>
-                <p class="ecl-banner__description" id="banner-example-video-description">
-                    <span class="ecl-banner__description-text">
-                        <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                        <a href="/example" class="ecl-link ecl-banner__description-link">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a>
-                    </span>
-                </p>
-                <div class="ecl-banner__cta">
-                    <!-- Sub-component: Link. Use the link component template for full markup guidance. -->
-                    <a href="/example" class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta" aria-describedby="banner-example-video-title">
-                        <span class="ecl-link__label">CTA link</span>
-                        <!-- Sub-component: Icon. Use the icon component template for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
-                    </a>
-                </div>
-            </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__play ecl-button--icon-only"
+      type="button"
+      data-ecl-banner-play
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Play video</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-banner__pause ecl-button--icon-only"
+      type="button"
+      data-ecl-banner-pause
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Pause video</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+  </div>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <div class="ecl-banner__title" id="banner-example-video-title">
+          <span class="ecl-banner__title-text">
+            <a href="/example" class="ecl-link ecl-banner__title-link"
+              >Video title</a
+            >
+          </span>
         </div>
+        <p
+          class="ecl-banner__description"
+          id="banner-example-video-description"
+        >
+          <span class="ecl-banner__description-text">
+            <a href="/example" class="ecl-link ecl-banner__description-link"
+              >Video description repeated as page text.</a
+            >
+          </span>
+        </p>
+        <div class="ecl-banner__cta">
+          <a
+            href="/example"
+            class="ecl-link ecl-link--primary-highlight-inverted ecl-link--icon ecl-banner__link-cta"
+            aria-describedby="banner-example-video-title"
+          >
+            <span class="ecl-link__label">CTA link</span>
+            <span
+              aria-hidden="true"
+              class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+            ></span>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
+<h3 class="ecl-u-type-heading-3">No media banner</h3>
+<section
+  class="ecl-banner ecl-banner--s ecl-banner--font-s ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-center ecl-banner--v-top custom-banner-class"
+  id="banner-example-no-media"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+  data-test="data-test-value"
+  data-test-flag
+>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <div class="ecl-banner__title" id="banner-example-no-media-title">
+          <span class="ecl-banner__title-text">Plain text title</span>
+        </div>
+        <p
+          class="ecl-banner__description"
+          id="banner-example-no-media-description"
+        >
+          <span class="ecl-banner__description-text"
+            >Plain text description.</span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3 class="ecl-u-type-heading-3">Description-described CTA</h3>
+<section
+  class="ecl-banner ecl-banner--xs ecl-banner--font-m ecl-banner--font-weight-bold ecl-banner--box-bg-none ecl-banner--color-light ecl-banner--h-left ecl-banner--v-center ecl-banner--full-width"
+  id="banner-example-description-cta"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+>
+  <figure class="ecl-banner__picture-container">
+    <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
+      <img
+        class="ecl-banner__image"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+        alt=""
+      />
+    </picture>
+  </figure>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <p
+          class="ecl-banner__description"
+          id="banner-example-description-cta-description"
+        >
+          <span class="ecl-banner__description-text"
+            >A description can describe the CTA when no title is rendered.</span
+          >
+        </p>
+        <div class="ecl-banner__cta">
+          <a
+            href="/example"
+            class="ecl-link ecl-link--primary-highlight ecl-banner__link-cta"
+            aria-describedby="banner-example-description-cta-description"
+            >Read more</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3 class="ecl-u-type-heading-3">CTA-only banner</h3>
+<section
+  class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
+  id="banner-example-cta-only"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+>
+  <figure class="ecl-banner__picture-container">
+    <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
+      <img
+        class="ecl-banner__image"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+        alt=""
+      />
+    </picture>
+  </figure>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <div class="ecl-banner__cta">
+          <a
+            href="/example"
+            class="ecl-link ecl-link--primary-highlight ecl-banner__link-cta"
+            aria-label="CTA link without visible surrounding title"
+            >CTA link</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3 class="ecl-u-type-heading-3">Overlay with transparent box</h3>
+<section
+  class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-none ecl-banner--overlay ecl-banner--color-light ecl-banner--h-center ecl-banner--v-center"
+  id="banner-example-overlay-none"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+>
+  <figure class="ecl-banner__picture-container">
+    <picture class="ecl-picture ecl-banner__picture" data-ecl-banner-image>
+      <img
+        class="ecl-banner__image"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+        alt=""
+      />
+    </picture>
+  </figure>
+  <div class="ecl-container ecl-banner__info">
+    <div class="ecl-banner__container" data-ecl-banner-container>
+      <div class="ecl-banner__content">
+        <div class="ecl-banner__title" id="banner-example-overlay-none-title">
+          <span class="ecl-banner__title-text">Overlay title</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3 class="ecl-u-type-heading-3">Edge-case empty input</h3>
+<section
+  class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-example-empty"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+
+<h3 class="ecl-u-type-heading-3">Color modes</h3>
+<section
+  class="ecl-banner ecl-color-mode--blue ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-blue"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--green-dark ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-green-dark"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--orange ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-orange"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--green ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-green"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--purple ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-purple"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--blue-navy ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-blue-navy"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--blue-electric ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-blue-electric"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--blue-ocean ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-blue-ocean"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--green-lemon ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-green-lemon"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--green-pine ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-green-pine"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--warm-grey ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-warm-grey"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--red-crayola ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-red-crayola"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--yellow-gold ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-yellow-gold"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--purple-violet ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-purple-violet"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
+<section
+  class="ecl-banner ecl-color-mode--red-tomato ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--no-media ecl-banner--h-left ecl-banner--v-center"
+  id="banner-color-red-tomato"
+  data-ecl-banner
+  data-ecl-auto-init="Banner"
+></section>
