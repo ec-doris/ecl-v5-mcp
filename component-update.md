@@ -18,10 +18,10 @@ The linked checkout may remain on another branch. Read versioned source with `gi
 - Current component: none
 - Status: ready
 - Phase: none
-- Last completed: `add-to-calendar`
-- Next component: `animated-numbers`
-- Next action: change `animated-numbers` to `started` here before creating its missing HTML and Twig files
-- Evidence and warnings: the pinned `animated-numbers` handoff below was audited on 2026-07-14, but implementation has not started
+- Last completed: `animated-numbers`
+- Next component: `banner`
+- Next action: change `banner` to `started` here before auditing its tagged v5.0.1 source or editing its files
+- Evidence and warnings: Animated numbers completed 2026-07-14; Twig is byte-identical to v5.0.1 and its recorded SHA-256; reusable HTML covers the audited ledger and all validation gates passed. The tagged full-width link-inversion inconsistency remains documented in its handoff above.
 
 On restart, resume any row marked `started` before choosing a `not started` row. If a row is `blocked`, do not skip it and start another component; read its evidence and obtain the recorded decision first.
 
@@ -500,7 +500,7 @@ At successful completion the tracker should say: `Current component: none`, `Las
 | ------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | accordion           | `components/accordion.html`           | `components/accordion.html.twig`                                                                                            | **completed** | Completed 2026-07-14 against v5.0.1. Twig is exact; HTML covers native/open, named, sidebar, single-icon, structured content, extension hooks and all 15 non-default color modes.                                                         |
 | add-to-calendar     | `components/add-to-calendar.html`     | `components/add-to-calendar.html.twig`                                                                                      | **completed** | Completed 2026-07-14 against v5.0.1. Twig is exact; HTML covers default, title-only, single-meta, action-only, full-width, extension hooks, live WebTools embeds and all 15 modes. Empty input is excluded due to an upstream markup bug. |
-| animated-numbers    | missing                               | missing (`animated-numbers.html.twig`)                                                                                      | not started   | Next component. Follow the pinned implementation brief above; mark `started` before creating either file.                                                                                                                                 |
+| animated-numbers    | `components/animated-numbers.html`    | `components/animated-numbers.html.twig`                                                                                     | **completed** | Completed 2026-07-14 against v5.0.1. Twig is exact; HTML covers content/source branches, modifiers and interactions, hooks, edge output, accessibility icon states, and all 15 non-default color modes.                                   |
 | banner              | `components/banner.html`              | `components/banner.html.twig`                                                                                               | not started   |                                                                                                                                                                                                                                           |
 | blockquote          | `components/blockquote.html`          | `components/blockquote.html.twig`                                                                                           | not started   |                                                                                                                                                                                                                                           |
 | breadcrumb          | `components/breadcrumb.html`          | `components/breadcrumb.html.twig`                                                                                           | not started   |                                                                                                                                                                                                                                           |
