@@ -1,68 +1,531 @@
-<h3 class="ecl-u-type-heading-3">Checkbox group with helper text</h3>
+<h3 class="ecl-u-type-heading-3">Checkbox group</h3>
 <div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group">
-    <legend class="ecl-form-label" id="checkbox-default-label">Select your preferred destinations<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div></legend>
-    <div class="ecl-help-block" id="checkbox-default-helper" aria-hidden="true">Optional help text</div>
-
-    <div class="ecl-checkbox">
-      <input name="checkbox-default" class="ecl-checkbox__input" type="checkbox" value="es" id="checkbox-default-1" required checked>
-      <label for="checkbox-default-1" class="ecl-checkbox__label"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">Spain</span></label>
-    </div>
-
-    <div class="ecl-checkbox">
-      <input name="checkbox-default" class="ecl-checkbox__input" type="checkbox" value="be" id="checkbox-default-2" required>
-      <label for="checkbox-default-2" class="ecl-checkbox__label"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">Belgium</span></label>
-    </div>
-
-    <div class="ecl-checkbox ecl-checkbox--disabled">
-      <input name="checkbox-default" class="ecl-checkbox__input" type="checkbox" value="fr" id="checkbox-default-3" required disabled>
-      <label for="checkbox-default-3" class="ecl-checkbox__label"><span class="ecl-checkbox__box ecl-checkbox__box--disabled"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">France (disabled)</span></label>
-    </div>
-
-    <div class="ecl-checkbox">
-      <input name="checkbox-default" class="ecl-checkbox__input" type="checkbox" value="lorem" id="checkbox-default-4" required>
-      <label for="checkbox-default-4" class="ecl-checkbox__label"><span class="ecl-checkbox__box"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">Lorem ipsum dolor sit amet, <a class="ecl-link" href="/example">consectetur adipiscing elit</a></span></label>
-    </div>
-  </fieldset>
+  <div
+    class="ecl-checkbox ecl-checkbox--invalid"
+    data-checkbox-group="destinations"
+    data-checkbox-group-required
+  >
+    <input
+      name="checkbox-default"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="es"
+      id="checkbox-default-1"
+      checked
+      required
+    />
+    <label for="checkbox-default-1" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box ecl-checkbox__box--invalid">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text">Spain</span>
+    </label>
+  </div>
+  <div
+    class="ecl-checkbox ecl-checkbox--invalid"
+    data-checkbox-group="destinations"
+    data-checkbox-group-required
+  >
+    <input
+      name="checkbox-default"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="be"
+      id="checkbox-default-2"
+      required
+    />
+    <label for="checkbox-default-2" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box ecl-checkbox__box--invalid">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text">Belgium</span>
+    </label>
+  </div>
+  <div
+    class="ecl-checkbox ecl-checkbox--invalid ecl-checkbox--disabled"
+    data-checkbox-group="destinations"
+    data-checkbox-group-required
+  >
+    <input
+      name="checkbox-default"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="fr"
+      id="checkbox-default-3"
+      disabled
+      required
+    />
+    <label for="checkbox-default-3" class="ecl-checkbox__label">
+      <span
+        class="ecl-checkbox__box ecl-checkbox__box--invalid ecl-checkbox__box--disabled"
+      >
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text">France (disabled)</span>
+    </label>
+  </div>
+  <div
+    class="ecl-checkbox ecl-checkbox--invalid"
+    data-checkbox-group="destinations"
+    data-checkbox-group-required
+  >
+    <input
+      name="checkbox-default"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="lorem"
+      id="checkbox-default-4"
+      required
+    />
+    <label for="checkbox-default-4" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box ecl-checkbox__box--invalid">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text"
+        >Lorem ipsum dolor sit amet,
+        <a href="/example">consectetur adipiscing elit</a></span
+      >
+    </label>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Invalid checkbox group</h3>
+<h3 class="ecl-u-type-heading-3">Single checkbox with feedback</h3>
 <div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" aria-invalid="true">
-    <legend class="ecl-form-label ecl-form-label--invalid" id="checkbox-invalid-label">Choose at least one destination<span class="ecl-form-label__optional">(optional)</span><div class="ecl-help-block--hidden">You can select multiple destinations.</div><div class="ecl-feedback-message--hidden">Select at least one country.</div></legend>
-    <div class="ecl-help-block" id="checkbox-invalid-helper" aria-hidden="true">You can select multiple destinations.</div>
-
-    <div class="ecl-checkbox ecl-checkbox--invalid">
-      <input name="checkbox-invalid" class="ecl-checkbox__input" type="checkbox" value="es" id="checkbox-invalid-1">
-      <label for="checkbox-invalid-1" class="ecl-checkbox__label"><span class="ecl-checkbox__box ecl-checkbox__box--invalid"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">Spain</span></label>
-    </div>
-
-    <div class="ecl-checkbox ecl-checkbox--invalid">
-      <input name="checkbox-invalid" class="ecl-checkbox__input" type="checkbox" value="be" id="checkbox-invalid-2">
-      <label for="checkbox-invalid-2" class="ecl-checkbox__label"><span class="ecl-checkbox__box ecl-checkbox__box--invalid"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">Belgium</span></label>
-    </div>
-
-    <div class="ecl-feedback-message" id="checkbox-invalid-invalid" aria-hidden="true">
-      <!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon ecl-icon--error-outline" aria-hidden="false" title="Error"></span>Select at least one country.
-    </div>
-  </fieldset>
+  <div class="ecl-checkbox ecl-checkbox--invalid ecl-checkbox--single">
+    <input
+      name="checkbox-single"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="agree"
+      id="checkbox-single-1"
+      checked
+      required
+    />
+    <label for="checkbox-single-1" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box ecl-checkbox__box--invalid">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text"
+        >I agree to the terms and conditions</span
+      >
+      <span
+        class="ecl-form-label__required"
+        role="note"
+        aria-label="Required field"
+        >(required)</span
+      >
+    </label>
+  </div>
+  <div class="ecl-feedback-message">
+    <!-- Sub component: icon; see the icon component for full markup guidance. -->
+    <span
+      class="wt-icon--error-outline ecl-icon ecl-icon--s ecl-feedback-message__icon ecl-icon--error-outline"
+      aria-hidden="false"
+      title="Error"
+      role="img"
+    ></span>
+    Error text
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Single checkbox with inline feedback</h3>
+<h3 class="ecl-u-type-heading-3">Checkbox item states</h3>
 <div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" aria-invalid="true">
-    <legend class="ecl-form-label ecl-form-label--invalid" id="checkbox-single-label">Confirm your consent<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">You must accept to continue.</div><div class="ecl-feedback-message--hidden">You need to accept the terms.</div></legend>
-    <div class="ecl-help-block" id="checkbox-single-helper" aria-hidden="true">You must accept to continue.</div>
+  <div
+    class="ecl-checkbox custom-checkbox"
+    data-checkbox-item="helper"
+    data-flag
+  >
+    <input
+      name="checkbox-item"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="newsletter"
+      id="checkbox-item-helper"
+    />
+    <label for="checkbox-item-helper" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text">Send me updates</span>
+      <span
+        class="ecl-form-label__optional"
+        role="note"
+        aria-label="Optional field"
+        >(optional)</span
+      >
+    </label>
+    <div class="ecl-checkbox__help" id="checkbox-item-helper-helper">
+      Optional help text
+    </div>
+  </div>
+  <div class="ecl-checkbox ecl-checkbox--disabled">
+    <input
+      name="checkbox-item"
+      class="ecl-checkbox__input"
+      type="checkbox"
+      value="archive"
+      id="checkbox-item-disabled"
+      disabled
+    />
+    <label for="checkbox-item-disabled" class="ecl-checkbox__label">
+      <span class="ecl-checkbox__box ecl-checkbox__box--disabled">
+        <!-- Sub component: icon; see the icon component for full markup guidance. -->
+        <span
+          class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+          aria-hidden="true"
+        ></span>
+      </span>
+      <span class="ecl-checkbox__text">Archived option</span>
+    </label>
+    <div
+      class="ecl-checkbox__help ecl-checkbox__help--disabled"
+      id="checkbox-item-disabled-helper"
+    >
+      This option is not currently available.
+    </div>
+  </div>
+</div>
 
-    <div class="ecl-checkbox ecl-checkbox--single ecl-checkbox--invalid">
-      <input name="checkbox-single" class="ecl-checkbox__input" type="checkbox" value="agree" id="checkbox-single-1" required>
-      <label for="checkbox-single-1" class="ecl-checkbox__label"><span class="ecl-checkbox__box ecl-checkbox__box--invalid"><!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check" aria-hidden="true"></span></span><span class="ecl-checkbox__text">I agree to the terms and conditions</span><span class="ecl-form-label__required">(required)</span></label>
+<h3 class="ecl-u-type-heading-3">Checkbox color modes</h3>
+<div class="ecl-u-mb-l">
+  <div class="ecl-color-mode--blue">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="blue"
+        id="checkbox-color-blue"
+        checked
+      />
+      <label for="checkbox-color-blue" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Blue</span>
+      </label>
     </div>
-    <div class="ecl-feedback-message">
-      <!-- Sub component: icon; see the icon component for full markup guidance. --><span class="wt-icon--error-outline ecl-icon ecl-icon--s ecl-feedback-message__icon ecl-icon--error-outline" aria-hidden="false" title="Error"></span>You need to accept the terms.
+  </div>
+  <div class="ecl-color-mode--green-dark">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="green-dark"
+        id="checkbox-color-green-dark"
+      />
+      <label for="checkbox-color-green-dark" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Green dark</span>
+      </label>
     </div>
-  </fieldset>
+  </div>
+  <div class="ecl-color-mode--orange">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="orange"
+        id="checkbox-color-orange"
+      />
+      <label for="checkbox-color-orange" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Orange</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="green"
+        id="checkbox-color-green"
+      />
+      <label for="checkbox-color-green" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Green</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--purple">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="purple"
+        id="checkbox-color-purple"
+      />
+      <label for="checkbox-color-purple" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Purple</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-navy">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="blue-navy"
+        id="checkbox-color-blue-navy"
+      />
+      <label for="checkbox-color-blue-navy" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Blue navy</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-electric">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="blue-electric"
+        id="checkbox-color-blue-electric"
+      />
+      <label for="checkbox-color-blue-electric" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Blue electric</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-ocean">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="blue-ocean"
+        id="checkbox-color-blue-ocean"
+      />
+      <label for="checkbox-color-blue-ocean" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Blue ocean</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green-lemon">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="green-lemon"
+        id="checkbox-color-green-lemon"
+      />
+      <label for="checkbox-color-green-lemon" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Green lemon</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green-pine">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="green-pine"
+        id="checkbox-color-green-pine"
+      />
+      <label for="checkbox-color-green-pine" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Green pine</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--warm-grey">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="warm-grey"
+        id="checkbox-color-warm-grey"
+      />
+      <label for="checkbox-color-warm-grey" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Warm grey</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--red-crayola">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="red-crayola"
+        id="checkbox-color-red-crayola"
+      />
+      <label for="checkbox-color-red-crayola" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Red crayola</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--yellow-gold">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="yellow-gold"
+        id="checkbox-color-yellow-gold"
+      />
+      <label for="checkbox-color-yellow-gold" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Yellow gold</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--purple-violet">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="purple-violet"
+        id="checkbox-color-purple-violet"
+      />
+      <label for="checkbox-color-purple-violet" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Purple violet</span>
+      </label>
+    </div>
+  </div>
+  <div class="ecl-color-mode--red-tomato">
+    <div class="ecl-checkbox">
+      <input
+        name="checkbox-color-mode"
+        class="ecl-checkbox__input"
+        type="checkbox"
+        value="red-tomato"
+        id="checkbox-color-red-tomato"
+      />
+      <label for="checkbox-color-red-tomato" class="ecl-checkbox__label">
+        <span class="ecl-checkbox__box">
+          <!-- Sub component: icon; see the icon component for full markup guidance. -->
+          <span
+            class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+            aria-hidden="true"
+          ></span>
+        </span>
+        <span class="ecl-checkbox__text">Red tomato</span>
+      </label>
+    </div>
+  </div>
 </div>
