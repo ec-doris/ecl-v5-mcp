@@ -1,0 +1,382 @@
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default add to calendar</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The default configuration contains an event title and multiple metadata items.
+  Multiple items use semantic list markup, and their decorative icons are always
+  rendered at size <code>s</code>.
+</p>
+<div class="ecl-u-mb-2xl">
+  <div class="ecl-add-to-calendar">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Event coming soon!</div>
+        <ul class="ecl-add-to-calendar__meta-list">
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--calendar ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--calendar"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >October 11, 2026</span
+            >
+          </li>
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--clock ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--clock"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >10:00 - 11:00 (CEST)</span
+            >
+          </li>
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--location ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--location"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >Brussels, Belgium</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Title only</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The title is optional and is rendered as a styled <code>div</code>, not as a
+  document heading.
+</p>
+<div class="ecl-u-mb-2xl">
+  <div class="ecl-add-to-calendar">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Registration opens soon</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Single metadata item without an icon
+</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Exactly one metadata item uses <code>div</code> elements instead of list
+  elements. An icon is optional for each item.
+</p>
+<div class="ecl-u-mb-2xl">
+  <div class="ecl-add-to-calendar">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__meta-list">
+          <div class="ecl-add-to-calendar__meta-item">
+            <span class="ecl-add-to-calendar__meta-label">Online event</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">WebTools action only</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The action slot accepts trusted markup managed by WebTools. This runnable
+  embed requires the WebTools <code>load.js</code> script included by the
+  project starter template.
+</p>
+<div class="ecl-u-mb-2xl">
+  <div class="ecl-add-to-calendar">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content"></div>
+      <div class="ecl-add-to-calendar__action">
+        <!-- WebTools WeSaveToCalendar: start_date and end_date are required. -->
+        <script type="application/json">
+          {
+            "service": "savetocalendar",
+            "start_date": "2026-10-11 10:00",
+            "end_date": "2026-10-11 11:00",
+            "title": "European digital policy conference"
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Full-width add to calendar with WebTools action
+</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Full-width mode is used inside the grid. It adds the modifier to the root and
+  an inner <code>ecl-container</code> to keep the content aligned.
+</p>
+<div class="ecl-container ecl-u-mb-2xl">
+  <div class="ecl-add-to-calendar ecl-add-to-calendar--full-width">
+    <div class="ecl-add-to-calendar__info ecl-container">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          European digital policy conference
+        </div>
+        <ul class="ecl-add-to-calendar__meta-list">
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--calendar ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--calendar"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >October 11, 2026</span
+            >
+          </li>
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--clock ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--clock"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >10:00 - 11:00 (CEST)</span
+            >
+          </li>
+          <li class="ecl-add-to-calendar__meta-item">
+            <span
+              aria-hidden="true"
+              class="wt-icon--location ecl-icon ecl-icon--s ecl-add-to-calendar__meta-icon ecl-icon--location"
+            ></span>
+            <span class="ecl-add-to-calendar__meta-label"
+              >Rue de la Loi 170, Brussels</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="ecl-add-to-calendar__action">
+        <!-- Do not freeze WebTools' generated button HTML; configure the service embed. -->
+        <script type="application/json">
+          {
+            "service": "savetocalendar",
+            "start_date": "2026-10-11 10:00",
+            "end_date": "2026-10-11 11:00",
+            "title": "European digital policy conference",
+            "description": "A conference on Europe's digital policy priorities.",
+            "location": "Rue de la Loi 170, 1000 Brussels",
+            "url": "https://commission.europa.eu/index_en",
+            "timezone": "Europe/Brussels"
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Extension hooks</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Extra classes and valued or valueless attributes supplied through Twig are
+  appended only to the component root.
+</p>
+<div class="ecl-u-mb-2xl">
+  <div
+    class="ecl-add-to-calendar js-analytics-calendar"
+    data-analytics-component="add-to-calendar"
+    data-analytics-enabled
+  >
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Event with application hooks
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC add to calendar color modes</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The default example above has no color-mode class. These examples cover every
+  non-default EC color mode available in v5.0.1.
+</p>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--blue">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Blue event announcement</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green dark</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--green-dark">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Green dark event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Orange</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--orange">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Orange event announcement</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--green">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Green event announcement</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Purple</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--purple">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">Purple event announcement</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue navy</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--blue-navy">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Blue navy event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue electric</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--blue-electric">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Blue electric event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue ocean</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--blue-ocean">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Blue ocean event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green lemon</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--green-lemon">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Green lemon event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green pine</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--green-pine">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Green pine event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Warm grey</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--warm-grey">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Warm grey event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Red crayola</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--red-crayola">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Red crayola event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Yellow gold</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--yellow-gold">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Yellow gold event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Purple violet</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--purple-violet">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Purple violet event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Red tomato</h4>
+<div class="ecl-u-mb-l">
+  <div class="ecl-add-to-calendar ecl-color-mode--red-tomato">
+    <div class="ecl-add-to-calendar__info">
+      <div class="ecl-add-to-calendar__info-content">
+        <div class="ecl-add-to-calendar__title">
+          Red tomato event announcement
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

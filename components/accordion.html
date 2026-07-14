@@ -1,166 +1,653 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default accordion</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the standard accordion for grouped disclosures with paired expand and collapse icons.</p>
-<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-accordion="" data-ecl-auto-init="Accordion">
-    <div class="ecl-accordion__item is-first">
-        <div class="ecl-accordion__title" id="accordion-default-1-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-default-1-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Delivery of last pending proposals, a common Destiny of unity, the hour of European Democracy</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus" data-ecl-accordion-icon=""></span>
-                        <span aria-hidden="true" class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-default-1-content" role="region" aria-labelledby="accordion-default-1-title">
-            <p class="ecl-u-type-paragraph">The College of Commissioners held today the first weekly meeting of 2019 which was devoted to discussing the challenges of this new year. Commissioners used the opportunity to take stock and discuss the year ahead, including the European elections in May and other important milestones ahead.</p>
-        </div>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The v5 accordion uses native <code>details</code> and
+  <code>summary</code> elements. The first item below also demonstrates the
+  native initially open state.
+</p>
+<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-auto-init="Accordion">
+  <details class="ecl-accordion__item is-first" open>
+    <summary class="ecl-accordion__toggle">
+      Protecting citizens and freedoms
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Ensuring effective control of the EU's external borders and further
+      developing a comprehensive migration policy.
     </div>
-    <div class="ecl-accordion__item">
-        <div class="ecl-accordion__title" id="accordion-default-2-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-default-2-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Spring 2019 Economic Forecast: Growth continues at a more moderate pace</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus" data-ecl-accordion-icon=""></span>
-                        <span aria-hidden="true" class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-default-2-content" role="region" aria-labelledby="accordion-default-2-title">
-            <p class="ecl-u-type-paragraph">The European economy is forecast to continue expanding for the seventh year in a row in 2019, with real GDP expected to grow in all EU Member States. As global uncertainties continue to weigh, domestic dynamics are set to support the European economy. Growth is expected to gather pace again next year.</p>
-        </div>
+  </details>
+  <details class="ecl-accordion__item">
+    <summary class="ecl-accordion__toggle">
+      Developing a strong and vibrant economic base
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Building a resilient economy by deepening the Economic and Monetary Union
+      and investing in skills, education and digital transformation.
     </div>
-    <div class="ecl-accordion__item is-last">
-        <div class="ecl-accordion__title" id="accordion-default-3-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-default-3-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Trade policy and international relations</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus" data-ecl-accordion-icon=""></span>
-                        <span aria-hidden="true" class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-default-3-content" role="region" aria-labelledby="accordion-default-3-title">
-            <p class="ecl-u-type-paragraph">In the modern global economy trade is essential for growth, jobs and competitiveness, and the EU is committed to maintaining an open and rules-based trading system. With the rising threat of protectionism and weakened commitment of large players to global trade governance, the EU must take the lead.</p>
-        </div>
+  </details>
+  <details class="ecl-accordion__item is-last">
+    <summary class="ecl-accordion__toggle">
+      Building a climate-neutral, green, fair and social Europe
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Investing in green initiatives, a circular economy, renewable energy and
+      the European Pillar of Social Rights.
     </div>
+  </details>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Accordion with single indicator icon</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">When a single icon is supplied, the same symbol is reused in both states while keeping the required indicator wrapper.</p>
-<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-accordion="" data-ecl-auto-init="Accordion">
-    <div class="ecl-accordion__item is-first">
-        <div class="ecl-accordion__title" id="accordion-single-1-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-single-1-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">European Commission priorities</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--corner-arrow" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-single-1-content" role="region" aria-labelledby="accordion-single-1-title">
-            <p class="ecl-u-type-paragraph">The European Commission has identified key priorities for the coming years, focusing on sustainable growth, digital transformation, and strengthening the European social model.</p>
-        </div>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Exclusive accordion group</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Give every item the same <code>name</code> when only one item should remain
+  open.
+</p>
+<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-auto-init="Accordion">
+  <details
+    class="ecl-accordion__item is-first"
+    name="accordion-exclusive-example"
+    open
+  >
+    <summary class="ecl-accordion__toggle">
+      Who can apply?
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Public authorities, businesses, civil society organisations and other
+      eligible applicants may apply where specified by the programme.
     </div>
-    <div class="ecl-accordion__item">
-        <div class="ecl-accordion__title" id="accordion-single-2-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-single-2-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Climate action and environmental policy</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--corner-arrow" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-single-2-content" role="region" aria-labelledby="accordion-single-2-title">
-            <p class="ecl-u-type-paragraph">The European Green Deal is the EU's new growth strategy, aiming for climate neutrality by 2050 while ensuring a fair transition for citizens and businesses.</p>
-        </div>
+  </details>
+  <details
+    class="ecl-accordion__item is-last"
+    name="accordion-exclusive-example"
+  >
+    <summary class="ecl-accordion__toggle">
+      When is the deadline?
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Consult the individual call for proposals for its submission deadline and
+      timetable.
     </div>
-    <div class="ecl-accordion__item is-last">
-        <div class="ecl-accordion__title" id="accordion-single-3-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-single-3-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Security and defence cooperation</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--corner-arrow" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-single-3-content" role="region" aria-labelledby="accordion-single-3-title">
-            <p class="ecl-u-type-paragraph">Enhanced cooperation on security, defence capabilities, and crisis response ensures that Member States can act together when needed.</p>
-        </div>
-    </div>
+  </details>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Accordion with rich content</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Combine the accordion with structured text, lists, and calls to action while preserving the required accordion skeleton.</p>
-<div class="ecl-accordion" data-ecl-accordion="" data-ecl-auto-init="Accordion">
-    <div class="ecl-accordion__item is-first">
-        <div class="ecl-accordion__title" id="accordion-rich-1-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-rich-1-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Digital Single Market strategy</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus" data-ecl-accordion-icon=""></span>
-                        <span aria-hidden="true" class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Collapsible sidebar accordion</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The sidebar modifier and <code>data-desktop-open</code> keep the filter panel
+  open from the v5.0.1 desktop breakpoint and collapsible below it.
+</p>
+<div
+  class="ecl-accordion ecl-accordion--sidebar ecl-u-mb-2xl"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first" data-desktop-open>
+    <summary class="ecl-accordion__toggle">
+      Filter by
+      <span
+        role="img"
+        aria-hidden="false"
+        class="wt-icon-phosphor--sliders-horizontal ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon-phosphor--sliders-horizontal"
+        title="Expand"
+      ></span>
+      <span
+        role="img"
+        aria-hidden="false"
+        class="wt-icon-phosphor--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon-phosphor--minus"
+        title="Collapse"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      <form action="#" method="get">
+        <div class="ecl-form-group">
+          <label for="accordion-sidebar-keyword" class="ecl-form-label"
+            >Keyword<span class="ecl-form-label__optional"
+              >(optional)</span
+            ></label
+          >
+          <input
+            id="accordion-sidebar-keyword"
+            name="keyword"
+            class="ecl-text-input ecl-text-input--m"
+            type="text"
+          />
         </div>
-        <div class="ecl-accordion__content" hidden id="accordion-rich-1-content" role="region" aria-labelledby="accordion-rich-1-title">
-            <p class="ecl-u-type-paragraph">The Digital Single Market strategy opens digital opportunities for people and businesses and strengthens Europe's role as a leader in the digital economy.</p>
-            <ul class="ecl-u-type-list-ul ecl-u-mt-m">
-                <li class="ecl-u-type-list-ul__item">Cross-border e-commerce and consumer protection</li>
-                <li class="ecl-u-type-list-ul__item">Digital content portability across the Union</li>
-                <li class="ecl-u-type-list-ul__item">Connectivity, skills, and inclusion initiatives</li>
-            </ul>
-            <p class="ecl-u-type-paragraph ecl-u-mt-m">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link" href="#">Read the Digital Single Market overview</a>
-            </p>
+        <div class="ecl-form-group ecl-u-mt-m">
+          <button class="ecl-button ecl-button--primary" type="submit">
+            Apply filters
+          </button>
+          <button
+            class="ecl-button ecl-button--secondary ecl-u-ml-s"
+            type="reset"
+          >
+            Clear
+          </button>
         </div>
+      </form>
     </div>
-    <div class="ecl-accordion__item is-last">
-        <div class="ecl-accordion__title" id="accordion-rich-2-title">
-            <button type="button" class="ecl-accordion__toggle" data-ecl-accordion-toggle="" aria-controls="accordion-rich-2-content" aria-expanded="false">
-                <span class="ecl-accordion__toggle-flex">
-                    <span class="ecl-accordion__toggle-title">Research and innovation funding</span>
-                    <span class="ecl-accordion__toggle-indicator">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus" data-ecl-accordion-icon=""></span>
-                        <span aria-hidden="true" class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus" data-ecl-accordion-icon=""></span>
-                    </span>
-                </span>
-            </button>
-        </div>
-        <div class="ecl-accordion__content" hidden id="accordion-rich-2-content" role="region" aria-labelledby="accordion-rich-2-title">
-            <p class="ecl-u-type-paragraph">Horizon Europe supports research excellence with collaborative projects that boost competitiveness and address global challenges.</p>
-            <h4 class="ecl-u-type-heading-4 ecl-u-mt-m ecl-u-mb-s">Programme pillars</h4>
-            <ol class="ecl-u-type-list-ol">
-                <li class="ecl-u-type-list-ol__item">Excellent Science</li>
-                <li class="ecl-u-type-list-ol__item">Global Challenges and Industrial Competitiveness</li>
-                <li class="ecl-u-type-list-ol__item">Innovative Europe</li>
-            </ol>
-            <p class="ecl-u-type-paragraph ecl-u-mt-m">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link" href="#">Explore Horizon Europe opportunities</a>
-            </p>
-        </div>
+  </details>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Accordion with a single indicator icon
+</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  A non-plus single icon remains the only indicator in both states. Supplying
+  only a plus icon to Twig is a legacy input that renders the standard plus and
+  minus pair shown above.
+</p>
+<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-auto-init="Accordion">
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      European Commission priorities
+      <span
+        aria-hidden="true"
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--corner-arrow"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      The Commission's priorities cover sustainable prosperity, security,
+      democracy and Europe's global role.
     </div>
+  </details>
+  <details class="ecl-accordion__item is-last">
+    <summary class="ecl-accordion__toggle">
+      Climate action and environmental policy
+      <span
+        aria-hidden="true"
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--corner-arrow"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      The European Green Deal supports the transition towards climate
+      neutrality.
+    </div>
+  </details>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Accordion with structured content
+</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Content may contain non-actionable structured HTML such as paragraphs,
+  headings and lists.
+</p>
+<div class="ecl-accordion ecl-u-mb-2xl" data-ecl-auto-init="Accordion">
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Digital policy priorities
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      <p class="ecl-u-type-paragraph">
+        The digital strategy supports citizens and businesses across the Union.
+      </p>
+      <h4 class="ecl-u-type-heading-4 ecl-u-mt-m ecl-u-mb-s">Key areas</h4>
+      <ul class="ecl-unordered-list">
+        <li class="ecl-unordered-list__item">Digital skills and inclusion</li>
+        <li class="ecl-unordered-list__item">Secure digital infrastructure</li>
+        <li class="ecl-unordered-list__item">Cross-border digital services</li>
+      </ul>
+    </div>
+  </details>
+  <details class="ecl-accordion__item is-last">
+    <summary class="ecl-accordion__toggle">
+      Research programme pillars
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      <ol class="ecl-ordered-list">
+        <li class="ecl-ordered-list__item">Excellent Science</li>
+        <li class="ecl-ordered-list__item">
+          Global Challenges and European Industrial Competitiveness
+        </li>
+        <li class="ecl-ordered-list__item">Innovative Europe</li>
+      </ol>
+    </div>
+  </details>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Accordion extension hooks</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Root classes, root attributes and toggle classes supplied through the Twig API
+  appear in the locations shown here.
+</p>
+<div
+  class="ecl-accordion js-analytics-accordion ecl-u-mb-2xl"
+  data-ecl-auto-init="Accordion"
+  data-analytics-component="accordion"
+  data-analytics-enabled
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle js-analytics-accordion-toggle">
+      Accordion with application hooks
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Application-specific classes and data attributes can attach analytics or
+      other project behaviour without changing the ECL structure.
+    </div>
+  </details>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC accordion color modes</h3>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  The default example above has no color-mode class. These examples cover every
+  non-default EC color mode available in v5.0.1.
+</p>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue</h4>
+<div
+  class="ecl-accordion ecl-color-mode--blue ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Blue accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--blue</code> to the accordion
+      root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green dark</h4>
+<div
+  class="ecl-accordion ecl-color-mode--green-dark ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Green dark accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--green-dark</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Orange</h4>
+<div
+  class="ecl-accordion ecl-color-mode--orange ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Orange accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--orange</code> to the accordion
+      root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green</h4>
+<div
+  class="ecl-accordion ecl-color-mode--green ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Green accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--green</code> to the accordion
+      root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Purple</h4>
+<div
+  class="ecl-accordion ecl-color-mode--purple ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Purple accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--purple</code> to the accordion
+      root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue navy</h4>
+<div
+  class="ecl-accordion ecl-color-mode--blue-navy ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Blue navy accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--blue-navy</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue electric</h4>
+<div
+  class="ecl-accordion ecl-color-mode--blue-electric ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Blue electric accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--blue-electric</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue ocean</h4>
+<div
+  class="ecl-accordion ecl-color-mode--blue-ocean ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Blue ocean accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--blue-ocean</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green lemon</h4>
+<div
+  class="ecl-accordion ecl-color-mode--green-lemon ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Green lemon accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--green-lemon</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Green pine</h4>
+<div
+  class="ecl-accordion ecl-color-mode--green-pine ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Green pine accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--green-pine</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Warm grey</h4>
+<div
+  class="ecl-accordion ecl-color-mode--warm-grey ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Warm grey accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--warm-grey</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Red crayola</h4>
+<div
+  class="ecl-accordion ecl-color-mode--red-crayola ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Red crayola accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--red-crayola</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Yellow gold</h4>
+<div
+  class="ecl-accordion ecl-color-mode--yellow-gold ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Yellow gold accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--yellow-gold</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Purple violet</h4>
+<div
+  class="ecl-accordion ecl-color-mode--purple-violet ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Purple violet accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--purple-violet</code> to the
+      accordion root.
+    </div>
+  </details>
+</div>
+
+<h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Red tomato</h4>
+<div
+  class="ecl-accordion ecl-color-mode--red-tomato ecl-u-mb-l"
+  data-ecl-auto-init="Accordion"
+>
+  <details class="ecl-accordion__item is-first">
+    <summary class="ecl-accordion__toggle">
+      Red tomato accordion
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      This example applies <code>ecl-color-mode--red-tomato</code> to the
+      accordion root.
+    </div>
+  </details>
 </div>
