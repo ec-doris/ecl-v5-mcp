@@ -2,21 +2,22 @@
 
 {#
   Parameters:
-    - "autoinit" (boolean) (default: false)
-    - "id" (string) (default: randomized string)
-    - "default_value" (default: '')
-    - "width" (string) (default: 'm')
-    - "required" (boolean) (default: false)
-    - "disabled" (boolean) (default: false)
-    - "min" (string: YYYY-MM-DD) (default: '')
-    - "max" (string: YYYY-MM-DD) (default: '')
-    - "first_day_of_week": (string) (default: 1)
-    - "invalid" (boolean) (default: false)
-    - "placeholder" (string) (default: 'DD-MM-YYYY')
-    - "extra_classes" (string) (default: '')
+    - "autoinit" (boolean) (default: false) Initialize the JS datepicker automatically
+    - "id" (string) (default: random) Unique id for the input
+    - "name" (string) (default: same as id) Name attribute for the input
+    - "default_value" (string) (default: '') Pre-filled value in YYYY-MM-DD format
+    - "width" (string) (default: 'm') Width size of the input; can be 's', 'm', 'l'
+    - "required" (boolean) (default: false) Makes the field required
+    - "disabled" (boolean) (default: false) Disables the input field
+    - "min" (string) (default: '') Minimum selectable date in YYYY-MM-DD format
+    - "max" (string) (default: '') Maximum selectable date in YYYY-MM-DD format
+    - "first_day_of_week" (integer) (default: 1) First day of the week (0=Sunday, 1=Monday, etc.)
+    - "invalid" (boolean) (default: false) Displays the field in invalid state
+    - "placeholder" (string) (default: 'DD-MM-YYYY') Placeholder text for the input
+    - "extra_classes" (string) (default: '') Extra classes (space separated)
     - "extra_attributes" (array) (default: []) Extra attributes for the datepicker
       - "name" (string) Attribute name, eg. 'data-test'
-      - "value" (optional) (string) Attribute value, eg: 'data-test-1'
+      - "value" (string) Attribute value, eg: 'data-test-1'
 #}
 
 {# Internal properties #}
@@ -28,6 +29,7 @@
 {% set _required = required|default(false) %}
 {% set _default_value = default_value|default('') %} {# YYYY-MM-DD #}
 {% set _id = id|default('ecl-datepicker-' ~ random()) %}
+{% set _name = name|default(_id) %}
 {% set _min = min|default('') %}
 {% set _max = max|default('') %}
 {% set _width = width|default('m') %}
@@ -82,6 +84,7 @@
   >
     <duet-date-picker
       identifier="{{ _id }}"
+      name="{{ _name }}"
       first-day-of-week="{{  _first_day_of_week }}"
     {% if _min %}
       min="{{ _min }}"

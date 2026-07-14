@@ -1,55 +1,289 @@
-<h3 class="ecl-u-type-heading-3">Standard datepicker</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <div class="ecl-form-group">
-    <label class="ecl-form-label" for="datepicker-standard" id="datepicker-standard-label">Choose a date <span class="ecl-form-label__optional">(optional)</span><div class="ecl-help-block--hidden">Format: DD-MM-YYYY.</div></label>
-    <div class="ecl-help-block" id="datepicker-standard-helper" aria-hidden="true">Format: DD-MM-YYYY.</div>
-    <!-- Sub component: datepicker; see the datepicker component for full markup guidance. -->
-    <div class="ecl-datepicker ecl-datepicker--m" aria-describedby="datepicker-standard-helper" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
-      <duet-date-picker first-day-of-week="1" identifier="datepicker-standard"></duet-date-picker>
-    </div>
-  </div>
+<h3 class="ecl-u-type-heading-3">Default datepicker</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--m"
+  data-ecl-auto-init="Datepicker"
+  data-value="2025-08-30 14:13:48 Europe/Brussels"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="example-input-id-1"
+    name="example-input-name-1"
+    first-day-of-week="1"
+    min="2024-06-15"
+    max="2026-08-30"
+  ></duet-date-picker>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Datepicker with limits</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <div class="ecl-form-group">
-    <label class="ecl-form-label" for="datepicker-limits" id="datepicker-limits-label">Date within range<div class="ecl-help-block--hidden">Select a date between 2024-06-15 and 2026-08-30.</div></label>
-    <div class="ecl-help-block" id="datepicker-limits-helper" aria-hidden="true">Select a date between 2024-06-15 and 2026-08-30.</div>
-    <!-- Sub component: datepicker; see the datepicker component for full markup guidance. -->
-    <div class="ecl-datepicker ecl-datepicker--l" aria-describedby="datepicker-limits-helper" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY" data-value="2025-08-30">
-      <duet-date-picker first-day-of-week="1" identifier="datepicker-limits" min="2024-06-15" max="2026-08-30"></duet-date-picker>
-    </div>
-  </div>
+<h3 class="ecl-u-type-heading-3">Required datepicker</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--m"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-required"
+    name="datepicker-required-name"
+    first-day-of-week="1"
+    required
+  ></duet-date-picker>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Disabled datepicker</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <div class="ecl-form-group">
-    <label class="ecl-form-label ecl-form-label--disabled" for="datepicker-disabled" id="datepicker-disabled-label">Date selection disabled<div class="ecl-help-block--hidden">This date field cannot be modified.</div></label>
-    <div class="ecl-help-block ecl-help-block--disabled" id="datepicker-disabled-helper" aria-hidden="true">This date field cannot be modified.</div>
-    <!-- Sub component: datepicker; see the datepicker component for full markup guidance. -->
-    <div class="ecl-datepicker ecl-datepicker--s" aria-describedby="datepicker-disabled-helper" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY">
-      <duet-date-picker disabled first-day-of-week="1" identifier="datepicker-disabled"></duet-date-picker>
-    </div>
-  </div>
+<h3 class="ecl-u-type-heading-3">Disabled small datepicker</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--s"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-disabled"
+    name="datepicker-disabled-name"
+    first-day-of-week="1"
+    disabled
+  ></duet-date-picker>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Invalid datepicker</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <div class="ecl-form-group">
-    <label class="ecl-form-label ecl-form-label--invalid" for="datepicker-invalid" id="datepicker-invalid-label">Enter a valid date <span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Use the DD-MM-YYYY format.</div><div class="ecl-feedback-message--hidden">Please provide a valid date.</div></label>
-    <div class="ecl-help-block" id="datepicker-invalid-helper" aria-hidden="true">Use the DD-MM-YYYY format.</div>
-    <!-- Sub component: datepicker; see the datepicker component for full markup guidance. -->
-    <div class="ecl-datepicker ecl-datepicker--m ecl-datepicker--invalid" aria-describedby="datepicker-invalid-helper datepicker-invalid-invalid" aria-invalid="true" data-ecl-auto-init="Datepicker" data-ecl-datepicker-toggle data-placeholder="DD-MM-YYYY" invalid>
-      <duet-date-picker first-day-of-week="1" identifier="datepicker-invalid" required></duet-date-picker>
-    </div>
-    <div class="ecl-feedback-message" id="datepicker-invalid-invalid" aria-hidden="true">
-      <!-- Sub component: icon; see the icon component for full markup guidance. -->
-      <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true" data-ecl-icon></span>Please provide a valid date.
-    </div>
-  </div>
+<h3 class="ecl-u-type-heading-3">Invalid large datepicker</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--l ecl-datepicker--invalid"
+  data-ecl-auto-init="Datepicker"
+  data-value="2025-08-30"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+  invalid
+>
+  <duet-date-picker
+    identifier="datepicker-invalid"
+    name="datepicker-invalid-name"
+    first-day-of-week="1"
+    required
+  ></duet-date-picker>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Custom root attributes</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--m custom-datepicker custom-datepicker--test"
+  data-test="data-test-value"
+  data-test-flag
+  data-placeholder="DD/MM/YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-custom"
+    name="datepicker-custom-name"
+    first-day-of-week="0"
+    min="2024-01-01"
+    max="2024-12-31"
+  ></duet-date-picker>
+</div>
+
+<h3 class="ecl-u-type-heading-3">No default value or placeholder</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--m"
+  data-ecl-auto-init="Datepicker"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-no-placeholder"
+    name="datepicker-no-placeholder-name"
+    first-day-of-week="2"
+  ></duet-date-picker>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Color mode examples</h3>
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--blue"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-blue"
+    name="datepicker-blue-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--blue-electric"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-blue-electric"
+    name="datepicker-blue-electric-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--blue-navy"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-blue-navy"
+    name="datepicker-blue-navy-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--blue-ocean"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-blue-ocean"
+    name="datepicker-blue-ocean-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--green"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-green"
+    name="datepicker-green-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--green-dark"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-green-dark"
+    name="datepicker-green-dark-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--green-lemon"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-green-lemon"
+    name="datepicker-green-lemon-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--green-pine"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-green-pine"
+    name="datepicker-green-pine-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--orange"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-orange"
+    name="datepicker-orange-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--purple"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-purple"
+    name="datepicker-purple-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--purple-violet"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-purple-violet"
+    name="datepicker-purple-violet-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--red-crayola"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-red-crayola"
+    name="datepicker-red-crayola-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--red-tomato"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-red-tomato"
+    name="datepicker-red-tomato-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--warm-grey"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-warm-grey"
+    name="datepicker-warm-grey-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
+</div>
+
+<div
+  class="ecl-datepicker ecl-datepicker--m ecl-color-mode--yellow-gold"
+  data-ecl-auto-init="Datepicker"
+  data-placeholder="DD-MM-YYYY"
+  data-ecl-datepicker-toggle
+>
+  <duet-date-picker
+    identifier="datepicker-yellow-gold"
+    name="datepicker-yellow-gold-name"
+    first-day-of-week="1"
+  ></duet-date-picker>
 </div>
