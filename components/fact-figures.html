@@ -1,167 +1,342 @@
+<!-- Default: 3 columns, icons, mixed item content, multiple sources, view all -->
 <div class="ecl-u-mb-xl">
-    <h3 class="ecl-u-type-heading-3">Fact figures (3 columns with icons and view all)</h3>
-    <div class="ecl-fact-figures ecl-fact-figures--col-3">
-        <div class="ecl-fact-figures__items">
-            <div class="ecl-fact-figures__item is-first">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--infographic ecl-icon ecl-icon--l ecl-icon--infographic ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Lorem ipsum</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Nunc eu est nec orci rhoncus venenatis. Donec rutrum lacus eget lobortis eleifend. Duis cursus sapien ac felis bibendum, in sagittis turpis porttitor. Aliquam sed mauris et orci efficitur mollis. Donec eu dolor in turpis sollicitudin malesuada.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--spreadsheet ecl-icon ecl-icon--l ecl-icon--spreadsheet ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Sed hendrerit</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Turpis varius congue venenatis, erat dui feugiat felis.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--growth ecl-icon ecl-icon--l ecl-icon--growth ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Donec suscipit interdum augue</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Cras vestibulum efficitur mi, quis porta tellus rutrum ut. Quisque at pulvinar sem.
-                </div>
-            </div>
+  <h3 class="ecl-u-type-heading-3">Fact figures default</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-3">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <span
+          class="wt-icon--infographic ecl-icon ecl-icon--l ecl-fact-figures__icon ecl-icon--infographic"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          24.7 million
+          <span class="ecl-fact-figures__title">Participants</span>
         </div>
-        <div class="ecl-fact-figures__view-all">
-            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-            <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-fact-figures__view-all-link">
-                <span class="ecl-link__label">View all</span>
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--arrow-left ecl-icon--flip-horizontal ecl-link__icon" aria-hidden="true"></span>
-            </a>
+        <div class="ecl-fact-figures__description">
+          People took part in EU-funded education and training programmes.
         </div>
+      </div>
+      <div class="ecl-fact-figures__item">
+        <span
+          class="wt-icon--spreadsheet ecl-icon ecl-icon--l ecl-fact-figures__icon ecl-icon--spreadsheet"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">18%</div>
+        <div class="ecl-fact-figures__description">
+          Average increase compared with the previous reporting period.
+        </div>
+      </div>
+      <div class="ecl-fact-figures__item">
+        <span
+          class="wt-icon--growth ecl-icon ecl-icon--l ecl-fact-figures__icon ecl-icon--growth"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__title">Regional coverage</div>
+        <div class="ecl-fact-figures__description">
+          Projects reached every EU Member State.
+        </div>
+      </div>
     </div>
+    <div class="ecl-fact-figures__sources">
+      <span class="ecl-fact-figures__sources-label">Sources:</span>
+      <ul class="ecl-fact-figures__sources-list">
+        <li class="ecl-fact-figures__sources-item">
+          <a class="ecl-link ecl-fact-figures__source" href="/example">
+            Eurostat
+          </a>
+        </li>
+        <li class="ecl-fact-figures__sources-item">
+          <span class="ecl-fact-figures__source">DG CNECT</span>
+        </li>
+        <li class="ecl-fact-figures__sources-item">
+          <a class="ecl-link ecl-fact-figures__source" href="/example">
+            Open data portal
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ecl-fact-figures__view-all">
+      <a
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-fact-figures__view-all-link"
+        href="/example"
+      >
+        <span class="ecl-link__label">View all</span>
+        <span
+          class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"
+          aria-hidden="true"
+        ></span>
+      </a>
+    </div>
+  </div>
 </div>
 
+<!-- 1 column, centered, extra class and root attributes, plain single source -->
 <div class="ecl-u-mb-xl">
-    <h3 class="ecl-u-type-heading-3">Fact figures (2 columns without icons)</h3>
-    <div class="ecl-fact-figures ecl-fact-figures--col-2">
-        <div class="ecl-fact-figures__items">
-            <div class="ecl-fact-figures__item is-first">
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Lorem ipsum</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Nunc eu est nec orci rhoncus venenatis. Donec rutrum lacus eget lobortis eleifend.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item">
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Sed hendrerit</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Turpis varius congue venenatis, erat dui feugiat felis.
-                </div>
-            </div>
+  <h3 class="ecl-u-type-heading-3">Centered single item</h3>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-fact-figures--centered custom-class"
+    data-test="fact-figures"
+    data-ready
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <span
+          class="wt-icon--digital ecl-icon ecl-icon--l ecl-fact-figures__icon ecl-icon--digital"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          9.5 million
+          <span class="ecl-fact-figures__title">Downloads</span>
         </div>
+      </div>
     </div>
+    <div class="ecl-fact-figures__sources">
+      <span class="ecl-fact-figures__source">Annual monitoring report</span>
+    </div>
+  </div>
 </div>
 
+<!-- 2 columns, icons hidden, linked single source without label -->
 <div class="ecl-u-mb-xl">
-    <h3 class="ecl-u-type-heading-3">Centered fact figures (3 columns)</h3>
-    <div class="ecl-fact-figures ecl-fact-figures--col-3 ecl-fact-figures--centered">
-        <div class="ecl-fact-figures__items">
-            <div class="ecl-fact-figures__item is-first">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--digital ecl-icon ecl-icon--l ecl-icon--digital ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Aenean dapibus</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Aliquam lacinia diam eu sem malesuada, in interdum ante bibendum.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--regulation ecl-icon ecl-icon--l ecl-icon--regulation ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Lorem ipsum</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Nunc condimentum sapien ut nibh finibus suscipit vitae at justo. Morbi quis odio faucibus, commodo tortor id, elementum libero.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--image ecl-icon ecl-icon--l ecl-icon--image ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Sed hendrerit</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Turpis varius congue venenatis, erat dui feugiat felis.
-                </div>
-            </div>
+  <h3 class="ecl-u-type-heading-3">Without icons</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-2">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">
+          42
+          <span class="ecl-fact-figures__title">Calls</span>
         </div>
+        <div class="ecl-fact-figures__description">
+          Open calls published this quarter.
+        </div>
+      </div>
+      <div class="ecl-fact-figures__item">
+        <div class="ecl-fact-figures__value">
+          6
+          <span class="ecl-fact-figures__title">Reports</span>
+        </div>
+      </div>
     </div>
+    <div class="ecl-fact-figures__sources">
+      <a class="ecl-link ecl-fact-figures__source" href="/example">
+        Funding and tenders portal
+      </a>
+    </div>
+  </div>
 </div>
 
+<!-- 4 columns, medium value font, large icons, no sources -->
 <div class="ecl-u-mb-xl">
-    <h3 class="ecl-u-type-heading-3">Medium value sizing (4 columns)</h3>
-    <div class="ecl-fact-figures ecl-fact-figures--col-4">
-        <div class="ecl-fact-figures__items">
-            <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m is-first">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--image ecl-icon ecl-icon--2xl ecl-icon--image ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Sed hendrerit</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Turpis varius congue venenatis, erat dui feugiat felis.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--global ecl-icon ecl-icon--2xl ecl-icon--global ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Donec suscipit interdum augue</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Cras vestibulum efficitur mi, quis porta tellus rutrum ut.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--presentation ecl-icon ecl-icon--2xl ecl-icon--presentation ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Aenean dapibus</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    Aliquam lacinia diam eu sem malesuada.
-                </div>
-            </div>
-            <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span class="wt-icon--infographic ecl-icon ecl-icon--2xl ecl-icon--infographic ecl-fact-figures__icon" aria-hidden="true"></span>
-                <div class="ecl-fact-figures__value">
-                    00.0 million
-                    <span class="ecl-fact-figures__title">Final item</span>
-                </div>
-                <div class="ecl-fact-figures__description">
-                    This is the last item in the 4-column layout.
-                </div>
-            </div>
+  <h3 class="ecl-u-type-heading-3">Medium value font</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-4">
+    <div class="ecl-fact-figures__items">
+      <div
+        class="ecl-fact-figures__item ecl-fact-figures__item--font-m is-first"
+      >
+        <span
+          class="wt-icon--image ecl-icon ecl-icon--2xl ecl-fact-figures__icon ecl-icon--image"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          12.3%
+          <span class="ecl-fact-figures__title">Images</span>
         </div>
+      </div>
+      <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
+        <span
+          class="wt-icon--global ecl-icon ecl-icon--2xl ecl-fact-figures__icon ecl-icon--global"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          27
+          <span class="ecl-fact-figures__title">Countries</span>
+        </div>
+      </div>
+      <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
+        <span
+          class="wt-icon--presentation ecl-icon ecl-icon--2xl ecl-fact-figures__icon ecl-icon--presentation"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          320
+          <span class="ecl-fact-figures__title">Events</span>
+        </div>
+      </div>
+      <div class="ecl-fact-figures__item ecl-fact-figures__item--font-m">
+        <span
+          class="wt-icon--regulation ecl-icon ecl-icon--2xl ecl-fact-figures__icon ecl-icon--regulation"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-fact-figures__value">
+          8
+          <span class="ecl-fact-figures__title">Acts</span>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- External view-all link: Twig does not add the arrow icon for external links -->
+<div class="ecl-u-mb-xl">
+  <h3 class="ecl-u-type-heading-3">External view all</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-1">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">
+          64
+          <span class="ecl-fact-figures__title">Datasets</span>
+        </div>
+      </div>
+    </div>
+    <div class="ecl-fact-figures__view-all">
+      <a
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-fact-figures__view-all-link"
+        href="https://example.com"
+      >
+        <span class="ecl-link__label">External source</span>
+        <span
+          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+          aria-hidden="false"
+        ></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Empty input contract -->
+<div class="ecl-u-mb-xl">
+  <h3 class="ecl-u-type-heading-3">Empty output</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-3"></div>
+</div>
+
+<!-- Color modes -->
+<div class="ecl-u-mb-xl">
+  <h3 class="ecl-u-type-heading-3">Color modes</h3>
+  <div class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--blue">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Blue</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--blue-electric"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Blue electric</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--blue-navy"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Blue navy</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--blue-ocean"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Blue ocean</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--green">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Green</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--green-dark"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Green dark</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--green-lemon"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Green lemon</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--green-pine"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Green pine</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--orange">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Orange</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--purple">
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Purple</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--purple-violet"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Purple violet</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--red-crayola"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Red crayola</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--red-tomato"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Red tomato</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--warm-grey"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Warm grey</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-fact-figures ecl-fact-figures--col-1 ecl-color-mode--yellow-gold"
+  >
+    <div class="ecl-fact-figures__items">
+      <div class="ecl-fact-figures__item is-first">
+        <div class="ecl-fact-figures__value">Yellow gold</div>
+      </div>
+    </div>
+  </div>
 </div>
