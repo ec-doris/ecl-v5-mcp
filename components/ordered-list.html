@@ -1,115 +1,187 @@
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Basic Ordered List</h3>
-<ol class="ecl-ordered-list ecl-u-mb-l">
-  <li class="ecl-ordered-list__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<!-- Default text with nested items -->
+<ol class="ecl-ordered-list">
+  <li class="ecl-ordered-list__item">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
     <ol class="ecl-ordered-list">
-      <li class="ecl-ordered-list__item">Duis commodo nibh eget magna tincidunt, in volutpat diam consequat. Nulla in blandit leo. Quisque ultricies molestie porta</li>
-      <li class="ecl-ordered-list__item">Phasellus suscipit eu augue nec suscipit</li>
+      <li class="ecl-ordered-list__item">
+        Duis commodo nibh eget magna tincidunt, in volutpat diam consequat.
+        Nulla in blandit leo. Quisque ultricies molestie porta
+      </li>
+      <li class="ecl-ordered-list__item">
+        Phasellus suscipit eu augue nec suscipit
+      </li>
     </ol>
   </li>
-  <li class="ecl-ordered-list__item">Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis iaculis feugiat. Vivamus eget turpis a est lacinia blandit. Suspendisse tellus lorem, aliquam at ante quis, dignissim iaculis lectus. Duis pellentesque neque faucibus convallis scelerisque</li>
-  <li class="ecl-ordered-list__item">Vestibulum sed accumsan ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae
+  <li class="ecl-ordered-list__item">
+    Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis
+    iaculis feugiat. Vivamus eget turpis a est lacinia blandit. Suspendisse
+    tellus lorem, aliquam at ante quis, dignissim iaculis lectus. Duis
+    pellentesque neque faucibus convallis scelerisque
+  </li>
+  <li class="ecl-ordered-list__item">
+    Vestibulum sed accumsan ipsum. Vestibulum ante ipsum primis in faucibus orci
+    luctus et ultrices posuere cubilia curae
     <ol class="ecl-ordered-list">
       <li class="ecl-ordered-list__item">Morbi vitae tortor accumsan</li>
       <li class="ecl-ordered-list__item">Nulla facilisi</li>
-      <li class="ecl-ordered-list__item">Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus</li>
+      <li class="ecl-ordered-list__item">
+        Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus
+      </li>
     </ol>
   </li>
 </ol>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Ordered List with Nested Items</h3>
-<ol class="ecl-ordered-list ecl-u-mb-l">
+<!-- Linked labels -->
+<ol class="ecl-ordered-list">
   <li class="ecl-ordered-list__item">
-    <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-    <a class="ecl-link" href="/example">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+    <a class="ecl-link" href="/example"
+      >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+    >
     <ol class="ecl-ordered-list">
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Duis commodo nibh eget magna</a>
       </li>
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Phasellus suscipit</a>
       </li>
     </ol>
   </li>
   <li class="ecl-ordered-list__item">
-    <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-    <a class="ecl-link" href="/example">Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis iaculis feugiat. Vivamus eget turpis a est lacinia blandit</a>
+    <a class="ecl-link" href="/example"
+      >Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis
+      iaculis feugiat. Vivamus eget turpis a est lacinia blandit</a
+    >
   </li>
   <li class="ecl-ordered-list__item">
-    <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
     <a class="ecl-link" href="/example">Vestibulum sed accumsan ipsum</a>
     <ol class="ecl-ordered-list">
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Morbi vitae tortor accumsan</a>
       </li>
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-        <a class="ecl-link" href="/example">Phasellus suscipit</a>
+        <a href="/example" class="ecl-link">Phasellus suscipit</a>
       </li>
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-        <a class="ecl-link" href="/example">Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus</a>
+        <a class="ecl-link" href="/example"
+          >Phasellus in metus et libero scelerisque sagittis sollicitudin at
+          lectus</a
+        >
       </li>
     </ol>
   </li>
 </ol>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Ordered List with Divider</h3>
-<ol class="ecl-ordered-list ecl-ordered-list--divider ecl-u-mb-l">
-  <li class="ecl-ordered-list__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<!-- Divider variant -->
+<ol class="ecl-ordered-list ecl-ordered-list--divider">
+  <li class="ecl-ordered-list__item">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
     <ol class="ecl-ordered-list">
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Duis commodo nibh eget magna</a>
       </li>
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Phasellus suscipit</a>
       </li>
     </ol>
   </li>
-  <li class="ecl-ordered-list__item">Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis iaculis feugiat. Vivamus eget turpis a est lacinia blandit</li>
   <li class="ecl-ordered-list__item">
-    <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
+    Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis
+    iaculis feugiat. Vivamus eget turpis a est lacinia blandit
+  </li>
+  <li class="ecl-ordered-list__item">
     <a class="ecl-link" href="/example">Vestibulum sed accumsan ipsum</a>
     <ol class="ecl-ordered-list">
       <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-        <a class="ecl-link" href="/example">Morbi vitae tortor accumsan</a>
-      </li>
-      <li class="ecl-ordered-list__item">Nulla facilisi</li>
-      <li class="ecl-ordered-list__item">Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus</li>
-    </ol>
-  </li>
-</ol>
-
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-l">Ordered List without Markers</h3>
-<ol class="ecl-ordered-list ecl-ordered-list--no-marker ecl-u-mb-l">
-  <li class="ecl-ordered-list__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    <ol class="ecl-ordered-list">
-      <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-        <a class="ecl-link" href="/example">Duis commodo nibh eget magna</a>
-      </li>
-      <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-        <a class="ecl-link" href="/example">Phasellus suscipit</a>
-      </li>
-    </ol>
-  </li>
-  <li class="ecl-ordered-list__item">Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis iaculis feugiat. Vivamus eget turpis a est lacinia blandit</li>
-  <li class="ecl-ordered-list__item">
-    <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-    <a class="ecl-link" href="/example">Vestibulum sed accumsan ipsum</a>
-    <ol class="ecl-ordered-list">
-      <li class="ecl-ordered-list__item">
-        <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
         <a class="ecl-link" href="/example">Morbi vitae tortor accumsan</a>
       </li>
       <li class="ecl-ordered-list__item">Nulla facilisi</li>
-      <li class="ecl-ordered-list__item">Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus</li>
+      <li class="ecl-ordered-list__item">
+        Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus
+      </li>
     </ol>
   </li>
+</ol>
+
+<!-- No-marker variant with root extension hooks -->
+<ol
+  class="ecl-ordered-list ecl-ordered-list--no-marker custom-class custom-class--test"
+  data-test="data-test-value"
+  data-test-flag
+>
+  <li class="ecl-ordered-list__item">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    <ol class="ecl-ordered-list">
+      <li class="ecl-ordered-list__item">
+        <a class="ecl-link" href="/example">Duis commodo nibh eget magna</a>
+      </li>
+      <li class="ecl-ordered-list__item">
+        <a class="ecl-link" href="/example">Phasellus suscipit</a>
+      </li>
+    </ol>
+  </li>
+  <li class="ecl-ordered-list__item">
+    Nam dignissim condimentum pulvinar. Nullam volutpat tortor vel turpis
+    iaculis feugiat. Vivamus eget turpis a est lacinia blandit
+  </li>
+  <li class="ecl-ordered-list__item">
+    <a class="ecl-link" href="/example">Vestibulum sed accumsan ipsum</a>
+    <ol class="ecl-ordered-list">
+      <li class="ecl-ordered-list__item">
+        <a class="ecl-link" href="/example">Morbi vitae tortor accumsan</a>
+      </li>
+      <li class="ecl-ordered-list__item">Nulla facilisi</li>
+      <li class="ecl-ordered-list__item">
+        Phasellus in metus et libero scelerisque sagittis sollicitudin at lectus
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<!-- Empty items render no component HTML. -->
+
+<!-- EC color modes -->
+<ol class="ecl-ordered-list ecl-color-mode--blue">
+  <li class="ecl-ordered-list__item">Blue mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--blue-electric">
+  <li class="ecl-ordered-list__item">Blue electric mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--blue-navy">
+  <li class="ecl-ordered-list__item">Blue navy mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--blue-ocean">
+  <li class="ecl-ordered-list__item">Blue ocean mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--green">
+  <li class="ecl-ordered-list__item">Green mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--green-dark">
+  <li class="ecl-ordered-list__item">Green dark mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--green-lemon">
+  <li class="ecl-ordered-list__item">Green lemon mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--green-pine">
+  <li class="ecl-ordered-list__item">Green pine mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--orange">
+  <li class="ecl-ordered-list__item">Orange mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--purple">
+  <li class="ecl-ordered-list__item">Purple mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--purple-violet">
+  <li class="ecl-ordered-list__item">Purple violet mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--red-crayola">
+  <li class="ecl-ordered-list__item">Red crayola mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--red-tomato">
+  <li class="ecl-ordered-list__item">Red tomato mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--warm-grey">
+  <li class="ecl-ordered-list__item">Warm grey mode item</li>
+</ol>
+<ol class="ecl-ordered-list ecl-color-mode--yellow-gold">
+  <li class="ecl-ordered-list__item">Yellow gold mode item</li>
 </ol>
