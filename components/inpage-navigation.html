@@ -1,50 +1,331 @@
+<h3 class="ecl-u-type-heading-3">Inpage navigation in page layout</h3>
 <div class="ecl-container">
   <div class="ecl-row ecl-u-mt-l" data-ecl-inpage-navigation-container>
     <div class="ecl-col-l-3">
-      <nav class="ecl-inpage-navigation ecl-color-mode--default" data-ecl-auto-init="InpageNavigation" data-ecl-inpage-navigation="true" aria-labelledby="ecl-inpage-navigation-default">
-        <div class="ecl-inpage-navigation__title" id="ecl-inpage-navigation-default">Page contents</div>
+      <nav
+        class="ecl-inpage-navigation"
+        data-ecl-auto-init="InpageNavigation"
+        data-ecl-inpage-navigation="true"
+        aria-labelledby="ecl-inpage-navigation-default"
+      >
+        <div
+          class="ecl-inpage-navigation__title"
+          id="ecl-inpage-navigation-default"
+        >
+          Page contents
+        </div>
         <div class="ecl-inpage-navigation__body">
           <div class="ecl-inpage-navigation__trigger-wrapper">
-            <button type="button" class="ecl-inpage-navigation__trigger" id="ecl-inpage-navigation-default-trigger" data-ecl-inpage-navigation-trigger="true" aria-controls="ecl-inpage-navigation-list" aria-expanded="false">
-              <span class="ecl-inpage-navigation__trigger-current" data-ecl-inpage-navigation-trigger-current="true">Page contents</span>
-              <!-- Sub-component: icon. Use the icon component; see the icon sub component for full markup guidance. -->
-              <span class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon ecl-icon--corner-arrow" aria-hidden="false" title="Show full page table of contents" role="img"></span>
+            <button
+              type="button"
+              class="ecl-inpage-navigation__trigger"
+              id="ecl-inpage-navigation-default-trigger"
+              data-ecl-inpage-navigation-trigger="true"
+              aria-controls="ecl-inpage-navigation-list"
+              aria-expanded="false"
+            >
+              <span
+                class="ecl-inpage-navigation__trigger-current"
+                data-ecl-inpage-navigation-trigger-current="true"
+                >Page contents</span
+              >
+              <span
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon ecl-icon--corner-arrow"
+                aria-hidden="false"
+                title="Show full page table of contents"
+                role="img"
+              ></span>
             </button>
           </div>
-          <ul class="ecl-inpage-navigation__list" data-ecl-inpage-navigation-list="true" id="ecl-inpage-navigation-default-list">
-            <li class="ecl-inpage-navigation__item">
-              <!-- Sub-component: link. Use the link component; see the link sub component for full markup guidance. -->
-              <a class="ecl-link ecl-inpage-navigation__link" href="#inline-nav-1" data-ecl-inpage-navigation-link>Heading 1</a>
+          <ul
+            class="ecl-inpage-navigation__list"
+            data-ecl-inpage-navigation-list="true"
+            id="ecl-inpage-navigation-list"
+          >
+            <li
+              class="ecl-inpage-navigation__item ecl-inpage-navigation__item--active"
+            >
+              <a
+                class="ecl-link ecl-inpage-navigation__link"
+                href="#inline-nav-1"
+                data-ecl-inpage-navigation-link
+                >Heading 1</a
+              >
             </li>
             <li class="ecl-inpage-navigation__item">
-              <!-- Sub-component: link. Use the link component; see the link sub component for full markup guidance. -->
-              <a class="ecl-link ecl-inpage-navigation__link" href="#inline-nav-2" data-ecl-inpage-navigation-link>Heading 2 with a long title going on several lines</a>
+              <a
+                class="ecl-link ecl-inpage-navigation__link"
+                href="#inline-nav-2"
+                data-ecl-inpage-navigation-link
+                >Heading 2 with a long title going on several lines</a
+              >
             </li>
             <li class="ecl-inpage-navigation__item">
-              <!-- Sub-component: link. Use the link component; see the link sub component for full markup guidance. -->
-              <a class="ecl-link ecl-inpage-navigation__link" href="#inline-nav-3" data-ecl-inpage-navigation-link>Heading 3</a>
+              <a
+                class="ecl-link ecl-inpage-navigation__link"
+                href="#inline-nav-3"
+                data-ecl-inpage-navigation-link
+                >Heading 3</a
+              >
             </li>
             <li class="ecl-inpage-navigation__item">
-              <!-- Sub-component: link. Use the link component; see the link sub component for full markup guidance. -->
-              <a class="ecl-link ecl-inpage-navigation__link" href="#inline-nav-4" data-ecl-inpage-navigation-link>Heading 4</a>
+              <a
+                class="ecl-link ecl-inpage-navigation__link"
+                href="#inline-nav-4"
+                data-ecl-inpage-navigation-link
+                >Heading 4</a
+              >
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="ecl-col-l-9">
-      <h2 class="ecl-u-type-heading-2 ecl-u-mt-none" id="inline-nav-1">Heading 1</h2>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <h2 class="ecl-u-type-heading-2" id="inline-nav-2">Heading 2 with a long title going on several lines</h2>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <h2 class="ecl-u-type-heading-2" id="inline-nav-3">Heading 3</h2>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <h2 class="ecl-u-type-heading-2" id="inline-nav-4">Heading 4</h2>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
-      <p class="ecl-u-type-paragraph-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id orci blandit, sodales tellus ut, ultricies sem. Donec ipsum risus, dignissim sit amet felis eu, viverra tempor enim. Praesent lobortis arcu ut orci commodo pellentesque. Phasellus dignissim sit amet risus at congue. Nunc vitae sapien eget augue volutpat congue. Ut quis lectus ultrices, mattis nisl non, porttitor lorem. Suspendisse potenti. Morbi ultrices, nibh at interdum tincidunt, lacus orci vestibulum velit, et rhoncus lacus tellus id velit. Etiam sed erat sit amet mauris iaculis volutpat sollicitudin ac odio. Phasellus dignissim non metus non consequat. Nam eu vestibulum nunc.</p>
+      <h2
+        class="ecl-u-type-heading-2 ecl-u-mt-none ecl-inpage-navigation__heading ecl-inpage-navigation__heading--active"
+        id="inline-nav-1"
+        tabindex="-1"
+      >
+        Heading 1
+      </h2>
+      <p class="ecl-u-type-paragraph-m">
+        The first section gives the default scroll-spy target used by the
+        navigation link.
+      </p>
+      <h2
+        class="ecl-u-type-heading-2 ecl-inpage-navigation__heading"
+        id="inline-nav-2"
+        tabindex="-1"
+      >
+        Heading 2 with a long title going on several lines
+      </h2>
+      <p class="ecl-u-type-paragraph-m">
+        The second section keeps the long heading label from the tagged demo
+        data.
+      </p>
+      <h2
+        class="ecl-u-type-heading-2 ecl-inpage-navigation__heading"
+        id="inline-nav-3"
+        tabindex="-1"
+      >
+        Heading 3
+      </h2>
+      <p class="ecl-u-type-paragraph-m">
+        The runtime adds focus management classes and tabindex attributes to
+        matched heading targets.
+      </p>
+      <h2
+        class="ecl-u-type-heading-2 ecl-inpage-navigation__heading"
+        id="inline-nav-4"
+        tabindex="-1"
+      >
+        Heading 4
+      </h2>
+      <p class="ecl-u-type-paragraph-m">
+        The final section closes the default inpage navigation example.
+      </p>
     </div>
   </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Inpage navigation with extension hooks</h3>
+<nav
+  class="ecl-inpage-navigation custom-class custom-class--test"
+  data-ecl-auto-init="InpageNavigation"
+  data-ecl-inpage-navigation="true"
+  data-test="data-test-value"
+  data-test-1="data-test-value-1"
+  inert
+  aria-labelledby="ecl-inpage-navigation-hooks"
+>
+  <div class="ecl-inpage-navigation__title" id="ecl-inpage-navigation-hooks">
+    More on this page
+  </div>
+  <div class="ecl-inpage-navigation__body">
+    <div class="ecl-inpage-navigation__trigger-wrapper">
+      <button
+        type="button"
+        class="ecl-inpage-navigation__trigger"
+        id="ecl-inpage-navigation-hooks-trigger"
+        data-ecl-inpage-navigation-trigger="true"
+        aria-expanded="false"
+      >
+        <span
+          class="ecl-inpage-navigation__trigger-current"
+          data-ecl-inpage-navigation-trigger-current="true"
+          >More on this page</span
+        >
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon ecl-icon--corner-arrow"
+          aria-hidden="false"
+          title="Open section navigation"
+          role="img"
+        ></span>
+      </button>
+    </div>
+    <ul
+      class="ecl-inpage-navigation__list"
+      data-ecl-inpage-navigation-list="true"
+      id="ecl-inpage-navigation-hooks-list"
+    >
+      <li class="ecl-inpage-navigation__item">
+        <a
+          class="ecl-link ecl-inpage-navigation__link"
+          href="#hooks-section"
+          data-ecl-inpage-navigation-link
+          >Hooks section</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<h2 class="ecl-u-type-heading-2" id="hooks-section">Hooks section</h2>
+
+<h3 class="ecl-u-type-heading-3">Inpage navigation without links</h3>
+<nav
+  class="ecl-inpage-navigation"
+  data-ecl-auto-init="InpageNavigation"
+  data-ecl-inpage-navigation="true"
+  aria-labelledby="ecl-inpage-navigation-empty"
+>
+  <div class="ecl-inpage-navigation__title" id="ecl-inpage-navigation-empty">
+    Empty contents
+  </div>
+  <div class="ecl-inpage-navigation__body">
+    <div class="ecl-inpage-navigation__trigger-wrapper">
+      <button
+        type="button"
+        class="ecl-inpage-navigation__trigger"
+        id="ecl-inpage-navigation-empty-trigger"
+        data-ecl-inpage-navigation-trigger="true"
+        aria-expanded="false"
+      >
+        <span
+          class="ecl-inpage-navigation__trigger-current"
+          data-ecl-inpage-navigation-trigger-current="true"
+          >Empty contents</span
+        >
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon ecl-icon--corner-arrow"
+          aria-hidden="false"
+          title=""
+          role="img"
+        ></span>
+      </button>
+    </div>
+    <ul
+      class="ecl-inpage-navigation__list"
+      data-ecl-inpage-navigation-list="true"
+      id="ecl-inpage-navigation-empty-list"
+    ></ul>
+  </div>
+</nav>
+
+<h3 class="ecl-u-type-heading-3">Inpage navigation runtime states</h3>
+<nav
+  class="ecl-inpage-navigation ecl-inpage-navigation--visible ecl-inpage-navigation--rtl"
+  data-ecl-auto-init="InpageNavigation"
+  data-ecl-inpage-navigation="true"
+  aria-labelledby="ecl-inpage-navigation-runtime"
+  dir="rtl"
+>
+  <div class="ecl-inpage-navigation__title" id="ecl-inpage-navigation-runtime">
+    Visible contents
+  </div>
+  <div class="ecl-inpage-navigation__body">
+    <div class="ecl-inpage-navigation__trigger-wrapper">
+      <button
+        type="button"
+        class="ecl-inpage-navigation__trigger"
+        id="ecl-inpage-navigation-runtime-trigger"
+        data-ecl-inpage-navigation-trigger="true"
+        aria-expanded="true"
+      >
+        <span
+          class="ecl-inpage-navigation__trigger-current"
+          data-ecl-inpage-navigation-trigger-current="true"
+          >Runtime section</span
+        >
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon ecl-icon--corner-arrow"
+          aria-hidden="false"
+          title="Close section navigation"
+          role="img"
+        ></span>
+      </button>
+    </div>
+    <ul
+      class="ecl-inpage-navigation__list ecl-inpage-navigation__list--visible"
+      data-ecl-inpage-navigation-list="true"
+      id="ecl-inpage-navigation-runtime-list"
+      style="max-height: 320px"
+    >
+      <li
+        class="ecl-inpage-navigation__item ecl-inpage-navigation__item--active"
+      >
+        <a
+          class="ecl-link ecl-inpage-navigation__link"
+          href="#runtime-section"
+          data-ecl-inpage-navigation-link
+          >Runtime section</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<h2
+  class="ecl-u-type-heading-2 ecl-inpage-navigation__heading ecl-inpage-navigation__heading--active"
+  id="runtime-section"
+  tabindex="-1"
+>
+  Runtime section
+</h2>
+
+<h3 class="ecl-u-type-heading-3">Inpage navigation color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap" style="gap: var(--s-m)">
+  <nav class="ecl-inpage-navigation ecl-color-mode--blue">
+    <div class="ecl-inpage-navigation__title">Blue</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--blue-electric">
+    <div class="ecl-inpage-navigation__title">Blue electric</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--blue-navy">
+    <div class="ecl-inpage-navigation__title">Blue navy</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--blue-ocean">
+    <div class="ecl-inpage-navigation__title">Blue ocean</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--green">
+    <div class="ecl-inpage-navigation__title">Green</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--green-dark">
+    <div class="ecl-inpage-navigation__title">Green dark</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--green-lemon">
+    <div class="ecl-inpage-navigation__title">Green lemon</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--green-pine">
+    <div class="ecl-inpage-navigation__title">Green pine</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--orange">
+    <div class="ecl-inpage-navigation__title">Orange</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--purple">
+    <div class="ecl-inpage-navigation__title">Purple</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--purple-violet">
+    <div class="ecl-inpage-navigation__title">Purple violet</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--red-crayola">
+    <div class="ecl-inpage-navigation__title">Red crayola</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--red-tomato">
+    <div class="ecl-inpage-navigation__title">Red tomato</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--warm-grey">
+    <div class="ecl-inpage-navigation__title">Warm grey</div>
+  </nav>
+  <nav class="ecl-inpage-navigation ecl-color-mode--yellow-gold">
+    <div class="ecl-inpage-navigation__title">Yellow gold</div>
+  </nav>
 </div>
