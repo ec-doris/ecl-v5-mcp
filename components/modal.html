@@ -1,56 +1,488 @@
 <h3 class="ecl-u-type-heading-3">Modal</h3>
 
-<!-- Sub component: button. See the button sub component for full markup guidance. -->
-<button class="ecl-button ecl-button--secondary ecl-button--m ecl-u-mb-m" id="modal-toggle" type="button">Modal toggle</button>
+<!-- Default modal with scrollable and fixed body content -->
+<button
+  class="ecl-button ecl-button--secondary ecl-button--m ecl-u-mb-m"
+  id="modal-toggle-default"
+  type="button"
+>
+  Modal toggle
+</button>
 
-<dialog aria-describedby="modal-example-body-scroll" aria-labelledby="modal-example-header" aria-modal="true" class="ecl-modal ecl-modal--l" data-ecl-auto-init="Modal" data-ecl-modal-toggle="modal-toggle" id="modal-example">
+<dialog
+  aria-describedby="modal-default-body-scroll"
+  aria-labelledby="modal-default-header"
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-default"
+  id="modal-default"
+>
   <div class="ecl-modal__container">
     <div class="ecl-modal__content ecl-container">
       <header class="ecl-modal__header">
-        <div class="ecl-modal__header-content" id="modal-example-header">
+        <div class="ecl-modal__header-content" id="modal-default-header">
           Modal title
         </div>
-        <!-- Sub component: button. See the button sub component for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-button--icon-only ecl-modal__close" data-ecl-modal-close type="button">
+        <button
+          class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-modal__close ecl-button--icon-only"
+          data-ecl-modal-close
+          type="button"
+        >
           <span class="ecl-button__container">
             <span class="ecl-button__label" data-ecl-label="true">Close</span>
-            <!-- Sub component: icon. See the icon sub component for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon></span>
+            <span
+              aria-hidden="true"
+              class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+              data-ecl-icon
+            ></span>
           </span>
         </button>
       </header>
       <div class="ecl-modal__body">
-        <div class="ecl-modal__body-scroll" data-ecl-modal-scroll id="modal-example-body-scroll">
-          <p class="ecl-u-type-paragraph">Scrollable content: Sed quam augue, volutpat sed dapibus in, accumsan a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum dui. Donec id posuere libero, sit amet egestas lorem.</p>
-          <p class="ecl-u-type-paragraph ecl-u-mt-m">Aliquam finibus ipsum mauris, a molestie tortor laoreet. Morbi interdum orci arcu, tempor porta nisl elementum non. Morbi blandit risus sed turpis mollis mattis. Maecenas semper, risus nec sollicitudin aliquet, dui eros vehicula nulla, ac bibendum mauris mauris a lectus.</p>
+        <div
+          class="ecl-modal__body-scroll"
+          data-ecl-modal-scroll
+          id="modal-default-body-scroll"
+        >
+          Scrollable content:
+          <br />
+          Sed quam augue, volutpat sed dapibus in,
+          <a class="ecl-link" href="#">accumsan</a>
+          a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor
+          tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum
+          dui.
         </div>
         <div aria-hidden="true" class="ecl-modal__body-overflow"></div>
         <div class="ecl-modal__body-fixed">
-          <!-- Sub component: form-group. See the form-group sub component for full markup guidance. -->
-          <fieldset class="ecl-form-group">
-            <legend class="ecl-form-label" id="modal-consent-label">Stay informed</legend>
-            <!-- Sub component: checkbox. See the checkbox sub component for full markup guidance. -->
-            <div class="ecl-checkbox ecl-checkbox--single">
-              <input class="ecl-checkbox__input" id="modal-consent" name="modal-consent" type="checkbox" value="updates" />
-              <label class="ecl-checkbox__label" for="modal-consent">
-                <span class="ecl-checkbox__box">
-                  <!-- Sub component: icon. See the icon sub component for full markup guidance. -->
-                  <span aria-hidden="true" class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"></span>
-                </span>
-                <span class="ecl-checkbox__text">Receive follow-up updates</span>
-              </label>
-            </div>
-          </fieldset>
+          <div class="ecl-checkbox ecl-checkbox--single">
+            <input
+              class="ecl-checkbox__input"
+              id="modal-default-checkbox"
+              name="modal-default-checkbox"
+              type="checkbox"
+              value="yes"
+            />
+            <label class="ecl-checkbox__label" for="modal-default-checkbox">
+              <span class="ecl-checkbox__box">
+                <span
+                  aria-hidden="true"
+                  class="wt-icon--check ecl-icon ecl-icon--xs ecl-checkbox__icon ecl-icon--check"
+                ></span>
+              </span>
+              <span class="ecl-checkbox__text">Label Checkbox</span>
+            </label>
+          </div>
         </div>
       </div>
       <footer class="ecl-modal__footer">
         <div class="ecl-modal__footer-content">
-          <!-- Sub component: button. See the button sub component for full markup guidance. -->
-          <button class="ecl-button ecl-button--secondary ecl-button--m ecl-modal__button" data-ecl-modal-close type="button">Cancel</button>
-          <!-- Sub component: button. See the button sub component for full markup guidance. -->
-          <button class="ecl-button ecl-button--primary ecl-button--m ecl-modal__button" type="submit">Confirm action</button>
+          <button
+            class="ecl-button ecl-button--secondary ecl-button--m ecl-modal__button"
+            data-ecl-modal-close
+            type="button"
+          >
+            Button
+          </button>
+          <button
+            class="ecl-button ecl-button--primary ecl-button--m ecl-modal__button"
+            type="submit"
+          >
+            Button
+          </button>
         </div>
       </footer>
+    </div>
+  </div>
+</dialog>
+
+<!-- Information variant with accessible icon and extension hooks -->
+<button
+  class="ecl-button ecl-button--secondary ecl-button--m ecl-u-mt-l ecl-u-mb-m"
+  id="modal-toggle-information"
+  type="button"
+>
+  Information modal
+</button>
+
+<dialog
+  aria-describedby="modal-information-body-scroll"
+  aria-labelledby="modal-information-header"
+  aria-modal="true"
+  class="ecl-modal ecl-modal--information ecl-modal--m custom-class custom-class--test"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-information"
+  data-test="data-test-value"
+  data-test-flag
+  id="modal-information"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header">
+        <div class="ecl-modal__header-content" id="modal-information-header">
+          <span
+            aria-hidden="false"
+            class="wt-icon--information-outline ecl-icon ecl-icon--xl ecl-modal__icon ecl-icon--information-outline"
+            role="img"
+            title="Information"
+          ></span>
+          Information title
+        </div>
+        <button
+          class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-modal__close ecl-button--icon-only"
+          data-ecl-modal-close
+          type="button"
+        >
+          <span class="ecl-button__container">
+            <span class="ecl-button__label" data-ecl-label="true">Close</span>
+            <span
+              aria-hidden="true"
+              class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+              data-ecl-icon
+            ></span>
+          </span>
+        </button>
+      </header>
+      <div class="ecl-modal__body">
+        <div
+          class="ecl-modal__body-scroll"
+          data-ecl-modal-scroll
+          id="modal-information-body-scroll"
+        >
+          This modal includes an accessible status icon and root extension
+          attributes.
+        </div>
+        <div aria-hidden="true" class="ecl-modal__body-overflow"></div>
+      </div>
+      <footer class="ecl-modal__footer">Custom footer content</footer>
+    </div>
+  </div>
+</dialog>
+
+<!-- Success, warning and error variants -->
+<dialog
+  aria-labelledby="modal-success-header"
+  aria-modal="true"
+  class="ecl-modal ecl-modal--success ecl-modal--s"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-success"
+  id="modal-success"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header">
+        <div class="ecl-modal__header-content" id="modal-success-header">
+          <span
+            aria-hidden="true"
+            class="wt-icon--success-outline ecl-icon ecl-icon--xl ecl-modal__icon ecl-icon--success-outline"
+          ></span>
+          Success title
+        </div>
+      </header>
+    </div>
+  </div>
+</dialog>
+
+<dialog
+  aria-labelledby="modal-warning-header"
+  aria-modal="true"
+  class="ecl-modal ecl-modal--warning ecl-modal--full"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-warning"
+  id="modal-warning"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header">
+        <div class="ecl-modal__header-content" id="modal-warning-header">
+          <span
+            aria-hidden="false"
+            class="wt-icon--warning-outline ecl-icon ecl-icon--xl ecl-modal__icon ecl-icon--warning-outline"
+            role="img"
+            title="Warning"
+          ></span>
+          Warning title
+        </div>
+      </header>
+    </div>
+  </div>
+</dialog>
+
+<dialog
+  aria-labelledby="modal-error-header"
+  aria-modal="true"
+  class="ecl-modal ecl-modal--error ecl-modal--l"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-error"
+  id="modal-error"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header">
+        <div class="ecl-modal__header-content" id="modal-error-header">
+          <span
+            aria-hidden="false"
+            class="wt-icon--error-outline ecl-icon ecl-icon--xl ecl-modal__icon ecl-icon--error-outline"
+            role="img"
+            title="Error"
+          ></span>
+          Error title
+        </div>
+      </header>
+    </div>
+  </div>
+</dialog>
+
+<!-- Body and footer branch examples -->
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--m"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-fixed-only"
+  id="modal-fixed-only"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+      <div class="ecl-modal__body">
+        <div class="ecl-modal__body-fixed">Fixed body content only</div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-footer-only"
+  id="modal-footer-only"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+      <footer class="ecl-modal__footer">
+        <div class="ecl-modal__footer-content">
+          <button
+            class="ecl-button ecl-button--primary ecl-button--s custom-button ecl-modal__button"
+            type="button"
+          >
+            Small action
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</dialog>
+
+<!-- Edge contract: root-only output for empty input -->
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-empty-toggle"
+  id="modal-empty"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+
+<!-- EC color mode pass-through examples -->
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--blue"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-blue"
+  id="modal-mode-blue"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--blue-electric"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-blue-electric"
+  id="modal-mode-blue-electric"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--blue-navy"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-blue-navy"
+  id="modal-mode-blue-navy"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--blue-ocean"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-blue-ocean"
+  id="modal-mode-blue-ocean"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--green"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-green"
+  id="modal-mode-green"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--green-dark"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-green-dark"
+  id="modal-mode-green-dark"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--green-lemon"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-green-lemon"
+  id="modal-mode-green-lemon"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--green-pine"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-green-pine"
+  id="modal-mode-green-pine"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--orange"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-orange"
+  id="modal-mode-orange"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--purple"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-purple"
+  id="modal-mode-purple"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--purple-violet"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-purple-violet"
+  id="modal-mode-purple-violet"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--red-crayola"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-red-crayola"
+  id="modal-mode-red-crayola"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--red-tomato"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-red-tomato"
+  id="modal-mode-red-tomato"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--warm-grey"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-warm-grey"
+  id="modal-mode-warm-grey"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
+    </div>
+  </div>
+</dialog>
+<dialog
+  aria-modal="true"
+  class="ecl-modal ecl-modal--l ecl-color-mode--yellow-gold"
+  data-ecl-auto-init="Modal"
+  data-ecl-modal-toggle="modal-toggle-yellow-gold"
+  id="modal-mode-yellow-gold"
+>
+  <div class="ecl-modal__container">
+    <div class="ecl-modal__content ecl-container">
+      <header class="ecl-modal__header"></header>
     </div>
   </div>
 </dialog>
