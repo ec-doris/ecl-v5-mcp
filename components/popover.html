@@ -1,180 +1,695 @@
-<h3 class="ecl-u-type-heading-3">Popover with button toggle</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The popover component displays additional information when triggered. This example uses a button as the toggle element.</p>
-
+<h3 class="ecl-u-type-heading-3">Default button toggle</h3>
 <div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-popover__toggle" type="button" aria-controls="popover-example-1" data-ecl-popover-toggle aria-expanded="false">
+  <button
+    class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+    type="button"
+    aria-controls="popover-default"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Popover</span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline"
+        data-ecl-icon
+      ></span>
+    </span>
+  </button>
+  <div id="popover-default" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close ecl-button--icon-only"
+        type="button"
+        data-ecl-popover-close
+      >
         <span class="ecl-button__container">
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline" data-ecl-icon></span>
-            <span class="ecl-button__label" data-ecl-label="true">Popover</span>
+          <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          <span
+            aria-hidden="true"
+            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+            data-ecl-icon
+          ></span>
         </span>
-    </button>
-    <div id="popover-example-1" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close>
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="false" role="img" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon title="Close"></span>
-                </span>
-            </button>
-            <div class="ecl-popover__content">
-                <p class="ecl-u-type-paragraph-m">Nulla est ad excepteur sint officia fugiat aute commodo ullamco amet culpa eiusmod labore. Esse nostrud aliqua pariatur pariatur officia non laboris cillum velit dolore in sit laboris fugiat.</p>
-            </div>
-        </div>
+      </button>
+      <div class="ecl-popover__content">
+        Nulla est ad excepteur sint officia fugiat aute commodo ullamco amet
+        culpa eiusmod labore. Esse nostrud aliqua pariatur pariatur officia non
+        laboris cillum velit dolore in sit laboris fugiat.
+      </div>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Popover with link toggle</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The toggle element can also be a link instead of a button.</p>
-
+<h3 class="ecl-u-type-heading-3">Link toggle</h3>
 <div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
-    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-    <a href="#" class="ecl-link ecl-link--standalone ecl-link--icon ecl-popover__toggle" aria-controls="popover-example-2" data-ecl-popover-toggle aria-expanded="false">
-        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-        <span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--xs ecl-link__icon ecl-icon--share"></span>
-        <span class="ecl-link__label">Share</span>
-    </a>
-    <div id="popover-example-2" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close>
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="false" role="img" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon title="Close"></span>
-                </span>
-            </button>
-            <div class="ecl-popover__content">
-                <p class="ecl-u-type-paragraph-m">Share this content on your social media platforms.</p>
-            </div>
-        </div>
+  <a
+    class="ecl-link ecl-link--button ecl-popover__toggle"
+    href="#test-path"
+    aria-label="Popover toggle"
+    aria-controls="popover-link"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+    >Popover</a
+  >
+  <div id="popover-link" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close ecl-button--icon-only"
+        type="button"
+        data-ecl-popover-close
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          <span
+            aria-hidden="true"
+            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+      <div class="ecl-popover__content">Share this content.</div>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Popover without close button</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The close button is optional and can be omitted.</p>
-
+<h3 class="ecl-u-type-heading-3">Without close button</h3>
 <div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-popover__toggle" type="button" aria-controls="popover-example-3" data-ecl-popover-toggle aria-expanded="false">
-        <span class="ecl-button__container">
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline" data-ecl-icon></span>
-            <span class="ecl-button__label" data-ecl-label="true">Help</span>
-        </span>
-    </button>
-    <div id="popover-example-3" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <div class="ecl-popover__content">
-                <p class="ecl-u-type-paragraph-m">Click outside or press ESC to close this popover.</p>
-            </div>
-        </div>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+    type="button"
+    aria-controls="popover-no-close"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Help</span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline"
+        data-ecl-icon
+      ></span>
+    </span>
+  </button>
+  <div id="popover-no-close" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <div class="ecl-popover__content">
+        Click outside or press ESC to close this popover.
+      </div>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Popover with rich content</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The popover content area can contain any HTML structure including headings, lists, and links.</p>
-
+<h3 class="ecl-u-type-heading-3">Rich content</h3>
 <div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-popover__toggle" type="button" aria-controls="popover-example-4" data-ecl-popover-toggle aria-expanded="false">
+  <button
+    class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+    type="button"
+    aria-controls="popover-rich"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true"
+        >More information</span
+      >
+      <span
+        aria-hidden="true"
+        class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline"
+        data-ecl-icon
+      ></span>
+    </span>
+  </button>
+  <div id="popover-rich" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close ecl-button--icon-only"
+        type="button"
+        data-ecl-popover-close
+      >
         <span class="ecl-button__container">
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline" data-ecl-icon></span>
-            <span class="ecl-button__label" data-ecl-label="true">More information</span>
+          <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          <span
+            aria-hidden="true"
+            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+            data-ecl-icon
+          ></span>
         </span>
-    </button>
-    <div id="popover-example-4" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close>
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="false" role="img" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon title="Close"></span>
-                </span>
-            </button>
-            <div class="ecl-popover__content">
-                <h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Additional Resources</h4>
-                <p class="ecl-u-type-paragraph-m">Find more information about this topic:</p>
-                <ul class="ecl-u-type-list-ul ecl-u-mt-m">
-                    <li class="ecl-u-type-list-ul__item">Complete documentation</li>
-                    <li class="ecl-u-type-list-ul__item">Implementation guides</li>
-                    <li class="ecl-u-type-list-ul__item">Best practices</li>
-                </ul>
-                <p class="ecl-u-type-paragraph-m ecl-u-mt-m">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link" href="#">Learn more about this topic</a>
-                </p>
-            </div>
-        </div>
+      </button>
+      <div class="ecl-popover__content">
+        <h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Additional resources</h4>
+        <p class="ecl-u-type-paragraph-m">
+          Find more information about this topic:
+        </p>
+        <ul class="ecl-u-type-list-ul ecl-u-mt-m">
+          <li class="ecl-u-type-list-ul__item">Complete documentation</li>
+          <li class="ecl-u-type-list-ul__item">Implementation guides</li>
+          <li class="ecl-u-type-list-ul__item">Best practices</li>
+        </ul>
+        <p class="ecl-u-type-paragraph-m ecl-u-mt-m">
+          <a class="ecl-link" href="#learn-more">Learn more about this topic</a>
+        </p>
+      </div>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Popover with icon-only button toggle</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Button toggles can be icon-only with a hidden label for screen readers.</p>
-
+<h3 class="ecl-u-type-heading-3">Icon-only toggle</h3>
 <div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-button--icon-only ecl-popover__toggle" type="button" aria-controls="popover-example-5" data-ecl-popover-toggle aria-expanded="false">
+  <button
+    class="ecl-button ecl-button--tertiary ecl-button--icon-only ecl-popover__toggle"
+    type="button"
+    aria-controls="popover-icon-only"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true"
+        >Show more information</span
+      >
+      <span
+        aria-hidden="true"
+        class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline"
+        data-ecl-icon
+      ></span>
+    </span>
+  </button>
+  <div id="popover-icon-only" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close ecl-button--icon-only"
+        type="button"
+        data-ecl-popover-close
+      >
         <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Show more information</span>
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline" data-ecl-icon></span>
+          <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          <span
+            aria-hidden="true"
+            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+            data-ecl-icon
+          ></span>
         </span>
-    </button>
-    <div id="popover-example-5" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close>
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="false" role="img" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon title="Close"></span>
-                </span>
-            </button>
-            <div class="ecl-popover__content">
-                <p class="ecl-u-type-paragraph-m">This popover was triggered by an icon-only button with a screen reader accessible label.</p>
-            </div>
-        </div>
+      </button>
+      <div class="ecl-popover__content">
+        This popover was triggered by an icon-only button.
+      </div>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Popover with button indicator</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Button toggles can include an indicator to show unread items or notifications.</p>
-
-<div class="ecl-popover" data-ecl-auto-init="Popover">
-    <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-button--icon-only ecl-popover__toggle" type="button" aria-controls="popover-example-6" data-ecl-popover-toggle aria-expanded="false">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Notifications</span>
-            <span class="ecl-button__icon-container">
-                <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline" data-ecl-icon></span>
-                <!-- Sub component: indicator. Use the indicator component template; see indicator sub component for full markup guidance. -->
-                <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
-                    <span class="ecl-indicator__value">10</span>
-                    <span class="ecl-indicator__label">Items not read</span>
-                </span>
-            </span>
+<h3 class="ecl-u-type-heading-3">Indicator toggle</h3>
+<div class="ecl-popover ecl-u-mb-2xl" data-ecl-auto-init="Popover">
+  <button
+    class="ecl-button ecl-button--tertiary ecl-button--icon-only ecl-popover__toggle"
+    type="button"
+    aria-controls="popover-indicator"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Notifications</span>
+      <span class="ecl-button__icon-container">
+        <span
+          aria-hidden="true"
+          class="wt-icon--information-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--information-outline"
+          data-ecl-icon
+        ></span>
+        <span
+          class="ecl-indicator"
+          data-ecl-indicator
+          data-ecl-auto-init="Indicator"
+        >
+          <span class="ecl-indicator__value">10</span>
+          <span class="ecl-indicator__label">Items not read</span>
         </span>
-    </button>
-    <div id="popover-example-6" class="ecl-popover__container" hidden>
-        <div class="ecl-popover__scrollable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close" type="button" data-ecl-popover-close>
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="false" role="img" class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" data-ecl-icon title="Close"></span>
-                </span>
-            </button>
-            <div class="ecl-popover__content">
-                <p class="ecl-u-type-paragraph-m">You have 10 unread notifications. This popover toggle uses an indicator badge to display the count.</p>
-            </div>
-        </div>
+      </span>
+    </span>
+  </button>
+  <div id="popover-indicator" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-popover__close ecl-button--icon-only"
+        type="button"
+        data-ecl-popover-close
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true">Close</span>
+          <span
+            aria-hidden="true"
+            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+      <div class="ecl-popover__content">You have 10 unread notifications.</div>
     </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Extension hooks</h3>
+<div
+  class="ecl-popover custom-class custom-class--test ecl-u-mb-2xl"
+  data-ecl-auto-init="Popover"
+  data-test="data-test-value"
+  data-ready
+>
+  <button
+    class="ecl-button ecl-button--tertiary ecl-popover__toggle custom-toggle"
+    type="button"
+    aria-controls="popover-extension"
+    data-ecl-popover-toggle
+    aria-expanded="false"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true">Custom</span>
+    </span>
+  </button>
+  <div id="popover-extension" class="ecl-popover__container" hidden>
+    <div class="ecl-popover__scrollable">
+      <div class="ecl-popover__content">Extension attributes are present.</div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Visible placement classes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-gap-m">
+  <div
+    class="ecl-popover ecl-popover--bottom ecl-u-mb-2xl"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-bottom"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Bottom</span>
+      </span>
+    </button>
+    <div id="popover-bottom" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Bottom placement.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-popover--top ecl-popover--push-left ecl-u-mb-2xl"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-top"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Top</span>
+      </span>
+    </button>
+    <div id="popover-top" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Top placement.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-popover--left ecl-popover--push-top ecl-u-mb-2xl"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-left"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Left</span>
+      </span>
+    </button>
+    <div id="popover-left" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Left placement.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-popover--right ecl-popover--push-right ecl-popover--push-bottom ecl-u-mb-2xl"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-right"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Right</span>
+      </span>
+    </button>
+    <div id="popover-right" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Right placement.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">EC color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-gap-m">
+  <div class="ecl-popover ecl-color-mode--blue" data-ecl-auto-init="Popover">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-blue"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Blue</span></span
+      >
+    </button>
+    <div id="popover-blue" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Blue mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--blue-electric"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-blue-electric"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Blue electric</span
+        ></span
+      >
+    </button>
+    <div id="popover-blue-electric" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Blue electric mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--blue-navy"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-blue-navy"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Blue navy</span
+        ></span
+      >
+    </button>
+    <div id="popover-blue-navy" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Blue navy mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--blue-ocean"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-blue-ocean"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Blue ocean</span
+        ></span
+      >
+    </button>
+    <div id="popover-blue-ocean" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Blue ocean mode.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-popover ecl-color-mode--green" data-ecl-auto-init="Popover">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-green"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Green</span
+        ></span
+      >
+    </button>
+    <div id="popover-green" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Green mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--green-dark"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-green-dark"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Green dark</span
+        ></span
+      >
+    </button>
+    <div id="popover-green-dark" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Green dark mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--green-lemon"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-green-lemon"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Green lemon</span
+        ></span
+      >
+    </button>
+    <div id="popover-green-lemon" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Green lemon mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--green-pine"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-green-pine"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Green pine</span
+        ></span
+      >
+    </button>
+    <div id="popover-green-pine" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Green pine mode.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-popover ecl-color-mode--orange" data-ecl-auto-init="Popover">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-orange"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Orange</span
+        ></span
+      >
+    </button>
+    <div id="popover-orange" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Orange mode.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-popover ecl-color-mode--purple" data-ecl-auto-init="Popover">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-purple"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Purple</span
+        ></span
+      >
+    </button>
+    <div id="popover-purple" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Purple mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--purple-violet"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-purple-violet"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Purple violet</span
+        ></span
+      >
+    </button>
+    <div id="popover-purple-violet" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Purple violet mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--red-crayola"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-red-crayola"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Red crayola</span
+        ></span
+      >
+    </button>
+    <div id="popover-red-crayola" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Red crayola mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--red-tomato"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-red-tomato"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Red tomato</span
+        ></span
+      >
+    </button>
+    <div id="popover-red-tomato" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Red tomato mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--warm-grey"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-warm-grey"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Warm grey</span
+        ></span
+      >
+    </button>
+    <div id="popover-warm-grey" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Warm grey mode.</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ecl-popover ecl-color-mode--yellow-gold"
+    data-ecl-auto-init="Popover"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-popover__toggle"
+      type="button"
+      aria-controls="popover-yellow-gold"
+      data-ecl-popover-toggle
+      aria-expanded="false"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Yellow gold</span
+        ></span
+      >
+    </button>
+    <div id="popover-yellow-gold" class="ecl-popover__container" hidden>
+      <div class="ecl-popover__scrollable">
+        <div class="ecl-popover__content">Yellow gold mode.</div>
+      </div>
+    </div>
+  </div>
 </div>
