@@ -1,157 +1,19 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mt-none">Default select</h3>
-<p class="ecl-u-type-paragraph">Basic select dropdown with standard options.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
 <div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-default" id="select-default-label">Select a country</label>
-  <div class="ecl-help-block" id="select-default-helper">This is optional help text</div>
+  <label class="ecl-form-label" for="select-default" id="select-default-label"
+    >Select a country</label
+  >
+  <div class="ecl-help-block" id="select-default-helper">
+    Optional help text
+  </div>
   <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-default" name="country" aria-describedby="select-default-helper">
-      <option value="1">Belgium</option>
-      <option value="2">France</option>
-      <option value="3">Germany</option>
-      <option value="4" selected>Italy</option>
-      <option value="5">Spain</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Disabled select</h3>
-<p class="ecl-u-type-paragraph">Select field in disabled state.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label ecl-form-label--disabled" for="select-disabled" id="select-disabled-label">Select a country</label>
-  <div class="ecl-help-block ecl-help-block--disabled" id="select-disabled-helper">This is optional help text</div>
-  <div class="ecl-select__container ecl-select__container--disabled ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-disabled" name="country" disabled aria-describedby="select-disabled-helper">
-      <option value="1">Belgium</option>
-      <option value="2">France</option>
-      <option value="3">Germany</option>
-      <option value="4" selected>Italy</option>
-      <option value="5">Spain</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button" disabled>
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Invalid select</h3>
-<p class="ecl-u-type-paragraph">Select field in invalid state with error message.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label ecl-form-label--invalid" for="select-invalid" id="select-invalid-label">Select a country</label>
-  <div class="ecl-help-block" id="select-invalid-helper">This is optional help text</div>
-  <div class="ecl-select__container ecl-select__container--invalid ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-invalid" name="country" aria-describedby="select-invalid-helper select-invalid-feedback" aria-invalid="true">
-      <option value="">Please select</option>
-      <option value="1">Belgium</option>
-      <option value="2">France</option>
-      <option value="3">Germany</option>
-      <option value="4">Italy</option>
-      <option value="5">Spain</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-  <div class="ecl-feedback-message" id="select-invalid-feedback">
-    <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-    <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true"></span>This field is required
-  </div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Required select</h3>
-<p class="ecl-u-type-paragraph">Select field with required indicator.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-required" id="select-required-label">Select a country<span class="ecl-form-label__required">*</span></label>
-  <div class="ecl-help-block" id="select-required-helper">This is optional help text</div>
-  <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-required" name="country" required aria-describedby="select-required-helper">
-      <option value="">Please select</option>
-      <option value="1">Belgium</option>
-      <option value="2">France</option>
-      <option value="3">Germany</option>
-      <option value="4">Italy</option>
-      <option value="5">Spain</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Optional select</h3>
-<p class="ecl-u-type-paragraph">Select field with optional indicator.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-optional" id="select-optional-label">Select a country<span class="ecl-form-label__optional">(optional)</span></label>
-  <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-optional" name="country">
-      <option value="">Please select</option>
-      <option value="1">Belgium</option>
-      <option value="2">France</option>
-      <option value="3">Germany</option>
-      <option value="4">Italy</option>
-      <option value="5">Spain</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<h3 class="ecl-u-type-heading-3">Select with optgroups</h3>
-<p class="ecl-u-type-paragraph">Select field with grouped options using optgroup elements.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-optgroup" id="select-optgroup-label">Select a country</label>
-  <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-optgroup" name="country">
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      id="select-default"
+      name="country"
+      aria-describedby="select-default-helper"
+    >
       <optgroup label="European countries">
         <option value="1">Belgium</option>
         <option value="2">France</option>
@@ -160,18 +22,237 @@
         <option value="5" selected>Bulgaria</option>
       </optgroup>
       <optgroup label="Non European countries">
-        <option value="6">China</option>
-        <option value="7">Japan</option>
+        <option value="11">China</option>
       </optgroup>
-      <option value="8">Standalone option</option>
+      <option value="12">standalone option</option>
     </select>
     <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
         <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Required, disabled, and invalid states</h3>
+<div class="ecl-form-group ecl-u-mb-l">
+  <label
+    class="ecl-form-label"
+    for="select-required"
+    id="select-required-label"
+  >
+    Select a country<span
+      class="ecl-form-label__required"
+      role="note"
+      aria-label="required"
+      >*</span
+    >
+  </label>
+  <div class="ecl-select__container ecl-select__container--m">
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      id="select-required"
+      name="required-country"
+      required
+    >
+      <option value="">Please select</option>
+      <option value="be">Belgium</option>
+      <option value="fr">France</option>
+    </select>
+    <div class="ecl-select__icon">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ecl-form-group ecl-u-mb-l">
+  <label
+    class="ecl-form-label ecl-form-label--disabled"
+    for="select-disabled"
+    id="select-disabled-label"
+    >Disabled select</label
+  >
+  <div
+    class="ecl-select__container ecl-select__container--disabled ecl-select__container--m"
+  >
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      id="select-disabled"
+      name="disabled-country"
+      disabled
+    >
+      <option value="be">Belgium</option>
+      <option value="fr" selected>France</option>
+    </select>
+    <div class="ecl-select__icon">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+        disabled
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ecl-form-group ecl-u-mb-l">
+  <label
+    class="ecl-form-label ecl-form-label--invalid"
+    for="select-invalid"
+    id="select-invalid-label"
+    >Invalid select</label
+  >
+  <div
+    class="ecl-select__container ecl-select__container--invalid ecl-select__container--m"
+  >
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      id="select-invalid"
+      name="invalid-country"
+      aria-invalid="true"
+      aria-describedby="select-invalid-message"
+    >
+      <option value="">Please select</option>
+      <option value="be">Belgium</option>
+      <option value="fr">France</option>
+    </select>
+    <div class="ecl-select__icon">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="ecl-feedback-message" id="select-invalid-message">
+    <span
+      class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon"
+      aria-hidden="true"
+    ></span
+    >Error text
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Widths and extension hooks</h3>
+<div class="ecl-form-group ecl-u-mb-l">
+  <label class="ecl-form-label" for="select-small" id="select-small-label"
+    >Small select</label
+  >
+  <div class="ecl-select__container ecl-select__container--s">
+    <select
+      class="ecl-select custom-select custom-select--demo"
+      data-ecl-auto-init="Select"
+      data-demo="small"
+      data-flag
+      id="select-small"
+      name="small"
+    >
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+    <div class="ecl-select__icon">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ecl-form-group ecl-u-mb-l">
+  <label class="ecl-form-label" for="select-large" id="select-large-label"
+    >Large select</label
+  >
+  <div class="ecl-select__container ecl-select__container--l">
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      id="select-large"
+      name="large"
+    >
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+    <div class="ecl-select__icon">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
         </span>
       </button>
     </div>
@@ -179,107 +260,260 @@
 </div>
 
 <h3 class="ecl-u-type-heading-3">Multiple select</h3>
-<p class="ecl-u-type-paragraph">Multi-select field with search, select all, and clear functionality.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
 <div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-multiple" id="select-multiple-label">Select countries</label>
-  <div class="ecl-help-block" id="select-multiple-helper">Select one or more options</div>
+  <label class="ecl-form-label" for="select-multiple" id="select-multiple-label"
+    >Select countries</label
+  >
+  <div class="ecl-help-block" id="select-multiple-helper">
+    Select one or more options
+  </div>
   <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" data-ecl-select-multiple data-ecl-select-default="Choose options" data-ecl-select-search="Enter filter keyword" data-ecl-select-no-results="No results found" data-ecl-select-all="Select all" data-ecl-select-close="Apply" data-ecl-select-clear-all="Clear all" id="select-multiple" name="country[]" multiple aria-describedby="select-multiple-helper">
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      multiple
+      data-ecl-select-multiple
+      data-ecl-select-default="Choose options"
+      data-ecl-select-clear-all="Clear all"
+      data-ecl-select-close="Apply"
+      data-ecl-select-counter="Selected:"
+      data-ecl-select-all="Select all"
+      data-ecl-select-submit
+      data-ecl-select-search="Enter filter keyword"
+      data-ecl-select-no-results="No results found"
+      id="select-multiple"
+      name="country"
+      aria-describedby="select-multiple-helper"
+    >
       <optgroup label="European countries">
         <option value="1">Belgium</option>
         <option value="2">France</option>
         <option value="3" disabled>Luxembourg</option>
         <option value="4">Germany</option>
-        <option value="5">Italy</option>
-        <option value="6">Spain</option>
       </optgroup>
       <optgroup label="Non European countries">
-        <option value="7">China</option>
-        <option value="8">Japan</option>
-        <option value="9">United States</option>
+        <option value="11">China</option>
       </optgroup>
-      <option value="10">Standalone option</option>
+      <option value="12">standalone option</option>
     </select>
     <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
         <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
         </span>
       </button>
     </div>
   </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Select sizes</h3>
-<p class="ecl-u-type-paragraph">Select fields in different widths: small, medium, and large.</p>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
+<h3 class="ecl-u-type-heading-3">
+  Multiple select without search or select all
+</h3>
 <div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-small" id="select-small-label">Small select</label>
-  <div class="ecl-select__container ecl-select__container--s">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-small" name="size">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-medium" id="select-medium-label">Medium select</label>
+  <label
+    class="ecl-form-label"
+    for="select-multiple-compact"
+    id="select-multiple-compact-label"
+    >Compact multiple select</label
+  >
   <div class="ecl-select__container ecl-select__container--m">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-medium" name="size">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+    <select
+      class="ecl-select"
+      data-ecl-auto-init="Select"
+      multiple
+      data-ecl-select-multiple
+      data-ecl-select-default="Choose options"
+      data-ecl-select-clear-all=""
+      data-ecl-select-close=""
+      data-ecl-select-counter=""
+      id="select-multiple-compact"
+      name="compact-country"
+    >
+      <option value="be" selected>Belgium</option>
+      <option value="fr">France</option>
     </select>
     <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+        tabindex="-1"
+        type="button"
+      >
         <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Toggle dropdown</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
         </span>
       </button>
     </div>
   </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-  <label class="ecl-form-label" for="select-large" id="select-large-label">Large select</label>
-  <div class="ecl-select__container ecl-select__container--l">
-    <select class="ecl-select" data-ecl-auto-init="Select" id="select-large" name="size">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <div class="ecl-select__icon">
-      <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-      <button class="ecl-button ecl-button--tertiary ecl-button--icon-only" tabindex="-1" type="button">
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true">Toggle dropdown</span>
-          <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-          <span class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-        </span>
-      </button>
-    </div>
-  </div>
+<h3 class="ecl-u-type-heading-3">Edge output</h3>
+<select
+  class="ecl-select"
+  data-ecl-auto-init="Select"
+  id="select-empty"
+></select>
+<div class="ecl-select__icon">
+  <button
+    class="ecl-button ecl-button--tertiary ecl-button--icon-only"
+    tabindex="-1"
+    type="button"
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true"
+        >Toggle dropdown</span
+      >
+      <span
+        class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+        aria-hidden="true"
+        data-ecl-icon
+      ></span>
+    </span>
+  </button>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Color modes</h3>
+<div class="ecl-form-group ecl-color-mode--blue">
+  <select class="ecl-select" data-ecl-auto-init="Select" id="select-mode-blue">
+    <option value="blue">Blue</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--blue-electric">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-blue-electric"
+  >
+    <option value="blue-electric">Blue electric</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--blue-navy">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-blue-navy"
+  >
+    <option value="blue-navy">Blue navy</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--blue-ocean">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-blue-ocean"
+  >
+    <option value="blue-ocean">Blue ocean</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--green">
+  <select class="ecl-select" data-ecl-auto-init="Select" id="select-mode-green">
+    <option value="green">Green</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--green-dark">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-green-dark"
+  >
+    <option value="green-dark">Green dark</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--green-lemon">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-green-lemon"
+  >
+    <option value="green-lemon">Green lemon</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--green-pine">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-green-pine"
+  >
+    <option value="green-pine">Green pine</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--orange">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-orange"
+  >
+    <option value="orange">Orange</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--purple">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-purple"
+  >
+    <option value="purple">Purple</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--purple-violet">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-purple-violet"
+  >
+    <option value="purple-violet">Purple violet</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--red-crayola">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-red-crayola"
+  >
+    <option value="red-crayola">Red crayola</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--red-tomato">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-red-tomato"
+  >
+    <option value="red-tomato">Red tomato</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--warm-grey">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-warm-grey"
+  >
+    <option value="warm-grey">Warm grey</option>
+  </select>
+</div>
+<div class="ecl-form-group ecl-color-mode--yellow-gold">
+  <select
+    class="ecl-select"
+    data-ecl-auto-init="Select"
+    id="select-mode-yellow-gold"
+  >
+    <option value="yellow-gold">Yellow gold</option>
+  </select>
 </div>
