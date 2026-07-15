@@ -1,105 +1,343 @@
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Pagination provides navigation for large sets of content split across multiple pages. It includes previous/next controls, page numbers, and truncation for long page ranges.</p>
-
-<h3 class="ecl-u-type-heading-3">Default Pagination</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Standard pagination with truncation, showing a range of pages with ellipsis for skipped pages.</p>
-<div class="ecl-u-mb-l">
+<!-- Default long pagination -->
 <nav class="ecl-pagination" aria-label="Pagination">
   <ul class="ecl-pagination__list">
     <li class="ecl-pagination__item ecl-pagination__item--previous">
-      <!-- Sub component: link with icon. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only" aria-label="Go to previous page">
-        <!-- Sub component: icon. Use the <code>icon</code> component template for full markup guidance. -->
-        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-link__icon ecl-icon--corner-arrow"></span>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only"
+        aria-label="Go to previous page"
+      >
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-link__icon ecl-icon--corner-arrow"
+        ></span>
         <span class="ecl-link__label">Previous</span>
       </a>
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 1">1</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 1"
+        >1</a
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--truncation">
-      <span class="ecl-pagination__text ecl-pagination__text--summary">...</span>
+      <span class="ecl-pagination__text ecl-pagination__text--summary"
+        >...</span
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 24">24</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 24"
+        >24</a
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 25">25</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 25"
+        >25</a
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--current">
-      <span class="ecl-pagination__text ecl-pagination__text--summary" aria-current="true">26</span>
-      <span class="ecl-pagination__text ecl-pagination__text--full" aria-current="true">Page 26 of 40</span>
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >26</span
+      >
+      <span
+        class="ecl-pagination__text ecl-pagination__text--full"
+        aria-current="true"
+        >Page 26 of 40</span
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 27">27</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 27"
+        >27</a
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 28">28</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 28"
+        >28</a
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--truncation">
-      <span class="ecl-pagination__text ecl-pagination__text--summary">...</span>
+      <span class="ecl-pagination__text ecl-pagination__text--summary"
+        >...</span
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 40">40</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        aria-label="Go to page 40"
+        >40</a
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--next">
-      <!-- Sub component: link with icon. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only" aria-label="Go to next page">
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only"
+        aria-label="Go to next page"
+      >
         <span class="ecl-link__label">Next</span>
-        <!-- Sub component: icon. Use the <code>icon</code> component template for full markup guidance. -->
-        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+        ></span>
       </a>
     </li>
   </ul>
 </nav>
-</div>
 
-<h3 class="ecl-u-type-heading-3">Simple Pagination</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Pagination without truncation for shorter page ranges.</p>
-<div class="ecl-u-mb-l">
-<nav class="ecl-pagination" aria-label="Pagination">
+<!-- Root extension hooks and short pagination -->
+<nav
+  class="ecl-pagination custom-class custom-class--test"
+  data-test="data-test-value"
+  data-pagination
+  aria-label="Pagination"
+>
   <ul class="ecl-pagination__list">
     <li class="ecl-pagination__item ecl-pagination__item--previous">
-      <!-- Sub component: link with icon. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only" aria-label="Go to previous page">
-        <!-- Sub component: icon. Use the <code>icon</code> component template for full markup guidance. -->
-        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-link__icon ecl-icon--corner-arrow"></span>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only"
+        aria-label="Go to previous page"
+      >
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-link__icon ecl-icon--corner-arrow"
+        ></span>
         <span class="ecl-link__label">Previous</span>
       </a>
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 1">1</a>
-    </li>
-    <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 2">2</a>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-pagination__link"
+        >1</a
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--current">
-      <span class="ecl-pagination__text ecl-pagination__text--summary" aria-current="true">3</span>
-      <span class="ecl-pagination__text ecl-pagination__text--full" aria-current="true">Page 3 of 5</span>
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >2</span
+      >
     </li>
     <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 4">4</a>
-    </li>
-    <li class="ecl-pagination__item">
-      <!-- Sub component: link. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-pagination__link" aria-label="Go to page 5">5</a>
+      <span class="ecl-pagination__text ecl-pagination__text--summary"
+        >Last</span
+      >
+      <span class="ecl-pagination__text ecl-pagination__text--full"
+        >Last page</span
+      >
     </li>
     <li class="ecl-pagination__item ecl-pagination__item--next">
-      <!-- Sub component: link with icon. Use the <code>link</code> component template for full markup guidance. -->
-      <a href="/example" class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only" aria-label="Go to next page">
+      <a
+        href="/example"
+        class="ecl-link ecl-link--standalone ecl-link--icon ecl-pagination__link ecl-link--icon-only"
+        aria-label="Go to next page"
+      >
         <span class="ecl-link__label">Next</span>
-        <!-- Sub component: icon. Use the <code>icon</code> component template for full markup guidance. -->
-        <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"></span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+        ></span>
       </a>
     </li>
   </ul>
 </nav>
-</div>
+
+<!-- Empty items -->
+<nav class="ecl-pagination" aria-label="Pagination">
+  <ul class="ecl-pagination__list"></ul>
+</nav>
+
+<!-- Empty input edge output -->
+<nav class="ecl-pagination" aria-label="">
+  <ul class="ecl-pagination__list"></ul>
+</nav>
+
+<!-- EC color modes -->
+<nav class="ecl-pagination ecl-color-mode--blue" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav
+  class="ecl-pagination ecl-color-mode--blue-electric"
+  aria-label="Pagination"
+>
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--blue-navy" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--blue-ocean" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--green" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--green-dark" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--green-lemon" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--green-pine" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--orange" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--purple" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav
+  class="ecl-pagination ecl-color-mode--purple-violet"
+  aria-label="Pagination"
+>
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--red-crayola" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--red-tomato" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--warm-grey" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
+<nav class="ecl-pagination ecl-color-mode--yellow-gold" aria-label="Pagination">
+  <ul class="ecl-pagination__list">
+    <li class="ecl-pagination__item ecl-pagination__item--current">
+      <span
+        class="ecl-pagination__text ecl-pagination__text--summary"
+        aria-current="true"
+        >1</span
+      >
+    </li>
+  </ul>
+</nav>
