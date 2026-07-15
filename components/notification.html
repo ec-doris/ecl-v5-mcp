@@ -1,131 +1,442 @@
-<div class="ecl-notification ecl-notification--info ecl-u-mb-l" data-ecl-notification role="alert" data-ecl-auto-init="Notification">
-    <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-    <span class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline" aria-hidden="false" role="img" title="Information"></span>
-    <div class="ecl-notification__content">
-        <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only" type="button" data-ecl-notification-close>
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" aria-hidden="true" data-ecl-icon></span>
-            </span>
-        </button>
-        <div class="ecl-notification__title">Information notification</div>
-        <div class="ecl-notification__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus tincidunt eu. Duis scelerisque diam eu tempus fringilla.</div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Lorem ipsum</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Nullam accumsan semper lorem</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
+<!-- Info notification: full content, close button, multiple links -->
+<div
+  class="ecl-notification ecl-notification--info"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only"
+      type="button"
+      data-ecl-notification-close
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Close</span>
+        <span
+          class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+    <div class="ecl-notification__title">Information notification</div>
+    <div class="ecl-notification__description">
+      Your application has been saved as a draft. Review the highlighted fields
+      before submitting it.
     </div>
+    <div class="ecl-notification__link">
+      <a
+        class="ecl-link ecl-link--icon ecl-notification__link-item"
+        href="/example"
+      >
+        <span class="ecl-link__label">Review draft</span>
+        <span
+          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+          aria-hidden="false"
+          role="img"
+          title="External link"
+        ></span>
+      </a>
+    </div>
+    <div class="ecl-notification__link">
+      <a
+        class="ecl-link ecl-link--icon ecl-notification__link-item"
+        href="/example"
+      >
+        <span class="ecl-link__label">Submission guidance</span>
+        <span
+          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+          aria-hidden="false"
+          role="img"
+          title="External link"
+        ></span>
+      </a>
+    </div>
+  </div>
 </div>
 
-<div class="ecl-notification ecl-notification--success ecl-u-mb-l" data-ecl-notification role="alert" data-ecl-auto-init="Notification">
-    <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-    <span class="wt-icon--success-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--success-outline" aria-hidden="false" role="img" title="Success"></span>
-    <div class="ecl-notification__content">
-        <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only" type="button" data-ecl-notification-close>
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" aria-hidden="true" data-ecl-icon></span>
-            </span>
-        </button>
-        <div class="ecl-notification__title">Success notification</div>
-        <div class="ecl-notification__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus tincidunt eu. Duis scelerisque diam eu tempus fringilla.</div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Lorem ipsum</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Nullam accumsan semper lorem</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
+<!-- Success notification: title omitted, no close button -->
+<div
+  class="ecl-notification ecl-notification--success"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--success-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--success-outline"
+    aria-hidden="false"
+    role="img"
+    title="Success"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Your changes were saved successfully.
     </div>
+    <div class="ecl-notification__link">
+      <a
+        class="ecl-link ecl-link--icon ecl-notification__link-item"
+        href="/example"
+      >
+        <span class="ecl-link__label">View record</span>
+        <span
+          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+          aria-hidden="false"
+          role="img"
+          title="External link"
+        ></span>
+      </a>
+    </div>
+  </div>
 </div>
 
-<div class="ecl-notification ecl-notification--warning ecl-u-mb-l" data-ecl-notification role="alert" data-ecl-auto-init="Notification">
-    <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-    <span class="wt-icon--warning-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--warning-outline" aria-hidden="false" role="img" title="Warning"></span>
-    <div class="ecl-notification__content">
-        <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only" type="button" data-ecl-notification-close>
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" aria-hidden="true" data-ecl-icon></span>
-            </span>
-        </button>
-        <div class="ecl-notification__title">Warning notification</div>
-        <div class="ecl-notification__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus tincidunt eu. Duis scelerisque diam eu tempus fringilla.</div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Lorem ipsum</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Nullam accumsan semper lorem</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
-    </div>
+<!-- Warning notification: description omitted, no links -->
+<div
+  class="ecl-notification ecl-notification--warning"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--warning-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--warning-outline"
+    aria-hidden="false"
+    role="img"
+    title="Warning"
+  ></span>
+  <div class="ecl-notification__content">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only"
+      type="button"
+      data-ecl-notification-close
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Close</span>
+        <span
+          class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+    <div class="ecl-notification__title">Maintenance starts at 18:00</div>
+  </div>
 </div>
 
-<div class="ecl-notification ecl-notification--error" data-ecl-notification role="alert" data-ecl-auto-init="Notification">
-    <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-    <span class="wt-icon--error-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--error-outline" aria-hidden="false" role="img" title="Error"></span>
-    <div class="ecl-notification__content">
-        <!-- Sub component: button. Use the button component template; see <code>button</code> sub component for full markup guidance. -->
-        <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only" type="button" data-ecl-notification-close>
-            <span class="ecl-button__container">
-                <span class="ecl-button__label" data-ecl-label="true">Close</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close" aria-hidden="true" data-ecl-icon></span>
-            </span>
-        </button>
-        <div class="ecl-notification__title">Error notification</div>
-        <div class="ecl-notification__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus tincidunt eu. Duis scelerisque diam eu tempus fringilla.</div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Lorem ipsum</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
-        <div class="ecl-notification__link">
-            <!-- Sub component: link. Use the link component template; see <code>link</code> sub component for full markup guidance. -->
-            <a class="ecl-link ecl-link--icon ecl-notification__link-item" href="/example">
-                <span class="ecl-link__label">Nullam accumsan semper lorem</span>
-                <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-                <span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external" aria-hidden="false" role="img" title="External link"></span>
-            </a>
-        </div>
+<!-- Error notification: custom icon, no screen-reader icon title, extra class and attributes -->
+<div
+  class="ecl-notification ecl-notification--error custom-notification"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+  data-test="notification-error"
+  data-flag
+>
+  <span
+    class="wt-icon--error ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--error"
+    aria-hidden="true"
+  ></span>
+  <div class="ecl-notification__content">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-notification__close ecl-button--icon-only"
+      type="button"
+      data-ecl-notification-close
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Dismiss</span>
+        <span
+          class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+    <div class="ecl-notification__title">Upload failed</div>
+    <div class="ecl-notification__description">
+      The file could not be uploaded. Check the file size and try again.
     </div>
+  </div>
+</div>
+
+<!-- Empty variant and empty content edge-case output -->
+<div
+  class="ecl-notification"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="ecl-icon ecl-icon--l ecl-notification__icon"
+    aria-hidden="true"
+  ></span>
+  <div class="ecl-notification__content"></div>
+</div>
+
+<!-- EC color modes passed through as extra root classes -->
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--blue"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">Blue mode notification.</div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--blue-electric"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Blue electric mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--blue-navy"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Blue navy mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--blue-ocean"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Blue ocean mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--green"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">Green mode notification.</div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--green-dark"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Green dark mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--green-lemon"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Green lemon mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--green-pine"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Green pine mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--orange"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">Orange mode notification.</div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--purple"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">Purple mode notification.</div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--purple-violet"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Purple violet mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--red-crayola"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Red crayola mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--red-tomato"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Red tomato mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--warm-grey"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Warm grey mode notification.
+    </div>
+  </div>
+</div>
+<div
+  class="ecl-notification ecl-notification--info ecl-color-mode--yellow-gold"
+  data-ecl-notification
+  role="alert"
+  data-ecl-auto-init="Notification"
+>
+  <span
+    class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
+    aria-hidden="false"
+    role="img"
+    title="Information"
+  ></span>
+  <div class="ecl-notification__content">
+    <div class="ecl-notification__description">
+      Yellow gold mode notification.
+    </div>
+  </div>
 </div>
