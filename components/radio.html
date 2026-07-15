@@ -1,125 +1,386 @@
-<h3 class="ecl-u-type-heading-3">Radio group with form-group wrapper</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true">
-    <legend class="ecl-form-label" id="radio-default-label">Select your country<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div></legend>
-    <div class="ecl-help-block" id="radio-default-helper" aria-hidden="true">Optional help text</div>
+<h3 class="ecl-u-type-heading-3">Default radio group</h3>
+<div class="ecl-radio">
+  <input
+    id="radio-default-1"
+    name="radio-group-1"
+    class="ecl-radio__input"
+    type="radio"
+    value="lu"
+    checked
+    required
+  />
+  <label class="ecl-radio__label" for="radio-default-1">
+    <span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span
+    ></span>
+    <span class="ecl-radio__text">Luxembourg</span>
+  </label>
+</div>
+<div class="ecl-radio">
+  <input
+    id="radio-default-2"
+    name="radio-group-1"
+    class="ecl-radio__input"
+    type="radio"
+    value="be"
+    required
+  />
+  <label class="ecl-radio__label" for="radio-default-2">
+    <span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span
+    ></span>
+    <span class="ecl-radio__text">Belgium</span>
+  </label>
+</div>
+<div class="ecl-radio ecl-radio--disabled">
+  <input
+    id="radio-default-3"
+    name="radio-group-1"
+    class="ecl-radio__input"
+    type="radio"
+    value="fr"
+    disabled
+    required
+  />
+  <label
+    class="ecl-radio__label ecl-radio__label--disabled"
+    for="radio-default-3"
+  >
+    <span class="ecl-radio__box ecl-radio__box--disabled">
+      <span class="ecl-radio__box-inner"></span>
+    </span>
+    <span class="ecl-radio__text">France (disabled)</span>
+  </label>
+</div>
+<div class="ecl-radio">
+  <input
+    id="radio-default-4"
+    name="radio-group-1"
+    class="ecl-radio__input"
+    type="radio"
+    value="lorem"
+    required
+  />
+  <label class="ecl-radio__label" for="radio-default-4">
+    <span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span
+    ></span>
+    <span class="ecl-radio__text">
+      Lorem ipsum dolor sit amet,
+      <a href="/example">consectetur adipiscing elit</a>. Nullam suscipit eros
+      gravida arcu aliquet, sed finibus nisl egestas. Cras sed purus nec turpis
+      eleifend dignissim a in massa.
+    </span>
+  </label>
+</div>
 
-    <div class="ecl-radio">
-      <input id="radio-default-1" name="radio-group-1" class="ecl-radio__input" type="radio" value="lu" checked required>
-      <label class="ecl-radio__label" for="radio-default-1"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Luxembourg</span></label>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-default-2" name="radio-group-1" class="ecl-radio__input" type="radio" value="be" required>
-      <label class="ecl-radio__label" for="radio-default-2"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Belgium</span></label>
-    </div>
-
-    <div class="ecl-radio ecl-radio--disabled">
-      <input id="radio-default-3" name="radio-group-1" class="ecl-radio__input" type="radio" value="fr" required disabled>
-      <label class="ecl-radio__label ecl-radio__label--disabled" for="radio-default-3"><span class="ecl-radio__box ecl-radio__box--disabled"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">France (disabled)</span></label>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-default-4" name="radio-group-1" class="ecl-radio__input" type="radio" value="lorem" required>
-      <label class="ecl-radio__label" for="radio-default-4"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Lorem ipsum dolor sit amet, <!-- Sub component: link; see the <code>link</code> component for full markup guidance. --><a class="ecl-link" href="/example">consectetur adipiscing elit</a>. Nullam suscipit eros gravida arcu aliquet, sed finibus nisl egestas. Cras sed purus nec turpis eleifend dignissim a in massa.</span></label>
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Invalid radio group with helper text</h3>
+<div
+  class="ecl-radio ecl-radio--invalid custom-radio custom-radio--featured"
+  data-test="radio-value"
+  data-flag
+>
+  <input
+    id="radio-invalid-1"
+    name="radio-group-2"
+    class="ecl-radio__input"
+    type="radio"
+    value="email"
+  />
+  <label class="ecl-radio__label" for="radio-invalid-1">
+    <span class="ecl-radio__box ecl-radio__box--invalid">
+      <span class="ecl-radio__box-inner"></span>
+    </span>
+    <span class="ecl-radio__text">Email</span>
+  </label>
+  <div class="ecl-radio__help" id="radio-invalid-1-helper">
+    Use the address linked to your account.
+  </div>
+</div>
+<div class="ecl-radio ecl-radio--disabled ecl-radio--invalid">
+  <input
+    id="radio-invalid-2"
+    name="radio-group-2"
+    class="ecl-radio__input"
+    type="radio"
+    value="phone"
+    disabled
+  />
+  <label
+    class="ecl-radio__label ecl-radio__label--disabled"
+    for="radio-invalid-2"
+  >
+    <span
+      class="ecl-radio__box ecl-radio__box--disabled ecl-radio__box--invalid"
+    >
+      <span class="ecl-radio__box-inner"></span>
+    </span>
+    <span class="ecl-radio__text">Phone (disabled)</span>
+  </label>
+  <div
+    class="ecl-radio__help ecl-radio__help--disabled"
+    id="radio-invalid-2-helper"
+  >
+    This option is not available for your profile.
+  </div>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Binary radio group</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true">
-    <legend class="ecl-form-label" id="radio-binary-label">Do you need help?<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div></legend>
-    <div class="ecl-help-block" id="radio-binary-helper" aria-hidden="true">Optional help text</div>
-
-    <div class="ecl-radio ecl-radio--binary">
-      <input id="radio-binary-1" name="radio-group-2" class="ecl-radio__input" type="radio" value="yes" checked required>
-      <label class="ecl-radio__label" for="radio-binary-1"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Yes</span></label>
-    </div>
-
-    <div class="ecl-radio ecl-radio--binary">
-      <input id="radio-binary-2" name="radio-group-2" class="ecl-radio__input" type="radio" value="no" required>
-      <label class="ecl-radio__label" for="radio-binary-2"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">No</span></label>
-    </div>
-  </fieldset>
+<div class="ecl-radio ecl-radio--binary">
+  <input
+    id="radio-binary-1"
+    name="radio-group-3"
+    class="ecl-radio__input"
+    type="radio"
+    value="yes"
+    checked
+    required
+  />
+  <label class="ecl-radio__label" for="radio-binary-1">
+    <span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span
+    ></span>
+    <span class="ecl-radio__text">Yes</span>
+  </label>
+</div>
+<div class="ecl-radio ecl-radio--binary ecl-radio--invalid">
+  <input
+    id="radio-binary-2"
+    name="radio-group-3"
+    class="ecl-radio__input"
+    type="radio"
+    value="no"
+    required
+  />
+  <label class="ecl-radio__label" for="radio-binary-2">
+    <span class="ecl-radio__box ecl-radio__box--invalid">
+      <span class="ecl-radio__box-inner"></span>
+    </span>
+    <span class="ecl-radio__text">No</span>
+  </label>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Invalid radio group with error message</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true" aria-invalid="true">
-    <legend class="ecl-form-label ecl-form-label--invalid" id="radio-invalid-label">Choose your preferred option<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">You must select an option.</div><div class="ecl-feedback-message--hidden">Please select an option.</div></legend>
-    <div class="ecl-help-block" id="radio-invalid-helper" aria-hidden="true">You must select an option.</div>
-
-    <div class="ecl-radio ecl-radio--invalid">
-      <input id="radio-invalid-1" name="radio-group-3" class="ecl-radio__input" type="radio" value="option1" required>
-      <label class="ecl-radio__label" for="radio-invalid-1"><span class="ecl-radio__box ecl-radio__box--invalid"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Option 1</span></label>
-    </div>
-
-    <div class="ecl-radio ecl-radio--invalid">
-      <input id="radio-invalid-2" name="radio-group-3" class="ecl-radio__input" type="radio" value="option2" required>
-      <label class="ecl-radio__label" for="radio-invalid-2"><span class="ecl-radio__box ecl-radio__box--invalid"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Option 2</span></label>
-    </div>
-
-    <div class="ecl-radio ecl-radio--invalid">
-      <input id="radio-invalid-3" name="radio-group-3" class="ecl-radio__input" type="radio" value="option3" required>
-      <label class="ecl-radio__label" for="radio-invalid-3"><span class="ecl-radio__box ecl-radio__box--invalid"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Option 3</span></label>
-    </div>
-
-    <div class="ecl-feedback-message" id="radio-invalid-invalid" aria-hidden="true">
-      <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon ecl-icon--error-outline" aria-hidden="false" title="Error"></span>Please select an option.
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Minimal radio button</h3>
+<div class="ecl-radio">
+  <input class="ecl-radio__input" type="radio" value="" />
+  <label class="ecl-radio__label">
+    <span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span
+    ></span>
+  </label>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Radio group with optional label</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup">
-    <legend class="ecl-form-label" id="radio-optional-label">What is your preference?<span class="ecl-form-label__optional">(optional)</span></legend>
+<h3 class="ecl-u-type-heading-3">Empty radio group output</h3>
+<!-- No markup is emitted when radio-group receives no items. -->
 
-    <div class="ecl-radio">
-      <input id="radio-optional-1" name="radio-group-4" class="ecl-radio__input" type="radio" value="pref1">
-      <label class="ecl-radio__label" for="radio-optional-1"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Preference 1</span></label>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-optional-2" name="radio-group-4" class="ecl-radio__input" type="radio" value="pref2">
-      <label class="ecl-radio__label" for="radio-optional-2"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Preference 2</span></label>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-optional-3" name="radio-group-4" class="ecl-radio__input" type="radio" value="pref3">
-      <label class="ecl-radio__label" for="radio-optional-3"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Preference 3</span></label>
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Radio color modes</h3>
+<div class="ecl-radio ecl-color-mode--blue">
+  <input
+    id="radio-mode-blue"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="blue"
+  />
+  <label class="ecl-radio__label" for="radio-mode-blue"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Blue</span></label
+  >
 </div>
-
-<h3 class="ecl-u-type-heading-3">Radio with helper text</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup">
-    <legend class="ecl-form-label" id="radio-helper-label">Select a payment method<span class="ecl-form-label__optional">(optional)</span><div class="ecl-help-block--hidden">Choose how you would like to pay.</div></legend>
-    <div class="ecl-help-block" id="radio-helper-helper" aria-hidden="true">Choose how you would like to pay.</div>
-
-    <div class="ecl-radio">
-      <input id="radio-helper-1" name="radio-group-5" class="ecl-radio__input" type="radio" value="credit-card">
-      <label class="ecl-radio__label" for="radio-helper-1"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Credit card</span></label>
-      <div class="ecl-radio__help" id="radio-helper-1-helper">Visa, Mastercard, and American Express accepted.</div>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-helper-2" name="radio-group-5" class="ecl-radio__input" type="radio" value="bank-transfer">
-      <label class="ecl-radio__label" for="radio-helper-2"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">Bank transfer</span></label>
-      <div class="ecl-radio__help" id="radio-helper-2-helper">Transfer payment directly from your bank account.</div>
-    </div>
-
-    <div class="ecl-radio">
-      <input id="radio-helper-3" name="radio-group-5" class="ecl-radio__input" type="radio" value="paypal">
-      <label class="ecl-radio__label" for="radio-helper-3"><span class="ecl-radio__box"><span class="ecl-radio__box-inner"></span></span><span class="ecl-radio__text">PayPal</span></label>
-      <div class="ecl-radio__help" id="radio-helper-3-helper">Fast and secure payment through PayPal.</div>
-    </div>
-  </fieldset>
+<div class="ecl-radio ecl-color-mode--blue-electric">
+  <input
+    id="radio-mode-blue-electric"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="blue-electric"
+  />
+  <label class="ecl-radio__label" for="radio-mode-blue-electric"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Blue electric</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--blue-navy">
+  <input
+    id="radio-mode-blue-navy"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="blue-navy"
+  />
+  <label class="ecl-radio__label" for="radio-mode-blue-navy"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Blue navy</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--blue-ocean">
+  <input
+    id="radio-mode-blue-ocean"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="blue-ocean"
+  />
+  <label class="ecl-radio__label" for="radio-mode-blue-ocean"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Blue ocean</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--green">
+  <input
+    id="radio-mode-green"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="green"
+  />
+  <label class="ecl-radio__label" for="radio-mode-green"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Green</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--green-dark">
+  <input
+    id="radio-mode-green-dark"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="green-dark"
+  />
+  <label class="ecl-radio__label" for="radio-mode-green-dark"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Green dark</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--green-lemon">
+  <input
+    id="radio-mode-green-lemon"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="green-lemon"
+  />
+  <label class="ecl-radio__label" for="radio-mode-green-lemon"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Green lemon</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--green-pine">
+  <input
+    id="radio-mode-green-pine"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="green-pine"
+  />
+  <label class="ecl-radio__label" for="radio-mode-green-pine"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Green pine</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--orange">
+  <input
+    id="radio-mode-orange"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="orange"
+  />
+  <label class="ecl-radio__label" for="radio-mode-orange"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Orange</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--purple">
+  <input
+    id="radio-mode-purple"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="purple"
+  />
+  <label class="ecl-radio__label" for="radio-mode-purple"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Purple</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--purple-violet">
+  <input
+    id="radio-mode-purple-violet"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="purple-violet"
+  />
+  <label class="ecl-radio__label" for="radio-mode-purple-violet"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Purple violet</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--red-crayola">
+  <input
+    id="radio-mode-red-crayola"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="red-crayola"
+  />
+  <label class="ecl-radio__label" for="radio-mode-red-crayola"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Red crayola</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--red-tomato">
+  <input
+    id="radio-mode-red-tomato"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="red-tomato"
+  />
+  <label class="ecl-radio__label" for="radio-mode-red-tomato"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Red tomato</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--warm-grey">
+  <input
+    id="radio-mode-warm-grey"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="warm-grey"
+  />
+  <label class="ecl-radio__label" for="radio-mode-warm-grey"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Warm grey</span></label
+  >
+</div>
+<div class="ecl-radio ecl-color-mode--yellow-gold">
+  <input
+    id="radio-mode-yellow-gold"
+    name="radio-color-modes"
+    class="ecl-radio__input"
+    type="radio"
+    value="yellow-gold"
+  />
+  <label class="ecl-radio__label" for="radio-mode-yellow-gold"
+    ><span class="ecl-radio__box"
+      ><span class="ecl-radio__box-inner"></span></span
+    ><span class="ecl-radio__text">Yellow gold</span></label
+  >
 </div>
