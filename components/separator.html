@@ -1,42 +1,61 @@
-<h3 class="ecl-u-type-heading-3">Basic separator</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The separator is a horizontal rule element used to divide content sections.</p>
+<!-- Default separator -->
+<hr class="ecl-separator" />
 
+<!-- Separator with extra classes -->
+<hr class="ecl-separator custom-class custom-class--test" />
+
+<!-- Separator with valued and valueless extra attributes -->
+<hr class="ecl-separator" data-test="data-test-value" data-separator-marker />
+
+<!-- Separator between unordered and ordered lists -->
 <ul class="ecl-unordered-list">
-  <li class="ecl-unordered-list__item">Unordered list item 1</li>
-  <li class="ecl-unordered-list__item">Unordered list item 2
+  <li class="ecl-unordered-list__item">Unordered list</li>
+  <li class="ecl-unordered-list__item">
+    Unordered list
     <ul class="ecl-unordered-list">
-      <li class="ecl-unordered-list__item">Nested unordered list item</li>
-      <li class="ecl-unordered-list__item">Nested unordered list item</li>
+      <li class="ecl-unordered-list__item">Nested unordered list</li>
+      <li class="ecl-unordered-list__item">Nested unordered list</li>
     </ul>
   </li>
 </ul>
 
-<hr class="ecl-separator">
+<hr class="ecl-separator" />
 
 <ol class="ecl-ordered-list">
-  <li class="ecl-ordered-list__item">Ordered list item 1</li>
-  <li class="ecl-ordered-list__item">Ordered list item 2
+  <li class="ecl-ordered-list__item">Ordered list</li>
+  <li class="ecl-ordered-list__item">
+    Ordered list
     <ol class="ecl-ordered-list">
-      <li class="ecl-ordered-list__item">Nested ordered list item</li>
-      <li class="ecl-ordered-list__item">Nested ordered list item</li>
+      <li class="ecl-ordered-list__item">Nested ordered list</li>
+      <li class="ecl-ordered-list__item">Nested ordered list</li>
     </ol>
   </li>
 </ol>
 
-<hr class="ecl-separator">
+<hr class="ecl-separator" />
 
 <dl class="ecl-description-list">
-  <dt class="ecl-description-list__term">Description term 1</dt>
-  <dd class="ecl-description-list__definition">Description definition 1</dd>
-  <dt class="ecl-description-list__term">Description term 2</dt>
-  <dd class="ecl-description-list__definition">Description definition 2</dd>
+  <dt class="ecl-description-list__term">Description term</dt>
+  <dd class="ecl-description-list__definition">Description definition</dd>
+  <dt class="ecl-description-list__term">Description term</dt>
+  <dd class="ecl-description-list__definition">Description definition</dd>
 </dl>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Separator with spacing utilities</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Separators can be combined with ECL utility classes for custom spacing.</p>
+<hr class="ecl-separator" />
 
-<p class="ecl-u-type-paragraph">Content above separator</p>
-
-<hr class="ecl-separator ecl-u-my-l">
-
-<p class="ecl-u-type-paragraph">Content below separator with large vertical margins</p>
+<!-- Separator color modes -->
+<hr class="ecl-separator ecl-color-mode--blue" />
+<hr class="ecl-separator ecl-color-mode--blue-electric" />
+<hr class="ecl-separator ecl-color-mode--blue-navy" />
+<hr class="ecl-separator ecl-color-mode--blue-ocean" />
+<hr class="ecl-separator ecl-color-mode--green" />
+<hr class="ecl-separator ecl-color-mode--green-dark" />
+<hr class="ecl-separator ecl-color-mode--green-lemon" />
+<hr class="ecl-separator ecl-color-mode--green-pine" />
+<hr class="ecl-separator ecl-color-mode--orange" />
+<hr class="ecl-separator ecl-color-mode--purple" />
+<hr class="ecl-separator ecl-color-mode--purple-violet" />
+<hr class="ecl-separator ecl-color-mode--red-crayola" />
+<hr class="ecl-separator ecl-color-mode--red-tomato" />
+<hr class="ecl-separator ecl-color-mode--warm-grey" />
+<hr class="ecl-separator ecl-color-mode--yellow-gold" />
