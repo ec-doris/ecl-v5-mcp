@@ -1,212 +1,473 @@
-<h3 class="ecl-u-type-heading-3">Rating field with form-group wrapper</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true">
-    <legend class="ecl-form-label" id="rating-field-label">Please Rate<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div></legend>
-    <div class="ecl-help-block" id="rating-field-helper" aria-hidden="true">Optional help text</div>
+<h3 class="ecl-u-type-heading-3">Default required rating field</h3>
+<div class="ecl-rating-field">
+  <input
+    id="rating-field-default-5"
+    name="rating-group-default"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="5"
+    required
+  />
+  <label class="ecl-rating-field__label" for="rating-field-default-5">
+    <span class="ecl-rating-field__sr-label">5 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
+  <input
+    id="rating-field-default-4"
+    name="rating-group-default"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="4"
+    required
+  />
+  <label class="ecl-rating-field__label" for="rating-field-default-4">
+    <span class="ecl-rating-field__sr-label">4 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
+  <input
+    id="rating-field-default-3"
+    name="rating-group-default"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="3"
+    required
+  />
+  <label class="ecl-rating-field__label" for="rating-field-default-3">
+    <span class="ecl-rating-field__sr-label">3 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
+  <input
+    id="rating-field-default-2"
+    name="rating-group-default"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="2"
+    required
+  />
+  <label class="ecl-rating-field__label" for="rating-field-default-2">
+    <span class="ecl-rating-field__sr-label">2 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
+  <input
+    id="rating-field-default-1"
+    name="rating-group-default"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+    required
+  />
+  <label class="ecl-rating-field__label" for="rating-field-default-1">
+    <span class="ecl-rating-field__sr-label">1 star</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
+</div>
 
-    <div class="ecl-rating-field">
-      <input id="rating-field-5" name="rating-group" class="ecl-rating-field__input" type="radio" value="5" required>
-      <label class="ecl-rating-field__label" for="rating-field-5">
-        <span class="ecl-rating-field__sr-label">5 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-4" name="rating-group" class="ecl-rating-field__input" type="radio" value="4" required>
-      <label class="ecl-rating-field__label" for="rating-field-4">
-        <span class="ecl-rating-field__sr-label">4 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-3" name="rating-group" class="ecl-rating-field__input" type="radio" value="3" required>
-      <label class="ecl-rating-field__label" for="rating-field-3">
-        <span class="ecl-rating-field__sr-label">3 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-2" name="rating-group" class="ecl-rating-field__input" type="radio" value="2" required>
-      <label class="ecl-rating-field__label" for="rating-field-2">
-        <span class="ecl-rating-field__sr-label">2 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-1" name="rating-group" class="ecl-rating-field__input" type="radio" value="1" required>
-      <label class="ecl-rating-field__label" for="rating-field-1">
-        <span class="ecl-rating-field__sr-label">1 star</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Checked value</h3>
+<div class="ecl-rating-field">
+  <input
+    id="rating-field-checked-3"
+    name="rating-group-checked"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="3"
+    checked
+  />
+  <label class="ecl-rating-field__label" for="rating-field-checked-3">
+    <span class="ecl-rating-field__sr-label">3 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Disabled rating field</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true">
-    <legend class="ecl-form-label ecl-form-label--disabled" id="rating-field-disabled-label">Please Rate<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div></legend>
-    <div class="ecl-help-block ecl-help-block--disabled" id="rating-field-disabled-helper" aria-hidden="true">Optional help text</div>
-
-    <div class="ecl-rating-field ecl-rating-field--disabled">
-      <input id="rating-field-disabled-5" name="rating-group-disabled" class="ecl-rating-field__input" type="radio" value="5" required disabled>
-      <label class="ecl-rating-field__label" for="rating-field-disabled-5">
-        <span class="ecl-rating-field__sr-label">5 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-disabled-4" name="rating-group-disabled" class="ecl-rating-field__input" type="radio" value="4" required disabled>
-      <label class="ecl-rating-field__label" for="rating-field-disabled-4">
-        <span class="ecl-rating-field__sr-label">4 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-disabled-3" name="rating-group-disabled" class="ecl-rating-field__input" type="radio" value="3" required disabled>
-      <label class="ecl-rating-field__label" for="rating-field-disabled-3">
-        <span class="ecl-rating-field__sr-label">3 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-disabled-2" name="rating-group-disabled" class="ecl-rating-field__input" type="radio" value="2" required disabled>
-      <label class="ecl-rating-field__label" for="rating-field-disabled-2">
-        <span class="ecl-rating-field__sr-label">2 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-disabled-1" name="rating-group-disabled" class="ecl-rating-field__input" type="radio" value="1" required disabled>
-      <label class="ecl-rating-field__label" for="rating-field-disabled-1">
-        <span class="ecl-rating-field__sr-label">1 star</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-    </div>
-  </fieldset>
+<div class="ecl-rating-field ecl-rating-field--disabled">
+  <input
+    id="rating-field-disabled-2"
+    name="rating-group-disabled"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="2"
+    disabled
+  />
+  <label class="ecl-rating-field__label" for="rating-field-disabled-2">
+    <span class="ecl-rating-field__sr-label">2 stars</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Invalid rating field with error message</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true" aria-invalid="true">
-    <legend class="ecl-form-label ecl-form-label--invalid" id="rating-field-invalid-label">Please Rate<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Optional help text</div><div class="ecl-feedback-message--hidden">Error text</div></legend>
-    <div class="ecl-help-block" id="rating-field-invalid-helper" aria-hidden="true">Optional help text</div>
-
-    <div class="ecl-rating-field">
-      <input id="rating-field-invalid-5" name="rating-group-invalid" class="ecl-rating-field__input" type="radio" value="5" required>
-      <label class="ecl-rating-field__label" for="rating-field-invalid-5">
-        <span class="ecl-rating-field__sr-label">5 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-invalid-4" name="rating-group-invalid" class="ecl-rating-field__input" type="radio" value="4" required>
-      <label class="ecl-rating-field__label" for="rating-field-invalid-4">
-        <span class="ecl-rating-field__sr-label">4 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-invalid-3" name="rating-group-invalid" class="ecl-rating-field__input" type="radio" value="3" required>
-      <label class="ecl-rating-field__label" for="rating-field-invalid-3">
-        <span class="ecl-rating-field__sr-label">3 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-invalid-2" name="rating-group-invalid" class="ecl-rating-field__input" type="radio" value="2" required>
-      <label class="ecl-rating-field__label" for="rating-field-invalid-2">
-        <span class="ecl-rating-field__sr-label">2 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-invalid-1" name="rating-group-invalid" class="ecl-rating-field__input" type="radio" value="1" required>
-      <label class="ecl-rating-field__label" for="rating-field-invalid-1">
-        <span class="ecl-rating-field__sr-label">1 star</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-    </div>
-
-    <div class="ecl-feedback-message" id="rating-field-invalid-invalid" aria-hidden="true">
-      <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon ecl-icon--error-outline" aria-hidden="false" title="Error"></span>Error text
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Minimal item without label</h3>
+<div class="ecl-rating-field">
+  <input
+    id="rating-field-minimal-1"
+    name=""
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-minimal-1">
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-rating-field__icon-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-rating-field__icon-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Optional rating field</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup">
-    <legend class="ecl-form-label" id="rating-field-optional-label">Rate your experience<span class="ecl-form-label__optional">(optional)</span></legend>
+<h3 class="ecl-u-type-heading-3">Empty items edge output</h3>
+<!-- No rating-field markup is rendered when items is empty or not iterable. -->
 
-    <div class="ecl-rating-field">
-      <input id="rating-field-optional-5" name="rating-group-optional" class="ecl-rating-field__input" type="radio" value="5">
-      <label class="ecl-rating-field__label" for="rating-field-optional-5">
-        <span class="ecl-rating-field__sr-label">5 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-optional-4" name="rating-group-optional" class="ecl-rating-field__input" type="radio" value="4">
-      <label class="ecl-rating-field__label" for="rating-field-optional-4">
-        <span class="ecl-rating-field__sr-label">4 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-optional-3" name="rating-group-optional" class="ecl-rating-field__input" type="radio" value="3">
-      <label class="ecl-rating-field__label" for="rating-field-optional-3">
-        <span class="ecl-rating-field__sr-label">3 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-optional-2" name="rating-group-optional" class="ecl-rating-field__input" type="radio" value="2">
-      <label class="ecl-rating-field__label" for="rating-field-optional-2">
-        <span class="ecl-rating-field__sr-label">2 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-optional-1" name="rating-group-optional" class="ecl-rating-field__input" type="radio" value="1">
-      <label class="ecl-rating-field__label" for="rating-field-optional-1">
-        <span class="ecl-rating-field__sr-label">1 star</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-    </div>
-  </fieldset>
+<h3 class="ecl-u-type-heading-3">Unused component-owned inputs</h3>
+<!-- invalid, extra_classes, and extra_attributes do not alter tagged v5.0.1 rating-field output. -->
+
+<h3 class="ecl-u-type-heading-3">EC color modes</h3>
+<div class="ecl-rating-field ecl-color-mode--blue">
+  <input
+    id="rating-field-mode-blue-1"
+    name="rating-group-mode-blue"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-blue-1">
+    <span class="ecl-rating-field__sr-label">Blue mode</span>
+    <span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span>
+  </label>
 </div>
-
-<h3 class="ecl-u-type-heading-3">Rating field with pre-selected value</h3>
-<div class="ecl-u-mb-l">
-  <!-- Sub component: form-group; see the form-group component for full markup guidance. -->
-  <fieldset class="ecl-form-group" role="radiogroup" aria-required="true">
-    <legend class="ecl-form-label" id="rating-field-checked-label">Rate our service<span class="ecl-form-label__required">(required)</span><div class="ecl-help-block--hidden">Tell us how we did</div></legend>
-    <div class="ecl-help-block" id="rating-field-checked-helper" aria-hidden="true">Tell us how we did</div>
-
-    <div class="ecl-rating-field">
-      <input id="rating-field-checked-5" name="rating-group-checked" class="ecl-rating-field__input" type="radio" value="5" required>
-      <label class="ecl-rating-field__label" for="rating-field-checked-5">
-        <span class="ecl-rating-field__sr-label">5 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-checked-4" name="rating-group-checked" class="ecl-rating-field__input" type="radio" value="4" required>
-      <label class="ecl-rating-field__label" for="rating-field-checked-4">
-        <span class="ecl-rating-field__sr-label">4 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-checked-3" name="rating-group-checked" class="ecl-rating-field__input" type="radio" value="3" required checked>
-      <label class="ecl-rating-field__label" for="rating-field-checked-3">
-        <span class="ecl-rating-field__sr-label">3 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-checked-2" name="rating-group-checked" class="ecl-rating-field__input" type="radio" value="2" required>
-      <label class="ecl-rating-field__label" for="rating-field-checked-2">
-        <span class="ecl-rating-field__sr-label">2 stars</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-      <input id="rating-field-checked-1" name="rating-group-checked" class="ecl-rating-field__input" type="radio" value="1" required>
-      <label class="ecl-rating-field__label" for="rating-field-checked-1">
-        <span class="ecl-rating-field__sr-label">1 star</span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled" aria-hidden="true"></span>
-        <!-- Sub component: icon; see the <code>icon</code> component for full markup guidance. --><span class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline" aria-hidden="true"></span>
-      </label>
-    </div>
-  </fieldset>
+<div class="ecl-rating-field ecl-color-mode--blue-electric">
+  <input
+    id="rating-field-mode-blue-electric-1"
+    name="rating-group-mode-blue-electric"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-blue-electric-1"
+    ><span class="ecl-rating-field__sr-label">Blue electric mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--blue-navy">
+  <input
+    id="rating-field-mode-blue-navy-1"
+    name="rating-group-mode-blue-navy"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-blue-navy-1"
+    ><span class="ecl-rating-field__sr-label">Blue navy mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--blue-ocean">
+  <input
+    id="rating-field-mode-blue-ocean-1"
+    name="rating-group-mode-blue-ocean"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-blue-ocean-1"
+    ><span class="ecl-rating-field__sr-label">Blue ocean mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--green">
+  <input
+    id="rating-field-mode-green-1"
+    name="rating-group-mode-green"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-green-1"
+    ><span class="ecl-rating-field__sr-label">Green mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--green-dark">
+  <input
+    id="rating-field-mode-green-dark-1"
+    name="rating-group-mode-green-dark"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-green-dark-1"
+    ><span class="ecl-rating-field__sr-label">Green dark mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--green-lemon">
+  <input
+    id="rating-field-mode-green-lemon-1"
+    name="rating-group-mode-green-lemon"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-green-lemon-1"
+    ><span class="ecl-rating-field__sr-label">Green lemon mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--green-pine">
+  <input
+    id="rating-field-mode-green-pine-1"
+    name="rating-group-mode-green-pine"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-green-pine-1"
+    ><span class="ecl-rating-field__sr-label">Green pine mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--orange">
+  <input
+    id="rating-field-mode-orange-1"
+    name="rating-group-mode-orange"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-orange-1"
+    ><span class="ecl-rating-field__sr-label">Orange mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--purple">
+  <input
+    id="rating-field-mode-purple-1"
+    name="rating-group-mode-purple"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-purple-1"
+    ><span class="ecl-rating-field__sr-label">Purple mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--purple-violet">
+  <input
+    id="rating-field-mode-purple-violet-1"
+    name="rating-group-mode-purple-violet"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-purple-violet-1"
+    ><span class="ecl-rating-field__sr-label">Purple violet mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--red-crayola">
+  <input
+    id="rating-field-mode-red-crayola-1"
+    name="rating-group-mode-red-crayola"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-red-crayola-1"
+    ><span class="ecl-rating-field__sr-label">Red crayola mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--red-tomato">
+  <input
+    id="rating-field-mode-red-tomato-1"
+    name="rating-group-mode-red-tomato"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-red-tomato-1"
+    ><span class="ecl-rating-field__sr-label">Red tomato mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--warm-grey">
+  <input
+    id="rating-field-mode-warm-grey-1"
+    name="rating-group-mode-warm-grey"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-warm-grey-1"
+    ><span class="ecl-rating-field__sr-label">Warm grey mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
+</div>
+<div class="ecl-rating-field ecl-color-mode--yellow-gold">
+  <input
+    id="rating-field-mode-yellow-gold-1"
+    name="rating-group-mode-yellow-gold"
+    class="ecl-rating-field__input"
+    type="radio"
+    value="1"
+  />
+  <label class="ecl-rating-field__label" for="rating-field-mode-yellow-gold-1"
+    ><span class="ecl-rating-field__sr-label">Yellow gold mode</span
+    ><span
+      class="wt-icon--star-filled ecl-icon ecl-icon--l ecl-rating-field__icon-filled ecl-icon--star-filled"
+      aria-hidden="true"
+    ></span
+    ><span
+      class="wt-icon--star-outline ecl-icon ecl-icon--l ecl-rating-field__icon-outline ecl-icon--star-outline"
+      aria-hidden="true"
+    ></span
+  ></label>
 </div>
