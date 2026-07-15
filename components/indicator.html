@@ -1,75 +1,227 @@
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Indicators highlight counts or status on top of other elements; use the <code>indicator</code> sub component template for the exact structure.</p>
-
 <h3 class="ecl-u-type-heading-3">Indicator with numeric value</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Button, icon, and indicator are all sub components; see <code>button</code>, <code>icon</code>, and <code>indicator</code> for full markup guidance.</p>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
-    <!-- Sub component: button. Use the button component template for full markup guidance. -->
-    <button class="ecl-button ecl-button--primary ecl-button--icon-only ecl-u-mr-m ecl-u-mb-s" type="button">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Notifications</span>
-            <span class="ecl-button__icon-container">
-                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--notification-active ecl-icon ecl-icon--m ecl-button__icon ecl-icon--notification-active" data-ecl-icon></span>
-                <!-- Sub component: indicator. Use the indicator component template for full markup guidance. -->
-                <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
-                    <span class="ecl-indicator__value">5</span>
-                </span>
-            </span>
-        </span>
-    </button>
+<div class="ecl-u-d-inline-flex ecl-u-mb-l" style="position: relative">
+  <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
+    <span class="ecl-indicator__value">22</span>
+  </span>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Indicator with value and screen reader label</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">The label inside the indicator is announced to assistive technologies only.</p>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
-    <!-- Sub component: button. Use the button component template for full markup guidance. -->
-    <button class="ecl-button ecl-button--secondary ecl-button--neutral ecl-button--icon-only ecl-u-mr-m ecl-u-mb-s" type="button">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Messages</span>
-            <span class="ecl-button__icon-container">
-                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--email ecl-icon ecl-icon--m ecl-button__icon ecl-icon--email" data-ecl-icon></span>
-                <!-- Sub component: indicator. Use the indicator component template for full markup guidance. -->
-                <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
-                    <span class="ecl-indicator__value">22</span>
-                    <span class="ecl-indicator__label">new items</span>
-                </span>
-            </span>
-        </span>
-    </button>
+<h3 class="ecl-u-type-heading-3">Indicator with screen reader label</h3>
+<div class="ecl-u-d-inline-flex ecl-u-mb-l" style="position: relative">
+  <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
+    <span class="ecl-indicator__value">5</span>
+    <span class="ecl-indicator__label">new notifications</span>
+  </span>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Indicator without value (dot only)</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Use an empty indicator to show status without a count.</p>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start ecl-u-mb-l">
-    <!-- Sub component: button. Use the button component template for full markup guidance. -->
-    <button class="ecl-button ecl-button--tertiary ecl-button--icon-only ecl-u-mr-m ecl-u-mb-s" type="button">
-        <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true">Alerts</span>
-            <span class="ecl-button__icon-container">
-                <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
-                <span aria-hidden="true" class="wt-icon--warning-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--warning-outline" data-ecl-icon></span>
-                <!-- Sub component: indicator. Use the indicator component template for full markup guidance. -->
-                <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator"></span>
-            </span>
-        </span>
-    </button>
+<h3 class="ecl-u-type-heading-3">Indicator dot</h3>
+<div class="ecl-u-d-inline-flex ecl-u-mb-l" style="position: relative">
+  <span
+    class="ecl-indicator"
+    data-ecl-indicator
+    data-ecl-auto-init="Indicator"
+  ></span>
 </div>
 
-<h3 class="ecl-u-type-heading-3">Indicator on link</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Link, icon, and indicator remain individual sub components; see <code>link</code>, <code>icon</code>, and <code>indicator</code> for full markup guidance.</p>
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-start">
-    <!-- Sub component: link. Use the link component template for full markup guidance. -->
-    <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-u-mr-m ecl-u-mb-s" href="#">
-        <span class="ecl-link__label">Updates</span>
-        <span class="ecl-link__icon-container">
-            <!-- Sub component: icon. Use the icon component template for full markup guidance. -->
-            <span aria-hidden="true" class="wt-icon--rss ecl-icon ecl-icon--m ecl-link__icon ecl-icon--rss"></span>
-            <!-- Sub component: indicator. Use the indicator component template for full markup guidance. -->
-            <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
-                <span class="ecl-indicator__value">3</span>
-                <span class="ecl-indicator__label">new updates</span>
-            </span>
-        </span>
-    </a>
+<h3 class="ecl-u-type-heading-3">Indicator with extension hooks</h3>
+<div class="ecl-u-d-inline-flex ecl-u-mb-l" style="position: relative">
+  <span
+    class="ecl-indicator ecl-indicator--demo"
+    data-ecl-indicator
+    data-ecl-auto-init="Indicator"
+    data-test="indicator-value"
+    disabled
+  >
+    <span class="ecl-indicator__value">9</span>
+  </span>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Indicator with text value</h3>
+<div class="ecl-u-d-inline-flex ecl-u-mb-l" style="position: relative">
+  <span class="ecl-indicator" data-ecl-indicator data-ecl-auto-init="Indicator">
+    <span class="ecl-indicator__value">New</span>
+  </span>
+</div>
+
+<h3 class="ecl-u-type-heading-3">Indicator color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap" style="gap: var(--s-m)">
+  <div
+    class="ecl-color-mode--blue ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">1</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--green-dark ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">2</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--orange ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">3</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--green ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">4</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--purple ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">5</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--blue-navy ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">6</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--blue-electric ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">7</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--blue-ocean ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">8</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--green-lemon ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">9</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--green-pine ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">10</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--warm-grey ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">11</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--red-crayola ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">12</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--yellow-gold ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">13</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--purple-violet ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">14</span>
+    </span>
+  </div>
+  <div
+    class="ecl-color-mode--red-tomato ecl-u-d-inline-flex"
+    style="position: relative"
+  >
+    <span
+      class="ecl-indicator"
+      data-ecl-indicator
+      data-ecl-auto-init="Indicator"
+    >
+      <span class="ecl-indicator__value">15</span>
+    </span>
+  </div>
 </div>
