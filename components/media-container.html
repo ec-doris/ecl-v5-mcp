@@ -1,97 +1,643 @@
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Image media container</h3>
-<div class="ecl-u-mb-2xl">
-    <div class="ecl-media-container">
-        <figure class="ecl-media-container__figure">
-            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
-            <picture class="ecl-picture ecl-media-container__picture">
-                <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="Jean Monnet banner">
-            </picture>
-            <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright</figcaption>
-        </figure>
-    </div>
+<!-- Image with caption and credit -->
+<div
+  class="ecl-media-container custom-class custom-class--test"
+  data-test="data-test-value"
+  data-test-flag
+>
+  <figure class="ecl-media-container__figure">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+        alt="Jean Monnet banner"
+      />
+    </picture>
+    <figcaption class="ecl-media-container__caption">
+      Lorem ipsum dolor sit amet consectetur adipiscing elite tempored
+      incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet
+      consectetur adipiscing
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
+  </figure>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Video media container</h3>
-<div class="ecl-u-mb-2xl">
-    <div class="ecl-media-container">
-        <figure class="ecl-media-container__figure">
-            <div class="ecl-media-container__video-wrapper">
-                <!-- Sub component: video. Use the video component template; see video sub component for full markup guidance. -->
-                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" controls playsinline data-ecl-media-container-video>
-                    <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4">
-                </video>
-            </div>
-            <figcaption class="ecl-media-container__caption">The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities. The Centre welcomes different interest groups to Brussels, or virtually, to help them better understand the role of the European Commission and how it impacts their daily lives. Visitors to the Centre in Brussels can enjoy a digital and multifunctional experience providing access to the latest initiatives.</figcaption>
-        </figure>
-    </div>
+<!-- Image with caption over media and full width figure -->
+<div
+  class="ecl-media-container ecl-media-container--caption-over"
+  data-test="caption-over"
+  data-test-flag
+>
+  <figure class="ecl-media-container__figure ecl-media-container--full-width">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
+        alt="Infographic alt text"
+      />
+    </picture>
+    <figcaption class="ecl-media-container__caption">
+      Caption displayed over an image.
+    </figcaption>
+    <footer class="ecl-media-container__credit">Image credit</footer>
+  </figure>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Embedded video media container</h3>
-<div class="ecl-u-mb-2xl">
-    <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer" data-ecl-media-container-video-title="New digital strategy - Video player">
-        <figure class="ecl-media-container__figure">
-            <div class="ecl-media-container__media">
-                <iframe width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <figcaption class="ecl-media-container__caption">The European Commission has put forward ambitious yet realistic proposals for a modern EU budget. It is time for an EU budget that reflects rapid developments in innovation, the economy, the environment and geopolitics, amongst others.</figcaption>
-        </figure>
+<!-- Image with expandable content -->
+<div class="ecl-media-container" aria-describedby="expandable-example-content">
+  <figure class="ecl-media-container__figure">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
+        alt="Infographic alt text"
+      />
+    </picture>
+    <figcaption class="ecl-media-container__caption">
+      Lorem ipsum dolor sit amet consectetur adipiscing elite tempored
+      incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet
+      consectetur adipiscing
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
+  </figure>
+  <div
+    class="ecl-expandable ecl-media-container__expandable"
+    data-ecl-expandable="true"
+    data-ecl-auto-init="Expandable"
+  >
+    <button
+      class="ecl-button ecl-button--tertiary ecl-expandable__toggle"
+      type="button"
+      aria-controls="expandable-example-content"
+      aria-expanded="false"
+      data-ecl-expandable-toggle
+      data-ecl-label-collapsed="Collapsed"
+      data-ecl-label-expanded="Expanded"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Collapsed</span>
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          data-ecl-icon
+          aria-hidden="true"
+        ></span>
+      </span>
+    </button>
+    <div class="ecl-expandable__content" id="expandable-example-content" hidden>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et varius
+        est. Sed elementum rutrum libero, at vulputate nisl posuere et. Morbi
+        dui sem, rhoncus non fermentum eget, finibus non purus.
+      </p>
     </div>
+  </div>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Infographic with expandable</h3>
-<div class="ecl-u-mb-2xl">
-    <div class="ecl-media-container" aria-describedby="expandable-example-content">
-        <figure class="ecl-media-container__figure">
-            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
-            <picture class="ecl-picture ecl-media-container__picture">
-                <img class="ecl-media-container__media" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" alt="Infographic alt text">
-            </picture>
-            <figcaption class="ecl-media-container__caption">Lorem ipsum dolor sit amet consectetur adipiscing elite tempored incididunt ut labore et dolore magna aliqua lorem ipsum dolor sit amet consectetur adipiscing<br />@Copyright</figcaption>
-        </figure>
-        <!-- Sub component: expandable. Use the expandable component template; see expandable sub component for full markup guidance. -->
-        <div class="ecl-expandable ecl-media-container__expandable" data-ecl-expandable="true" data-ecl-auto-init="Expandable">
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-expandable__toggle" type="button" data-ecl-expandable-toggle data-ecl-label-expanded="Expanded" data-ecl-label-collapsed="Collapsed" aria-expanded="false" aria-controls="expandable-example-content">
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Collapsed</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow" data-ecl-icon></span>
-                </span>
-            </button>
-            <div class="ecl-expandable__content" id="expandable-example-content" hidden>
-                <p class="ecl-u-type-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et varius est. Sed elementum rutrum libero, at vulputate nisl posuere et. Morbi dui sem, rhoncus non fermentum eget, finibus non purus.</p>
-            </div>
-        </div>
+<!-- Video with controls -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <div class="ecl-media-container__video-wrapper">
+      <video
+        class="ecl-video ecl-media-container__media"
+        poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg"
+        aria-label="Visit the European Commission - Video player"
+        controls
+        playsinline
+        data-ecl-media-container-video
+      >
+        <source
+          src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4"
+          type="video/mp4"
+        />
+      </video>
     </div>
+    <figcaption class="ecl-media-container__caption">
+      The European Commission Visitors' Centre provides the public with an
+      understanding of how the European Commission works and its 3 policies and
+      priorities.
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
+  </figure>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Autoplay video media container</h3>
-<div class="ecl-u-mb-2xl">
-    <div class="ecl-media-container" data-ecl-media-container="true" data-ecl-auto-init="MediaContainer">
-        <figure class="ecl-media-container__figure">
-            <div class="ecl-media-container__video-wrapper">
-                <!-- Sub component: video. Use the video component template; see video sub component for full markup guidance. -->
-                <video class="ecl-video ecl-media-container__media" poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg" aria-label="Visit the European Commission - Video player" playsinline autoplay muted loop data-ecl-media-container-video>
-                    <source src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4" type="video/mp4">
-                </video>
-                <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-                <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__play ecl-button--icon-only" type="button" data-ecl-media-container-play>
-                    <span class="ecl-button__container">
-                        <span class="ecl-button__label" data-ecl-label="true">Play</span>
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline" data-ecl-icon></span>
-                    </span>
-                </button>
-                <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-                <button class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__pause ecl-button--icon-only" type="button" data-ecl-media-container-pause>
-                    <span class="ecl-button__container">
-                        <span class="ecl-button__label" data-ecl-label="true">Pause</span>
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span aria-hidden="true" class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline" data-ecl-icon></span>
-                    </span>
-                </button>
-            </div>
-            <figcaption class="ecl-media-container__caption">The European Commission Visitors' Centre provides the public with an understanding of how the European Commission works and its 3 policies and priorities.</figcaption>
-        </figure>
+<!-- Deprecated video input shape -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <div class="ecl-media-container__video-wrapper">
+      <video
+        class="ecl-video ecl-media-container__media"
+        poster="https://euc-vod.fl.freecaster.net/12/224712/THUMB_I224712EN1W_V_1.jpg"
+        aria-label="Visit the European Commission - Video player"
+        controls
+        playsinline
+        data-ecl-media-container-video
+      >
+        <source
+          src="https://euc-vod.fl.freecaster.net/12/224712/HD_I224712EN1W.mp4"
+          type="video/mp4"
+        />
+      </video>
     </div>
+    <figcaption class="ecl-media-container__caption">
+      The European Commission Visitors' Centre provides the public with an
+      understanding of how the European Commission works and its 3 policies and
+      priorities.
+    </figcaption>
+  </figure>
+</div>
+
+<!-- Autoplay video -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+>
+  <figure class="ecl-media-container__figure">
+    <div class="ecl-media-container__video-wrapper">
+      <video
+        class="ecl-video ecl-media-container__media"
+        aria-label="Visit the European Commission - Video player"
+        autoplay
+        muted
+        loop
+        playsinline
+        data-ecl-media-container-video
+      >
+        <source
+          src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__play ecl-button--icon-only"
+        type="button"
+        data-ecl-media-container-play
+      >
+        <span class="ecl-button__container">
+          <span
+            class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline"
+            data-ecl-icon
+            aria-hidden="true"
+          ></span>
+        </span>
+      </button>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__pause ecl-button--icon-only"
+        type="button"
+        data-ecl-media-container-pause
+      >
+        <span class="ecl-button__container">
+          <span
+            class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline"
+            data-ecl-icon
+            aria-hidden="true"
+          ></span>
+        </span>
+      </button>
+    </div>
+  </figure>
+</div>
+
+<!-- Video with hidden caption for over position -->
+<div
+  class="ecl-media-container ecl-media-container--caption-hidden"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+>
+  <figure class="ecl-media-container__figure">
+    <div class="ecl-media-container__video-wrapper">
+      <video
+        class="ecl-video ecl-media-container__media"
+        controls
+        playsinline
+        data-ecl-media-container-video
+      >
+        <source
+          src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <figcaption class="ecl-media-container__caption">
+      Caption hidden visually for video over position.
+    </figcaption>
+    <footer class="ecl-media-container__credit">Video credit</footer>
+  </figure>
+</div>
+
+<!-- Embedded video with automatic ratio -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+  data-ecl-media-container-video-title="New digital strategy - Video player"
+>
+  <figure class="ecl-media-container__figure">
+    <div class="ecl-media-container__media">
+      <iframe
+        width="350"
+        height="197"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+        "
+        allowfullscreen
+      ></iframe>
+    </div>
+    <figcaption class="ecl-media-container__caption">
+      The European Commission has put forward ambitious yet realistic proposals
+      for a modern EU budget.
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
+  </figure>
+</div>
+
+<!-- Embedded video with audio description and manual ratio 16/9 -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+  data-ecl-media-container-video-title="New digital strategy - Video player"
+>
+  <figure class="ecl-media-container__figure">
+    <div
+      class="ecl-media-container__media ecl-media-container__media--ratio-16-9"
+    >
+      <div class="ecl-media-container__media-audio">
+        In the video below, there is no audiodescription available yet
+      </div>
+      <iframe
+        width="350"
+        height="197"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+        "
+        allowfullscreen
+      ></iframe>
+    </div>
+  </figure>
+</div>
+
+<!-- Embedded video ratio 4/3 -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+>
+  <figure class="ecl-media-container__figure">
+    <div
+      class="ecl-media-container__media ecl-media-container__media--ratio-4-3"
+    >
+      <iframe
+        width="400"
+        height="300"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="4 by 3 video"
+      ></iframe>
+    </div>
+  </figure>
+</div>
+
+<!-- Embedded video ratio 3/2 -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+>
+  <figure class="ecl-media-container__figure">
+    <div
+      class="ecl-media-container__media ecl-media-container__media--ratio-3-2"
+    >
+      <iframe
+        width="450"
+        height="300"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="3 by 2 video"
+      ></iframe>
+    </div>
+  </figure>
+</div>
+
+<!-- Embedded video ratio 1/1 -->
+<div
+  class="ecl-media-container"
+  data-ecl-media-container="true"
+  data-ecl-auto-init="MediaContainer"
+>
+  <figure class="ecl-media-container__figure">
+    <div
+      class="ecl-media-container__media ecl-media-container__media--ratio-1-1"
+    >
+      <iframe
+        width="300"
+        height="300"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="Square video"
+      ></iframe>
+    </div>
+  </figure>
+</div>
+
+<!-- Caption only -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+        alt="Jean Monnet banner"
+      />
+    </picture>
+    <figcaption class="ecl-media-container__caption">
+      Caption without credit.
+    </figcaption>
+  </figure>
+</div>
+
+<!-- Credit only -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+        alt="Jean Monnet banner"
+      />
+    </picture>
+    <footer class="ecl-media-container__credit">Credit without caption.</footer>
+  </figure>
+</div>
+
+<!-- No caption or credit -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <picture class="ecl-picture ecl-media-container__picture">
+      <img
+        class="ecl-media-container__media"
+        src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+        alt="Jean Monnet banner"
+      />
+    </picture>
+  </figure>
+</div>
+
+<!-- No media -->
+<div class="ecl-media-container">
+  <figure class="ecl-media-container__figure">
+    <figcaption class="ecl-media-container__caption">
+      Only caption content is rendered when no media is provided.
+    </figcaption>
+  </figure>
+</div>
+
+<!-- Color modes -->
+<div class="ecl-color-mode--blue">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Blue mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Blue color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--blue-electric">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Blue electric mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Blue electric color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--blue-navy">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Blue navy mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Blue navy color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--blue-ocean">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Blue ocean mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Blue ocean color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--green">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Green mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Green color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--green-dark">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Green dark mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Green dark color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--green-lemon">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Green lemon mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Green lemon color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--green-pine">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Green pine mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Green pine color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--orange">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Orange mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Orange color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--purple">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Purple mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Purple color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--purple-violet">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Purple violet mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Purple violet color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--red-crayola">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Red crayola mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Red crayola color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--red-tomato">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Red tomato mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Red tomato color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--warm-grey">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Warm grey mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Warm grey color mode.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="ecl-color-mode--yellow-gold">
+  <div class="ecl-media-container">
+    <figure class="ecl-media-container__figure">
+      <picture class="ecl-picture ecl-media-container__picture">
+        <img
+          class="ecl-media-container__media"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt="Yellow gold mode"
+        />
+      </picture>
+      <figcaption class="ecl-media-container__caption">
+        Yellow gold color mode.
+      </figcaption>
+    </figure>
+  </div>
 </div>
