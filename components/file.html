@@ -1,207 +1,1121 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default file</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the base file layout when you need a download action without imagery or taxonomy.</p>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Use the base file layout when you need a download action without imagery or
+  taxonomy.
+</p>
 <div class="ecl-u-mb-2xl">
-    <div class="ecl-file" data-ecl-file id="ecl-file-default">
-        <div class="ecl-file__container">
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon" aria-hidden="true"></span>
-            <div class="ecl-file__info">
-                <ul class="ecl-file__detail-meta">
-                    <li class="ecl-file__detail-meta-item">META INFO</li>
-                    <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
-                </ul>
-                <div class="ecl-file__title" id="ecl-file-default-title">State of the Union 2018 brochure</div>
-            </div>
+  <div class="ecl-file" data-ecl-file id="ecl-file-default">
+    <div class="ecl-file__container">
+      <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+      <span
+        class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+        aria-hidden="true"
+      ></span>
+      <div class="ecl-file__info">
+        <ul class="ecl-file__detail-meta">
+          <li class="ecl-file__detail-meta-item">META INFO</li>
+          <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
+        </ul>
+        <div class="ecl-file__title" id="ecl-file-default-title">
+          State of the Union 2018 brochure
         </div>
-        <div class="ecl-file__footer">
-            <div class="ecl-file__language" id="ecl-file-default-lang">English</div>
-            <div class="ecl-file__meta">(16.2 MB - PDF)</div>
-            <div class="ecl-file__action">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download" href="/example" id="ecl-file-default-link" aria-labelledby="ecl-file-default-link-label ecl-file-default-title ecl-file-default-lang">
-                    <span class="ecl-link__label" id="ecl-file-default-link-label">Download</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-default-lang">English</div>
+      <div class="ecl-file__meta" id="ecl-file-default-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+          href="/example"
+          id="ecl-file-default-link"
+          aria-labelledby="ecl-file-default-link-label ecl-file-default-title ecl-file-default-lang ecl-file-default-meta"
+        >
+          <span class="ecl-link__label" id="ecl-file-default-link-label"
+            >Download</span
+          >
+          <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Default file with labels and extension hooks
+</h3>
+<div class="ecl-u-mb-2xl">
+  <div
+    class="ecl-file custom-class custom-class--test"
+    data-ecl-file
+    id="ecl-file-extensions"
+    data-test="data-test-value"
+    data-test-1
+  >
+    <div class="ecl-file__container">
+      <span
+        class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+        aria-hidden="true"
+      ></span>
+      <div class="ecl-file__info">
+        <div class="ecl-file__label">
+          <span class="ecl-label ecl-label--highlight">highlight</span>
+        </div>
+        <div class="ecl-file__label">
+          <span class="ecl-label ecl-label--low">important</span>
+        </div>
+        <ul class="ecl-file__detail-meta">
+          <li class="ecl-file__detail-meta-item">META INFO</li>
+          <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
+        </ul>
+        <div class="ecl-file__title" id="ecl-file-extensions-title">
+          State of the Union 2018 brochure
+        </div>
+      </div>
+    </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-extensions-lang">
+        English
+      </div>
+      <div class="ecl-file__meta" id="ecl-file-extensions-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download custom-download"
+          href="/example"
+          id="ecl-file-extensions-link"
+          aria-labelledby="ecl-file-extensions-link-label ecl-file-extensions-title ecl-file-extensions-lang ecl-file-extensions-meta"
+          data-download-test="true"
+          download
+        >
+          <span class="ecl-link__label" id="ecl-file-extensions-link-label"
+            >Download</span
+          >
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default file with translations</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Enable the translation toggle when the same file is available in multiple languages.</p>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Enable the translation toggle when the same file is available in multiple
+  languages.
+</p>
 <div class="ecl-u-mb-2xl">
-    <div class="ecl-file" data-ecl-file data-ecl-auto-init="FileDownload" id="ecl-file-translations">
-        <div class="ecl-file__container">
-            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-            <span class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon" aria-hidden="true"></span>
-            <div class="ecl-file__info">
-                <div class="ecl-file__title" id="ecl-file-translations-title">State of the Union 2018 brochure</div>
-            </div>
+  <div
+    class="ecl-file"
+    data-ecl-file
+    data-ecl-auto-init="FileDownload"
+    id="ecl-file-translations"
+  >
+    <div class="ecl-file__container">
+      <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+      <span
+        class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+        aria-hidden="true"
+      ></span>
+      <div class="ecl-file__info">
+        <div class="ecl-file__title" id="ecl-file-translations-title">
+          State of the Union 2018 brochure
         </div>
-        <div class="ecl-file__footer">
-            <div class="ecl-file__language" id="ecl-file-translations-lang">English</div>
-            <div class="ecl-file__meta">(16.2 MB - PDF)</div>
-            <div class="ecl-file__action">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download" href="/example" id="ecl-file-translations-link" aria-labelledby="ecl-file-translations-link-label ecl-file-translations-title ecl-file-translations-lang">
-                    <span class="ecl-link__label" id="ecl-file-translations-link-label">Download</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-        <div class="ecl-file__translation-container" data-ecl-file-translation-container>
-            <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
-            <button class="ecl-button ecl-button--tertiary ecl-file__translation-toggle" type="button" data-ecl-file-translation-toggle aria-expanded="false">
-                <span class="ecl-button__container">
-                    <span class="ecl-button__label" data-ecl-label="true">Translations (3)</span>
-                    <span class="ecl-button__icon-container">
-                        <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--corner-arrow ecl-icon--rotate-180 ecl-button__icon" aria-hidden="true" data-ecl-icon></span>
-                    </span>
-                </span>
-            </button>
-            <ul class="ecl-file__translation-list">
-                <li class="ecl-file__translation-item">
-                    <div class="ecl-file__translation-info">
-                        <div class="ecl-file__translation-title" id="ecl-file-translations-translation-0-lang" lang="bg">български</div>
-                        <div class="ecl-file__translation-meta">(15.7 MB - PDF)</div>
-                    </div>
-                    <div class="ecl-file__translation-action">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download" href="/example#bg" id="ecl-file-translations-translation-0-link" aria-labelledby="ecl-file-translations-translation-0-link-label ecl-file-translations-title ecl-file-translations-translation-0-lang" hreflang="bg">
-                            <span class="ecl-link__label" id="ecl-file-translations-translation-0-link-label">Download</span>
-                            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                            <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </li>
-                <li class="ecl-file__translation-item">
-                    <div class="ecl-file__translation-info">
-                        <div class="ecl-file__translation-title" id="ecl-file-translations-translation-1-lang" lang="es">español</div>
-                        <div class="ecl-file__translation-meta">(15.8 MB - PDF)</div>
-                    </div>
-                    <div class="ecl-file__translation-action">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download" href="/example#es" id="ecl-file-translations-translation-1-link" aria-labelledby="ecl-file-translations-translation-1-link-label ecl-file-translations-title ecl-file-translations-translation-1-lang" hreflang="es" download>
-                            <span class="ecl-link__label" id="ecl-file-translations-translation-1-link-label">Download</span>
-                            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                            <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </li>
-                <li class="ecl-file__translation-item">
-                    <div class="ecl-file__translation-info">
-                        <div class="ecl-file__translation-title" id="ecl-file-translations-translation-2-lang" lang="fr">français</div>
-                        <div class="ecl-file__translation-meta">(15.4 MB - PDF)</div>
-                    </div>
-                    <div class="ecl-file__translation-action">
-                        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                        <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download" href="/example#fr" id="ecl-file-translations-translation-2-link" aria-labelledby="ecl-file-translations-translation-2-link-label ecl-file-translations-title ecl-file-translations-translation-2-lang" hreflang="fr">
-                            <span class="ecl-link__label" id="ecl-file-translations-translation-2-link-label">Download</span>
-                            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                            <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      </div>
     </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-translations-lang">
+        English
+      </div>
+      <div class="ecl-file__meta" id="ecl-file-translations-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+          href="/example"
+          id="ecl-file-translations-link"
+          aria-labelledby="ecl-file-translations-link-label ecl-file-translations-title ecl-file-translations-lang ecl-file-translations-meta"
+        >
+          <span class="ecl-link__label" id="ecl-file-translations-link-label"
+            >Download</span
+          >
+          <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="ecl-file__translation-container"
+      data-ecl-file-translation-container
+    >
+      <!-- Sub component: button. Use the button component template; see button sub component for full markup guidance. -->
+      <button
+        class="ecl-button ecl-button--tertiary ecl-file__translation-toggle"
+        type="button"
+        data-ecl-file-translation-toggle
+        aria-expanded="false"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Translations (3)</span
+          >
+          <span class="ecl-button__icon-container">
+            <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+            <span
+              class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--corner-arrow ecl-icon--rotate-180 ecl-button__icon"
+              aria-hidden="true"
+              data-ecl-icon
+            ></span>
+          </span>
+        </span>
+      </button>
+      <ul class="ecl-file__translation-list">
+        <li class="ecl-file__translation-item">
+          <div class="ecl-file__translation-info">
+            <div
+              class="ecl-file__translation-title"
+              id="ecl-file-translations-translation-0-lang"
+              lang="bg"
+            >
+              български
+            </div>
+            <div
+              class="ecl-file__translation-meta"
+              id="ecl-file-translations-translation-0-meta"
+            >
+              (15.7 MB - PDF)
+            </div>
+          </div>
+          <div class="ecl-file__translation-action">
+            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+            <a
+              class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download"
+              href="/example#bg"
+              id="ecl-file-translations-translation-0-link"
+              aria-labelledby="ecl-file-translations-translation-0-link-label ecl-file-translations-title ecl-file-translations-translation-0-lang ecl-file-translations-translation-0-meta"
+              hreflang="bg"
+            >
+              <span
+                class="ecl-link__label"
+                id="ecl-file-translations-translation-0-link-label"
+                >Download</span
+              >
+              <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </li>
+        <li class="ecl-file__translation-item">
+          <div class="ecl-file__translation-info">
+            <div
+              class="ecl-file__translation-title"
+              id="ecl-file-translations-translation-1-lang"
+              lang="es"
+            >
+              español
+            </div>
+            <div
+              class="ecl-file__translation-meta"
+              id="ecl-file-translations-translation-1-meta"
+            >
+              (15.8 MB - PDF)
+            </div>
+          </div>
+          <div class="ecl-file__translation-action">
+            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+            <a
+              class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download"
+              href="/example#es"
+              id="ecl-file-translations-translation-1-link"
+              aria-labelledby="ecl-file-translations-translation-1-link-label ecl-file-translations-title ecl-file-translations-translation-1-lang ecl-file-translations-translation-1-meta"
+              hreflang="es"
+              download
+            >
+              <span
+                class="ecl-link__label"
+                id="ecl-file-translations-translation-1-link-label"
+                >Download</span
+              >
+              <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </li>
+        <li class="ecl-file__translation-item">
+          <div class="ecl-file__translation-info">
+            <div
+              class="ecl-file__translation-title"
+              id="ecl-file-translations-translation-2-lang"
+              lang="fr"
+            >
+              français
+            </div>
+            <div
+              class="ecl-file__translation-meta"
+              id="ecl-file-translations-translation-2-meta"
+            >
+              (15.4 MB - PDF)
+            </div>
+          </div>
+          <div class="ecl-file__translation-action">
+            <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+            <a
+              class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__translation-download"
+              href="/example#fr"
+              id="ecl-file-translations-translation-2-link"
+              aria-labelledby="ecl-file-translations-translation-2-link-label ecl-file-translations-title ecl-file-translations-translation-2-lang ecl-file-translations-translation-2-meta"
+              hreflang="fr"
+            >
+              <span
+                class="ecl-link__label"
+                id="ecl-file-translations-translation-2-link-label"
+                >Download</span
+              >
+              <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+              <span
+                class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Thumbnail file without image</h3>
+<div class="ecl-u-mb-2xl">
+  <div
+    class="ecl-file ecl-file--thumbnail"
+    data-ecl-file
+    id="ecl-file-thumbnail-no-image"
+  >
+    <div class="ecl-file__container">
+      <div class="ecl-file__info">
+        <div class="ecl-file__label">
+          <span class="ecl-label ecl-label--highlight">highlighted</span>
+        </div>
+        <ul class="ecl-file__detail-meta">
+          <li class="ecl-file__detail-meta-item">META INFO</li>
+          <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
+        </ul>
+        <div class="ecl-file__title" id="ecl-file-thumbnail-no-image-title">
+          <a class="ecl-link ecl-link--standalone" href="/example"
+            >State of the Union 2018 brochure</a
+          >
+        </div>
+        <div class="ecl-file__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+      </div>
+    </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-thumbnail-no-image-lang">
+        English
+      </div>
+      <div class="ecl-file__meta" id="ecl-file-thumbnail-no-image-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+          href="/example"
+          id="ecl-file-thumbnail-no-image-link"
+          aria-labelledby="ecl-file-thumbnail-no-image-link-label ecl-file-thumbnail-no-image-title ecl-file-thumbnail-no-image-lang ecl-file-thumbnail-no-image-meta"
+        >
+          <span
+            class="ecl-link__label"
+            id="ecl-file-thumbnail-no-image-link-label"
+            >Download</span
+          >
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Thumbnail file</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the thumbnail variant to pair the file metadata with a preview image and label.</p>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Use the thumbnail variant to pair the file metadata with a preview image and
+  label.
+</p>
 <div class="ecl-u-mb-2xl">
-    <div class="ecl-file ecl-file--thumbnail" data-ecl-file id="ecl-file-thumbnail">
-        <div class="ecl-file__container">
-            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
-            <picture class="ecl-picture ecl-file__picture">
-                <img class="ecl-file__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="">
-            </picture>
-            <div class="ecl-file__info">
-                <div class="ecl-file__label">
-                    <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
-                    <span class="ecl-label ecl-label--highlight">highlighted</span>
-                </div>
-                <ul class="ecl-file__detail-meta">
-                    <li class="ecl-file__detail-meta-item">META INFO</li>
-                    <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
-                </ul>
-                <div class="ecl-file__title" id="ecl-file-thumbnail-title">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">State of the Union 2018 brochure</a>
-                </div>
-                <div class="ecl-file__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur. Duis vitae pulvinar turpis. Donec maximus pharetra ex a ultricies.</div>
-            </div>
+  <div
+    class="ecl-file ecl-file--thumbnail"
+    data-ecl-file
+    id="ecl-file-thumbnail"
+  >
+    <div class="ecl-file__container">
+      <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+      <picture class="ecl-picture ecl-file__picture">
+        <img
+          class="ecl-file__image"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt=""
+        />
+      </picture>
+      <div class="ecl-file__info">
+        <div class="ecl-file__label">
+          <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
+          <span class="ecl-label ecl-label--highlight">highlighted</span>
         </div>
-        <div class="ecl-file__footer">
-            <div class="ecl-file__language" id="ecl-file-thumbnail-lang">English</div>
-            <div class="ecl-file__meta">(16.2 MB - PDF)</div>
-            <div class="ecl-file__action">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download" href="/example" id="ecl-file-thumbnail-link" aria-labelledby="ecl-file-thumbnail-link-label ecl-file-thumbnail-title ecl-file-thumbnail-lang">
-                    <span class="ecl-link__label" id="ecl-file-thumbnail-link-label">Download</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                </a>
-            </div>
+        <ul class="ecl-file__detail-meta">
+          <li class="ecl-file__detail-meta-item">META INFO</li>
+          <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
+        </ul>
+        <div class="ecl-file__title" id="ecl-file-thumbnail-title">
+          <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+          <a class="ecl-link ecl-link--standalone" href="/example"
+            >State of the Union 2018 brochure</a
+          >
         </div>
+        <div class="ecl-file__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
+          lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum
+          tempor consectetur. Duis vitae pulvinar turpis. Donec maximus pharetra
+          ex a ultricies.
+        </div>
+      </div>
     </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-thumbnail-lang">English</div>
+      <div class="ecl-file__meta" id="ecl-file-thumbnail-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+          href="/example"
+          id="ecl-file-thumbnail-link"
+          aria-labelledby="ecl-file-thumbnail-link-label ecl-file-thumbnail-title ecl-file-thumbnail-lang ecl-file-thumbnail-meta"
+        >
+          <span class="ecl-link__label" id="ecl-file-thumbnail-link-label"
+            >Download</span
+          >
+          <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default file in EC color modes</h3>
+<div class="ecl-u-mb-2xl">
+  <div class="ecl-color-mode--blue ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-blue">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-blue-title">
+            Blue mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-blue-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-blue-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-blue-link"
+            aria-labelledby="ecl-file-color-blue-link-label ecl-file-color-blue-title ecl-file-color-blue-lang ecl-file-color-blue-meta"
+            ><span class="ecl-link__label" id="ecl-file-color-blue-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-electric ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-blue-electric">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-blue-electric-title">
+            Blue electric mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-blue-electric-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-blue-electric-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-blue-electric-link"
+            aria-labelledby="ecl-file-color-blue-electric-link-label ecl-file-color-blue-electric-title ecl-file-color-blue-electric-lang ecl-file-color-blue-electric-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-blue-electric-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-navy ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-blue-navy">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-blue-navy-title">
+            Blue navy mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-blue-navy-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-blue-navy-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-blue-navy-link"
+            aria-labelledby="ecl-file-color-blue-navy-link-label ecl-file-color-blue-navy-title ecl-file-color-blue-navy-lang ecl-file-color-blue-navy-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-blue-navy-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--blue-ocean ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-blue-ocean">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-blue-ocean-title">
+            Blue ocean mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-blue-ocean-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-blue-ocean-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-blue-ocean-link"
+            aria-labelledby="ecl-file-color-blue-ocean-link-label ecl-file-color-blue-ocean-title ecl-file-color-blue-ocean-lang ecl-file-color-blue-ocean-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-blue-ocean-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-green">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-green-title">
+            Green mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-green-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-green-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-green-link"
+            aria-labelledby="ecl-file-color-green-link-label ecl-file-color-green-title ecl-file-color-green-lang ecl-file-color-green-meta"
+            ><span class="ecl-link__label" id="ecl-file-color-green-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green-dark ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-green-dark">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-green-dark-title">
+            Green dark mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-green-dark-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-green-dark-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-green-dark-link"
+            aria-labelledby="ecl-file-color-green-dark-link-label ecl-file-color-green-dark-title ecl-file-color-green-dark-lang ecl-file-color-green-dark-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-green-dark-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green-lemon ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-green-lemon">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-green-lemon-title">
+            Green lemon mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-green-lemon-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-green-lemon-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-green-lemon-link"
+            aria-labelledby="ecl-file-color-green-lemon-link-label ecl-file-color-green-lemon-title ecl-file-color-green-lemon-lang ecl-file-color-green-lemon-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-green-lemon-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--green-pine ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-green-pine">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-green-pine-title">
+            Green pine mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-green-pine-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-green-pine-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-green-pine-link"
+            aria-labelledby="ecl-file-color-green-pine-link-label ecl-file-color-green-pine-title ecl-file-color-green-pine-lang ecl-file-color-green-pine-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-green-pine-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--orange ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-orange">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-orange-title">
+            Orange mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-orange-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-orange-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-orange-link"
+            aria-labelledby="ecl-file-color-orange-link-label ecl-file-color-orange-title ecl-file-color-orange-lang ecl-file-color-orange-meta"
+            ><span class="ecl-link__label" id="ecl-file-color-orange-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--purple ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-purple">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-purple-title">
+            Purple mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-purple-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-purple-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-purple-link"
+            aria-labelledby="ecl-file-color-purple-link-label ecl-file-color-purple-title ecl-file-color-purple-lang ecl-file-color-purple-meta"
+            ><span class="ecl-link__label" id="ecl-file-color-purple-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--purple-violet ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-purple-violet">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-purple-violet-title">
+            Purple violet mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-purple-violet-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-purple-violet-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-purple-violet-link"
+            aria-labelledby="ecl-file-color-purple-violet-link-label ecl-file-color-purple-violet-title ecl-file-color-purple-violet-lang ecl-file-color-purple-violet-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-purple-violet-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--red-crayola ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-red-crayola">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-red-crayola-title">
+            Red crayola mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-red-crayola-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-red-crayola-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-red-crayola-link"
+            aria-labelledby="ecl-file-color-red-crayola-link-label ecl-file-color-red-crayola-title ecl-file-color-red-crayola-lang ecl-file-color-red-crayola-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-red-crayola-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--red-tomato ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-red-tomato">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-red-tomato-title">
+            Red tomato mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-red-tomato-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-red-tomato-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-red-tomato-link"
+            aria-labelledby="ecl-file-color-red-tomato-link-label ecl-file-color-red-tomato-title ecl-file-color-red-tomato-lang ecl-file-color-red-tomato-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-red-tomato-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--warm-grey ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-warm-grey">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-warm-grey-title">
+            Warm grey mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-warm-grey-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-warm-grey-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-warm-grey-link"
+            aria-labelledby="ecl-file-color-warm-grey-link-label ecl-file-color-warm-grey-title ecl-file-color-warm-grey-lang ecl-file-color-warm-grey-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-warm-grey-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ecl-color-mode--yellow-gold ecl-u-mb-m">
+    <div class="ecl-file" data-ecl-file id="ecl-file-color-yellow-gold">
+      <div class="ecl-file__container">
+        <span
+          class="wt-icon--file ecl-icon ecl-icon--2xl ecl-icon--file ecl-file__icon"
+          aria-hidden="true"
+        ></span>
+        <div class="ecl-file__info">
+          <div class="ecl-file__title" id="ecl-file-color-yellow-gold-title">
+            Yellow gold mode file
+          </div>
+        </div>
+      </div>
+      <div class="ecl-file__footer">
+        <div class="ecl-file__language" id="ecl-file-color-yellow-gold-lang">
+          English
+        </div>
+        <div class="ecl-file__meta" id="ecl-file-color-yellow-gold-meta">
+          (1 MB - PDF)
+        </div>
+        <div class="ecl-file__action">
+          <a
+            class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+            href="/example"
+            id="ecl-file-color-yellow-gold-link"
+            aria-labelledby="ecl-file-color-yellow-gold-link-label ecl-file-color-yellow-gold-title ecl-file-color-yellow-gold-lang ecl-file-color-yellow-gold-meta"
+            ><span
+              class="ecl-link__label"
+              id="ecl-file-color-yellow-gold-link-label"
+              >Download</span
+            ><span
+              class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+              aria-hidden="true"
+            ></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Thumbnail file with taxonomy</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Add taxonomy metadata to the thumbnail layout with the description-list sub component.</p>
+<p class="ecl-u-type-paragraph ecl-u-mb-m">
+  Add taxonomy metadata to the thumbnail layout with the description-list sub
+  component.
+</p>
 <div class="ecl-u-mb-2xl">
-    <div class="ecl-file ecl-file--thumbnail" data-ecl-file id="ecl-file-taxonomy">
-        <div class="ecl-file__container">
-            <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
-            <picture class="ecl-picture ecl-file__picture">
-                <img class="ecl-file__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" alt="">
-            </picture>
-            <div class="ecl-file__info">
-                <div class="ecl-file__label">
-                    <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
-                    <span class="ecl-label ecl-label--highlight">highlighted</span>
-                </div>
-                <ul class="ecl-file__detail-meta">
-                    <li class="ecl-file__detail-meta-item">META INFO</li>
-                    <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
-                </ul>
-                <div class="ecl-file__title" id="ecl-file-taxonomy-title">
-                    <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                    <a class="ecl-link ecl-link--standalone" href="/example">State of the Union 2018 brochure</a>
-                </div>
-                <div class="ecl-file__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur. Duis vitae pulvinar turpis. Donec maximus pharetra ex a ultricies.</div>
-                <div class="ecl-file__taxonomy">
-                    <!-- Sub component: description-list. Use the description-list component template; see description-list sub component for full markup guidance. -->
-                    <dl class="ecl-description-list" data-ecl-description-list data-ecl-description-list-more-label="Show more items" data-ecl-description-list-visible-items="2" data-ecl-auto-init="DescriptionList">
-                        <dt class="ecl-description-list__term">Taxonomy list</dt>
-                        <dd class="ecl-description-list__definition ecl-description-list__definition--taxonomy">
-                            <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 1</li>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 2</li>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 3</li>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 4</li>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 5</li>
-                                <li class="ecl-description-list__definition-item">Taxonomy item 6</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
-            </div>
+  <div
+    class="ecl-file ecl-file--thumbnail"
+    data-ecl-file
+    id="ecl-file-taxonomy"
+  >
+    <div class="ecl-file__container">
+      <!-- Sub component: picture. Use the picture component template; see picture sub component for full markup guidance. -->
+      <picture class="ecl-picture ecl-file__picture">
+        <img
+          class="ecl-file__image"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+          alt=""
+        />
+      </picture>
+      <div class="ecl-file__info">
+        <div class="ecl-file__label">
+          <!-- Sub component: label. Use the label component template; see label sub component for full markup guidance. -->
+          <span class="ecl-label ecl-label--highlight">highlighted</span>
         </div>
-        <div class="ecl-file__footer">
-            <div class="ecl-file__language" id="ecl-file-taxonomy-lang">English</div>
-            <div class="ecl-file__meta">(16.2 MB - PDF)</div>
-            <div class="ecl-file__action">
-                <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
-                <a class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download" href="/example" id="ecl-file-taxonomy-link" aria-labelledby="ecl-file-taxonomy-link-label ecl-file-taxonomy-title ecl-file-taxonomy-lang">
-                    <span class="ecl-link__label" id="ecl-file-taxonomy-link-label">Download</span>
-                    <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
-                    <span class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon" aria-hidden="true"></span>
-                </a>
-            </div>
+        <ul class="ecl-file__detail-meta">
+          <li class="ecl-file__detail-meta-item">META INFO</li>
+          <li class="ecl-file__detail-meta-item">DD Month YYYY</li>
+        </ul>
+        <div class="ecl-file__title" id="ecl-file-taxonomy-title">
+          <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+          <a class="ecl-link ecl-link--standalone" href="/example"
+            >State of the Union 2018 brochure</a
+          >
         </div>
+        <div class="ecl-file__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
+          lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum
+          tempor consectetur. Duis vitae pulvinar turpis. Donec maximus pharetra
+          ex a ultricies.
+        </div>
+        <div class="ecl-file__taxonomy">
+          <!-- Sub component: description-list. Use the description-list component template; see description-list sub component for full markup guidance. -->
+          <dl
+            class="ecl-description-list"
+            data-ecl-description-list
+            data-ecl-description-list-more-label="Show more items"
+            data-ecl-description-list-visible-items="2"
+            data-ecl-auto-init="DescriptionList"
+          >
+            <dt class="ecl-description-list__term">Taxonomy list</dt>
+            <dd
+              class="ecl-description-list__definition ecl-description-list__definition--taxonomy"
+            >
+              <ul
+                class="ecl-description-list__definition-list"
+                data-ecl-description-list-collapsible
+              >
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 1
+                </li>
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 2
+                </li>
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 3
+                </li>
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 4
+                </li>
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 5
+                </li>
+                <li class="ecl-description-list__definition-item">
+                  Taxonomy item 6
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
     </div>
+    <div class="ecl-file__footer">
+      <div class="ecl-file__language" id="ecl-file-taxonomy-lang">English</div>
+      <div class="ecl-file__meta" id="ecl-file-taxonomy-meta">
+        (16.2 MB - PDF)
+      </div>
+      <div class="ecl-file__action">
+        <!-- Sub component: link. Use the link component template; see link sub component for full markup guidance. -->
+        <a
+          class="ecl-link ecl-link--standalone ecl-link--icon ecl-file__download"
+          href="/example"
+          id="ecl-file-taxonomy-link"
+          aria-labelledby="ecl-file-taxonomy-link-label ecl-file-taxonomy-title ecl-file-taxonomy-lang ecl-file-taxonomy-meta"
+        >
+          <span class="ecl-link__label" id="ecl-file-taxonomy-link-label"
+            >Download</span
+          >
+          <!-- Sub component: icon. Use the icon component template; see icon sub component for full markup guidance. -->
+          <span
+            class="wt-icon--download ecl-icon ecl-icon--fluid ecl-icon--download ecl-link__icon"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
