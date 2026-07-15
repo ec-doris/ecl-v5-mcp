@@ -1,0 +1,1052 @@
+<!-- Default mega menu: root attributes, open/close labels, back button, links, children, info, featured, container, promotional, and extension hooks. -->
+<nav
+  class="ecl-mega-menu custom-mega-menu"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  data-ecl-mega-menu-label-open="Menu"
+  data-ecl-mega-menu-label-close="Close"
+  role="navigation"
+  id="demo"
+  aria-label="Main navigation"
+  data-test="mega-menu"
+  data-flag
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open ecl-button--icon-only"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span
+          aria-hidden="true"
+          class="wt-icon--hamburger ecl-icon ecl-icon--m ecl-button__icon ecl-icon--hamburger"
+          data-ecl-icon
+        ></span
+        ><span
+          aria-hidden="true"
+          class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
+          data-ecl-icon
+        ></span
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header">
+        <button
+          class="ecl-button ecl-button--tertiary ecl-mega-menu__back"
+          data-ecl-mega-menu-back
+          type="submit"
+        >
+          <span class="ecl-button__container"
+            ><span
+              aria-hidden="true"
+              class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+              data-ecl-icon
+            ></span
+            ><span class="ecl-button__label" data-ecl-label="true"
+              >Back</span
+            ></span
+          >
+        </button>
+      </header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="ecl-mega-menu-item-demo-0"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="ecl-mega-menu-item-demo-0-link"
+            >Home</a
+          >
+        </li>
+        <li
+          class="ecl-mega-menu__item ecl-mega-menu__item--has-children"
+          data-ecl-mega-menu-item
+          data-ecl-has-children
+          aria-haspopup="true"
+          id="ecl-mega-menu-item-demo-1"
+        >
+          <button
+            class="ecl-button ecl-button--primary ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            id="ecl-mega-menu-item-demo-1-link"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="ecl-button__container"
+              ><span class="ecl-button__label" data-ecl-label="true"
+                >News and media</span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+              ></span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--arrow-left ecl-icon ecl-icon--s ecl-icon--flip-horizontal ecl-button__icon ecl-icon--arrow-left"
+                data-ecl-icon
+              ></span
+            ></span>
+          </button>
+          <div class="ecl-mega-menu__wrapper">
+            <div class="ecl-container">
+              <div
+                class="ecl-mega-menu__info ecl-mega-menu__info--has-link"
+                data-ecl-mega-menu-mega
+              >
+                <span
+                  class="ecl-mega-menu__info-title"
+                  id="ecl-mega-menu-item-demo-1-info-title"
+                  >About the News and Media</span
+                >
+                <div class="ecl-mega-menu__info-scrollable">
+                  <div class="ecl-mega-menu__info-content">
+                    Description text, lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ecl-mega-menu__mega ecl-mega-menu__mega--has-featured"
+                data-ecl-mega-menu-mega
+              >
+                <ul
+                  class="ecl-mega-menu__sublist"
+                  aria-label="Pages in this section"
+                >
+                  <li class="ecl-mega-menu__subitem" data-ecl-mega-menu-subitem>
+                    <button
+                      class="ecl-button ecl-button--primary ecl-mega-menu__sublink"
+                      data-ecl-mega-menu-sublink
+                      id="news-latest-id"
+                      aria-expanded="false"
+                      test-subitem="testing value"
+                      type="button"
+                    >
+                      <span class="ecl-button__container"
+                        ><span class="ecl-button__label" data-ecl-label="true"
+                          >Latest news</span
+                        ><span
+                          aria-hidden="true"
+                          class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+                          data-ecl-icon
+                        ></span
+                      ></span>
+                    </button>
+                    <div
+                      class="ecl-mega-menu__mega ecl-mega-menu__mega--no-info ecl-mega-menu__mega--level-2"
+                      data-ecl-mega-menu-mega
+                    >
+                      <ul
+                        class="ecl-mega-menu__sublist"
+                        aria-label="Sub-pages in this section"
+                      >
+                        <li
+                          class="ecl-mega-menu__subitem"
+                          data-ecl-mega-menu-subitem
+                        >
+                          <a
+                            class="ecl-link ecl-link--standalone ecl-link--icon ecl-mega-menu__sublink"
+                            data-ecl-mega-menu-sublink
+                            href="/example"
+                            ><span class="ecl-link__label">Press corner</span
+                            ><span
+                              aria-hidden="false"
+                              class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+                              role="img"
+                              title="Link to an external domain"
+                            ></span
+                          ></a>
+                        </li>
+                        <li
+                          class="ecl-mega-menu__subitem"
+                          data-ecl-mega-menu-subitem
+                        >
+                          <a
+                            class="ecl-link ecl-link--standalone ecl-mega-menu__sublink ecl-mega-menu__sublink--last"
+                            data-ecl-mega-menu-sublink
+                            href="#anchor-link"
+                            >Statements</a
+                          >
+                        </li>
+                      </ul>
+                      <div
+                        class="ecl-mega-menu__featured"
+                        data-ecl-mega-menu-featured
+                      >
+                        <div class="ecl-mega-menu__featured-scrollable">
+                          <span
+                            class="ecl-mega-menu__featured-title"
+                            id="ecl-mega-menu-featured-title-news-latest-id"
+                            >Featured news</span
+                          >
+                          <div class="ecl-mega-menu__featured-content">
+                            Top featured content.
+                          </div>
+                          <ul
+                            class="ecl-mega-menu__featured-list"
+                            aria-labelledby="ecl-mega-menu-featured-title-news-latest-id news-latest-id"
+                          >
+                            <li
+                              class="ecl-mega-menu__featured-list__item ecl-mega-menu__featured-list__item--image-only"
+                            >
+                              <picture
+                                class="ecl-picture ecl-mega-menu__featured-picture"
+                                ><img
+                                  class="ecl-mega-menu__featured-image"
+                                  src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                                  alt="Jean Monnet banner"
+                              /></picture>
+                            </li>
+                            <li
+                              class="ecl-mega-menu__featured-list__item ecl-mega-menu__featured-list__item--combo"
+                            >
+                              <a
+                                class="ecl-link ecl-link--standalone ecl-mega-menu__featured-link featured-link-extra-class"
+                                href="/example"
+                                data-ecl-mega-menu-featured-link
+                                test-featured="testing value"
+                                ><picture
+                                  class="ecl-picture ecl-mega-menu__featured-picture"
+                                  ><img
+                                    class="ecl-mega-menu__featured-image"
+                                    src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg"
+                                    alt="Jean Monnet banner" /></picture
+                                >Featured link with image</a
+                              >
+                              <div
+                                class="ecl-mega-menu__featured-list__item-description"
+                              >
+                                Description text.
+                              </div>
+                            </li>
+                            <li class="ecl-mega-menu__featured-list__item">
+                              <a
+                                class="ecl-link ecl-link--standalone ecl-link--icon ecl-mega-menu__featured-link"
+                                data-ecl-mega-menu-featured-link
+                                href="https://example.com"
+                                ><span class="ecl-link__label"
+                                  >External featured link</span
+                                ><span
+                                  aria-hidden="false"
+                                  class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+                                  role="img"
+                                  title="External link"
+                                ></span
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ecl-mega-menu__subitem" data-ecl-mega-menu-subitem>
+                    <a
+                      class="ecl-link ecl-link--standalone ecl-mega-menu__sublink"
+                      data-ecl-mega-menu-sublink
+                      href="#anchor-link"
+                      >Media library</a
+                    >
+                  </li>
+                  <li class="ecl-mega-menu__spacer" data-ecl-mega-menu-subitem>
+                    &nbsp;
+                  </li>
+                  <li
+                    class="ecl-mega-menu__subitem ecl-mega-menu__see-all"
+                    data-ecl-mega-menu-subitem
+                  >
+                    <a
+                      aria-describedby="ecl-mega-menu-item-demo-1-info-title"
+                      class="ecl-link ecl-link--standalone ecl-link--brand ecl-link--icon ecl-mega-menu__info-link"
+                      href="/example"
+                      test-attribute-info-link
+                      ><span class="ecl-link__label">Discover more</span
+                      ><span
+                        aria-hidden="true"
+                        class="wt-icon--arrow-left ecl-icon ecl-icon--xs ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"
+                      ></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="ecl-mega-menu__item ecl-mega-menu__item--one-level-only ecl-mega-menu__item--has-children"
+          data-ecl-mega-menu-item
+          data-ecl-has-children
+          aria-haspopup="true"
+          id="ecl-mega-menu-item-demo-2"
+        >
+          <button
+            class="ecl-button ecl-button--primary ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            id="ecl-mega-menu-item-demo-2-link"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="ecl-button__container"
+              ><span class="ecl-button__label" data-ecl-label="true"
+                >About the EU</span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+              ></span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--arrow-left ecl-icon ecl-icon--s ecl-icon--flip-horizontal ecl-button__icon ecl-icon--arrow-left"
+                data-ecl-icon
+              ></span
+            ></span>
+          </button>
+          <div class="ecl-mega-menu__wrapper">
+            <div class="ecl-container">
+              <div
+                class="ecl-mega-menu__mega ecl-mega-menu__mega--no-info"
+                data-ecl-mega-menu-mega
+              >
+                <ul
+                  class="ecl-mega-menu__sublist"
+                  aria-label="Pages in this section"
+                >
+                  <li class="ecl-mega-menu__subitem" data-ecl-mega-menu-subitem>
+                    <a
+                      class="ecl-link ecl-link--standalone ecl-mega-menu__sublink ecl-mega-menu__sublink--last"
+                      data-ecl-mega-menu-sublink
+                      href="/example"
+                      >Institutions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="ecl-mega-menu__item ecl-mega-menu__item--has-container"
+          data-ecl-mega-menu-item
+          data-ecl-has-container
+          aria-haspopup="true"
+          id="ecl-mega-menu-item-demo-3"
+        >
+          <button
+            class="ecl-button ecl-button--primary ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            id="ecl-mega-menu-item-demo-3-link"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="ecl-button__container"
+              ><span class="ecl-button__label" data-ecl-label="true"
+                >Engage</span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--corner-arrow ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+                data-ecl-icon
+              ></span
+              ><span
+                aria-hidden="true"
+                class="wt-icon--arrow-left ecl-icon ecl-icon--s ecl-icon--flip-horizontal ecl-button__icon ecl-icon--arrow-left"
+                data-ecl-icon
+              ></span
+            ></span>
+          </button>
+          <div
+            class="ecl-mega-menu__mega ecl-mega-menu__mega--no-info ecl-mega-menu__mega-container"
+            data-ecl-mega-menu-mega
+          >
+            <div class="ecl-container">
+              <div class="ecl-mega-menu__mega-container-scrollable">
+                <div class="ecl">
+                  <h2 class="ecl-u-mt-none ecl-u-mt-l-l">
+                    Minimal demo content for the container option
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="ecl-mega-menu__item ecl-mega-menu__item--promotional"
+          data-ecl-mega-menu-item
+          id="ecl-mega-menu-item-demo-4"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="#anchor-link"
+            id="ecl-mega-menu-item-demo-4-link"
+            >SOTEU</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+
+<!-- Featured priority primary modifier. -->
+<nav
+  class="ecl-mega-menu ecl-mega-menu--featured--primary"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="featured-primary"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="ecl-mega-menu-item-featured-primary-0"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="ecl-mega-menu-item-featured-primary-0-link"
+            >Priority</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+
+<!-- Empty input/root-only contract from tagged defaults. -->
+<nav
+  class="ecl-mega-menu"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="empty-contract"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"></span
+      ></span>
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list"></ul>
+    </section>
+  </div>
+</nav>
+
+<!-- Color mode pass-through examples. -->
+<nav
+  class="ecl-mega-menu ecl-color-mode--blue"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-blue"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-blue-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-blue-item-link"
+            >Blue</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--blue-electric"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-blue-electric"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-blue-electric-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-blue-electric-item-link"
+            >Blue electric</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--blue-navy"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-blue-navy"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-blue-navy-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-blue-navy-item-link"
+            >Blue navy</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--blue-ocean"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-blue-ocean"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-blue-ocean-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-blue-ocean-item-link"
+            >Blue ocean</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--green"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-green"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-green-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-green-item-link"
+            >Green</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--green-dark"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-green-dark"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-green-dark-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-green-dark-item-link"
+            >Green dark</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--green-lemon"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-green-lemon"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-green-lemon-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-green-lemon-item-link"
+            >Green lemon</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--green-pine"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-green-pine"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-green-pine-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-green-pine-item-link"
+            >Green pine</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--orange"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-orange"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-orange-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-orange-item-link"
+            >Orange</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--purple"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-purple"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-purple-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-purple-item-link"
+            >Purple</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--purple-violet"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-purple-violet"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-purple-violet-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-purple-violet-item-link"
+            >Purple violet</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--red-crayola"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-red-crayola"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-red-crayola-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-red-crayola-item-link"
+            >Red crayola</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--red-tomato"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-red-tomato"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-red-tomato-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-red-tomato-item-link"
+            >Red tomato</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--warm-grey"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-warm-grey"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-warm-grey-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-warm-grey-item-link"
+            >Warm grey</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+<nav
+  class="ecl-mega-menu ecl-color-mode--yellow-gold"
+  data-ecl-mega-menu
+  data-ecl-auto-init="MegaMenu"
+  role="navigation"
+  id="mode-yellow-gold"
+>
+  <div class="ecl-mega-menu__overlay">&nbsp;</div>
+  <div class="ecl-container ecl-mega-menu__container">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-mega-menu__open"
+      data-ecl-mega-menu-open
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Menu</span></span
+      >
+    </button>
+    <section class="ecl-mega-menu__inner" data-ecl-mega-menu-inner>
+      <header class="ecl-mega-menu__inner-header"></header>
+      <ul class="ecl-mega-menu__list">
+        <li
+          class="ecl-mega-menu__item"
+          data-ecl-mega-menu-item
+          id="mode-yellow-gold-item"
+        >
+          <a
+            class="ecl-link ecl-link--standalone ecl-mega-menu__link"
+            data-ecl-mega-menu-link
+            href="/example"
+            id="mode-yellow-gold-item-link"
+            >Yellow gold</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
