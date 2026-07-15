@@ -1,145 +1,311 @@
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-basic" id="range-basic-label">Range slider <span class="ecl-form-label__optional">(optional)</span></label>
-    <div class="ecl-help-block" id="range-basic-helper">
-        Optional help text
+<!-- Default range with form-group runtime root -->
+<div class="ecl-form-group ecl-u-mb-l" data-ecl-auto-init="Range">
+  <label class="ecl-form-label" for="range-default" id="range-default-label"
+    >Range slider
+    <span class="ecl-form-label__optional">(optional)</span></label
+  >
+  <div class="ecl-help-block" id="range-default-helper">Optional help text</div>
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m"
+      id="range-default"
+      aria-describedby="range-default-helper range-default-value"
+      aria-label="Range slider"
+      name="range-default"
+      max="30"
+      value="15"
+    />
+    <div
+      class="ecl-range__bubble ecl-range__bubble--visible"
+      data-ecl-range-bubble
+    >
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-basic" name="range-basic" min="0" max="30" value="15" aria-describedby="range-basic-helper range-basic-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-basic-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-default-value">
+      Value:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label ecl-form-label--disabled" for="range-disabled" id="range-disabled-label">Disabled range slider</label>
-    <div class="ecl-help-block ecl-help-block--disabled" id="range-disabled-helper">
-        This range slider is disabled
+<!-- Numeric options, required state, and described-by extension -->
+<div class="ecl-form-group ecl-u-mb-l" data-ecl-auto-init="Range">
+  <label class="ecl-form-label" for="range-step" id="range-step-label"
+    >Required range <span class="ecl-form-label__required">*</span></label
+  >
+  <div class="ecl-help-block" id="range-step-helper">
+    Choose a value in steps of five.
+  </div>
+  <p class="ecl-u-type-paragraph-s" id="range-step-extra">
+    This paragraph is linked with an extra aria-describedby attribute.
+  </p>
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m"
+      id="range-step"
+      aria-describedby="range-step-extra range-step-value"
+      aria-label="Required range"
+      name="range-step"
+      min="5"
+      max="50"
+      step="5"
+      value="25"
+      required
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-disabled" name="range-disabled" min="0" max="100" value="50" disabled aria-describedby="range-disabled-helper range-disabled-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-disabled-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-step-value">
+      Selected:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label ecl-form-label--invalid" for="range-invalid" id="range-invalid-label">Invalid range slider</label>
-    <div class="ecl-help-block" id="range-invalid-helper">
-        Optional help text
+<!-- Disabled range -->
+<div class="ecl-form-group ecl-u-mb-l" data-ecl-auto-init="Range">
+  <label
+    class="ecl-form-label ecl-form-label--disabled"
+    for="range-disabled"
+    id="range-disabled-label"
+    >Disabled range</label
+  >
+  <div class="ecl-help-block ecl-help-block--disabled" id="range-disabled-help">
+    This range slider is disabled.
+  </div>
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m"
+      id="range-disabled"
+      aria-describedby="range-disabled-help range-disabled-value"
+      aria-label="Disabled range"
+      name="range-disabled"
+      max="100"
+      value="50"
+      disabled
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--invalid ecl-range--m" id="range-invalid" name="range-invalid" min="0" max="100" value="50" aria-invalid="true" aria-describedby="range-invalid-helper range-invalid-value range-invalid-error">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-invalid-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-disabled-value">
+      Value:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
-    <div class="ecl-feedback-message" id="range-invalid-error">
-        <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-        <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true"></span>
-        Error text
-    </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-required" id="range-required-label">Required range slider <span class="ecl-form-label__required">*</span></label>
-    <div class="ecl-help-block" id="range-required-helper">
-        This field is required
+<!-- Invalid range -->
+<div class="ecl-form-group ecl-u-mb-l" data-ecl-auto-init="Range">
+  <label
+    class="ecl-form-label ecl-form-label--invalid"
+    for="range-invalid"
+    id="range-invalid-label"
+    >Invalid range</label
+  >
+  <div class="ecl-feedback-message" id="range-invalid-error">
+    <span
+      class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon"
+      aria-hidden="true"
+    ></span>
+    Error text
+  </div>
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--invalid ecl-range--m"
+      id="range-invalid"
+      aria-describedby="range-invalid-error range-invalid-value"
+      aria-label="Invalid range"
+      name="range-invalid"
+      max="100"
+      value="50"
+      aria-invalid="true"
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-required" name="range-required" min="0" max="100" value="50" required aria-describedby="range-required-helper range-required-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-required-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-invalid-value">
+      Value:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-step" id="range-step-label">Range with step value</label>
-    <div class="ecl-help-block" id="range-step-helper">
-        This range has a step of 5
+<!-- Width variants -->
+<div class="ecl-u-mb-l" data-ecl-auto-init="Range">
+  <div
+    class="ecl-range-container ecl-range-container--s"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--s"
+      id="range-small"
+      aria-describedby="range-small-value"
+      aria-label="Small range"
+      max="100"
+      value="25"
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-step" name="range-step" min="0" max="50" step="5" value="25" aria-describedby="range-step-helper range-step-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-step-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-small-value">
+      Small:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-small" id="range-small-label">Small range slider</label>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--s" id="range-small" name="range-small" min="0" max="100" value="50" aria-describedby="range-small-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-small-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+<div class="ecl-u-mb-l" data-ecl-auto-init="Range">
+  <div
+    class="ecl-range-container ecl-range-container--l"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--l"
+      id="range-large"
+      aria-describedby="range-large-value"
+      aria-label="Large range"
+      max="100"
+      value="75"
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
+    <div class="ecl-range__value" id="range-large-value">
+      Large:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
+    </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-medium" id="range-medium-label">Medium range slider</label>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-medium" name="range-medium" min="0" max="100" value="50" aria-describedby="range-medium-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-medium-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+<!-- Extra classes and attributes on the input -->
+<div class="ecl-u-mb-l" data-ecl-auto-init="Range">
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m custom-class custom-class--test"
+      id="range-extension"
+      aria-describedby="range-extension-value"
+      aria-label="Range with extra attributes"
+      max="20"
+      value="10"
+      data-test="data-test-value"
+      data-flag
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
+    <div class="ecl-range__value" id="range-extension-value">
+      Extra:
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
+    </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-large" id="range-large-label">Large range slider</label>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--l" id="range-large" name="range-large" min="0" max="100" value="50" aria-describedby="range-large-value">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
-        <div class="ecl-range__value" id="range-large-value">
-            Value: <span class="ecl-range__value-current" data-ecl-range-value-current></span>
-        </div>
+<!-- Empty-input contract with deterministic ID -->
+<div class="ecl-u-mb-l" data-ecl-auto-init="Range">
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m"
+      id="range-empty"
+      aria-describedby="range-empty-value"
+      aria-label="Minimal range"
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
+    <div class="ecl-range__value" id="range-empty-value">
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
+    </div>
+  </div>
 </div>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l" data-ecl-range data-ecl-auto-init="Range">
-    <label class="ecl-form-label" for="range-no-value" id="range-no-value-label">Range without value display</label>
-    <div class="ecl-help-block" id="range-no-value-helper">
-        This range slider does not display the current value
+<!-- Color mode coverage -->
+<div class="ecl-color-mode--blue ecl-u-mb-l" data-ecl-auto-init="Range">
+  <div
+    class="ecl-range-container ecl-range-container--m"
+    data-ecl-range-container
+  >
+    <input
+      data-ecl-range-input
+      type="range"
+      class="ecl-range ecl-range--m"
+      id="range-mode-blue"
+      aria-describedby="range-mode-blue-value"
+      aria-label="Blue mode range"
+      max="10"
+      value="5"
+    />
+    <div class="ecl-range__bubble" data-ecl-range-bubble>
+      <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
     </div>
-    <div class="ecl-range-container" data-ecl-range-container>
-        <input data-ecl-range-input type="range" class="ecl-range ecl-range--m" id="range-no-value" name="range-no-value" min="0" max="100" value="50" aria-describedby="range-no-value-helper">
-        <div class="ecl-range__bubble" data-ecl-range-bubble>
-            <span class="ecl-range__value-bubble" data-ecl-range-value-current></span>
-        </div>
+    <div class="ecl-range__value" id="range-mode-blue-value">
+      <span
+        class="ecl-range__value-current"
+        data-ecl-range-value-current
+      ></span>
     </div>
+  </div>
+</div>
+
+<div
+  class="ecl-color-mode--blue-electric ecl-color-mode--blue-navy ecl-color-mode--blue-ocean ecl-color-mode--green ecl-color-mode--green-dark ecl-color-mode--green-lemon ecl-color-mode--green-pine ecl-color-mode--orange ecl-color-mode--purple ecl-color-mode--purple-violet ecl-color-mode--red-crayola ecl-color-mode--red-tomato ecl-color-mode--warm-grey ecl-color-mode--yellow-gold"
+>
+  <!-- Remaining EC color modes are global wrapper classes; the range markup is unchanged. -->
 </div>
