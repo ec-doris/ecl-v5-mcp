@@ -1,0 +1,378 @@
+<!-- Default EC splash page: logo, title, EU and non-EU groups, active language -->
+<div class="ecl-splash-page">
+  <div class="ecl-splash-page__logo-container">
+    <div class="ecl-container">
+      <a
+        class="ecl-link ecl-link--standalone ecl-splash-page__logo-link"
+        href="/example"
+      >
+        <picture class="ecl-picture ecl-splash-page__picture">
+          <source media="(min-width: 768px)" srcset="/logo-ec--en.svg" />
+          <img
+            alt="European Commission"
+            class="ecl-splash-page__logo-image"
+            src="/logo-ec--mute.svg"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+  <div class="ecl-container ecl-splash-page__language-container">
+    <h1 class="ecl-splash-page__language-title">Select your language</h1>
+    <div class="ecl-splash-page__language-content">
+      <div class="ecl-splash-page__language-category">
+        <h2 class="ecl-splash-page__language-category-title">
+          Official EU languages:
+        </h2>
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="bg"
+            >
+              <span class="ecl-splash-page__language-link-code">bg</span>
+              <span class="ecl-splash-page__language-link-label" lang="bg"
+                >български</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="es"
+            >
+              <span class="ecl-splash-page__language-link-code">es</span>
+              <span class="ecl-splash-page__language-link-label" lang="es"
+                >español</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link ecl-splash-page__language-link--active"
+              href="/example"
+              hreflang="en"
+            >
+              <span class="ecl-splash-page__language-link-code">en</span>
+              <span class="ecl-splash-page__language-link-label" lang="en"
+                >English</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ecl-splash-page__language-category">
+        <h2 class="ecl-splash-page__language-category-title">
+          Other languages:
+        </h2>
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="ar"
+            >
+              <span class="ecl-splash-page__language-link-code">ar</span>
+              <span class="ecl-splash-page__language-link-label" lang="ar"
+                >عَرَبِيّ</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="zh"
+            >
+              <span class="ecl-splash-page__language-link-code">zh</span>
+              <span class="ecl-splash-page__language-link-label" lang="zh"
+                >中文</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Extension hooks and desktop-only logo fallback -->
+<div
+  class="ecl-splash-page custom-class custom-class--test"
+  data-test="data-test-value"
+  data-test-flag
+>
+  <div class="ecl-splash-page__logo-container">
+    <div class="ecl-container">
+      <a
+        class="ecl-link ecl-link--standalone ecl-splash-page__logo-link"
+        href="/example"
+      >
+        <picture class="ecl-picture ecl-splash-page__picture" title="Home">
+          <source media="(min-width: 768px)" srcset="/logo-ec--en.svg" />
+          <img
+            alt="European Commission"
+            class="ecl-splash-page__logo-image"
+            src="/logo-ec--en.svg"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content">
+      <div
+        class="ecl-splash-page__language-category ecl-splash-page__language-single-item-category"
+      >
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="fr"
+            >
+              <span class="ecl-splash-page__language-link-code">fr</span>
+              <span class="ecl-splash-page__language-link-label" lang="fr"
+                >français</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Two EU items without logo, title, or category headings -->
+<div class="ecl-splash-page">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content">
+      <div
+        class="ecl-splash-page__language-category ecl-splash-page__language-two-item-category"
+      >
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="de"
+            >
+              <span class="ecl-splash-page__language-link-code">de</span>
+              <span class="ecl-splash-page__language-link-label" lang="de"
+                >Deutsch</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="it"
+            >
+              <span class="ecl-splash-page__language-link-code">it</span>
+              <span class="ecl-splash-page__language-link-label" lang="it"
+                >italiano</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Four EU items and a non-EU active item -->
+<div class="ecl-splash-page">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <h1 class="ecl-splash-page__language-title">Choose a language</h1>
+    <div class="ecl-splash-page__language-content">
+      <div
+        class="ecl-splash-page__language-category ecl-splash-page__language-four-item-category"
+      >
+        <h2 class="ecl-splash-page__language-category-title">EU languages</h2>
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="nl"
+            >
+              <span class="ecl-splash-page__language-link-code">nl</span>
+              <span class="ecl-splash-page__language-link-label" lang="nl"
+                >Nederlands</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="pl"
+            >
+              <span class="ecl-splash-page__language-link-code">pl</span>
+              <span class="ecl-splash-page__language-link-label" lang="pl"
+                >polski</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="pt"
+            >
+              <span class="ecl-splash-page__language-link-code">pt</span>
+              <span class="ecl-splash-page__language-link-label" lang="pt"
+                >português</span
+              >
+            </a>
+          </li>
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="sv"
+            >
+              <span class="ecl-splash-page__language-link-code">sv</span>
+              <span class="ecl-splash-page__language-link-label" lang="sv"
+                >svenska</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ecl-splash-page__language-category">
+        <h2 class="ecl-splash-page__language-category-title">
+          Other languages
+        </h2>
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link ecl-splash-page__language-link--active"
+              href="/example"
+              hreflang="ja"
+            >
+              <span class="ecl-splash-page__language-link-code">ja</span>
+              <span class="ecl-splash-page__language-link-label" lang="ja"
+                >日本語</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- No language items: tagged language container shell -->
+<div class="ecl-splash-page">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <h1 class="ecl-splash-page__language-title">Select your language</h1>
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+
+<!-- Tagged empty/root-only output -->
+<div class="ecl-splash-page">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+
+<!-- EC color mode roots passed through extra_classes -->
+<div class="ecl-splash-page ecl-color-mode--blue">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content">
+      <div
+        class="ecl-splash-page__language-category ecl-splash-page__language-single-item-category"
+      >
+        <ul class="ecl-splash-page__language-list" translate="no">
+          <li class="ecl-splash-page__language-item">
+            <a
+              class="ecl-link ecl-link--standalone ecl-splash-page__language-link"
+              href="/example"
+              hreflang="en"
+            >
+              <span class="ecl-splash-page__language-link-code">en</span>
+              <span class="ecl-splash-page__language-link-label" lang="en"
+                >English</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--blue-electric">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--blue-navy">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--blue-ocean">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--green">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--green-dark">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--green-lemon">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--green-pine">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--orange">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--purple">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--purple-violet">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--red-crayola">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--red-tomato">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--warm-grey">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
+<div class="ecl-splash-page ecl-color-mode--yellow-gold">
+  <div class="ecl-container ecl-splash-page__language-container">
+    <div class="ecl-splash-page__language-content"></div>
+  </div>
+</div>
