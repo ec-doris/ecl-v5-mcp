@@ -1,88 +1,222 @@
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-basic-1" id="text-input-basic-1-label">Label <span class="ecl-form-label__optional">(optional)</span></label>
-    <div class="ecl-help-block" id="text-input-basic-1-helper">
-        Optional help text
-    </div>
-    <input aria-describedby="text-input-basic-1-helper" class="ecl-text-input ecl-text-input--m" id="text-input-basic-1" name="text-input-basic-1" placeholder="Placeholder text" type="text">
-</div>
+<!-- Default text input -->
+<input
+  id="example-input-id-1"
+  class="ecl-text-input ecl-text-input--m"
+  type="text"
+  placeholder="Placeholder text"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-    <label class="ecl-form-label ecl-form-label--disabled" for="text-input-disabled-1" id="text-input-disabled-1-label">Label <span class="ecl-form-label__optional">(optional)</span></label>
-    <div class="ecl-help-block ecl-help-block--disabled" id="text-input-disabled-1-helper">
-        Optional help text
-    </div>
-    <input aria-describedby="text-input-disabled-1-helper" class="ecl-text-input ecl-text-input--m" disabled id="text-input-disabled-1" name="text-input-disabled-1" placeholder="Placeholder text" type="text">
-</div>
+<!-- Named text input -->
+<input
+  id="text-input-named"
+  class="ecl-text-input ecl-text-input--m"
+  name="email"
+  type="email"
+  placeholder="name@example.eu"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-    <label class="ecl-form-label ecl-form-label--invalid" for="text-input-invalid-1" id="text-input-invalid-1-label">Label <span class="ecl-form-label__optional">(optional)</span></label>
-    <div class="ecl-help-block" id="text-input-invalid-1-helper">
-        Optional help text
-    </div>
-    <input aria-describedby="text-input-invalid-1-helper text-input-invalid-1-invalid" aria-invalid="true" class="ecl-text-input ecl-text-input--invalid ecl-text-input--m" id="text-input-invalid-1" name="text-input-invalid-1" placeholder="Placeholder text" type="text">
-    <div class="ecl-feedback-message" id="text-input-invalid-1-invalid">
-        <!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. -->
-        <span class="wt-icon--error-outline ecl-icon ecl-icon--xs ecl-feedback-message__icon" aria-hidden="true"></span>
-        Error text
-    </div>
-</div>
+<!-- Invalid text input -->
+<input
+  id="text-input-invalid"
+  class="ecl-text-input ecl-text-input--invalid ecl-text-input--m"
+  name="invalid-example"
+  type="text"
+  placeholder="Invalid value"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-required-1" id="text-input-required-1-label">Label <span class="ecl-form-label__required">*</span></label>
-    <div class="ecl-help-block" id="text-input-required-1-helper">
-        Optional help text
-    </div>
-    <input aria-describedby="text-input-required-1-helper" class="ecl-text-input ecl-text-input--m" id="text-input-required-1" name="text-input-required-1" placeholder="Placeholder text" required type="text">
-</div>
+<!-- Disabled text input -->
+<input
+  id="text-input-disabled"
+  class="ecl-text-input ecl-text-input--m"
+  name="disabled-example"
+  type="text"
+  placeholder="Disabled value"
+  disabled
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-small-1" id="text-input-small-1-label">Small</label>
-    <input class="ecl-text-input ecl-text-input--s" id="text-input-small-1" name="text-input-small-1" type="text">
-</div>
+<!-- Required text input -->
+<input
+  id="text-input-required"
+  class="ecl-text-input ecl-text-input--m"
+  name="required-example"
+  type="text"
+  placeholder="Required value"
+  required
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-medium-1" id="text-input-medium-1-label">Medium</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-medium-1" name="text-input-medium-1" type="text">
-</div>
+<!-- Readonly text input through extension attributes -->
+<input
+  id="text-input-readonly"
+  class="ecl-text-input ecl-text-input--m"
+  name="readonly-example"
+  type="text"
+  readonly
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-large-1" id="text-input-large-1-label">Large</label>
-    <input class="ecl-text-input ecl-text-input--l" id="text-input-large-1" name="text-input-large-1" type="text">
-</div>
+<!-- Small width -->
+<input
+  id="text-input-small"
+  class="ecl-text-input ecl-text-input--s"
+  name="small-example"
+  type="text"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-text-1" id="text-input-text-1-label">Text</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-text-1" name="text-input-text-1" type="text">
-</div>
+<!-- Medium width -->
+<input
+  id="text-input-medium"
+  class="ecl-text-input ecl-text-input--m"
+  name="medium-example"
+  type="text"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-email-1" id="text-input-email-1-label">Email</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-email-1" name="text-input-email-1" type="email">
-</div>
+<!-- Large width -->
+<input
+  id="text-input-large"
+  class="ecl-text-input ecl-text-input--l"
+  name="large-example"
+  type="text"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-password-1" id="text-input-password-1-label">Password</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-password-1" name="text-input-password-1" type="password">
-</div>
+<!-- Search type -->
+<input
+  id="text-input-search"
+  class="ecl-text-input ecl-text-input--m"
+  name="search-example"
+  type="search"
+  placeholder="Search"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mr-l ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-number-1" id="text-input-number-1-label">Number</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-number-1" name="text-input-number-1" type="number">
-</div>
+<!-- Number type -->
+<input
+  id="text-input-number"
+  class="ecl-text-input ecl-text-input--m"
+  name="number-example"
+  type="number"
+/>
 
-<!-- Sub component: form-group. Use the form-group component template; see <code>form-group</code> sub component for full markup guidance. -->
-<div class="ecl-form-group ecl-u-mb-l">
-    <label class="ecl-form-label" for="text-input-value-1" id="text-input-value-1-label">Label</label>
-    <input class="ecl-text-input ecl-text-input--m" id="text-input-value-1" name="text-input-value-1" type="text" value="Hello world!">
-</div>
+<!-- Extension classes and attributes -->
+<input
+  id="text-input-extension"
+  class="ecl-text-input ecl-text-input--m custom-class custom-class--test"
+  name="extension-example"
+  type="text"
+  data-test="data-test-value"
+  data-valueless
+/>
+
+<!-- Value attribute through extension attributes -->
+<input
+  id="text-input-value"
+  class="ecl-text-input ecl-text-input--m"
+  name="value-example"
+  type="text"
+  value="Hello world!"
+/>
+
+<!-- Empty optional id, name, type, and placeholder output -->
+<input class="ecl-text-input ecl-text-input--m" />
+
+<!-- Color mode: blue -->
+<input
+  id="text-input-color-blue"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--blue"
+  type="text"
+/>
+
+<!-- Color mode: blue electric -->
+<input
+  id="text-input-color-blue-electric"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--blue-electric"
+  type="text"
+/>
+
+<!-- Color mode: blue navy -->
+<input
+  id="text-input-color-blue-navy"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--blue-navy"
+  type="text"
+/>
+
+<!-- Color mode: blue ocean -->
+<input
+  id="text-input-color-blue-ocean"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--blue-ocean"
+  type="text"
+/>
+
+<!-- Color mode: green -->
+<input
+  id="text-input-color-green"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--green"
+  type="text"
+/>
+
+<!-- Color mode: green dark -->
+<input
+  id="text-input-color-green-dark"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--green-dark"
+  type="text"
+/>
+
+<!-- Color mode: green lemon -->
+<input
+  id="text-input-color-green-lemon"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--green-lemon"
+  type="text"
+/>
+
+<!-- Color mode: green pine -->
+<input
+  id="text-input-color-green-pine"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--green-pine"
+  type="text"
+/>
+
+<!-- Color mode: orange -->
+<input
+  id="text-input-color-orange"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--orange"
+  type="text"
+/>
+
+<!-- Color mode: purple -->
+<input
+  id="text-input-color-purple"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--purple"
+  type="text"
+/>
+
+<!-- Color mode: purple violet -->
+<input
+  id="text-input-color-purple-violet"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--purple-violet"
+  type="text"
+/>
+
+<!-- Color mode: red crayola -->
+<input
+  id="text-input-color-red-crayola"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--red-crayola"
+  type="text"
+/>
+
+<!-- Color mode: red tomato -->
+<input
+  id="text-input-color-red-tomato"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--red-tomato"
+  type="text"
+/>
+
+<!-- Color mode: warm grey -->
+<input
+  id="text-input-color-warm-grey"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--warm-grey"
+  type="text"
+/>
+
+<!-- Color mode: yellow gold -->
+<input
+  id="text-input-color-yellow-gold"
+  class="ecl-text-input ecl-text-input--m ecl-color-mode--yellow-gold"
+  type="text"
+/>
