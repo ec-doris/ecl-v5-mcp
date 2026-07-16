@@ -17,6 +17,7 @@
     - "title" (optional) (string) OR (object with Link component in property)
     - "title_with_separator" (optional) (bolean) (default: false)
     - "description" (optional) (string) (default: '')
+    - "action_button" (optional) (object) (default: '')
     - "content_before" (optional) (string) (default: '')
     - "links" (optional) (array of objects) (default: []),
       - "link" (link object)
@@ -202,6 +203,22 @@
               </li>
             {% endfor %}
             </ul>
+          {% endif %}
+          {# action button #}
+          {% if _sections.action_button is not empty %}
+            {% set _button_size = _sections.action_button.link.size|default('m') %}
+            {% set _button_class = 'ecl-site-footer__action-button' %}
+            {% if _button_size != 'l' %}
+              {% set _button_class = _button_class ~ ' ecl-button--' ~ _button_size %}
+            {% endif %}
+            {% set _button_type = _sections.action_button.link.type|default('secondary-neutral') %}
+
+            {% include '@ecl/link/link.html.twig' with _sections.action_button|merge({
+              link: _sections.action_button.link|default({})|merge({
+                type: _button_type,
+              }),
+              extra_classes: _button_class,
+            }) only %}
           {% endif %}
           </div>
         {% endfor %}
