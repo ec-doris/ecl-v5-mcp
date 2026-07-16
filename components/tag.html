@@ -1,34 +1,159 @@
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <a href="/example" class="ecl-tag ecl-u-mr-m ecl-u-mb-s">Link tag</a>
-    <a href="/example" class="ecl-tag ecl-u-mr-m ecl-u-mb-s">Link tag with external<!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--external ecl-icon ecl-icon--2xs ecl-tag__icon ecl-tag__icon--external" aria-hidden="true"></span></a>
-    <a href="/example" class="ecl-tag ecl-tag--nowrap ecl-u-mr-m ecl-u-mb-s">Link tag with nowrap</a>
-</div>
+<!-- Link tag -->
+<a href="/example" class="ecl-tag">Link tag</a>
 
-<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-mb-l">
-    <button type="button" class="ecl-tag ecl-tag--removable ecl-u-mr-m ecl-u-mb-s">Removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-    <button type="button" class="ecl-tag ecl-tag--removable ecl-u-mr-m ecl-u-mb-s">Another removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-</div>
+<!-- External link tag with nowrap and extension hooks -->
+<a
+  href="/example"
+  class="ecl-tag ecl-tag--nowrap custom-tag-link"
+  data-test="tag-link"
+  data-selected
+>
+  Link tag with external icon
+  <span
+    class="wt-icon--external ecl-icon ecl-icon--2xs ecl-tag__icon ecl-tag__icon--external ecl-icon--external"
+    aria-hidden="true"
+  ></span>
+</a>
 
-<ul class="ecl-tag-set ecl-u-mb-l">
-    <li class="ecl-tag-set__item">
-        <a href="/example" class="ecl-tag">Link tag</a>
-    </li>
-    <li class="ecl-tag-set__item">
-        <button type="button" class="ecl-tag ecl-tag--removable">Removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-    </li>
-    <li class="ecl-tag-set__item">
-        <button type="button" class="ecl-tag ecl-tag--removable">Removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-    </li>
-    <li class="ecl-tag-set__item">
-        <button type="button" class="ecl-tag ecl-tag--removable">Removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-    </li>
-    <li class="ecl-tag-set__item">
-        <a href="/example" class="ecl-tag">Link tag</a>
-    </li>
-    <li class="ecl-tag-set__item">
-        <button type="button" class="ecl-tag ecl-tag--removable">Removable tag<span class="ecl-tag__icon"><!-- Sub component: icon. Use the icon component template; see <code>icon</code> sub component for full markup guidance. --><span class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close" role="img" aria-label="Dismiss"></span></span></button>
-    </li>
-    <li class="ecl-tag-set__item">
-        <a href="/example" class="ecl-tag">Link tag</a>
-    </li>
+<!-- Removable tag -->
+<button type="button" class="ecl-tag ecl-tag--removable">
+  Removable tag
+  <span class="ecl-tag__icon">
+    <span
+      class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+      role="img"
+      aria-hidden="false"
+      title="Dismiss"
+    ></span>
+  </span>
+</button>
+
+<!-- Removable tag without aria label -->
+<button type="button" class="ecl-tag ecl-tag--removable">
+  Removable tag without title
+  <span class="ecl-tag__icon">
+    <span
+      class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+      aria-hidden="true"
+    ></span>
+  </span>
+</button>
+
+<!-- Tag set: snapshot contract mixes link and removable items -->
+<ul class="ecl-tag-set custom-tag-set" data-test="tag-set" data-filtered>
+  <li class="ecl-tag-set__item">
+    <a href="/example" class="ecl-tag">Link tag</a>
+  </li>
+  <li class="ecl-tag-set__item">
+    <button type="button" class="ecl-tag ecl-tag--removable">
+      Removable tag
+      <span class="ecl-tag__icon">
+        <span
+          class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+          role="img"
+          aria-hidden="false"
+          title="Dismiss"
+        ></span>
+      </span>
+    </button>
+  </li>
+  <li class="ecl-tag-set__item">
+    <button type="button" class="ecl-tag ecl-tag--removable">
+      Another removable tag
+      <span class="ecl-tag__icon">
+        <span
+          class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+          role="img"
+          aria-hidden="false"
+          title="Dismiss"
+        ></span>
+      </span>
+    </button>
+  </li>
+  <li class="ecl-tag-set__item">
+    <a href="/example" class="ecl-tag">Another link tag</a>
+  </li>
 </ul>
+
+<!-- Link-only tag set -->
+<ul class="ecl-tag-set">
+  <li class="ecl-tag-set__item">
+    <a href="/example" class="ecl-tag">Policy</a>
+  </li>
+  <li class="ecl-tag-set__item">
+    <a href="/example" class="ecl-tag">Funding</a>
+  </li>
+</ul>
+
+<!-- Removable-only tag set with propagated and overridden color modes -->
+<ul class="ecl-tag-set">
+  <li class="ecl-tag-set__item">
+    <button
+      type="button"
+      class="ecl-tag ecl-color-mode--blue ecl-tag--removable"
+    >
+      Blue propagated tag
+      <span class="ecl-tag__icon">
+        <span
+          class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+          role="img"
+          aria-hidden="false"
+          title="Dismiss"
+        ></span>
+      </span>
+    </button>
+  </li>
+  <li class="ecl-tag-set__item">
+    <button
+      type="button"
+      class="ecl-tag ecl-color-mode--green ecl-tag--removable"
+    >
+      Green override tag
+      <span class="ecl-tag__icon">
+        <span
+          class="wt-icon--close-outline ecl-icon ecl-icon--xs ecl-tag__icon-close ecl-icon--close-outline"
+          role="img"
+          aria-hidden="false"
+          title="Dismiss"
+        ></span>
+      </span>
+    </button>
+  </li>
+</ul>
+
+<!-- Empty tag set edge contract: tagged Twig emits no root when items is empty -->
+
+<!-- Compact EC color mode coverage -->
+<a href="/example" class="ecl-tag ecl-color-mode--blue">Blue tag</a>
+<a href="/example" class="ecl-tag ecl-color-mode--blue-electric">
+  Blue electric tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--blue-navy">Blue navy tag</a>
+<a href="/example" class="ecl-tag ecl-color-mode--blue-ocean">
+  Blue ocean tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--green">Green tag</a>
+<a href="/example" class="ecl-tag ecl-color-mode--green-dark">
+  Green dark tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--green-lemon">
+  Green lemon tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--green-pine">
+  Green pine tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--orange">Orange tag</a>
+<a href="/example" class="ecl-tag ecl-color-mode--purple">Purple tag</a>
+<a href="/example" class="ecl-tag ecl-color-mode--purple-violet">
+  Purple violet tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--red-crayola">
+  Red crayola tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--red-tomato">
+  Red tomato tag
+</a>
+<a href="/example" class="ecl-tag ecl-color-mode--warm-grey"> Warm grey tag </a>
+<a href="/example" class="ecl-tag ecl-color-mode--yellow-gold">
+  Yellow gold tag
+</a>
