@@ -1,270 +1,553 @@
-<!-- Basic Table -->
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Default table</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Basic table structure with header row and data rows. All tables must be wrapped in the <code>ecl-table-responsive</code> container for responsive behavior.</p>
-
+<!-- Default table -->
 <div class="ecl-table-responsive">
   <table class="ecl-table" id="table-default">
-    <caption class="ecl-table__caption">Table caption</caption>
+    <caption class="ecl-table__caption">
+      Table caption
+    </caption>
     <thead class="ecl-table__head">
       <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-default-header-1" scope="col">Job title</th>
-        <th class="ecl-table__header" id="table-default-header-2" scope="col">EFSI finance approved by EIB</th>
-        <th class="ecl-table__header" id="table-default-header-3" scope="col">Location</th>
-        <th class="ecl-table__header" id="table-default-header-4" scope="col">Organization</th>
-        <th class="ecl-table__header" id="table-default-header-5" scope="col">Type of contract</th>
+        <th id="table-default-header-1" scope="col" class="ecl-table__header">
+          Job title
+        </th>
+        <th id="table-default-header-2" scope="col" class="ecl-table__header">
+          EFSI finance approved by EIB
+        </th>
+        <th id="table-default-header-3" scope="col" class="ecl-table__header">
+          Location
+        </th>
       </tr>
     </thead>
     <tbody class="ecl-table__body">
       <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Competition Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Administators in Competition Law
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="EFSI finance approved by EIB"
+        >
+          AD7
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)
+        </td>
       </tr>
       <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Economic and Monetary Union Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Financial rules appliable to the EU budget</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Corporate Support Officer</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">FG IV</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Prague (Czech Republic)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Policy Officer - Clean Energy For All Europeans</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">FG II, FG III, FG IV</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Vigo (Spain)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">EU-LISA</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Seconded National Expert (SNE)</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Corporate Support Officer
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="EFSI finance approved by EIB"
+        >
+          FG IV
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Prague (Czech Republic)
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<!-- Zebra Table -->
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Zebra striped table</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Add the <code>ecl-table--zebra</code> modifier class for alternating row background colors.</p>
-
-<div class="ecl-table-responsive">
-  <table class="ecl-table ecl-table--zebra" id="table-zebra">
-    <caption class="ecl-table__caption">Jobs at European institutions</caption>
-    <thead class="ecl-table__head">
-      <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-zebra-header-1" scope="col">Job title</th>
-        <th class="ecl-table__header" id="table-zebra-header-2" scope="col">EFSI finance approved by EIB</th>
-        <th class="ecl-table__header" id="table-zebra-header-3" scope="col">Location</th>
-        <th class="ecl-table__header" id="table-zebra-header-4" scope="col">Organization</th>
-        <th class="ecl-table__header" id="table-zebra-header-5" scope="col">Type of contract</th>
-      </tr>
-    </thead>
-    <tbody class="ecl-table__body">
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Competition Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Economic and Monetary Union Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Financial rules appliable to the EU budget</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Corporate Support Officer</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">FG IV</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Prague (Czech Republic)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Policy Officer - Clean Energy For All Europeans</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">FG II, FG III, FG IV</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Vigo (Spain)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">EU-LISA</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Seconded National Expert (SNE)</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- Multi-Header Table -->
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Multi-header table</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Tables can have multiple header rows with <code>colspan</code> and <code>rowspan</code> attributes. Use <code>scope="colgroup"</code> for headers spanning multiple columns. Cells in grouped columns need the <code>ecl-table__cell--group</code> modifier class and proper <code>data-ecl-table-header-group</code> attribute.</p>
-
-<div class="ecl-table-responsive">
-  <table class="ecl-table" id="table-multi">
-    <caption class="ecl-table__caption">Table with multi-level headers</caption>
-    <thead class="ecl-table__head">
-      <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-multi-header-1" rowspan="2" scope="col">Job title</th>
-        <th class="ecl-table__header" id="table-multi-header-2" rowspan="2" scope="col">EFSI finance approved by EIB</th>
-        <th class="ecl-table__header" id="table-multi-header-3" colspan="2" scope="colgroup">Extra information</th>
-        <th class="ecl-table__header" id="table-multi-header-4" rowspan="2" scope="col">Location</th>
-      </tr>
-      <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-multi-header-5" headers="table-multi-header-3" scope="col">Organization</th>
-        <th class="ecl-table__header" id="table-multi-header-6" headers="table-multi-header-3" scope="col">Type of contract</th>
-      </tr>
-    </thead>
-    <tbody class="ecl-table__body">
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-multi-header-1">Administators in Competition Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-multi-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-multi-header-3 table-multi-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-multi-header-3 table-multi-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-multi-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-multi-header-1">Administators in Economic and Monetary Union Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-multi-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-multi-header-3 table-multi-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-multi-header-3 table-multi-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-multi-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-multi-header-1">Administators in Financial rules appliable to the EU budget</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-multi-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-multi-header-3 table-multi-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-multi-header-3 table-multi-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-multi-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-multi-header-1">Corporate Support Officer</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-multi-header-2">FG IV</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-multi-header-3 table-multi-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-multi-header-3 table-multi-header-6">Temporary</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-multi-header-4">Prague (Czech Republic)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-multi-header-1">Policy Officer - Clean Energy For All Europeans</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-multi-header-2">FG II, FG III, FG IV</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-multi-header-3 table-multi-header-5">EU-LISA</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-multi-header-3 table-multi-header-6">Seconded National Expert (SNE)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-multi-header-4">Vigo (Spain)</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- Sortable Table -->
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Sortable table</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Enable table sorting with JavaScript by adding <code>data-ecl-table</code>, <code>data-ecl-auto-init="Table"</code>, and sorting label attributes to the table element. Add <code>data-ecl-table-sort-toggle</code> to sortable header cells (not to headers with <code>colspan</code>).</p>
-
-<div class="ecl-table-responsive">
-  <table class="ecl-table" id="table-sortable" data-ecl-table data-ecl-auto-init="Table" data-ecl-table-sort-label-asc="Sort ascending" data-ecl-table-sort-label-desc="Sort descending" data-ecl-table-sort-label-default="Sort default">
-    <caption class="ecl-table__caption">Sortable jobs table</caption>
-    <thead class="ecl-table__head">
-      <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-sortable-header-1" rowspan="2" scope="col" data-ecl-table-sort-toggle>Job title</th>
-        <th class="ecl-table__header" id="table-sortable-header-2" rowspan="2" scope="col" data-ecl-table-sort-toggle>EFSI finance approved by EIB</th>
-        <th class="ecl-table__header" id="table-sortable-header-3" colspan="2" scope="colgroup">Extra information</th>
-        <th class="ecl-table__header" id="table-sortable-header-4" rowspan="2" scope="col" data-ecl-table-sort-toggle>Location</th>
-      </tr>
-      <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-sortable-header-5" headers="table-sortable-header-3" scope="col" data-ecl-table-sort-toggle>Organization</th>
-        <th class="ecl-table__header" id="table-sortable-header-6" headers="table-sortable-header-3" scope="col" data-ecl-table-sort-toggle>Type of contract</th>
-      </tr>
-    </thead>
-    <tbody class="ecl-table__body">
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-sortable-header-1">Administators in Competition Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-sortable-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-sortable-header-3 table-sortable-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-sortable-header-3 table-sortable-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-sortable-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-sortable-header-1">Administators in Economic and Monetary Union Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-sortable-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-sortable-header-3 table-sortable-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-sortable-header-3 table-sortable-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-sortable-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-sortable-header-1">Administators in Financial rules appliable to the EU budget</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-sortable-header-2">AD7</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-sortable-header-3 table-sortable-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-sortable-header-3 table-sortable-header-6">Permanent official</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-sortable-header-4">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-sortable-header-1">Corporate Support Officer</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-sortable-header-2">FG IV</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-sortable-header-3 table-sortable-header-5">European Commission</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-sortable-header-3 table-sortable-header-6">Temporary</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-sortable-header-4">Prague (Czech Republic)</td>
-      </tr>
-      <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title" headers="table-sortable-header-1">Policy Officer - Clean Energy For All Europeans</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB" headers="table-sortable-header-2">FG II, FG III, FG IV</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Organization" data-ecl-table-header-group="Extra information" headers="table-sortable-header-3 table-sortable-header-5">EU-LISA</td>
-        <td class="ecl-table__cell ecl-table__cell--group" data-ecl-table-header="Type of contract" headers="table-sortable-header-3 table-sortable-header-6">Seconded National Expert (SNE)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location" headers="table-sortable-header-4">Vigo (Spain)</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- Simple Table -->
-<h3 class="ecl-u-type-heading-3 ecl-u-mt-xl">Simple table (mobile behavior)</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Add the <code>ecl-table--simple</code> modifier class to use horizontal scrolling on mobile instead of the default ECL responsive table behavior.</p>
-
+<!-- Simple table -->
 <div class="ecl-table-responsive">
   <table class="ecl-table ecl-table--simple" id="table-simple">
-    <caption class="ecl-table__caption">Simple table with horizontal scroll</caption>
+    <caption class="ecl-table__caption">
+      Simple table with horizontal scroll
+    </caption>
     <thead class="ecl-table__head">
       <tr class="ecl-table__row">
-        <th class="ecl-table__header" id="table-simple-header-1" scope="col">Job title</th>
-        <th class="ecl-table__header" id="table-simple-header-2" scope="col">EFSI finance approved by EIB</th>
-        <th class="ecl-table__header" id="table-simple-header-3" scope="col">Location</th>
-        <th class="ecl-table__header" id="table-simple-header-4" scope="col">Organization</th>
-        <th class="ecl-table__header" id="table-simple-header-5" scope="col">Type of contract</th>
+        <th id="table-simple-header-1" scope="col" class="ecl-table__header">
+          Job title
+        </th>
+        <th id="table-simple-header-2" scope="col" class="ecl-table__header">
+          Location
+        </th>
       </tr>
     </thead>
     <tbody class="ecl-table__body">
       <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Competition Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Policy Officer - Clean Energy For All Europeans
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Vigo (Spain)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Zebra table -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-table--zebra" id="table-zebra">
+    <caption class="ecl-table__caption">
+      Jobs at European institutions
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th id="table-zebra-header-1" scope="col" class="ecl-table__header">
+          Job title
+        </th>
+        <th id="table-zebra-header-2" scope="col" class="ecl-table__header">
+          Type of contract
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Administators in Financial rules appliable to the EU budget
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">
+          Permanent official
+        </td>
       </tr>
       <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Administators in Economic and Monetary Union Law</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">AD7</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Brussels (Belgium), Luxembourg (Luxembourg), Strasbourg (France)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Corporate Support Officer
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">
+          Temporary
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Multi-header table -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table" id="table-multi">
+    <caption class="ecl-table__caption">
+      Table with multi-level headers
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th
+          id="table-multi-header-1"
+          rowspan="2"
+          scope="col"
+          class="ecl-table__header"
+        >
+          Job title
+        </th>
+        <th
+          id="table-multi-header-2"
+          colspan="2"
+          scope="colgroup"
+          class="ecl-table__header"
+        >
+          Extra information
+        </th>
+        <th
+          id="table-multi-header-3"
+          rowspan="2"
+          scope="col"
+          class="ecl-table__header"
+        >
+          Location
+        </th>
       </tr>
       <tr class="ecl-table__row">
-        <td class="ecl-table__cell" data-ecl-table-header="Job title">Corporate Support Officer</td>
-        <td class="ecl-table__cell" data-ecl-table-header="EFSI finance approved by EIB">FG IV</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Location">Prague (Czech Republic)</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Organization">European Commission</td>
-        <td class="ecl-table__cell" data-ecl-table-header="Type of contract">Permanent official</td>
+        <th
+          id="table-multi-header-4"
+          headers="table-multi-header-2"
+          scope="col"
+          class="ecl-table__header"
+        >
+          Organization
+        </th>
+        <th
+          id="table-multi-header-5"
+          headers="table-multi-header-2"
+          scope="col"
+          class="ecl-table__header"
+        >
+          Type of contract
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Job title"
+          headers="table-multi-header-1"
+        >
+          Administators in Competition Law
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Organization"
+          data-ecl-table-header-group="Extra information"
+          headers="table-multi-header-2 table-multi-header-4"
+        >
+          European Commission
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Type of contract"
+          headers="table-multi-header-2 table-multi-header-5"
+        >
+          Permanent official
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Location"
+          headers="table-multi-header-3"
+        >
+          Brussels (Belgium)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Sortable table -->
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table"
+    id="table-sortable"
+    data-ecl-table
+    data-ecl-auto-init="Table"
+    data-ecl-table-sort-label-asc="Sort ascending"
+    data-ecl-table-sort-label-desc="Sort descending"
+    data-ecl-table-sort-label-default="Sort default"
+  >
+    <caption class="ecl-table__caption">
+      Sortable jobs table
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th
+          id="table-sortable-header-1"
+          rowspan="2"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-sort-toggle
+        >
+          Job title
+        </th>
+        <th
+          id="table-sortable-header-2"
+          colspan="2"
+          scope="colgroup"
+          class="ecl-table__header"
+        >
+          Extra information
+        </th>
+        <th
+          id="table-sortable-header-3"
+          rowspan="2"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-sort-toggle
+        >
+          Location
+        </th>
+      </tr>
+      <tr class="ecl-table__row">
+        <th
+          id="table-sortable-header-4"
+          headers="table-sortable-header-2"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-sort-toggle
+        >
+          Organization
+        </th>
+        <th
+          id="table-sortable-header-5"
+          headers="table-sortable-header-2"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-sort-toggle
+        >
+          Type of contract
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Job title"
+          headers="table-sortable-header-1"
+        >
+          Corporate Support Officer
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Organization"
+          data-ecl-table-header-group="Extra information"
+          headers="table-sortable-header-2 table-sortable-header-4"
+        >
+          European Commission
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Type of contract"
+          headers="table-sortable-header-2 table-sortable-header-5"
+        >
+          Temporary
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Location"
+          headers="table-sortable-header-3"
+        >
+          Prague (Czech Republic)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Extension hooks -->
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table custom-table--test"
+    id="table-extension"
+    data-test="data-test-value"
+    data-test-flag
+  >
+    <caption class="ecl-table__caption">
+      Table with extension hooks
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th id="table-extension-header-1" scope="col" class="ecl-table__header">
+          Name
+        </th>
+        <th id="table-extension-header-2" scope="col" class="ecl-table__header">
+          Status
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body">
+      <tr
+        class="ecl-table__row row-extra-class-0"
+        data-row-flag
+        data-row-test="value"
+      >
+        <td class="ecl-table__cell" data-ecl-table-header="Name">John</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Status">Active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Header-off simple table -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-table--simple" id="table-no-header">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell" data-ecl-table-header="Name">John</td>
+        <td class="ecl-table__cell" data-ecl-table-header="Status">Active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Headers with no rows -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table" id="table-headers-only">
+    <caption class="ecl-table__caption">
+      Headers only
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th
+          id="table-headers-only-header-1"
+          scope="col"
+          class="ecl-table__header"
+        >
+          Name
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body"></tbody>
+  </table>
+</div>
+
+<!-- Rows with no headers -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table" id="table-rows-only">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Unlabelled value</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Empty input root-only output -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table" id="table-empty">
+    <tbody class="ecl-table__body"></tbody>
+  </table>
+</div>
+
+<!-- EC color modes -->
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--blue" id="table-mode-blue">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Blue</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--blue-electric"
+    id="table-mode-blue-electric"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Blue electric</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--blue-navy" id="table-mode-blue-navy">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Blue navy</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--blue-ocean"
+    id="table-mode-blue-ocean"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Blue ocean</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--green" id="table-mode-green">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Green</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--green-dark"
+    id="table-mode-green-dark"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Green dark</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--green-lemon"
+    id="table-mode-green-lemon"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Green lemon</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--green-pine"
+    id="table-mode-green-pine"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Green pine</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--orange" id="table-mode-orange">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Orange</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--purple" id="table-mode-purple">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Purple</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--purple-violet"
+    id="table-mode-purple-violet"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Purple violet</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--red-crayola"
+    id="table-mode-red-crayola"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Red crayola</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--red-tomato"
+    id="table-mode-red-tomato"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Red tomato</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table class="ecl-table ecl-color-mode--warm-grey" id="table-mode-warm-grey">
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Warm grey</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table ecl-color-mode--yellow-gold"
+    id="table-mode-yellow-gold"
+  >
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell">Yellow gold</td>
       </tr>
     </tbody>
   </table>
