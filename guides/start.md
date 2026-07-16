@@ -1,171 +1,224 @@
-# Getting Started with ECL EC via MCP Server
+# Building with the ECL EC MCP Server
 
-This guide provides instructions for AI coding agents on how to use the Europa Component Library (ECL) EC system through the Model Context Protocol (MCP) server.
+This server provides static, reusable EC v5.0.1 markup, the matching Twig
+templates, a complete starter page, bundled CSS/JavaScript/assets, and focused
+guides. It does not generate a component from arbitrary parameters and it does
+not expose tools named `get_component_examples` or `get_component`.
 
-## Overview
+## Available MCP tools
 
-The ECL EC MCP server provides tools to access ECL components, guides, and starter templates for building European Commission-compliant web applications.
+### `starter_template`
 
-## Available Tools
+Returns `starter-template.html`, a complete EC page with the required asset
+links, site header, navigation, breadcrumbs, main region, footer, and ECL
+auto-initialization.
 
-### 1. starter_template
-**Purpose:** Get the base HTML template for ECL EC applications.
-
-**Usage:**
 ```json
-{
-  "tool": "starter_template",
-  "parameters": {}
-}
+{ "tool": "starter_template", "parameters": {} }
 ```
 
-**Returns:** Complete HTML starter template with all necessary CSS/JS includes and a basic page structure.
+### `components_list`
 
-### 2. components_list
-**Purpose:** List all available ECL components.
+Returns the authoritative list of available component IDs. Each item includes
+the valid calls for its reusable HTML and Twig source.
 
-**Usage:**
 ```json
-{
-  "tool": "components_list",
-  "parameters": {}
-}
+{ "tool": "components_list", "parameters": {} }
 ```
 
-**Returns:** JSON array of components with their IDs and call information for retrieving each component.
+### `component`
 
-### 3. component(id)
-**Purpose:** Get the HTML implementation of a specific ECL component.
+Returns the reusable, fully rendered HTML examples in
+`components/{id}.html`:
 
-**Usage:**
 ```json
 {
   "tool": "component",
-  "parameters": {
-    "id": "button"
-  }
+  "parameters": { "id": "button" }
 }
 ```
 
-**Parameters:**
-- `id`: The component identifier (e.g., "accordion", "button", "card")
+The result often contains several named variants so an agent can see every
+supported markup branch, extension hook, and EC color mode. Select the complete
+example that matches the task; do not insert the entire response into a page
+unless all demonstrations are actually wanted. Preserve the chosen example's
+required BEM classes, `data-ecl-*` hooks, ARIA relationships, and IDs. Make IDs
+unique when using more than one instance.
 
-**Returns:** HTML markup for the specified component.
+### `component_template`
 
-### 4. guide_list
-**Purpose:** List all available documentation guides.
+Returns a JSON object whose keys are the component-owned Twig filenames and
+whose values are the exact EC v5.0.1 Twig sources:
 
-**Usage:**
-```json
-{
-  "tool": "guide_list",
-  "parameters": {}
-}
-```
-
-**Returns:** JSON array of guides with snippets and call information.
-
-### 5. guide(topic)
-**Purpose:** Get detailed documentation for a specific topic.
-
-**Usage:**
-```json
-{
-  "tool": "guide",
-  "parameters": {
-    "topic": "start"
-  }
-}
-```
-
-**Parameters:**
-- `topic`: The guide topic (e.g., "start", "colours", "typography", "utility-classes")
-
-### 6. component_template(id)
-**Purpose:** Get the Twig template(s) for a specific ECL component.
-
-**Usage:**
 ```json
 {
   "tool": "component_template",
-  "parameters": {
-    "id": "accordion"
-  }
+  "parameters": { "id": "accordion" }
 }
 ```
 
-**Parameters:**
-- `id`: The component identifier (e.g., "accordion", "button", "mega-menu")
+Use this when integrating the official templates into a Twig application. Some
+components have multiple owned templates or partials, so consume every returned
+entry. Imported ECL components remain separate dependencies. For plain HTML,
+use `component` instead.
 
-**Returns:** JSON object containing template filenames as keys and their Twig content as values. Components with multiple templates (like mega-menu) return all related templates.
+### `guide_list`
 
-## Workflow for Building ECL Applications
+Returns every available guide topic with a short snippet and a valid `guide`
+call:
 
-### Step 1: Get the Starter Template
-Begin by calling `starter_template` to obtain the base HTML structure. This provides:
-- Proper HTML5 doctype and meta tags
-- ECL CSS and JavaScript includes
-- Basic page structure with header, navigation, breadcrumbs, main, and footer
-- Language selector and navigation components
+```json
+{ "tool": "guide_list", "parameters": {} }
+```
 
-### Step 2: Copy Required Assets
-Use the `guide("assets")` tool to get instructions on copying ECL assets to your project. The guide contains paths to the assets directory that need to be copied.
+### `guide`
 
-### Step 3: Add Components
-1. Call `components_list` to see all available components
-2. For each component you need, call `component(id)` with the appropriate ID
-3. Integrate the returned HTML into your page structure
+Returns a focused guide by its filename topic:
 
-### Step 4: Apply Styling
-Use the following guides for styling information:
-- `guide("colours")` - Color palette and usage
-- `guide("typography")` - Text styling and hierarchy
-- `guide("utility-classes")` - Utility classes for layout and spacing
+```json
+{
+  "tool": "guide",
+  "parameters": { "topic": "spacing" }
+}
+```
 
-## Component Categories
+Current topics are `assets`, `background`, `border`, `clearfix`, `colours`,
+`dimension`, `display`, `flex`, `float`, `grid`, `icons`, `media`, `shadow`,
+`spacing`, `start`, `typography`, `utility-classes`, and `z-index`. Use
+`guide_list` rather than assuming a topic exists.
 
-Components are organized into categories including:
-- **Layout:** Containers, grids, spacing
-- **Navigation:** Menus, breadcrumbs, pagination
-- **Forms:** Inputs, buttons, selects, checkboxes
-- **Content:** Cards, accordions, tabs, tables
-- **Feedback:** Notifications, modals, tooltips
-- **Media:** Images, videos, galleries
+## Recommended workflow
 
-## Best Practices
+### 1. Start from the page shell
 
-1. **Always start with the starter template** - It includes all necessary dependencies
-2. **Copy assets as instructed** - ECL requires specific CSS/JS files
-3. **Use semantic HTML** - ECL components follow accessibility standards
-4. **Always use utility classes for spacing and layout** - Refer to the utility classes guide
-5. **Typography and colors** - Follow the typography and color guides for consistency
-6. **Test responsiveness** - ECL is mobile-first and responsive
-7. **Follow the design system** - Use provided colors, typography, and spacing
-8. **Avoid custom CSS** - Rely on ECL classes to ensure compatibility and maintainability
+Call `starter_template` when creating a new EC page. Retain the document
+language, viewport metadata, stylesheet ordering, print media attribute,
+JavaScript dependencies, WebTools loader, `no-js`/`has-js` switch, and
+`ECL.autoInit()` call. Replace demonstration content and links with the
+application's real content.
 
-## Caveats
-- ECL is extremely verbose on it's classes use. Make sure to include all necessary classes for components to render correctly. Even <p>, <ul> and <div> tags may need specific classes.
-- Some components may require JavaScript to function properly. Ensure that the ECL JS files are included in your project.
-- ECL is not fault tolerant, meaning missing classes or incorrect structure may lead to broken components. Take your time to follow the documentation closely.
-- Most ECL applications are "spaceless" meaning there should be no spaces, tabs or new lines between many HTML tags. This is important for components like buttons and inputs to render correctly. If you are experiencing issues, check for unwanted whitespace in your HTML.
+For an existing application, do not replace its whole shell automatically.
+Compare it with the starter and add only missing ECL prerequisites.
 
-## Example Usage
+### 2. Copy and load the assets
 
-To create a simple page with a button:
+Call `guide("assets")` and follow its copy paths and load order. In summary, the
+package's `assets/` and `fonts/` directories must remain siblings so the local
+Inter fallbacks resolve. The normal EC setup includes:
 
-1. Get starter template
-2. Get button component: `component("button")`
-3. Insert button HTML into the main content area
-4. Style as needed using utility classes
+- reset, main component, color-mode, utility, and print CSS;
+- the EC browser JavaScript bundle;
+- the WebTools loader for icons;
+- Duet Date Picker when the datepicker is used;
+- favicons and EC logo assets.
+
+Do not copy `./europa-component-library` into the application. That path is a
+read-only development symlink used to verify this MCP package against the base
+repository; it is not a runtime dependency and is not shipped in the npm
+package.
+
+### 3. Discover and choose a component
+
+Call `components_list`, then call `component` with an exact returned ID. Review
+all named examples and choose the smallest variant that completely matches the
+requested behavior.
+
+```json
+{
+  "tool": "component",
+  "parameters": { "id": "notification" }
+}
+```
+
+Do not synthesize component markup from memory. ECL components are structurally
+strict, and seemingly redundant wrappers, modifier classes, accessibility
+attributes, and JavaScript hooks often have a purpose.
+
+### 4. Adapt content without breaking the contract
+
+It is normally safe to replace visible text, URLs, image sources and alternative
+text, and unique IDs together with every reference to them. Preserve:
+
+- root, element, and modifier classes required by the chosen variant;
+- `data-ecl-auto-init` and component-specific `data-ecl-*` hooks;
+- hidden fallback content and initial state;
+- ARIA roles, state, relationships, and accessible labels;
+- required nesting and sibling order;
+- native element types, button `type`, form names, and values where relevant.
+
+Do not author `data-ecl-auto-initialized`; the ECL runtime adds it. Do not copy
+an ID unchanged when the page already contains it.
+
+### 5. Apply layout and utility guidance
+
+Use the focused guides instead of guessing class names. Common calls are:
+
+- `guide("grid")` for containers, rows, columns, offsets, and gutters;
+- `guide("spacing")` for responsive logical margin and padding;
+- `guide("display")` and `guide("flex")` for responsive layout;
+- `guide("typography")` and `guide("colours")` for text and color modes;
+- `guide("icons")` for WebTools families and accessibility;
+- `guide("utility-classes")` for a cross-guide inventory.
+
+Prefer a component's built-in layout and spacing before layering utilities on
+its internal elements. Use utilities for intentional composition or documented
+customization, not to reconstruct an existing component.
+
+### 6. Initialize and test behavior
+
+The starter calls:
+
+```html
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("has-js");
+
+  if (typeof ECL !== "undefined") {
+    ECL.autoInit();
+  }
+</script>
+```
+
+This initializes elements bearing supported `data-ecl-auto-init` values. If
+markup is inserted after auto-initialization, call the update function returned
+by `ECL.autoInit()` or initialize the relevant component according to the
+application's runtime architecture; do not assume new DOM is discovered
+automatically.
+
+Test at EC breakpoints (480px, 768px, 996px, and 1140px), with keyboard and
+screen-reader interaction, without JavaScript where a fallback exists, in RTL
+when relevant, and in print when the content must print correctly.
+
+## Choosing HTML or Twig
+
+| Need                                     | Tool                 |
+| ---------------------------------------- | -------------------- |
+| Copy a ready-to-adapt HTML example       | `component`          |
+| Install or inspect official Twig sources | `component_template` |
+| Build a complete new EC page shell       | `starter_template`   |
+| Discover valid component IDs             | `components_list`    |
+| Discover documentation topics            | `guide_list`         |
+| Learn a utility or setup contract        | `guide`              |
+
+The Twig parameter contract is documented in comments and package source, but
+the MCP tool returns source rather than rendering caller-supplied data. The HTML
+examples are already rendered and contain no Twig syntax.
 
 ## Troubleshooting
 
-- If a component isn't found, check `components_list` for valid IDs
-- If a guide topic doesn't exist, use `guide_list` to see available topics
-- Ensure assets are properly copied from the paths specified in `guide("assets")`
+- “Component not found”: call `components_list` and use an exact ID.
+- “Guide not found”: call `guide_list` and use an exact topic.
+- Unstyled utility: confirm `ecl-ec-utilities.css` is loaded after the main EC
+  stylesheet and that the class exists in the relevant focused guide.
+- Missing icon: load `https://webtools.europa.eu/load.js` and use the correct
+  standard or family-specific class pattern from `guide("icons")`.
+- Interactive component does nothing: verify `assets/ecl-ec.js`, the exact
+  `data-ecl-auto-init` value and hooks, and the `ECL.autoInit()` call.
+- Broken ARIA relationship: make the instance IDs unique and update every
+  `aria-controls`, `aria-labelledby`, `for`, or component-specific target at the
+  same time.
+- Layout changes at an unexpected width: ECL is mobile-first; responsive classes
+  use `min-width` and continue upward until overridden.
 
-## Additional Resources
-
-- Official ECL Documentation: https://ec.europa.eu/component-library/
-- WebTools Icons: https://webtools.europa.eu/showcase/demo?comp=icons</content>
-<parameter name="filePath">/Users/brownrl/Herd/ecl_v5_mcp/guides/start.md
+The package and its compiled assets target the EC preset at ECL v5.0.1, pinned
+to base-repository commit `eceefe9468e44f7ce9c57801c91c4c0c057548b4`.

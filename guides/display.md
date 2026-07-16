@@ -1,91 +1,118 @@
-# Display Utilities
+# ECL Display Utilities (EC preset, v5.0.1)
 
-The ECL Display utilities provide a set of CSS classes to control the `display` property of HTML elements, allowing for flexible layout and visibility management. These utilities are part of the ECL (European Commission Library) design system and follow consistent naming conventions.
+Display utilities set an element's CSS `display` or `box-sizing` value. The EC
+preset supplies 47 classes: nine display values at each of five breakpoints,
+plus two non-responsive box-sizing utilities.
 
-## Overview
+## Required CSS
 
-Display utilities help you change how elements are rendered on the page. Whether you need to hide elements, create flexible layouts, or control inline/block behavior, these classes offer a utility-first approach.
-
-## Display Classes
-
-The following classes control the display property:
-
-| Class                  | Display Value  | Description                                       |
-| ---------------------- | -------------- | ------------------------------------------------- |
-| `ecl-u-d-block`        | `block`        | Elements are displayed as block-level elements.   |
-| `ecl-u-d-inline`       | `inline`       | Elements are displayed as inline elements.        |
-| `ecl-u-d-inline-block` | `inline-block` | Elements are displayed as inline-block elements.  |
-| `ecl-u-d-flex`         | `flex`         | Elements are displayed as flex containers.        |
-| `ecl-u-d-inline-flex`  | `inline-flex`  | Elements are displayed as inline flex containers. |
-| `ecl-u-d-table`        | `table`        | Elements are displayed as table elements.         |
-| `ecl-u-d-table-cell`   | `table-cell`   | Elements are displayed as table cells.            |
-| `ecl-u-d-none`         | `none`         | Elements are not displayed (hidden).              |
-
-## Box Sizing Classes
-
-Control the box-sizing model:
-
-| Class                      | Box Sizing Value | Description                                                       |
-| -------------------------- | ---------------- | ----------------------------------------------------------------- |
-| `ecl-u-box-sizing-content` | `content-box`    | Width and height include only the content, not padding or border. |
-| `ecl-u-box-sizing-border`  | `border-box`     | Width and height include content, padding, and border.            |
-
-## Usage Examples
-
-### Basic Display Control
+Load the EC utilities stylesheet before using these classes:
 
 ```html
-<!-- Block display -->
-<div class="ecl-u-d-block">This is a block element</div>
-
-<!-- Inline display -->
-<span class="ecl-u-d-inline">This is inline</span>
-
-<!-- Hide an element -->
-<div class="ecl-u-d-none">This content is hidden</div>
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
 ```
 
-### Flexbox Layout
+Call `guide("assets")` for the complete asset setup. These rules are in
+`ecl-ec-utilities.css`, not `ecl-ec.css`. They are also included in the supplied
+`ecl-ec-print.css`. No JavaScript is required.
+
+When compiling ECL from Sass packages, use `@ecl/utility-display`; its Sass
+entry point is `display.scss` and it depends on `@ecl/grid` for breakpoints.
+
+## Display classes
+
+The base form is `ecl-u-d-{value}`:
+
+| Base class             | CSS applied                        |
+| ---------------------- | ---------------------------------- |
+| `ecl-u-d-none`         | `display: none !important`         |
+| `ecl-u-d-inline`       | `display: inline !important`       |
+| `ecl-u-d-inline-block` | `display: inline-block !important` |
+| `ecl-u-d-block`        | `display: block !important`        |
+| `ecl-u-d-table`        | `display: table !important`        |
+| `ecl-u-d-table-cell`   | `display: table-cell !important`   |
+| `ecl-u-d-flex`         | `display: flex !important`         |
+| `ecl-u-d-inline-flex`  | `display: inline-flex !important`  |
+| `ecl-u-d-grid`         | `display: grid !important`         |
+
+Every value also has `s`, `m`, `l`, and `xl` variants. Insert the breakpoint
+before the value:
+
+```text
+ecl-u-d-{value}       0px and up
+ecl-u-d-s-{value}     480px and up
+ecl-u-d-m-{value}     768px and up
+ecl-u-d-l-{value}     996px and up
+ecl-u-d-xl-{value}    1140px and up
+```
+
+For example, the complete responsive family for `grid` is
+`ecl-u-d-grid`, `ecl-u-d-s-grid`, `ecl-u-d-m-grid`, `ecl-u-d-l-grid`, and
+`ecl-u-d-xl-grid`. The same five forms exist for every value in the table.
+Breakpoint rules use `min-width`, so a responsive class continues to apply at
+larger viewport widths until another class overrides it.
+
+### Responsive visibility
 
 ```html
-<div class="ecl-u-d-flex">
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
+<!-- Hidden below 768px; displayed as a block from 768px upward. -->
+<nav class="ecl-u-d-none ecl-u-d-m-block" aria-label="Section">...</nav>
+
+<!-- Visible below 996px; hidden from 996px upward. -->
+<div class="ecl-u-d-block ecl-u-d-l-none">Small-screen content</div>
+```
+
+Set both sides of a visibility change. A class such as `ecl-u-d-m-none` only
+hides from that breakpoint upward; it does not express what should happen
+below the breakpoint.
+
+Do not use `display: none` for content that must remain available to screen
+readers: hidden elements and their descendants are removed from the
+accessibility tree. Keep the DOM reading and focus order meaningful when
+changing layout across breakpoints.
+
+### Flex and grid containers
+
+```html
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-align-items-center">...</div>
+
+<div class="ecl-u-d-grid">...</div>
+```
+
+`ecl-u-d-flex` and `ecl-u-d-inline-flex` only create a flex container; call
+`guide("flex")` for direction, wrapping, alignment, ordering, growth, shrinkage,
+and basis utilities. `ecl-u-d-grid` only changes `display`; ECL's layout grid
+classes are documented by `guide("grid")`.
+
+Use `table` and `table-cell` only when CSS table layout is intended. These
+classes do not add semantic table roles; use native table markup for tabular
+data.
+
+## Box sizing classes
+
+Box-sizing classes have no responsive variants:
+
+| Class                      | CSS applied                          |
+| -------------------------- | ------------------------------------ |
+| `ecl-u-box-sizing-content` | `box-sizing: content-box !important` |
+| `ecl-u-box-sizing-border`  | `box-sizing: border-box !important`  |
+
+With `border-box`, the declared width and height include padding and borders.
+With `content-box`, padding and borders are added outside the declared content
+size.
+
+```html
+<div class="ecl-u-box-sizing-border" style="width: 12rem; padding: 1rem">
+  The rendered border box remains 12rem wide.
 </div>
 ```
 
-### Box Sizing Example
+## Implementation notes
 
-```html
-<div class="ecl-u-d-block ecl-u-box-sizing-border" style="width: 200px; padding: 20px; border: 5px solid black;">
-  This div uses border-box sizing, so the total width is 200px including padding and border.
-</div>
-```
-
-### Combined Example
-
-Here's a practical example combining display and box-sizing classes:
-
-```html
-<div class="ecl-u-d-flex" style="background-color: #d9d9d9; padding: 0.5rem;">
-  <div class="ecl-u-d-block ecl-u-box-sizing-border" style="background-color: #ebebeb; border: 2px solid #000; height: 5rem; margin: 0.5rem; padding: 0.5rem; width: 5rem;">
-    Box 1
-  </div>
-  <div class="ecl-u-d-block ecl-u-box-sizing-border" style="background-color: #ebebeb; border: 2px solid #000; height: 5rem; margin: 0.5rem; padding: 0.5rem; width: 5rem;">
-    Box 2
-  </div>
-  <div class="ecl-u-d-block ecl-u-box-sizing-border" style="background-color: #ebebeb; border: 2px solid #000; height: 5rem; margin: 0.5rem; padding: 0.5rem; width: 5rem;">
-    Box 3
-  </div>
-</div>
-```
-
-## Notes
-
-- These utilities are designed to be used with the ECL CSS framework.
-- For responsive design, ECL provides breakpoint-specific variants (not shown in this basic example).
-- Always consider accessibility when hiding elements; use `ecl-u-d-none` judiciously.
-- The `ecl-u-d-flex` and `ecl-u-d-inline-flex` classes enable flexbox layouts, which can be further customized with additional flex utilities.
-
-For more advanced layout techniques, combine these display utilities with other ECL utilities like spacing, positioning, and flexbox helpers.
+- All declarations use `!important`. Avoid multiple display utilities that are
+  active at the same breakpoint unless the intentional cascade is clear.
+- Utilities impose no component markup, ARIA attributes, IDs, or JavaScript
+  hooks.
+- Display utilities do not add spacing, width, positioning, or alignment.
+- The tagged v5.0.1 Sass and compiled EC bundle include `grid`, even though the
+  v5.0.1 website usage list and display Storybook control omit it.

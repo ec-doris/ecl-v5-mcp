@@ -1,126 +1,74 @@
-# Shadow Utilities
+# ECL Shadow Utilities (EC preset, v5.0.1)
 
-The ECL Shadow utilities provide CSS classes for adding box shadows and inner shadows to elements. These utilities are part of the ECL (European Commission Library) design system, offering consistent elevation and depth effects across your application.
+The EC preset provides five drop-shadow elevations and one reset class. It does
+not provide responsive, inset, inner, or negative shadow utilities.
 
-## Overview
+## Required CSS
 
-Shadow utilities help create visual hierarchy and depth in your UI by applying box-shadow effects. They support different elevation levels and can be combined with inner shadows for more complex visual effects. Note that available options may vary between ECL systems (EC vs. EU).
-
-## Box Shadow Classes
-
-Apply outer shadows to create elevation effects:
-
-### EC System
-| Class               | Elevation | Description                              |
-| ------------------- | --------- | ---------------------------------------- |
-| `ecl-u-shadow-none` | None      | No shadow                                |
-| `ecl-u-shadow-1`    | 1         | Subtle shadow for slight elevation       |
-| `ecl-u-shadow-2`    | 2         | Moderate shadow for cards and panels     |
-| `ecl-u-shadow-3`    | 3         | Stronger shadow for floating elements    |
-| `ecl-u-shadow-4`    | 4         | Prominent shadow for modals and overlays |
-| `ecl-u-shadow-5`    | 5         | Maximum shadow for emphasis              |
-
-### EU System
-| Class                     | Elevation  | Description                           |
-| ------------------------- | ---------- | ------------------------------------- |
-| `ecl-u-shadow-none`       | None       | No shadow                             |
-| `ecl-u-shadow-1`          | 1          | Subtle shadow for slight elevation    |
-| `ecl-u-shadow-2`          | 2          | Moderate shadow for cards and panels  |
-| `ecl-u-shadow-3`          | 3          | Stronger shadow for floating elements |
-| `ecl-u-shadow-negative-1` | Negative 1 | Inset shadow for subtle depth         |
-| `ecl-u-shadow-negative-2` | Negative 2 | Moderate inset shadow                 |
-| `ecl-u-shadow-negative-3` | Negative 3 | Strong inset shadow                   |
-
-## Inner Shadow Classes (EU System Only)
-
-Apply inner shadows for inset depth effects:
-
-| Class                           | Depth      | Description                 |
-| ------------------------------- | ---------- | --------------------------- |
-| `ecl-u-shadow-none`             | None       | No inner shadow             |
-| `ecl-u-shadow-inner-1`          | 1          | Subtle inner shadow         |
-| `ecl-u-shadow-inner-2`          | 2          | Moderate inner shadow       |
-| `ecl-u-shadow-negative-inner-1` | Negative 1 | Subtle inset inner shadow   |
-| `ecl-u-shadow-negative-inner-2` | Negative 2 | Moderate inset inner shadow |
-
-## Usage Examples
-
-### Basic Box Shadows
+Load the main EC stylesheet for the shadow custom properties and the utilities
+stylesheet for the classes:
 
 ```html
-<!-- No shadow -->
-<div class="ecl-u-shadow-none">No elevation</div>
-
-<!-- Subtle elevation -->
-<div class="ecl-u-shadow-1">Slightly elevated</div>
-
-<!-- Moderate elevation -->
-<div class="ecl-u-shadow-2">Card-like elevation</div>
-
-<!-- Strong elevation -->
-<div class="ecl-u-shadow-3">Floating element</div>
+<link rel="stylesheet" href="assets/ecl-ec.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
 ```
 
-### Advanced Shadows (EU System)
+Call `guide("assets")` for the complete asset setup. The six utility rules are
+not in `ecl-ec.css`; they are also included in `ecl-ec-print.css`. No JavaScript
+is required.
+
+When compiling from Sass, use `@ecl/utility-shadow` and its `shadow.scss` entry
+point.
+
+## Classes and EC values
+
+| Class               | CSS applied                          | EC shadow value                                        |
+| ------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `ecl-u-shadow-none` | `box-shadow: none !important`        | No shadow                                              |
+| `ecl-u-shadow-1`    | `box-shadow: var(--sh-1) !important` | 0 0 0.5px 0.5px at 8% opacity, plus 0 6px 12px at 8%   |
+| `ecl-u-shadow-2`    | `box-shadow: var(--sh-2) !important` | 0 0 0.5px 0.5px at 8% opacity, plus 0 10px 22px at 10% |
+| `ecl-u-shadow-3`    | `box-shadow: var(--sh-3) !important` | 0 0 0.5px 0.5px at 8% opacity, plus 0 12px 32px at 12% |
+| `ecl-u-shadow-4`    | `box-shadow: var(--sh-4) !important` | 0 0 0.5px 0.5px at 8% opacity, plus 0 14px 42px at 12% |
+| `ecl-u-shadow-5`    | `box-shadow: var(--sh-5) !important` | 0 0 0.5px 0.5px at 8% opacity, plus 0 18px 52px at 14% |
+
+All shadow layers use RGB `24, 39, 75` (`#18274b`) with the opacity shown. The
+public aliases `--sh-1` through `--sh-5` point to `--ecl-shadow-1` through
+`--ecl-shadow-5` in the EC theme.
 
 ```html
-<!-- Inset shadow -->
-<div class="ecl-u-shadow-negative-1">Inset effect</div>
-
-<!-- Combined outer and inner shadows -->
-<div class="ecl-u-shadow-2 ecl-u-shadow-inner-1">
-  <div>Complex shadow effect</div>
-</div>
+<article class="ecl-u-shadow-2 ecl-u-pa-l">
+  <h2 class="ecl-u-type-heading-2">Card title</h2>
+  <p>Card content</p>
+</article>
 ```
 
-### Practical Examples
+Use a higher number only when the design calls for stronger visual elevation.
+Shadows should reinforce an actual layer relationship rather than serve as
+decoration.
+
+## Removing or changing a shadow
 
 ```html
-<!-- Card component -->
-<div class="ecl-u-shadow-2" style="padding: 1rem; background: white; border-radius: 4px;">
-  <h3>Card Title</h3>
-  <p>Card content with elevation.</p>
-</div>
-
-<!-- Modal overlay -->
-<div class="ecl-u-shadow-4" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 8px;">
-  <h2>Modal Title</h2>
-  <p>Modal content with strong shadow.</p>
-</div>
-
-<!-- Button with depth (EU System) -->
-<button class="ecl-u-shadow-1 ecl-u-shadow-inner-1" style="padding: 0.5rem 1rem; border: none; border-radius: 4px; background: #007acc; color: white;">
-  Pressed Button Effect
-</button>
+<div class="ecl-u-shadow-none">...</div>
 ```
 
-### Combined Example
+`ecl-u-shadow-none` clears the entire `box-shadow` property. To change state,
+remove the old elevation class and add the new one or the reset; do not retain
+multiple shadow utilities.
 
-Here's a demonstration of shadow utilities in action:
+The classes cannot be combined to build a multi-part effect. Each sets the
+whole `box-shadow` property with `!important`, so competing classes depend on
+CSS source order rather than HTML class order.
 
-```html
-<!-- EC System Example -->
-<div style="display: flex; align-items: center; justify-content: center; padding: 2rem 0;">
-  <div style="background-color: #ebebeb; height: 5rem; outline: 10px solid #fff; outline-offset: -10px; width: 10rem;" class="ecl-u-shadow-3">
-  </div>
-</div>
+## Scope and limitations
 
-<!-- EU System Example -->
-<div style="display: flex; align-items: center; justify-content: center; padding: 2rem 0; background-color: #808080;">
-  <div style="height: 5rem; width: 10rem;" class="ecl-u-shadow-negative-2">
-    <div style="background-color: #404040; height: 100%; width: 100%;" class="ecl-u-shadow-negative-inner-1"></div>
-  </div>
-</div>
-```
-
-## Notes
-
-- Shadow availability depends on your ECL system (EC or EU). Check your system configuration.
-- Inner shadows are only available in the EU system.
-- Negative shadows create inset effects, useful for pressed buttons or recessed elements.
-- Combine multiple shadow classes for complex visual effects, but use sparingly to maintain design consistency.
-- For responsive designs, ECL provides breakpoint-specific shadow variants.
-- Always consider performance impact when using shadows on many elements, especially on mobile devices.
-- Shadows work best on elements with background colors or borders to provide contrast.
-
-These utilities help create visual hierarchy and modern UI effects while maintaining consistency across ECL-based applications.
+- EC v5.0.1 emits exactly these six non-responsive classes. Names such as
+  `ecl-u-shadow-inner-1`, `ecl-u-shadow-negative-1`, or
+  `ecl-u-shadow-m-2` are not present in the EC assets.
+- The shared Sass utility can generate additional families when a theme defines
+  `shadow-inner`, `shadow-negative`, or `shadow-negative-inner`; the EC theme
+  defines none of them. Do not copy EU-only class advice into an EC page.
+- Shadows do not change layout dimensions or stacking order. Call
+  `guide("z-index")` for stacking utilities.
+- Avoid relying on a shadow alone to convey state or boundaries; ensure adequate
+  contrast and another understandable cue where meaning is involved.
