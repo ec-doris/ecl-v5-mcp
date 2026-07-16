@@ -1,126 +1,1294 @@
-<!-- Tabs component with tabbed content behavior -->
-<!-- The data-ecl-tabs-with-content attribute enables content switching functionality -->
-<div class="ecl-tabs" data-ecl-tabs="true" data-ecl-tabs-with-content data-ecl-auto-init="Tabs">
+<!-- Default tabs -->
+<div class="ecl-tabs" data-ecl-tabs="true" data-ecl-auto-init="Tabs">
   <div class="ecl-tabs__container">
     <div class="ecl-tabs__list" role="tablist">
-      <!-- Tab item 1 - Active by default -->
       <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-1" class="ecl-link ecl-tabs__link ecl-tabs__link--active" id="tab-link-1" role="tab" aria-selected="true" aria-controls="ecl-tabs-item-1">Home</a>
+        <a
+          href="/example/overview"
+          class="ecl-link ecl-tabs__link"
+          id="tabs-default-1"
+          role="tab"
+          tabindex="-1"
+          aria-selected="false"
+          >Overview</a
+        >
       </div>
-
-      <!-- Tab item 2 -->
       <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-2" class="ecl-link ecl-tabs__link" id="tab-link-2" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-2">Policies</a>
+        <a
+          href="/example/policies"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-default-2"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Policies</a
+        >
       </div>
-
-      <!-- Tab item 3 -->
       <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-3" class="ecl-link ecl-tabs__link" id="tab-link-3" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-3">Events</a>
+        <a
+          href="/example/events"
+          class="ecl-link ecl-tabs__link"
+          id="tabs-default-3"
+          role="tab"
+          tabindex="-1"
+          aria-selected="false"
+          >Events</a
+        >
       </div>
-
-      <!-- Tab item 4 -->
-      <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-4" class="ecl-link ecl-tabs__link" id="tab-link-4" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-4">Publications</a>
-      </div>
-
-      <!-- Tab item 5 -->
-      <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-5" class="ecl-link ecl-tabs__link" id="tab-link-5" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-5">Statistics</a>
-      </div>
-
-      <!-- Tab item 6 -->
-      <div class="ecl-tabs__item">
-        <!-- Sub-component: Link - See <code>link</code> component for full markup guidance -->
-        <a href="#ecl-tabs-item-6" class="ecl-link ecl-tabs__link" id="tab-link-6" role="tab" tabindex="-1" aria-selected="false" aria-controls="ecl-tabs-item-6">Resources</a>
-      </div>
-
-      <!-- More item placeholder - Used by responsive behavior -->
       <div class="ecl-tabs__item ecl-tabs__item--more"></div>
     </div>
-
-    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
-    <!-- This button shows additional tabs in a dropdown on smaller screens -->
-    <!-- Initially hidden - JS will show it when tabs overflow -->
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__toggle ecl-tabs__toggle--hidden" type="button" tabindex="-1" aria-expanded="false">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
       <span class="ecl-button__container">
-        <span class="ecl-button__label">Show 0 more items</span>
-        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
-        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-button__icon ecl-icon--rotate-180 ecl-icon--corner-arrow" aria-hidden="true" data-ecl-icon></span>
+        <span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        >
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
       </span>
     </button>
   </div>
-
-  <!-- Navigation controls for mobile view -->
   <div class="ecl-tabs__controls">
-    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
-    <!-- Previous button for mobile navigation -->
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden" type="button" aria-label="Previous">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
       <span class="ecl-button__container">
-        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
-        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-button__icon ecl-icon--rotate-270 ecl-icon--corner-arrow" aria-hidden="true" data-ecl-icon></span>
+        <span class="ecl-button__label" data-ecl-label="true">Previous</span>
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
       </span>
     </button>
-
-    <!-- Sub-component: Button - See <code>button</code> component for full markup guidance -->
-    <!-- Next button for mobile navigation -->
-    <button class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden" type="button" aria-label="Next">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
       <span class="ecl-button__container">
-        <!-- Sub-component: Icon - See <code>icon</code> component for full markup guidance -->
-        <span class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-button__icon ecl-icon--rotate-90 ecl-icon--corner-arrow" aria-hidden="true" data-ecl-icon></span>
+        <span class="ecl-button__label" data-ecl-label="true">Next</span>
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
       </span>
     </button>
   </div>
 </div>
 
-<!-- Tab panel 1 - Visible by default -->
-<div id="ecl-tabs-item-1" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-1">
-  <h2 class="ecl-u-type-heading-2">Home</h2>
-  <p class="ecl-u-type-paragraph">Welcome to our homepage. Here you will find the latest updates and information about our organization and activities. The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing the day-to-day business of the EU.</p>
-  <p class="ecl-u-type-paragraph">Our mission is to promote the general interest of the EU by proposing and enforcing legislation as well as by implementing policies and the EU budget. We work to ensure that EU policies and laws are applied correctly and deliver benefits for citizens, businesses, and the environment.</p>
-  <p class="ecl-u-type-paragraph">Stay informed about our latest initiatives, policy developments, and opportunities to engage with EU institutions.</p>
+<!-- Tabs with content management -->
+<div class="ecl-container">
+  <div
+    class="ecl-tabs"
+    data-ecl-tabs="true"
+    data-ecl-auto-init="Tabs"
+    data-ecl-tabs-with-content
+  >
+    <div class="ecl-tabs__container">
+      <div class="ecl-tabs__list" role="tablist">
+        <div class="ecl-tabs__item">
+          <a
+            href="#tabs-content-1"
+            class="ecl-link ecl-tabs__link"
+            id="tabs-content-link-1"
+            role="tab"
+            tabindex="-1"
+            aria-selected="false"
+            >A first tab</a
+          >
+        </div>
+        <div class="ecl-tabs__item">
+          <a
+            href="#tabs-content-2"
+            class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+            id="tabs-content-link-2"
+            role="tab"
+            tabindex="0"
+            aria-selected="true"
+            >Second tab</a
+          >
+        </div>
+        <div class="ecl-tabs__item">
+          <a
+            href="#tabs-content-3"
+            class="ecl-link ecl-tabs__link"
+            id="tabs-content-link-3"
+            role="tab"
+            tabindex="-1"
+            aria-selected="false"
+            >Third tab</a
+          >
+        </div>
+        <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+      </div>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+        type="button"
+        tabindex="-1"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Show %d more items</span
+          >
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+    <div class="ecl-tabs__controls">
+      <button
+        class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+        type="button"
+        tabindex="-1"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true">Previous</span>
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+        type="button"
+        tabindex="-1"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true">Next</span>
+          <span
+            class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div id="tabs-content-1">
+    <h2 class="ecl-u-type-heading-2">A first tab content</h2>
+    <p class="ecl-u-type-paragraph">
+      This panel is visible without JavaScript and is connected by its fragment
+      identifier when the tabs runtime initializes.
+    </p>
+  </div>
+  <div id="tabs-content-2">
+    <h2 class="ecl-u-type-heading-2">Second tab content</h2>
+    <p class="ecl-u-type-paragraph">
+      The active tab is marked in the initial HTML; the runtime updates panel
+      visibility and ARIA relationships.
+    </p>
+  </div>
+  <div id="tabs-content-3">
+    <h2 class="ecl-u-type-heading-2">Third tab content</h2>
+    <p class="ecl-u-type-paragraph">
+      Keyboard and overflow behavior are handled by the v5.0.1 tabs script.
+    </p>
+  </div>
 </div>
 
-<!-- Tab panel 2 - Hidden by JavaScript on init -->
-<div id="ecl-tabs-item-2" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-2">
-  <h2 class="ecl-u-type-heading-2">Policies</h2>
-  <p class="ecl-u-type-paragraph">Explore the wide range of policies that shape the European Union. From environmental protection to digital transformation, our policies aim to improve the lives of citizens across Europe.</p>
-  <p class="ecl-u-type-paragraph">Key policy areas include climate action and the Green Deal, digital strategy and innovation, economic and monetary union, migration and asylum, trade and investment, and social affairs and employment. Each policy area addresses specific challenges and opportunities facing the EU and its member states.</p>
-  <p class="ecl-u-type-paragraph">We work closely with member states, stakeholders, and citizens to develop and implement effective policies that deliver tangible results.</p>
+<!-- Extension hooks and custom labels -->
+<div
+  class="ecl-tabs custom-tabs"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+  data-test="tabs-extension"
+  data-demo
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/one"
+          class="ecl-link ecl-tabs__link custom-tab-link"
+          id="tabs-extension-1"
+          role="tab"
+          tabindex="-1"
+          aria-selected="false"
+          >One</a
+        >
+      </div>
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/two"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active custom-tab-active"
+          id="tabs-extension-2"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Two</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true"
+          >Display %d additional sections</span
+        >
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Back</span>
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Forward</span>
+        <span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span>
+      </span>
+    </button>
+  </div>
 </div>
 
-<!-- Tab panel 3 - Hidden by JavaScript on init -->
-<div id="ecl-tabs-item-3" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-3">
-  <h2 class="ecl-u-type-heading-2">Events</h2>
-  <p class="ecl-u-type-paragraph">Discover upcoming events, conferences, and public consultations organized by the European Commission. These events provide opportunities for stakeholders, experts, and citizens to engage with EU policymaking.</p>
-  <p class="ecl-u-type-paragraph">Our events cover a diverse range of topics including climate change, digital transformation, economic policy, social inclusion, and international cooperation. Events may take place in person, online, or in hybrid format to maximize accessibility and participation.</p>
-  <p class="ecl-u-type-paragraph">Check back regularly for new event announcements and registration information. Your participation helps shape the future of European policy.</p>
+<!-- Empty items render no component root; items without a path are skipped. -->
+
+<!-- EC color modes -->
+<div
+  class="ecl-tabs ecl-color-mode--blue"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/blue"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-blue"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Blue</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
 </div>
 
-<!-- Tab panel 4 - Hidden by JavaScript on init -->
-<div id="ecl-tabs-item-4" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-4">
-  <h2 class="ecl-u-type-heading-2">Publications</h2>
-  <p class="ecl-u-type-paragraph">Access our comprehensive collection of publications, including policy documents, reports, studies, and statistical data. These resources provide detailed information about EU activities and their impact.</p>
-  <p class="ecl-u-type-paragraph">Our publications are available in multiple languages and formats to ensure accessibility for all users. They cover topics such as annual reports, policy briefs, research studies, legal documents, and statistical yearbooks.</p>
-  <p class="ecl-u-type-paragraph">All publications are freely available to download and use in accordance with our open data policies and copyright regulations.</p>
+<div
+  class="ecl-tabs ecl-color-mode--blue-electric"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/blue-electric"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-blue-electric"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Blue electric</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
 </div>
 
-<!-- Tab panel 5 - Hidden by JavaScript on init -->
-<div id="ecl-tabs-item-5" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-5">
-  <h2 class="ecl-u-type-heading-2">Statistics</h2>
-  <p class="ecl-u-type-paragraph">Explore comprehensive statistical data about the European Union, its member states, and key policy areas. Our statistics provide evidence-based insights to inform policymaking and public debate.</p>
-  <p class="ecl-u-type-paragraph">Eurostat, the statistical office of the European Union, produces and publishes high-quality statistics on a wide range of topics including economy and finance, population and social conditions, industry and services, agriculture and fisheries, international trade, and environment and energy.</p>
-  <p class="ecl-u-type-paragraph">Data is presented in user-friendly formats including interactive visualizations, downloadable datasets, and regular statistical releases.</p>
+<div
+  class="ecl-tabs ecl-color-mode--blue-navy"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/blue-navy"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-blue-navy"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Blue navy</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
 </div>
 
-<!-- Tab panel 6 - Hidden by JavaScript on init -->
-<div id="ecl-tabs-item-6" class="ecl-u-mt-l" role="tabpanel" aria-labelledby="tab-link-6">
-  <h2 class="ecl-u-type-heading-2">Resources</h2>
-  <p class="ecl-u-type-paragraph">Access helpful resources including guidelines, toolkits, educational materials, and contact information. These resources support stakeholders in working with EU institutions and implementing EU policies.</p>
-  <p class="ecl-u-type-paragraph">Available resources include funding opportunities and grant programs, educational materials for schools and universities, guidelines for businesses and organizations, media resources and press kits, and contact directories for EU institutions and agencies.</p>
-  <p class="ecl-u-type-paragraph">Whether you are a researcher, journalist, educator, or citizen, you will find valuable resources to support your work and engagement with the EU.</p>
+<div
+  class="ecl-tabs ecl-color-mode--blue-ocean"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/blue-ocean"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-blue-ocean"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Blue ocean</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--green"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/green"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-green"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Green</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--green-dark"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/green-dark"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-green-dark"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Green dark</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--green-lemon"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/green-lemon"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-green-lemon"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Green lemon</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--green-pine"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/green-pine"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-green-pine"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Green pine</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--orange"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/orange"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-orange"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Orange</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--purple"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/purple"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-purple"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Purple</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--purple-violet"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/purple-violet"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-purple-violet"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Purple violet</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--red-crayola"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/red-crayola"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-red-crayola"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Red crayola</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--red-tomato"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/red-tomato"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-red-tomato"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Red tomato</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--warm-grey"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/warm-grey"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-warm-grey"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Warm grey</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="ecl-tabs ecl-color-mode--yellow-gold"
+  data-ecl-tabs="true"
+  data-ecl-auto-init="Tabs"
+>
+  <div class="ecl-tabs__container">
+    <div class="ecl-tabs__list" role="tablist">
+      <div class="ecl-tabs__item">
+        <a
+          href="/example/yellow-gold"
+          class="ecl-link ecl-tabs__link ecl-tabs__link--active"
+          id="tabs-yellow-gold"
+          role="tab"
+          tabindex="0"
+          aria-selected="true"
+          >Yellow gold</a
+        >
+      </div>
+      <div class="ecl-tabs__item ecl-tabs__item--more"></div>
+    </div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__toggle"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true"
+          >Show %d more items</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-icon--rotate-180 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
+  <div class="ecl-tabs__controls">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-tabs__prev ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Previous</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span></button
+    ><button
+      class="ecl-button ecl-button--tertiary ecl-tabs__next ecl-tabs__item--hidden ecl-button--icon-only"
+      type="button"
+      tabindex="-1"
+    >
+      <span class="ecl-button__container"
+        ><span class="ecl-button__label" data-ecl-label="true">Next</span
+        ><span
+          class="wt-icon--corner-arrow ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
+          aria-hidden="true"
+          data-ecl-icon
+        ></span
+      ></span>
+    </button>
+  </div>
 </div>
