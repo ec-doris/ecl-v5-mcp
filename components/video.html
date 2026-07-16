@@ -1,34 +1,171 @@
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Standard video</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Use the base video template with a poster image, a single MP4 source, and the aria label composed from the title and screen reader label values.</p>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default video</h3>
 <div class="ecl-u-mb-xl">
-    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline>
-        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
-    </video>
+  <video
+    class="ecl-video"
+    poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    aria-label="Big Buck Bunny - Video"
+    playsinline
+    controls
+  >
+    <source
+      type="video/mp4"
+      src="https://euc-vod.fl.freecaster.net/12/224712/HD_I224712EN1W.mp4"
+    />
+  </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Video with multiple sources and captions</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Add alternate encodings and caption tracks with the same structure as the twig file; each track follows the template attributes for language, label, and source.</p>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Multiple sources and captions</h3>
 <div class="ecl-u-mb-xl">
-    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" aria-label="Big Buck Bunny - Video" controls playsinline>
-        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
-        <source type="video/webm" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm">
-        <track kind="captions" label="English" src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-en.vtt" srclang="en">
-        <track kind="captions" label="French" src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-fr.vtt" srclang="fr">
-    </video>
+  <video
+    class="ecl-video"
+    poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg"
+    aria-label="Big Buck Bunny - Presentation"
+    playsinline
+    controls
+  >
+    <source
+      type="video/mp4"
+      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+    />
+    <source
+      type="video/webm"
+      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+    />
+    <track
+      kind="captions"
+      label="English"
+      src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-en.vtt"
+      srclang="en"
+    />
+    <track
+      kind="subtitles"
+      label="French"
+      src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-fr.vtt"
+      srclang="fr"
+    />
+  </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Autoplaying looped video</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Combine autoplay, muted, and loop to mirror the optional parameters while keeping controls and the inline playback flag from the source template.</p>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Autoplay without controls</h3>
 <div class="ecl-u-mb-xl">
-    <video class="ecl-video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline autoplay muted loop>
-        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
-    </video>
+  <video
+    class="ecl-video"
+    poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    aria-label="Big Buck Bunny"
+    playsinline
+    autoplay
+    muted
+    loop
+  >
+    <source
+      type="video/mp4"
+      src="https://euc-vod.fl.freecaster.net/12/224712/HD_I224712EN1W.mp4"
+    />
+  </video>
 </div>
 
-<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Zoom poster with custom attributes</h3>
-<p class="ecl-u-type-paragraph ecl-u-mb-s">Apply the zoom modifier and pass through extra classes or data attributes exactly as exposed by the twig parameters.</p>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">
+  Zoom poster with extension hooks
+</h3>
 <div class="ecl-u-mb-xl">
-    <video class="ecl-video ecl-video--zoom custom-class--video" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" aria-label="Big Buck Bunny - Video" controls playsinline data-test="data-test-value" data-test-1="data-test-value-1">
-        <source type="video/mp4" src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4">
-    </video>
+  <video
+    class="ecl-video ecl-video--zoom custom-class--video"
+    poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    aria-label="Big Buck Bunny - Featured video"
+    playsinline
+    controls
+    data-test="data-test-value"
+    data-featured
+  >
+    <source
+      type="video/mp4"
+      src="https://euc-vod.fl.freecaster.net/12/224712/HD_I224712EN1W.mp4"
+    />
+  </video>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Partial media entries</h3>
+<div class="ecl-u-mb-xl">
+  <video class="ecl-video" playsinline controls>
+    <source type="video/mp4" />
+    <source
+      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+    />
+    <source />
+    <track kind="captions" />
+    <track label="English captions" />
+    <track
+      src="https://inno-ecl.s3.amazonaws.com/media/examples/captions/bunny-en.vtt"
+    />
+    <track srclang="en" />
+  </video>
+</div>
+
+<!-- Empty input contract: tagged Twig still renders the root video element. -->
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Empty video root</h3>
+<div class="ecl-u-mb-xl">
+  <video class="ecl-video" playsinline controls></video>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-gap-s">
+  <video class="ecl-video ecl-color-mode--blue" playsinline controls></video>
+  <video
+    class="ecl-video ecl-color-mode--blue-electric"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--blue-navy"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--blue-ocean"
+    playsinline
+    controls
+  ></video>
+  <video class="ecl-video ecl-color-mode--green" playsinline controls></video>
+  <video
+    class="ecl-video ecl-color-mode--green-dark"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--green-lemon"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--green-pine"
+    playsinline
+    controls
+  ></video>
+  <video class="ecl-video ecl-color-mode--orange" playsinline controls></video>
+  <video class="ecl-video ecl-color-mode--purple" playsinline controls></video>
+  <video
+    class="ecl-video ecl-color-mode--purple-violet"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--red-crayola"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--red-tomato"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--warm-grey"
+    playsinline
+    controls
+  ></video>
+  <video
+    class="ecl-video ecl-color-mode--yellow-gold"
+    playsinline
+    controls
+  ></video>
 </div>
