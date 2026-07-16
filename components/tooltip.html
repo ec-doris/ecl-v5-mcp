@@ -1,0 +1,283 @@
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Default tooltip triggers</h3>
+<div class="ecl-u-mb-2xl" data-ecl-auto-init="Tooltip">
+  <p class="ecl-u-type-paragraph-m ecl-u-mt-none">
+    The tooltip is attached to interactive controls in this paragraph.
+    <span
+      class="ecl-u-d-flex ecl-u-justify-content-between ecl-u-align-items-baseline ecl-u-pv-m"
+    >
+      <button
+        class="ecl-button ecl-button--primary"
+        type="button"
+        data-ecl-tooltip
+        title="Tooltip content from the button title"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Button tooltip</span
+          >
+        </span>
+      </button>
+      <a
+        class="ecl-link"
+        href="#tooltip-link"
+        data-ecl-tooltip="Tooltip content from the link attribute"
+        >Link tooltip</a
+      >
+    </span>
+    The page content remains visible when JavaScript is unavailable.
+  </p>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Inverted tooltip triggers</h3>
+<div
+  class="ecl-u-bg-black ecl-u-pa-m ecl-u-mb-2xl"
+  data-ecl-auto-init="Tooltip"
+>
+  <p class="ecl-u-type-paragraph-m ecl-u-mt-none ecl-u-type-color-white">
+    Inverted tooltips are intended for dark surfaces.
+    <span
+      class="ecl-u-d-flex ecl-u-justify-content-between ecl-u-align-items-baseline ecl-u-pv-m"
+    >
+      <button
+        class="ecl-button ecl-button--primary ecl-button--inverted"
+        type="button"
+        data-ecl-tooltip-inverted
+        title="Inverted tooltip content from the button title"
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Inverted button tooltip</span
+          >
+        </span>
+      </button>
+      <a
+        class="ecl-link ecl-link--inverted"
+        href="#tooltip-inverted-link"
+        data-ecl-tooltip-inverted="Inverted tooltip content from the link attribute"
+        >Inverted link tooltip</a
+      >
+    </span>
+    The trigger label remains independent from the tooltip content.
+  </p>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Empty content edge case</h3>
+<div class="ecl-u-mb-2xl" data-ecl-auto-init="Tooltip">
+  <button
+    class="ecl-button ecl-button--secondary"
+    type="button"
+    data-ecl-tooltip
+  >
+    <span class="ecl-button__container">
+      <span class="ecl-button__label" data-ecl-label="true"
+        >No popup content</span
+      >
+    </span>
+  </button>
+</div>
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-m">EC color modes</h3>
+<div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-gap-m">
+  <div class="ecl-color-mode--blue ecl-u-pa-m" data-ecl-auto-init="Tooltip">
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Blue tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Blue</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--blue-electric ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Blue electric tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true"
+          >Blue electric</span
+        >
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--blue-navy ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Blue navy tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Blue navy</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--blue-ocean ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Blue ocean tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Blue ocean</span>
+      </span>
+    </button>
+  </div>
+  <div class="ecl-color-mode--green ecl-u-pa-m" data-ecl-auto-init="Tooltip">
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Green tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Green</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--green-dark ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Green dark tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Green dark</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--green-lemon ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Green lemon tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Green lemon</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--green-pine ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Green pine tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Green pine</span>
+      </span>
+    </button>
+  </div>
+  <div class="ecl-color-mode--orange ecl-u-pa-m" data-ecl-auto-init="Tooltip">
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Orange tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Orange</span>
+      </span>
+    </button>
+  </div>
+  <div class="ecl-color-mode--purple ecl-u-pa-m" data-ecl-auto-init="Tooltip">
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Purple tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Purple</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--purple-violet ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Purple violet tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true"
+          >Purple violet</span
+        >
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--red-crayola ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Red crayola tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Red crayola</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--red-tomato ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Red tomato tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Red tomato</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--warm-grey ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Warm grey tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Warm grey</span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="ecl-color-mode--yellow-gold ecl-u-pa-m"
+    data-ecl-auto-init="Tooltip"
+  >
+    <button
+      class="ecl-button ecl-button--primary"
+      type="button"
+      data-ecl-tooltip="Yellow gold tooltip"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Yellow gold</span>
+      </span>
+    </button>
+  </div>
+</div>
