@@ -1,0 +1,300 @@
+<!-- Default image, full content, media on the right -->
+<div class="ecl-container">
+  <article class="ecl-text-media">
+    <div class="ecl-text-media__content">
+      <div class="ecl-text-media__micro-title">About</div>
+      <div class="ecl-text-media__title" id="text-media-image-title">
+        Non per curiositatem opinionum
+      </div>
+      <div class="ecl-text-media__description ecl-content-color">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <a class="ecl-link" href="#">Sed do eiusmod</a> tempor incididunt ut
+        labore et dolore magna aliqua.
+        <span class="ecl"><a href="#">Ut enim ad minim veniam.</a></span>
+      </div>
+      <a
+        href="/example"
+        class="ecl-link ecl-link--secondary-inverted ecl-link--icon ecl-text-media__link"
+        aria-describedby="text-media-image-title"
+      >
+        <span class="ecl-link__label">Read more</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"
+        ></span>
+      </a>
+    </div>
+    <div class="ecl-text-media__media">
+      <div
+        class="ecl-media-container ecl-media-container--caption-over ecl-text-media__media_container"
+        data-ecl-media-container="true"
+        data-ecl-auto-init="MediaContainer"
+      >
+        <figure class="ecl-media-container__figure">
+          <picture class="ecl-picture ecl-media-container__picture">
+            <img
+              class="ecl-media-container__media"
+              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+              alt="Lorem ipsum dolor sit amet"
+            />
+          </picture>
+          <figcaption class="ecl-media-container__caption">
+            Lorem ipsum dolor sit amet consectetur adipiscing.
+          </figcaption>
+          <footer class="ecl-media-container__credit">@Copyright</footer>
+        </figure>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- Video media, primary variant, media on the left -->
+<div class="ecl-container">
+  <article
+    class="ecl-text-media ecl-text-media--primary ecl-text-media--position-left"
+  >
+    <div class="ecl-text-media__content">
+      <div class="ecl-text-media__title" id="text-media-video-title">
+        Visit the European Commission
+      </div>
+      <div class="ecl-text-media__description ecl-content-color">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <a
+        href="/video"
+        class="ecl-link ecl-link--primary-neutral ecl-link--icon ecl-text-media__link"
+        aria-describedby="text-media-video-title"
+      >
+        <span class="ecl-link__label">Watch video</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon--arrow-left ecl-icon ecl-icon--m ecl-icon--flip-horizontal ecl-link__icon ecl-icon--arrow-left"
+        ></span>
+      </a>
+    </div>
+    <div class="ecl-text-media__media">
+      <div
+        class="ecl-media-container ecl-media-container--caption-hidden ecl-text-media__media_container"
+        data-ecl-media-container="true"
+        data-ecl-auto-init="MediaContainer"
+      >
+        <figure class="ecl-media-container__figure">
+          <div class="ecl-media-container__video-wrapper">
+            <video
+              class="ecl-video ecl-media-container__media"
+              controls
+              playsinline
+              poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg"
+              aria-label="Visit the European Commission - Video player"
+              data-ecl-media-container-video
+            >
+              <source
+                src="https://vod.prd.commavservices.eu/01/275521/019813ec-13ce-7136-ac0d-d7e24fec64c0/1080p-qaa.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <figcaption class="ecl-media-container__caption">
+            Lorem ipsum dolor sit amet consectetur adipiscing.
+          </figcaption>
+          <footer class="ecl-media-container__credit">@Copyright</footer>
+        </figure>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- Full width image -->
+<div class="ecl-container">
+  <article class="ecl-text-media ecl-text-media--full-width">
+    <div class="ecl-text-media__content">
+      <div class="ecl-text-media__title" id="text-media-full-width-title">
+        Full width text and media
+      </div>
+      <a
+        href="/full-width"
+        class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+        aria-describedby="text-media-full-width-title"
+        >Explore full width</a
+      >
+    </div>
+    <div class="ecl-text-media__media">
+      <div
+        class="ecl-media-container ecl-media-container--caption-over ecl-text-media__media_container"
+      >
+        <figure class="ecl-media-container__figure">
+          <picture class="ecl-picture ecl-media-container__picture">
+            <img
+              class="ecl-media-container__media"
+              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
+              alt="Landscape"
+            />
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- Extension hooks and valueless attribute -->
+<div class="ecl-container">
+  <article
+    class="ecl-text-media custom-class custom-class--test"
+    data-test="data-test-value"
+    data-track
+  >
+    <div class="ecl-text-media__content">
+      <div class="ecl-text-media__micro-title">Briefing</div>
+      <a
+        href="/briefing"
+        class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+        >Read the briefing</a
+      >
+    </div>
+  </article>
+</div>
+
+<!-- Empty input contract -->
+<article class="ecl-text-media">
+  <div class="ecl-text-media__content"></div>
+</article>
+
+<!-- EC color modes -->
+<article class="ecl-text-media ecl-color-mode--blue">
+  <div class="ecl-text-media__content">
+    <div class="ecl-text-media__title" id="text-media-blue-title">Blue</div>
+    <a
+      href="/blue"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      aria-describedby="text-media-blue-title"
+      >Read more</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--blue-electric">
+  <div class="ecl-text-media__content">
+    <a
+      href="/blue-electric"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Blue electric</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--blue-navy">
+  <div class="ecl-text-media__content">
+    <a
+      href="/blue-navy"
+      class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+      >Blue navy</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--blue-ocean">
+  <div class="ecl-text-media__content">
+    <a
+      href="/blue-ocean"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Blue ocean</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--green">
+  <div class="ecl-text-media__content">
+    <a
+      href="/green"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Green</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--green-dark">
+  <div class="ecl-text-media__content">
+    <a
+      href="/green-dark"
+      class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+      >Green dark</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--green-lemon">
+  <div class="ecl-text-media__content">
+    <a
+      href="/green-lemon"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Green lemon</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--green-pine">
+  <div class="ecl-text-media__content">
+    <a
+      href="/green-pine"
+      class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+      >Green pine</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--orange">
+  <div class="ecl-text-media__content">
+    <a
+      href="/orange"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Orange</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--purple">
+  <div class="ecl-text-media__content">
+    <a
+      href="/purple"
+      class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+      >Purple</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--purple-violet">
+  <div class="ecl-text-media__content">
+    <a
+      href="/purple-violet"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Purple violet</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--red-crayola">
+  <div class="ecl-text-media__content">
+    <a
+      href="/red-crayola"
+      class="ecl-link ecl-link--secondary-inverted ecl-text-media__link"
+      >Red crayola</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--red-tomato">
+  <div class="ecl-text-media__content">
+    <a
+      href="/red-tomato"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Red tomato</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--warm-grey">
+  <div class="ecl-text-media__content">
+    <a
+      href="/warm-grey"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Warm grey</a
+    >
+  </div>
+</article>
+<article class="ecl-text-media ecl-color-mode--yellow-gold">
+  <div class="ecl-text-media__content">
+    <a
+      href="/yellow-gold"
+      class="ecl-link ecl-link--primary-neutral ecl-text-media__link"
+      >Yellow gold</a
+    >
+  </div>
+</article>
