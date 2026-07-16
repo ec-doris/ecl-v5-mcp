@@ -1,102 +1,176 @@
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Default Spinner</h2>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m">The default spinner with primary variant and medium size.</p>
-
-<div class="ecl-u-mb-xl">
-  <div class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--visible" role="alert">
-    <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-      <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-    </svg>
-  </div>
+<!-- Default story output: primary, medium, centered, visible, with text -->
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Spinner Sizes</h2>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Spinners are available in three sizes: small (s), medium (m), and large (l).</p>
-
-<div class="ecl-u-mb-xl">
-  <h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Small Spinner</h3>
-  <div class="ecl-u-mb-l">
-    <div class="ecl-spinner ecl-spinner--primary ecl-spinner--s ecl-spinner--visible" role="alert">
-      <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-        <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-      </svg>
-    </div>
-  </div>
-
-  <h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Medium Spinner</h3>
-  <div class="ecl-u-mb-l">
-    <div class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--visible" role="alert">
-      <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-        <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-      </svg>
-    </div>
-  </div>
-
-  <h3 class="ecl-u-type-heading-3 ecl-u-mb-m">Large Spinner</h3>
-  <div class="ecl-u-mb-l">
-    <div class="ecl-spinner ecl-spinner--primary ecl-spinner--l ecl-spinner--visible" role="alert">
-      <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-        <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-      </svg>
-    </div>
-  </div>
+<!-- Inverted variant -->
+<div
+  class="ecl-spinner ecl-spinner--inverted ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Spinner with Text</h2>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Spinners can include optional text to provide context about the loading process.</p>
-
-<div class="ecl-u-mb-xl">
-  <div class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--visible" role="alert">
-    <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-      <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-    </svg>
-    <div class="ecl-spinner__text">Loading</div>
-  </div>
+<!-- Small size, inline text layout -->
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--s ecl-spinner--visible"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Centered Spinner</h2>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the <code>ecl-spinner--centered</code> modifier to center the spinner within its container. The container should have a defined height and position context for proper centering.</p>
-
-<div class="ecl-u-mb-xl ecl-u-border-all ecl-u-border-color-grey-50" style="position: relative; min-height: 200px;">
-  <div class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible" role="alert">
-    <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-      <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-    </svg>
-    <div class="ecl-spinner__text">Loading content</div>
-  </div>
+<!-- Large size without text -->
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--l ecl-spinner--visible"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
 </div>
 
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Inverted Spinner</h2>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Use the inverted variant for dark backgrounds.</p>
-
-<div class="ecl-u-mb-xl ecl-u-bg-grey ecl-u-bg-dark ecl-u-pa-l">
-  <div class="ecl-spinner ecl-spinner--inverted ecl-spinner--m ecl-spinner--visible" role="alert">
-    <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
-      <circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"></circle>
-    </svg>
-    <div class="ecl-spinner__text">Loading</div>
-  </div>
+<!-- Hidden default contract: no visible modifier and no text -->
+<div class="ecl-spinner ecl-spinner--primary ecl-spinner--m" role="alert">
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
 </div>
 
-<h2 class="ecl-u-type-heading-2 ecl-u-mb-l">Spinner with Overlay</h2>
+<!-- Overlay with visible spinner -->
+<div class="ecl-spinner__overlay ecl-spinner__overlay--visible"></div>
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
+</div>
 
-<p class="ecl-u-type-paragraph ecl-u-mb-m">Spinners can be displayed with an overlay to cover content while loading. When implementing a full-page overlay, the overlay element should be placed before the spinner in the markup.</p>
+<!-- Overlay requested while hidden: backdrop renders without visible modifier -->
+<div class="ecl-spinner__overlay"></div>
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered"
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
+</div>
 
-<p class="ecl-u-type-paragraph ecl-u-mb-m"><strong>Structure for overlay spinner:</strong></p>
+<!-- Extra attributes; tagged extra_classes are dropped by the v5.0.1 Twig typo -->
+<div
+  class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--visible"
+  data-test="data-test-value"
+  data-spinner-example
+  role="alert"
+>
+  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+    <circle
+      class="ecl-spinner__circle"
+      cx="50"
+      cy="50"
+      r="20"
+      fill="none"
+      stroke-width="4px"
+      stroke-miterlimit="10"
+      vector-effect="non-scaling-stroke"
+    ></circle>
+  </svg>
+  <div class="ecl-spinner__text">Loading</div>
+</div>
 
-<pre class="ecl-u-type-paragraph ecl-u-mb-m ecl-u-bg-grey-5 ecl-u-pa-m"><code>&lt;!-- Overlay element --&gt;
-&lt;div class="ecl-spinner__overlay ecl-spinner__overlay--visible"&gt;&lt;/div&gt;
-
-&lt;!-- Spinner element (typically centered) --&gt;
-&lt;div class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible" role="alert"&gt;
-  &lt;svg class="ecl-spinner__loader" viewBox="25 25 50 50"&gt;
-    &lt;circle class="ecl-spinner__circle" cx="50" cy="50" r="20" fill="none" stroke-width="4px" stroke-miterlimit="10" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
-  &lt;/svg&gt;
-  &lt;div class="ecl-spinner__text"&gt;Loading content&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-<p class="ecl-u-type-paragraph ecl-u-mb-m"><strong>Note:</strong> The overlay creates a semi-transparent background that covers the entire viewport and prevents user interaction while loading. Use the <code>ecl-spinner__overlay--visible</code> class to show the overlay, and toggle the <code>ecl-spinner--visible</code> class on the spinner itself to control visibility dynamically with JavaScript.</p>
+<!-- Color mode extra_classes requested but not rendered by tagged Twig:
+  ecl-color-mode--blue
+  ecl-color-mode--blue-electric
+  ecl-color-mode--blue-navy
+  ecl-color-mode--blue-ocean
+  ecl-color-mode--green
+  ecl-color-mode--green-dark
+  ecl-color-mode--green-lemon
+  ecl-color-mode--green-pine
+  ecl-color-mode--orange
+  ecl-color-mode--purple
+  ecl-color-mode--purple-violet
+  ecl-color-mode--red-crayola
+  ecl-color-mode--red-tomato
+  ecl-color-mode--warm-grey
+  ecl-color-mode--yellow-gold
+-->
