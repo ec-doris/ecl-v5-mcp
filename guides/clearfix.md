@@ -1,103 +1,136 @@
-# Clearfix Utilities
+# ECL Clearfix Utility (EC preset, v5.0.1)
 
-The ECL Clearfix utility provides a CSS class to clear floated elements within a container. This utility is part of the ECL (European Commission Library) design system, ensuring proper layout behavior when working with floated elements.
+Use `ecl-u-clearfix` on a normal container when floated content must contribute
+to that container's height. This prevents later content from unexpectedly
+wrapping around or overlapping the container's floats.
 
-## Overview
+## Required CSS
 
-The clearfix utility solves the common CSS issue where a container doesn't expand to contain its floated children. This can cause layout problems where content that should appear below the floats instead wraps around them. The ECL clearfix class provides a reliable, cross-browser solution using modern CSS techniques.
-
-## Clearfix Class
-
-| Class            | Description                                                                                  |
-| ---------------- | -------------------------------------------------------------------------------------------- |
-| `ecl-u-clearfix` | Applies clearfix behavior to clear floated child elements and ensure proper container height |
-
-## How It Works
-
-The `ecl-u-clearfix` class uses CSS pseudo-elements (`::before` and `::after`) to create a clearing mechanism that:
-
-1. Adds a `::before` pseudo-element that clears any previous floats
-2. Adds an `::after` pseudo-element that clears the floats within the container
-3. Ensures the container expands to contain all its floated children
-
-## Usage Examples
-
-### Basic Clearfix Usage
+Load the EC utilities stylesheet:
 
 ```html
-<!-- Without clearfix - container collapses -->
-<div style="background: #f0f0f0; padding: 1rem;">
-  <div style="float: left; width: 100px; height: 100px; background: #blue;">Float left</div>
-  <div style="float: right; width: 100px; height: 100px; background: #yellow;">Float right</div>
-</div>
-<p>This text might wrap around the floats instead of appearing below.</p>
-
-<!-- With clearfix - container properly contains floats -->
-<div class="ecl-u-clearfix" style="background: #f0f0f0; padding: 1rem;">
-  <div style="float: left; width: 100px; height: 100px; background: #blue;">Float left</div>
-  <div style="float: right; width: 100px; height: 100px; background: #yellow;">Float right</div>
-</div>
-<p>This text now appears below the container as expected.</p>
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
 ```
 
-### Common Use Cases
+Call `guide("assets")` for the complete ECL asset setup. The clearfix rule is
+in `ecl-ec-utilities.css`, not `ecl-ec.css`, and is also included in
+`ecl-ec-print.css`. It has no theme, color-mode, font, or JavaScript dependency.
+
+When compiling from Sass packages, load its standalone entry point:
+
+```scss
+@use "@ecl/utility-clearfix/clearfix";
+```
+
+## Class and exact behavior
+
+Apply the class to the **parent** of the floated content:
+
+```text
+ecl-u-clearfix
+```
+
+ECL v5.0.1 implements it as:
+
+```css
+.ecl-u-clearfix::after {
+  clear: both !important;
+  content: "" !important;
+  display: block !important;
+}
+```
+
+The empty block pseudo-element is generated after the parent's content.
+`clear: both` moves it below preceding left- and right-floated content. Because
+that pseudo-element remains in normal flow, the parent expands far enough to
+contain it and therefore the floats.
+
+There is no `::before` rule in v5.0.1.
+
+## Basic usage with ECL float utilities
 
 ```html
-<!-- Two-column layout -->
-<div class="ecl-u-clearfix">
-  <div style="float: left; width: 50%;">Left column content</div>
-  <div style="float: right; width: 50%;">Right column content</div>
-</div>
-
-<!-- Media object pattern -->
-<div class="ecl-u-clearfix">
-  <img src="image.jpg" alt="Media" style="float: left; margin-right: 1rem;">
-  <div>Text content that flows beside the image</div>
-</div>
-
-<!-- Grid-like layout -->
-<div class="ecl-u-clearfix">
-  <div style="float: left; width: 33.333%;">Item 1</div>
-  <div style="float: left; width: 33.333%;">Item 2</div>
-  <div style="float: left; width: 33.333%;">Item 3</div>
-</div>
+<section class="ecl-u-clearfix">
+  <div class="ecl-u-f-l">Left-floated content</div>
+  <div class="ecl-u-f-r">Right-floated content</div>
+</section>
+<p>This paragraph starts after the containing section.</p>
 ```
 
-### Combined Example
+Load `ecl-ec-utilities.css` for both the clearfix and float classes. Call
+`guide("float")` for the complete float utility contract.
 
-Here's a visual demonstration of the clearfix utility in action:
+## Text wrapping around a floated image
 
 ```html
-<h2>Without clearfix</h2>
-<div style="background-color: #d9d9d9; font: normal normal 400 .875rem/1rem Arial,sans-serif; padding: 0.5rem;">
-  <div style="background-color: #BFD0E4; box-sizing: border-box; border: 2px solid #000; display: inline-block; float: left; padding: 0.5rem;">
-    Float left box
-  </div>
-  <div style="background-color: #FFF4BB; box-sizing: border-box; border: 2px solid #000; display: inline-block; float: right; padding: 0.5rem;">
-    Float right box
-  </div>
-</div>
-<p>Text after (may wrap around floats)</p>
-
-<h2>With clearfix</h2>
-<div style="background-color: #d9d9d9; font: normal normal 400 .875rem/1rem Arial,sans-serif; padding: 0.5rem;" class="ecl-u-clearfix">
-  <div style="background-color: #BFD0E4; box-sizing: border-box; border: 2px solid #000; display: inline-block; float: left; padding: 0.5rem;">
-    Float left box
-  </div>
-  <div style="background-color: #FFF4BB; box-sizing: border-box; border: 2px solid #000; display: inline-block; float: right; padding: 0.5rem;">
-    Float right box
-  </div>
-</div>
-<p>Text after (properly positioned below)</p>
+<article class="ecl-u-clearfix">
+  <img
+    class="ecl-u-f-l"
+    src="image.jpg"
+    alt="Description of the image"
+    width="160"
+    height="120"
+  />
+  <p>
+    This text can wrap beside the image, while the article still contains the
+    floated image when the text is shorter than it.
+  </p>
+</article>
 ```
 
-## Notes
+Add appropriate ECL spacing utilities when visual separation is needed;
+clearfix itself adds no margin, padding, width, or gap.
 
-- Apply `ecl-u-clearfix` to the parent container of floated elements
-- The utility uses modern CSS techniques and is compatible with all supported browsers
-- For new layouts, consider using flexbox or CSS Grid instead of floats, which don't require clearing
-- Multiple floated elements within a clearfix container will be properly contained
-- The clearfix only affects the container's height calculation, not the positioning of the floats themselves
-- This utility is essential when working with legacy float-based layouts in ECL
+## Clearfix versus removing a float
 
-The clearfix utility ensures robust layout behavior and prevents common float-related issues in ECL-based applications.
+Clearfix and `float: none` solve different problems:
+
+- Put `ecl-u-clearfix` on a parent to contain its floated children.
+- Put `ecl-u-f-none` on an element to cancel that element's float.
+- Clearfix does not cancel, reposition, or resize the floated content.
+- `ecl-u-f-none` on a child does not clear any other floated siblings.
+
+```html
+<div class="ecl-u-clearfix">
+  <aside class="ecl-u-f-r">This remains floated right.</aside>
+</div>
+
+<aside class="ecl-u-f-none">This element is not floated.</aside>
+```
+
+## When to use it
+
+Use clearfix when all of the following are true:
+
+- one or more descendants are floated;
+- the containing box would otherwise collapse or end above those floats; and
+- content following the container must begin below it.
+
+For new rows, columns, alignment, or responsive layouts, prefer ECL flex or
+grid utilities. Those layout models contain their children without clearfix.
+Float remains appropriate when inline content is intentionally meant to wrap
+around another element.
+
+## Boundaries and interactions
+
+- The utility creates only an `::after`; it does not create an `::before` or
+  insert a real DOM element.
+- It clears preceding left and right floats that affect the container's
+  formatting context, regardless of whether ECL classes or project CSS created
+  them.
+- It does not establish a new block formatting context. If the container must
+  also be isolated from floats outside it, use an appropriate layout method or
+  a project rule such as `display: flow-root`.
+- It does not prevent margin collapsing. A two-pseudo-element clearfix recipe
+  found elsewhere on the web may behave differently from this ECL rule.
+- Apply it to a normal container that can generate an `::after` pseudo-element,
+  such as a `div`, `section`, or `article`; do not put it on the floated child,
+  an `img`, or another void/replaced element.
+- `ecl-u-clearfix` owns the element's `::after` content, display, and clear
+  properties with `!important`. Do not use it on an element whose `::after`
+  already provides decoration or meaningful generated content.
+- Existing `overflow`, `display: flow-root`, flex, or grid containment may make
+  clearfix redundant.
+- The class has no responsive variants and imposes no ARIA attributes, IDs, or
+  JavaScript hooks. Its empty pseudo-element carries no content for assistive
+  technologies.
