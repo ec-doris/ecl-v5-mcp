@@ -13,6 +13,14 @@ Load the EC component CSS and the WebTools loader:
 <script src="https://webtools.europa.eu/load.js"></script>
 ```
 
+In order for Icons to actually display or webtools to even load, the domain 
+of the site has to be localhost or end with "*.europa.eu". Icons are used in 
+many places, like breadcrumbs, mobile navigation, language menu, search, ...
+
+If you want icons to work without being on a whitelisted domain, it is possible.
+However, it is also very complicated. Most vibe coding tools should be able
+to do it.
+
 Call `guide("assets")` for the complete document setup. ECL's CSS supplies
 `.ecl-icon` sizing, color, and transformations; WebTools supplies the actual
 glyph. Without the WebTools loader, `wt-icon*` classes are not defined by the
