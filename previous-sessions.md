@@ -1303,3 +1303,61 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   rendering remain pending. Next take the remaining navigation, forms,
   content/media and simple components in small coherent batches, then focus
   utility/design guides, coverage gaps and final EC-wide delivery checks.
+
+### S026 — 2026-09-25 — Batch 25: indicator, spinner and tags
+
+- **Scope:** `HTML/TWIG-indicator`, `HTML/TWIG-spinner` and
+  `HTML/TWIG-tag` plus `TWIG-tag-set`, selected as the next small
+  status/metadata family after S025. The pinned target remains commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` (v5.3.1).
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1 and lists Loading indicator and Tags, the live
+  loading-indicator and tag routes (which returned 404-style responses in this
+  session), the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the pinned component READMEs, demo data, stories, tests, snapshots, JS/SCSS/
+  print/package files, the loading-indicator usage/accessibility source and
+  tag usage/accessibility source, plus the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The release fixes only layout-wrapper spacing and the site-header search
+  guard; none of these selected Twig files changed at the target release.
+- **Twig:** all four local files are byte-identical to their pinned v5.3.1
+  sources. Indicator preserves value/screen-reader-label/extension and
+  auto-init hooks; Spinner preserves variant, size, visibility, centered,
+  overlay, text and extension contracts (including the pinned extra-class
+  typo); Tag and Tag set preserve link/removable, external/nowrap, Icon,
+  iterable/empty and color-mode propagation contracts.
+- **HTML:** Indicator needed no markup change and retains numeric, labelled,
+  dot/text, extension and all 15 EC color-mode coverage. Spinner now marks its
+  loader SVGs decorative, gives the large visible branch the required
+  descriptive status text, records the target-version extra-class quirk and
+  removes a misleading color-mode pseudo-coverage note; the component has no
+  `color_mode` parameter. Tag comments now distinguish the official mixed-item
+  snapshot contract from the production guidance to keep one interaction model
+  per set; the existing link-only/removable-only sets and named/decorative
+  close-icon cases remain.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 71 component IDs and 18 guide topics; Indicator, Spinner and Tag
+  component responses matched disk; Indicator and Spinner returned their exact
+  single Twig keys, Tag returned exactly `tag.html.twig` and
+  `tag-set.html.twig`, every returned template value matched disk, the starter
+  retained `ECL.autoInit()`, and guide `__DIR__` substitution matched the
+  assets guide. The separate connected MCP surface was not exposed in this
+  session.
+- **Static/browser checks:** tagged Twig comparisons are 4/4 byte-identical;
+  the static HTML parser found no duplicate IDs or unclosed tags, all 15 EC
+  modes are present on Indicator and Tag, and every Spinner loader SVG is
+  `aria-hidden="true"`. The local v5.3.1 Chrome harness passed 14 checks:
+  Indicator branches and ECL auto-init, Spinner variants/visibility/overlay/
+  status semantics, Tag list nesting, close-icon naming and color modes; the
+  accessibility tree exposed all expected status, link, button and Dismiss
+  names. `node --check index.js` and `git diff --check` pass. `npm test
+  -- --runInBand` remains blocked by no test files, and `npm run lint` remains
+  blocked by no ESLint configuration. No Laravel code changed, so the Laravel
+  suite was not applicable; the temporary harness is removed after this
+  session.
+- **Handoff:** all seven S026 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending the external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets/GUIDE-icons WebTools rendering
+  remain pending. Next review the `ordered-list`/`unordered-list` family, then
+  continue the remaining navigation, forms, content/media and simple
+  components before the focused guides and final EC-wide delivery checks.

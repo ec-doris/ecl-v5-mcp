@@ -3,7 +3,11 @@
   class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -23,7 +27,11 @@
   class="ecl-spinner ecl-spinner--inverted ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -43,7 +51,11 @@
   class="ecl-spinner ecl-spinner--primary ecl-spinner--s ecl-spinner--visible"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -58,12 +70,16 @@
   <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<!-- Large size without text -->
+<!-- Large size with a descriptive status label -->
 <div
   class="ecl-spinner ecl-spinner--primary ecl-spinner--l ecl-spinner--visible"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -75,11 +91,16 @@
       vector-effect="non-scaling-stroke"
     ></circle>
   </svg>
+  <div class="ecl-spinner__text">Loading results</div>
 </div>
 
 <!-- Hidden default contract: no visible modifier and no text -->
 <div class="ecl-spinner ecl-spinner--primary ecl-spinner--m" role="alert">
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -99,7 +120,11 @@
   class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered ecl-spinner--visible"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -120,7 +145,11 @@
   class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--centered"
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -135,14 +164,18 @@
   <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<!-- Extra attributes; tagged extra_classes are dropped by the v5.0.1 Twig typo -->
+<!-- Extra attributes; tagged extra_classes are dropped by the v5.3.1 Twig typo -->
 <div
   class="ecl-spinner ecl-spinner--primary ecl-spinner--m ecl-spinner--visible"
   data-test="data-test-value"
   data-spinner-example
   role="alert"
 >
-  <svg class="ecl-spinner__loader" viewBox="25 25 50 50">
+  <svg
+    class="ecl-spinner__loader"
+    viewBox="25 25 50 50"
+    aria-hidden="true"
+  >
     <circle
       class="ecl-spinner__circle"
       cx="50"
@@ -157,20 +190,5 @@
   <div class="ecl-spinner__text">Loading</div>
 </div>
 
-<!-- Color mode extra_classes requested but not rendered by tagged Twig:
-  ecl-color-mode--blue
-  ecl-color-mode--blue-electric
-  ecl-color-mode--blue-navy
-  ecl-color-mode--blue-ocean
-  ecl-color-mode--green
-  ecl-color-mode--green-dark
-  ecl-color-mode--green-lemon
-  ecl-color-mode--green-pine
-  ecl-color-mode--orange
-  ecl-color-mode--purple
-  ecl-color-mode--purple-violet
-  ecl-color-mode--red-crayola
-  ecl-color-mode--red-tomato
-  ecl-color-mode--warm-grey
-  ecl-color-mode--yellow-gold
--->
+<!-- Spinner has no color_mode parameter in the pinned EC component. The
+     primary and inverted variants provide its documented color coverage. -->

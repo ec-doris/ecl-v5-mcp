@@ -28,7 +28,7 @@
   </span>
 </button>
 
-<!-- Removable tag without aria label -->
+<!-- Removable tag with a decorative close icon when no aria label is supplied -->
 <button type="button" class="ecl-tag ecl-tag--removable">
   Removable tag without title
   <span class="ecl-tag__icon">
@@ -39,7 +39,8 @@
   </span>
 </button>
 
-<!-- Tag set: snapshot contract mixes link and removable items -->
+<!-- Tag set: preserve the official snapshot's mixed-item contract; production
+     sets should use one interaction model consistently. -->
 <ul class="ecl-tag-set custom-tag-set" data-test="tag-set" data-filtered>
   <li class="ecl-tag-set__item">
     <a href="/example" class="ecl-tag">Link tag</a>
