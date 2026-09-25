@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <header class="ecl-site-header ecl-site-header-with-logo-l ecl-site-header--has-mega-menu"
+    <header class="ecl-site-header ecl-site-header--has-menu ecl-site-header-with-logo-l"
         data-ecl-auto-init="SiteHeader">
         <div class="ecl-site-header__inner">
             <div class="ecl-site-header__background">
@@ -31,7 +31,7 @@
                         <div class="ecl-site-header__top" data-ecl-site-header-top="">
                             <a class="ecl-link ecl-link--standalone ecl-site-header__logo-link"
                                 href="https://commission.europa.eu/index_en" aria-label="Home - European Commission"
-                                data-aria-label-en="Home - European Commission" data-once="header-logo-click">
+                                >
                                 <picture class="ecl-picture ecl-site-header__picture" title="European Commission">
                                     <source srcset="assets/logo-ec-positive-en.svg" media="(min-width: 996px)"><img
                                         class="ecl-site-header__logo-image ecl-site-header__logo-image--l"
@@ -48,7 +48,7 @@
                                         Log in
                                     </a>
                                 </div>
-                                <div class="ecl-site-header__language" data-ecl-language-list-container="">
+                                <div class="ecl-site-header__language">
                                     <a class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__language-selector"
                                         href="https://commission.europa.eu/news-and-media/news_en"
                                         data-ecl-language-selector="" role="button"
@@ -78,8 +78,8 @@
                                         </div>
                                         <div class="ecl-site-header__language-content"
                                             data-ecl-language-list-content="">
-                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu=""
-                                                data-ecl-language-list-non-eu="">
+                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu="">
+                                                <div class="ecl-site-header__language-category-title">Official EU languages:</div>
                                                 <ul class="ecl-site-header__language-list" translate="no">
                                                     <li class="ecl-site-header__language-item"><a
                                                             href="https://commission.europa.eu/news-and-media/news_bg"
@@ -257,40 +257,41 @@
                                     </div>
                                 </div>
                                 <div class="ecl-site-header__search-container" role="search">
-                                    <a class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle"
-                                        href="" data-ecl-search-toggle="true" aria-controls="" aria-expanded="false">
-                                        <span
-                                            class="wt-icon--search ecl-icon ecl-icon--s ecl-site-header__icon ecl-icon--search"
-                                            aria-hidden="true" role="img"></span>
-                                    </a>
-                                    <form class="ecl-search-form ecl-site-header__search" role="search"
-                                        data-drupal-selector="oe-search-search-form" action="/news-and-media/news_en"
-                                        method="post" id="oe-search-search-form" accept-charset="UTF-8"
-                                        data-ecl-search-form="">
-                                        <div class="ecl-form-group">
-                                            <label for="edit-keys" id="edit-keys-label"
-                                                class="ecl-form-label ecl-search-form__label">Search</label>
-                                            <input id="edit-keys"
-                                                class="ecl-text-input ecl-text-input--m ecl-search-form__text-input form-search ecl-search-form__text-input"
-                                                name="keys" type="search">
-                                        </div>
-                                        <button
-                                            class="ecl-button ecl-button--tertiary ecl-search-form__button ecl-search-form__button ecl-button--icon-only"
-                                            type="submit">
-                                            <span class="ecl-button__container">
-                                                <span
-                                                    class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-                                                    aria-hidden="true" data-ecl-icon></span>
-                                                <span class="ecl-button__label" data-ecl-label="true">Search</span>
-                                            </span>
-                                        </button>
-                                        <input autocomplete="off"
-                                            data-drupal-selector="form-cdjmcebizavgij36ekmwybcutpbgha4eu003hx4mss0"
-                                            type="hidden" name="form_build_id"
-                                            value="form-CdJMceBizAvGIj36EKMWYBcutPbGha4Eu003hx4MsS0"><input
-                                            data-drupal-selector="edit-oe-search-search-form" type="hidden"
-                                            name="form_id" value="oe_search_search_form">
-                                    </form>
+                                    <button
+                                        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle ecl-button--icon-only"
+                                        type="button" data-ecl-search-toggle="true"
+                                        aria-controls="ecl-site-header-search-form-dialog" aria-expanded="false"
+                                        aria-haspopup="dialog">
+                                        <span class="ecl-button__container">
+                                            <span
+                                                class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-site-header__icon ecl-icon--search"
+                                                aria-hidden="true" data-ecl-icon></span>
+                                            <span class="ecl-button__label" data-ecl-label="true">Search</span>
+                                        </span>
+                                    </button>
+                                    <div class="ecl-site-header__search-dialog" role="dialog" aria-modal="true"
+                                        id="ecl-site-header-search-form-dialog" aria-labelledby="site-header-search-label">
+                                        <form class="ecl-search-form ecl-site-header__search" id="site-header-search-form"
+                                            data-ecl-search-form="" action="/search" method="get">
+                                            <div class="ecl-form-group">
+                                                <label for="site-header-search-input" id="site-header-search-label"
+                                                    class="ecl-form-label ecl-search-form__label">Search</label>
+                                                <input id="site-header-search-input"
+                                                    class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
+                                                    name="q" type="search">
+                                            </div>
+                                            <button
+                                                class="ecl-button ecl-button--tertiary ecl-search-form__button ecl-button--icon-only"
+                                                type="submit">
+                                                <span class="ecl-button__container">
+                                                    <span
+                                                        class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
+                                                        aria-hidden="true" data-ecl-icon></span>
+                                                    <span class="ecl-button__label" data-ecl-label="true">Search</span>
+                                                </span>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -405,7 +406,7 @@
             <ol class="ecl-breadcrumb__container">
                 <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
                     <a href="./#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb__link"
-                        data-once="breadcrumbs-click">Home</a>
+                        >Home</a>
                     <span
                         class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon ecl-icon--corner-arrow"
                         aria-hidden="true" role="presentation"></span>
@@ -413,7 +414,7 @@
                 <li class="ecl-breadcrumb__segment" data-ecl-breadcrumb-item="static">
                     <a href="./#-2024-2029_en"
                         class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb__link"
-                        data-once="breadcrumbs-click">Page 1</a>
+                        >Page 1</a>
                     <span
                         class="wt-icon--corner-arrow ecl-icon ecl-icon--fluid ecl-breadcrumb__icon ecl-icon--corner-arrow"
                         aria-hidden="true" role="presentation"></span>
@@ -450,19 +451,14 @@
 
     </main>
 
-    <footer class="ecl-site-footer" data-logo-area-label-en="Home - European Commission">
-        <style>
-            .ecl-site-footer__social-media .ecl-social-media-follow__icon {
-                color: white;
-            }
-        </style>
+    <footer class="ecl-site-footer">
         <div class="ecl-site-footer__main">
             <div class="ecl-container ecl-site-footer__container">
                 <div class="ecl-site-footer__row ecl-site-footer__row--specific">
                     <div class="ecl-site-footer__section ecl-site-footer__section--site-info">
                         <a href="./#"
                             class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__logo-link"
-                            data-once="footer-logo-click">
+                            >
                             <picture class="ecl-picture ecl-site-footer__picture">
                                 <img class="ecl-site-footer__logo-image" src="assets/logo-ec-negative-en.svg"
                                     alt="European Commission logo">
@@ -521,7 +517,7 @@
                                 <li class="ecl-social-media-follow__item">
                                     <a href="./#"
                                         class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--no-visited ecl-link--icon ecl-social-media-follow__link ecl-link--icon-only"
-                                        data-section-label-untranslated="Follow us" data-footer-link-label="Facebook">
+                                        >
                                         <span class="wt-icon-networks--facebook wt-icon--inverted wt-icon--s"></span>
                                         <span class="ecl-link__label">Facebook</span>
                                     </a>
@@ -529,7 +525,7 @@
                                 <li class="ecl-social-media-follow__item">
                                     <a href="https://www.instagram.com/europeancommission/"
                                         class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--no-visited ecl-link--icon ecl-social-media-follow__link ecl-link--icon-only"
-                                        data-section-label-untranslated="Follow us" data-footer-link-label="Instagram">
+                                        >
                                         <span class="wt-icon-networks--instagram wt-icon--inverted wt-icon--s"></span>
                                         <span class="ecl-link__label">Instagram</span>
                                     </a>
@@ -537,7 +533,7 @@
                                 <li class="ecl-social-media-follow__item">
                                     <a href="https://x.com/EU_Commission"
                                         class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--no-visited ecl-link--icon ecl-social-media-follow__link ecl-link--icon-only"
-                                        data-section-label-untranslated="Follow us" data-footer-link-label="X">
+                                        >
                                         <span class="wt-icon-networks--x wt-icon--inverted wt-icon--s"></span>
                                         <span class="ecl-link__label">X</span>
                                     </a>
@@ -545,7 +541,7 @@
                                 <li class="ecl-social-media-follow__item">
                                     <a href="https://www.linkedin.com/company/european-commission"
                                         class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--no-visited ecl-link--icon ecl-social-media-follow__link ecl-link--icon-only"
-                                        data-section-label-untranslated="Follow us" data-footer-link-label="LinkedIn">
+                                        >
                                         <span class="wt-icon-networks--linkedin wt-icon--inverted wt-icon--s"></span>
                                         <span class="ecl-link__label">LinkedIn</span>
                                     </a>
@@ -553,8 +549,7 @@
                                 <li class="ecl-social-media-follow__item">
                                     <a href="https://european-union.europa.eu/contact-eu/social-media-channels_en"
                                         class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--no-visited ecl-link--icon ecl-social-media-follow__link ecl-link--icon-only"
-                                        data-section-label-untranslated="Follow us"
-                                        data-footer-link-label="Other networks">
+                                        >
                                         <span class="wt-icon--chain wt-icon--inverted wt-icon--s"></span>
                                         <span class="ecl-link__label">Other networks</span>
                                     </a>
@@ -564,32 +559,25 @@
                         <ul class="ecl-site-footer__list ecl-site-footer__list--inline">
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
-                                    data-section-label-untranslated="legal_navigation"
-                                    data-footer-link-label="Report an IT vulnerability"
-                                    data-once="footer-other-links-click">Report an IT vulnerability</a></li>
+                                    >Report an IT vulnerability</a></li>
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
-                                    data-section-label-untranslated="legal_navigation"
-                                    data-footer-link-label="Languages on our websites"
-                                    data-once="footer-other-links-click">Languages on our websites</a></li>
+                                    >Languages on our websites</a></li>
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
-                                    data-section-label-untranslated="legal_navigation" data-footer-link-label="Cookies"
-                                    data-once="footer-other-links-click">Cookies</a></li>
+                                    >Cookies</a></li>
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
-                                    data-section-label-untranslated="legal_navigation"
-                                    data-footer-link-label="Privacy policy" data-once="footer-other-links-click">Privacy
+                                    >Privacy
                                     policy</a></li>
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
-                                    data-section-label-untranslated="legal_navigation"
-                                    data-footer-link-label="Legal notice" data-once="footer-other-links-click">Legal
+                                    >Legal
                                     notice</a></li>
                             <li class="ecl-site-footer__list-item"><a href="./#"
                                     class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
                                     data-is-accessibility-link="true"
-                                    data-once="footer-accessibility-link-click">Accessibility</a></li>
+                                    >Accessibility</a></li>
                         </ul>
                     </div>
                 </div>

@@ -18,6 +18,35 @@ async function readDir(dirPath) {
     return await fs.readdir(dirPath);
 }
 
+// Keep template discovery aligned with ECL component families instead of
+// using a broad filename prefix. Prefix matching makes `file` include
+// `file-upload` and exposes the legacy EU footer through the EC `site-footer`
+// family. The families below mirror the helper Twig files shipped for the
+// pinned EC release. Retired legacy files remain on disk for traceability but
+// are not advertised or returned as part of an active EC family.
+const templateFamilies = {
+    "category-filter": ["category-filter.html.twig", "category-filter-items.html.twig"],
+    checkbox: ["checkbox-group.html.twig", "checkbox-item.html.twig"],
+    file: ["file.html.twig"],
+    gallery: ["gallery.html.twig", "gallery-item.html.twig", "gallery-overlay.html.twig"],
+    "list-illustration": ["list-illustration.html.twig", "list-illustration-item.html.twig"],
+    "mega-menu": ["mega-menu.html.twig", "mega-menu-item.html.twig", "mega-menu-featured-item.html.twig"],
+    menu: ["menu.html.twig", "menu-item.html.twig"],
+    "navigation-list": ["navigation-list.html.twig", "navigation-list-item.html.twig"],
+    "page-header": ["page-header.html.twig", "page-header-expandable.html.twig"],
+    quiz: ["quiz.html.twig", "quiz-card.html.twig"],
+    radio: ["radio-group.html.twig", "radio-button.html.twig"],
+    "site-footer": ["site-footer-ec.html.twig", "site-footer-ec-section.html.twig"],
+    "site-header": ["site-header.html.twig", "site-header-language-switcher.html.twig"],
+    tag: ["tag.html.twig", "tag-set.html.twig"],
+    timeline: ["timeline.html.twig", "timeline-set.html.twig"],
+};
+
+function getTemplateFiles(componentId, files) {
+    const family = templateFamilies[componentId] || [`${componentId}.html.twig`];
+    return family.filter(file => files.includes(file));
+}
+
 const server = new McpServer(
     {
         name: "ecl-v5-server",
@@ -97,17 +126,20 @@ server.registerTool(
 
             for (const file of htmlFiles) {
                 const id = file.replace('.html', '');
-                components.push({
+                const component = {
                     id,
                     component_call: {
                         tool: "component",
                         parameters: { id }
                     },
-                    template_call: {
+                };
+                if (getTemplateFiles(id, files).length > 0) {
+                    component.template_call = {
                         tool: "component_template",
                         parameters: { id }
-                    }
-                });
+                    };
+                }
+                components.push(component);
             }
 
             return {
@@ -170,7 +202,7 @@ server.registerTool(
     async ({ id }) => {
         try {
             const files = await readDir(join(__dirname, "components"));
-            const twigFiles = files.filter(file => file.startsWith(`${id}`) && file.endsWith('.html.twig'));
+            const twigFiles = getTemplateFiles(id, files);
 
             if (twigFiles.length === 0) {
                 throw new Error(`No templates found for component '${id}'`);

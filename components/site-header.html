@@ -673,36 +673,49 @@
             <!-- Search form -->
             <div class="ecl-site-header__search-container" role="search">
               <!-- Sub-component: Icon. See the <code>icon</code> component for full markup guidance. -->
-              <a
-                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle"
-                href="/example"
+              <button
+                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle ecl-button--icon-only"
+                type="button"
                 data-ecl-search-toggle="true"
-                aria-controls="search-form-id"
+                aria-controls="ecl-site-header-search-form-dialog-core"
                 aria-expanded="false"
+                aria-haspopup="dialog"
               >
-                <span
-                  class="wt-icon--search ecl-icon ecl-icon--m ecl-site-header__icon ecl-icon--search"
-                  role="img"
-                  title="Search"
-                  aria-hidden="false"
-                ></span
-                >Search
-              </a>
+                <span class="ecl-button__container">
+                  <span
+                    class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-site-header__icon ecl-icon--search"
+                    aria-hidden="true"
+                    data-ecl-icon
+                  ></span>
+                  <span class="ecl-button__label" data-ecl-label="true">Search</span>
+                </span>
+              </button>
               <!-- Sub-component: Search Form. See the <code>search-form</code> component for full markup guidance. -->
+              <div
+                class="ecl-site-header__search-dialog"
+                role="dialog"
+                aria-modal="true"
+                id="ecl-site-header-search-form-dialog-core"
+                aria-labelledby="search-input-id-label"
+              >
               <form
                 class="ecl-search-form ecl-site-header__search"
                 data-ecl-search-form
                 id="search-form-id"
+                action="/search"
+                method="get"
               >
                 <label
                   class="ecl-form-label ecl-search-form__label"
                   for="search-input-id"
+                  id="search-input-id-label"
                   >Search</label
                 >
                 <input
                   class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
                   type="search"
                   id="search-input-id"
+                  name="q"
                   placeholder="Placeholder text"
                 />
                 <!-- Sub-component: Button with Icon. See the <code>button</code> and <code>icon</code> components for full markup guidance. -->
@@ -722,6 +735,7 @@
                   </span>
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
@@ -856,126 +870,6 @@
     data-ecl-auto-init="MegaMenu"
     aria-label="Main navigation"
   ></nav>
-</header>
-
-<!-- EU logo breakpoint and medium logo size, notification without close button, language overlay with only non-EU items. -->
-<header
-  class="ecl-site-header ecl-site-header-with-logo-m"
-  data-ecl-auto-init="SiteHeader"
->
-  <div class="ecl-site-header__inner">
-    <div class="ecl-site-header__header">
-      <div class="ecl-site-header__container ecl-container">
-        <div class="ecl-site-header__top" data-ecl-site-header-top>
-          <a
-            class="ecl-link ecl-link--standalone ecl-site-header__logo-link"
-            href="/example"
-          >
-            <picture class="ecl-picture ecl-site-header__picture">
-              <source
-                srcset="
-                  https://inno-ecl.s3.amazonaws.com/media/logos/logo-eu--en.svg
-                "
-                media="(min-width: 1140px)"
-              />
-              <img
-                class="ecl-site-header__logo-image ecl-site-header__logo-image--m"
-                src="https://inno-ecl.s3.amazonaws.com/media/logos/logo-eu-condensed--en.svg"
-                alt="European Union"
-                title="European Union"
-              />
-            </picture>
-          </a>
-          <div class="ecl-site-header__action">
-            <div class="ecl-site-header__language">
-              <a
-                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__language-selector"
-                href="/example"
-                data-ecl-language-selector
-                role="button"
-                aria-label="Change language, current language is English - EN"
-                aria-controls="language-list-overlay-non-eu"
-              >
-                <span class="ecl-site-header__language-icon">
-                  <span
-                    class="wt-icon--global ecl-icon ecl-icon--m ecl-site-header__icon ecl-icon--global"
-                    role="img"
-                    title="EN"
-                    aria-hidden="false"
-                  ></span> </span
-                >EN</a
-              >
-              <div
-                class="ecl-site-header__language-container"
-                id="language-list-overlay-non-eu"
-                hidden
-                data-ecl-language-list-overlay
-                aria-labelledby="ecl-site-header__language-title-non-eu"
-                role="dialog"
-              >
-                <div class="ecl-site-header__language-header">
-                  <div
-                    class="ecl-site-header__language-title"
-                    id="ecl-site-header__language-title-non-eu"
-                  >
-                    Select your language
-                  </div>
-                </div>
-                <div
-                  class="ecl-site-header__language-content"
-                  data-ecl-language-list-content
-                >
-                  <div
-                    class="ecl-site-header__language-category"
-                    data-ecl-language-list-non-eu
-                  >
-                    <ul class="ecl-site-header__language-list" translate="no">
-                      <li class="ecl-site-header__language-item">
-                        <a
-                          class="ecl-link ecl-link--standalone ecl-site-header__language-link ecl-site-header__language-link--active"
-                          href="/example"
-                          lang="ja"
-                          hreflang="ja"
-                        >
-                          <span class="ecl-site-header__language-link-code"
-                            >ja</span
-                          >
-                          <span class="ecl-site-header__language-link-label"
-                            >日本語</span
-                          >
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ecl-site-header__notification">
-      <div class="ecl-container">
-        <div
-          class="ecl-notification ecl-notification--info"
-          data-ecl-notification
-          data-ecl-auto-init="Notification"
-          data-ecl-site-header-notification
-          role="alert"
-        >
-          <span
-            class="wt-icon--information-outline ecl-icon ecl-icon--l ecl-notification__icon ecl-icon--information-outline"
-            aria-hidden="true"
-          ></span>
-          <div class="ecl-notification__content">
-            <div class="ecl-notification__description">
-              Notification without a close button.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
 
 <!-- Tagged empty/root-only output: no logo, actions, notification, banner, or menus. -->
@@ -1401,36 +1295,49 @@
             <!-- Search form -->
             <div class="ecl-site-header__search-container" role="search">
               <!-- Sub-component: Icon. See the <code>icon</code> component for full markup guidance. -->
-              <a
-                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle"
-                href="/example"
+              <button
+                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle ecl-button--icon-only"
+                type="button"
                 data-ecl-search-toggle="true"
-                aria-controls="search-form-id-std"
+                aria-controls="ecl-site-header-search-form-dialog-std"
                 aria-expanded="false"
+                aria-haspopup="dialog"
               >
-                <span
-                  class="wt-icon--search ecl-icon ecl-icon--m ecl-site-header__icon ecl-icon--search"
-                  role="img"
-                  title="Search"
-                  aria-hidden="false"
-                ></span
-                >Search
-              </a>
+                <span class="ecl-button__container">
+                  <span
+                    class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-site-header__icon ecl-icon--search"
+                    aria-hidden="true"
+                    data-ecl-icon
+                  ></span>
+                  <span class="ecl-button__label" data-ecl-label="true">Search</span>
+                </span>
+              </button>
               <!-- Sub-component: Search Form. See the <code>search-form</code> component for full markup guidance. -->
+              <div
+                class="ecl-site-header__search-dialog"
+                role="dialog"
+                aria-modal="true"
+                id="ecl-site-header-search-form-dialog-std"
+                aria-labelledby="search-input-id-std-label"
+              >
               <form
                 class="ecl-search-form ecl-site-header__search"
                 data-ecl-search-form
                 id="search-form-id-std"
+                action="/search"
+                method="get"
               >
                 <label
                   class="ecl-form-label ecl-search-form__label"
                   for="search-input-id-std"
+                  id="search-input-id-std-label"
                   >Search</label
                 >
                 <input
                   class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
                   type="search"
                   id="search-input-id-std"
+                  name="q"
                   placeholder="Placeholder text"
                 />
                 <!-- Sub-component: Button with Icon. See the <code>button</code> and <code>icon</code> components for full markup guidance. -->
@@ -1450,6 +1357,7 @@
                   </span>
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
@@ -1752,36 +1660,49 @@
             <!-- Search form -->
             <div class="ecl-site-header__search-container" role="search">
               <!-- Sub-component: Icon. See the <code>icon</code> component for full markup guidance. -->
-              <a
-                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle"
-                href="/example"
+              <button
+                class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-site-header__search-toggle ecl-button--icon-only"
+                type="button"
                 data-ecl-search-toggle="true"
-                aria-controls="search-form-id-harm"
+                aria-controls="ecl-site-header-search-form-dialog-harm"
                 aria-expanded="false"
+                aria-haspopup="dialog"
               >
-                <span
-                  class="wt-icon--search ecl-icon ecl-icon--m ecl-site-header__icon ecl-icon--search"
-                  role="img"
-                  title="Search"
-                  aria-hidden="false"
-                ></span
-                >Search
-              </a>
+                <span class="ecl-button__container">
+                  <span
+                    class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-site-header__icon ecl-icon--search"
+                    aria-hidden="true"
+                    data-ecl-icon
+                  ></span>
+                  <span class="ecl-button__label" data-ecl-label="true">Search</span>
+                </span>
+              </button>
               <!-- Sub-component: Search Form. See the <code>search-form</code> component for full markup guidance. -->
+              <div
+                class="ecl-site-header__search-dialog"
+                role="dialog"
+                aria-modal="true"
+                id="ecl-site-header-search-form-dialog-harm"
+                aria-labelledby="search-input-id-harm-label"
+              >
               <form
                 class="ecl-search-form ecl-site-header__search"
                 data-ecl-search-form
                 id="search-form-id-harm"
+                action="/search"
+                method="get"
               >
                 <label
                   class="ecl-form-label ecl-search-form__label"
                   for="search-input-id-harm"
+                  id="search-input-id-harm-label"
                   >Search</label
                 >
                 <input
                   class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
                   type="search"
                   id="search-input-id-harm"
+                  name="q"
                   placeholder="Placeholder text"
                 />
                 <!-- Sub-component: Button with Icon. See the <code>button</code> and <code>icon</code> components for full markup guidance. -->
@@ -1801,6 +1722,7 @@
                   </span>
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
