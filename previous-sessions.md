@@ -1361,3 +1361,43 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   remain pending. Next review the `ordered-list`/`unordered-list` family, then
   continue the remaining navigation, forms, content/media and simple
   components before the focused guides and final EC-wide delivery checks.
+### S027 — 2026-09-25 — Batch 26: ordered and unordered lists
+
+- **Scope:** `HTML/TWIG-ordered-list` and `HTML/TWIG-unordered-list`, the next
+  recommended simple/content batch. The pinned target remains v5.3.1 at
+  commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1, the [v5.3.1 release notes](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged list usage/accessibility/API/code pages, both component READMEs,
+  demo data, stories, tests, snapshots, SCSS/print files, package manifests,
+  and the changelog from the checked-in v5.0.1 evidence to v5.3.1. The relevant
+  v5.1 list fix adds standalone-link marker alignment and updates the linked
+  demos; v5.3.1 itself only fixes layout-wrapper and site-header behavior.
+- **HTML:** added `ecl-link--standalone` to the two long top-level links in
+  each list example, matching the pinned demo data and list CSS. Nested links
+  remain ordinary `ecl-link` instances. Text, linked, divider, no-marker,
+  extension, empty and all 15 EC color-mode coverage remains intact.
+- **Twig:** both local files were byte-identical to their pinned v5.3.1
+  sources and required no edit. Recursive nested-list output, variant reset,
+  root extension escaping and package dependencies were verified against the
+  target source and paired examples.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 71 component IDs and 18 guide topics; both list component responses
+  matched disk; each list family returned its exact single Twig key/value;
+  starter `ECL.autoInit()` and guide `__DIR__` substitution passed. The
+  separate connected MCP surface was not exposed in this session.
+- **Static/browser checks:** tagged Twig comparisons are 2/2 byte-identical;
+  static assertions passed for valid roots, 15/15 modes per example and two
+  top-level standalone links per example. The local v5.3.1 Chrome harness
+  passed 11 checks covering nested-list structure, duplicate IDs, computed
+  marker alignment and both rendered examples. `node --check index.js` and
+  `git diff --check` pass. `npm test -- --runInBand` remains blocked by no
+  project test files, and `npm run lint` remains blocked by no ESLint config.
+  No Laravel code changed, so the Laravel suite was not applicable. The
+  temporary harness, browser tab and local server were removed after testing.
+- **Handoff:** all four S027 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets/GUIDE-icons WebTools rendering
+  remains pending. Next review the `page-information`/`spotlight` pair, then
+  continue the remaining component rows and focused guides.
