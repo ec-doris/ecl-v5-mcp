@@ -1,67 +1,143 @@
-<!-- Default carousel: three medium banner slides with description, default roles, default labels, and "of" counter label. -->
+<!-- Default EC carousel: Embla controls, teaser navigation, banner slides and counter. -->
 <section
   class="ecl-carousel"
   data-ecl-auto-init="Carousel"
   aria-roledescription="carousel"
   aria-label="Featured highlights"
+  data-ecl-carousel-counter-label="of"
 >
   <div class="ecl-carousel__controls">
     <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
+      <div class="ecl-carousel__navigation">
+        <div class="ecl-carousel__pager-container">
+          <div class="ecl-slider-pager ecl-carousel__pager">
+            <button
+              class="ecl-button ecl-button--secondary ecl-button--m ecl-button--neutral ecl-slider-pager__play ecl-carousel__play ecl-button--icon-only"
+              type="button"
             >
-            <span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span>
-          </span>
-        </button>
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
+              <span class="ecl-button__container">
+                <span class="ecl-button__label" data-ecl-label="true"
+                  >Play</span
+                >
+                <span
+                  aria-hidden="true"
+                  class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--play-filled"
+                  data-ecl-icon
+                ></span>
+              </span>
+            </button>
+            <button
+              class="ecl-button ecl-button--secondary ecl-button--m ecl-button--neutral ecl-slider-pager__pause ecl-carousel__pause ecl-button--icon-only"
+              type="button"
             >
-            <span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span>
-          </span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          2
-        </button>
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          3
-        </button>
+              <span class="ecl-button__container">
+                <span class="ecl-button__label" data-ecl-label="true"
+                  >Pause</span
+                >
+                <span
+                  aria-hidden="true"
+                  class="wt-icon-phosphor--pause-filled ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--pause-filled"
+                  data-ecl-icon
+                ></span>
+              </span>
+            </button>
+            <button
+              class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-slider-pager__prev ecl-carousel__prev ecl-button--icon-only"
+              type="button"
+            >
+              <span class="ecl-button__container">
+                <span class="ecl-button__label" data-ecl-label="true"
+                  >Previous</span
+                >
+                <span
+                  aria-hidden="true"
+                  class="wt-icon-phosphor--caret-left wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
+                  data-ecl-icon
+                ></span>
+              </span>
+            </button>
+            <div class="ecl-slider-pager__dots ecl-carousel__dots"></div>
+            <button
+              class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-slider-pager__next ecl-carousel__next ecl-button--icon-only"
+              type="button"
+            >
+              <span class="ecl-button__container">
+                <span class="ecl-button__label" data-ecl-label="true"
+                  >Next</span
+                >
+                <span
+                  aria-hidden="true"
+                  class="wt-icon-phosphor--caret-right wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-right"
+                  data-ecl-icon
+                ></span>
+              </span>
+            </button>
+            <script
+              type="text/template"
+              data-ecl-slider-dot-template
+              data-ecl-carousel-dot-template
+            >
+              <button class="ecl-slider-pager__dot ecl-carousel__dot"></button>
+            </script>
+          </div>
+          <div class="ecl-carousel__counter" dir="ltr"></div>
+        </div>
+        <div class="ecl-carousel__teasers" role="tablist">
+          <button
+            class="ecl-carousel__teaser-button"
+            type="button"
+            data-ecl-carousel-teaser-button
+            data-ecl-carousel-slide-index="0"
+            role="tab"
+            tabindex="-1"
+          >
+            <span class="ecl-carousel__teaser-loading-bar" aria-hidden="true">
+              <span class="ecl-carousel__teaser-loading-bar-completion"></span>
+            </span>
+            <span class="ecl-carousel__teaser-content">
+              <span class="ecl-carousel__teaser-title"
+                >Jobs and opportunities</span
+              >
+            </span>
+          </button>
+          <button
+            class="ecl-carousel__teaser-button"
+            type="button"
+            data-ecl-carousel-teaser-button
+            data-ecl-carousel-slide-index="1"
+            role="tab"
+            tabindex="-1"
+          >
+            <span class="ecl-carousel__teaser-loading-bar" aria-hidden="true">
+              <span class="ecl-carousel__teaser-loading-bar-completion"></span>
+            </span>
+            <span class="ecl-carousel__teaser-content">
+              <span class="ecl-carousel__teaser-title"
+                >Green transition</span
+              >
+            </span>
+          </button>
+          <button
+            class="ecl-carousel__teaser-button"
+            type="button"
+            data-ecl-carousel-teaser-button
+            data-ecl-carousel-slide-index="2"
+            role="tab"
+            tabindex="-1"
+          >
+            <span class="ecl-carousel__teaser-loading-bar" aria-hidden="true">
+              <span class="ecl-carousel__teaser-loading-bar-completion"></span>
+            </span>
+            <span class="ecl-carousel__teaser-description"
+              >A message from Europe</span
+            >
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="ecl-carousel__container">
+
+  <div class="ecl-carousel__viewport">
     <div class="ecl-carousel__slides">
       <div
         class="ecl-carousel__slide"
@@ -73,7 +149,7 @@
           class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
           data-ecl-auto-init="Banner"
           data-ecl-banner
-          id="carousel-default-image"
+          id="carousel-example-1"
         >
           <figure class="ecl-banner__picture-container">
             <picture
@@ -81,42 +157,39 @@
               data-ecl-banner-image
             >
               <img
-                alt="Alternative text"
                 class="ecl-banner__image"
                 src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                alt="A European Commission programme"
               />
             </picture>
           </figure>
           <div class="ecl-container ecl-banner__info">
             <div class="ecl-banner__container" data-ecl-banner-container>
               <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-default-image-title"
-                >
+                <div class="ecl-banner__title" id="carousel-example-1-title">
                   <span class="ecl-banner__title-text"
-                    >Lorem ipsum dolor sit amet</span
+                    >Jobs and opportunities</span
                   >
                 </div>
                 <p
                   class="ecl-banner__description"
-                  id="carousel-default-image-description"
+                  id="carousel-example-1-description"
                 >
-                  <span class="ecl-banner__description-text">
-                    Nullam sollicitudin suscipit diam, ac blandit ipsum tempor
-                    consectetur
-                  </span>
+                  <span class="ecl-banner__description-text"
+                    >Discover opportunities across the EU institutions.</span
+                  >
                 </p>
                 <div class="ecl-banner__cta">
                   <a
                     class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta"
                     href="/example"
-                    aria-describedby="carousel-default-image-title"
+                    aria-describedby="carousel-example-1-title"
                   >
-                    <span class="ecl-link__label">Subscribe</span>
+                    <span class="ecl-link__label">Learn more</span>
                     <span
                       aria-hidden="true"
                       class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+                      data-ecl-icon
                     ></span>
                   </a>
                 </div>
@@ -130,12 +203,13 @@
         role="tabpanel"
         aria-label="slide 2 of 3"
         aria-roledescription="slide"
+        inert="true"
       >
         <section
           class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-dark ecl-banner--color-light ecl-banner--h-left ecl-banner--v-center"
           data-ecl-auto-init="Banner"
           data-ecl-banner
-          id="carousel-default-credit"
+          id="carousel-example-2"
         >
           <figure class="ecl-banner__picture-container">
             <picture
@@ -143,45 +217,34 @@
               data-ecl-banner-image
             >
               <img
-                alt="Alternative text"
                 class="ecl-banner__image"
-                src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
+                alt="A community energy project"
               />
             </picture>
             <footer class="ecl-banner__credit" data-ecl-banner-footer>
-              <div class="ecl-container">Copyright or credit</div>
+              <div class="ecl-container">Photo: European Commission</div>
             </footer>
           </figure>
           <div class="ecl-container ecl-banner__info">
             <div class="ecl-banner__container" data-ecl-banner-container>
               <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-default-credit-title"
-                >
+                <div class="ecl-banner__title" id="carousel-example-2-title">
                   <span class="ecl-banner__title-text"
-                    >Duis vitae pulvinar turpis</span
+                    >Green transition</span
                   >
                 </div>
-                <p
-                  class="ecl-banner__description"
-                  id="carousel-default-credit-description"
-                >
-                  <span class="ecl-banner__description-text">
-                    Integer quis lorem tellus. Nullam sollicitudin suscipit
-                    diam.
-                  </span>
-                </p>
                 <div class="ecl-banner__cta">
                   <a
                     class="ecl-link ecl-link--primary-highlight-inverted ecl-link--icon ecl-banner__link-cta"
                     href="/example"
-                    aria-describedby="carousel-default-credit-title"
+                    aria-describedby="carousel-example-2-title"
                   >
-                    <span class="ecl-link__label">Subscribe</span>
+                    <span class="ecl-link__label">Explore</span>
                     <span
                       aria-hidden="true"
                       class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
+                      data-ecl-icon
                     ></span>
                   </a>
                 </div>
@@ -195,21 +258,21 @@
         role="tabpanel"
         aria-label="slide 3 of 3"
         aria-roledescription="slide"
+        inert="true"
       >
         <section
           class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-dark ecl-banner--color-light ecl-banner--h-left ecl-banner--v-center"
           data-ecl-auto-init="Banner"
           data-ecl-banner
-          id="carousel-default-video"
+          id="carousel-example-3"
         >
           <div class="ecl-banner__video-container">
             <video
-              autoplay
               class="ecl-video ecl-banner__video"
               data-ecl-banner-video
-              loop
               muted
               playsinline
+              preload="metadata"
               poster="https://vod.prd.commavservices.eu/12/224712/THUMB_I224712EN1W_V_1.jpg"
             >
               <source
@@ -224,7 +287,7 @@
             >
               <span class="ecl-button__container">
                 <span class="ecl-button__label" data-ecl-label="true"
-                  >Play</span
+                  >Play video</span
                 >
                 <span
                   aria-hidden="true"
@@ -240,7 +303,7 @@
             >
               <span class="ecl-button__container">
                 <span class="ecl-button__label" data-ecl-label="true"
-                  >Pause</span
+                  >Pause video</span
                 >
                 <span
                   aria-hidden="true"
@@ -253,36 +316,17 @@
           <div class="ecl-container ecl-banner__info">
             <div class="ecl-banner__container" data-ecl-banner-container>
               <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-default-video-title"
-                >
-                  <span class="ecl-banner__title-text">
-                    Donec maximus pharetra ex a ultricies
-                  </span>
+                <div class="ecl-banner__title" id="carousel-example-3-title">
+                  <span class="ecl-banner__title-text">A message from Europe</span>
                 </div>
                 <p
                   class="ecl-banner__description"
-                  id="carousel-default-video-description"
+                  id="carousel-example-3-description"
                 >
-                  <span class="ecl-banner__description-text">
-                    Duis vitae pulvinar turpis. Donec maximus pharetra ex a
-                    ultricies.
-                  </span>
+                  <span class="ecl-banner__description-text"
+                    >Hear the latest news from the European Commission.</span
+                  >
                 </p>
-                <div class="ecl-banner__cta">
-                  <a
-                    class="ecl-link ecl-link--primary-highlight-inverted ecl-link--icon ecl-banner__link-cta"
-                    href="/example"
-                    aria-describedby="carousel-default-video-title"
-                  >
-                    <span class="ecl-link__label">Subscribe</span>
-                    <span
-                      aria-hidden="true"
-                      class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
-                    ></span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -292,247 +336,136 @@
   </div>
 </section>
 
-<!-- Small one-slide carousel: no sr_description, custom labels, custom role strings, extra class, valued and valueless attributes. -->
-<section
-  class="ecl-carousel custom-carousel custom-carousel--compact"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="featured carousel"
-  data-test="carousel-extra"
-  data-compact
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true"
-              >Start rotation</span
-            >
-            <span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span>
-          </span>
-        </button>
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container">
-            <span class="ecl-button__label" data-ecl-label="true"
-              >Stop rotation</span
-            >
-            <span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span>
-          </span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 sur 1"
-        aria-roledescription="panel"
-      >
-        <section
-          class="ecl-banner ecl-banner--s ecl-banner--font-s ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-small-single"
-        >
-          <figure class="ecl-banner__picture-container">
-            <picture
-              class="ecl-picture ecl-banner__picture"
-              data-ecl-banner-image
-            >
-              <img
-                alt=""
-                class="ecl-banner__image"
-                src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-              />
-            </picture>
-          </figure>
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="carousel-small-single-title">
-                  <span class="ecl-banner__title-text"
-                    >Small carousel slide</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Large full-width carousel in the story's intended grid context. -->
+<!-- Compact full-width color-mode example with one slide. -->
 <div class="ecl-container">
   <section
-    class="ecl-carousel ecl-carousel--full-width"
+    class="ecl-carousel ecl-carousel--full-width ecl-color-mode--blue"
     data-ecl-auto-init="Carousel"
     aria-roledescription="carousel"
-    aria-label="Large full-width carousel"
+    aria-label="Blue programme carousel"
+    data-ecl-carousel-counter-label="of"
   >
     <div class="ecl-carousel__controls">
       <div class="ecl-container">
-        <div class="ecl-carousel__autoplay">
-          <button
-            class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-            type="button"
-          >
-            <span class="ecl-button__container">
-              <span class="ecl-button__label" data-ecl-label="true"
-                >Play carousel</span
+        <div class="ecl-carousel__navigation">
+          <div class="ecl-carousel__pager-container">
+            <div class="ecl-slider-pager ecl-carousel__pager">
+              <button
+                class="ecl-button ecl-button--secondary ecl-button--m ecl-button--neutral ecl-slider-pager__play ecl-carousel__play ecl-button--icon-only"
+                type="button"
               >
-              <span
-                aria-hidden="true"
-                class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-                data-ecl-icon
-              ></span>
-            </span>
-          </button>
-          <button
-            class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-            type="button"
-          >
-            <span class="ecl-button__container">
-              <span class="ecl-button__label" data-ecl-label="true"
-                >Pause carousel</span
+                <span class="ecl-button__container">
+                  <span class="ecl-button__label" data-ecl-label="true"
+                    >Play carousel</span
+                  >
+                  <span
+                    aria-hidden="true"
+                    class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--play-filled"
+                    data-ecl-icon
+                  ></span>
+                </span>
+              </button>
+              <button
+                class="ecl-button ecl-button--secondary ecl-button--m ecl-button--neutral ecl-slider-pager__pause ecl-carousel__pause ecl-button--icon-only"
+                type="button"
               >
+                <span class="ecl-button__container">
+                  <span class="ecl-button__label" data-ecl-label="true"
+                    >Pause carousel</span
+                  >
+                  <span
+                    aria-hidden="true"
+                    class="wt-icon-phosphor--pause-filled ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--pause-filled"
+                    data-ecl-icon
+                  ></span>
+                </span>
+              </button>
+              <button
+                class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-slider-pager__prev ecl-carousel__prev ecl-button--icon-only"
+                type="button"
+              >
+                <span class="ecl-button__container">
+                  <span class="ecl-button__label" data-ecl-label="true"
+                    >Previous</span
+                  >
+                  <span
+                    aria-hidden="true"
+                    class="wt-icon-phosphor--caret-left wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
+                    data-ecl-icon
+                  ></span>
+                </span>
+              </button>
+              <div class="ecl-slider-pager__dots ecl-carousel__dots"></div>
+              <button
+                class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-slider-pager__next ecl-carousel__next ecl-button--icon-only"
+                type="button"
+              >
+                <span class="ecl-button__container">
+                  <span class="ecl-button__label" data-ecl-label="true"
+                    >Next</span
+                  >
+                  <span
+                    aria-hidden="true"
+                    class="wt-icon-phosphor--caret-right wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-right"
+                    data-ecl-icon
+                  ></span>
+                </span>
+              </button>
+              <script
+                type="text/template"
+                data-ecl-slider-dot-template
+                data-ecl-carousel-dot-template
+              >
+                <button class="ecl-slider-pager__dot ecl-carousel__dot"></button>
+              </script>
+            </div>
+            <div class="ecl-carousel__counter" dir="ltr"></div>
+          </div>
+          <div class="ecl-carousel__teasers" role="tablist">
+            <button
+              class="ecl-carousel__teaser-button"
+              type="button"
+              data-ecl-carousel-teaser-button
+              data-ecl-carousel-slide-index="0"
+              role="tab"
+              tabindex="-1"
+            >
               <span
+                class="ecl-carousel__teaser-loading-bar"
                 aria-hidden="true"
-                class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-                data-ecl-icon
-              ></span>
-            </span>
-          </button>
-        </div>
-        <div class="ecl-carousel__navigation" role="tablist">
-          <button
-            class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-            role="tab"
-          >
-            1
-          </button>
-          <button
-            class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-            role="tab"
-          >
-            2
-          </button>
+              >
+                <span
+                  class="ecl-carousel__teaser-loading-bar-completion"
+                ></span>
+              </span>
+              <span class="ecl-carousel__teaser-content">
+                <span class="ecl-carousel__teaser-title">Blue programme</span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="ecl-carousel__container">
+    <div class="ecl-carousel__viewport">
       <div class="ecl-carousel__slides">
         <div
           class="ecl-carousel__slide"
           role="tabpanel"
-          aria-label="slide 1 of 2"
+          aria-label="slide 1 of 1"
           aria-roledescription="slide"
         >
           <section
-            class="ecl-banner ecl-banner--l ecl-banner--font-l ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
+            class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
             data-ecl-auto-init="Banner"
             data-ecl-banner
-            id="carousel-full-width-one"
+            id="carousel-blue-mode"
           >
-            <figure class="ecl-banner__picture-container">
-              <picture
-                class="ecl-picture ecl-banner__picture"
-                data-ecl-banner-image
-              >
-                <img
-                  alt="Alternative text"
-                  class="ecl-banner__image"
-                  src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                />
-              </picture>
-            </figure>
             <div class="ecl-container ecl-banner__info">
               <div class="ecl-banner__container" data-ecl-banner-container>
                 <div class="ecl-banner__content">
-                  <div
-                    class="ecl-banner__title"
-                    id="carousel-full-width-one-title"
-                  >
+                  <div class="ecl-banner__title" id="carousel-blue-mode-title">
                     <span class="ecl-banner__title-text"
-                      >Large full-width slide</span
-                    >
-                  </div>
-                  <div class="ecl-banner__cta">
-                    <a
-                      class="ecl-link ecl-link--primary-highlight ecl-link--icon ecl-banner__link-cta"
-                      href="/example"
-                      aria-describedby="carousel-full-width-one-title"
-                    >
-                      <span class="ecl-link__label">Subscribe</span>
-                      <span
-                        aria-hidden="true"
-                        class="wt-icon--corner-arrow ecl-icon ecl-icon--xs ecl-icon--rotate-90 ecl-link__icon ecl-icon--corner-arrow"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div
-          class="ecl-carousel__slide"
-          role="tabpanel"
-          aria-label="slide 2 of 2"
-          aria-roledescription="slide"
-        >
-          <section
-            class="ecl-banner ecl-banner--l ecl-banner--font-l ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-            data-ecl-auto-init="Banner"
-            data-ecl-banner
-            id="carousel-full-width-two"
-          >
-            <figure class="ecl-banner__picture-container">
-              <picture
-                class="ecl-picture ecl-banner__picture"
-                data-ecl-banner-image
-              >
-                <img
-                  alt="Alternative text"
-                  class="ecl-banner__image"
-                  src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                />
-              </picture>
-            </figure>
-            <div class="ecl-container ecl-banner__info">
-              <div class="ecl-banner__container" data-ecl-banner-container>
-                <div class="ecl-banner__content">
-                  <div
-                    class="ecl-banner__title"
-                    id="carousel-full-width-two-title"
-                  >
-                    <span class="ecl-banner__title-text"
-                      >Second full-width slide</span
+                      >Blue programme</span
                     >
                   </div>
                 </div>
@@ -544,1168 +477,3 @@
     </div>
   </section>
 </div>
-
-<!-- Color mode pass-through examples, each with one compact item. -->
-<section
-  class="ecl-carousel ecl-color-mode--blue"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Blue carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-blue"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="carousel-mode-blue-title">
-                  <span class="ecl-banner__title-text">Blue mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section
-  class="ecl-carousel ecl-color-mode--blue-electric"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Blue electric carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-blue-electric"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-blue-electric-title"
-                >
-                  <span class="ecl-banner__title-text">Blue electric mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section
-  class="ecl-carousel ecl-color-mode--blue-navy"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Blue navy carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-blue-navy"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-blue-navy-title"
-                >
-                  <span class="ecl-banner__title-text">Blue navy mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--blue-ocean"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Blue ocean carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-blue-ocean"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-blue-ocean-title"
-                >
-                  <span class="ecl-banner__title-text">Blue ocean mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--green"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Green carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-green"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="carousel-mode-green-title">
-                  <span class="ecl-banner__title-text">Green mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--green-dark"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Green dark carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-green-dark"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-green-dark-title"
-                >
-                  <span class="ecl-banner__title-text">Green dark mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--green-lemon"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Green lemon carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-green-lemon"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-green-lemon-title"
-                >
-                  <span class="ecl-banner__title-text">Green lemon mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--green-pine"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Green pine carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-green-pine"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-green-pine-title"
-                >
-                  <span class="ecl-banner__title-text">Green pine mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--orange"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Orange carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-orange"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="carousel-mode-orange-title">
-                  <span class="ecl-banner__title-text">Orange mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--purple"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Purple carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-purple"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div class="ecl-banner__title" id="carousel-mode-purple-title">
-                  <span class="ecl-banner__title-text">Purple mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--purple-violet"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Purple violet carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-purple-violet"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-purple-violet-title"
-                >
-                  <span class="ecl-banner__title-text">Purple violet mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--red-crayola"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Red crayola carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-red-crayola"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-red-crayola-title"
-                >
-                  <span class="ecl-banner__title-text">Red crayola mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--red-tomato"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Red tomato carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-red-tomato"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-red-tomato-title"
-                >
-                  <span class="ecl-banner__title-text">Red tomato mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--warm-grey"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Warm grey carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-warm-grey"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-warm-grey-title"
-                >
-                  <span class="ecl-banner__title-text">Warm grey mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-<section
-  class="ecl-carousel ecl-color-mode--yellow-gold"
-  data-ecl-auto-init="Carousel"
-  aria-roledescription="carousel"
-  aria-label="Yellow gold carousel"
->
-  <div class="ecl-carousel__controls">
-    <div class="ecl-container">
-      <div class="ecl-carousel__autoplay">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__play ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Play carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--play-outline"
-              data-ecl-icon
-            ></span
-          ></span></button
-        ><button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__pause ecl-button--icon-only"
-          type="button"
-        >
-          <span class="ecl-button__container"
-            ><span class="ecl-button__label" data-ecl-label="true"
-              >Pause carousel</span
-            ><span
-              aria-hidden="true"
-              class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-carousel__icon-default ecl-icon--pause-outline"
-              data-ecl-icon
-            ></span
-          ></span>
-        </button>
-      </div>
-      <div class="ecl-carousel__navigation" role="tablist">
-        <button
-          class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-carousel__navigation-item"
-          role="tab"
-        >
-          1
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="ecl-carousel__container">
-    <div class="ecl-carousel__slides">
-      <div
-        class="ecl-carousel__slide"
-        role="tabpanel"
-        aria-label="slide 1 of 1"
-        aria-roledescription="slide"
-      >
-        <section
-          class="ecl-banner ecl-banner--m ecl-banner--font-m ecl-banner--font-weight-light ecl-banner--box-bg-light ecl-banner--color-dark ecl-banner--h-left ecl-banner--v-center"
-          data-ecl-auto-init="Banner"
-          data-ecl-banner
-          id="carousel-mode-yellow-gold"
-        >
-          <div class="ecl-container ecl-banner__info">
-            <div class="ecl-banner__container" data-ecl-banner-container>
-              <div class="ecl-banner__content">
-                <div
-                  class="ecl-banner__title"
-                  id="carousel-mode-yellow-gold-title"
-                >
-                  <span class="ecl-banner__title-text">Yellow gold mode</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Empty input edge-case contract: tagged Twig renders no root when items is empty or missing. -->

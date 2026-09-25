@@ -25,10 +25,12 @@ async function readDir(dirPath) {
 // pinned EC release. Retired legacy files remain on disk for traceability but
 // are not advertised or returned as part of an active EC family.
 const templateFamilies = {
+    carousel: ["carousel.html.twig", "slider-pager.html.twig"],
     "category-filter": ["category-filter.html.twig", "category-filter-items.html.twig"],
     checkbox: ["checkbox-group.html.twig", "checkbox-item.html.twig"],
     file: ["file.html.twig"],
     gallery: ["gallery.html.twig", "gallery-item.html.twig", "gallery-overlay.html.twig"],
+    "highlighted-search": ["highlighted-search.html.twig"],
     "list-illustration": ["list-illustration.html.twig", "list-illustration-item.html.twig"],
     "mega-menu": ["mega-menu.html.twig", "mega-menu-item.html.twig", "mega-menu-featured-item.html.twig"],
     menu: ["menu.html.twig", "menu-item.html.twig"],
@@ -38,6 +40,7 @@ const templateFamilies = {
     radio: ["radio-group.html.twig", "radio-button.html.twig"],
     "site-footer": ["site-footer-ec.html.twig", "site-footer-ec-section.html.twig"],
     "site-header": ["site-header.html.twig", "site-header-language-switcher.html.twig"],
+    "story-card": ["story-card.html.twig", "story-card-card.html.twig", "slider-pager.html.twig"],
     tag: ["tag.html.twig", "tag-set.html.twig"],
     timeline: ["timeline.html.twig", "timeline-set.html.twig"],
 };

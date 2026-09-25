@@ -32,9 +32,10 @@ copied content or compiled assets.
 S002 refreshed shared assets to v5.3.1 and reconciled setup guidance. S003
 delivered the EC site-wide template family, corrected the MCP template-family
 contract, removed accidental EU footer exposure from the EC delivery, and
-aligned the starter shell. Component-example HTML audits and most guide content
-still await their batches. See the latest session for the WebTools and mobile
-control verification limits.
+aligned the starter shell. S004 delivered the first high-drift component slice:
+highlighted-search, story-card/slider and carousel. Remaining component-example
+HTML audits and most guide content still await their batches. See the latest
+session for the WebTools and mobile-control verification limits.
 
 ## Status and evidence rules
 
@@ -61,22 +62,22 @@ identity or a successful MCP read alone is not complete conformance verification
 | --- | --- |
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
-| Existing HTML component IDs | 69 |
-| Existing Twig files | 87 (54 identical to target, 31 different, 2 retired upstream) |
+| Existing HTML component IDs | 71 |
+| Existing Twig files | 91 (59 identical to target, 30 different, 2 retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
-| Newly identified public components | 2: highlighted-search, story-card |
-| Missing Twig references | 6: highlighted-search, story-card, story-card-card, slider-pager, file-upload-status, layout-wrapper |
-| Connected content checks | S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S003: 3/3 affected list/family checks passed; 18 guide topics/snippets and 69 component IDs match disk |
+| Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
+| Missing Twig references | 2: file-upload-status, layout-wrapper |
+| Connected content checks | S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed; 18 guide topics/snippets match disk |
 | Content verified for v5.3.1 | **19 files** — 18 asset/font files and GUIDE-start; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 5 |
-| Missing | 11 |
-| Needs update | 41 |
-| Review | 142 |
-| Updated | 10 |
-| Verified work rows | 26 (21 prior work rows + 5 S003 MCP/runtime/starter rows) |
+| Missing | 5 |
+| Needs update | 40 |
+| Review | 140 |
+| Updated | 12 |
+| Verified work rows | 33 (26 prior verified rows + 7 S004 source/delivery rows) |
 
 ## Completed setup milestones
 
@@ -143,9 +144,9 @@ All six tools are registered in `index.js` and exposed over stdio. There are no 
 | --- | --- | --- | --- | --- | --- |
 | TOOL-guide | `guide({topic})` | `index.js`; `guides/*.md` | 18/18 live responses match disk after `__DIR__` substitution. Recheck after guide updates. | Review | — |
 | TOOL-guide-list | `guide_list({})` | `index.js` | 18 topics match local filenames; snippets are the first 120 characters. Recheck new topics and version labels. | Review | — |
-| TOOL-components-list | `components_list({})` | `index.js` | 69 HTML IDs match local filenames. Template calls are now advertised only for exact active EC families; tooltip is not advertised because no standalone template exists. | Verified | v5.3.1 / 2026-09-25 / S003; live list and affected-family checks |
-| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 69/69 live responses match disk. Recheck discovery and affected examples after edits. | Review | — |
-| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping is now explicit: `file` returns only `file.html.twig`, `site-footer` returns the EC pair, and tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S003; live template-family checks |
+| TOOL-components-list | `components_list({})` | `index.js` | 71 HTML IDs match local filenames. Template calls are advertised for exact active EC families; carousel and story-card include the shared slider pager, and tooltip is not advertised because no standalone template exists. | Verified | v5.3.1 / 2026-09-25 / S004; live list and affected-family checks |
+| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 71/71 live responses match disk, including highlighted-search, story-card and the updated carousel example. | Verified | v5.3.1 / 2026-09-25 / S004; fresh stdio component calls and disk comparison |
+| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping now includes highlighted-search, story-card/story-card-card/slider-pager and carousel/slider-pager; `file` and `site-footer` retain their scoped mappings, and tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S004; live template-family calls and disk comparison |
 | TOOL-starter-template | `starter_template({})` | `index.js`; `starter-template.html` | Connected response matches disk; page setup, Search and Menu runtime checks are recorded under PAGE-starter. | Verified | v5.3.1 / 2026-09-25 / S003; live response and browser smoke |
 
 ## Existing guides — 18 topics
@@ -190,7 +191,7 @@ These rows reconcile every guideline, utility and resource topic in the official
 | DOC-webtools | `webtools` coverage | `D/resources/webtools/index.md` | Reconcile existing icons/assets guidance with the official resource page. | Review | — |
 | DOC-eui | `eui` coverage | `D/resources/eui/index.md` | Keep any useful distinction/link in onboarding; building an eUI library is outside this EC ECL update. | Review | — |
 
-## Component HTML examples — 69 existing, 2 missing
+## Component HTML examples — 71 existing, 0 missing
 
 One row per discoverable HTML ID. Source directories contain Twig, demo data, stories, styles, JavaScript and tests as available; inspect actual tagged paths. Website references include usage, code, API and accessibility where supplied. Existing HTML has been inventoried and delivered, not yet audited for v5.3.1.
 
@@ -204,7 +205,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-breadcrumb | [components/breadcrumb.html](components/breadcrumb.html) | `C/breadcrumb/`; `D/components/navigation/breadcrumb/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-button | [components/button.html](components/button.html) | `C/button/`; `D/components/button/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-card | [components/card.html](components/card.html) | `C/card/`; `D/components/card/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-carousel | [components/carousel.html](components/carousel.html) | `C/carousel/`; `D/components/carousel/` | Release includes carousel/Embla changes; review markup, dependency on slider-pager and keyboard behavior. | Review | — |
+| HTML-carousel | [components/carousel.html](components/carousel.html) | `C/carousel/`; `D/components/carousel/` | Updated to the v5.3.1 pager/teaser/viewport contract, including shared slider-pager hooks, inert inactive slides, counter labels, full-width/color-mode coverage and banner/video examples. Desktop runtime and next-slide behavior passed; mobile-width smoke remains pending. | Updated | v5.3.1 / 2026-09-25 / S004; tagged story data/snapshot markers, parser/ARIA checks, live MCP, desktop browser smoke |
 | HTML-category-filter | [components/category-filter.html](components/category-filter.html) | `C/category-filter/`; `D/components/category-filter/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-checkbox | [components/checkbox.html](components/checkbox.html) | `C/checkbox/`; `D/components/forms/checkbox/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-content-block | [components/content-block.html](components/content-block.html) | `C/content-block/`; `D/components/content-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -265,10 +266,10 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-tooltip | [components/tooltip.html](components/tooltip.html) | `C/tooltip/`; `D/components/tooltip/` | Live HTML works; listed Twig call fails. Upstream has no standalone tooltip Twig: resolve discovery/contract, do not invent one. | Review | — |
 | HTML-unordered-list | [components/unordered-list.html](components/unordered-list.html) | `C/unordered-list/`; `D/components/list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-video | [components/video.html](components/video.html) | `C/video/`; `D/components/media/media-container/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-highlighted-search | `components/highlighted-search.html` (absent) | `C/highlighted-search/`; `D/components/highlighted-search/` | New upstream EC component; add faithful rendered examples, full Twig family, docs and list discovery. | Missing | — |
-| HTML-story-card | `components/story-card.html` (absent) | `C/story-card/`; `D/components/story-card/` | New upstream EC component; add faithful rendered examples, full Twig family, docs and list discovery. | Missing | — |
+| HTML-highlighted-search | [components/highlighted-search.html](components/highlighted-search.html) | `C/highlighted-search/`; `D/components/highlighted-search/` | Added EC default and blue-mode examples with labelled GET/POST search forms, helper text, suggestions, valid IDs and the target magnifying-glass hook. | Verified | v5.3.1 / 2026-09-25 / S004; official EC component index/showcase, tagged snapshot/data, parser/ARIA checks, live MCP and browser accessibility smoke |
+| HTML-story-card | [components/story-card.html](components/story-card.html) | `C/story-card/`; `D/components/story-card/` | Added story and testimonial variants with mobile carousel hooks, desktop tablist/panels, slider pager controls, author/source metadata and unique tab relationships. Desktop runtime and next-card selection passed; mobile-width smoke remains pending. | Updated | v5.3.1 / 2026-09-25 / S004; official EC component index/showcase, tagged snapshot/data, parser/ARIA checks, live MCP and desktop browser smoke |
 
-## Twig files — 87 existing, 6 missing references
+## Twig files — 91 existing, 2 missing references
 
 Every existing Twig file is listed, including helpers. Initial byte comparison against v5.3.1: **54 identical, 31 different, 2 absent upstream**. All 87 are delivered through at least one existing prefix lookup. Identity is source evidence only; it does not certify a component or its dependencies.
 
@@ -282,7 +283,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-breadcrumb | [components/breadcrumb.html.twig](components/breadcrumb.html.twig) | `C/breadcrumb/breadcrumb.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-button | [components/button.html.twig](components/button.html.twig) | `C/button/button.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-card | [components/card.html.twig](components/card.html.twig) | `C/card/card.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-carousel | [components/carousel.html.twig](components/carousel.html.twig) | `C/carousel/carousel.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-carousel | [components/carousel.html.twig](components/carousel.html.twig) | `C/carousel/carousel.html.twig` | Replaced with the exact v5.3.1 source; carousel family lookup also returns the shared slider-pager helper. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source, live family lookup and runtime smoke |
 | TWIG-category-filter-items | [components/category-filter-items.html.twig](components/category-filter-items.html.twig) | `C/category-filter/category-filter-items.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-category-filter | [components/category-filter.html.twig](components/category-filter.html.twig) | `C/category-filter/category-filter.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-checkbox-group | [components/checkbox-group.html.twig](components/checkbox-group.html.twig) | `C/checkbox/checkbox-group.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -361,10 +362,10 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-timeline | [components/timeline.html.twig](components/timeline.html.twig) | `C/timeline/timeline.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-unordered-list | [components/unordered-list.html.twig](components/unordered-list.html.twig) | `C/unordered-list/unordered-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-video | [components/video.html.twig](components/video.html.twig) | `C/video/video.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-highlighted-search | `components/highlighted-search.html.twig` (absent) | `C/highlighted-search/highlighted-search.html.twig` | Missing target template; include dependencies and verify appropriate lookup/discovery. | Missing | — |
-| TWIG-slider-pager | `components/slider-pager.html.twig` (absent) | `C/slider/slider-pager.html.twig` | Shared pager used by carousel/story-card; add with dependent families, not as an invented standalone example. | Missing | — |
-| TWIG-story-card | `components/story-card.html.twig` (absent) | `C/story-card/story-card.html.twig` | Missing target template; include dependencies and verify appropriate lookup/discovery. | Missing | — |
-| TWIG-story-card-card | `components/story-card-card.html.twig` (absent) | `C/story-card/story-card-card.html.twig` | Missing target template; include dependencies and verify appropriate lookup/discovery. | Missing | — |
+| TWIG-highlighted-search | [components/highlighted-search.html.twig](components/highlighted-search.html.twig) | `C/highlighted-search/highlighted-search.html.twig` | Added the exact v5.3.1 template; its existing form-group, icon, button and tag-set dependencies remain shared local templates. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live lookup |
+| TWIG-slider-pager | [components/slider-pager.html.twig](components/slider-pager.html.twig) | `C/slider/slider-pager.html.twig` | Added the exact shared v5.3.1 pager helper and return it with carousel/story-card families; no standalone HTML ID was invented. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live dependent-family lookups |
+| TWIG-story-card | [components/story-card.html.twig](components/story-card.html.twig) | `C/story-card/story-card.html.twig` | Added the exact v5.3.1 story-card template, including mobile carousel, desktop grid and keyboard/tab relationships. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live family lookup |
+| TWIG-story-card-card | [components/story-card-card.html.twig](components/story-card-card.html.twig) | `C/story-card/story-card-card.html.twig` | Added the exact v5.3.1 story-card content helper, including testimonial metadata and tab-aware link description. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live family lookup |
 | TWIG-file-upload-status | `components/file-upload-status.html.twig` (absent) | `X/file-upload-status/file-upload-status.html.twig` | Upstream composition absent locally; assess useful EC coverage with file-upload before deciding how to expose it. | Missing | — |
 | TWIG-layout-wrapper | `components/layout-wrapper.html.twig` (absent) | `L/layout-wrapper/layout-wrapper.html.twig` | Shared layout missing locally; assess component/page usage. v5.3.1 fixes its extra spacing. | Missing | — |
 
@@ -425,7 +426,7 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 | ID | Local item / lookup | Target reference | Finding / next action | Status | Verified version / date / evidence |
 | --- | --- | --- | --- | --- | --- |
-| SUPPORT-runtime | [index.js](index.js) | Local MCP contract | Reads content from disk per call; exact template-family discovery and fresh stdio delivery were verified after the S003 handler change. | Verified | v5.3.1 / 2026-09-25 / S003; node --check and fresh connected MCP client |
+| SUPPORT-runtime | [index.js](index.js) | Local MCP contract | Reads content from disk per call; exact template-family discovery now includes the new highlighted-search/story-card/carousel families and their shared pager. | Verified | v5.3.1 / 2026-09-25 / S004; node --check and fresh connected MCP client |
 | SUPPORT-package | [package.json](package.json) | Local package metadata and scripts | Review delivered file set and release/version documentation; scripts declare Jest/ESLint but no project tests or lint config were found. Do not claim a test suite passed without tests. | Review | — |
 | SUPPORT-lockfile | [package-lock.json](package-lock.json) | Local dependency lock | Change only when required by package work; keep dependency reproducibility. | Review | — |
 | SUPPORT-readme | [README.md](README.md) | Local setup; `D/getting-started/` | Document EC target, update workflow, available tools and how content/runtime changes reach the MCP. | Review | — |
@@ -436,14 +437,17 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 3: high-drift component families.** S003 delivered the active EC
-site-wide Twig family, the template discovery contract, EC footer scope and the
-starter shell. The standalone HTML examples for mega-menu, Menu and page-header
-remain Review rows and should be included if rendered-example coverage is the
-priority. Otherwise start with the release-sensitive families: highlighted-search,
-story-card/slider, carousel, file, gallery, table and news-ticker, including their
-required shared Twig dependencies. Keep the existing component IDs and use the
-tagged v5.3.1 source; do not rebuild the assets or repeat the full inventory.
+**Batch 3 continuation: responsive follow-up and high-drift component families.**
+S003 delivered the active EC site-wide Twig family, the template discovery
+contract, EC footer scope and the starter shell. S004 delivered the
+highlighted-search and story-card/slider Twig families plus the refactored
+carousel; the story-card and carousel HTML rows still need a mobile-width smoke
+check. After that check, continue with file and gallery, then table and
+news-ticker, including their required shared Twig dependencies. The standalone
+HTML examples for mega-menu, Menu and page-header remain Review rows and should
+be included if rendered-example coverage is the priority. Keep the existing
+component IDs and use the tagged v5.3.1 source; do not rebuild the assets or
+repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
@@ -650,3 +654,72 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   according to the evidence above. Batch 3 is the high-drift component-family
   batch; the standalone HTML example Review rows can be pulled forward if that
   coverage is preferred.
+
+### S004 — 2026-09-25 — Batch 3: highlighted search, story card/slider and carousel
+
+- **Scope:** HTML-highlighted-search, HTML-story-card,
+  HTML-carousel, TWIG-highlighted-search, TWIG-story-card,
+  TWIG-story-card-card, TWIG-slider-pager, TWIG-carousel,
+  TOOL-components-list, TOOL-component, TOOL-component-template and
+  SUPPORT-runtime. The existing public IDs were preserved; slider-pager
+  was delivered only as a shared dependency and no standalone HTML ID was
+  invented.
+- **Baseline and sources:** the linked upstream checkout remained clean on its
+  moving v5-dev branch at cd0f615bd16816d8d99517192b1f817ae4a85618; the
+  cycle remained pinned to tag v5.3.1 at
+  0b3ca5a9190e1c32ff00fc092380e3a8f3571a05. The official EC homepage and
+  component index and the versioned usage/showcase pages showed v5.3.1 and
+  listed/rendered highlighted search, story card and carousel. The carousel
+  usage guidance (visible controls, responsive content and no critical-task use)
+  and story-card usage/accessibility navigation were checked alongside the
+  v5.3.1 release notes/changelog for carousel
+  Embla/teaser navigation, slider pager, story-card keyboard/context changes
+  and highlighted-search labelling. Relevant tagged data, stories, README
+  parameters and Jest snapshots were read from C/highlighted-search,
+  C/story-card, C/slider, C/carousel and their D/components/... documentation
+  paths. No newer release was observed.
+- **Twig changes:** added exact tagged sources for
+  highlighted-search.html.twig, story-card.html.twig,
+  story-card-card.html.twig and slider-pager.html.twig; replaced the old
+  carousel Twig with the exact tagged v5.3.1 source. Byte comparisons passed
+  for all five files. The component-family map now returns the shared pager
+  with carousel and story-card, while highlighted-search returns its own
+  family. Existing form-group, button, icon, tag-set, picture and link Twig
+  files remain shared dependencies rather than duplicated copies.
+- **HTML changes:** added EC highlighted-search default/blue-mode form examples
+  with valid labels, GET/POST action coverage, helper and suggestion
+  relationships. Added story and testimonial variants with mobile carousel
+  hooks, desktop tablist/panel relationships, pager controls and author/source
+  metadata. Replaced the old carousel example with v5.3.1
+  ecl-slider-pager, teaser navigation, counter, viewport, inert inactive
+  slides and full-width/color-mode coverage, retaining image, credit and video
+  banner examples. Remote media URLs remain the official demo references.
+- **MCP checks:** a fresh stdio client reported 71 component IDs. The three
+  affected component calls matched disk. Template calls returned exactly:
+  highlighted-search → 1 key; story-card → story-card, story-card-card and
+  slider-pager; carousel → carousel and slider-pager. All returned template
+  values matched disk. The tooltip no-template contract remained unchanged.
+- **Static checks:** HTML parser checks found no duplicate IDs, parse errors or
+  missing aria-labelledby, aria-describedby or aria-controls targets in the
+  three affected examples. Required ECL auto-init, slider, teaser, counter,
+  inert-slide and Story Card tab hooks were asserted. node --check index.js,
+  git diff --check and npm pack --dry-run passed; the package included all new
+  HTML/Twig files and no upstream symlink. npm test -- --runInBand was
+  attempted and reported no tests found; no Jest test suite or ESLint
+  configuration exists in this repository.
+- **Browser checks:** a temporary local HTTP page loaded the pinned v5.3.1
+  EC CSS and JS, fetched all three examples, initialized them and exposed the
+  labelled search fields, Story Card tabs/panels and carousel controls in the
+  accessibility tree. Story Card Next changed the selected tab and details
+  panel; Carousel Next advanced the visible slide and counter. The harness
+  initialized the upstream registry map before ECL.autoInit() because the
+  pinned Story Card implementation assumes that map already exists; no
+  distribution asset was changed. The smoke was desktop-width only, so the
+  story-card and carousel HTML rows remain Updated pending a mobile-width
+  check. WebTools icon rendering remains blocked by the previously recorded
+  ORB limitation; blank icon boxes in the local screenshot are environmental,
+  not a replacement asset.
+- **Handoff:** highlighted-search and all five worked Twig rows are Verified;
+  story-card and carousel HTML are Updated with the responsive follow-up
+  recorded above. Next: run that mobile-width smoke, then take the file and
+  gallery families from Batch 3 with their dependencies.
