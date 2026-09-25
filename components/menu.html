@@ -754,12 +754,11 @@
   </div>
 </nav>
 
-<!-- Empty input contract -->
+<!-- Empty input contract (static output; the pinned runtime requires an optional toggle to auto-initialize). -->
 <nav
   class="ecl-menu"
   data-ecl-menu
   data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
   role="navigation"
 >
   <div class="ecl-menu__overlay"></div>
@@ -803,139 +802,57 @@
   </div>
 </nav>
 
-<!-- EC color mode pass-through examples -->
-<nav
-  class="ecl-menu ecl-color-mode--blue"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
+<!-- EC color mode examples: each remains a complete, initializable menu. -->
+<nav class="ecl-menu ecl-color-mode--blue" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Blue menu">
   <div class="ecl-menu__overlay"></div>
+  <div class="ecl-container ecl-menu__container">
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button>
+    <section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Blue menu">
+      <header class="ecl-menu__inner-header"><div class="ecl-menu__title">Blue</div></header>
+      <ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-blue-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-blue-item-link">Blue</a></li></ul>
+    </section>
+  </div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--blue-electric"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
+<nav class="ecl-menu ecl-color-mode--blue-electric" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Blue electric menu">
   <div class="ecl-menu__overlay"></div>
+  <div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Blue electric menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Blue electric</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-blue-electric-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-blue-electric-item-link">Blue electric</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--blue-navy"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--blue-navy" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Blue navy menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Blue navy menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Blue navy</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-blue-navy-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-blue-navy-item-link">Blue navy</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--blue-ocean"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--blue-ocean" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Blue ocean menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Blue ocean menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Blue ocean</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-blue-ocean-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-blue-ocean-item-link">Blue ocean</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--green"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--green" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Green menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Green menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Green</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-green-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-green-item-link">Green</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--green-dark"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--green-dark" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Green dark menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Green dark menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Green dark</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-green-dark-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-green-dark-item-link">Green dark</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--green-lemon"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--green-lemon" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Green lemon menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Green lemon menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Green lemon</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-green-lemon-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-green-lemon-item-link">Green lemon</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--green-pine"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--green-pine" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Green pine menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Green pine menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Green pine</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-green-pine-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-green-pine-item-link">Green pine</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--orange"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--orange" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Orange menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Orange menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Orange</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-orange-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-orange-item-link">Orange</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--purple"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--purple" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Purple menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Purple menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Purple</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-purple-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-purple-item-link">Purple</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--purple-violet"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--purple-violet" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Purple violet menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Purple violet menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Purple violet</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-purple-violet-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-purple-violet-item-link">Purple violet</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--red-crayola"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--red-crayola" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Red crayola menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Red crayola menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Red crayola</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-red-crayola-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-red-crayola-item-link">Red crayola</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--red-tomato"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--red-tomato" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Red tomato menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Red tomato menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Red tomato</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-red-tomato-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-red-tomato-item-link">Red tomato</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--warm-grey"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--warm-grey" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Warm grey menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Warm grey menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Warm grey</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-warm-grey-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-warm-grey-item-link">Warm grey</a></li></ul></section></div>
 </nav>
-<nav
-  class="ecl-menu ecl-color-mode--yellow-gold"
-  data-ecl-menu
-  data-ecl-menu-max-lines="2"
-  data-ecl-auto-init="Menu"
-  role="navigation"
->
-  <div class="ecl-menu__overlay"></div>
+<nav class="ecl-menu ecl-color-mode--yellow-gold" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" role="navigation" aria-label="Yellow gold menu">
+  <div class="ecl-menu__overlay"></div><div class="ecl-container ecl-menu__container"><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-menu__open" data-ecl-menu-open type="button" aria-expanded="false"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Menu</span></span></button><section class="ecl-menu__inner" data-ecl-menu-inner aria-label="Yellow gold menu"><header class="ecl-menu__inner-header"><div class="ecl-menu__title">Yellow gold</div></header><ul class="ecl-menu__list" data-ecl-menu-list><li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-color-yellow-gold-item"><a class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link href="/example" id="ecl-menu-color-yellow-gold-item-link">Yellow gold</a></li></ul></section></div>
 </nav>
