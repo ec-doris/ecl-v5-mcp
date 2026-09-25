@@ -90,6 +90,22 @@
       data-ecl-description-list-collapsible
     >
       <li class="ecl-description-list__definition-item">
+        <a class="ecl-link ecl-link--standalone" href="/example"
+          >Very very very very very very very very very very very very veryveryveryvery
+          long standalone link that wraps in multiple lines</a
+        >
+      </li>
+    </ul>
+  </dd>
+  <dt class="ecl-description-list__term">Label 07</dt>
+  <dd
+    class="ecl-description-list__definition ecl-description-list__definition--link"
+  >
+    <ul
+      class="ecl-description-list__definition-list"
+      data-ecl-description-list-collapsible
+    >
+      <li class="ecl-description-list__definition-item">
         <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
           <span
             aria-hidden="true"
@@ -107,9 +123,18 @@
           <span class="ecl-link__label">social network 2</span>
         </a>
       </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
+          <span
+            aria-hidden="true"
+            class="wt-icon--mastodon ecl-icon ecl-icon--s ecl-link__icon ecl-icon--mastodon"
+          ></span>
+          <span class="ecl-link__label">social network 3</span>
+        </a>
+      </li>
     </ul>
   </dd>
-  <dt class="ecl-description-list__term">Label 07</dt>
+  <dt class="ecl-description-list__term">Label 08</dt>
   <dd
     class="ecl-description-list__definition ecl-description-list__definition--tag"
   >
@@ -126,9 +151,21 @@
       <li class="ecl-description-list__definition-item">
         <a class="ecl-tag" href="/example">Link tag</a>
       </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Link tag</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Link tag</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Long link tag</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Link tag</a>
+      </li>
     </ul>
   </dd>
-  <dt class="ecl-description-list__term">Label 08</dt>
+  <dt class="ecl-description-list__term">Label 09</dt>
   <dd
     class="ecl-description-list__definition ecl-description-list__definition--taxonomy"
   >
@@ -141,6 +178,13 @@
         <a class="ecl-link" href="/example">Taxonomy item</a>
       </li>
       <li class="ecl-description-list__definition-item">Taxonomy item</li>
+      <li class="ecl-description-list__definition-item">Taxonomy item</li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-link" href="/example">Taxonomy item</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-link" href="/example">Taxonomy item</a>
+      </li>
     </ul>
   </dd>
 </dl>
@@ -148,11 +192,43 @@
 <!-- Horizontal variant with extension classes and attributes -->
 <dl
   class="ecl-description-list ecl-description-list--horizontal custom-class custom-class--test"
+  data-ecl-description-list
+  data-ecl-description-list-more-label="Show more items"
+  data-ecl-description-list-visible-items="2"
+  data-ecl-auto-init="DescriptionList"
   data-test="data-test-value"
   data-test-flag
 >
   <dt class="ecl-description-list__term">Horizontal label</dt>
   <dd class="ecl-description-list__definition">Horizontal content</dd>
+  <dt class="ecl-description-list__term">Horizontal links</dt>
+  <dd class="ecl-description-list__definition ecl-description-list__definition--link">
+    <ul
+      class="ecl-description-list__definition-list"
+      data-ecl-description-list-collapsible
+    >
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-link ecl-link--standalone" href="/example">Link one</a>
+      </li>
+    </ul>
+  </dd>
+  <dt class="ecl-description-list__term">Horizontal tags</dt>
+  <dd class="ecl-description-list__definition ecl-description-list__definition--tag">
+    <ul
+      class="ecl-description-list__definition-list"
+      data-ecl-description-list-collapsible
+    >
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Tag one</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Tag two</a>
+      </li>
+      <li class="ecl-description-list__definition-item">
+        <a class="ecl-tag" href="/example">Tag three</a>
+      </li>
+    </ul>
+  </dd>
 </dl>
 
 <!-- Multiple terms for one definition and array text definitions without runtime hooks -->
@@ -162,9 +238,11 @@
   <dd class="ecl-description-list__definition">Part one, part two.</dd>
 </dl>
 
-<!-- Optional omission branches: term-only, definition-only, and empty item output -->
+<!-- Optional omission branches: term-only and definition-only -->
 <dl class="ecl-description-list">
   <dt class="ecl-description-list__term">Term without definition</dt>
+</dl>
+<dl class="ecl-description-list">
   <dd class="ecl-description-list__definition">Definition without term</dd>
 </dl>
 

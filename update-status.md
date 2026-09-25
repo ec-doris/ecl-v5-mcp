@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 91 (70 identical to target, 19 different, 2 absent/retired upstream) |
+| Existing Twig files | 91 (71 identical to target, 18 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 2: file-upload-status, layout-wrapper |
 | Connected content checks | S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
 | Connected list checks | S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **25 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files and the two S008 accordion files; GUIDE-assets remains Updated |
+| Content verified for v5.3.1 | **27 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files and the two S009 description-list files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 5 |
-| Needs update | 29 |
-| Review | 127 |
+| Needs update | 28 |
+| Review | 126 |
 | Updated | 10 |
-| Verified work rows | 57 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows) |
+| Verified work rows | 59 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows) |
 
 ## Completed setup milestones
 
@@ -212,7 +212,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-content-item | [components/content-item.html](components/content-item.html) | `C/content-item/`; `D/components/content-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-date-block | [components/date-block.html](components/date-block.html) | `C/date-block/`; `D/components/date-block/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-datepicker | [components/datepicker.html](components/datepicker.html) | `C/datepicker/`; `D/components/forms/datepicker/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-description-list | [components/description-list.html](components/description-list.html) | `C/description-list/`; `D/components/list/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-description-list | [components/description-list.html](components/description-list.html) | `C/description-list/`; `D/components/list/` | Updated to v5.3.1 vertical and horizontal coverage: nine-item link/tag/taxonomy demo data, collapsible definitions, real runtime hooks, omission branches, extension attributes and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S009; tagged README/demo/story/tests/snapshots/JS/SCSS/EC docs/changelog, semantic/static checks, live MCP/disk match and Chrome initialization/Show more focus smoke |
 | HTML-expandable | [components/expandable.html](components/expandable.html) | `C/expandable/`; `D/components/expandable/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-fact-figures | [components/fact-figures.html](components/fact-figures.html) | `C/fact-figures/`; `D/components/fact-figures/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-featured-item | [components/featured-item.html](components/featured-item.html) | `C/featured-item/`; `D/components/media/featured-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -292,7 +292,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-content-item | [components/content-item.html.twig](components/content-item.html.twig) | `C/content-item/content-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-date-block | [components/date-block.html.twig](components/date-block.html.twig) | `C/date-block/date-block.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-datepicker | [components/datepicker.html.twig](components/datepicker.html.twig) | `C/datepicker/datepicker.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-description-list | [components/description-list.html.twig](components/description-list.html.twig) | `C/description-list/description-list.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-description-list | [components/description-list.html.twig](components/description-list.html.twig) | `C/description-list/description-list.html.twig` | Exact v5.3.1 source; inline-link definitions now support both link objects and plain text, with current trimming and the existing link/tag helper contracts. | Verified | v5.3.1 / 2026-09-25 / S009; exact tagged comparison, byte-identical link/tag dependency checks, live MCP template match and browser runtime smoke |
 | TWIG-expandable | [components/expandable.html.twig](components/expandable.html.twig) | `C/expandable/expandable.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-fact-figures | [components/fact-figures.html.twig](components/fact-figures.html.twig) | `C/fact-figures/fact-figures.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-featured-item | [components/featured-item.html.twig](components/featured-item.html.twig) | `C/featured-item/featured-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,23 +437,25 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 8: description-list family and required shared dependencies.**
+**Batch 9: fact-figures family and required shared dependencies.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
-shared runtime hooks, and S008 delivered the accordion family. Next, take
-`HTML-description-list` and `TWIG-description-list`, including any required
-list helpers and behavior. Keep standalone mega-menu, Menu and page-header rows
-in Review unless the rendered-example audit is the priority. Keep the existing
-component IDs and use the tagged v5.3.1 source; do not rebuild the assets or
-repeat the full inventory.
+shared runtime hooks, S008 delivered the accordion family, and S009 delivered
+description-list with its link/tag dependencies. Next, take
+`HTML-fact-figures` and `TWIG-fact-figures`, including any required helpers and
+behavior. Keep forms and page-summary as the following high-drift work, and
+keep standalone mega-menu, Menu and page-header rows in Review unless the
+rendered-example audit is the priority. Keep the existing component IDs and
+use the tagged v5.3.1 source; do not rebuild the assets or repeat the full
+inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 7 (adjust for dependencies and user focus):
+Suggested following order after Batch 8 (adjust for dependencies and user focus):
 
-1. Remaining high-drift families: description-list, fact-figures, forms and
-   page-summary. Include required shared Twig dependencies.
+1. Remaining high-drift families: fact-figures, forms and page-summary. Include
+   required shared Twig dependencies.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -944,3 +946,57 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   The next recommended batch is `HTML-description-list` and
   `TWIG-description-list`, including required list helpers. GUIDE-assets/
   GUIDE-icons WebTools rendering remains pending; no commit or push was made.
+
+### S009 — 2026-09-25 — Batch 8: description-list family
+
+- **Scope:** `HTML-description-list` and `TWIG-description-list`, with the
+  existing `link.html.twig` and `tag.html.twig` helper contracts checked as
+  dependencies. The example covers the current vertical and horizontal list
+  demos, collapsible definitions, standalone and inline links, external and
+  social icons, link tags, taxonomy links, extension attributes, omission
+  branches and EC color modes.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged [description-list source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/components/description-list),
+  the tagged [EC Lists documentation source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/list)
+  and [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The live homepage still showed v5.3.1; no newer release was observed and the
+  pinned commit remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. Relevant
+  changes between the prior baseline and target include description-list text
+  wrapping, the button-based “show more” control, focus on the first revealed
+  item, the inline-link fallback and the current API documentation for
+  retrieving an existing instance.
+- **Twig changes:** aligned `components/description-list.html.twig` byte-for-
+  byte with the pinned v5.3.1 source. The inline-link branch now trims output
+  consistently and accepts either a link object or plain text definition,
+  matching the tagged fallback. The separate link and tag Twig dependencies
+  are already byte-identical to v5.3.1; no helper change was required.
+- **HTML changes:** updated the vertical example to the tagged nine-item data
+  shape, including the long wrapping link, Mastodon icon, seven tags and six
+  taxonomy entries. Added runtime hooks to the horizontal variant, supplied
+  representative links/tags for its responsive layout, and separated the
+  term-only and definition-only omission branches. Existing extension and
+  color-mode coverage remains.
+- **MCP checks:** a fresh local stdio client reported all six tools, 18 guides
+  and 71 components. The description-list component response matched disk; its
+  `component_template` response returned exactly `description-list.html.twig`
+  and matched disk; the component remained discoverable from
+  `components_list`; and the starter response also matched disk.
+- **Static checks:** the exact tagged Twig comparison, byte-identical link/tag
+  dependency checks, focused structure/hook/color-mode/duplicate-ID assertions,
+  `node --check index.js` and `git diff --check` passed. `npm pack --dry-run`
+  includes both description-list files. `npm test -- --runInBand` still reports
+  no tests found, and `npm run lint` still has no ESLint configuration. No
+  Laravel code was changed.
+- **Browser checks:** a temporary page loaded the pinned local EC CSS/JS and
+  initialized the two description-list roots with runtime hooks. The tagged JS
+  inserted five accessible “Show more items” buttons, hid excess definition
+  items, and after activation focused the first revealed link (`Standalone link
+  3`). The accessibility tree exposed the external-link label and the
+  horizontal variant. The browser console reported no errors or warnings;
+  WebTools icon rendering remains blocked by the previously recorded external
+  loader limitation.
+- **Handoff:** both S009 description-list rows and affected MCP checks are
+  Verified. The next recommended batch is `HTML-fact-figures` and
+  `TWIG-fact-figures`, including required helpers. GUIDE-assets/GUIDE-icons
+  WebTools rendering remains pending; no commit or push was made.
