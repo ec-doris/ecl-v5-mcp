@@ -1,7 +1,8 @@
-# ECL Clearfix Utility (EC preset, v5.0.1)
+# ECL Clearfix Utility (EC preset, v5.3.1)
 
 Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+`guide("assets")`; the class and pseudo-element behavior below are audited
+against the pinned EC v5.3.1 source.
 
 Use `ecl-u-clearfix` on a normal container when floated content must contribute
 to that container's height. This prevents later content from unexpectedly
@@ -33,7 +34,7 @@ Apply the class to the **parent** of the floated content:
 ecl-u-clearfix
 ```
 
-ECL v5.0.1 implements it as:
+ECL v5.3.1 implements it as:
 
 ```css
 .ecl-u-clearfix::after {
@@ -48,7 +49,7 @@ The empty block pseudo-element is generated after the parent's content.
 that pseudo-element remains in normal flow, the parent expands far enough to
 contain it and therefore the floats.
 
-There is no `::before` rule in v5.0.1.
+There is no `::before` rule in v5.3.1.
 
 ## Basic usage with ECL float utilities
 

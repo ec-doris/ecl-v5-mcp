@@ -1471,3 +1471,54 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
 - **Static/browser checks:** static assertions passed for 18 tooltip auto-init roots, all 15 EC modes, normal/inverted/title/empty branches, interactive-only triggers and no non-interactive tooltip attributes. A local v5.3.1 Chrome smoke page loaded the pinned local CSS/JS assets and passed title-to-data transfer, generated `role="tooltip"`/`aria-describedby`, focus display, Escape dismissal, inverted styling, empty-content suppression and no-console-error checks; the browser also exposed the trigger and popup names in the accessibility tree. The official EC pages were opened read-only in Chrome and matched the tagged usage/API guidance. `node --check index.js` and `git diff --check` passed.
 - **Focused checks:** `npm test -- --runInBand` remains unavailable as a conformance suite because this repository has no project test files; `npm run lint` remains unavailable because there is no ESLint configuration. No Laravel code changed, so the Laravel suite was not applicable. The temporary smoke page, local server and browser tab were removed after testing. No commit, push or publication was made.
 - **Handoff:** `HTML-tooltip` is Verified and the tooltip no-template contract is recorded. Pending external WebTools delivery for add-to-calendar and GUIDE-assets/GUIDE-icons, plus the pinned inpage-navigation mobile-trigger decision, remain visible. The next recommended batch is `GUIDE-background`, `GUIDE-border` and `GUIDE-clearfix`, followed by the remaining utility/design guides and coverage gaps.
+
+### S030 — 2026-09-25 — Batch 29: background, border and clearfix utility guides
+
+- **Scope:** `GUIDE-background`, `GUIDE-border` and `GUIDE-clearfix`, the next
+  recommended utility/design batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1, the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md),
+  and the pinned EC utility website usage/showcase files. Tagged review covered
+  the background, border and clearfix Sass sources, stories, package metadata,
+  EC theme/color-mode maps and compiled v5.3.1 assets. The utility Sass source
+  is structurally unchanged from the previous v5.0.1 evidence; package metadata
+  is now 5.3.1. The v5.3.0 token cleanup removes
+  `cm-surface-color-mode-lowest`, while v5.3.1 itself only fixes layout-wrapper
+  spacing and the site-header search guard.
+- **Guides:** all three selected guides now identify the v5.3.1 EC preset and
+  distinguish the audited target contract from the older baseline. Background
+  records the exact 11 adaptive surface classes, 15 color modes, print/loading
+  contract, removed token and the still-broken compiled alpha-shade aliases;
+  it explicitly rejects the upstream `ecl-u-bg-surface` showcase class. Border
+  records the target direction/width/style/radius and adaptive color classes,
+  the same alpha-shade alias defect and the invalid upstream
+  `ecl-u-border-color-neutral-dark` showcase class. Clearfix records the
+  standalone package, exact `::after` rule, float containment limits and lack
+  of theme/color-mode/JavaScript dependencies.
+- **MCP checks:** a fresh local stdio client listed all six tools, 18 guide
+  topics and 71 component IDs. All three selected `guide` responses matched
+  their files after `__DIR__` substitution; their `guide_list` snippets exposed
+  v5.3.1; the starter retained `ECL.autoInit()`; the tooltip component and its
+  expected no-template contract still passed. The separate connected MCP
+  surface was not exposed in this session.
+- **Static checks:** target source/package review and compiled-asset assertions
+  passed for all 11 background utilities, four adaptive border utilities, all
+  15 EC color modes, print inclusion, the alpha alias defect, the exact
+  minified clearfix rule and absence of `ecl-u-bg-surface` and
+  `ecl-u-border-color-neutral-dark` selectors. `node --check index.js` and
+  `git diff --check` passed. No component markup or JavaScript behavior
+  changed, so a browser smoke was not applicable to this documentation-only
+  batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable because the
+  repository has no project test files; `npm run lint` remains unavailable
+  because there is no ESLint configuration. No Laravel code changed, so the
+  Laravel suite was not applicable. No commit, push or publication was made.
+- **Handoff:** all three S030 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets/GUIDE-icons WebTools rendering
+  remains pending. Next take `GUIDE-colours`, then `GUIDE-dimension` and
+  `GUIDE-display`, before the remaining utility/design guides, coverage gaps and
+  final EC-wide delivery checks.

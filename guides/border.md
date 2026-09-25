@@ -1,7 +1,8 @@
-# ECL Border Utilities (EC preset, v5.0.1)
+# ECL Border Utilities (EC preset, v5.3.1)
 
 Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+`guide("assets")`; the classes and token behavior below are audited against the
+pinned EC v5.3.1 source and compiled assets.
 
 Border utilities can create a border and independently control its colour,
 width, style, and corner radius. All declarations use `!important`, so apply
@@ -37,7 +38,7 @@ Without the theme parameter, the Sass source still emits the direction, fixed
 transparent/white/black colour, width, style, and radius utilities, but not the
 EC palette or adaptive color-mode colours.
 
-The utilities are not responsive; ECL v5.0.1 provides no breakpoint variants.
+The utilities are not responsive; ECL v5.3.1 provides no breakpoint variants.
 
 ## Create the border first
 
@@ -113,7 +114,7 @@ These utilities set the style on **all four sides**. Use them safely with
 Do not combine a one-side direction utility with a global style utility when
 only one visible side is intended. For example,
 `ecl-u-border-bottom ecl-u-border-style-dashed` gives every side a non-`none`
-style, which can make all four sides visible. ECL v5.0.1 has no side-specific
+style, which can make all four sides visible. ECL v5.3.1 has no side-specific
 border-style utility; use a project rule such as
 `border-block-end-style: dashed !important` when that shape is required.
 
@@ -135,7 +136,7 @@ present. It does not by itself clip overflowing child content.
 
 ## Semantic border colours
 
-Semantic aliases resolve through EC custom properties. Their v5.0.1 default
+Semantic aliases resolve through EC custom properties. Their v5.3.1 default
 palette equivalents are:
 
 | Class                           | Default equivalent |
@@ -194,14 +195,16 @@ Example:
 Numbered shade classes are fixed palette colours and do not adapt to color
 modes.
 
-### Alpha-shade defect in v5.0.1
+### Alpha-shade defect in v5.3.1
 
-The compiled v5.0.1 CSS contains all 13 shade selectors for both
+The compiled v5.3.1 CSS contains all 13 shade selectors for both
 `ecl-u-border-color-grey-alpha-{shade}` and
 `ecl-u-border-color-white-alpha-{shade}`, but their declarations reference the
 undefined variables `--c-g-alpha` and `--c-w-alpha`. Browsers therefore cannot
 use those declarations as intended. Do not use these alpha-shade utility
-classes in v5.0.1.
+classes in v5.3.1. The public EC custom properties for these values are named
+`--ecl-color-grey-alpha-*` and `--ecl-color-white-alpha-*`; the internal aliases
+emitted by the utility do not point to them.
 
 The unnumbered `ecl-u-border-color-alpha` class is valid. If a specific alpha
 shade is needed, define a project class using the public EC variable instead:
@@ -251,7 +254,7 @@ element or an ancestor:
 - `ecl-color-mode--red-tomato`
 
 There is no `ecl-color-mode--default`, `ecl-color-mode--dark`, or
-`ecl-color-mode--border-high` class in the v5.0.1 EC color-mode stylesheet.
+`ecl-color-mode--border-high` class in the v5.3.1 EC color-mode stylesheet.
 Omit the color-mode class to use the default.
 
 ```html
@@ -318,10 +321,10 @@ border; only its colour is transparent.
   visible accessible replacement is provided.
 - Border utilities can be placed on any suitable HTML element and require no
   special DOM structure, ARIA attributes, IDs, or JavaScript hooks.
-- Colour, width, and style modifiers apply to all sides. ECL v5.0.1 has no
+- Colour, width, and style modifiers apply to all sides. ECL v5.3.1 has no
   side-specific modifier variants.
 - Class order in the HTML attribute does not control precedence; the compiled
   stylesheet order does. Avoid conflicting utilities from the same group.
 - `ecl-u-border-color-neutral-dark` appears in the tagged EC showcase but is
-  not present in the v5.0.1 source or compiled CSS. Use a valid semantic,
+  not present in the v5.3.1 source or compiled CSS. Use a valid semantic,
   numbered, adaptive, or fixed colour class from this guide.

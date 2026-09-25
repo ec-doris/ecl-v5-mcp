@@ -1,7 +1,8 @@
-# ECL Background Utilities (EC preset, v5.0.1)
+# ECL Background Utilities (EC preset, v5.3.1)
 
 Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+`guide("assets")`; the classes and token behavior below are audited against the
+pinned EC v5.3.1 source and compiled assets.
 
 Background utilities set an element's `background-color`. They do not add text
 colour, padding, borders, dimensions, or layout, and they do not remove a
@@ -52,11 +53,11 @@ Use one of these approaches:
 4. Use `ecl-u-bg-white`, `ecl-u-bg-black`, or `ecl-u-bg-transparent` for those
    fixed values.
 
-The utilities are not responsive; ECL v5.0.1 provides no breakpoint variants.
+The utilities are not responsive; ECL v5.3.1 provides no breakpoint variants.
 
 ## Semantic background classes
 
-Semantic aliases resolve through EC custom properties. Their v5.0.1 default
+Semantic aliases resolve through EC custom properties. Their v5.3.1 default
 palette equivalents are shown here:
 
 | Class                 | Default equivalent |
@@ -118,13 +119,16 @@ Examples of valid classes include:
 The numbered shade classes are fixed palette colours. They do not adapt to
 color modes.
 
-### Alpha-shade defect in v5.0.1
+### Alpha-shade defect in v5.3.1
 
-The compiled v5.0.1 CSS contains all 13 shade selectors for both
+The compiled v5.3.1 CSS contains all 13 shade selectors for both
 `ecl-u-bg-grey-alpha-{shade}` and `ecl-u-bg-white-alpha-{shade}`, but their
 declarations reference the undefined variables `--c-g-alpha` and
 `--c-w-alpha`. Browsers therefore cannot use those declarations as intended.
-Do not use these alpha-shade utility classes in v5.0.1.
+Do not use these alpha-shade utility classes in v5.3.1. The public EC
+custom properties for these values are named `--ecl-color-grey-alpha-*` and
+`--ecl-color-white-alpha-*`; the internal aliases emitted by the utility do not
+point to them.
 
 The unnumbered `ecl-u-bg-alpha` class is valid. If a specific alpha shade is
 needed, define a project class using the public EC variable instead:
@@ -178,7 +182,10 @@ an ancestor:
 - `ecl-color-mode--red-tomato`
 
 There is no `ecl-color-mode--default` or `ecl-color-mode--dark` class in the
-v5.0.1 EC color-mode stylesheet. Omit the color-mode class to use the default.
+v5.3.1 EC color-mode stylesheet. Omit the color-mode class to use the default.
+
+The v5.3.1 token cleanup removed `--cm-surface-color-mode-lowest`; it is not a
+background utility. Use one of the exact surface utilities listed above.
 
 ### Color mode on the same element
 
@@ -240,5 +247,5 @@ palette.
 - All rules set only `background-color` and use `!important`.
 - Do not combine multiple `ecl-u-bg-*` classes on one element. Their equal
   specificity makes the compiled source order decide which one wins.
-- `ecl-u-bg-surface` is not a v5.0.1 class; use one of the 11 exact adaptive
+- `ecl-u-bg-surface` is not a v5.3.1 class; use one of the 11 exact adaptive
   surface names listed above.
