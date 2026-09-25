@@ -68,16 +68,16 @@ identity or a successful MCP read alone is not complete conformance verification
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 2: file-upload-status, layout-wrapper |
-| Connected content checks | S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **35 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files and the six S011 forms/page-summary files; GUIDE-assets remains Updated |
+| Connected content checks | S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **51 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files and the 16 S012 remaining forms files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 5 |
 | Needs update | 24 |
-| Review | 122 |
+| Review | 106 |
 | Updated | 10 |
-| Verified work rows | 67 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows) |
+| Verified work rows | 83 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows) |
 
 ## Completed setup milestones
 
@@ -207,16 +207,16 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-card | [components/card.html](components/card.html) | `C/card/`; `D/components/card/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-carousel | [components/carousel.html](components/carousel.html) | `C/carousel/`; `D/components/carousel/` | Updated to the v5.3.1 pager/teaser/viewport contract, including shared slider-pager hooks, inert inactive slides, counter labels, full-width/color-mode coverage and banner/video examples. Desktop and narrow-width next-slide behavior passed. | Verified | v5.3.1 / 2026-09-25 / S005; S004 tagged data/snapshot markers and parser/ARIA checks, live MCP, desktop plus narrow-width browser smoke |
 | HTML-category-filter | [components/category-filter.html](components/category-filter.html) | `C/category-filter/`; `D/components/category-filter/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-checkbox | [components/checkbox.html](components/checkbox.html) | `C/checkbox/`; `D/components/forms/checkbox/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-checkbox | [components/checkbox.html](components/checkbox.html) | `C/checkbox/`; `D/components/forms/checkbox/` | Existing examples already cover checkbox group/item, required/optional, helper/invalid, disabled and standalone states, plus all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/label/state checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-content-block | [components/content-block.html](components/content-block.html) | `C/content-block/`; `D/components/content-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-content-item | [components/content-item.html](components/content-item.html) | `C/content-item/`; `D/components/content-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-date-block | [components/date-block.html](components/date-block.html) | `C/date-block/`; `D/components/date-block/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-datepicker | [components/datepicker.html](components/datepicker.html) | `C/datepicker/`; `D/components/forms/datepicker/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-datepicker | [components/datepicker.html](components/datepicker.html) | `C/datepicker/`; `D/components/forms/datepicker/` | Existing examples already cover Duet date-picker markup, default/required/disabled/invalid/custom/empty states, min/max and first-day settings, Datepicker hooks and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static custom-element/hook checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-description-list | [components/description-list.html](components/description-list.html) | `C/description-list/`; `D/components/list/` | Updated to v5.3.1 vertical and horizontal coverage: nine-item link/tag/taxonomy demo data, collapsible definitions, real runtime hooks, omission branches, extension attributes and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S009; tagged README/demo/story/tests/snapshots/JS/SCSS/EC docs/changelog, semantic/static checks, live MCP/disk match and Chrome initialization/Show more focus smoke |
 | HTML-expandable | [components/expandable.html](components/expandable.html) | `C/expandable/`; `D/components/expandable/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-fact-figures | [components/fact-figures.html](components/fact-figures.html) | `C/fact-figures/`; `D/components/fact-figures/` | Aligned the EC fact-and-figures demo with v5.3.1 individual/global sources, wrapping external links, value/title variants, 1–4 columns, centered and icon-free modes, view-all behavior, extension hooks, empty output and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S010; tagged README/demo/story/tests/snapshots/EC usage/accessibility/changelog, static checks, live MCP/disk match and browser rendering smoke |
 | HTML-featured-item | [components/featured-item.html](components/featured-item.html) | `C/featured-item/`; `D/components/media/featured-item/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-file-upload | [components/file-upload.html](components/file-upload.html) | `C/file-upload/`; `D/components/forms/file-upload/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-file-upload | [components/file-upload.html](components/file-upload.html) | `C/file-upload/`; `D/components/forms/file-upload/` | Existing examples already cover single/multiple upload, disabled/invalid/optional/empty states, extension attributes, selected-file list markup, file-list hooks and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-file | [components/file.html](components/file.html) | `C/file/`; `D/components/file/` | Aligned the file examples with the v5.3.1 article/container, primary metadata, thumbnail, color-mode and inline translation contract; translation toggles pass runtime checks. | Verified | v5.3.1 / 2026-09-25 / S005; tagged file data/story/snapshot/docs, parser/ARIA checks, live MCP/disk match and browser expand/collapse smoke |
 | HTML-form-group | [components/form-group.html](components/form-group.html) | `C/form-group/`; `D/components/forms/` | Aligned the examples with the v5.3.1 label-wrapper contract, required/optional visibility, helper/invalid relationships, supported input-family markup, extension hooks, disabled/hidden-label cases and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S011; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-gallery | [components/gallery.html](components/gallery.html) | `C/gallery/`; `D/components/media/gallery/` | Aligned mixed image/video, grid, no-overlay, empty and EC color-mode examples with v5.3.1 publication-date, video-duration, overlay and icon hooks; overlay navigation passes runtime checks. | Verified | v5.3.1 / 2026-09-25 / S005; tagged gallery data/story/snapshot/docs, parser/ARIA checks, live MCP/disk match and browser overlay/navigation smoke |
@@ -242,11 +242,11 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-picture | [components/picture.html](components/picture.html) | `C/picture/`; `D/components/media/media-container/` | Added focal-point/debug/lazy/zoom coverage, replaced untracked local placeholder source URLs with official EC demo media, and preserved source alias/empty-input edge cases. | Verified | v5.3.1 / 2026-09-25 / S006; tagged Picture source/tests/snapshot, parser checks, fresh Picture browser smoke with no missing local requests |
 | HTML-popover | [components/popover.html](components/popover.html) | `C/popover/`; `D/components/popover/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-quiz | [components/quiz.html](components/quiz.html) | `C/quiz/`; `D/components/quiz/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
-| HTML-radio | [components/radio.html](components/radio.html) | `C/radio/`; `D/components/forms/radio/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-radio | [components/radio.html](components/radio.html) | `C/radio/`; `D/components/forms/radio/` | Existing examples already cover radio group/button, disabled/helper/invalid, binary, minimal/empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/label/state checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-range | [components/range.html](components/range.html) | `C/range/`; `D/components/forms/range/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-rating-field | [components/rating-field.html](components/rating-field.html) | `C/rating-field/`; `D/components/forms/rating-field/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-search-form | [components/search-form.html](components/search-form.html) | `C/search-form/`; `D/components/forms/search-form/` | Aligned examples with the v5.3.1 no-duplicate-role form contract, accessible button label, placeholder fallback, extension hooks, disabled/no-input/no-button branches and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S011; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/role checks, live MCP/disk match and browser accessibility/DOM smoke |
-| HTML-select | [components/select.html](components/select.html) | `C/select/`; `D/components/forms/select/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-select | [components/select.html](components/select.html) | `C/select/`; `D/components/forms/select/` | Existing examples already cover single/multiple select, option groups/states, required/disabled/invalid states, widths, extension hooks, multiple search/select-all/submit/clear behavior, empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser select accessibility/runtime smoke |
 | HTML-separator | [components/separator.html](components/separator.html) | `C/separator/`; `D/components/divider/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-site-footer | [components/site-footer.html](components/site-footer.html) | `C/site-footer/`; `D/components/site-wide/site-footer/` | EC examples and empty/color-mode roots retained; accidental EU harmonised example and EU empty output removed. Full component-example audit remains open. | Updated | v5.3.1 / 2026-09-25 / S003; EC-scope review, parser and MCP delivery checks |
 | HTML-site-header | [components/site-header.html](components/site-header.html) | `C/site-header/`; `D/components/site-wide/site-header/` | EC header examples use button-based search toggles, dialog-labelled forms and clean EC scope; the tagged Twig is paired. Full component-example audit remains open. | Updated | v5.3.1 / 2026-09-25 / S003; tagged pairing, parser and MCP delivery checks |
@@ -259,8 +259,8 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-table | [components/table.html](components/table.html) | `C/table/`; `D/components/table/` | Added the v5.3.1 sort marker and a filterable EC table with labelled column fields, multiple rows, unique header relationships and mobile header data; existing simple, zebra, multi-header and extension coverage remains. | Verified | v5.3.1 / 2026-09-25 / S007; tagged README/demo/story/snapshot/docs, parser checks, live MCP/disk match and browser filter/sort smoke |
 | HTML-tabs | [components/tabs.html](components/tabs.html) | `C/tabs/`; `D/components/navigation/tabs/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-tag | [components/tag.html](components/tag.html) | `C/tag/`; `D/components/tag/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-text-area | [components/text-area.html](components/text-area.html) | `C/text-area/`; `D/components/forms/text-area/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-text-input | [components/text-input.html](components/text-input.html) | `C/text-input/`; `D/components/forms/text-field/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-text-area | [components/text-area.html](components/text-area.html) | `C/text-area/`; `D/components/forms/text-area/` | Existing examples already cover default/value, invalid, disabled, required, readonly, widths, extension attributes, empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static state/ID checks, live MCP/disk match and browser accessibility/DOM smoke |
+| HTML-text-input | [components/text-input.html](components/text-input.html) | `C/text-input/`; `D/components/forms/text-field/` | Existing examples already cover default/named/type, invalid, disabled, required, readonly, widths, extension attributes, empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static state/ID checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-text-media | [components/text-media.html](components/text-media.html) | `C/text-media/`; `D/components/media/text-and-media/` | Audited image/video/primary/full-width/EC color-mode variants; unique title IDs and link aria-describedby relationships are retained with nested Media Container hooks. | Verified | v5.3.1 / 2026-09-25 / S006; tagged text-media data/story/snapshot/docs, parser/ARIA checks, live MCP/disk match and narrow scoped layout/browser smoke |
 | HTML-timeline | [components/timeline.html](components/timeline.html) | `C/timeline/`; `D/components/timeline/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-tooltip | [components/tooltip.html](components/tooltip.html) | `C/tooltip/`; `D/components/tooltip/` | Live HTML works; listed Twig call fails. Upstream has no standalone tooltip Twig: resolve discovery/contract, do not invent one. | Review | — |
@@ -286,19 +286,19 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-carousel | [components/carousel.html.twig](components/carousel.html.twig) | `C/carousel/carousel.html.twig` | Replaced with the exact v5.3.1 source; carousel family lookup also returns the shared slider-pager helper. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source, live family lookup and runtime smoke |
 | TWIG-category-filter-items | [components/category-filter-items.html.twig](components/category-filter-items.html.twig) | `C/category-filter/category-filter-items.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-category-filter | [components/category-filter.html.twig](components/category-filter.html.twig) | `C/category-filter/category-filter.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-checkbox-group | [components/checkbox-group.html.twig](components/checkbox-group.html.twig) | `C/checkbox/checkbox-group.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-checkbox-item | [components/checkbox-item.html.twig](components/checkbox-item.html.twig) | `C/checkbox/checkbox-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-checkbox-group | [components/checkbox-group.html.twig](components/checkbox-group.html.twig) | `C/checkbox/checkbox-group.html.twig` | Exact pinned v5.3.1 source; group/item composition, required/invalid propagation, single-item feedback and paired HTML are verified. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser checkbox smoke |
+| TWIG-checkbox-item | [components/checkbox-item.html.twig](components/checkbox-item.html.twig) | `C/checkbox/checkbox-item.html.twig` | Exact pinned v5.3.1 source; disabled/invalid classes, helper relationships and required/optional indicators are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser checkbox smoke |
 | TWIG-content-block | [components/content-block.html.twig](components/content-block.html.twig) | `C/content-block/content-block.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-content-item | [components/content-item.html.twig](components/content-item.html.twig) | `C/content-item/content-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-date-block | [components/date-block.html.twig](components/date-block.html.twig) | `C/date-block/date-block.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-datepicker | [components/datepicker.html.twig](components/datepicker.html.twig) | `C/datepicker/datepicker.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-datepicker | [components/datepicker.html.twig](components/datepicker.html.twig) | `C/datepicker/datepicker.html.twig` | Exact pinned v5.3.1 source; Duet attributes, Datepicker auto-init, invalid/disabled/required propagation and paired HTML are verified. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser date-picker smoke |
 | TWIG-description-list | [components/description-list.html.twig](components/description-list.html.twig) | `C/description-list/description-list.html.twig` | Exact v5.3.1 source; inline-link definitions now support both link objects and plain text, with current trimming and the existing link/tag helper contracts. | Verified | v5.3.1 / 2026-09-25 / S009; exact tagged comparison, byte-identical link/tag dependency checks, live MCP template match and browser runtime smoke |
 | TWIG-expandable | [components/expandable.html.twig](components/expandable.html.twig) | `C/expandable/expandable.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-fact-figures | [components/fact-figures.html.twig](components/fact-figures.html.twig) | `C/fact-figures/fact-figures.html.twig` | Exact v5.3.1 source: per-item/global source macro, individual source labels, plain-text/link sources, `no_icon_wrapping`, value/title fallbacks and current view-all/icon behavior. Existing link and icon dependencies are byte-identical. | Verified | v5.3.1 / 2026-09-25 / S010; exact tagged comparison, dependency checks, live MCP template match and browser smoke |
 | TWIG-featured-item | [components/featured-item.html.twig](components/featured-item.html.twig) | `C/featured-item/featured-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-file-translation-item | [components/file-translation-item.html.twig](components/file-translation-item.html.twig) | Absent at target; see `C/file/` | Retained only for traceability and excluded from active EC lookup: v5.3.1 inlines translation markup in `file.html.twig`, and no active local caller references this legacy helper. | Excluded | v5.3.1 / 2026-09-25 / S005; tagged file source and local `rg` reference audit |
 | TWIG-file-translations | [components/file-translations.html.twig](components/file-translations.html.twig) | Absent at target; see `C/file/` | Retained only for traceability and excluded from active EC lookup: v5.3.1 inlines translation markup in `file.html.twig`, and no active local caller references this legacy helper. | Excluded | v5.3.1 / 2026-09-25 / S005; tagged file source and local `rg` reference audit |
-| TWIG-file-upload | [components/file-upload.html.twig](components/file-upload.html.twig) | `C/file-upload/file-upload.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-file-upload | [components/file-upload.html.twig](components/file-upload.html.twig) | `C/file-upload/file-upload.html.twig` | Exact pinned v5.3.1 source; single/multiple, disabled/invalid classes, button labels and file-list hooks are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser file-upload smoke |
 | TWIG-file | [components/file.html.twig](components/file.html.twig) | `C/file/file.html.twig` | Replaced with the exact pinned v5.3.1 source; deprecated variant/detail-meta inputs remain documented for compatibility while translation markup is inline. | Verified | v5.3.1 / 2026-09-25 / S005; exact tagged comparison, file-family MCP template call and browser smoke |
 | TWIG-form-group | [components/form-group.html.twig](components/form-group.html.twig) | `C/form-group/form-group.html.twig` | Exact pinned v5.3.1 source: label-wrapper markup keeps required/optional indicators visible when the inner label is hidden and preserves all supported input branches and extension hooks. | Verified | v5.3.1 / 2026-09-25 / S011; exact tagged comparison, datepicker/file-upload/select/text-area/text-input/checkbox/radio dependency checks, live MCP template match and browser smoke |
 | TWIG-gallery-item | [components/gallery-item.html.twig](components/gallery-item.html.twig) | `C/gallery/gallery-item.html.twig` | Replaced with the exact pinned v5.3.1 media-item source, including video, publication-date, duration and title-visibility hooks. | Verified | v5.3.1 / 2026-09-25 / S005; exact tagged comparison, gallery-family MCP template call and browser smoke |
@@ -333,12 +333,12 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-popover | [components/popover.html.twig](components/popover.html.twig) | `C/popover/popover.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-quiz-card | [components/quiz-card.html.twig](components/quiz-card.html.twig) | `C/quiz/quiz-card.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-quiz | [components/quiz.html.twig](components/quiz.html.twig) | `C/quiz/quiz.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
-| TWIG-radio-button | [components/radio-button.html.twig](components/radio-button.html.twig) | `C/radio/radio-button.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-radio-group | [components/radio-group.html.twig](components/radio-group.html.twig) | `C/radio/radio-group.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-radio-button | [components/radio-button.html.twig](components/radio-button.html.twig) | `C/radio/radio-button.html.twig` | Exact pinned v5.3.1 source; disabled/invalid/binary classes and helper relationships are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
+| TWIG-radio-group | [components/radio-group.html.twig](components/radio-group.html.twig) | `C/radio/radio-group.html.twig` | Exact pinned v5.3.1 source; item propagation, empty output and binary mode are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
 | TWIG-range | [components/range.html.twig](components/range.html.twig) | `C/range/range.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-rating-field | [components/rating-field.html.twig](components/rating-field.html.twig) | `C/rating-field/rating-field.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-search-form | [components/search-form.html.twig](components/search-form.html.twig) | `C/search-form/search-form.html.twig` | Exact pinned v5.3.1 source: removes the duplicate `role="search"` from the form wrapper while preserving form-group/button composition and extension blocks. | Verified | v5.3.1 / 2026-09-25 / S011; exact tagged comparison, live MCP template match and browser role/ARIA smoke |
-| TWIG-select | [components/select.html.twig](components/select.html.twig) | `C/select/select.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-select | [components/select.html.twig](components/select.html.twig) | `C/select/select.html.twig` | Exact pinned v5.3.1 source; single/multiple attributes, labels, option states and submit/search/clear configuration are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser select smoke |
 | TWIG-separator | [components/separator.html.twig](components/separator.html.twig) | `C/separator/separator.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-site-footer-ec-section | [components/site-footer-ec-section.html.twig](components/site-footer-ec-section.html.twig) | `C/site-footer/site-footer-ec-section.html.twig` | Aligned to the pinned EC source with local trailing-whitespace normalization; paired family delivery is live, while the rendered example remains a later audit. | Updated | v5.3.1 / 2026-09-25 / S003; tagged source comparison and live family lookup |
 | TWIG-site-footer-ec | [components/site-footer-ec.html.twig](components/site-footer-ec.html.twig) | `C/site-footer/site-footer-ec.html.twig` | Replaced with the exact pinned EC source; paired family delivery is live, while the rendered example remains a later audit. | Updated | v5.3.1 / 2026-09-25 / S003; exact tagged source and live family lookup |
@@ -355,8 +355,8 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-tabs | [components/tabs.html.twig](components/tabs.html.twig) | `C/tabs/tabs.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-tag-set | [components/tag-set.html.twig](components/tag-set.html.twig) | `C/tag/tag-set.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-tag | [components/tag.html.twig](components/tag.html.twig) | `C/tag/tag.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-text-area | [components/text-area.html.twig](components/text-area.html.twig) | `C/text-area/text-area.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-text-input | [components/text-input.html.twig](components/text-input.html.twig) | `C/text-input/text-input.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-text-area | [components/text-area.html.twig](components/text-area.html.twig) | `C/text-area/text-area.html.twig` | Exact pinned v5.3.1 source; invalid/disabled/required/width/extension branches are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser text-area smoke |
+| TWIG-text-input | [components/text-input.html.twig](components/text-input.html.twig) | `C/text-input/text-input.html.twig` | Exact pinned v5.3.1 source; type/width/status/extension branches are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser text-input smoke |
 | TWIG-text-media | [components/text-media.html.twig](components/text-media.html.twig) | `C/text-media/text-media.html.twig` | Byte-identical to v5.3.1 and validated with the paired image/video, link and nested media-container examples. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match and paired browser smoke |
 | TWIG-timeline-set | [components/timeline-set.html.twig](components/timeline-set.html.twig) | `C/timeline/timeline-set.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-timeline | [components/timeline.html.twig](components/timeline.html.twig) | `C/timeline/timeline.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,29 +437,29 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 11: remaining form component families and shared helpers.**
+**Batch 12: range/rating-field forms and the missing file-upload-status reference.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
 shared runtime hooks, S008 delivered the accordion family, S009 delivered
 description-list with its link/tag dependencies, and S010 delivered
 fact-figures with its source and link contracts, and S011 delivered the
-form-group, search-form and page-summary families. Next, take the remaining
-checkbox, datepicker, file-upload, radio, select, text-area and text-input
-families as a coherent forms batch, including their shared Twig dependencies
-and behavior. Range and rating-field remain upstream includes/rows to reconcile
-when their standalone examples are audited. Keep standalone mega-menu, Menu and
-page-header rows in Review unless the rendered-example audit is the priority.
+form-group, search-form and page-summary families, and S012 verified the
+remaining checkbox, datepicker, file-upload, radio, select, text-area and
+text-input families with their exact shared Twig helpers. Next, take the
+range/rating-field forms together and assess the missing `file-upload-status`
+composition: add it only if it is a useful EC-scoped MCP item, otherwise record
+the explicit coverage decision. Keep standalone mega-menu, Menu and page-header
+rows in Review unless the rendered-example audit is the priority.
 Keep the existing component IDs and use the tagged v5.3.1 source; do not rebuild
 the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 10 (adjust for dependencies and user focus):
+Suggested following order after Batch 11 (adjust for dependencies and user focus):
 
-1. Remaining forms: checkbox, datepicker, file-upload, radio, select, text-area
-   and text-input, including required shared Twig dependencies. Reconcile range
-   and rating-field coverage while exercising the form-group branches.
+1. Range/rating-field forms and the missing file-upload-status composition;
+   reconcile whether the latter belongs in the EC MCP contract.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -1112,3 +1112,60 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   select, text-area and text-input families, with range/rating-field coverage
   reconciled while exercising the shared form-group branches. GUIDE-assets and
   GUIDE-icons WebTools rendering remain pending; no commit or push was made.
+
+### S012 — 2026-09-25 — Batch 11: remaining form families
+
+- **Scope:** `HTML/TWIG-checkbox`, `TWIG-checkbox-group`,
+  `TWIG-checkbox-item`, `HTML/TWIG-datepicker`, `HTML/TWIG-file-upload`,
+  `TWIG-file-upload`, `HTML/TWIG-radio`, `TWIG-radio-group`,
+  `TWIG-radio-button`, `HTML/TWIG-select`, `HTML/TWIG-text-area` and
+  `HTML/TWIG-text-input`. The existing HTML already contained the complete
+  target-oriented coverage, so this was a verified no-content-change audit.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged form component sources and their README/demo data, the tagged EC
+  documentation pages for [checkbox](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/checkbox),
+  [datepicker](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/datepicker),
+  [file upload](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/file-upload),
+  [radio](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/radio),
+  [select](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/select),
+  [text area](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/text-area),
+  [text field](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/forms/text-field)
+  and the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  Relevant target changes include required/optional text remaining visible with
+  hidden labels, checkbox/radio disabled colors, datepicker focus behavior,
+  file-upload focus behavior and select alignment fixes.
+- **Twig checks:** all nine local Twig helpers are byte-identical to their
+  pinned v5.3.1 sources: checkbox group/item, datepicker, file-upload, radio
+  group/button, select, text-area and text-input. No template mutation was
+  required.
+- **HTML checks:** checkbox and radio examples cover groups/items, required or
+  optional indicators, helper/invalid/disabled states, binary/minimal/empty
+  branches and all 15 EC color modes. Datepicker covers Duet markup, default,
+  required, disabled, invalid, custom, empty, min/max, first-day and 15 color
+  modes. File-upload covers single/multiple, optional/disabled/invalid/empty,
+  extension attributes, selected-file list hooks and 15 color modes. Select
+  covers single/multiple, option groups/states, widths, invalid/disabled,
+  extension hooks, multiple search/select-all/submit/clear and 15 color modes.
+  Text-area and text-input cover their status, type/value, width, extension,
+  empty and 15 color-mode branches. No HTML mutation was required.
+- **MCP checks:** a fresh local stdio client checked all six tools, 18 guides
+  and 71 components; each of the seven HTML component responses matched disk,
+  each of the nine `component_template` responses returned the expected key and
+  byte-identical value, and all seven families remained discoverable. The
+  missing `file-upload-status` composition remains unresolved for a later
+  explicit coverage decision.
+- **Static/browser checks:** exact tagged Twig comparisons, duplicate-ID checks,
+  input/label and `aria-describedby` checks, `node --check index.js` and
+  `git diff --check` passed. A temporary page loaded all seven examples with
+  the pinned EC CSS/JS: 172 unique IDs, 21 Duet date-picker elements, 22 file
+  inputs, 24 selects, 24 radios, 22 checkboxes, 25 text areas and 29 text
+  inputs. The browser exposed the controls in the accessibility tree; select,
+  file-upload and datepicker hooks were present; the console reported no errors
+  or warnings. Standalone fragment validation retains the expected HTML5,
+  custom-element and ARIA warnings.
+- **Handoff:** all 16 S012 rows are Verified. The next recommended batch is
+  range/rating-field plus an explicit assessment of the missing
+  `file-upload-status` composition. GUIDE-assets and GUIDE-icons WebTools
+  rendering remain pending. This S012 tracker update is not yet committed or
+  pushed.
