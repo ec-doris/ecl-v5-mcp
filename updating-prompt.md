@@ -2,8 +2,10 @@
 
 Paste the prompt below into a new session in this repository, or ask the agent to
 read this file and carry it out. Optionally specify tracker IDs or a component at
-the end. `update-status.md` is the standing record; update it in place after every
-session.
+the end. `update-status.md` is the compact standing record and
+`previous-sessions.md` is the historical session log; update both in place after
+every session. Read only the latest relevant history entry unless older evidence
+is needed.
 
 ---
 
@@ -13,15 +15,17 @@ accessible examples and guidance that follow the official Europa Component
 Library. Focus on EC throughout, including branding, assets, examples and
 documentation.
 
-Read `AGENTS.md` instructions that apply, `README.md`, `index.js`, and
-`update-status.md` before editing. Respect existing user changes. Work sequentially
+Read `AGENTS.md` instructions that apply, `README.md`, `index.js`,
+`update-status.md`, and the latest relevant entry in `previous-sessions.md` before
+editing. Respect existing user changes. Work sequentially
 with one agent; this is a calm, iterative process across sessions, not a request
 to update the entire library in one pass.
 
 ## Establish the baseline
 
-1. Read the target release, pinned upstream commit, latest session entry, next
-   recommended batch, and unresolved findings in `update-status.md`.
+1. Read the target release, pinned upstream commit, next recommended batch, and
+   unresolved findings in `update-status.md`; read the latest session entry in
+   `previous-sessions.md` for recent evidence and handoff context.
 2. Inspect this repository's Git status and the `europa-component-library` symlink
    and its target's Git status. The symlink points to a separate upstream Git
    repository. Do not overwrite its local changes or assume its development
@@ -103,7 +107,8 @@ client reconnect; do not mistake a running old process for the edited code.
 
 ## Maintain the standing record
 
-- Preserve stable row IDs and previous session history in `update-status.md`.
+- Preserve stable row IDs in `update-status.md`; preserve completed session
+  history in `previous-sessions.md`.
 - For each worked row record status, target version, date, reference paths/URLs,
   changes or the reason no change was required, and verification evidence.
 - `Verified` means the item is correct for the pinned target and the applicable
@@ -113,10 +118,10 @@ client reconnect; do not mistake a running old process for the edited code.
 - Use `Needs update`, `Missing`, `Blocked`, `In progress` and `Excluded` according
   to the tracker legend. Record a concrete reason and next action for blockers
   or exclusions. Do not count excluded work as EC content updated.
-- Update summary counts and append a session entry listing rows worked,
-  validation, unresolved issues and the next recommended batch. If a newer
-  release appears, preserve version-specific evidence and record the proposed
-  next cycle separately.
+- Update summary counts in `update-status.md` and append a session entry to
+  `previous-sessions.md` listing rows worked, validation, unresolved issues and
+  the next recommended batch. If a newer release appears, preserve
+  version-specific evidence and record the proposed next cycle separately.
 - Finish with a concise report of what changed, what was verified, anything
   unfinished, and which rows to do next. Do not commit, push or publish unless
   requested. Leave the repository and tracker ready for the next session.
