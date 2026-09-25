@@ -1,3218 +1,414 @@
+<!-- ECL v5.3.1 gallery examples: mixed media, grids, overlay-disabled output and color modes. -->
+
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Gallery</h3>
-<!-- Default expandable mixed-media gallery. -->
-<section
-  class="ecl-gallery"
-  aria-label="Open gallery items to view images in original size, watch videos and share them"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-visible-items="8"
->
+<p class="ecl-u-type-paragraph ecl-u-mb-m">Use thumbnails and concise descriptions for a curated collection of images and videos. Video items expose their duration and publication date.</p>
+<section class="ecl-gallery" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-visible-items="3">
   <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        data-ecl-gallery-item-share="/share#example-image.jpg"
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-        id="ecl-gallery-item-gallery-main-0"
-        aria-label="Image 1"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="Image 1"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="Image 1"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-main-0-title"
-              >EU in brief</span
-            >
-            <span class="ecl-gallery__caption"
-              >The EU in brief, institutions and bodies, countries, symbols,
-              history, facts and figures.</span
-            >
-            <span class="ecl-gallery__meta"
-              >Copyright, Author, Licence for image 1</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        data-ecl-gallery-item-video-title="New digital strategy - Video player"
-        data-ecl-gallery-item-embed-audio="In the video below, there is no audiodescription available because all the content is in the captions and default audio track"
-        data-ecl-gallery-item-embed-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-        href="https://www.youtube.com/embed/fgi-GSCB6ho"
-        id="ecl-gallery-item-gallery-main-1"
-        aria-label="New digital strategy - Video"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <div class="ecl-gallery__item-icon-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--play ecl-icon ecl-icon--s ecl-gallery__item-icon ecl-icon--play"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="New digital strategy"
-              class="ecl-gallery__image"
-              src="https://www.youtube.com/embed/fgi-GSCB6ho"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-main-1-title"
-              >New digital strategy</span
-            >
-            <span class="ecl-gallery__caption"
-              >Embedded video with a thumbnail.</span
-            >
-            <span class="ecl-gallery__meta"
-              >Copyright, Author, Licence for embedded media</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        data-ecl-gallery-item-share="/share#example-image2.jpg"
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg"
-        id="ecl-gallery-item-gallery-main-2"
-        aria-label="Image 2"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <source
-              media="(min-width: 996px)"
-              srcset="
-                https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg
-              "
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg
-              "
-            />
-            <img
-              alt="Image 2"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <source
-              media="(min-width: 996px)"
-              srcset="
-                https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg
-              "
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg
-              "
-            />
-            <img
-              alt="Image 2"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-main-2-title"
-              >Agriculture and culture</span
-            >
-            <span class="ecl-gallery__caption"
-              >Image with sources and thumbnail.</span
-            >
-            <span class="ecl-gallery__meta"
-              >Copyright, Author, Licence for image 2</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        data-ecl-gallery-item-video-title="Time lapse of Paris - Video player"
-        data-ecl-gallery-item-share="/share#example-image5.jpg"
-        href="https://assets.mixkit.co/videos/4025/4025-1080.mp4"
-        id="ecl-gallery-item-gallery-main-3"
-        aria-label="Time lapse of Paris - Video"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <div class="ecl-gallery__item-icon-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--play ecl-icon ecl-icon--s ecl-gallery__item-icon ecl-icon--play"
-            ></span>
-          </div>
-          <video
-            aria-label="Time lapse of Paris - Video"
-            class="ecl-video ecl-gallery__image"
-            playsinline=""
-            poster="https://assets.mixkit.co/videos/4025/4025-thumb-1080-0.jpg"
-          >
-            <source
-              src="https://assets.mixkit.co/videos/4025/4025-1080.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-main-3-title"
-              >Time lapse of Paris</span
-            >
-            <span class="ecl-gallery__caption">HTML video item.</span>
-            <span class="ecl-gallery__meta"
-              >Copyright, Author, Licence for video</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
-        id="ecl-gallery-item-gallery-main-4"
-        aria-label="Climate change and protect nature"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="Climate change and protect nature"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="Climate change and protect nature"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-main-4-title"
-              >Climate change</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-0" aria-label="EU in brief" data-ecl-gallery-item-share="/share#example-image.jpg">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="EU in brief" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture"><img alt="EU in brief" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" /></picture>
+      <figcaption class="ecl-gallery__description" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-0-title"><span class="ecl-gallery__title-text">EU in brief</span></span>
+        <span class="ecl-gallery__caption">The EU in brief, institutions and bodies, countries, symbols, history, facts and figures.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 1</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://www.youtube.com/embed/fgi-GSCB6ho" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-1" aria-label="New digital strategy - Video" data-ecl-gallery-item-publication-date="20 Feb 2020" data-ecl-gallery-item-embed-src="https://www.youtube.com/embed/fgi-GSCB6ho" data-ecl-gallery-item-embed-audio="In the video below, there is no audiodescription available because all the content is in the captions and default audio track" data-ecl-gallery-item-video-title="New digital strategy - Video player">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+      <div class="ecl-gallery__item-icon-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--s ecl-icon-phosphor--play-filled"></span></div>
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="New digital strategy" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-external-video.jpg" /></picture>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+        <div class="ecl-gallery__item-meta"><span class="ecl-gallery__length">1:01</span><span class="ecl-gallery__date">20 Feb 2020</span></div>
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-1-title"><span class="ecl-gallery__title-text">New digital strategy</span></span>
+        <span class="ecl-gallery__caption">Digital technologies have greatly changed our daily life.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for embedded media</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-2" aria-label="Agriculture, business, culture, health, and other topics" data-ecl-gallery-item-share="/share#example-image2.jpg">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="Agriculture, business, culture, health, and other topics" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture">
+  <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" />
+  <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" />
+  <img alt="Agriculture, business, culture, health, and other topics" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg" />
+</picture>
+      <figcaption class="ecl-gallery__description" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-2-title"><span class="ecl-gallery__title-text">Agriculture, business, culture, health, and other topics</span></span>
+        <span class="ecl-gallery__caption">Information on agriculture, business, culture, health, and other topics.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 2</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://audiovisual.ec.europa.eu/embed/index.html?ref=I-223223&lg=EN" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-3" aria-label="In the EU - Video" data-ecl-gallery-item-publication-date="13 Oct 2022" data-ecl-gallery-item-embed-src="https://audiovisual.ec.europa.eu/embed/index.html?ref=I-223223&lg=EN" data-ecl-gallery-item-embed-audio="In the video below, there is no audiodescription available yet" data-ecl-gallery-item-video-title="In the EU - Video player">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+      <div class="ecl-gallery__item-icon-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--s ecl-icon-phosphor--play-filled"></span></div>
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="In the EU" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" /></picture>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+        <div class="ecl-gallery__item-meta"><span class="ecl-gallery__length">1:55</span><span class="ecl-gallery__date">13 Oct 2022</span></div>
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-3-title"><span class="ecl-gallery__title-text">In the EU</span></span>
+        <span class="ecl-gallery__caption">Europe's institutions and policies explained.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 3</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-video.mp4" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-4" aria-label="Climate action - Video" data-ecl-gallery-item-publication-date="12 Feb 2023" data-ecl-gallery-item-video-title="Climate action - Video player">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+      <div class="ecl-gallery__item-icon-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--s ecl-icon-phosphor--play-filled"></span></div>
+      <video class="ecl-video ecl-gallery__image" poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg" preload="metadata" aria-label="Climate action - Video player">
+  <source src="https://inno-ecl.s3.amazonaws.com/media/examples/example-video.mp4" type="video/mp4" />
+  <track kind="captions" src="data:text/vtt,WEBVTT%0A%0A00%3A00.000%20--%3E%2000%3A00.500%0AClimate%20action" srclang="en" label="English" />
+</video>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+        <div class="ecl-gallery__item-meta"><span class="ecl-gallery__length">0:27</span><span class="ecl-gallery__date">12 Feb 2023</span></div>
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-4-title"><span class="ecl-gallery__title-text">Climate action</span></span>
+        <span class="ecl-gallery__caption">A short video about climate action.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 5</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+<li class="ecl-gallery__item custom-item" data-item="featured">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-default-5" aria-label="Teaching material">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="Teaching material" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture"><img alt="Teaching material" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" /></picture>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-default-5-title"><span class="ecl-gallery__title-text">Teaching material</span></span>
+        <span class="ecl-gallery__caption">Image without a thumbnail.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 7</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
   </ul>
   <div class="ecl-gallery__footer">
-    <div class="ecl-gallery__info">
-      <div class="ecl-gallery__info-total" id="gallery-main-info">
-        <strong data-ecl-gallery-count="">0</strong> Media files in this gallery
-      </div>
-      <button
-        aria-describedby="gallery-main-info"
-        class="ecl-button ecl-button--tertiary ecl-gallery__view-all"
-        data-ecl-gallery-all=""
-        data-ecl-gallery-collapsed-label="Show more items"
-        data-ecl-gallery-expanded-label="Show less"
-        type="submit"
-      >
-        Show more items
-      </button>
-    </div>
-    <hr class="ecl-gallery__footer-divider" />
-    <div class="ecl-gallery__footer-link">
-      <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example"
-        ><span class="ecl-link__label">Further media items</span
-        ><span
-          aria-hidden="false"
-          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
-          role="img"
-          title="Link to an external domain"
-        ></span
-      ></a>
-    </div>
+  <div class="ecl-gallery__info">
+    <div class="ecl-gallery__info-total" id="gallery-default-info"><strong data-ecl-gallery-count>0</strong> Media files in this gallery</div>
+    <button aria-describedby="gallery-default-info" class="ecl-button ecl-button--tertiary ecl-gallery__view-all" data-ecl-gallery-all data-ecl-gallery-collapsed-label="Show more items" data-ecl-gallery-expanded-label="Show less" type="submit">Show more items</button>
   </div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+
+</div>
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>Selected gallery item description</div>
+  </footer>
+</dialog>
 </section>
 
-<!-- Grid gallery with template, column, ratio, picture zoom, extension attributes, and non-expandable output. -->
-<section
-  class="ecl-gallery ecl-gallery--grid ecl-gallery--template-2 ecl-gallery--ratio-16-9 custom-gallery"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
-  data-test="gallery"
-  data-flag
->
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Grid gallery with template and extension hooks</h3>
+<section class="ecl-gallery ecl-gallery--grid ecl-gallery--template-2 ecl-gallery--ratio-16-9 custom-gallery" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-not-expandable data-test="gallery" data-flag>
   <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item custom-item" data-item="featured" data-muted>
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        data-ecl-gallery-item-share="/share#example-image7.jpg"
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg"
-        id="ecl-gallery-item-gallery-grid-0"
-        aria-label="Image 7"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="Image 7"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="Image 7"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-grid-0-title"
-              >Teaching material</span
-            >
-            <span class="ecl-gallery__caption"
-              >Grid item with extra item class and attributes.</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay with custom hooks"
-    class="ecl-gallery__overlay custom-overlay"
-    data-overlay="demo"
-    data-overlay-flag
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
+<li class="ecl-gallery__item custom-item" data-item="featured">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-grid-0" aria-label="Teaching material">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
 
-<!-- Three-column grid, full-width state, no-hover state, and overlay-disabled state. -->
-<section
-  class="ecl-gallery ecl-gallery--grid ecl-gallery--col-3 ecl-gallery--ratio-1-1 ecl-gallery--full-width ecl-gallery--no-hover ecl-gallery--no-overlay"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-visible-items="1"
-  data-ecl-gallery-no-overlay
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg"
-        id="ecl-gallery-item-gallery-no-overlay-0"
-        aria-label="Image 9"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="Image 9"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="Image 9"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-no-overlay-0-title"
-              >About the EU</span
-            >
-            <span class="ecl-gallery__caption"
-              >Overlay disabled keeps item links as direct media links.</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="Teaching material" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture"><img alt="Teaching material" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg" /></picture>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-grid-0-title"><span class="ecl-gallery__title-text">Teaching material</span></span>
+        <span class="ecl-gallery__caption">Image without a thumbnail.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 7</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
   </ul>
   <div class="ecl-gallery__footer">
-    <div class="ecl-gallery__info">
-      <div class="ecl-gallery__info-total" id="gallery-no-overlay-info">
-        <strong data-ecl-gallery-count="">0</strong> Media files in this gallery
-      </div>
-      <button
-        aria-describedby="gallery-no-overlay-info"
-        class="ecl-button ecl-button--tertiary ecl-gallery__view-all"
-        data-ecl-gallery-all=""
-        data-ecl-gallery-collapsed-label="Show more items"
-        data-ecl-gallery-expanded-label="Show less"
-        type="submit"
-      >
-        Show more items
-      </button>
-    </div>
-    <hr class="ecl-gallery__footer-divider" />
-    <div class="ecl-gallery__footer-link">
-      <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example"
-        ><span class="ecl-link__label">Further media items</span
-        ><span
-          aria-hidden="false"
-          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
-          role="img"
-          title="Link to an external domain"
-        ></span
-      ></a>
-    </div>
+  <div class="ecl-gallery__info">
+    <div class="ecl-gallery__info-total" id="gallery-grid-info"><strong data-ecl-gallery-count>0</strong> Media files in this gallery</div>
+    <button aria-describedby="gallery-grid-info" class="ecl-button ecl-button--tertiary ecl-gallery__view-all" data-ecl-gallery-all data-ecl-gallery-collapsed-label="Show more items" data-ecl-gallery-expanded-label="Show less" type="submit">Show more items</button>
   </div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+  <hr class="ecl-gallery__footer-divider" /><div class="ecl-gallery__footer-link"><a class="ecl-link ecl-link--standalone" href="/example">Further media items</a></div>
+</div>
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>Selected grid gallery item</div>
+  </footer>
+</dialog>
 </section>
 
-<!-- Empty input edge-case output. -->
-<section
-  class="ecl-gallery"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-visible-items="8"
->
-  <ul class="ecl-gallery__list"></ul>
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Three-column gallery without overlay</h3>
+<section class="ecl-gallery ecl-gallery--grid ecl-gallery--col-3 ecl-gallery--ratio-1-1 ecl-gallery--full-width ecl-gallery--no-hover" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-visible-items="3" data-ecl-gallery-no-overlay>
+  <ul class="ecl-gallery__list">
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-no-overlay-0" aria-label="Agriculture, business, culture, health, and other topics" data-ecl-gallery-item-share="/share#example-image2.jpg">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="Agriculture, business, culture, health, and other topics" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture">
+  <source media="(min-width: 996px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg" />
+  <source media="(min-width: 768px)" srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg" />
+  <img alt="Agriculture, business, culture, health, and other topics" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg" />
+</picture>
+      <figcaption class="ecl-gallery__description" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-no-overlay-0-title"><span class="ecl-gallery__title-text">About the EU</span></span>
+        <span class="ecl-gallery__caption">Overlay disabled keeps item links as direct media links.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 2</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
+  </ul>
   <div class="ecl-gallery__footer">
-    <div class="ecl-gallery__info">
-      <div class="ecl-gallery__info-total" id="gallery-empty-info">
-        <strong data-ecl-gallery-count="">0</strong> Media files in this gallery
-      </div>
-      <button
-        aria-describedby="gallery-empty-info"
-        class="ecl-button ecl-button--tertiary ecl-gallery__view-all"
-        data-ecl-gallery-all=""
-        data-ecl-gallery-collapsed-label="Show more items"
-        data-ecl-gallery-expanded-label="Show less"
-        type="submit"
-      >
-        Show more items
-      </button>
-    </div>
-    <hr class="ecl-gallery__footer-divider" />
-    <div class="ecl-gallery__footer-link">
-      <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example"
-        ><span class="ecl-link__label">Further media items</span
-        ><span
-          aria-hidden="false"
-          class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
-          role="img"
-          title="Link to an external domain"
-        ></span
-      ></a>
-    </div>
+  <div class="ecl-gallery__info">
+    <div class="ecl-gallery__info-total" id="gallery-no-overlay-info"><strong data-ecl-gallery-count>0</strong> Media files in this gallery</div>
+    <button aria-describedby="gallery-no-overlay-info" class="ecl-button ecl-button--tertiary ecl-gallery__view-all" data-ecl-gallery-all data-ecl-gallery-collapsed-label="Show more items" data-ecl-gallery-expanded-label="Show less" type="submit">Show more items</button>
   </div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+  <hr class="ecl-gallery__footer-divider" /><div class="ecl-gallery__footer-link"><a class="ecl-link ecl-link--standalone" href="/example">Further media items</a></div>
+</div>
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>Selected gallery item description</div>
+  </footer>
+</dialog>
 </section>
 
-<!-- EC color mode pass-through examples. -->
-<section
-  class="ecl-gallery ecl-color-mode--blue"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Empty gallery input</h3>
+<section class="ecl-gallery" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-visible-items="3">
   <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-blue-0"
-        aria-label="blue gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="blue gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="blue gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-blue-0-title"
-              >blue mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+
   </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+  <div class="ecl-gallery__footer">
+  <div class="ecl-gallery__info">
+    <div class="ecl-gallery__info-total" id="gallery-empty-info"><strong data-ecl-gallery-count>0</strong> Media files in this gallery</div>
+    <button aria-describedby="gallery-empty-info" class="ecl-button ecl-button--tertiary ecl-gallery__view-all" data-ecl-gallery-all data-ecl-gallery-collapsed-label="Show more items" data-ecl-gallery-expanded-label="Show less" type="submit">Show more items</button>
+  </div>
+
+</div>
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>No media selected</div>
+  </footer>
+</dialog>
 </section>
-<section
-  class="ecl-gallery ecl-color-mode--blue-electric"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
+
+<h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Gallery in EC color modes</h3>
+<div class="ecl-color-mode--blue ecl-u-p-m"><section class="ecl-gallery" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-not-expandable>
   <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-blue-electric-0"
-        aria-label="blue-electric gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="blue-electric gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="blue-electric gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-blue-electric-0-title"
-              >blue-electric mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" data-ecl-gallery-item id="ecl-gallery-item-gallery-blue-0" aria-label="EU in brief" data-ecl-gallery-item-share="/share#example-image.jpg">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="EU in brief" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" /></picture>
+<picture class="ecl-picture ecl-gallery__picture"><img alt="EU in brief" class="ecl-gallery__image" loading="lazy" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg" /></picture>
+      <figcaption class="ecl-gallery__description" data-ecl-gallery-description>
+
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-blue-0-title"><span class="ecl-gallery__title-text">EU in brief</span></span>
+        <span class="ecl-gallery__caption">The EU in brief, institutions and bodies, countries, symbols, history, facts and figures.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for image 1</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
   </ul>
   <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--blue-navy"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>Selected gallery item description</div>
+  </footer>
+</dialog>
+</section></div>
+<div class="ecl-color-mode--green ecl-u-p-m"><section class="ecl-gallery" data-ecl-auto-init="Gallery" data-ecl-gallery data-ecl-gallery-not-expandable>
   <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-blue-navy-0"
-        aria-label="blue-navy gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="blue-navy gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="blue-navy gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-blue-navy-0-title"
-              >blue-navy mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+<li class="ecl-gallery__item">
+  <a class="ecl-gallery__item-link" href="https://www.youtube.com/embed/fgi-GSCB6ho" data-ecl-gallery-item id="ecl-gallery-item-gallery-green-0" aria-label="New digital strategy - Video" data-ecl-gallery-item-publication-date="20 Feb 2020" data-ecl-gallery-item-embed-src="https://www.youtube.com/embed/fgi-GSCB6ho" data-ecl-gallery-item-embed-audio="In the video below, there is no audiodescription available because all the content is in the captions and default audio track" data-ecl-gallery-item-video-title="New digital strategy - Video player">
+    <figure class="ecl-gallery__image-container">
+      <div class="ecl-gallery__icon-zoom-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--arrows-out-simple ecl-icon ecl-icon--s ecl-icon-phosphor--arrows-out-simple"></span></div>
+      <div class="ecl-gallery__item-icon-wrapper"><span aria-hidden="true" class="wt-icon-phosphor--play-filled ecl-icon ecl-icon--s ecl-icon-phosphor--play-filled"></span></div>
+      <picture class="ecl-picture ecl-gallery__thumbnail"><img alt="New digital strategy" class="ecl-gallery__image" src="https://inno-ecl.s3.amazonaws.com/media/examples/example-external-video.jpg" /></picture>
+      <figcaption class="ecl-gallery__description ecl-gallery__description--visible" data-ecl-gallery-description>
+        <div class="ecl-gallery__item-meta"><span class="ecl-gallery__length">1:01</span><span class="ecl-gallery__date">20 Feb 2020</span></div>
+        <span class="ecl-gallery__title" data-ecl-gallery-title id="ecl-gallery-item-gallery-green-0-title"><span class="ecl-gallery__title-text">New digital strategy</span></span>
+        <span class="ecl-gallery__caption">Digital technologies have greatly changed our daily life.</span>
+        <span class="ecl-gallery__meta">Copyright, Author, Licence for embedded media</span>
+      </figcaption>
+    </figure>
+  </a>
+</li>
   </ul>
   <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
+  <dialog aria-label="Gallery overlay" class="ecl-gallery__overlay" data-ecl-gallery-overlay>
+  <header class="ecl-gallery__close" data-ecl-gallery-overlay-header>
+    <button class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only" data-ecl-gallery-close type="submit">
+      <span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><span aria-hidden="true" class="wt-icon-phosphor--x ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--x"></span></span>
+    </button>
+  </header>
+  <section class="ecl-gallery__slider"><div class="ecl-gallery__slider-media-container" data-ecl-gallery-overlay-media></div></section>
+  <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer>
+    <div class="ecl-gallery__detail-container">
+      <div class="ecl-gallery__pager">
+        <div class="ecl-gallery__detail-counter" dir="ltr"><span data-ecl-gallery-overlay-counter-current>0</span> of <span data-ecl-gallery-overlay-counter-max>0</span></div>
+        <div class="ecl-gallery__controls">
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-previous ecl-button--icon-only" data-ecl-gallery-overlay-previous type="button"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"></span><span class="ecl-button__label" data-ecl-label="true">Previous</span></span></button>
+          <button class="ecl-button ecl-button--primary ecl-button--inverted ecl-gallery__slider-next ecl-button--icon-only" data-ecl-gallery-overlay-next type="button"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Next</span><span aria-hidden="true" class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"></span></span></button>
         </div>
       </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--blue-ocean"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-blue-ocean-0"
-        aria-label="blue-ocean gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="blue-ocean gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="blue-ocean gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-blue-ocean-0-title"
-              >blue-ocean mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--green"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-green-0"
-        aria-label="green gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="green gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="green gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-green-0-title"
-              >green mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--green-dark"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-green-dark-0"
-        aria-label="green-dark gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="green-dark gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="green-dark gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-green-dark-0-title"
-              >green-dark mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--green-lemon"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-green-lemon-0"
-        aria-label="green-lemon gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="green-lemon gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="green-lemon gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-green-lemon-0-title"
-              >green-lemon mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--green-pine"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-green-pine-0"
-        aria-label="green-pine gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="green-pine gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="green-pine gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-green-pine-0-title"
-              >green-pine mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--orange"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-orange-0"
-        aria-label="orange gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="orange gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="orange gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-orange-0-title"
-              >orange mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--purple"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-purple-0"
-        aria-label="purple gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="purple gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="purple gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-purple-0-title"
-              >purple mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--purple-violet"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-purple-violet-0"
-        aria-label="purple-violet gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="purple-violet gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="purple-violet gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-purple-violet-0-title"
-              >purple-violet mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--red-crayola"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-red-crayola-0"
-        aria-label="red-crayola gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="red-crayola gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="red-crayola gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-red-crayola-0-title"
-              >red-crayola mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--red-tomato"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-red-tomato-0"
-        aria-label="red-tomato gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="red-tomato gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="red-tomato gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-red-tomato-0-title"
-              >red-tomato mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--warm-grey"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-warm-grey-0"
-        aria-label="warm-grey gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="warm-grey gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="warm-grey gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-warm-grey-0-title"
-              >warm-grey mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
-<section
-  class="ecl-gallery ecl-color-mode--yellow-gold"
-  data-ecl-auto-init="Gallery"
-  data-ecl-gallery=""
-  data-ecl-gallery-not-expandable
->
-  <ul class="ecl-gallery__list">
-    <li class="ecl-gallery__item">
-      <a
-        class="ecl-gallery__item-link"
-        data-ecl-gallery-item=""
-        href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-        id="ecl-gallery-item-gallery-yellow-gold-0"
-        aria-label="yellow-gold gallery image"
-      >
-        <figure class="ecl-gallery__image-container">
-          <div class="ecl-gallery__icon-zoom-wrapper">
-            <span
-              aria-hidden="true"
-              class="wt-icon--fullscreen ecl-icon ecl-icon--s ecl-gallery__icon-zoom ecl-icon--fullscreen"
-            ></span>
-          </div>
-          <picture class="ecl-picture ecl-gallery__thumbnail">
-            <img
-              alt="yellow-gold gallery image"
-              class="ecl-gallery__image"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <picture class="ecl-picture ecl-gallery__picture">
-            <img
-              alt="yellow-gold gallery image"
-              class="ecl-gallery__image"
-              loading="lazy"
-              src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-            />
-          </picture>
-          <figcaption
-            class="ecl-gallery__description"
-            data-ecl-gallery-description=""
-          >
-            <span
-              class="ecl-gallery__title"
-              data-ecl-gallery-title=""
-              id="ecl-gallery-item-gallery-yellow-gold-0-title"
-              >yellow-gold mode</span
-            >
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-  <div class="ecl-gallery__footer"></div>
-  <dialog
-    aria-label="Gallery overlay"
-    class="ecl-gallery__overlay"
-    data-ecl-gallery-overlay=""
-  >
-    <header class="ecl-gallery__close" data-ecl-gallery-overlay-header="">
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--inverted ecl-gallery__close-button ecl-button--icon-only"
-        data-ecl-gallery-close=""
-        type="submit"
-      >
-        <span class="ecl-button__container"
-          ><span class="ecl-button__label" data-ecl-label="true">Close</span
-          ><span
-            aria-hidden="true"
-            class="wt-icon--close ecl-icon ecl-icon--m ecl-button__icon ecl-icon--close"
-            data-ecl-icon=""
-          ></span
-        ></span>
-      </button>
-    </header>
-    <section class="ecl-gallery__slider">
-      <div
-        class="ecl-gallery__slider-media-container"
-        data-ecl-gallery-overlay-media=""
-      ></div>
-    </section>
-    <footer class="ecl-gallery__detail" data-ecl-gallery-overlay-footer="">
-      <div class="ecl-container">
-        <div class="ecl-gallery__detail-container">
-          <div class="ecl-gallery__pager">
-            <div class="ecl-gallery__detail-counter">
-              <span data-ecl-gallery-overlay-counter-current="">0</span> of
-              <span data-ecl-gallery-overlay-counter-max="">0</span>
-            </div>
-            <div class="ecl-gallery__controls">
-              <button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-previous ecl-button--icon-only"
-                data-ecl-gallery-overlay-previous=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-270 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Previous</span
-                  ></span
-                ></button
-              ><button
-                class="ecl-button ecl-button--tertiary ecl-gallery__slider-next ecl-button--icon-only"
-                data-ecl-gallery-overlay-next=""
-                type="button"
-              >
-                <span class="ecl-button__container"
-                  ><span class="ecl-button__label" data-ecl-label="true"
-                    >Next</span
-                  ><span
-                    aria-hidden="true"
-                    class="wt-icon--corner-arrow ecl-icon ecl-icon--m ecl-icon--rotate-90 ecl-button__icon ecl-icon--corner-arrow"
-                    data-ecl-icon=""
-                  ></span
-                ></span>
-              </button>
-            </div>
-          </div>
-          <div class="ecl-gallery__detail-actions">
-            <a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download"
-              data-ecl-gallery-overlay-download=""
-              href=""
-              target="_blank"
-              ><span class="ecl-link__label">View original</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--fullscreen ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--fullscreen"
-              ></span></a
-            ><a
-              class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share"
-              data-ecl-gallery-overlay-share=""
-              href="/example"
-              ><span class="ecl-link__label">Share</span
-              ><span
-                aria-hidden="true"
-                class="wt-icon--share ecl-icon ecl-icon--fluid ecl-link__icon ecl-icon--share"
-              ></span
-            ></a>
-          </div>
-        </div>
-        <div
-          class="ecl-gallery__detail-description"
-          data-ecl-gallery-overlay-description=""
-        >
-          Selected gallery item description
-        </div>
-      </div>
-    </footer>
-  </dialog>
-</section>
+      <div class="ecl-gallery__detail-actions"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    </div>
+    <div class="ecl-gallery__detail-actions-mobile"><a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__download" data-ecl-gallery-overlay-download href="/example-original.jpg" target="_blank"><span class="ecl-link__label">View original</span><span aria-hidden="true" class="wt-icon--fullscreen ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--fullscreen"></span></a>
+<a class="ecl-link ecl-link--standalone ecl-link--inverted ecl-link--icon ecl-gallery__share" data-ecl-gallery-overlay-share href="/example-share"><span class="ecl-link__label">Share</span><span aria-hidden="true" class="wt-icon--share ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--share"></span></a>
+<div class="ecl-gallery__detail-date" data-ecl-gallery-overlay-date hidden>
+  <span aria-hidden="true" class="wt-icon-phosphor--calendar-blank ecl-icon ecl-icon--2xs ecl-icon-phosphor--calendar-blank"></span><span class="ecl-gallery__date-label">Published</span><span class="ecl-gallery__date-value" data-ecl-gallery-overlay-date-value></span>
+</div></div>
+    <div class="ecl-gallery__detail-description" data-ecl-gallery-overlay-description>Selected gallery item description</div>
+  </footer>
+</dialog>
+</section></div>
