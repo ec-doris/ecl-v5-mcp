@@ -29,6 +29,7 @@ const templateFamilies = {
     "category-filter": ["category-filter.html.twig", "category-filter-items.html.twig"],
     checkbox: ["checkbox-group.html.twig", "checkbox-item.html.twig"],
     file: ["file.html.twig"],
+    "file-upload": ["file-upload.html.twig", "file-upload-status.html.twig"],
     gallery: ["gallery.html.twig", "gallery-item.html.twig", "gallery-overlay.html.twig"],
     "highlighted-search": ["highlighted-search.html.twig"],
     "list-illustration": ["list-illustration.html.twig", "list-illustration-item.html.twig"],

@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 91 (75 identical to target, 14 different, 2 absent/retired upstream) |
+| Existing Twig files | 92 (77 identical to target, 13 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
-| Missing Twig references | 2: file-upload-status, layout-wrapper |
-| Connected content checks | S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **51 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files and the 16 S012 remaining forms files; GUIDE-assets remains Updated |
+| Missing Twig references | 1: layout-wrapper |
+| Connected content checks | S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **56 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files and the five S013 range/rating/status Twig/HTML files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
-| Missing | 5 |
-| Needs update | 24 |
-| Review | 106 |
+| Missing | 4 |
+| Needs update | 23 |
+| Review | 103 |
 | Updated | 10 |
-| Verified work rows | 83 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows) |
+| Verified work rows | 88 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows) |
 
 ## Completed setup milestones
 
@@ -243,8 +243,8 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-popover | [components/popover.html](components/popover.html) | `C/popover/`; `D/components/popover/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-quiz | [components/quiz.html](components/quiz.html) | `C/quiz/`; `D/components/quiz/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-radio | [components/radio.html](components/radio.html) | `C/radio/`; `D/components/forms/radio/` | Existing examples already cover radio group/button, disabled/helper/invalid, binary, minimal/empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/label/state checks, live MCP/disk match and browser accessibility/DOM smoke |
-| HTML-range | [components/range.html](components/range.html) | `C/range/`; `D/components/forms/range/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-rating-field | [components/rating-field.html](components/rating-field.html) | `C/rating-field/`; `D/components/forms/rating-field/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-range | [components/range.html](components/range.html) | `C/range/`; `D/components/forms/range/` | Aligned range examples with the v5.3.1 input/container/value-hook contract, including required, disabled, invalid, widths, extensions, empty output and real instances for all EC color modes. | Verified | v5.3.1 / 2026-09-25 / S013; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser range smoke |
+| HTML-rating-field | [components/rating-field.html](components/rating-field.html) | `C/rating-field/`; `D/components/forms/rating-field/` | Aligned rating examples with the v5.3.1 accessible label-before-input order, ascending values, checked/disabled/minimal/empty branches and all EC color modes. | Verified | v5.3.1 / 2026-09-25 / S013; tagged README/demo/story/tests/snapshots/changelog, static label/order/ID checks, live MCP/disk match and browser accessibility smoke |
 | HTML-search-form | [components/search-form.html](components/search-form.html) | `C/search-form/`; `D/components/forms/search-form/` | Aligned examples with the v5.3.1 no-duplicate-role form contract, accessible button label, placeholder fallback, extension hooks, disabled/no-input/no-button branches and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S011; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/role checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-select | [components/select.html](components/select.html) | `C/select/`; `D/components/forms/select/` | Existing examples already cover single/multiple select, option groups/states, required/disabled/invalid states, widths, extension hooks, multiple search/select-all/submit/clear behavior, empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser select accessibility/runtime smoke |
 | HTML-separator | [components/separator.html](components/separator.html) | `C/separator/`; `D/components/divider/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -335,8 +335,8 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-quiz | [components/quiz.html.twig](components/quiz.html.twig) | `C/quiz/quiz.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-radio-button | [components/radio-button.html.twig](components/radio-button.html.twig) | `C/radio/radio-button.html.twig` | Exact pinned v5.3.1 source; disabled/invalid/binary classes and helper relationships are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
 | TWIG-radio-group | [components/radio-group.html.twig](components/radio-group.html.twig) | `C/radio/radio-group.html.twig` | Exact pinned v5.3.1 source; item propagation, empty output and binary mode are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
-| TWIG-range | [components/range.html.twig](components/range.html.twig) | `C/range/range.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-rating-field | [components/rating-field.html.twig](components/rating-field.html.twig) | `C/rating-field/rating-field.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-range | [components/range.html.twig](components/range.html.twig) | `C/range/range.html.twig` | Exact pinned v5.3.1 source; range input/container/value hooks, width/status attributes and `aria-describedby` handling are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S013; exact tagged comparison, live MCP template match and browser range smoke |
+| TWIG-rating-field | [components/rating-field.html.twig](components/rating-field.html.twig) | `C/rating-field/rating-field.html.twig` | Updated to the exact pinned v5.3.1 source: items remain ascending and each accessible label precedes its radio input. | Verified | v5.3.1 / 2026-09-25 / S013; exact tagged comparison, rating snapshot/order review, live MCP template match and browser accessibility smoke |
 | TWIG-search-form | [components/search-form.html.twig](components/search-form.html.twig) | `C/search-form/search-form.html.twig` | Exact pinned v5.3.1 source: removes the duplicate `role="search"` from the form wrapper while preserving form-group/button composition and extension blocks. | Verified | v5.3.1 / 2026-09-25 / S011; exact tagged comparison, live MCP template match and browser role/ARIA smoke |
 | TWIG-select | [components/select.html.twig](components/select.html.twig) | `C/select/select.html.twig` | Exact pinned v5.3.1 source; single/multiple attributes, labels, option states and submit/search/clear configuration are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser select smoke |
 | TWIG-separator | [components/separator.html.twig](components/separator.html.twig) | `C/separator/separator.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -366,7 +366,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-slider-pager | [components/slider-pager.html.twig](components/slider-pager.html.twig) | `C/slider/slider-pager.html.twig` | Added the exact shared v5.3.1 pager helper and return it with carousel/story-card families; no standalone HTML ID was invented. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live dependent-family lookups |
 | TWIG-story-card | [components/story-card.html.twig](components/story-card.html.twig) | `C/story-card/story-card.html.twig` | Added the exact v5.3.1 story-card template, including mobile carousel, desktop grid and keyboard/tab relationships. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live family lookup |
 | TWIG-story-card-card | [components/story-card-card.html.twig](components/story-card-card.html.twig) | `C/story-card/story-card-card.html.twig` | Added the exact v5.3.1 story-card content helper, including testimonial metadata and tab-aware link description. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live family lookup |
-| TWIG-file-upload-status | `components/file-upload-status.html.twig` (absent) | `X/file-upload-status/file-upload-status.html.twig` | Upstream composition absent locally; assess useful EC coverage with file-upload before deciding how to expose it. | Missing | — |
+| TWIG-file-upload-status | [components/file-upload-status.html.twig](components/file-upload-status.html.twig) | `X/file-upload-status/file-upload-status.html.twig` | Added the official EC `!dev` file-upload status composition as a scoped file-upload family helper; it renders upload progress, error text and Delete/Delete all links and reuses local spinner/link helpers. | Verified | v5.3.1 / 2026-09-25 / S013; exact tagged comparison, dependency/family mapping checks and live MCP template match |
 | TWIG-layout-wrapper | `components/layout-wrapper.html.twig` (absent) | `L/layout-wrapper/layout-wrapper.html.twig` | Shared layout missing locally; assess component/page usage. v5.3.1 fixes its extra spacing. | Missing | — |
 
 ## Bundled assets and fonts — 18 files
@@ -437,7 +437,7 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 12: range/rating-field forms and the missing file-upload-status reference.**
+**Batch 13: remaining high-drift content families.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
@@ -446,20 +446,20 @@ description-list with its link/tag dependencies, and S010 delivered
 fact-figures with its source and link contracts, and S011 delivered the
 form-group, search-form and page-summary families, and S012 verified the
 remaining checkbox, datepicker, file-upload, radio, select, text-area and
-text-input families with their exact shared Twig helpers. Next, take the
-range/rating-field forms together and assess the missing `file-upload-status`
-composition: add it only if it is a useful EC-scoped MCP item, otherwise record
-the explicit coverage decision. Keep standalone mega-menu, Menu and page-header
-rows in Review unless the rendered-example audit is the priority.
+text-input families with their exact shared Twig helpers, and S013 delivered
+range/rating-field plus the file-upload-status helper. Next, take the remaining
+high-drift quiz, slogan-ticker, social-media-follow and splash-page families in
+a coherent content batch. Keep standalone mega-menu, Menu and page-header rows
+in Review unless the rendered-example audit is the priority.
 Keep the existing component IDs and use the tagged v5.3.1 source; do not rebuild
 the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 11 (adjust for dependencies and user focus):
+Suggested following order after Batch 12 (adjust for dependencies and user focus):
 
-1. Range/rating-field forms and the missing file-upload-status composition;
-   reconcile whether the latter belongs in the EC MCP contract.
+1. Remaining high-drift quiz, slogan-ticker, social-media-follow and splash-page
+   families, including their changed Twig sources and paired HTML behavior.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -1169,3 +1169,48 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   `file-upload-status` composition. GUIDE-assets and GUIDE-icons WebTools
   rendering remain pending. This S012 tracker update is not yet committed or
   pushed.
+
+### S013 — 2026-09-25 — Batch 12: range, rating-field and file-upload-status
+
+- **Scope:** `HTML/TWIG-range`, `HTML/TWIG-rating-field` and
+  `TWIG-file-upload-status`. The batch combines the remaining form controls
+  with the file-upload status composition that the official file-upload usage
+  guidance links as an upload-progress/removal companion.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged [range source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/components/range),
+  [rating-field source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/components/rating-field),
+  the [file-upload-status composition](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/compositions/file-upload-status),
+  their README/demo/test snapshot sources and the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The range/rating sources are part of the EC forms navigation; file-upload
+  usage explicitly links the status composition for progress and removal.
+- **Twig changes:** aligned `rating-field.html.twig` to the exact v5.3.1
+  source. The target keeps rating items in ascending order and emits each
+  accessible label before its radio input; the previous local template reversed
+  items and emitted inputs first. `range.html.twig` was already exact. Added
+  the exact `file-upload-status.html.twig` source and mapped it into the
+  file-upload family in `index.js`, preserving EC-scoped discovery without
+  inventing a standalone HTML component ID.
+- **HTML changes:** updated rating-field examples to the target label-before-
+  input order and ascending values across required, checked, disabled, minimal,
+  empty and 15 color-mode cases. Expanded range color-mode coverage so every
+  EC mode contains a real initialized slider rather than an empty wrapper;
+  existing required, disabled, invalid, width, extension and empty cases remain.
+- **MCP checks:** a fresh local stdio client checked all six tools, 18 guides
+  and 71 component IDs. Range and rating-field component responses matched
+  disk; their Twig template responses matched exact disk content; the
+  file-upload family returned both `file-upload.html.twig` and
+  `file-upload-status.html.twig`, both matching disk; all affected families
+  remained discoverable.
+- **Static/browser checks:** exact tagged comparisons, rating label/input order,
+  range hook/ID/ARIA checks, `node --check index.js` and `git diff --check`
+  passed. The file-upload-status source is byte-identical to its tagged
+  composition and reuses the local spinner/link helpers. Browser smoke covered
+  range initialization and accessible rating controls with no console errors or
+  warnings. `npm pack --dry-run` includes the new helper and affected files.
+  `npm test -- --runInBand` still reports no tests found, and `npm run lint`
+  still has no ESLint configuration. No Laravel code was changed.
+- **Handoff:** all five S013 rows are Verified. The next recommended batch is
+  the remaining high-drift quiz, slogan-ticker, social-media-follow and
+  splash-page families. GUIDE-assets and GUIDE-icons WebTools rendering remain
+  pending. This S013 work is ready to commit and push.
