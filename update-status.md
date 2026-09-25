@@ -68,16 +68,16 @@ identity or a successful MCP read alone is not complete conformance verification
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 1: layout-wrapper |
-| Connected content checks | S014: quiz, slogan-ticker, social-media-follow and splash-page component responses plus all five Twig template key/value matches disk; S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S014: 71 component IDs, 18 guide topics and quiz, slogan-ticker, social-media-follow and splash-page family discoverability calls passed; S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **65 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files, the five S013 range/rating/status Twig/HTML files and the nine S014 quiz/ticker/social/splash Twig/HTML files; GUIDE-assets remains Updated |
+| Connected content checks | S015: breadcrumb, inpage-navigation and navigation-list component responses plus all four Twig template key/value matches disk; S014: quiz, slogan-ticker, social-media-follow and splash-page component responses plus all five Twig template key/value matches disk; S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S015: 71 component IDs, 18 guide topics and breadcrumb, inpage-navigation and navigation-list discoverability/template calls passed; S014: 71 component IDs, 18 guide topics and quiz, slogan-ticker, social-media-follow and splash-page family discoverability calls passed; S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **70 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files, the five S013 range/rating/status Twig/HTML files, the nine S014 quiz/ticker/social/splash Twig/HTML files and five S015 breadcrumb/navigation-list Twig/HTML files; the two inpage-navigation rows remain Updated pending the pinned bundle's duplicate mobile-trigger listener; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 4 |
 | Needs update | 18 |
-| Review | 99 |
-| Updated | 10 |
-| Verified work rows | 97 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows + 9 S014 quiz/ticker/social/splash rows) |
+| Review | 92 |
+| Updated | 12 |
+| Verified work rows | 102 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows + 9 S014 quiz/ticker/social/splash rows + 5 S015 breadcrumb/navigation-list rows) |
 
 ## Completed setup milestones
 
@@ -202,7 +202,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-animated-numbers | [components/animated-numbers.html](components/animated-numbers.html) | `C/animated-numbers/`; `D/components/animated-numbers/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-banner | [components/banner.html](components/banner.html) | `C/banner/`; `D/components/banner/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-blockquote | [components/blockquote.html](components/blockquote.html) | `C/blockquote/`; `D/components/blockquote/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
-| HTML-breadcrumb | [components/breadcrumb.html](components/breadcrumb.html) | `C/breadcrumb/`; `D/components/navigation/breadcrumb/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-breadcrumb | [components/breadcrumb.html](components/breadcrumb.html) | `C/breadcrumb/`; `D/components/navigation/breadcrumb/` | Static, long/custom ellipsis, extension and all 15 EC color-mode examples match the tagged v5.3.1 contract; desktop ellipsis expansion and narrow-width collapse passed. | Verified | v5.3.1 / 2026-09-25 / S015; tagged README/demo/story/tests/snapshots/JS, static semantics/color-mode/ID checks, live MCP/disk match and browser breadcrumb smoke |
 | HTML-button | [components/button.html](components/button.html) | `C/button/`; `D/components/button/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-card | [components/card.html](components/card.html) | `C/card/`; `D/components/card/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-carousel | [components/carousel.html](components/carousel.html) | `C/carousel/`; `D/components/carousel/` | Updated to the v5.3.1 pager/teaser/viewport contract, including shared slider-pager hooks, inert inactive slides, counter labels, full-width/color-mode coverage and banner/video examples. Desktop and narrow-width next-slide behavior passed. | Verified | v5.3.1 / 2026-09-25 / S005; S004 tagged data/snapshot markers and parser/ARIA checks, live MCP, desktop plus narrow-width browser smoke |
@@ -223,7 +223,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-highlight-box | [components/highlight-box.html](components/highlight-box.html) | `C/highlight-box/`; `D/components/highlight-box/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-icon | [components/icon.html](components/icon.html) | `C/icon/`; `D/components/icon/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-indicator | [components/indicator.html](components/indicator.html) | `C/indicator/`; `D/components/loading-indicator/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-inpage-navigation | [components/inpage-navigation.html](components/inpage-navigation.html) | `C/inpage-navigation/`; `D/components/navigation/inpage-navigation/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-inpage-navigation | [components/inpage-navigation.html](components/inpage-navigation.html) | `C/inpage-navigation/`; `D/components/navigation/inpage-navigation/` | HTML covers desktop/mobile hooks, six valid heading targets, active/runtime states, extension/empty cases and all 15 EC color modes. Initialization and ARIA relations pass; the pinned v5.3.1 bundle's duplicate trigger listener leaves one mobile click closed, so this row remains Updated pending an upstream/bundle decision. | Updated | v5.3.1 / 2026-09-25 / S015; tagged README/demo/story/tests/snapshots/JS, static ARIA/color-mode checks, live MCP/disk match and browser console/init smoke; mobile trigger limitation recorded |
 | HTML-label | [components/label.html](components/label.html) | `C/label/`; `D/components/label/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-link | [components/link.html](components/link.html) | `C/link/`; `D/components/navigation/link/` | Added the tagged link coverage for tertiary variants, external label, indicator, icon placement and no-icon-wrapping; accessible names and all link targets checked in the browser. | Verified | v5.3.1 / 2026-09-25 / S006; tagged link README/story/snapshots/docs, parser/ARIA checks, live MCP/disk match and browser link smoke |
 | HTML-list-illustration | [components/list-illustration.html](components/list-illustration.html) | `C/list-illustration/`; `D/components/list-illustration/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -231,7 +231,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-mega-menu | [components/mega-menu.html](components/mega-menu.html) | `C/mega-menu/`; `D/components/navigation/mega-menu/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-menu | [components/menu.html](components/menu.html) | `C/menu/`; `D/components/navigation/menu/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-modal | [components/modal.html](components/modal.html) | `C/modal/`; `D/components/modal/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-navigation-list | [components/navigation-list.html](components/navigation-list.html) | `C/navigation-list/`; `D/components/navigation/navigation-list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-navigation-list | [components/navigation-list.html](components/navigation-list.html) | `C/navigation-list/`; `D/components/navigation/navigation-list/` | Two/three-column, bordered/no-border, illustration/image, title/description/link groups, extensions, unsupported-column handling and all 15 EC color modes match the tagged contract. | Verified | v5.3.1 / 2026-09-25 / S015; tagged README/demo/illustration/story/tests/snapshots, static structure/color-mode/ID checks, live MCP/disk match and browser accessibility smoke |
 | HTML-news-ticker | [components/news-ticker.html](components/news-ticker.html) | `C/news-ticker/`; `D/components/news-ticker/` | Aligned default and single-item examples with the v5.3.1 redesign: slide icon/content wrappers, branded links, Phosphor icons, default newspaper fallback, LTR counter and safe static color-mode hooks. | Verified | v5.3.1 / 2026-09-25 / S007; tagged README/demo/story/snapshot/docs, parser checks, live MCP/disk match and browser next-control smoke |
 | HTML-notification | [components/notification.html](components/notification.html) | `C/notification/`; `D/components/notification/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-ordered-list | [components/ordered-list.html](components/ordered-list.html) | `C/ordered-list/`; `D/components/list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -280,7 +280,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-animated-numbers | [components/animated-numbers.html.twig](components/animated-numbers.html.twig) | `C/animated-numbers/animated-numbers.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-banner | [components/banner.html.twig](components/banner.html.twig) | `C/banner/banner.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-blockquote | [components/blockquote.html.twig](components/blockquote.html.twig) | `C/blockquote/blockquote.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
-| TWIG-breadcrumb | [components/breadcrumb.html.twig](components/breadcrumb.html.twig) | `C/breadcrumb/breadcrumb.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-breadcrumb | [components/breadcrumb.html.twig](components/breadcrumb.html.twig) | `C/breadcrumb/breadcrumb.html.twig` | Exact pinned v5.3.1 source retained; paired HTML covers static/current/expandable segments, custom ellipsis labels, extensions and color modes. | Verified | v5.3.1 / 2026-09-25 / S015; exact tagged source, MCP template match and paired browser breadcrumb smoke |
 | TWIG-button | [components/button.html.twig](components/button.html.twig) | `C/button/button.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-card | [components/card.html.twig](components/card.html.twig) | `C/card/card.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-carousel | [components/carousel.html.twig](components/carousel.html.twig) | `C/carousel/carousel.html.twig` | Replaced with the exact v5.3.1 source; carousel family lookup also returns the shared slider-pager helper. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source, live family lookup and runtime smoke |
@@ -307,7 +307,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-highlight-box | [components/highlight-box.html.twig](components/highlight-box.html.twig) | `C/highlight-box/highlight-box.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-icon | [components/icon.html.twig](components/icon.html.twig) | `C/icon/icon.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-indicator | [components/indicator.html.twig](components/indicator.html.twig) | `C/indicator/indicator.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-inpage-navigation | [components/inpage-navigation.html.twig](components/inpage-navigation.html.twig) | `C/inpage-navigation/inpage-navigation.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-inpage-navigation | [components/inpage-navigation.html.twig](components/inpage-navigation.html.twig) | `C/inpage-navigation/inpage-navigation.html.twig` | Exact pinned v5.3.1 source retained; paired trigger/list/heading markup and link dependencies pass static, MCP and initialization checks, but the pinned bundle double-binds the mobile trigger and needs an upstream/bundle decision. | Updated | v5.3.1 / 2026-09-25 / S015; exact tagged source, MCP template match, paired ARIA/browser smoke and mobile trigger limitation recorded |
 | TWIG-label | [components/label.html.twig](components/label.html.twig) | `C/label/label.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-link | [components/link.html.twig](components/link.html.twig) | `C/link/link.html.twig` | Exact v5.3.1 source; tertiary styles, no-icon-wrapping and label relationships are validated with the paired HTML example. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match and browser link smoke |
 | TWIG-list-illustration-item | [components/list-illustration-item.html.twig](components/list-illustration-item.html.twig) | `C/list-illustration/list-illustration-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -319,8 +319,8 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-menu-item | [components/menu-item.html.twig](components/menu-item.html.twig) | `C/menu/menu-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-menu | [components/menu.html.twig](components/menu.html.twig) | `C/menu/menu.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-modal | [components/modal.html.twig](components/modal.html.twig) | `C/modal/modal.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-navigation-list-item | [components/navigation-list-item.html.twig](components/navigation-list-item.html.twig) | `C/navigation-list/navigation-list-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-navigation-list | [components/navigation-list.html.twig](components/navigation-list.html.twig) | `C/navigation-list/navigation-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-navigation-list-item | [components/navigation-list-item.html.twig](components/navigation-list-item.html.twig) | `C/navigation-list/navigation-list-item.html.twig` | Exact pinned v5.3.1 source retained; paired examples exercise picture, title/description, grouped links, border/illustration variants, item extensions and item color mode. | Verified | v5.3.1 / 2026-09-25 / S015; exact tagged source, MCP template match and paired browser accessibility smoke |
+| TWIG-navigation-list | [components/navigation-list.html.twig](components/navigation-list.html.twig) | `C/navigation-list/navigation-list.html.twig` | Exact pinned v5.3.1 source retained; paired examples validate 2/3-column classes, border propagation, root color mode, empty input and navigation-list-item delivery. | Verified | v5.3.1 / 2026-09-25 / S015; exact tagged source, MCP template-family match and paired browser accessibility smoke |
 | TWIG-news-ticker | [components/news-ticker.html.twig](components/news-ticker.html.twig) | `C/news-ticker/news-ticker.html.twig` | Exact v5.3.1 source: adds color mode, Phosphor/default newspaper media, slide icon/content wrappers, branded links, deprecated image compatibility and LTR counter while preserving the required initialization hooks. | Verified | v5.3.1 / 2026-09-25 / S007; exact tagged source, MCP template match and browser initialization/control smoke |
 | TWIG-notification | [components/notification.html.twig](components/notification.html.twig) | `C/notification/notification.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-ordered-list | [components/ordered-list.html.twig](components/ordered-list.html.twig) | `C/ordered-list/ordered-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,7 +437,7 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 14: coherent navigation families.**
+**Batch 15: pagination, tabs and skip-link navigation.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
@@ -447,19 +447,20 @@ with its source and link contracts, S011 delivered the form-group, search-form
 and page-summary families, S012 verified the remaining form families with their
 exact shared Twig helpers, S013 delivered range/rating-field plus the
 file-upload-status helper, and S014 delivered quiz, slogan-ticker,
-social-media-follow and splash-page. Next, take breadcrumb, inpage-navigation
-and navigation-list with their paired item helpers. Keep standalone mega-menu,
-Menu and page-header rows in Review unless the rendered-example audit is the
-priority.
+social-media-follow and splash-page, and S015 verified breadcrumb and
+navigation-list while documenting the pinned inpage-navigation mobile-trigger
+limitation. Next, take pagination, tabs and skip-link navigation with their
+paired Twig sources. Keep standalone mega-menu, Menu and page-header rows in
+Review unless the rendered-example audit is the priority.
 Keep the existing component IDs and use the tagged v5.3.1 source; do not rebuild
 the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 13 (adjust for dependencies and user focus):
+Suggested following order after Batch 14 (adjust for dependencies and user focus):
 
-1. Breadcrumb, inpage-navigation and navigation-list families, including their
-   paired item helpers and browser keyboard/ARIA behavior.
+1. Pagination, tabs and skip-link navigation, including browser keyboard/ARIA
+   behavior and the inpage-navigation bundle decision.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -1254,3 +1255,44 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
 - **Handoff:** all nine S014 rows are Verified. The next recommended batch is
   breadcrumb, inpage-navigation and navigation-list with their paired item
   helpers. GUIDE-assets and GUIDE-icons WebTools rendering remain pending.
+
+### S015 — 2026-09-25 — Batch 14: breadcrumb, inpage-navigation and navigation-list
+
+- **Scope:** `HTML/TWIG-breadcrumb`, `HTML/TWIG-inpage-navigation`,
+  `HTML-navigation-list`, `TWIG-navigation-list-item` and
+  `TWIG-navigation-list`. Existing Twig was already byte-identical to the
+  pinned target; this batch completed the paired example and runtime audit.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged breadcrumb, inpage-navigation and navigation-list source
+  directories, README/demo/story/test snapshot/JS files and the
+  [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The pinned target remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Twig and HTML:** no component source mutation was needed. Breadcrumb
+  covers empty, single, two-item, simple, long/custom ellipsis, extensions and
+  all 15 EC color modes. In-page navigation covers desktop/mobile hooks, six
+  valid heading targets, active/runtime, extension/empty cases and all 15
+  color modes. Navigation-list covers two/three columns, border propagation,
+  picture/image and illustration variants, mixed link groups, extensions,
+  unsupported columns and all 15 color modes.
+- **MCP checks:** a fresh local stdio client listed all six tools; all three
+  component responses matched disk; breadcrumb and inpage-navigation returned
+  their exact Twig templates; navigation-list returned both exact
+  `navigation-list.html.twig` and `navigation-list-item.html.twig` templates;
+  all three families remained discoverable.
+- **Static/browser checks:** exact tagged Twig comparisons, duplicate-ID and
+  ARIA target checks, link-to-heading checks, color-mode coverage,
+  `node --check index.js` and `git diff --check` passed. Browser smoke loaded
+  the three examples with six initialized roots and no console errors or
+  warnings; desktop breadcrumb ellipsis expansion and narrow collapse passed;
+  navigation-list accessibility and media/variant structure passed. The
+  pinned v5.3.1 inpage-navigation bundle binds the mobile trigger twice, so a
+  single click opens and immediately closes the list; the two inpage rows stay
+  `Updated` pending an upstream/bundle decision rather than changing the
+  vendored pinned asset.
+- **Checks and handoff:** `npm test -- --runInBand` still reports no tests
+  found, and `npm run lint` still has no ESLint configuration. No Laravel code
+  was changed. Five S015 rows are Verified and two remain Updated. Next take
+  pagination, tabs and skip-link navigation; keep the inpage bundle decision
+  visible in that batch. GUIDE-assets and GUIDE-icons WebTools rendering
+  remain pending.
