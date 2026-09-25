@@ -1401,3 +1401,60 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   mobile-trigger decision; and GUIDE-assets/GUIDE-icons WebTools rendering
   remains pending. Next review the `page-information`/`spotlight` pair, then
   continue the remaining component rows and focused guides.
+
+### S028 — 2026-09-25 — Batch 27: page-information and spotlight
+
+- **Scope:** `HTML/TWIG-page-information` and `HTML/TWIG-spotlight`. Both
+  component families were already present; the audit found no markup or Twig
+  mutation required for the pinned target. Existing EC coverage was retained
+  and the four rows were moved from Review/In progress to Verified.
+- **Baseline and sources:** the cycle remains pinned to v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The official EC landing page
+  still reports v5.3.1 and the release page remains the latest observed
+  release. Tagged source review covered page-information README/demo/story/
+  test/snapshot/SCSS/print/package, spotlight README/demo/story/test/
+  snapshot/SCSS/print/package, the EC usage/accessibility/showcase files for
+  both components, and the v5.0.1-to-v5.3.1 changelog entries. Spotlight’s
+  relevant release changes are CSS gradient/focus/padding changes; the Twig
+  contract is unchanged. Page-information has no JavaScript API.
+- **Twig:** `components/page-information.html.twig` and
+  `components/spotlight.html.twig` are byte-identical to their v5.3.1 tagged
+  sources. Page-information keeps its free content block and escaped
+  extension attributes. Spotlight keeps its `@ecl/picture` dependency,
+  conditional link/content box, color mode, font size, full-width and anchor
+  branches.
+- **HTML:** page-information retains default, empty, inline-link and
+  extension cases and uses parent wrappers to exercise all 15 EC color modes.
+  Spotlight retains the four responsive demo sources, image fallback, linked,
+  static and image-only variants, header/credit/anchor omissions, large and
+  full-width options, extension attributes and all 15 EC modes. Named image
+  alternatives are used where the image conveys information; the mode-only
+  images use empty alt text as decorative content. No IDs, ARIA relationships,
+  or invented auto-init hooks were introduced.
+- **MCP checks:** connected MCP and a fresh local stdio client both returned
+  71 component IDs and 18 guide topics. `page-information` and `spotlight`
+  component responses matched disk exactly. Each family returned its exact
+  single Twig key/value (`page-information.html.twig` or `spotlight.html.twig`)
+  and matched disk; the starter response and guide `__DIR__` substitution also
+  passed in the local client.
+- **Static/browser checks:** exact tagged Twig comparisons passed 2/2. Static
+  assertions passed for all 15 modes in each example, 21 spotlight sections,
+  21 image hooks, 20 content-container hooks, four responsive `<source>`
+  elements, decorative mode-image alt text, non-nested links and the absence
+  of invented JavaScript initialization hooks. `node --check index.js` and
+  `git diff --check` passed. A local Chrome smoke page loaded the pinned EC
+  CSS/ESM assets and rendered both families; its accessibility tree exposed
+  the metadata/link content and named spotlight links while hiding decorative
+  mode images. No interactive behavior applies to these non-JavaScript
+  families. The browser smoke was desktop-width; responsive structure was
+  checked statically against the pinned container-query/media-query sources.
+- **Focused checks:** `npm test -- --runInBand` and `npm run lint` remain
+  unavailable as conformance suites because this repository has no project
+  test files or ESLint configuration; no Laravel code changed, so the Laravel
+  suite was not applicable. No commit, push or publication was made.
+- **Handoff:** `HTML/TWIG-page-information` and `HTML/TWIG-spotlight` are
+  Verified. Pending external WebTools delivery for add-to-calendar and
+  GUIDE-assets/GUIDE-icons, plus the pinned inpage-navigation mobile-trigger
+  decision, remain visible. The next recommended component decision is the
+  standalone `tooltip` delivery/contract audit, followed by focused utility
+  and design-system guides.
