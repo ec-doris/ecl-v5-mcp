@@ -1246,3 +1246,60 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   rendering remain pending. Next take the remaining list/content-media group,
   beginning with `list-illustration` and `timeline`, then finish focused guides,
   coverage gaps and the final EC-wide checks.
+
+### S025 — 2026-09-25 — Batch 24: list illustration and timeline
+
+- **Scope:** `HTML/TWIG-list-illustration` (including the
+  `list-illustration-item` helper) and `HTML/TWIG-timeline` (including the
+  `timeline-set` helper), the next recommended simple/content-media group.
+  The pinned target remains commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` (v5.3.1).
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1 and lists List with illustrations and Timeline.
+  The live usage pages were reachable but served stale v5.1.0 headers in this
+  session, so the pinned v5.3.1 source was authoritative: component
+  README/demo data/Storybook stories/tests/snapshots, Twig/JS/SCSS/print files,
+  package manifests and EC usage/accessibility/API/code docs. The v5.3.1
+  release notes contain only layout-wrapper and site-header fixes; relevant
+  history before the target includes List illustration icon-title and ordered
+  number-list changes, plus Timeline focus, label-height, color-token and
+  story fixes. None changes the four selected Twig files at v5.3.1.
+- **Twig:** all four local files are byte-identical to the pinned source.
+  List illustration retains Picture/Icon dependencies, dynamic `ul`/`ol`
+  output, square/media-size, icon-list/number-list, counter, divider, color
+  mode and escaped extension contracts. Timeline retains Button/Icon hooks,
+  headline and hide-range calculations, generated item IDs, set delegation,
+  color modes and escaped extensions.
+- **HTML:** the existing examples already cover the pinned EC variants:
+  vertical/horizontal images, square sizes, centered/zebra layouts, icon and
+  inline/icon-list variants, ordered number lists with and without counter
+  reset, item/root extensions, empty list behavior and all 15 color modes;
+  baseline/headline timelines, positive/negative/no-bottom hide boundaries,
+  timeline sets, root-only/extension cases, all 15 modes and all auto-init /
+  toggle hooks. The named Information icon was corrected from `aria-label` to
+  the pinned Icon contract (`aria-hidden="false"`, `title`, `role="img"`).
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 71 component IDs and 18 guide topics; both component responses
+  matched disk; List illustration returned exactly
+  `list-illustration.html.twig` and `list-illustration-item.html.twig`, and
+  Timeline returned exactly `timeline.html.twig` and `timeline-set.html.twig`,
+  with every returned value matching disk. The starter retained
+  `ECL.autoInit()` and guide `__DIR__` substitution passed. A separate
+  connected MCP surface was not exposed in this session.
+- **Static/browser checks:** tagged Twig comparisons are byte-identical; both
+  examples parse without mismatched tags, have unique IDs, and expose all 15
+  EC color modes. The local v5.3.1 Chrome harness rendered the image/icon/
+  number-list and timeline roots. The named icon was exposed as Information;
+  Timeline initialized all roots, expanded the primary hidden range, focused
+  the first newly shown item, changed the label to Show less, and collapsed
+  back. `node --check index.js` and `git diff --check` pass. `npm test
+  -- --runInBand` remains blocked by no test files, and `npm run lint` remains
+  blocked by no ESLint configuration. No Laravel code changed; the temporary
+  harness and browser tab are removed after this session.
+- **Handoff:** all six S025 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger listener decision; and GUIDE-assets/GUIDE-icons WebTools
+  rendering remain pending. Next take the remaining navigation, forms,
+  content/media and simple components in small coherent batches, then focus
+  utility/design guides, coverage gaps and final EC-wide delivery checks.
