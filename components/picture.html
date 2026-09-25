@@ -29,16 +29,18 @@
 <!-- Source attributes and breakpoint aliases -->
 <picture class="ecl-picture">
   <source
-    srcset="/media/example-xs.webp"
+    srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
     media="(min-width: 415px)"
-    type="image/webp"
+    type="image/jpeg"
   />
   <source
-    srcset="/media/example-xxl.avif"
+    srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg"
     media="(min-width: 1368px)"
-    type="image/avif"
+    type="image/jpeg"
   />
-  <source srcset="/media/example-no-media.jpg" />
+  <source
+    srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg"
+  />
   <source media="(orientation: portrait)" />
   <source type="image/png" />
   <img
@@ -47,13 +49,19 @@
   />
 </picture>
 
-<!-- Zoom, lazy loading, image anchor, and image classes -->
-<picture class="ecl-picture ecl-picture--zoom">
+<!-- Zoom, lazy loading, image anchor, debug marker, and image classes -->
+<picture
+  class="ecl-picture ecl-picture--zoom"
+  data-picture-focal-point="20% 80%"
+  data-ecl-auto-init="Picture"
+  data-picture-debug
+>
   <img
-    style="--ecl-image-anchor: top left"
+    style="--ecl-image-anchor: 20% 80%"
+    data-image-focal-pending
     class="custom-class custom-class--image"
     src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-    alt=""
+    alt="Jean Monnet banner"
     loading="lazy"
   />
 </picture>
@@ -83,7 +91,10 @@
 
 <!-- Sources without image and empty source object -->
 <picture class="ecl-picture">
-  <source srcset="/media/example-source-only.jpg" media="(min-width: 768px)" />
+  <source
+    srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg"
+    media="(min-width: 768px)"
+  />
   <source />
 </picture>
 

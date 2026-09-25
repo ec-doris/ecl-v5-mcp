@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 91 (59 identical to target, 30 different, 2 retired upstream) |
+| Existing Twig files | 91 (67 identical to target, 22 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 2: file-upload-status, layout-wrapper |
-| Connected content checks | S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed; 18 guide topics/snippets match disk |
+| Connected content checks | S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
 | Content verified for v5.3.1 | **19 files** — 18 asset/font files and GUIDE-start; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 5 |
-| Needs update | 34 |
-| Review | 138 |
+| Needs update | 32 |
+| Review | 130 |
 | Updated | 10 |
-| Verified work rows | 41 (33 prior verified rows + 8 S005 source/delivery rows) |
+| Verified work rows | 51 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows) |
 
 ## Completed setup milestones
 
@@ -145,8 +145,8 @@ All six tools are registered in `index.js` and exposed over stdio. There are no 
 | TOOL-guide | `guide({topic})` | `index.js`; `guides/*.md` | 18/18 live responses match disk after `__DIR__` substitution. Recheck after guide updates. | Review | — |
 | TOOL-guide-list | `guide_list({})` | `index.js` | 18 topics match local filenames; snippets are the first 120 characters. Recheck new topics and version labels. | Review | — |
 | TOOL-components-list | `components_list({})` | `index.js` | 71 HTML IDs match local filenames. Template calls are advertised for exact active EC families; carousel and story-card include the shared slider pager, file/gallery return their scoped families, and tooltip is not advertised because no standalone template exists. | Verified | v5.3.1 / 2026-09-25 / S005; live list and file/gallery family checks |
-| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 71/71 live responses match disk, including the updated file and gallery examples and the previously delivered high-drift families. | Verified | v5.3.1 / 2026-09-25 / S005; fresh stdio component calls and disk comparison |
-| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping now includes file, gallery/gallery-item/gallery-overlay, highlighted-search, story-card/story-card-card/slider-pager and carousel/slider-pager; tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S005; live file/gallery family calls and disk comparison |
+| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 71/71 live responses match disk, including the S006 picture, link, video, media-container and text-media examples plus the previously delivered high-drift families. | Verified | v5.3.1 / 2026-09-25 / S006; fresh stdio component calls and disk comparison |
+| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping now includes picture, link, video, media-container and text-media plus file, gallery/gallery-item/gallery-overlay, highlighted-search, story-card/story-card-card/slider-pager and carousel/slider-pager; tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S006; live five-family template calls and disk comparison |
 | TOOL-starter-template | `starter_template({})` | `index.js`; `starter-template.html` | Connected response matches disk; page setup, Search and Menu runtime checks are recorded under PAGE-starter. | Verified | v5.3.1 / 2026-09-25 / S003; live response and browser smoke |
 
 ## Existing guides — 18 topics
@@ -225,9 +225,9 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-indicator | [components/indicator.html](components/indicator.html) | `C/indicator/`; `D/components/loading-indicator/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-inpage-navigation | [components/inpage-navigation.html](components/inpage-navigation.html) | `C/inpage-navigation/`; `D/components/navigation/inpage-navigation/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-label | [components/label.html](components/label.html) | `C/label/`; `D/components/label/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-link | [components/link.html](components/link.html) | `C/link/`; `D/components/navigation/link/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-link | [components/link.html](components/link.html) | `C/link/`; `D/components/navigation/link/` | Added the tagged link coverage for tertiary variants, external label, indicator, icon placement and no-icon-wrapping; accessible names and all link targets checked in the browser. | Verified | v5.3.1 / 2026-09-25 / S006; tagged link README/story/snapshots/docs, parser/ARIA checks, live MCP/disk match and browser link smoke |
 | HTML-list-illustration | [components/list-illustration.html](components/list-illustration.html) | `C/list-illustration/`; `D/components/list-illustration/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-media-container | [components/media-container.html](components/media-container.html) | `C/media-container/`; `D/components/media/media-container/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-media-container | [components/media-container.html](components/media-container.html) | `C/media-container/`; `D/components/media/media-container/` | Aligned examples with the tagged image/video/embed/ratio/expandable contract; captions/credits, iframe titles, video labels and autoplay controls are covered. | Verified | v5.3.1 / 2026-09-25 / S006; tagged media-container demos/story/README/snapshots/docs, parser/ARIA checks, live MCP/disk match and desktop+narrow browser controls |
 | HTML-mega-menu | [components/mega-menu.html](components/mega-menu.html) | `C/mega-menu/`; `D/components/navigation/mega-menu/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-menu | [components/menu.html](components/menu.html) | `C/menu/`; `D/components/navigation/menu/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-modal | [components/modal.html](components/modal.html) | `C/modal/`; `D/components/modal/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -239,7 +239,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-page-information | [components/page-information.html](components/page-information.html) | `C/page-information/`; `D/components/page-information/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-page-summary | [components/page-summary.html](components/page-summary.html) | `C/page-summary/`; `D/components/page-summary/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-pagination | [components/pagination.html](components/pagination.html) | `C/pagination/`; `D/components/navigation/pagination/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-picture | [components/picture.html](components/picture.html) | `C/picture/`; `D/components/media/media-container/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-picture | [components/picture.html](components/picture.html) | `C/picture/`; `D/components/media/media-container/` | Added focal-point/debug/lazy/zoom coverage, replaced untracked local placeholder source URLs with official EC demo media, and preserved source alias/empty-input edge cases. | Verified | v5.3.1 / 2026-09-25 / S006; tagged Picture source/tests/snapshot, parser checks, fresh Picture browser smoke with no missing local requests |
 | HTML-popover | [components/popover.html](components/popover.html) | `C/popover/`; `D/components/popover/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-quiz | [components/quiz.html](components/quiz.html) | `C/quiz/`; `D/components/quiz/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-radio | [components/radio.html](components/radio.html) | `C/radio/`; `D/components/forms/radio/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -261,11 +261,11 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-tag | [components/tag.html](components/tag.html) | `C/tag/`; `D/components/tag/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-text-area | [components/text-area.html](components/text-area.html) | `C/text-area/`; `D/components/forms/text-area/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-text-input | [components/text-input.html](components/text-input.html) | `C/text-input/`; `D/components/forms/text-field/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-text-media | [components/text-media.html](components/text-media.html) | `C/text-media/`; `D/components/media/text-and-media/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-text-media | [components/text-media.html](components/text-media.html) | `C/text-media/`; `D/components/media/text-and-media/` | Audited image/video/primary/full-width/EC color-mode variants; unique title IDs and link aria-describedby relationships are retained with nested Media Container hooks. | Verified | v5.3.1 / 2026-09-25 / S006; tagged text-media data/story/snapshot/docs, parser/ARIA checks, live MCP/disk match and narrow scoped layout/browser smoke |
 | HTML-timeline | [components/timeline.html](components/timeline.html) | `C/timeline/`; `D/components/timeline/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-tooltip | [components/tooltip.html](components/tooltip.html) | `C/tooltip/`; `D/components/tooltip/` | Live HTML works; listed Twig call fails. Upstream has no standalone tooltip Twig: resolve discovery/contract, do not invent one. | Review | — |
 | HTML-unordered-list | [components/unordered-list.html](components/unordered-list.html) | `C/unordered-list/`; `D/components/list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-video | [components/video.html](components/video.html) | `C/video/`; `D/components/media/media-container/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-video | [components/video.html](components/video.html) | `C/video/`; `D/components/media/media-container/` | Added accessible labels to autoplay/partial/empty/color-mode preview cases; default/multiple source/caption/zoom coverage is retained. | Verified | v5.3.1 / 2026-09-25 / S006; tagged video README/data/snapshot, parser/ARIA checks, live MCP/disk match and browser smoke |
 | HTML-highlighted-search | [components/highlighted-search.html](components/highlighted-search.html) | `C/highlighted-search/`; `D/components/highlighted-search/` | Added EC default and blue-mode examples with labelled GET/POST search forms, helper text, suggestions, valid IDs and the target magnifying-glass hook. | Verified | v5.3.1 / 2026-09-25 / S004; official EC component index/showcase, tagged snapshot/data, parser/ARIA checks, live MCP and browser accessibility smoke |
 | HTML-story-card | [components/story-card.html](components/story-card.html) | `C/story-card/`; `D/components/story-card/` | Added story and testimonial variants with mobile carousel hooks, desktop tablist/panels, slider pager controls, author/source metadata and unique tab relationships. Desktop and narrow-width next-card selection passed. | Verified | v5.3.1 / 2026-09-25 / S005; S004 official/tagged source, parser/ARIA and live MCP checks, desktop plus narrow-width browser smoke |
 
@@ -309,10 +309,10 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-indicator | [components/indicator.html.twig](components/indicator.html.twig) | `C/indicator/indicator.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-inpage-navigation | [components/inpage-navigation.html.twig](components/inpage-navigation.html.twig) | `C/inpage-navigation/inpage-navigation.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-label | [components/label.html.twig](components/label.html.twig) | `C/label/label.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-link | [components/link.html.twig](components/link.html.twig) | `C/link/link.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-link | [components/link.html.twig](components/link.html.twig) | `C/link/link.html.twig` | Exact v5.3.1 source; tertiary styles, no-icon-wrapping and label relationships are validated with the paired HTML example. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match and browser link smoke |
 | TWIG-list-illustration-item | [components/list-illustration-item.html.twig](components/list-illustration-item.html.twig) | `C/list-illustration/list-illustration-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-list-illustration | [components/list-illustration.html.twig](components/list-illustration.html.twig) | `C/list-illustration/list-illustration.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-media-container | [components/media-container.html.twig](components/media-container.html.twig) | `C/media-container/media-container.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-media-container | [components/media-container.html.twig](components/media-container.html.twig) | `C/media-container/media-container.html.twig` | Byte-identical to v5.3.1 and validated with the paired image/video/embed, ratio and expandable examples. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match, parser/ARIA checks and browser smoke |
 | TWIG-mega-menu-featured-item | [components/mega-menu-featured-item.html.twig](components/mega-menu-featured-item.html.twig) | `C/mega-menu/mega-menu-featured-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-mega-menu-item | [components/mega-menu-item.html.twig](components/mega-menu-item.html.twig) | `C/mega-menu/mega-menu-item.html.twig` | Aligned to the pinned EC source with local trailing-whitespace normalization; paired family delivery is live, while the rendered example remains a later audit. | Updated | v5.3.1 / 2026-09-25 / S003; tagged source comparison and live family lookup |
 | TWIG-mega-menu | [components/mega-menu.html.twig](components/mega-menu.html.twig) | `C/mega-menu/mega-menu.html.twig` | Aligned to the pinned EC source with local whitespace normalization; paired family delivery is live, while the rendered example remains a later audit. | Updated | v5.3.1 / 2026-09-25 / S003; tagged source comparison and live family lookup |
@@ -329,7 +329,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-page-information | [components/page-information.html.twig](components/page-information.html.twig) | `C/page-information/page-information.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-page-summary | [components/page-summary.html.twig](components/page-summary.html.twig) | `C/page-summary/page-summary.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-pagination | [components/pagination.html.twig](components/pagination.html.twig) | `C/pagination/pagination.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-picture | [components/picture.html.twig](components/picture.html.twig) | `C/picture/picture.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-picture | [components/picture.html.twig](components/picture.html.twig) | `C/picture/picture.html.twig` | Exact v5.3.1 focal-point/debug source; source aliases, image attributes and runtime initialization are validated. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match, parser checks and fresh Picture browser smoke |
 | TWIG-popover | [components/popover.html.twig](components/popover.html.twig) | `C/popover/popover.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-quiz-card | [components/quiz-card.html.twig](components/quiz-card.html.twig) | `C/quiz/quiz-card.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-quiz | [components/quiz.html.twig](components/quiz.html.twig) | `C/quiz/quiz.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
@@ -357,11 +357,11 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-tag | [components/tag.html.twig](components/tag.html.twig) | `C/tag/tag.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-text-area | [components/text-area.html.twig](components/text-area.html.twig) | `C/text-area/text-area.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-text-input | [components/text-input.html.twig](components/text-input.html.twig) | `C/text-input/text-input.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-text-media | [components/text-media.html.twig](components/text-media.html.twig) | `C/text-media/text-media.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-text-media | [components/text-media.html.twig](components/text-media.html.twig) | `C/text-media/text-media.html.twig` | Byte-identical to v5.3.1 and validated with the paired image/video, link and nested media-container examples. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match and paired browser smoke |
 | TWIG-timeline-set | [components/timeline-set.html.twig](components/timeline-set.html.twig) | `C/timeline/timeline-set.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-timeline | [components/timeline.html.twig](components/timeline.html.twig) | `C/timeline/timeline.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-unordered-list | [components/unordered-list.html.twig](components/unordered-list.html.twig) | `C/unordered-list/unordered-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-video | [components/video.html.twig](components/video.html.twig) | `C/video/video.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-video | [components/video.html.twig](components/video.html.twig) | `C/video/video.html.twig` | Byte-identical to v5.3.1 and validated with standalone source, track, poster, zoom and accessible-label examples. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match, parser/ARIA checks and browser smoke |
 | TWIG-highlighted-search | [components/highlighted-search.html.twig](components/highlighted-search.html.twig) | `C/highlighted-search/highlighted-search.html.twig` | Added the exact v5.3.1 template; its existing form-group, icon, button and tag-set dependencies remain shared local templates. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live lookup |
 | TWIG-slider-pager | [components/slider-pager.html.twig](components/slider-pager.html.twig) | `C/slider/slider-pager.html.twig` | Added the exact shared v5.3.1 pager helper and return it with carousel/story-card families; no standalone HTML ID was invented. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live dependent-family lookups |
 | TWIG-story-card | [components/story-card.html.twig](components/story-card.html.twig) | `C/story-card/story-card.html.twig` | Added the exact v5.3.1 story-card template, including mobile carousel, desktop grid and keyboard/tab relationships. | Verified | v5.3.1 / 2026-09-25 / S004; exact tagged source and live family lookup |
@@ -437,17 +437,15 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 3 continuation: responsive follow-up and high-drift component families.**
-S003 delivered the active EC site-wide Twig family, the template discovery
-contract, EC footer scope and the starter shell. S004 delivered the
-highlighted-search and story-card/slider Twig families plus the refactored
-carousel; the story-card and carousel HTML rows still need a mobile-width smoke
-check. After that check, continue with file and gallery, then table and
-news-ticker, including their required shared Twig dependencies. The standalone
-HTML examples for mega-menu, Menu and page-header remain Review rows and should
-be included if rendered-example coverage is the priority. Keep the existing
-component IDs and use the tagged v5.3.1 source; do not rebuild the assets or
-repeat the full inventory.
+**Batch 6: table/news-ticker and required shared dependencies.**
+S004 delivered the high-drift search/story/card/slider families, S005 delivered
+file/gallery and the responsive follow-up, and S006 delivered the media,
+picture, link and text-media/video families. Next, take `HTML-table`,
+`HTML-news-ticker`, `TWIG-table` and `TWIG-news-ticker`, including any required
+helpers. Keep standalone mega-menu/Menu/page-header rows in Review unless the
+rendered-example audit is the priority. Keep the existing component IDs and
+use the tagged v5.3.1 source; do not rebuild the assets or repeat the full
+inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
@@ -784,3 +782,60 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   and content examples, starting with `HTML-video`, `HTML-media-container`,
   `HTML-text-media` and their shared picture/link dependencies; keep the
   external WebTools icon check and GUIDE-assets limitation recorded.
+
+### S006 — 2026-09-25 — Batch 5: media, picture and link families
+
+- **Scope:** `HTML-link`, `HTML-picture`, `HTML-video`,
+  `HTML-media-container`, `HTML-text-media` and the paired
+  `TWIG-link`, `TWIG-picture`, `TWIG-video`, `TWIG-media-container` and
+  `TWIG-text-media` dependencies. The five HTML examples were checked as
+  standalone component payloads and in the scoped page/grid harness used for
+  responsive checks.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged [source tree](https://github.com/ec-europa/europa-component-library/tree/v5.3.1)
+  and [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The pinned tag remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+  Reviewed the tagged link, picture, video, media-container and text-media
+  README/data/stories/snapshots plus the EC media-container, link and
+  text-media usage/accessibility/code guidance. The live component homepage
+  showed v5.3.1; the versioned source remained the conformance target.
+- **Twig changes:** aligned `link.html.twig` and `picture.html.twig` exactly
+  with the pinned v5.3.1 sources, including tertiary link types,
+  `no_icon_wrapping`, focal-point/debug initialization and image pending
+  attributes. `media-container.html.twig`, `text-media.html.twig` and
+  `video.html.twig` were already byte-identical and passed the paired-family
+  verification. No new Twig family or asset was invented.
+- **HTML changes:** added tertiary and long-icon link coverage; added the
+  picture focal-point/debug example and replaced untracked local placeholder
+  media URLs with official EC demo media while preserving empty/source-alias
+  edge cases; added media-container iframe titles, captions/credits and
+  play/pause/video labels; and added accessible labels to video autoplay,
+  partial, empty and color-mode preview cases. Text-media image/video,
+  color-mode, link and nested media-container examples were audited without
+  changing their established IDs or relationships.
+- **MCP checks:** a fresh stdio client reported 71 component IDs and 18 guide
+  topics. The five affected component responses matched disk. Each affected
+  `component_template` call returned exactly its expected template key and
+  every returned value matched disk; the starter response also remained
+  unchanged and matched disk.
+- **Static checks:** the focused HTML parser found no duplicate IDs, unresolved
+  ARIA references, iframe without titles, controls/autoplay video without
+  labels or play/pause button without labels. Focal-point initialization was
+  asserted. `node --check index.js`, `git diff --check` and the final
+  `npm pack --dry-run` passed. `npm test -- --runInBand` still reports no tests
+  found, and `npm run lint` still has no ESLint configuration; no Laravel code
+  was changed.
+- **Browser checks:** the temporary page loaded pinned v5.3.1 EC assets and
+  initialized all five families. Picture focal-point initialization completed
+  with no missing local media requests; iframe titles, media play/pause state,
+  expandable content and link labels were checked. At 375px, scoped
+  text-media, media-container and link content stayed within their grid/page
+  context, with no console errors or warnings. Remote media availability can
+  still leave a video paused after a play request; this is an external media
+  condition, not a markup/runtime error. WebTools icon/font loading remains
+  blocked by the previously recorded ORB limitation.
+- **Handoff:** all ten S006 HTML/Twig rows and the affected MCP checks are
+  Verified. The next recommended batch is `HTML-table`, `HTML-news-ticker`,
+  `TWIG-table` and `TWIG-news-ticker`, including required helpers. No commit or
+  push was made.

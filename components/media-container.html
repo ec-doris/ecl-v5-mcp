@@ -170,9 +170,11 @@
       <button
         class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__play ecl-button--icon-only"
         type="button"
+        aria-label="Play"
         data-ecl-media-container-play
       >
         <span class="ecl-button__container">
+          <span class="ecl-button__label">Play</span>
           <span
             class="wt-icon--play-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--play-outline"
             data-ecl-icon
@@ -183,9 +185,11 @@
       <button
         class="ecl-button ecl-button--tertiary ecl-button--m ecl-button--neutral ecl-media-container__pause ecl-button--icon-only"
         type="button"
+        aria-label="Pause"
         data-ecl-media-container-pause
       >
         <span class="ecl-button__container">
+          <span class="ecl-button__label">Pause</span>
           <span
             class="wt-icon--pause-outline ecl-icon ecl-icon--m ecl-button__icon ecl-icon--pause-outline"
             data-ecl-icon
@@ -209,6 +213,7 @@
         class="ecl-video ecl-media-container__media"
         controls
         playsinline
+        aria-label="Visit the European Commission - Video player"
         data-ecl-media-container-video
       >
         <source
@@ -237,6 +242,7 @@
         width="350"
         height="197"
         src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="New digital strategy - Video player"
         frameborder="0"
         allow="
           accelerometer;
@@ -274,6 +280,7 @@
         width="350"
         height="197"
         src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="New digital strategy - Video player"
         frameborder="0"
         allow="
           accelerometer;
@@ -305,6 +312,10 @@
         title="4 by 3 video"
       ></iframe>
     </div>
+    <figcaption class="ecl-media-container__caption">
+      Embedded video displayed with a 4:3 ratio.
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
   </figure>
 </div>
 
@@ -325,6 +336,10 @@
         title="3 by 2 video"
       ></iframe>
     </div>
+    <figcaption class="ecl-media-container__caption">
+      Embedded video displayed with a 3:2 ratio.
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
   </figure>
 </div>
 
@@ -345,6 +360,10 @@
         title="Square video"
       ></iframe>
     </div>
+    <figcaption class="ecl-media-container__caption">
+      Embedded video displayed with a square ratio.
+    </figcaption>
+    <footer class="ecl-media-container__credit">@Copyright</footer>
   </figure>
 </div>
 
