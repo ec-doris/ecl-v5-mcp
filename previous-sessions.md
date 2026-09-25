@@ -1195,3 +1195,54 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   rendering remain pending. Next take the remaining simple/content-media
   families, beginning with `featured-item`/`highlight-box` or the list/timeline
   group, then finish focused guides/coverage gaps and the final EC-wide checks.
+
+### S024 — 2026-09-25 — Batch 23: featured item and highlight box
+
+- **Scope:** `HTML/TWIG-featured-item` and `HTML/TWIG-highlight-box`, the next
+  recommended content/media batch. The pinned target remains commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` (v5.3.1).
+- **Sources:** the official [EC component library](https://ec.europa.eu/component-library/ec/)
+  still reports v5.3.1 and lists both families. The live [Featured item usage
+  guidance](https://ec.europa.eu/component-library/ec/components/media/featured-item/usage/)
+  was reachable; the live Highlight box usage/accessibility links returned
+  404-style responses in this session, so the pinned versioned docs were used.
+  Rechecked the v5.3.1 release, [release changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md),
+  tagged README/demo/story/test snapshots, SCSS/print sources, package
+  manifests and EC usage/accessibility/code docs. v5.3.0 includes the
+  Highlight Box icon-shrink fix; v5.3.1 changes layout-wrapper and site-header
+  only, with no selected Twig source changes.
+- **Twig:** both local templates are byte-identical to the pinned sources.
+  Featured Item preserves Link and Media Container composition, alignment,
+  media behavior/position, highlighted-link compatibility and escaped
+  extensions. Highlight Box preserves Icon/Link composition, optional header
+  and body branches, generated title relationships and escaped extensions; the
+  pinned shared CSS already contains the icon-shrink fix.
+- **HTML:** Featured Item retains default/static, no-media, dynamic/right,
+  highlighted, button, deprecated-link and link-without-title coverage, all 15
+  EC color modes and extension hooks. Its former media-only edge example was
+  replaced with a self-contained text-plus-media case without a CTA, matching
+  the official guidance to omit a call to action when the item does not lead
+  to another page. Highlight Box retains title/icon/description/link omission
+  branches, extension attributes, an explicitly named non-decorative icon and
+  all 15 modes; no markup change was required.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 71 component IDs and 18 guide topics; both component responses
+  matched disk; each family returned its exact single Twig key/value; the
+  starter retained `ECL.autoInit()`; and guide `__DIR__` substitution passed.
+  The separate connected MCP surface was not exposed in this session.
+- **Static/browser checks:** tagged Twig diffs are empty; the local v5.3.1
+  Chrome harness rendered 23 Featured Item and 21 Highlight Box roots with no
+  duplicate IDs, broken ARIA references or console warnings/errors. All 15 EC
+  modes were present; the three image requests completed with natural widths
+  1200, 3872 and 1280; the new self-contained case had one image and no links.
+  `node --check index.js` and `git diff --check` pass. `npm test
+  -- --runInBand` remains blocked by the absence of test files, and
+  `npm run lint` remains blocked by the absence of an ESLint configuration. No
+  Laravel code changed; the temporary harness and browser tab were removed.
+- **Handoff:** all four S024 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger listener decision; and GUIDE-assets/GUIDE-icons WebTools
+  rendering remain pending. Next take the remaining list/content-media group,
+  beginning with `list-illustration` and `timeline`, then finish focused guides,
+  coverage gaps and the final EC-wide checks.
