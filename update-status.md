@@ -68,16 +68,16 @@ identity or a successful MCP read alone is not complete conformance verification
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 1: layout-wrapper |
-| Connected content checks | S019: animated-numbers and blockquote component responses plus their exact single Twig template key/value sets match disk; S018: modal, popover and notification component responses plus all three returned Twig template key/value sets match disk; S017: menu, mega-menu and page-header component responses plus all seven returned Twig template key/value sets match disk; S016: pagination, tabs and skip-link component responses plus their exact single Twig template key/value matches disk; S015: breadcrumb, inpage-navigation and navigation-list component responses plus all four Twig template key/value matches disk; S014: quiz, slogan-ticker, social-media-follow and splash-page component responses plus all five Twig template key/value matches disk; S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S019: 71 component IDs, 18 guide topics and animated-numbers/blockquote discoverability plus template calls passed; S018: 71 component IDs, 18 guide topics and modal, popover and notification discoverability/template calls passed; S017: 71 component IDs, 18 guide topics and menu, mega-menu and page-header discoverability/template calls passed; S016: 71 component IDs, 18 guide topics and pagination, tabs and skip-link discoverability/template calls passed; S015: 71 component IDs, 18 guide topics and breadcrumb, inpage-navigation and navigation-list discoverability/template calls passed; S014: 71 component IDs, 18 guide topics and quiz, slogan-ticker, social-media-follow and splash-page family discoverability calls passed; S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **96 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files, the five S013 range/rating/status Twig/HTML files, the nine S014 quiz/ticker/social/splash Twig/HTML files, the five S015 breadcrumb/navigation-list Twig/HTML files, the six S016 pagination/tabs/skip-link HTML/Twig files, the ten S017 menu/mega-menu/page-header HTML/Twig files, the six S018 modal/popover/notification HTML/Twig files and the four S019 animated-numbers/blockquote HTML/Twig files; the two inpage-navigation rows remain Updated pending the pinned bundle's duplicate mobile-trigger listener; GUIDE-assets remains Updated |
+| Connected content checks | S020 fresh local stdio: add-to-calendar and banner component responses plus their exact single Twig template key/value sets match disk; the separate connected MCP surface was not exposed in this session, and add-to-calendar WebTools rendering remains pending. S019: animated-numbers and blockquote component responses plus their exact single Twig template key/value sets match disk; S018: modal, popover and notification component responses plus all three returned Twig template key/value sets match disk; S017: menu, mega-menu and page-header component responses plus all seven returned Twig template key/value sets match disk; S016: pagination, tabs and skip-link component responses plus their exact single Twig template key/value matches disk; S015: breadcrumb, inpage-navigation and navigation-list component responses plus all four Twig template key/value matches disk; S014: quiz, slogan-ticker, social-media-follow and splash-page component responses plus all five Twig template key/value matches disk; S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S020 fresh local stdio: 71 component IDs, 18 guide topics and add-to-calendar/banner discoverability plus template calls passed; the separate connected MCP surface was not exposed in this session. S019: 71 component IDs, 18 guide topics and animated-numbers/blockquote discoverability plus template calls passed; S018: 71 component IDs, 18 guide topics and modal, popover and notification discoverability/template calls passed; S017: 71 component IDs, 18 guide topics and menu, mega-menu and page-header discoverability/template calls passed; S016: 71 component IDs, 18 guide topics and pagination, tabs and skip-link discoverability/template calls passed; S015: 71 component IDs, 18 guide topics and breadcrumb, inpage-navigation and navigation-list discoverability/template calls passed; S014: 71 component IDs, 18 guide topics and quiz, slogan-ticker, social-media-follow and splash-page family discoverability calls passed; S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **99 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files, the five S013 range/rating/status Twig/HTML files, the nine S014 quiz/ticker/social/splash Twig/HTML files, the five S015 breadcrumb/navigation-list Twig/HTML files, the six S016 pagination/tabs/skip-link HTML/Twig files, the ten S017 menu/mega-menu/page-header HTML/Twig files, the six S018 modal/popover/notification HTML/Twig files, the four S019 animated-numbers/blockquote HTML/Twig files and three S020 banner/add-to-calendar files; HTML-add-to-calendar remains Updated pending the external WebTools loader; the two inpage-navigation rows remain Updated pending the pinned bundle's duplicate mobile-trigger listener; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 4 |
 | Needs update | 16 |
-| Review | 71 |
-| Updated | 9 |
-| Verified work rows | 128 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows + 9 S014 quiz/ticker/social/splash rows + 5 S015 breadcrumb/navigation-list rows + 6 S016 pagination/tabs/skip-link rows + 10 S017 menu/mega-menu/page-header rows + 6 S018 modal/popover/notification rows + 4 S019 animated-numbers/blockquote rows) |
+| Review | 67 |
+| Updated | 10 |
+| Verified work rows | 131 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows + 9 S014 quiz/ticker/social/splash rows + 5 S015 breadcrumb/navigation-list rows + 6 S016 pagination/tabs/skip-link rows + 10 S017 menu/mega-menu/page-header rows + 6 S018 modal/popover/notification rows + 4 S019 animated-numbers/blockquote rows + 3 S020 banner/add-to-calendar rows) |
 
 ## Completed setup milestones
 
@@ -198,9 +198,9 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | ID | Local item / lookup | Target reference | Finding / next action | Status | Verified version / date / evidence |
 | --- | --- | --- | --- | --- | --- |
 | HTML-accordion | [components/accordion.html](components/accordion.html) | `C/accordion/`; `D/components/accordion/` | Updated to v5.3.1 native details/summary coverage: four-item default with third item open, named exclusive group, configurable sidebar media query, single indicator, structured content, extension hooks and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S008; tagged README/demo/data/sidebar/story/tests/snapshots/docs/changelog, semantic/static checks, live MCP/disk match and Chrome initialization/toggle/sidebar smoke; WebTools icon rendering remains an external limitation |
-| HTML-add-to-calendar | [components/add-to-calendar.html](components/add-to-calendar.html) | `C/add-to-calendar/`; `D/components/add-to-calendar/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-add-to-calendar | [components/add-to-calendar.html](components/add-to-calendar.html) | `C/add-to-calendar/`; `D/components/add-to-calendar/` | Updated for v5.3.1: title-only, single/multiple metadata semantics, icon sizing, extension hooks, full-width layout, 15 EC color modes and official WeSaveToCalendar JSON payloads are covered. The external loader did not expose a generated action in the browser harness, so live WebTools rendering remains pending. | Updated | v5.3.1 / 2026-09-25 / S020; EC site/release/changelog and tagged README/demo/data/test/SCSS review, JSON/static/DOM checks, fresh local stdio MCP delivery and browser render; external WebTools loader limitation recorded |
 | HTML-animated-numbers | [components/animated-numbers.html](components/animated-numbers.html) | `C/animated-numbers/`; `D/components/animated-numbers/` | Aligned the EC example with the v5.3.1 global and individual-source contract: nested per-item source label/list, external-icon/no-wrap link structure, empty/value/border/background/full-width/source-only branches and all 15 EC color modes remain covered with auto-init hooks. | Verified | v5.3.1 / 2026-09-25 / S019; tagged README/demo/data/story/test snapshot/JS/SCSS/changelog review, static source/structure/color-mode checks, live MCP/disk match, Chrome runtime smoke for 24 roots and values, and clean local CSS/JS/image loading |
-| HTML-banner | [components/banner.html](components/banner.html) | `C/banner/`; `D/components/banner/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
+| HTML-banner | [components/banner.html](components/banner.html) | `C/banner/`; `D/components/banner/` | Aligned the EC example with v5.3.1 image/video/no-media branches, responsive image source, full-width/overlay/alignment/size variants, description-only and CTA-only labelling, empty input, video pause/play controls and all 15 EC color modes. Removed a nonexistent local caption-file request and marked the muted decorative video `aria-hidden` while repeating its message as page text. | Verified | v5.3.1 / 2026-09-25 / S020; EC site/release/changelog and tagged banner README/demo/story/test snapshot/JS/SCSS/accessibility/usage/API review, static DOM/ARIA/color-mode checks, fresh local stdio MCP delivery, Chrome render and pause/play smoke; local requests were 200/304 except expected favicon 404 |
 | HTML-blockquote | [components/blockquote.html](components/blockquote.html) | `C/blockquote/`; `D/components/blockquote/` | Updated every author wrapper to the v5.3.1 semantic `span` contract while retaining responsive/decorative and meaningful picture variants, language marking, extension/empty branches and all 15 EC color modes. | Verified | v5.3.1 / 2026-09-25 / S019; tagged README/demo/story/test snapshot/SCSS/changelog and EC usage/accessibility review, static tag/alt/color-mode checks, live MCP/disk match, Chrome responsive-image smoke and clean console |
 | HTML-breadcrumb | [components/breadcrumb.html](components/breadcrumb.html) | `C/breadcrumb/`; `D/components/navigation/breadcrumb/` | Static, long/custom ellipsis, extension and all 15 EC color-mode examples match the tagged v5.3.1 contract; desktop ellipsis expansion and narrow-width collapse passed. | Verified | v5.3.1 / 2026-09-25 / S015; tagged README/demo/story/tests/snapshots/JS, static semantics/color-mode/ID checks, live MCP/disk match and browser breadcrumb smoke |
 | HTML-button | [components/button.html](components/button.html) | `C/button/`; `D/components/button/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -276,9 +276,9 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | ID | Local item / lookup | Target reference | Finding / next action | Status | Verified version / date / evidence |
 | --- | --- | --- | --- | --- | --- |
 | TWIG-accordion | [components/accordion.html.twig](components/accordion.html.twig) | `C/accordion/accordion.html.twig` | Exact v5.3.1 source; adds the `open` item parameter and configurable sidebar media-query attribute while preserving the icon fallback, color modes, names and extension attributes. | Verified | v5.3.1 / 2026-09-25 / S008; exact tagged comparison, live MCP template match and browser runtime smoke |
-| TWIG-add-to-calendar | [components/add-to-calendar.html.twig](components/add-to-calendar.html.twig) | `C/add-to-calendar/add-to-calendar.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-add-to-calendar | [components/add-to-calendar.html.twig](components/add-to-calendar.html.twig) | `C/add-to-calendar/add-to-calendar.html.twig` | Exact pinned v5.3.1 source; color mode, metadata list/div branching, icon-size override, full-width container, WebTools action slot and extension-attribute contracts are paired with the audited example. | Verified | v5.3.1 / 2026-09-25 / S020; byte-identical tagged source, README/API/dependency review, fresh local stdio MCP template match and paired static/browser structure checks |
 | TWIG-animated-numbers | [components/animated-numbers.html.twig](components/animated-numbers.html.twig) | `C/animated-numbers/animated-numbers.html.twig` | Exact pinned v5.3.1 source restored: self macro for global and per-item sources, source-label fallback, inverted/brand/no-icon-wrapping Link propagation, and the existing icon/value/description/full-width contracts. | Verified | v5.3.1 / 2026-09-25 / S019; byte-identical tagged source, changelog/API/dependency review, live MCP template key/value match and paired browser source-link/runtime smoke |
-| TWIG-banner | [components/banner.html.twig](components/banner.html.twig) | `C/banner/banner.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
+| TWIG-banner | [components/banner.html.twig](components/banner.html.twig) | `C/banner/banner.html.twig` | Exact pinned v5.3.1 source; picture/video/button/link dependencies, automatic Banner initialization, responsive sizing, CTA description relationships and extension attributes are paired with the audited EC example. | Verified | v5.3.1 / 2026-09-25 / S020; byte-identical tagged source, README/API/accessibility/usage and package dependency review, fresh local stdio MCP template match and paired Chrome runtime smoke |
 | TWIG-blockquote | [components/blockquote.html.twig](components/blockquote.html.twig) | `C/blockquote/blockquote.html.twig` | Exact pinned v5.3.1 source restored; the author is delivered as the target `span`, with Picture dependency, language, color-mode and extension-attribute contracts preserved. | Verified | v5.3.1 / 2026-09-25 / S019; byte-identical tagged source, changelog/usage/accessibility review, live MCP template key/value match and paired browser semantics/image smoke |
 | TWIG-breadcrumb | [components/breadcrumb.html.twig](components/breadcrumb.html.twig) | `C/breadcrumb/breadcrumb.html.twig` | Exact pinned v5.3.1 source retained; paired HTML covers static/current/expandable segments, custom ellipsis labels, extensions and color modes. | Verified | v5.3.1 / 2026-09-25 / S015; exact tagged source, MCP template match and paired browser breadcrumb smoke |
 | TWIG-button | [components/button.html.twig](components/button.html.twig) | `C/button/button.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,7 +437,7 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 18: remaining standalone components in small coherent families.**
+**Batch 19: remaining standalone components in small coherent families.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
@@ -453,20 +453,24 @@ limitation, and S016 verified pagination, tabs and skip-link navigation with
 their paired Twig sources. S017 verified menu, mega-menu and page-header with
 their paired helpers and runtime behavior. S018 verified modal, popover and
 notification with their paired Twig sources and browser interaction coverage.
-Next, take the remaining standalone component rows in small coherent families,
-starting with the components whose Twig sources differ from the pinned release
-or whose interaction/accessibility dependencies are still unreviewed. Keep the
-inpage-navigation decision visible; GUIDE-assets and GUIDE-icons WebTools
-rendering remain pending.
+S019 verified animated-numbers and blockquote, and S020 verified banner plus
+the two Twig rows for add-to-calendar while leaving the add-to-calendar HTML
+row Updated pending the external WebTools action rendering. Take the remaining
+standalone component rows in small coherent families, starting with the
+components whose Twig sources differ from the pinned release or whose
+interaction/accessibility dependencies are still unreviewed. Keep the
+inpage-navigation decision and WebTools limitation visible; GUIDE-assets and
+GUIDE-icons WebTools rendering remain pending.
 Keep the existing component IDs and use the tagged v5.3.1 source; do not rebuild
 the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 17 (adjust for dependencies and user focus):
+Suggested following order after Batch 19 (adjust for dependencies and user focus):
 
-1. Remaining changed or interactive standalone families, beginning with
-   `animated-numbers`/`blockquote` and their paired examples and helpers.
+1. `button`/`card` with their Link/Icon dependencies and paired examples;
+   include `content-block`/`content-item` only if the shared contracts remain
+   a small coherent slice.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -1463,3 +1467,54 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   listener decision; GUIDE-assets and GUIDE-icons WebTools rendering remain
   pending. Next take `add-to-calendar` with `banner` or another small related
   standalone/media group, while keeping the inpage and WebTools findings visible.
+
+### S020 — 2026-09-25 — Batch 19: add-to-calendar and banner
+
+- **Scope:** `HTML/TWIG-add-to-calendar` and `HTML/TWIG-banner`, the next
+  recommended small standalone family. The pinned target remains commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` (v5.3.1).
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1 and lists both components, the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged component README/demo/story/test snapshot/JS/SCSS/API/accessibility/usage
+  sources, the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md),
+  and the official [WeSaveToCalendar demo](https://webtools.europa.eu/showcase/demo?comp=savetocalendar&demo=basic&lang=en&section=demo).
+  The relevant release history includes the v5.2.0 add-to-calendar color-token
+  update; v5.3.1 itself changes layout-wrapper and site-header, while both
+  component Twig files remain unchanged from the pinned source.
+- **Twig:** both local files are byte-identical to the pinned v5.3.1 sources.
+  Add-to-calendar preserves metadata list/div branching, icon size forcing,
+  full-width container handling, WebTools action markup and root extension
+  attributes. Banner preserves Picture/Video/Button/Link composition,
+  automatic initialization, aspect-ratio behavior, CTA description relations
+  and extension attributes.
+- **HTML:** add-to-calendar covers title-only, single and multiple metadata,
+  icon/no-icon, action-only, full-width, extension and all 15 EC color modes;
+  its two JSON action payloads now use the official seconds-inclusive date
+  format, and the stale v5.0.1 label is corrected to v5.3.1. Banner covers
+  image/video/no-media, responsive source, full-width/overlay/alignment/size,
+  description-only and CTA-only relationships, empty input and all 15 EC color
+  modes. The nonexistent `/captions/banner-en.vtt` request was removed; the
+  muted decorative video is `aria-hidden` and its message remains repeated in
+  page text. The add-to-calendar HTML row remains Updated because the external
+  WebTools loader did not expose a generated action in the browser harness.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It returned
+  71 component IDs and 18 guide topics; both component responses matched disk;
+  each family returned its exact single Twig key/value; and the starter retained
+  `ECL.autoInit()`. A separate connected MCP surface was not exposed in this
+  session, so that existing-connection refresh remains an explicit limitation.
+- **Static/browser checks:** tagged Twig diffs are empty; HTML parsing found no
+  mismatched tags or duplicate IDs; both examples contain all 15 EC color modes;
+  both action JSON payloads parse and match the official WebTools shape; 22
+  Banner roots initialized under the local v5.3.1 assets. Chrome rendered the
+  image/video/no-media branches and the video pause/play control toggled in both
+  harness passes. Local requests were 200/304 except the expected harness
+  favicon 404. `node --check index.js` and `git diff --check` pass. `npm test
+  -- --runInBand` still has no test files and `npm run lint` still has no ESLint
+  configuration. No Laravel code changed; the temporary harness was removed.
+- **Handoff:** `HTML-banner`, `TWIG-banner` and `TWIG-add-to-calendar` are
+  Verified; `HTML-add-to-calendar` is Updated pending WebTools action delivery.
+  The two S015 inpage-navigation rows remain Updated pending the pinned bundle's
+  duplicate mobile-trigger listener decision; GUIDE-assets and GUIDE-icons
+  WebTools rendering remain pending. Next take `button`/`card` with their
+  Link/Icon dependencies, optionally adding `content-block`/`content-item` if
+  the shared contract remains a small coherent slice.
