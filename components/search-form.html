@@ -1,13 +1,11 @@
+<!-- Search form: the form wrapper intentionally has no duplicate role=search. -->
 <h3 class="ecl-u-type-heading-3">Search Form</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form" role="search">
+  <form class="ecl-search-form">
     <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-id"
-        id="search-input-id-label"
-        >Search</label
-      >
+      <label class="ecl-form-label-wrapper ecl-search-form__label" for="search-input-id" id="search-input-id-label">
+        <span class="ecl-form-label">Search</span>
+      </label>
       <input
         class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
         id="search-input-id"
@@ -31,21 +29,18 @@
   </form>
 </div>
 
+<!-- Extension attributes, extra classes and extra form content -->
 <h3 class="ecl-u-type-heading-3">Search Form With Extension Hooks</h3>
 <div class="ecl-u-mb-l">
   <form
     class="ecl-search-form custom-class custom-class--test"
-    role="search"
     data-test="data-test-value"
     data-test-flag
   >
     <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-hooks"
-        id="search-input-hooks-label"
-        >Search</label
-      >
+      <label class="ecl-form-label-wrapper ecl-search-form__label" for="search-input-hooks" id="search-input-hooks-label">
+        <span class="ecl-form-label">Search</span>
+      </label>
       <input
         class="ecl-text-input ecl-text-input--m ecl-search-form__text-input input-extra-class"
         id="search-input-hooks"
@@ -59,11 +54,7 @@
       type="submit"
     >
       <span class="ecl-button__container">
-        <span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span>
+        <span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span>
         <span class="ecl-button__label" data-ecl-label="true">Search</span>
       </span>
     </button>
@@ -71,578 +62,72 @@
   </form>
 </div>
 
+<!-- Disabled, placeholder-label fallback and optional child branches -->
 <h3 class="ecl-u-type-heading-3">Search Form Disabled</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form" role="search">
+  <form class="ecl-search-form">
     <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-disabled"
-        id="search-input-disabled-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        disabled
-        id="search-input-disabled"
-        placeholder="Placeholder text"
-        type="search"
-      />
+      <label class="ecl-form-label-wrapper ecl-search-form__label" for="search-input-disabled" id="search-input-disabled-label">
+        <span class="ecl-form-label ecl-form-label--disabled">Search</span>
+      </label>
+      <input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" disabled id="search-input-disabled" placeholder="Placeholder text" type="search" />
     </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      disabled
-      type="submit"
-    >
-      <span class="ecl-button__container">
-        <span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span>
-        <span class="ecl-button__label" data-ecl-label="true">Search</span>
-      </span>
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" disabled type="submit">
+      <span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span>
     </button>
   </form>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Search Form Placeholder Label Fallback</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form" role="search">
+  <form class="ecl-search-form">
     <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-placeholder-label"
-        id="search-input-placeholder-label-label"
-        >Search this site</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-placeholder-label"
-        placeholder="Search this site"
-        type="search"
-      />
+      <label class="ecl-form-label-wrapper ecl-search-form__label" for="search-input-placeholder-label" id="search-input-placeholder-label-label">
+        <span class="ecl-form-label">Search this site</span>
+      </label>
+      <input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-input-placeholder-label" placeholder="Search this site" type="search" />
     </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container">
-        <span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span>
-        <span class="ecl-button__label" data-ecl-label="true">Search</span>
-      </span>
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit">
+      <span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span>
     </button>
   </form>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Search Form Without Button</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form" role="search">
+  <form class="ecl-search-form">
     <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-only"
-        id="search-input-only-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-only"
-        placeholder="Placeholder text"
-        type="search"
-      />
+      <label class="ecl-form-label-wrapper ecl-search-form__label" for="search-input-only" id="search-input-only-label"><span class="ecl-form-label">Search</span></label>
+      <input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-input-only" placeholder="Placeholder text" type="search" />
     </div>
   </form>
 </div>
 
 <h3 class="ecl-u-type-heading-3">Search Form Without Text Input</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form" role="search">
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container">
-        <span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span>
-        <span class="ecl-button__label" data-ecl-label="true">Search</span>
-      </span>
+  <form class="ecl-search-form">
+    <button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit">
+      <span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span>
     </button>
   </form>
 </div>
 
+<!-- EC color-mode pass-through; search-form itself has no JavaScript initializer. -->
 <h3 class="ecl-u-type-heading-3">Search Form Color Modes</h3>
 <div class="ecl-u-mb-l">
-  <form class="ecl-search-form ecl-color-mode--blue" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-blue"
-        id="search-input-blue-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-blue"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--green-dark" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-green-dark"
-        id="search-input-green-dark-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-green-dark"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--orange" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-orange"
-        id="search-input-orange-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-orange"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--green" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-green"
-        id="search-input-green-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-green"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--purple" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-purple"
-        id="search-input-purple-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-purple"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--blue-navy" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-blue-navy"
-        id="search-input-blue-navy-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-blue-navy"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--blue-electric" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-blue-electric"
-        id="search-input-blue-electric-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-blue-electric"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--blue-ocean" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-blue-ocean"
-        id="search-input-blue-ocean-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-blue-ocean"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--green-lemon" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-green-lemon"
-        id="search-input-green-lemon-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-green-lemon"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--green-pine" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-green-pine"
-        id="search-input-green-pine-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-green-pine"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--warm-grey" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-warm-grey"
-        id="search-input-warm-grey-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-warm-grey"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--red-crayola" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-red-crayola"
-        id="search-input-red-crayola-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-red-crayola"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--yellow-gold" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-yellow-gold"
-        id="search-input-yellow-gold-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-yellow-gold"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--purple-violet" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-purple-violet"
-        id="search-input-purple-violet-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-purple-violet"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
-  <form class="ecl-search-form ecl-color-mode--red-tomato" role="search">
-    <div class="ecl-form-group">
-      <label
-        class="ecl-form-label ecl-search-form__label"
-        for="search-input-red-tomato"
-        id="search-input-red-tomato-label"
-        >Search</label
-      >
-      <input
-        class="ecl-text-input ecl-text-input--m ecl-search-form__text-input"
-        id="search-input-red-tomato"
-        placeholder="Placeholder text"
-        type="search"
-      />
-    </div>
-    <button
-      class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only"
-      type="submit"
-    >
-      <span class="ecl-button__container"
-        ><span
-          aria-hidden="true"
-          class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search"
-          data-ecl-icon
-        ></span
-        ><span class="ecl-button__label" data-ecl-label="true"
-          >Search</span
-        ></span
-      >
-    </button>
-  </form>
+  <form class="ecl-search-form ecl-color-mode--blue"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-blue"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-blue" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--blue-electric"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-blue-electric"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-blue-electric" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--blue-navy"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-blue-navy"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-blue-navy" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--blue-ocean"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-blue-ocean"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-blue-ocean" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--green"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-green"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-green" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--green-dark"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-green-dark"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-green-dark" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--green-lemon"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-green-lemon"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-green-lemon" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--green-pine"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-green-pine"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-green-pine" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--orange"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-orange"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-orange" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--purple"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-purple"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-purple" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--purple-violet"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-purple-violet"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-purple-violet" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--red-crayola"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-red-crayola"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-red-crayola" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--red-tomato"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-red-tomato"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-red-tomato" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--warm-grey"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-warm-grey"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-warm-grey" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
+  <form class="ecl-search-form ecl-color-mode--yellow-gold"><div class="ecl-form-group"><label class="ecl-form-label-wrapper ecl-search-form__label" for="search-mode-yellow-gold"><span class="ecl-form-label">Search</span></label><input class="ecl-text-input ecl-text-input--m ecl-search-form__text-input" id="search-mode-yellow-gold" type="search" /></div><button class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-search-form__button ecl-button--icon-only" type="submit"><span class="ecl-button__container"><span aria-hidden="true" class="wt-icon--search ecl-icon ecl-icon--m ecl-button__icon ecl-icon--search" data-ecl-icon></span><span class="ecl-button__label" data-ecl-label="true">Search</span></span></button></form>
 </div>

@@ -1,4 +1,4 @@
-<!-- Default: 3 columns, icons, mixed item content, multiple sources, view all -->
+<!-- Default: 3 columns, icons, individual/global sources, view all -->
 <div class="ecl-u-mb-xl">
   <h3 class="ecl-u-type-heading-3">Fact figures default</h3>
   <div class="ecl-fact-figures ecl-fact-figures--col-3">
@@ -15,6 +15,32 @@
         <div class="ecl-fact-figures__description">
           People took part in EU-funded education and training programmes.
         </div>
+        <div class="ecl-fact-figures__sources">
+          <span class="ecl-fact-figures__sources-label">Sources:</span>
+          <ul class="ecl-fact-figures__sources-list">
+            <li class="ecl-fact-figures__sources-item">
+              <a
+                class="ecl-link ecl-link--icon ecl-fact-figures__source"
+                href="https://example.com"
+              >
+                <span class="ecl-link__label">Long external source reference that wraps across lines</span>
+                &nbsp;
+                <span
+                  aria-hidden="false"
+                  class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+                ></span>
+              </a>
+            </li>
+            <li class="ecl-fact-figures__sources-item">
+              <a class="ecl-link ecl-fact-figures__source" href="/example">
+                Eurostat
+              </a>
+            </li>
+            <li class="ecl-fact-figures__sources-item">
+              <span class="ecl-fact-figures__source">Textual source</span>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="ecl-fact-figures__item">
         <span
@@ -25,6 +51,12 @@
         <div class="ecl-fact-figures__description">
           Average increase compared with the previous reporting period.
         </div>
+        <div class="ecl-fact-figures__sources">
+          <span class="ecl-fact-figures__sources-label">Sources:</span>
+          <a class="ecl-link ecl-fact-figures__source" href="/example">
+            Eurostat
+          </a>
+        </div>
       </div>
       <div class="ecl-fact-figures__item">
         <span
@@ -34,6 +66,12 @@
         <div class="ecl-fact-figures__title">Regional coverage</div>
         <div class="ecl-fact-figures__description">
           Projects reached every EU Member State.
+        </div>
+        <div class="ecl-fact-figures__sources">
+          <span class="ecl-fact-figures__sources-label">Source:</span>
+          <a class="ecl-link ecl-fact-figures__source" href="/example">
+            DG CNECT
+          </a>
         </div>
       </div>
     </div>
