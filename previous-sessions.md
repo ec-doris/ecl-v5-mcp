@@ -1522,3 +1522,52 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   remains pending. Next take `GUIDE-colours`, then `GUIDE-dimension` and
   `GUIDE-display`, before the remaining utility/design guides, coverage gaps and
   final EC-wide delivery checks.
+
+### S031 — 2026-09-25 — Batch 30: colours guide
+
+- **Scope:** `GUIDE-colours`, the next recommended utility/design-system guide
+  batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1, the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md),
+  and the live [EC colours page](https://ec.europa.eu/component-library/ec/guidelines/colours/).
+  Tagged review covered the colours guideline MDX, `src/themes/ec/maps/color.scss`,
+  `_custom-properties.scss`, the colour-mode map, the EC colour-mode and utility
+  preset entry points, theme package metadata, compiled v5.3.1 CSS and source
+  maps. The relevant v5.3.0 change removes `cm-surface-color-mode-lowest`;
+  v5.3.1 itself has no further colour-token change.
+- **Guide:** `guides/colours.md` now identifies v5.3.1 and the pinned commit,
+  corrects Secondary-950 to `#471b00`, records the target page-summary,
+  calendar/media and active-border tokens, and documents the 15 mode classes.
+  It inventories all 105 adaptive tokens declared by the pinned EC theme,
+  distinguishes documented core tokens from implementation tokens, corrects
+  the blue-navy border summary, and records the removed token, compiled alpha
+  utility alias defect and the pinned site-header reference to undefined
+  `cm-border-neutral-lowest`.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It returned
+  71 component IDs and 18 guide topics; the colours guide response matched the
+  file after `__DIR__` substitution; the v5.3.1 guide snippet was discoverable;
+  the starter retained `ECL.autoInit()`; and the tooltip no-template contract
+  still passed. The separate connected MCP surface was not exposed in this
+  session.
+- **Static checks:** the pinned source/guide token comparison passed with zero
+  source tokens missing from the guide. Compiled assertions passed for all 15
+  mode selectors, 31 declarations in blue/green-dark/orange, 32 in the other
+  12 modes, 11 adaptive background utilities, six text utilities and four
+  border utilities. The v5.3.1 Secondary-950 value, removed token, alpha alias
+  defect and undefined site-header token reference were all confirmed.
+  `node --check index.js` and `git diff --check` passed. No component markup or
+  JavaScript behavior changed, so a browser smoke was not applicable to this
+  documentation-only batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable because the
+  repository has no project test files; `npm run lint` remains unavailable
+  because there is no ESLint configuration. No Laravel code changed, so the
+  Laravel suite was not applicable. No commit, push or publication was made.
+- **Handoff:** `GUIDE-colours` is Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets/GUIDE-icons WebTools rendering
+  remains pending. Next take `GUIDE-dimension` and `GUIDE-display`, then
+  continue the remaining utility/design guides, coverage gaps and final EC-wide
+  delivery checks.

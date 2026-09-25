@@ -1,7 +1,14 @@
-# ECL Colours (EC preset, v5.0.1)
+# ECL Colours (EC preset, v5.3.1)
 
 Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+`guide("assets")`. The audit below uses the pinned v5.3.1 source at commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` and the compiled EC assets in this
+MCP. The live EC documentation also reports v5.3.1.
+
+The v5.3.0 colour change that matters for consumers is the removal of
+`--cm-surface-color-mode-lowest`. It is intentionally not documented or used
+below. The v5.3.1 release itself contains no additional colour-token change;
+its release fixes are in layout-wrapper spacing and site-header search handling.
 
 ECL EC has two related colour systems:
 
@@ -70,7 +77,7 @@ by semantic purpose and verified contrast, not by shade number alone.
 | 700   | `#0035bf` | `#ed6c09` | `#51649d` | `#505070` | `#606060`  |
 | 800   | `#002a99` | `#c55109` | `#41507d` | `#353559` | `#474747`  |
 | 900   | `#001f73` | `#9e4107` | `#313c5e` | `#1c1c45` | `#313131`  |
-| 950   | `#001959` | `#763105` | `#26324b` | `#00002e` | `#171717`  |
+| 950   | `#001959` | `#471b00` | `#26324b` | `#00002e` | `#171717`  |
 
 Family names are `primary`, `secondary`, `neutral`, `grey`, and `monochrome`.
 For example, Primary 600 is `var(--ecl-color-primary-600)`.
@@ -122,7 +129,7 @@ are `--c-a-{shade}` and `--c-w-{shade}`.
 
 ### Unnumbered semantic aliases
 
-| Public property           | Internal alias | v5.0.1 value              |
+| Public property           | Internal alias | v5.3.1 value              |
 | ------------------------- | -------------- | ------------------------- |
 | `--ecl-color-primary`     | `--c-p`        | Primary 600, `#0046ff`    |
 | `--ecl-color-secondary`   | `--c-s`        | Secondary 400, `#ffbe5c`  |
@@ -171,14 +178,14 @@ For their exact contracts and special values, call:
 - `guide("border")`
 - `guide("typography")`
 
-## Alpha utility defect in v5.0.1
+## Alpha utility defect in v5.3.1
 
 The public alpha custom properties listed above are valid. However, the
-v5.0.1 Sass utility generator incorrectly points numbered
+The v5.3.1 Sass utility generator incorrectly points numbered
 `grey-alpha-{shade}` and `white-alpha-{shade}` background, border, and text
 utilities to undefined variables such as `--c-g-alpha` and `--c-w-alpha`.
 
-Do not use these numbered alpha utility classes in v5.0.1:
+Do not use these numbered alpha utility classes in v5.3.1:
 
 ```text
 ecl-u-bg-grey-alpha-{shade}
@@ -206,34 +213,48 @@ The default values are defined on `:root` in `ecl-ec.css`. A color-mode class
 overrides a subset of them, and those overrides inherit through that class's
 descendants.
 
-### Core default surface tokens
+### Documented default surface tokens
 
 | Token                         | Default value                   |
 | ----------------------------- | ------------------------------- |
 | `--cm-surface-lowest`         | Primary 50, `#f2f6ff`           |
+| `--cm-surface-lowest-1-page-summary` | Grey 50, `#f6f6f8`       |
 | `--cm-surface-lowest-variant` | 50% `#f6f4f3` over transparency |
+| `--cm-surface-color-mode-low` | Blue 100, `#d9e3ff`             |
+| `--cm-surface-color-mode-high` | Blue 700, `#0038cc`            |
 | `--cm-surface-low-0`          | Primary 50, `#f2f6ff`           |
 | `--cm-surface-low-1`          | Primary 100, `#e6edff`          |
 | `--cm-surface-low-2`          | Primary 200, `#d9e3ff`          |
+| `--cm-surface-medium`         | Primary 600, `#0046ff`          |
 | `--cm-surface-medium-0`       | Primary 200, `#d9e3ff`          |
 | `--cm-surface-medium-1`       | Primary 300, `#b0c6ff`          |
 | `--cm-surface-0`              | Grey 950, `#00002e`             |
+| `--cm-surface-0-add-to-calendar` | Grey 950, `#00002e`          |
+| `--cm-surface-0-text-media`   | Grey 950, `#00002e`             |
 | `--cm-surface-variant-1`      | `#e2dcda`                       |
 | `--cm-surface-variant-2`      | Grey 950, `#00002e`             |
 
-### Core default on-surface tokens
+The theme source also keeps `--cm-surface-low` (`#d9e3ff`) as an
+implementation token. It is not a general-purpose utility or a separately
+documented website colour swatch.
 
-| Token                       | Default value            |
-| --------------------------- | ------------------------ |
-| `--cm-on-surface`           | Primary 600, `#0046ff`   |
-| `--cm-on-surface-1`         | Secondary 400, `#ffbe5c` |
-| `--cm-on-surface-2`         | Primary 300, `#b0c6ff`   |
-| `--cm-on-surface-3`         | `#fff`                   |
-| `--cm-on-surface-highlight` | Secondary 75, `#ffebcc`  |
-| `--cm-on-surface-swap-0`    | `#fff`                   |
-| `--cm-on-surface-swap-1`    | Grey 950, `#00002e`      |
+### Documented default on-surface tokens
 
-### Core default border tokens
+| Token                              | Default value            |
+| ---------------------------------- | ------------------------ |
+| `--cm-on-surface`                  | Primary 600, `#0046ff`   |
+| `--cm-on-surface-add-to-calendar` | `#fff`                   |
+| `--cm-on-surface-text-media`      | `#fff`                   |
+| `--cm-on-surface-1`                | Secondary 400, `#ffbe5c` |
+| `--cm-on-surface-1-page-summary`   | Primary 600, `#0046ff`   |
+| `--cm-on-surface-2`                | Primary 300, `#b0c6ff`   |
+| `--cm-on-surface-3`                | `#fff`                   |
+| `--cm-on-surface-highlight`        | Secondary 75, `#ffebcc`  |
+| `--cm-on-surface-grey-low`         | Grey 300, `#b9b9c5`      |
+| `--cm-on-surface-swap-0`           | `#fff`                   |
+| `--cm-on-surface-swap-1`           | Grey 950, `#00002e`      |
+
+### Documented default border tokens
 
 | Token                | Default value          |
 | -------------------- | ---------------------- |
@@ -241,6 +262,10 @@ descendants.
 | `--cm-border-medium` | Primary 500, `#5987ff` |
 | `--cm-border`        | Primary 600, `#0046ff` |
 | `--cm-border-high`   | Primary 700, `#0035bf` |
+
+`--cm-border-active` is an additional theme token (`#0046ff`) used by
+interactive component styling such as the slider. It is not a separate
+border-colour utility.
 
 ## Available color modes
 
@@ -263,7 +288,7 @@ Apply one mode class to the region that should inherit it:
 - `ecl-color-mode--red-tomato`
 
 There is no `ecl-color-mode--default` or `ecl-color-mode--dark` class in the
-v5.0.1 stylesheet. Omit the class to use the default tokens.
+v5.3.1 stylesheet. Omit the class to use the default tokens.
 
 ### Mode summary
 
@@ -277,7 +302,7 @@ preview, not a list of every override.
 | `orange`        | `#ffb16a` | `#0a3f4d`         | `#8c4c12`  | `#00002e`         | `#ff8a20` |
 | `green`         | `#05c67b` | `#003d3d`         | `#03774a`  | `#00002e`         | `#05c67b` |
 | `purple`        | `#905fd9` | `#000083`         | `#66439a`  | `#fff`            | `#905fd9` |
-| `blue-navy`     | `#000069` | `#69d2c6`         | `#000069`  | `#fff`            | `#000069` |
+| `blue-navy`     | `#000069` | `#69d2c6`         | `#000069`  | `#fff`            | `#000083` |
 | `blue-electric` | `#03bbe6` | `#0a3f4d`         | `#02708a`  | `#00002e`         | `#03bbe6` |
 | `blue-ocean`    | `#69d2c6` | `#08323e`         | `#0e7065`  | `#00002e`         | `#69d2c6` |
 | `green-lemon`   | `#ddec8d` | `#313c5e`         | `#626d26`  | `#00002e`         | `#cbe250` |
@@ -288,12 +313,13 @@ preview, not a list of every override.
 | `purple-violet` | `#b1a1ff` | `#000069`         | `#6352b5`  | `#00002e`         | `#b1a1ff` |
 | `red-tomato`    | `#ff684a` | `#0a3f4d`         | `#b54a35`  | `#00002e`         | `#ff684a` |
 
-Every mode overrides 28 variables. All 15 override the 10 core surface tokens,
-the 7 core on-surface tokens, three core border tokens (`low`, `medium`, and
-the base border), and seven component/color-mode tokens. Blue, green-dark, and
-orange also override `--cm-border-high`; the other 12 instead override
-`--cm-on-surface-grey-low`. Tokens not overridden by a mode keep their default
-`:root` value.
+Every mode overrides the 16 documented surface tokens, the 10 shared
+on-surface tokens, and five border tokens (`low`, `medium`, `border`, `high`,
+and `active`). The 12 modes after blue, green-dark and orange also override
+`--cm-on-surface-grey-low`; those modes therefore emit 32 declarations, while
+the first three emit 31. Tokens not overridden by a mode keep their default
+`:root` value. The table uses computed hex values for aliases such as
+`var(--c-g-950)` and `var(--c-n-900)`.
 
 ## Applying and nesting modes
 
@@ -332,7 +358,7 @@ should change. Removing the class restores inherited/default values.
 
 ## Color-mode utility classes
 
-Only these adaptive tokens have general-purpose utilities in v5.0.1.
+Only these adaptive tokens have general-purpose utilities in v5.3.1.
 
 ### Background
 
@@ -375,42 +401,42 @@ automatically imply a utility class with the same suffix.
 
 ## Extended adaptive token inventory
 
-Besides the 21 core tokens above, `ecl-ec.css` defines these 80 tokens. Use
-their exact custom properties in custom CSS; do not invent utility classes.
+The website documents the core tokens above. The pinned EC theme also defines
+the following additional adaptive tokens for component and custom CSS use.
+Use their exact custom properties; do not invent utility classes. The removed
+`--cm-surface-color-mode-lowest` token is not part of this inventory.
 
-### Extended surface tokens
+### Additional surface tokens
 
-- `--cm-surface-0-add-to-calendar`
-- `--cm-surface-0-text-media`
+- `--cm-surface-low` (theme implementation token)
 - `--cm-surface-brand`
-- `--cm-surface-color-mode-high`
-- `--cm-surface-color-mode-low`
-- `--cm-surface-color-mode-lowest`
-- `--cm-surface-grey-highest-0`
-- `--cm-surface-grey-highest-1-transparent`
-- `--cm-surface-grey-highest-2-transparent`
-- `--cm-surface-grey-low-0`
-- `--cm-surface-grey-low-0-transparent`
-- `--cm-surface-grey-low-1`
-- `--cm-surface-grey-medium`
 - `--cm-surface-inverted`
-- `--cm-surface-neutral`
-- `--cm-surface-neutral-low`
-- `--cm-surface-neutral-lowest`
-- `--cm-surface-neutral-medium`
+- `--cm-surface-transparent-01`
+- `--cm-surface-transparent-70`
+- `--cm-surface-primary-lowest`
+- `--cm-surface-primary-low-0`
+- `--cm-surface-primary-low-1`
+- `--cm-surface-primary-medium`
 - `--cm-surface-primary`
 - `--cm-surface-primary-high`
 - `--cm-surface-primary-highest`
-- `--cm-surface-primary-low-0`
-- `--cm-surface-primary-low-1`
-- `--cm-surface-primary-lowest`
-- `--cm-surface-primary-medium`
-- `--cm-surface-secondary`
-- `--cm-surface-secondary-high`
-- `--cm-surface-secondary-highest`
 - `--cm-surface-secondary-low`
 - `--cm-surface-secondary-medium-0`
 - `--cm-surface-secondary-medium-1`
+- `--cm-surface-secondary`
+- `--cm-surface-secondary-high`
+- `--cm-surface-secondary-highest`
+- `--cm-surface-neutral-lowest`
+- `--cm-surface-neutral-low`
+- `--cm-surface-neutral-medium`
+- `--cm-surface-neutral`
+- `--cm-surface-grey-low-0-transparent`
+- `--cm-surface-grey-low-0`
+- `--cm-surface-grey-low-1`
+- `--cm-surface-grey-medium`
+- `--cm-surface-grey-highest-0`
+- `--cm-surface-grey-highest-1-transparent`
+- `--cm-surface-grey-highest-2-transparent`
 - `--cm-surface-status-error`
 - `--cm-surface-status-error-lowest`
 - `--cm-surface-status-info`
@@ -419,53 +445,52 @@ their exact custom properties in custom CSS; do not invent utility classes.
 - `--cm-surface-status-success-lowest`
 - `--cm-surface-status-warning`
 - `--cm-surface-status-warning-lowest`
-- `--cm-surface-transparent-01`
-- `--cm-surface-transparent-70`
 
-### Extended on-surface tokens
+### Additional on-surface tokens
 
-- `--cm-on-surface-add-to-calendar`
 - `--cm-on-surface-brand`
-- `--cm-on-surface-grey`
-- `--cm-on-surface-grey-low`
-- `--cm-on-surface-grey-low-transparent`
-- `--cm-on-surface-grey-medium`
 - `--cm-on-surface-inverted`
-- `--cm-on-surface-neutral-highest`
-- `--cm-on-surface-neutral-low`
-- `--cm-on-surface-neutral-medium`
 - `--cm-on-surface-primary`
 - `--cm-on-surface-primary-highest`
-- `--cm-on-surface-secondary-highest`
 - `--cm-on-surface-secondary-medium`
+- `--cm-on-surface-secondary-highest`
+- `--cm-on-surface-neutral-low`
+- `--cm-on-surface-neutral-medium`
+- `--cm-on-surface-neutral-highest`
+- `--cm-on-surface-grey-low-transparent`
+- `--cm-on-surface-grey-medium`
+- `--cm-on-surface-grey`
 - `--cm-on-surface-status-error`
 - `--cm-on-surface-status-info`
 - `--cm-on-surface-status-success`
 - `--cm-on-surface-status-warning`
-- `--cm-on-surface-text-media`
 
-### Extended border tokens
+### Additional border tokens
 
 - `--cm-border-brand`
-- `--cm-border-grey`
-- `--cm-border-grey-low`
-- `--cm-border-grey-low-300`
-- `--cm-border-grey-lowest`
-- `--cm-border-grey-medium`
-- `--cm-border-inverted`
+- `--cm-border-on-brand`
 - `--cm-border-inverted-low-transparent`
+- `--cm-border-inverted`
+- `--cm-border-primary-medium`
+- `--cm-border-primary`
+- `--cm-border-primary-highest`
+- `--cm-border-neutral-low`
 - `--cm-border-neutral`
 - `--cm-border-neutral-high`
 - `--cm-border-neutral-highest`
-- `--cm-border-neutral-low`
-- `--cm-border-on-brand`
-- `--cm-border-primary`
-- `--cm-border-primary-highest`
-- `--cm-border-primary-medium`
+- `--cm-border-grey-lowest`
+- `--cm-border-grey-low`
+- `--cm-border-grey-low-300`
+- `--cm-border-grey-medium`
+- `--cm-border-grey`
 - `--cm-border-status-error`
 - `--cm-border-status-info`
 - `--cm-border-status-success`
 - `--cm-border-status-warning`
+
+The site-header source references `--cm-border-neutral-lowest`, but the pinned
+EC theme does not define that custom property and the official colour page does
+not list it. Do not treat that unresolved reference as a public colour token.
 
 Example using extended tokens directly:
 
