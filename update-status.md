@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 91 (69 identical to target, 20 different, 2 absent/retired upstream) |
+| Existing Twig files | 91 (70 identical to target, 19 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 2: file-upload-status, layout-wrapper |
-| Connected content checks | S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **23 files** — 18 asset/font files, GUIDE-start and the four S007 table/news-ticker files; GUIDE-assets remains Updated |
+| Connected content checks | S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **25 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files and the two S008 accordion files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 5 |
-| Needs update | 30 |
-| Review | 128 |
+| Needs update | 29 |
+| Review | 127 |
 | Updated | 10 |
-| Verified work rows | 55 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows) |
+| Verified work rows | 57 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows) |
 
 ## Completed setup milestones
 
@@ -197,7 +197,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 
 | ID | Local item / lookup | Target reference | Finding / next action | Status | Verified version / date / evidence |
 | --- | --- | --- | --- | --- | --- |
-| HTML-accordion | [components/accordion.html](components/accordion.html) | `C/accordion/`; `D/components/accordion/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-accordion | [components/accordion.html](components/accordion.html) | `C/accordion/`; `D/components/accordion/` | Updated to v5.3.1 native details/summary coverage: four-item default with third item open, named exclusive group, configurable sidebar media query, single indicator, structured content, extension hooks and EC color modes. | Verified | v5.3.1 / 2026-09-25 / S008; tagged README/demo/data/sidebar/story/tests/snapshots/docs/changelog, semantic/static checks, live MCP/disk match and Chrome initialization/toggle/sidebar smoke; WebTools icon rendering remains an external limitation |
 | HTML-add-to-calendar | [components/add-to-calendar.html](components/add-to-calendar.html) | `C/add-to-calendar/`; `D/components/add-to-calendar/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-animated-numbers | [components/animated-numbers.html](components/animated-numbers.html) | `C/animated-numbers/`; `D/components/animated-numbers/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-banner | [components/banner.html](components/banner.html) | `C/banner/`; `D/components/banner/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -275,7 +275,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 
 | ID | Local item / lookup | Target reference | Finding / next action | Status | Verified version / date / evidence |
 | --- | --- | --- | --- | --- | --- |
-| TWIG-accordion | [components/accordion.html.twig](components/accordion.html.twig) | `C/accordion/accordion.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-accordion | [components/accordion.html.twig](components/accordion.html.twig) | `C/accordion/accordion.html.twig` | Exact v5.3.1 source; adds the `open` item parameter and configurable sidebar media-query attribute while preserving the icon fallback, color modes, names and extension attributes. | Verified | v5.3.1 / 2026-09-25 / S008; exact tagged comparison, live MCP template match and browser runtime smoke |
 | TWIG-add-to-calendar | [components/add-to-calendar.html.twig](components/add-to-calendar.html.twig) | `C/add-to-calendar/add-to-calendar.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-animated-numbers | [components/animated-numbers.html.twig](components/animated-numbers.html.twig) | `C/animated-numbers/animated-numbers.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-banner | [components/banner.html.twig](components/banner.html.twig) | `C/banner/banner.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,22 +437,23 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 7: accordion family and required shared dependencies.**
+**Batch 8: description-list family and required shared dependencies.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
-link and text-media/video families, and S007 delivered table/news-ticker and
-their shared runtime hooks. Next, take `HTML-accordion` and `TWIG-accordion`,
-including any required nested helpers and behavior. Keep standalone mega-menu,
-Menu and page-header rows in Review unless the rendered-example audit is the
-priority. Keep the existing component IDs and use the tagged v5.3.1 source; do
-not rebuild the assets or repeat the full inventory.
+link and text-media/video families, S007 delivered table/news-ticker and their
+shared runtime hooks, and S008 delivered the accordion family. Next, take
+`HTML-description-list` and `TWIG-description-list`, including any required
+list helpers and behavior. Keep standalone mega-menu, Menu and page-header rows
+in Review unless the rendered-example audit is the priority. Keep the existing
+component IDs and use the tagged v5.3.1 source; do not rebuild the assets or
+repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 6 (adjust for dependencies and user focus):
+Suggested following order after Batch 7 (adjust for dependencies and user focus):
 
-1. Remaining high-drift families: accordion, description-list, fact-figures,
-   forms and page-summary. Include required shared Twig dependencies.
+1. Remaining high-drift families: description-list, fact-figures, forms and
+   page-summary. Include required shared Twig dependencies.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -890,3 +891,56 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   `TWIG-accordion`, including required nested helpers. GUIDE-assets/GUIDE-icons
   WebTools rendering remains pending because the external loader is still
   blocked; no commit or push was made.
+
+### S008 — 2026-09-25 — Batch 7: accordion family
+
+- **Scope:** `HTML-accordion` and `TWIG-accordion`. The example retains useful
+  EC-specific coverage while adopting the tagged native details/summary
+  contract: four-item default data with the third item open, a named exclusive
+  group, a configurable collapsible sidebar, a single non-plus indicator,
+  structured content, extension hooks and the non-default EC color modes.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged [accordion source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/components/accordion),
+  the tagged [EC accordion documentation source](https://github.com/ec-europa/europa-component-library/tree/v5.3.1/src/website/src/pages/ec/components/accordion)
+  and [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The live homepage still showed v5.3.1; no newer release was observed and the
+  pinned commit remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. Relevant
+  changelog changes between the prior baseline and target include the native
+  accordion markup, sidebar variant, configurable sidebar media query, default
+  open items, EC open-item background and sidebar background reset.
+- **Twig changes:** aligned `components/accordion.html.twig` byte-for-byte
+  with the pinned v5.3.1 source. The template now documents and emits the
+  `open` item parameter and, for sidebar examples, the
+  `data-ecl-accordion-sidebar-media-query` root attribute while preserving
+  icon fallback, color modes, exclusive `name`, custom classes and attributes.
+  No nested accordion helper is required; the icon template remains a separate
+  shared component contract.
+- **HTML changes:** updated the default example to the tagged four-item EC
+  demo shape with the third item initially open, corrected the stale v5.0.1
+  wording, and added the v5.3.1 configurable sidebar hook. Existing exclusive,
+  single-icon, structured-content, extension-hook and color-mode examples were
+  retained and checked for valid nesting, unique IDs and current initialization
+  hooks.
+- **MCP checks:** a fresh local stdio client reported all six tools, 18 guides
+  and 71 components. The accordion component response matched disk; its
+  `component_template` response returned exactly `accordion.html.twig` and
+  matched disk; the accordion remained discoverable from `components_list`; the
+  starter response also matched disk.
+- **Static checks:** the exact tagged Twig comparison, focused accordion
+  structure/hook/duplicate-ID assertions, `node --check index.js`,
+  `git diff --check` and `npm pack --dry-run` passed. `npm test -- --runInBand`
+  still reports no tests found, and `npm run lint` still has no ESLint
+  configuration. No Laravel code was changed.
+- **Browser checks:** a temporary page loaded the pinned local EC CSS/JS and
+  initialized all 21 accordion roots without console errors or warnings. The
+  default third item was open initially; ordinary items toggled independently;
+  the named group closed its first item when the second opened; and the
+  sidebar's `(min-width: 768px)` hook kept its filter panel open at desktop
+  width. The accessibility tree exposed the filter label/input and action
+  buttons. WebTools icon rendering remains blocked by the previously recorded
+  external loader limitation.
+- **Handoff:** both S008 accordion rows and affected MCP checks are Verified.
+  The next recommended batch is `HTML-description-list` and
+  `TWIG-description-list`, including required list helpers. GUIDE-assets/
+  GUIDE-icons WebTools rendering remains pending; no commit or push was made.

@@ -1,11 +1,11 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default accordion</h3>
 <p class="ecl-u-type-paragraph ecl-u-mb-m">
   The v5 accordion uses native <code>details</code> and
-  <code>summary</code> elements. The first item below also demonstrates the
-  native initially open state.
+  <code>summary</code> elements. The third item below also demonstrates the
+  v5.3.1 <code>open</code> item parameter.
 </p>
 <div class="ecl-accordion ecl-u-mb-2xl" data-ecl-auto-init="Accordion">
-  <details class="ecl-accordion__item is-first" open>
+  <details class="ecl-accordion__item is-first">
     <summary class="ecl-accordion__toggle">
       Protecting citizens and freedoms
       <span
@@ -39,7 +39,7 @@
       and investing in skills, education and digital transformation.
     </div>
   </details>
-  <details class="ecl-accordion__item is-last">
+  <details class="ecl-accordion__item" open>
     <summary class="ecl-accordion__toggle">
       Building a climate-neutral, green, fair and social Europe
       <span
@@ -52,8 +52,28 @@
       ></span>
     </summary>
     <div class="ecl-accordion__content">
-      Investing in green initiatives, a circular economy, renewable energy and
-      the European Pillar of Social Rights.
+      Investing in green initiatives that improve air and water quality,
+      promote sustainable agriculture and preserve environmental systems and
+      biodiversity. Creating an effective circular economy and a well-functioning
+      EU energy market that provides sustainable, secure and affordable energy.
+    </div>
+  </details>
+  <details class="ecl-accordion__item is-last">
+    <summary class="ecl-accordion__toggle">
+      Promoting European interests and values on the global stage
+      <span
+        aria-hidden="true"
+        class="wt-icon--plus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--plus"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="wt-icon--minus ecl-icon ecl-icon--s ecl-accordion__toggle-icon ecl-icon--minus"
+      ></span>
+    </summary>
+    <div class="ecl-accordion__content">
+      Building a robust foreign policy based on an ambitious neighbourhood
+      policy and a comprehensive partnership with Africa. Promoting global
+      peace, stability, democracy and human rights.
     </div>
   </details>
 </div>
@@ -110,11 +130,13 @@
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Collapsible sidebar accordion</h3>
 <p class="ecl-u-type-paragraph ecl-u-mb-m">
   The sidebar modifier and <code>data-desktop-open</code> keep the filter panel
-  open from the v5.0.1 desktop breakpoint and collapsible below it.
+  open at the configured desktop breakpoint and collapsible below it. The
+  example uses the v5.3.1 custom media-query hook.
 </p>
 <div
   class="ecl-accordion ecl-accordion--sidebar ecl-u-mb-2xl"
   data-ecl-auto-init="Accordion"
+  data-ecl-accordion-sidebar-media-query="(min-width: 768px)"
 >
   <details class="ecl-accordion__item is-first" data-desktop-open>
     <summary class="ecl-accordion__toggle">
@@ -288,8 +310,8 @@
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">EC accordion color modes</h3>
 <p class="ecl-u-type-paragraph ecl-u-mb-m">
-  The default example above has no color-mode class. These examples cover every
-  non-default EC color mode available in v5.0.1.
+  The default example above has no color-mode class. These examples cover the
+  non-default EC color modes used by the v5.3.1 theme.
 </p>
 
 <h4 class="ecl-u-type-heading-4 ecl-u-mb-s">Blue</h4>
