@@ -211,6 +211,7 @@
     id="table-sortable"
     data-ecl-table
     data-ecl-auto-init="Table"
+    data-ecl-table-sort
     data-ecl-table-sort-label-asc="Sort ascending"
     data-ecl-table-sort-label-desc="Sort descending"
     data-ecl-table-sort-label-default="Sort default"
@@ -298,6 +299,149 @@
           headers="table-sortable-header-3"
         >
           Prague (Czech Republic)
+        </td>
+      </tr>
+      <tr class="ecl-table__row">
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Job title"
+          headers="table-sortable-header-1"
+        >
+          Administators in Competition Law
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Organization"
+          data-ecl-table-header-group="Extra information"
+          headers="table-sortable-header-2 table-sortable-header-4"
+        >
+          European Commission
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Type of contract"
+          data-ecl-table-header-group="Extra information"
+          headers="table-sortable-header-2 table-sortable-header-5"
+        >
+          Permanent official
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Location"
+          headers="table-sortable-header-3"
+        >
+          Brussels (Belgium)
+        </td>
+      </tr>
+      <tr class="ecl-table__row">
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Job title"
+          headers="table-sortable-header-1"
+        >
+          Policy Officer - Clean Energy For All Europeans
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Organization"
+          data-ecl-table-header-group="Extra information"
+          headers="table-sortable-header-2 table-sortable-header-4"
+        >
+          EU-LISA
+        </td>
+        <td
+          class="ecl-table__cell ecl-table__cell--group"
+          data-ecl-table-header="Type of contract"
+          data-ecl-table-header-group="Extra information"
+          headers="table-sortable-header-2 table-sortable-header-5"
+        >
+          Seconded National Expert (SNE)
+        </td>
+        <td
+          class="ecl-table__cell"
+          data-ecl-table-header="Location"
+          headers="table-sortable-header-3"
+        >
+          Vigo (Spain)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Filter table -->
+<div class="ecl-table-responsive">
+  <table
+    class="ecl-table"
+    id="table-filter"
+    data-ecl-table
+    data-ecl-auto-init="Table"
+    data-ecl-table-filter
+    data-ecl-table-filter-label="Filter"
+  >
+    <caption class="ecl-table__caption">
+      Filterable jobs table
+    </caption>
+    <thead class="ecl-table__head">
+      <tr class="ecl-table__row">
+        <th
+          id="table-filter-header-1"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-filter-toggle
+        >
+          Job title
+        </th>
+        <th
+          id="table-filter-header-2"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-filter-toggle
+        >
+          Organization
+        </th>
+        <th
+          id="table-filter-header-3"
+          scope="col"
+          class="ecl-table__header"
+          data-ecl-table-filter-toggle
+        >
+          Location
+        </th>
+      </tr>
+    </thead>
+    <tbody class="ecl-table__body">
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Administators in Competition Law
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Organization">
+          European Commission
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Brussels (Belgium)
+        </td>
+      </tr>
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Administators in Economic and Monetary Union Law
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Organization">
+          European Commission
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Brussels (Belgium)
+        </td>
+      </tr>
+      <tr class="ecl-table__row">
+        <td class="ecl-table__cell" data-ecl-table-header="Job title">
+          Policy Officer - Clean Energy For All Europeans
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Organization">
+          EU-LISA
+        </td>
+        <td class="ecl-table__cell" data-ecl-table-header="Location">
+          Vigo (Spain)
         </td>
       </tr>
     </tbody>

@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 91 (67 identical to target, 22 different, 2 absent/retired upstream) |
+| Existing Twig files | 91 (69 identical to target, 20 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 2: file-upload-status, layout-wrapper |
-| Connected content checks | S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **19 files** — 18 asset/font files and GUIDE-start; GUIDE-assets remains Updated |
+| Connected content checks | S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **23 files** — 18 asset/font files, GUIDE-start and the four S007 table/news-ticker files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 5 |
-| Needs update | 32 |
-| Review | 130 |
+| Needs update | 30 |
+| Review | 128 |
 | Updated | 10 |
-| Verified work rows | 51 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows) |
+| Verified work rows | 55 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows) |
 
 ## Completed setup milestones
 
@@ -101,7 +101,7 @@ identity or a successful MCP read alone is not complete conformance verification
    newly inserted nodes. These differences are documented and browser-tested.
 3. **Review changed families with their dependencies.** Notable tagged release
    changes include file redesign, carousel/slider behavior, story card and
-   highlighted search, table filtering, gallery media, navigation, colour tokens,
+   highlighted search, table filtering, the news-ticker redesign, gallery media, navigation, colour tokens,
    and accessibility. Consult the pinned changelog for each batch. v5.3.1 itself
    fixes layout-wrapper spacing and the header's missing-search-form handling.
 4. **Template discovery is now explicit and EC-scoped (S003).** `components_list`
@@ -144,9 +144,9 @@ All six tools are registered in `index.js` and exposed over stdio. There are no 
 | --- | --- | --- | --- | --- | --- |
 | TOOL-guide | `guide({topic})` | `index.js`; `guides/*.md` | 18/18 live responses match disk after `__DIR__` substitution. Recheck after guide updates. | Review | — |
 | TOOL-guide-list | `guide_list({})` | `index.js` | 18 topics match local filenames; snippets are the first 120 characters. Recheck new topics and version labels. | Review | — |
-| TOOL-components-list | `components_list({})` | `index.js` | 71 HTML IDs match local filenames. Template calls are advertised for exact active EC families; carousel and story-card include the shared slider pager, file/gallery return their scoped families, and tooltip is not advertised because no standalone template exists. | Verified | v5.3.1 / 2026-09-25 / S005; live list and file/gallery family checks |
-| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 71/71 live responses match disk, including the S006 picture, link, video, media-container and text-media examples plus the previously delivered high-drift families. | Verified | v5.3.1 / 2026-09-25 / S006; fresh stdio component calls and disk comparison |
-| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping now includes picture, link, video, media-container and text-media plus file, gallery/gallery-item/gallery-overlay, highlighted-search, story-card/story-card-card/slider-pager and carousel/slider-pager; tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S006; live five-family template calls and disk comparison |
+| TOOL-components-list | `components_list({})` | `index.js` | 71 HTML IDs match local filenames. Template calls are advertised for exact active EC families; carousel and story-card include the shared slider pager, file/gallery return their scoped families, and tooltip is not advertised because no standalone template exists. | Verified | v5.3.1 / 2026-09-25 / S007; live list and current-family checks |
+| TOOL-component | `component({id})` | `index.js`; `components/*.html` | 71/71 live responses match disk, including the S007 table and news-ticker examples, the S006 media families and the previously delivered high-drift families. | Verified | v5.3.1 / 2026-09-25 / S007; fresh stdio component calls and disk comparison |
+| TOOL-component-template | `component_template({id})` | `index.js`; `components/*.html.twig` | Exact EC family mapping returns the table and news-ticker templates plus the previously delivered picture, link, video, media-container, text-media, file, gallery, highlighted-search, story-card/story-card-card/slider-pager and carousel/slider-pager families; tooltip correctly reports no templates. | Verified | v5.3.1 / 2026-09-25 / S007; live table/news-ticker template calls and disk comparison |
 | TOOL-starter-template | `starter_template({})` | `index.js`; `starter-template.html` | Connected response matches disk; page setup, Search and Menu runtime checks are recorded under PAGE-starter. | Verified | v5.3.1 / 2026-09-25 / S003; live response and browser smoke |
 
 ## Existing guides — 18 topics
@@ -232,7 +232,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-menu | [components/menu.html](components/menu.html) | `C/menu/`; `D/components/navigation/menu/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-modal | [components/modal.html](components/modal.html) | `C/modal/`; `D/components/modal/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-navigation-list | [components/navigation-list.html](components/navigation-list.html) | `C/navigation-list/`; `D/components/navigation/navigation-list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-news-ticker | [components/news-ticker.html](components/news-ticker.html) | `C/news-ticker/`; `D/components/news-ticker/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-news-ticker | [components/news-ticker.html](components/news-ticker.html) | `C/news-ticker/`; `D/components/news-ticker/` | Aligned default and single-item examples with the v5.3.1 redesign: slide icon/content wrappers, branded links, Phosphor icons, default newspaper fallback, LTR counter and safe static color-mode hooks. | Verified | v5.3.1 / 2026-09-25 / S007; tagged README/demo/story/snapshot/docs, parser checks, live MCP/disk match and browser next-control smoke |
 | HTML-notification | [components/notification.html](components/notification.html) | `C/notification/`; `D/components/notification/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-ordered-list | [components/ordered-list.html](components/ordered-list.html) | `C/ordered-list/`; `D/components/list/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-page-header | [components/page-header.html](components/page-header.html) | `C/page-header/`; `D/components/site-wide/page-header/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
@@ -256,7 +256,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-spinner | [components/spinner.html](components/spinner.html) | `C/spinner/`; `D/components/loading-indicator/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-splash-page | [components/splash-page.html](components/splash-page.html) | `C/splash-page/`; `D/components/splash-page/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
 | HTML-spotlight | [components/spotlight.html](components/spotlight.html) | `C/spotlight/`; `D/components/spotlight/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-table | [components/table.html](components/table.html) | `C/table/`; `D/components/table/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-table | [components/table.html](components/table.html) | `C/table/`; `D/components/table/` | Added the v5.3.1 sort marker and a filterable EC table with labelled column fields, multiple rows, unique header relationships and mobile header data; existing simple, zebra, multi-header and extension coverage remains. | Verified | v5.3.1 / 2026-09-25 / S007; tagged README/demo/story/snapshot/docs, parser checks, live MCP/disk match and browser filter/sort smoke |
 | HTML-tabs | [components/tabs.html](components/tabs.html) | `C/tabs/`; `D/components/navigation/tabs/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-tag | [components/tag.html](components/tag.html) | `C/tag/`; `D/components/tag/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-text-area | [components/text-area.html](components/text-area.html) | `C/text-area/`; `D/components/forms/text-area/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -321,7 +321,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-modal | [components/modal.html.twig](components/modal.html.twig) | `C/modal/modal.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-navigation-list-item | [components/navigation-list-item.html.twig](components/navigation-list-item.html.twig) | `C/navigation-list/navigation-list-item.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-navigation-list | [components/navigation-list.html.twig](components/navigation-list.html.twig) | `C/navigation-list/navigation-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-news-ticker | [components/news-ticker.html.twig](components/news-ticker.html.twig) | `C/news-ticker/news-ticker.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-news-ticker | [components/news-ticker.html.twig](components/news-ticker.html.twig) | `C/news-ticker/news-ticker.html.twig` | Exact v5.3.1 source: adds color mode, Phosphor/default newspaper media, slide icon/content wrappers, branded links, deprecated image compatibility and LTR counter while preserving the required initialization hooks. | Verified | v5.3.1 / 2026-09-25 / S007; exact tagged source, MCP template match and browser initialization/control smoke |
 | TWIG-notification | [components/notification.html.twig](components/notification.html.twig) | `C/notification/notification.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-ordered-list | [components/ordered-list.html.twig](components/ordered-list.html.twig) | `C/ordered-list/ordered-list.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-page-header-expandable | [components/page-header-expandable.html.twig](components/page-header-expandable.html.twig) | `C/page-header/page-header-expandable.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -351,7 +351,7 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-spinner | [components/spinner.html.twig](components/spinner.html.twig) | `C/spinner/spinner.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-splash-page | [components/splash-page.html.twig](components/splash-page.html.twig) | `C/splash-page/splash-page.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
 | TWIG-spotlight | [components/spotlight.html.twig](components/spotlight.html.twig) | `C/spotlight/spotlight.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-table | [components/table.html.twig](components/table.html.twig) | `C/table/table.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-table | [components/table.html.twig](components/table.html.twig) | `C/table/table.html.twig` | Exact v5.3.1 source: adds filter and filter-label parameters, independent sort/filter initialization attributes and header filter hooks while preserving multi-header column mapping. | Verified | v5.3.1 / 2026-09-25 / S007; exact tagged source, MCP template match and browser filter/sort smoke |
 | TWIG-tabs | [components/tabs.html.twig](components/tabs.html.twig) | `C/tabs/tabs.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-tag-set | [components/tag-set.html.twig](components/tag-set.html.twig) | `C/tag/tag-set.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-tag | [components/tag.html.twig](components/tag.html.twig) | `C/tag/tag.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,22 +437,22 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 6: table/news-ticker and required shared dependencies.**
+**Batch 7: accordion family and required shared dependencies.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
-file/gallery and the responsive follow-up, and S006 delivered the media,
-picture, link and text-media/video families. Next, take `HTML-table`,
-`HTML-news-ticker`, `TWIG-table` and `TWIG-news-ticker`, including any required
-helpers. Keep standalone mega-menu/Menu/page-header rows in Review unless the
-rendered-example audit is the priority. Keep the existing component IDs and
-use the tagged v5.3.1 source; do not rebuild the assets or repeat the full
-inventory.
+file/gallery and the responsive follow-up, S006 delivered the media, picture,
+link and text-media/video families, and S007 delivered table/news-ticker and
+their shared runtime hooks. Next, take `HTML-accordion` and `TWIG-accordion`,
+including any required nested helpers and behavior. Keep standalone mega-menu,
+Menu and page-header rows in Review unless the rendered-example audit is the
+priority. Keep the existing component IDs and use the tagged v5.3.1 source; do
+not rebuild the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 3 (adjust for dependencies and user focus):
+Suggested following order after Batch 6 (adjust for dependencies and user focus):
 
-1. New/high-drift families: highlighted-search, story-card/slider, carousel, file,
-   gallery, table and news-ticker. Include required shared Twig dependencies.
+1. Remaining high-drift families: accordion, description-list, fact-figures,
+   forms and page-summary. Include required shared Twig dependencies.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -839,3 +839,54 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   Verified. The next recommended batch is `HTML-table`, `HTML-news-ticker`,
   `TWIG-table` and `TWIG-news-ticker`, including required helpers. No commit or
   push was made.
+
+### S007 — 2026-09-25 — Batch 6: table and news-ticker families
+
+- **Scope:** `HTML-table`, `HTML-news-ticker`, `TWIG-table` and
+  `TWIG-news-ticker`. The table work includes the new filterable example and
+  the existing simple, zebra, multi-header and extension cases. The news-ticker
+  work includes valid multi-slide, single-item, empty-output and EC color-mode
+  coverage.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged [source tree](https://github.com/ec-europa/europa-component-library/tree/v5.3.1)
+  and [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The live homepage still showed v5.3.1; no newer release was observed and the
+  pinned commit remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+  Reviewed the tagged table/news-ticker README, demo data, stories, snapshots,
+  JS hooks and EC usage/accessibility/API/code documentation. The relevant
+  changelog entries are table filtering and the news-ticker redesign in 5.3.0;
+  v5.3.1 contains no further change to either family.
+- **Twig changes:** replaced both differing local files with the exact tagged
+  v5.3.1 Twig. Table now exposes filter parameters and hooks in addition to
+  sorting. News ticker now supports color mode, Phosphor/default newspaper
+  media, slide icon/content wrappers, branded links, deprecated image input
+  compatibility and an LTR counter.
+- **HTML changes:** added the table sort marker and a multi-row filter example
+  with labelled column fields created by the runtime; existing table variants
+  and extension hooks remain. Reworked the ticker examples to the new slide
+  wrappers and Phosphor icon contract, retained custom labels and EC color-mode
+  classes, and removed auto-init from empty static swatches so the browser does
+  not initialize an invalid zero-slide ticker.
+- **MCP checks:** a fresh local stdio client reported all six tools, 18 guides
+  and 71 components. `components_list`, both affected `component` calls and
+  both affected `component_template` calls matched the files on disk; the
+  starter response also matched disk.
+- **Static checks:** `node --check index.js`, `git diff --check`, the focused
+  hook/duplicate-ID assertions and `npm pack --dry-run` passed. The package
+  declares Jest but has no test files, so `npm test -- --runInBand` remains a
+  no-tests result; ESLint has no project configuration, so `npm run lint`
+  remains a configuration failure. No Laravel code was changed.
+- **Browser checks:** a temporary page loaded the pinned local EC CSS/JS and
+  initialized the valid table and ticker roots. Table filtering narrowed the
+  Organization column to the EU-LISA row; the sortable header toggled its
+  direction label; and the ticker next control advanced the visible counter.
+  The accessible tree showed generated filter labels/inputs, initialized
+  hooks, branded links, valid slide wrappers and no duplicate IDs. Empty and
+  static color-mode roots were deliberately not auto-initialized because the
+  tagged NewsTicker JS expects at least one slide.
+- **Handoff:** all four S007 HTML/Twig rows and affected MCP checks are
+  Verified. The next recommended batch is `HTML-accordion` and
+  `TWIG-accordion`, including required nested helpers. GUIDE-assets/GUIDE-icons
+  WebTools rendering remains pending because the external loader is still
+  blocked; no commit or push was made.
