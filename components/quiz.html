@@ -259,31 +259,45 @@
       </li>
     </ol>
   </div>
-  <div class="ecl-quiz__pager">
-    <button class="ecl-quiz__prev">
-      <span
-        class="wt-icon--corner-arrow wt-icon--monochrome ecl-icon ecl-icon--xs ecl-icon--rotate-270 quiz-demo ecl-icon--corner-arrow"
-        aria-hidden="true"
-        data-test="quiz-poll"
-        data-track
-      ></span>
-      <span class="ecl-quiz__prev-label">Previous</span>
+  <div class="ecl-slider-pager ecl-quiz__pager">
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--s ecl-button--neutral ecl-slider-pager__prev ecl-quiz__prev ecl-button--icon-only"
+      data-ecl-quiz-prev
+      type="button"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Previous</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon-phosphor--caret-left wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
+          data-ecl-icon
+        ></span>
+      </span>
     </button>
-    <div class="ecl-quiz__dots"></div>
-    <button class="ecl-quiz__next">
-      <span class="ecl-quiz__next-label">Next</span>
-      <span
-        class="wt-icon--corner-arrow wt-icon--monochrome ecl-icon ecl-icon--xs ecl-icon--rotate-90 quiz-demo ecl-icon--corner-arrow"
-        aria-hidden="true"
-        data-test="quiz-poll"
-        data-track
-      ></span>
+    <div class="ecl-slider-pager__dots ecl-quiz__dots"></div>
+    <button
+      class="ecl-button ecl-button--tertiary ecl-button--s ecl-button--neutral ecl-slider-pager__next ecl-quiz__next ecl-button--icon-only"
+      data-ecl-quiz-next
+      type="button"
+    >
+      <span class="ecl-button__container">
+        <span class="ecl-button__label" data-ecl-label="true">Next</span>
+        <span
+          aria-hidden="true"
+          class="wt-icon-phosphor--caret-right wt-icon--monochrome ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-right"
+          data-ecl-icon
+        ></span>
+      </span>
     </button>
-    <script type="text/template" id="ecl-quiz__dot-template">
-      <button class="ecl-quiz__dot"></button>
+    <script
+      type="text/template"
+      data-ecl-slider-dot-template
+      data-ecl-quiz-dot-template
+    >
+      <button class="ecl-slider-pager__dot ecl-quiz__dot"></button>
     </script>
   </div>
-  <div class="ecl-quiz__counter"></div>
+  <div class="ecl-quiz__counter" dir="ltr"></div>
 </section>
 
 <h3 class="ecl-u-type-heading-3">Reveal card shape</h3>

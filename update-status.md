@@ -63,21 +63,21 @@ identity or a successful MCP read alone is not complete conformance verification
 | Registered MCP tools | 6 |
 | Existing guides | 18 |
 | Existing HTML component IDs | 71 |
-| Existing Twig files | 92 (77 identical to target, 13 different, 2 absent/retired upstream) |
+| Existing Twig files | 92 (82 identical to target, 8 different, 2 absent/retired upstream) |
 | Existing starter pages | 1 |
 | Existing asset/font files | 15 assets + 3 font files |
 | Newly identified public components | 2 delivered in S004: highlighted-search, story-card |
 | Missing Twig references | 1: layout-wrapper |
-| Connected content checks | S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
-| Connected list checks | S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
-| Content verified for v5.3.1 | **56 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files and the five S013 range/rating/status Twig/HTML files; GUIDE-assets remains Updated |
+| Connected content checks | S014: quiz, slogan-ticker, social-media-follow and splash-page component responses plus all five Twig template key/value matches disk; S013: range/rating-field component responses and range/rating-field/file-upload-status template key/value matches disk; S012: seven remaining form component responses and nine Twig template key/value matches disk; S011: form-group, search-form and page-summary component responses and all three template key/value matches disk; S010: fact-figures component response and template key match disk; S008: accordion component response and template key match disk; S007: table/news-ticker component responses and both template keys match disk; S006: picture/link/video/media-container/text-media component responses and all five template keys match disk; S005: file/gallery component responses and all returned template keys match disk; S004: new component responses and all returned template keys match disk; S003: affected component/template calls and starter response match disk; tooltip has no advertised template; S002: 25/25 sampled content calls passed |
+| Connected list checks | S014: 71 component IDs, 18 guide topics and quiz, slogan-ticker, social-media-follow and splash-page family discoverability calls passed; S013: 71 component IDs, 18 guide topics and range/rating-field discoverability plus the file-upload family status-template call passed; S012: 71 component IDs, 18 guide topics and seven form-family discoverability/template calls passed; S011: 71 component IDs, 18 guide topics and form-group/search-form/page-summary discoverability/family calls passed; S010: 71 component IDs, 18 guide topics and fact-figures discoverability/family calls passed; S008: 71 component IDs, 18 guide topics and accordion discoverability/family calls passed; S007: 71 component IDs, 18 guide topics and current family calls passed; S006: 71 component IDs, 18 guide topics and current family calls passed; S005: 71 component IDs and file/gallery family calls passed; S004: 71 component IDs and affected family calls passed; S003: 3/3 affected list/family checks passed |
+| Content verified for v5.3.1 | **65 files** — 18 asset/font files, GUIDE-start, the four S007 table/news-ticker files, the two S008 accordion files, the two S009 description-list files, the two S010 fact-figures files, the six S011 forms/page-summary files, the 16 S012 remaining forms files, the five S013 range/rating/status Twig/HTML files and the nine S014 quiz/ticker/social/splash Twig/HTML files; GUIDE-assets remains Updated |
 | Tracked work rows | 235 (excluding setup milestones) |
 | Excluded | 7 |
 | Missing | 4 |
-| Needs update | 23 |
-| Review | 103 |
+| Needs update | 18 |
+| Review | 99 |
 | Updated | 10 |
-| Verified work rows | 88 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows) |
+| Verified work rows | 97 (33 prior verified rows + 8 S005 source/delivery rows + 10 S006 media/link rows + 4 S007 table/news-ticker rows + 2 S008 accordion rows + 2 S009 description-list rows + 2 S010 fact-figures rows + 6 S011 forms/page-summary rows + 16 S012 remaining forms rows + 5 S013 range/rating/status rows + 9 S014 quiz/ticker/social/splash rows) |
 
 ## Completed setup milestones
 
@@ -241,7 +241,7 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-pagination | [components/pagination.html](components/pagination.html) | `C/pagination/`; `D/components/navigation/pagination/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-picture | [components/picture.html](components/picture.html) | `C/picture/`; `D/components/media/media-container/` | Added focal-point/debug/lazy/zoom coverage, replaced untracked local placeholder source URLs with official EC demo media, and preserved source alias/empty-input edge cases. | Verified | v5.3.1 / 2026-09-25 / S006; tagged Picture source/tests/snapshot, parser checks, fresh Picture browser smoke with no missing local requests |
 | HTML-popover | [components/popover.html](components/popover.html) | `C/popover/`; `D/components/popover/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-quiz | [components/quiz.html](components/quiz.html) | `C/quiz/`; `D/components/quiz/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-quiz | [components/quiz.html](components/quiz.html) | `C/quiz/`; `D/components/quiz/` | Aligned the quiz examples with the v5.3.1 slider-pager contract: `data-ecl-quiz-prev/next`, shared slider-pager dot template, LTR counter, poll/reveal/full-width/empty branches and all EC color-mode roots. | Verified | v5.3.1 / 2026-09-25 / S014; tagged README/demo/data-poll/quiz snapshot sources, unique-ID/hook checks, live MCP/disk match and narrow Chrome pager/reveal smoke |
 | HTML-radio | [components/radio.html](components/radio.html) | `C/radio/`; `D/components/forms/radio/` | Existing examples already cover radio group/button, disabled/helper/invalid, binary, minimal/empty output and all EC color modes; no HTML mutation was required. | Verified | v5.3.1 / 2026-09-25 / S012; tagged README/demo/story/tests/snapshots/changelog, static ID/label/state checks, live MCP/disk match and browser accessibility/DOM smoke |
 | HTML-range | [components/range.html](components/range.html) | `C/range/`; `D/components/forms/range/` | Aligned range examples with the v5.3.1 input/container/value-hook contract, including required, disabled, invalid, widths, extensions, empty output and real instances for all EC color modes. | Verified | v5.3.1 / 2026-09-25 / S013; tagged README/demo/story/tests/snapshots/changelog, static ID/ARIA/hook checks, live MCP/disk match and browser range smoke |
 | HTML-rating-field | [components/rating-field.html](components/rating-field.html) | `C/rating-field/`; `D/components/forms/rating-field/` | Aligned rating examples with the v5.3.1 accessible label-before-input order, ascending values, checked/disabled/minimal/empty branches and all EC color modes. | Verified | v5.3.1 / 2026-09-25 / S013; tagged README/demo/story/tests/snapshots/changelog, static label/order/ID checks, live MCP/disk match and browser accessibility smoke |
@@ -251,10 +251,10 @@ One row per discoverable HTML ID. Source directories contain Twig, demo data, st
 | HTML-site-footer | [components/site-footer.html](components/site-footer.html) | `C/site-footer/`; `D/components/site-wide/site-footer/` | EC examples and empty/color-mode roots retained; accidental EU harmonised example and EU empty output removed. Full component-example audit remains open. | Updated | v5.3.1 / 2026-09-25 / S003; EC-scope review, parser and MCP delivery checks |
 | HTML-site-header | [components/site-header.html](components/site-header.html) | `C/site-header/`; `D/components/site-wide/site-header/` | EC header examples use button-based search toggles, dialog-labelled forms and clean EC scope; the tagged Twig is paired. Full component-example audit remains open. | Updated | v5.3.1 / 2026-09-25 / S003; tagged pairing, parser and MCP delivery checks |
 | HTML-skip-link | [components/skip-link.html](components/skip-link.html) | `C/skip-link/`; `D/components/navigation/skip-link/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-slogan-ticker | [components/slogan-ticker.html](components/slogan-ticker.html) | `C/slogan-ticker/`; `D/components/slogan-ticker/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
-| HTML-social-media-follow | [components/social-media-follow.html](components/social-media-follow.html) | `C/social-media-follow/`; `D/components/social-media-follow/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-slogan-ticker | [components/slogan-ticker.html](components/slogan-ticker.html) | `C/slogan-ticker/`; `D/components/slogan-ticker/` | Aligned default screen-reader labels with the v5.3.1 source and retained autoplay-off, extension, empty and all EC color-mode cases. | Verified | v5.3.1 / 2026-09-25 / S014; tagged README/demo/story/snapshot sources, static hook/label checks, live MCP/disk match and Chrome pause/resume smoke |
+| HTML-social-media-follow | [components/social-media-follow.html](components/social-media-follow.html) | `C/social-media-follow/`; `D/components/social-media-follow/` | Aligned multi-link list semantics and v5.3.1 single-link `div` semantics, including vertical/right/inline, icon-only, extension, empty and EC color-mode cases. | Verified | v5.3.1 / 2026-09-25 / S014; tagged README/demo/story/snapshot sources, static nesting checks, live MCP/disk match and Chrome accessibility/DOM smoke |
 | HTML-spinner | [components/spinner.html](components/spinner.html) | `C/spinner/`; `D/components/loading-indicator/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
-| HTML-splash-page | [components/splash-page.html](components/splash-page.html) | `C/splash-page/`; `D/components/splash-page/` | Target Twig differs in this family; review HTML against the new contract, demos and EC snapshots. | Review | — |
+| HTML-splash-page | [components/splash-page.html](components/splash-page.html) | `C/splash-page/`; `D/components/splash-page/` | Aligned EC logo fallback to packaged assets, title/category/language links, active and `hreflang` states, one/two/four-item category variants, extensions, empty output and all EC color-mode roots. | Verified | v5.3.1 / 2026-09-25 / S014; tagged README/demo/story/snapshot sources, static nesting/asset checks, live MCP/disk match and Chrome accessibility/DOM smoke |
 | HTML-spotlight | [components/spotlight.html](components/spotlight.html) | `C/spotlight/`; `D/components/spotlight/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
 | HTML-table | [components/table.html](components/table.html) | `C/table/`; `D/components/table/` | Added the v5.3.1 sort marker and a filterable EC table with labelled column fields, multiple rows, unique header relationships and mobile header data; existing simple, zebra, multi-header and extension coverage remains. | Verified | v5.3.1 / 2026-09-25 / S007; tagged README/demo/story/snapshot/docs, parser checks, live MCP/disk match and browser filter/sort smoke |
 | HTML-tabs | [components/tabs.html](components/tabs.html) | `C/tabs/`; `D/components/navigation/tabs/` | Live HTML matches disk; audit official EC variants, dependencies, accessibility and behavior. | Review | — |
@@ -331,8 +331,8 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-pagination | [components/pagination.html.twig](components/pagination.html.twig) | `C/pagination/pagination.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-picture | [components/picture.html.twig](components/picture.html.twig) | `C/picture/picture.html.twig` | Exact v5.3.1 focal-point/debug source; source aliases, image attributes and runtime initialization are validated. | Verified | v5.3.1 / 2026-09-25 / S006; exact tagged source, MCP template match, parser checks and fresh Picture browser smoke |
 | TWIG-popover | [components/popover.html.twig](components/popover.html.twig) | `C/popover/popover.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-quiz-card | [components/quiz-card.html.twig](components/quiz-card.html.twig) | `C/quiz/quiz-card.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
-| TWIG-quiz | [components/quiz.html.twig](components/quiz.html.twig) | `C/quiz/quiz.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-quiz-card | [components/quiz-card.html.twig](components/quiz-card.html.twig) | `C/quiz/quiz-card.html.twig` | Exact pinned v5.3.1 source; card image/reveal/poll branches, chosen-option attributes, padded content and shared icon/picture contracts are restored. | Verified | v5.3.1 / 2026-09-25 / S014; exact tagged comparison, live MCP template match and paired browser quiz smoke |
+| TWIG-quiz | [components/quiz.html.twig](components/quiz.html.twig) | `C/quiz/quiz.html.twig` | Exact pinned v5.3.1 source; color mode, full-width, shared slider-pager, counter and quiz-card propagation contracts are restored. | Verified | v5.3.1 / 2026-09-25 / S014; exact tagged comparison, live MCP template match and paired browser quiz smoke |
 | TWIG-radio-button | [components/radio-button.html.twig](components/radio-button.html.twig) | `C/radio/radio-button.html.twig` | Exact pinned v5.3.1 source; disabled/invalid/binary classes and helper relationships are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
 | TWIG-radio-group | [components/radio-group.html.twig](components/radio-group.html.twig) | `C/radio/radio-group.html.twig` | Exact pinned v5.3.1 source; item propagation, empty output and binary mode are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S012; exact tagged comparison, live MCP template match and browser radio smoke |
 | TWIG-range | [components/range.html.twig](components/range.html.twig) | `C/range/range.html.twig` | Exact pinned v5.3.1 source; range input/container/value hooks, width/status attributes and `aria-describedby` handling are verified with paired HTML. | Verified | v5.3.1 / 2026-09-25 / S013; exact tagged comparison, live MCP template match and browser range smoke |
@@ -346,10 +346,10 @@ Every existing Twig file is listed, including helpers. Initial byte comparison a
 | TWIG-site-header-language-switcher | [components/site-header-language-switcher.html.twig](components/site-header-language-switcher.html.twig) | `C/site-header/site-header-language-switcher.html.twig` | Replaced with the exact pinned EC source; paired family delivery is live, while the rendered example remains a later audit. | Updated | v5.3.1 / 2026-09-25 / S003; exact tagged source and live family lookup |
 | TWIG-site-header | [components/site-header.html.twig](components/site-header.html.twig) | `C/site-header/site-header.html.twig` | Replaced with the exact pinned EC source; EC search dialog and language-switcher helpers are paired; rendered example audit remains open. | Updated | v5.3.1 / 2026-09-25 / S003; exact tagged source, parser and live family lookup |
 | TWIG-skip-link | [components/skip-link.html.twig](components/skip-link.html.twig) | `C/skip-link/skip-link.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-slogan-ticker | [components/slogan-ticker.html.twig](components/slogan-ticker.html.twig) | `C/slogan-ticker/slogan-ticker.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
-| TWIG-social-media-follow | [components/social-media-follow.html.twig](components/social-media-follow.html.twig) | `C/social-media-follow/social-media-follow.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-slogan-ticker | [components/slogan-ticker.html.twig](components/slogan-ticker.html.twig) | `C/slogan-ticker/slogan-ticker.html.twig` | Exact pinned v5.3.1 source; color-mode, autoplay, extension attributes and updated Continue scrolling/Pause scrolling defaults are restored. | Verified | v5.3.1 / 2026-09-25 / S014; exact tagged comparison, live MCP template match and paired browser control smoke |
+| TWIG-social-media-follow | [components/social-media-follow.html.twig](components/social-media-follow.html.twig) | `C/social-media-follow/social-media-follow.html.twig` | Exact pinned v5.3.1 source; one-link `div` list/item semantics, multi-link list semantics and networks icon propagation are restored. | Verified | v5.3.1 / 2026-09-25 / S014; exact tagged comparison, live MCP template match and paired browser DOM smoke |
 | TWIG-spinner | [components/spinner.html.twig](components/spinner.html.twig) | `C/spinner/spinner.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
-| TWIG-splash-page | [components/splash-page.html.twig](components/splash-page.html.twig) | `C/splash-page/splash-page.html.twig` | Differs from target Twig; review diff, update and validate its complete component family. | Needs update | — |
+| TWIG-splash-page | [components/splash-page.html.twig](components/splash-page.html.twig) | `C/splash-page/splash-page.html.twig` | Exact pinned v5.3.1 source; one/two/four-item category classes, dynamic list/item tags, logo fallback and language-link attributes are restored. | Verified | v5.3.1 / 2026-09-25 / S014; exact tagged comparison, live MCP template match and paired browser DOM smoke |
 | TWIG-spotlight | [components/spotlight.html.twig](components/spotlight.html.twig) | `C/spotlight/spotlight.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
 | TWIG-table | [components/table.html.twig](components/table.html.twig) | `C/table/table.html.twig` | Exact v5.3.1 source: adds filter and filter-label parameters, independent sort/filter initialization attributes and header filter hooks while preserving multi-header column mapping. | Verified | v5.3.1 / 2026-09-25 / S007; exact tagged source, MCP template match and browser filter/sort smoke |
 | TWIG-tabs | [components/tabs.html.twig](components/tabs.html.twig) | `C/tabs/tabs.html.twig` | Byte-identical to target Twig; still review dependencies, EC usage and paired HTML. | Review | — |
@@ -437,29 +437,29 @@ These files affect delivery, packaging and maintainability rather than defining 
 
 ## Next recommended batch
 
-**Batch 13: remaining high-drift content families.**
+**Batch 14: coherent navigation families.**
 S004 delivered the high-drift search/story/card/slider families, S005 delivered
 file/gallery and the responsive follow-up, S006 delivered the media, picture,
 link and text-media/video families, S007 delivered table/news-ticker and their
 shared runtime hooks, S008 delivered the accordion family, S009 delivered
-description-list with its link/tag dependencies, and S010 delivered
-fact-figures with its source and link contracts, and S011 delivered the
-form-group, search-form and page-summary families, and S012 verified the
-remaining checkbox, datepicker, file-upload, radio, select, text-area and
-text-input families with their exact shared Twig helpers, and S013 delivered
-range/rating-field plus the file-upload-status helper. Next, take the remaining
-high-drift quiz, slogan-ticker, social-media-follow and splash-page families in
-a coherent content batch. Keep standalone mega-menu, Menu and page-header rows
-in Review unless the rendered-example audit is the priority.
+description-list with its link/tag dependencies, S010 delivered fact-figures
+with its source and link contracts, S011 delivered the form-group, search-form
+and page-summary families, S012 verified the remaining form families with their
+exact shared Twig helpers, S013 delivered range/rating-field plus the
+file-upload-status helper, and S014 delivered quiz, slogan-ticker,
+social-media-follow and splash-page. Next, take breadcrumb, inpage-navigation
+and navigation-list with their paired item helpers. Keep standalone mega-menu,
+Menu and page-header rows in Review unless the rendered-example audit is the
+priority.
 Keep the existing component IDs and use the tagged v5.3.1 source; do not rebuild
 the assets or repeat the full inventory.
 Revisit `GUIDE-assets`/`GUIDE-icons` WebTools rendering when the external loader
 is reachable; the S002/S003 environment limitation does not prevent source work.
 
-Suggested following order after Batch 12 (adjust for dependencies and user focus):
+Suggested following order after Batch 13 (adjust for dependencies and user focus):
 
-1. Remaining high-drift quiz, slogan-ticker, social-media-follow and splash-page
-   families, including their changed Twig sources and paired HTML behavior.
+1. Breadcrumb, inpage-navigation and navigation-list families, including their
+   paired item helpers and browser keyboard/ARIA behavior.
 2. Remaining navigation, forms, content/media and simple components in small
    coherent batches, including unchanged-source items.
 3. Focused utility/design guides and coverage gaps; reconcile cross-links and
@@ -1214,3 +1214,43 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   the remaining high-drift quiz, slogan-ticker, social-media-follow and
   splash-page families. GUIDE-assets and GUIDE-icons WebTools rendering remain
   pending. This S013 work is ready to commit and push.
+
+### S014 — 2026-09-25 — Batch 13: quiz, slogan-ticker, social-media-follow and splash-page
+
+- **Scope:** `HTML/TWIG-quiz`, `TWIG-quiz-card`, `HTML/TWIG-slogan-ticker`,
+  `HTML/TWIG-social-media-follow` and `HTML/TWIG-splash-page`. This completes
+  the four remaining high-drift content families selected by the previous
+  handoff.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  the tagged quiz, slogan-ticker, social-media-follow and splash-page source
+  directories, their README/demo/story/test snapshot files and the
+  [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The pinned target remains `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Twig changes:** restored exact pinned v5.3.1 sources for quiz and its
+  quiz-card helper, slogan-ticker, social-media-follow and splash-page. The
+  changes cover the shared slider pager and counter, quiz color mode and card
+  propagation, updated ticker screen-reader defaults, single-link div/list
+  semantics and single-item language-category tags.
+- **HTML changes:** updated quiz pager hooks/dot template/counter; changed the
+  default ticker labels to Continue scrolling/Pause scrolling; added the
+  single-link social and single-language splash `div` branches; corrected the
+  splash logo examples to the packaged EC asset paths; and preserved
+  multi-link/list coverage plus extension, empty, active, responsive and all
+  15 EC color-mode examples.
+- **MCP checks:** a fresh local stdio client checked all six tools. Quiz,
+  slogan-ticker, social-media-follow and splash-page responses matched disk;
+  quiz returned both `quiz.html.twig` and `quiz-card.html.twig`, and each other
+  family returned its exact Twig helper. All four families remained listed and
+  discoverable.
+- **Static/browser checks:** exact tagged Twig comparisons, unique-ID and
+  semantic-nesting checks, `node --check index.js` and `git diff --check`
+  passed. Browser smoke initialized 35 ECL roots with 15 color modes, exposed
+  the new quiz pager, advanced the narrow quiz to `2 / 2`, toggled ticker
+  pause/resume, and confirmed the single-link/single-language DOM semantics;
+  no console errors or warnings were recorded. `npm test -- --runInBand`
+  still reports no tests found, and `npm run lint` still has no ESLint
+  configuration. No Laravel code was changed.
+- **Handoff:** all nine S014 rows are Verified. The next recommended batch is
+  breadcrumb, inpage-navigation and navigation-list with their paired item
+  helpers. GUIDE-assets and GUIDE-icons WebTools rendering remain pending.
