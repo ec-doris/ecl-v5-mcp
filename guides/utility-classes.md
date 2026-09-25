@@ -1,17 +1,20 @@
 # ECL Utility Class Index (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 This is the cross-family index for the EC utility bundle. Use the focused guide
 named in each section for the complete class contract, values, examples, and
 known v5.0.1 defects.
 
 ## Required CSS
 
-Load EC theme variables before the utilities:
+Load the optional utilities before the main EC stylesheet, then color modes:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" media="screen" />
 <link rel="stylesheet" href="assets/ecl-ec-print.css" media="print" />
 ```
 

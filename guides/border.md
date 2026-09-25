@@ -1,5 +1,8 @@
 # ECL Border Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Border utilities can create a border and independently control its colour,
 width, style, and corner radius. All declarations use `!important`, so apply
 them deliberately and avoid competing `!important` rules.
@@ -9,9 +12,9 @@ them deliberately and avoid competing `!important` rules.
 Load the EC theme variables, optional color modes, and utilities:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. The border utility rules

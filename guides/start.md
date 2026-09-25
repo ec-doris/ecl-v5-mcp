@@ -1,17 +1,20 @@
 # Building with the ECL EC MCP Server
 
-This server provides static, reusable EC v5.0.1 markup, the matching Twig
-templates, a complete starter page, bundled CSS/JavaScript/assets, and focused
-guides. It does not generate a component from arbitrary parameters and it does
-not expose tools named `get_component_examples` or `get_component`.
+This server provides static EC HTML examples, Twig templates, a starter page,
+bundled CSS/JavaScript/assets, and focused guides. The shared assets target
+**ECL v5.3.1**; the existing examples and other guides are being audited in
+batches from the v5.0.1 baseline. Consult `__DIR__/update-status.md` for each
+item’s verification status. The server does not render arbitrary component
+parameters. Use the six tool names below; it does not expose tools named `get_component_examples` or `get_component`.
 
 ## Available MCP tools
 
 ### `starter_template`
 
-Returns `starter-template.html`, a complete EC page with the required asset
+Returns `starter-template.html`, an EC page shell with the required asset
 links, site header, navigation, breadcrumbs, main region, footer, and ECL
-auto-initialization.
+auto-initialization. Its setup uses v5.3.1 assets; the site-wide markup audit is
+still pending, so treat it as an integration starting point.
 
 ```json
 { "tool": "starter_template", "parameters": {} }
@@ -19,8 +22,9 @@ auto-initialization.
 
 ### `components_list`
 
-Returns the authoritative list of available component IDs. Each item includes
-the valid calls for its reusable HTML and Twig source.
+Returns the available component IDs and advertised HTML and Twig calls. The
+current list also includes a legacy EU footer; choose EC examples. The tooltip
+Twig call is advertised but has no standalone template, as noted below.
 
 ```json
 { "tool": "components_list", "parameters": {} }
@@ -47,8 +51,7 @@ unique when using more than one instance.
 
 ### `component_template`
 
-Returns a JSON object whose keys are the component-owned Twig filenames and
-whose values are the exact EC v5.0.1 Twig sources:
+Returns a JSON object of matching Twig filenames and source text:
 
 ```json
 {
@@ -57,10 +60,14 @@ whose values are the exact EC v5.0.1 Twig sources:
 }
 ```
 
-Use this when integrating the official templates into a Twig application. Some
-components have multiple owned templates or partials, so consume every returned
-entry. Imported ECL components remain separate dependencies. For plain HTML,
-use `component` instead.
+Use this when inspecting templates for a Twig application, checking their
+recorded version first. The current handler matches filename prefixes: `file`
+also returns `file-upload`, and `site-footer` also returns the EU footer. Select
+the intended EC family and its helpers; do not install every returned entry
+unconditionally. Imported ECL components remain separate dependencies. Tooltip
+has no standalone Twig template, so `component_template("tooltip")` currently
+fails; use its HTML example. These delivery issues remain tracked for a later
+batch. For plain HTML, use `component` instead.
 
 ### `guide_list`
 
@@ -113,7 +120,7 @@ Inter fallbacks resolve. The normal EC setup includes:
 - favicons and EC logo assets.
 
 Do not copy `./europa-component-library` into the application. That path is a
-read-only development symlink used to verify this MCP package against the base
+development symlink used to verify this MCP package against the base
 repository; it is not a runtime dependency and is not shipped in the npm
 package.
 
@@ -166,24 +173,32 @@ customization, not to reconstruct an existing component.
 
 ### 6. Initialize and test behavior
 
-The starter calls:
+The starter switches `no-js` to `has-js` in the head and initializes after the
+DOM content and classic EC bundle have loaded:
 
 ```html
+<script src="assets/ecl-ec.js"></script>
 <script>
-  document.documentElement.classList.remove("no-js");
-  document.documentElement.classList.add("has-js");
-
-  if (typeof ECL !== "undefined") {
-    ECL.autoInit();
-  }
+  ECL.autoInit();
 </script>
 ```
 
+For ES modules, use the single import-and-initialize script in `guide("assets")`.
+
 This initializes elements bearing supported `data-ecl-auto-init` values. If
-markup is inserted after auto-initialization, call the update function returned
-by `ECL.autoInit()` or initialize the relevant component according to the
-application's runtime architecture; do not assume new DOM is discovered
-automatically.
+markup is inserted after auto-initialization, call `ECL.autoInit()` again after
+insertion, or scope a new call to a parent container:
+
+```js
+ECL.autoInit({ root: document.querySelector("#dynamic-content") });
+```
+
+The root must contain the component roots: the query scans descendants, not the
+root itself. Already initialized nodes are skipped. In v5.3.1, the returned
+`update()` function reuses the original node list and does **not** discover new
+nodes. Use the component’s lifecycle API when changing or removing an existing
+instance; the returned `destroy()` clears all registered ECL instances, not just
+those inside the supplied root.
 
 Test at EC breakpoints (480px, 768px, 996px, and 1140px), with keyboard and
 screen-reader interaction, without JavaScript where a fallback exists, in RTL
@@ -208,8 +223,9 @@ examples are already rendered and contain no Twig syntax.
 
 - “Component not found”: call `components_list` and use an exact ID.
 - “Guide not found”: call `guide_list` and use an exact topic.
-- Unstyled utility: confirm `ecl-ec-utilities.css` is loaded after the main EC
-  stylesheet and that the class exists in the relevant focused guide.
+- Unstyled utility: confirm `ecl-ec-utilities.css` is loaded before the main EC
+  stylesheet, with the media attribute for the intended output, and that the
+  class exists in the relevant focused guide. Some utilities use `!important`.
 - Missing icon: load `https://webtools.europa.eu/load.js` and use the correct
   standard or family-specific class pattern from `guide("icons")`.
 - Interactive component does nothing: verify `assets/ecl-ec.js`, the exact
@@ -220,5 +236,10 @@ examples are already rendered and contain no Twig syntax.
 - Layout changes at an unexpected width: ECL is mobile-first; responsive classes
   use `min-width` and continue upward until overridden.
 
-The package and its compiled assets target the EC preset at ECL v5.0.1, pinned
-to base-repository commit `eceefe9468e44f7ce9c57801c91c4c0c057548b4`.
+The shared assets are from ECL v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`; their provenance and checksums are in
+`__DIR__/docs/ecl-v5.3.1-assets.json`. The MCP package version is separate from
+the ECL version. Content-file edits are read on each tool call; changes to
+`index.js` require a server restart or client reconnect.
+
+Setup reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/).

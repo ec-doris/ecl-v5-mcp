@@ -1,5 +1,8 @@
 # ECL Display Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Display utilities set an element's CSS `display` or `box-sizing` value. The EC
 preset supplies 47 classes: nine display values at each of five breakpoints,
 plus two non-responsive box-sizing utilities.
@@ -9,7 +12,7 @@ plus two non-responsive box-sizing utilities.
 Load the EC utilities stylesheet before using these classes:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. These rules are in

@@ -1,5 +1,8 @@
 # ECL Shadow Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 The EC preset provides five drop-shadow elevations and one reset class. It does
 not provide responsive, inset, inner, or negative shadow utilities.
 
@@ -9,8 +12,8 @@ Load the main EC stylesheet for the shadow custom properties and the utilities
 stylesheet for the classes:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. The six utility rules are

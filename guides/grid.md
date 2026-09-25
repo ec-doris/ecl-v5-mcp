@@ -1,5 +1,8 @@
 # ECL Grid (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 ECL uses an abridged, mobile-first 12-column Bootstrap-style grid. The public
 layout consists of a container, flex rows, responsive columns, optional logical
 start offsets, physical push/pull modifiers, and a no-gutters modifier.
@@ -9,7 +12,7 @@ start offsets, physical push/pull modifiers, and a no-gutters modifier.
 Load the EC component stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. Grid rules are in

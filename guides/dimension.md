@@ -1,5 +1,8 @@
 # ECL Dimension Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Dimension utilities provide eight classes for `width`, `height`, `max-height`,
 and ECL's shared max-width token. All declarations use `!important`.
 
@@ -11,7 +14,7 @@ The max-width classes are an important exception: they set the custom property
 Load the EC utilities stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete ECL asset setup. The dimension rules

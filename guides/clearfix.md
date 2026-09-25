@@ -1,5 +1,8 @@
 # ECL Clearfix Utility (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Use `ecl-u-clearfix` on a normal container when floated content must contribute
 to that container's height. This prevents later content from unexpectedly
 wrapping around or overlapping the container's floats.
@@ -9,7 +12,7 @@ wrapping around or overlapping the container's floats.
 Load the EC utilities stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete ECL asset setup. The clearfix rule is

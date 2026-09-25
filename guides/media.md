@@ -1,5 +1,8 @@
 # ECL Media Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Media utilities provide fixed width/height tokens, four aspect-ratio wrappers,
 and background-image controls. They can be used with images, embeds, or ordinary
 elements, but careless fixed sizing can distort or crop media.
@@ -9,7 +12,7 @@ elements, but careless fixed sizing can distort or crop media.
 Load the EC utilities stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. The supplied EC build also

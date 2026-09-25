@@ -1,5 +1,8 @@
 # ECL Flex Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Flex utilities control the direction, wrapping, alignment, ordering, growth,
 shrinkage, and basis of flex containers and items. The EC preset provides 38
 utilities at each of five breakpoints, for 190 classes in total.
@@ -9,7 +12,7 @@ utilities at each of five breakpoints, for 190 classes in total.
 Load the EC utilities stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. The flex rules are in

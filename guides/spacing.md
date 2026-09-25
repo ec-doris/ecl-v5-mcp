@@ -1,5 +1,8 @@
 # ECL Spacing Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Spacing utilities apply EC tokens to margin or padding. The values themselves
 are fixed, but the classes are responsive: every form is generated at the base,
 `s`, `m`, `l`, and `xl` tiers.
@@ -10,8 +13,8 @@ Load the main stylesheet for EC spacing custom properties and the utilities
 stylesheet for the classes:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. Spacing utility rules are

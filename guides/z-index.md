@@ -1,5 +1,8 @@
 # ECL Z-index Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 The EC preset provides six non-responsive stacking-order utilities. They set
 only `z-index` and do not establish positioning. Whether the value participates
 in stacking and creates a stacking context depends on the element's layout and
@@ -10,7 +13,7 @@ ancestors.
 Load the EC utilities stylesheet:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. These rules are not in

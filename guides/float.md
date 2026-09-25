@@ -1,5 +1,8 @@
 # ECL Float Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Float utilities apply a physical `left`, `right`, or `none` value to an
 element. Use them mainly when content such as text must wrap around another
 element. For ordinary page and component layouts, prefer ECL flex or grid
@@ -10,7 +13,7 @@ utilities.
 Load the EC utilities stylesheet before using these classes:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete ECL asset setup. The float rules are in

@@ -1,5 +1,8 @@
 # ECL Icons (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 ECL icons are WebTools-rendered glyphs styled and sized by ECL. Their markup is
 a `<span>` containing a WebTools icon class, the ECL base and size classes, and
 an ECL name/family hook. No SVG icon files are bundled by this MCP package.
@@ -9,7 +12,7 @@ an ECL name/family hook. No SVG icon files are bundled by this MCP package.
 Load the EC component CSS and the WebTools loader:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
 <script src="https://webtools.europa.eu/load.js"></script>
 ```
 

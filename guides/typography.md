@@ -1,17 +1,20 @@
 # ECL Typography Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 EC typography uses the Inter variable font and provides semantic heading,
 paragraph, and microcopy styles plus lower-level size, weight, color,
 transformation, decoration, alignment, highlight, and enhanced-text utilities.
 
 ## Required assets
 
-Load the main EC stylesheet for theme variables and `@font-face`, then the
-utilities stylesheet:
+Load the utilities before the main EC stylesheet, which supplies theme
+variables and `@font-face`:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
 <link rel="stylesheet" href="assets/ecl-ec-print.css" media="print" />
 ```
 

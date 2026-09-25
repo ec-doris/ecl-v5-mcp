@@ -1,5 +1,8 @@
 # ECL Background Utilities (EC preset, v5.0.1)
 
+Setup note: the loading snippet follows the v5.3.1 asset contract in
+`guide("assets")`; the class/token audit below remains at its stated baseline.
+
 Background utilities set an element's `background-color`. They do not add text
 colour, padding, borders, dimensions, or layout, and they do not remove a
 `background-image`.
@@ -12,9 +15,9 @@ per element and avoid competing `!important` rules.
 Load the EC theme variables, optional color modes, and utilities:
 
 ```html
-<link rel="stylesheet" href="assets/ecl-ec.css" />
-<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" />
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" />
+<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec.css" media="screen" />
+<link rel="stylesheet" href="assets/ecl-ec-color-modes.css" media="screen" />
 ```
 
 Call `guide("assets")` for the complete asset setup. The background utility
