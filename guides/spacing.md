@@ -1,7 +1,8 @@
-# ECL Spacing Utilities (EC preset, v5.0.1)
+# ECL Spacing Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+Setup note: the loading snippet and audit below target ECL v5.3.1 at pinned
+commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The EC site and compiled
+assets also report v5.3.1.
 
 Spacing utilities apply EC tokens to margin or padding. The values themselves
 are fixed, but the classes are responsive: every form is generated at the base,
@@ -21,9 +22,12 @@ Call `guide("assets")` for the complete asset setup. Spacing utility rules are
 not in `ecl-ec.css`; print variants are in `ecl-ec-print.css`. No JavaScript is
 required.
 
-When compiling from Sass, use `@ecl/utility-spacing`; its screen entry point is
-`spacing.scss`, its print entry point is `spacing-print.scss`, and it depends on
-`@ecl/grid` for breakpoints.
+When compiling from Sass, use `@ecl/utility-spacing` **5.3.1**; its screen
+entry point is `spacing.scss`, its print entry point is `spacing-print.scss`,
+and it depends on `@ecl/grid` **5.3.1** for breakpoints. The spacing Sass,
+theme map, story and EC usage/guideline contracts are unchanged from the
+earlier v5.0.1 evidence; the package metadata and dependency are the target
+release updates.
 
 ## EC spacing tokens
 
@@ -73,7 +77,7 @@ ecl-u-{property}{direction}-{breakpoint}-{token}
 | `b`  | Block end         | `*-block-end`                       |
 | `l`  | Inline start      | `*-inline-start`                    |
 
-Although the one-letter names derive from top/right/bottom/left, v5.0.1 uses
+Although the one-letter names derive from top/right/bottom/left, v5.3.1 uses
 logical properties. Thus `l` means inline-start and `r` means inline-end, so
 they reverse appropriately in RTL. Similarly, `t` and `b` use block direction.
 
@@ -163,7 +167,7 @@ print stylesheet has no replacement rule for them.
 
 - All declarations use `!important`. Remove conflicting utilities rather than
   depending on their order in an HTML `class` attribute.
-- These utilities control margin and padding only. ECL v5.0.1 does not generate
+- These utilities control margin and padding only. ECL v5.3.1 does not generate
   a `gap` family from the spacing utility source.
 - Margin does not become part of an element's clickable background; padding
   does. Choose based on whether the space is outside or inside the box.

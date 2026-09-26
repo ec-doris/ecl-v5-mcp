@@ -1735,3 +1735,60 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   remain pending. Next take `GUIDE-spacing` and `GUIDE-typography`, then
   continue the remaining utility/design guides, coverage gaps and final EC-wide
   delivery checks.
+
+### S035 — 2026-09-26 — Batch 34: spacing and typography utility guides
+
+- **Scope:** `GUIDE-spacing` and `GUIDE-typography`, the next recommended
+  design-token batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** the official [EC component library](https://ec.europa.eu/component-library/ec/)
+  still reports v5.3.1; the [v5.3.1 release notes](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1)
+  list only layout-wrapper and site-header fixes in that patch; and the
+  [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md)
+  was reviewed from the v5.0.1 evidence through the target. Tagged review
+  covered the spacing/typography Sass, EC maps and variables, package metadata,
+  stories, demos, EC utility usage pages and guideline pages. Spacing source,
+  maps, stories and usage/guideline documentation are unchanged from v5.0.1;
+  its package and `@ecl/grid` dependency move to 5.3.1. Typography has the
+  target source changes described below, plus package dependencies at 5.3.1.
+- **Spacing guide:** `guides/spacing.md` now targets v5.3.1 and records the 21
+  EC tokens, logical margin/padding grammar, five breakpoints, package
+  metadata, 1,575 screen classes, the 875-class centimetre-based print scale,
+  and the absence of gap, negative-spacing and padding-auto families. The
+  mobile-first and RTL/accessibility guidance remains paired with the tagged
+  source and EC usage/guideline contracts.
+- **Typography guide:** `guides/typography.md` now targets v5.3.1, records the
+  Inter variable-font fallback, EC responsive type tables, exact 221-class
+  screen/print and 161-color counts, and the alpha utility defect. The target
+  theme changes the XL body/paragraph tier from the old v5.0.1 responsive
+  drop-back to a stable 1.375rem/2rem at all four tiers. The target utility
+  Sass and print Sass also set `--max-w: none` on all three enhanced-block
+  variants; the guide documents why this prevents inherited paragraph width
+  constraints.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 18 guide topics and 71 component IDs; spacing and typography guide
+  responses matched disk after `__DIR__` substitution; both selected
+  `guide_list` snippets exposed v5.3.1; the starter retained `ECL.autoInit()`;
+  and the carousel family returned both expected Twig templates. The separate
+  connected MCP surface was not exposed in this session.
+- **Static checks:** tagged source/package/changelog review and compiled
+  assertions passed for 1,575 screen spacing classes, 875 print spacing
+  classes, logical breakpoint output, no spacing gap/padding-auto family, 221
+  screen and print typography classes, 161 typography-color classes, the
+  v5.3.1 enhanced-block max-width resets, the Inter variable-font fallback and
+  the corrected XL paragraph contract. `node --check index.js` and
+  `git diff --check` passed. No component markup, JavaScript behavior or
+  assets changed, so browser smoke was not applicable to this documentation
+  and guide-only batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable as a
+  conformance suite because the repository has no project test files; `npm run
+  lint` remains unavailable because there is no ESLint configuration. No
+  Laravel code changed, so the Laravel suite was not applicable. No commit,
+  push or publication was made.
+- **Handoff:** `GUIDE-spacing` and `GUIDE-typography` are Verified.
+  `HTML-add-to-calendar` remains Updated pending external WebTools action
+  delivery; the two S015 inpage-navigation rows remain Updated pending the
+  pinned bundle's duplicate mobile-trigger decision; and GUIDE-assets and
+  GUIDE-icons WebTools rendering remain pending. Next take
+  `GUIDE-utility-classes`, then continue the remaining coverage gaps and final
+  EC-wide delivery checks.

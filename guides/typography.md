@@ -1,7 +1,8 @@
-# ECL Typography Utilities (EC preset, v5.0.1)
+# ECL Typography Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+Setup note: the loading snippet and audit below target ECL v5.3.1 at pinned
+commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The EC site and compiled
+assets also report v5.3.1.
 
 EC typography uses the Inter variable font and provides semantic heading,
 paragraph, and microcopy styles plus lower-level size, weight, color,
@@ -24,8 +25,12 @@ sibling directories: ECL tries the WebTools-hosted Inter files first and
 fallbacks. Typography utility selectors are not in `ecl-ec.css`. No JavaScript
 is required.
 
-When compiling Sass, use `@ecl/utility-typography`; its screen entry point is
-`typography.scss` and its print entry point is `typography-print.scss`.
+When compiling Sass, use `@ecl/utility-typography` **5.3.1**; its screen entry
+point is `typography.scss` and its print entry point is `typography-print.scss`.
+The package depends on `@ecl/grid`, `@ecl/mixins-color` and
+`@ecl/mixins-typography`, all at **5.3.1**. The v5.3.0 changelog's typography
+weight change is EU-only; the EC values below remain the pinned target
+contract.
 
 The screen font stack is `Inter, arial, sans-serif`. Responsive semantic type
 uses these mobile-first tiers:
@@ -92,11 +97,13 @@ Each value is `font-size / line-height`:
 | S — `ecl-u-type-paragraph-s`                         | .875rem / 1.25rem | 1rem / 1.5rem      | 1rem / 1.5rem      | 1rem / 1.5rem      |
 | M — `ecl-u-type-paragraph`, `...-paragraph-m`        | 1rem / 1.5rem     | 1.125rem / 1.75rem | 1.125rem / 1.75rem | 1.125rem / 1.75rem |
 | L — `ecl-u-type-paragraph-l`                         | 1rem / 1.5rem     | 1.125rem / 1.75rem | 1.125rem / 1.75rem | 1.25rem / 1.75rem  |
-| XL — `ecl-u-type-paragraph-xl`, `...-paragraph-lead` | 1.375rem / 2rem   | 1.125rem / 1.75rem | 1.25rem / 1.75rem  | 1.375rem / 2rem    |
+| XL — `ecl-u-type-paragraph-xl`, `...-paragraph-lead` | 1.375rem / 2rem   | 1.375rem / 2rem     | 1.375rem / 2rem     | 1.375rem / 2rem    |
 | 2XL — `ecl-u-type-paragraph-2xl`                     | 1.25rem / 1.75rem | 1.25rem / 1.75rem  | 1.375rem / 2rem    | 1.5rem / 2.25rem   |
 
-The XL style becoming smaller at 480px before growing again at later tiers is
-the actual EC v5.0.1 theme behavior, not a transcription error.
+The v5.3.1 target keeps the XL style at 1.375rem/2rem across all four tiers.
+The earlier v5.0.1 theme reduced it at 480px and 768px; that old behavior is
+not present in the pinned target assets and should not be copied into new EC
+content.
 
 `ecl-u-type-paragraph-lead` resolves to the XL paragraph style in the EC theme.
 Prefer `ecl-u-type-paragraph-xl` when the named size is clearer.
@@ -182,14 +189,14 @@ The EC bundle emits 161 `ecl-u-type-color-*` classes:
 ```
 
 Call `guide("colours")` for exact values, valid color modes, contrast guidance,
-and the complete v5.0.1 alpha warning. In particular, do not use numbered
+and the complete v5.3.1 alpha warning. In particular, do not use numbered
 `ecl-u-type-color-grey-alpha-{shade}` or
 `ecl-u-type-color-white-alpha-{shade}`: an upstream short-name defect makes
 those declarations refer to undefined custom properties. The unnumbered
 `ecl-u-type-color-alpha` works.
 
 There is no `ecl-u-type-color-on-surface-highlight` selector in the compiled
-v5.0.1 EC assets, even though the Storybook control offers that name. Use
+v5.3.1 EC assets, even though the Storybook control offers that name. Use
 `ecl-u-type-highlight` for highlighted text or a valid color custom property in
 project CSS.
 
@@ -238,7 +245,9 @@ emphasis is semantic.
 ### Enhanced blocks
 
 All enhanced variants use the responsive 2XL body style at weight 300 and
-`display: block`:
+`display: block`. In v5.3.1 each variant also sets `--max-w: none`, so an
+inherited ECL max-width token does not constrain the enhanced block; this is a
+target-release source change and does not alter paragraph utility max-widths:
 
 | Class                       | Background           | Border                         | Text color               | Spacing behavior          |
 | --------------------------- | -------------------- | ------------------------------ | ------------------------ | ------------------------- |
@@ -259,7 +268,8 @@ adapt in RTL.
 ## Print behavior
 
 The print stylesheet keeps the same 221 public class names and replaces the
-main semantic type styles with print fonts. Heading print values are:
+main semantic type styles with print fonts. It also preserves
+`--max-w: none` on all three enhanced variants. Heading print values are:
 
 | Class     | Print size / line height | Weight |
 | --------- | ------------------------ | ------ |
@@ -278,7 +288,7 @@ Paragraph print sizes are XS 9/12pt, S 10.5/15pt, M 12/18pt, L 13.5/18pt, XL
 
 ## Implementation notes
 
-- The compiled EC utility and print bundles each contain 221 distinct
+- The compiled v5.3.1 EC utility and print bundles each contain 221 distinct
   `ecl-u-type-*` class names: 161 colors and 60 other typography classes.
 - Most size, line-height, color, transformation, decoration, alignment, and
   utility box declarations use `!important`; avoid conflicting utilities.
