@@ -1792,3 +1792,13 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   GUIDE-icons WebTools rendering remain pending. Next take
   `GUIDE-utility-classes`, then continue the remaining coverage gaps and final
   EC-wide delivery checks.
+
+### S036 — 2026-09-26 — Batch 35: utility class index
+
+- **Scope:** `GUIDE-utility-classes`, the next recommended cross-family utility batch. The pinned target is ECL v5.3.1 at commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`, consistent with the [official EC site](https://ec.europa.eu/component-library/ec/) and [v5.3.1 release notes](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1).
+- **Sources:** official EC site/release notes/changelog, tagged utility package manifests, README/story files, utility Sass, EC theme/source and copied v5.3.1 bundles. The 15 utility manifests are 5.3.1; package/dependency metadata was updated from v5.0.1; no new utility family or EC breakpoint was introduced. The border Storybook controls removed `border-high`, but the compiled `border-high` class remains delivered, so the index keeps the compiled surface and the focused border guide documents adaptive names.
+- **Guide:** `guides/utility-classes.md` now records v5.3.1 provenance, the 2,456 screen / 1,764 print delivered class surface, family counts, five EC breakpoints, print-only/page-break behavior, the numbered alpha alias defect, the absence of a focus-reveal companion and print visibility scoping.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It returned 18 guide topics and 71 component IDs; the selected utility guide matched disk after `__DIR__` substitution; its `guide_list` snippet exposed v5.3.1; the starter retained `ECL.autoInit()`; and carousel returned both expected Twig family templates. The separate connected MCP surface was not exposed in this session.
+- **Static checks:** exact screen/print totals and family counts passed; `node --check index.js` and `git diff --check` passed.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable because the repository has no project test files; `npm run lint` remains unavailable because there is no ESLint configuration. No Laravel code changed, so the Laravel suite was not applicable. No component markup, JavaScript behavior or assets changed, so browser smoke was not applicable. No commit or push was made.
+- **Handoff:** `GUIDE-utility-classes` is Verified. `GUIDE-icons` remains Needs update and its WebTools loader remains blocked by ORB; pending add-to-calendar WebTools delivery, the inpage-navigation mobile-trigger decision and GUIDE-assets remain visible. Next take `GUIDE-icons`, then reconcile the remaining coverage gaps and final EC-wide delivery checks.

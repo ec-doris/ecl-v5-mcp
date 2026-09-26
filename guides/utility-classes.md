@@ -1,11 +1,15 @@
-# ECL Utility Class Index (EC preset, v5.0.1)
+# ECL Utility Class Index (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+Setup note: the loading snippet and class audit below target ECL v5.3.1 at
+pinned commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The official EC site
+and compiled assets also report v5.3.1.
 
 This is the cross-family index for the EC utility bundle. Use the focused guide
 named in each section for the complete class contract, values, examples, and
-known v5.0.1 defects.
+known v5.3.1 defects. All 15 utility package manifests in the pinned source
+are v5.3.1; the matching `@ecl/grid` and mixin dependencies are used where
+declared. The focused guides record target-specific token and typography
+changes; this index records the delivered class surface and cross-family rules.
 
 ## Required CSS
 
@@ -64,7 +68,7 @@ Explicit responsive display, flex, media-size, and spacing classes use:
 | `l`   | 996px         |
 | `xl`  | 1140px        |
 
-There is no EC `2xl` breakpoint or utility infix in v5.0.1. Rules are
+There is no EC `2xl` breakpoint or utility infix in v5.3.1. Rules are
 mobile-first `min-width` rules and continue to larger viewports until
 overridden.
 
@@ -176,7 +180,7 @@ ecl-u-border-color-{family}[-{shade}]
 ```
 
 The numbered `grey-alpha` and `white-alpha` selectors exist but are broken in
-v5.0.1 because they refer to undefined short custom properties. Do not use
+v5.3.1 because they refer to undefined short custom properties. Do not use
 them. Unnumbered `*-alpha` works. Call `guide("background")`, `guide("border")`,
 and `guide("colours")` before choosing a foreground/background combination.
 
@@ -251,7 +255,7 @@ It applies zero border and padding, two clipping declarations, a 1px box,
 all with `!important`.
 
 Do not use it as a substitute for `aria-hidden`, and do not put it on focusable
-content: ECL v5.0.1 supplies no focus-reveal companion class. Hidden text should
+content: ECL v5.3.1 supplies no focus-reveal companion class. Hidden text should
 clarify the same operation or content rather than give screen-reader users a
 different experience.
 
@@ -292,7 +296,7 @@ ecl-u-break-inside-{auto|avoid}
 The eight break declarations are not marked `!important`, and paged-media
 support is best-effort; browsers may be unable to honor an avoid rule.
 
-Important v5.0.1 integration detail: `ecl-ec-print.css` does not reset
+Important v5.3.1 integration detail: `ecl-ec-print.css` does not reset
 `ecl-u-print-only`. If `ecl-ec-utilities.css` remains active during printing,
 `ecl-u-print-only` remains hidden. When the screen/print visibility pair is
 needed, scope the bundles to their intended media:
