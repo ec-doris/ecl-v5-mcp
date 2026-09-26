@@ -1,7 +1,9 @@
-# ECL Float Utilities (EC preset, v5.0.1)
+# ECL Float Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+utility package metadata from the earlier v5.0.1 evidence, but the float Sass
+contract and EC usage page remain unchanged.
 
 Float utilities apply a physical `left`, `right`, or `none` value to an
 element. Use them mainly when content such as text must wrap around another
@@ -20,8 +22,8 @@ Call `guide("assets")` for the complete ECL asset setup. The float rules are in
 `ecl-ec-utilities.css`, not `ecl-ec.css`. They are also included in the supplied
 `ecl-ec-print.css` for print output. No JavaScript is required.
 
-If ECL is compiled from Sass packages instead of using the bundled assets, the
-source package is `@ecl/utility-float` and its Sass entry point is `float.scss`.
+If ECL is compiled from Sass packages instead of using the bundled assets, use
+the v5.3.1 `@ecl/utility-float` package and its `float.scss` entry point.
 
 ## Classes
 
@@ -32,7 +34,7 @@ source package is `@ecl/utility-float` and its Sass entry point is `float.scss`.
 | `ecl-u-f-none` | `float: none !important`  | Cancel a float applied by another rule or state.                                        |
 
 Use only one float utility on an element at a time. These classes are not
-responsive: ECL v5.0.1 provides no breakpoint variants of them.
+responsive: ECL v5.3.1 provides no breakpoint variants of them.
 
 `left` and `right` are physical directions. They do not switch automatically
 in right-to-left documents. Choose the class deliberately when directionality
@@ -96,8 +98,9 @@ wrap around it. Floated children may not contribute normally to their parent's
 height, so later content can overlap or wrap unexpectedly.
 
 Apply `ecl-u-clearfix` to the **parent** when it must contain its floated
-children. In ECL v5.0.1 the clearfix creates an `::after` pseudo-element with
-`clear: both`, `content: ""`, and `display: block`, all marked `!important`.
+children. In the companion ECL v5.3.1 clearfix utility, the `::after`
+pseudo-element has `clear: both`, `content: ""`, and `display: block`, all
+marked `!important`.
 
 - Use `ecl-u-f-none` on an element to cancel that element's float.
 - Use `ecl-u-clearfix` on a parent to contain floated children.

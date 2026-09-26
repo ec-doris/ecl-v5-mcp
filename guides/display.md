@@ -1,7 +1,9 @@
-# ECL Display Utilities (EC preset, v5.0.1)
+# ECL Display Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The target release updates the
+utility package and its `@ecl/grid` dependency from the earlier v5.0.1
+evidence; the display Sass contract and EC breakpoints remain unchanged.
 
 Display utilities set an element's CSS `display` or `box-sizing` value. The EC
 preset supplies 47 classes: nine display values at each of five breakpoints,
@@ -104,6 +106,12 @@ With `border-box`, the declared width and height include padding and borders.
 With `content-box`, padding and borders are added outside the declared content
 size.
 
+The tagged Sass source declares `box-sizing: content-box` for
+`ecl-u-box-sizing-content`. In the minified v5.3.1 EC utility and print bundles
+this declaration is serialized as `box-sizing: initial`; that CSS initial value
+computes to `content-box`. Expect the serialized `initial` spelling when
+checking the supplied compiled assets.
+
 ```html
 <div class="ecl-u-box-sizing-border" style="width: 12rem; padding: 1rem">
   The rendered border box remains 12rem wide.
@@ -117,5 +125,6 @@ size.
 - Utilities impose no component markup, ARIA attributes, IDs, or JavaScript
   hooks.
 - Display utilities do not add spacing, width, positioning, or alignment.
-- The tagged v5.0.1 Sass and compiled EC bundle include `grid`, even though the
-  v5.0.1 website usage list and display Storybook control omit it.
+- The tagged v5.3.1 Sass and compiled EC bundle include `grid`, even though the
+  v5.3.1 EC website usage list and display Storybook control omit it. This guide
+  documents the compiled class because it is present in the delivered asset.

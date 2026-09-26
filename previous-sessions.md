@@ -1571,3 +1571,111 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   remains pending. Next take `GUIDE-dimension` and `GUIDE-display`, then
   continue the remaining utility/design guides, coverage gaps and final EC-wide
   delivery checks.
+
+### S032 — 2026-09-25 — Batch 31: dimension and display utility guides
+
+- **Scope:** `GUIDE-dimension` and `GUIDE-display`, the next recommended
+  utility/design batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** rechecked the official [EC component library](https://ec.europa.eu/component-library/ec/),
+  which still reports v5.3.1, the [v5.3.1 release notes](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1),
+  and the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  Tagged review covered the dimension and display Sass, package metadata,
+  Storybook stories, EC website usage pages, the EC breakpoint map and the
+  local v5.3.1 screen/print utility bundles. Between the checked-in v5.0.1
+  evidence and v5.3.1, the utility source contracts are unchanged; package
+  versions and the display `@ecl/grid` dependency move to 5.3.1. The release
+  changelog has no dimension/display behavior change.
+- **Dimension guide:** `guides/dimension.md` now identifies the v5.3.1 EC
+  target and pinned commit, keeps the exact eight-class contract and no
+  responsive variants, and updates the Storybook/source evidence to the target
+  release. The shared `--max-w` explanation and sizing/accessibility caveats
+  remain aligned with the tagged Sass and target assets.
+- **Display guide:** `guides/display.md` now identifies the v5.3.1 EC target,
+  the 47-class contract across `xs`/base, `s`, `m`, `l` and `xl` breakpoints,
+  and the v5.3.1 `@ecl/grid` dependency. It records that tagged Sass and both
+  delivered bundles include `grid` while the EC usage list and Storybook
+  controls omit it. It also records that the minified bundles serialize the
+  Sass `box-sizing: content-box` rule as `box-sizing: initial`, which computes
+  to `content-box`.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 18 guide topics and 71 component IDs; both selected guide responses
+  matched disk after `__DIR__` substitution; both `guide_list` snippets exposed
+  v5.3.1; the starter retained `ECL.autoInit()`; and the tooltip no-template
+  contract remained intact. The separate connected MCP surface was not exposed
+  in this session.
+- **Static checks:** tagged Sass/story/usage/package/layout-map review and
+  compiled assertions passed for all eight dimension classes, all 45 display
+  classes (nine values at five breakpoints), both box-sizing classes and both
+  screen/print bundles. The compiled `box-sizing: initial` spelling was
+  confirmed. `node --check index.js` and `git diff --check` passed. No
+  component markup or JavaScript behavior changed, so a browser smoke was not
+  applicable to this documentation-only batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable because the
+  repository has no project test files; `npm run lint` remains unavailable
+  because there is no ESLint configuration. No Laravel code changed, so the
+  Laravel suite was not applicable. No commit, push or publication was made.
+- **Handoff:** `GUIDE-dimension` and `GUIDE-display` are Verified.
+  `HTML-add-to-calendar` remains Updated pending external WebTools action
+  delivery; the two S015 inpage-navigation rows remain Updated pending the
+  pinned bundle's duplicate mobile-trigger decision; and GUIDE-assets and
+  GUIDE-icons WebTools rendering remain pending. Next take
+  `GUIDE-flex`, `GUIDE-float` and `GUIDE-grid`, then continue the remaining
+  utility/design guides, coverage gaps and final EC-wide delivery checks.
+
+### S033 — 2026-09-26 — Batch 32: flex, float and grid utility guides
+
+- **Scope:** `GUIDE-flex`, `GUIDE-float` and `GUIDE-grid`, the next recommended
+  utility/design batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** the official [EC component library](https://ec.europa.eu/component-library/ec/)
+  and [getting-started page](https://ec.europa.eu/component-library/ec/getting-started/)
+  still report v5.3.1. Tagged review covered the flex, float and grid Sass,
+  READMEs, Storybook stories, examples, EC usage/showcase pages, package
+  metadata, the EC layout map and the
+  [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  The source and story files are unchanged from v5.0.1 to v5.3.1; the target
+  updates `@ecl/utility-flex`, `@ecl/utility-float`, `@ecl/grid` and flex's
+  `@ecl/grid` dependency to 5.3.1. The release changelog has no flex, float or
+  grid behavior change.
+- **Flex guide:** `guides/flex.md` now identifies the pinned target and records
+  the 38 utility families at the five EC breakpoints (190 responsive classes),
+  exact values, the required display dependency, package versions, absent
+  `space-evenly` and numbered-order utilities, and source-order/accessibility
+  cautions.
+- **Float guide:** `guides/float.md` now identifies the pinned target and
+  records the exact three physical, non-responsive classes, package/source
+  contract, print delivery, and the companion clearfix relationship without
+  implying RTL or JavaScript behavior.
+- **Grid guide:** `guides/grid.md` now identifies the pinned target and records
+  the 12-column/five-breakpoint contract, EC container widths, logical gutters
+  and offsets, physical push/pull modifiers, no-gutters scope, nested-grid
+  structure and screen/print delivery. The documented 252 public selectors
+  comprise 60 columns, 65 pushes, 65 pulls, 59 offsets and three structural
+  classes.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 18 guide topics and 71 component IDs; all three selected guide
+  responses matched disk after `__DIR__` substitution and their snippets
+  exposed v5.3.1; the starter retained `ECL.autoInit()`; and the tooltip
+  no-template contract remained intact. The separate connected MCP surface
+  was not exposed in this session.
+- **Static checks:** tagged source/package/changelog review and compiled asset
+  assertions passed for all 190 flex classes in utility and print bundles, all
+  three float classes in utility and print bundles, the 252 grid classes in the
+  screen bundle, the 249 generated grid column/modifier classes in print, the
+  five breakpoints, container widths, flex row and representative column
+  declarations. `node --check index.js` and `git diff --check` passed. No
+  component markup, JavaScript behavior or assets changed, so a browser smoke
+  was not applicable to this documentation-only batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable as a
+  conformance suite because the repository has no project test files; `npm run
+  lint` remains unavailable because there is no ESLint configuration. No
+  Laravel code changed, so the Laravel suite was not applicable. No commit,
+  push or publication was made.
+- **Handoff:** all three S033 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets and GUIDE-icons WebTools rendering
+  remain pending. Next take `GUIDE-media`, `GUIDE-shadow` and `GUIDE-z-index`,
+  then continue the remaining utility/design guides, coverage gaps and final
+  EC-wide delivery checks.

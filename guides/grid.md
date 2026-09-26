@@ -1,7 +1,9 @@
-# ECL Grid (EC preset, v5.0.1)
+# ECL Grid (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+`@ecl/grid` package metadata from the earlier v5.0.1 evidence, but the grid
+Sass, examples and EC usage contract remain unchanged.
 
 ECL uses an abridged, mobile-first 12-column Bootstrap-style grid. The public
 layout consists of a container, flex rows, responsive columns, optional logical
@@ -19,8 +21,9 @@ Call `guide("assets")` for the complete asset setup. Grid rules are in
 `ecl-ec.css`, not `ecl-ec-utilities.css`, and are also included in
 `ecl-ec-print.css`. No JavaScript is required.
 
-When compiling from Sass, use the `@ecl/grid` package and its `grid.scss` entry
-point.
+When compiling from Sass, use the v5.3.1 `@ecl/grid` package and its
+`grid.scss` entry point. The package exposes the same five EC breakpoints and
+12-column generation contract described below.
 
 ## Standard structure
 
@@ -134,7 +137,7 @@ in left-to-right and right-to-left layouts.
 
 ## Push and pull
 
-ECL v5.0.1 also emits `push` and `pull` forms for values `0` through `12` at
+ECL v5.3.1 also emits `push` and `pull` forms for values `0` through `12` at
 every tier:
 
 ```text

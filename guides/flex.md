@@ -1,7 +1,9 @@
-# ECL Flex Utilities (EC preset, v5.0.1)
+# ECL Flex Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+utility package metadata and its grid dependency from the earlier v5.0.1
+evidence, but the flex Sass contract and EC stacks showcase remain unchanged.
 
 Flex utilities control the direction, wrapping, alignment, ordering, growth,
 shrinkage, and basis of flex containers and items. The EC preset provides 38
@@ -19,8 +21,9 @@ Call `guide("assets")` for the complete asset setup. The flex rules are in
 `ecl-ec-utilities.css`, not `ecl-ec.css`; they are also included in
 `ecl-ec-print.css`. No JavaScript is required.
 
-When compiling ECL from Sass packages, use `@ecl/utility-flex`; its Sass entry
-point is `flex.scss` and it depends on `@ecl/grid` for breakpoints.
+When compiling ECL from Sass packages, use the v5.3.1 `@ecl/utility-flex`
+package; its Sass entry point is `flex.scss` and it depends on
+`@ecl/grid` v5.3.1 for breakpoints.
 
 Flex utilities do **not** create a flex formatting context. First add
 `ecl-u-d-flex` or `ecl-u-d-inline-flex` to the parent:
@@ -81,7 +84,7 @@ intact: for example, use `ecl-u-justify-content-m-between` and
 | `ecl-u-justify-content-between` | `justify-content: space-between` |
 | `ecl-u-justify-content-around`  | `justify-content: space-around`  |
 
-There is no `space-evenly` utility in v5.0.1.
+There is no `space-evenly` utility in v5.3.1.
 
 ### Cross-axis item alignment
 
@@ -131,7 +134,7 @@ Apply these classes to flex items, not the container.
 | `ecl-u-order-last`  | `order: 1`  |
 | `ecl-u-order-0`     | `order: 0`  |
 
-ECL v5.0.1 does not provide numbered order utilities such as
+ECL v5.3.1 does not provide numbered order utilities such as
 `ecl-u-order-1` or `ecl-u-order-2`. Visual reordering does not change DOM,
 screen-reader, or keyboard focus order, so keep the source order logical.
 
@@ -174,5 +177,5 @@ automatic basis.
   presentation without changing accessible source order.
 - Flex utilities add no gap or margin. Use ECL spacing utilities when separation
   is needed.
-- The exact v5.0.1 inventory is narrower than Bootstrap: use only the classes
+- The exact v5.3.1 inventory is narrower than Bootstrap: use only the classes
   documented here, with an optional supported breakpoint infix.
