@@ -1,6 +1,6 @@
 {
     "name": "ecl-v5-mcp",
-    "version": "1.0.0",
+    "version": "5.3.1",
     "description": "MCP server for ECL V5 components and guides",
     "type": "module",
     "main": "index.js",

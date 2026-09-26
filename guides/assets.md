@@ -9,7 +9,7 @@ __DIR__/assets/*
 __DIR__/fonts/*
 ```
 
-## Included files and provenance
+## Included files and pinned source
 
 - Main component styles: `assets/ecl-ec.css` and its `.css.map`.
 - Print styles: `assets/ecl-ec-print.css` and its `.css.map`.
@@ -27,8 +27,8 @@ The release's `styles/`, `styles/optional/`, and `scripts/` files are flattened
 into `assets/`; CSS and JavaScript bytes are unchanged. Source maps retain the
 original mappings but embed the pinned SCSS and replace build-machine paths
 with pinned source URLs, so debugging does not require the upstream checkout.
-Exact source paths, transformations and SHA-256 checksums are recorded in
-`__DIR__/docs/ecl-v5.3.1-assets.json`.
+The source archive and commit are recorded above; the provenance manifest is
+not shipped because it is not needed by the MCP runtime.
 
 ## Page setup
 

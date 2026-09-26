@@ -54,7 +54,7 @@ function getTemplateFiles(componentId, files) {
 const server = new McpServer(
     {
         name: "ecl-v5-server",
-        version: "1.0.0",
+        version: "5.3.1",
     }
 );
 

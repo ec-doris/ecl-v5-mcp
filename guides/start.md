@@ -248,10 +248,10 @@ examples are already rendered and contain no Twig syntax.
   use `min-width` and continue upward until overridden.
 
 The shared assets are from ECL v5.3.1, pinned to commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`; their provenance and checksums are in
-`__DIR__/docs/ecl-v5.3.1-assets.json`. The MCP package version is separate from
-the ECL version. Content-file edits are read on each tool call; changes to
-`index.js` require a server restart or client reconnect.
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The provenance manifest is not
+shipped because it is not needed by the MCP runtime. Content-file edits are read
+on each tool call; changes to `index.js` require a server restart or client
+reconnect.
 
 Setup reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/).
 

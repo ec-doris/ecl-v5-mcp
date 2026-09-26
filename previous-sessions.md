@@ -79,7 +79,8 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   `sourcesContent` (empty text for synthetic `<no source>`). All other map fields,
   including `mappings`, remain identical. Retained four branding files and three
   font files byte-for-byte. Full upstream/local SHA-256 values and source paths
-  are in [docs/ecl-v5.3.1-assets.json](docs/ecl-v5.3.1-assets.json).
+  were recorded in the historical `docs/ecl-v5.3.1-assets.json` manifest, which
+  was removed in S043 because it is not used by the MCP runtime.
 - **Setup fixes:** reset/utilities precede main screen CSS; color modes follow
   it. A fresh-page cascade comparison confirmed a green-dark class on `html`
   gives `--cm-surface-0: #00002e` (overwritten) when color modes precede main CSS,
@@ -137,7 +138,7 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   all 191 non-synthetic embedded source entries match pinned Git content.
   Every local CSS/font/source-map URL resolves. `node --check` passed for
   index.js and both bundles; `git diff --check` passed. `npm pack --dry-run`
-  includes the provenance manifest and excludes the upstream symlink. No project
+  excludes the upstream symlink. No project
   tests or ESLint configuration exist, so no Jest/ESLint suite is claimed; no
   Laravel code changed. User deletion of component-update.md and all upstream
   state preserved. No commit, push or publication.
@@ -1982,3 +1983,69 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   is an upstream bundle fix or an explicitly approved local runtime override.
   On a future release refresh, recheck the pinned target and revisit excluded
   layout/page/recipes scope only if the MCP contract is intentionally expanded.
+
+### S041 — 2026-09-26 — Release refresh and blocker re-audit
+
+- **Scope:** Refresh the official release target, verify the linked upstream
+  checkout state, and re-audit the two inpage-navigation blockers and excluded
+  scope decisions.
+- **Release check:** The official EC site and GitHub release list still show
+  v5.3.1 (2026-09-21) as the latest release. The pinned commit is unchanged;
+  the linked `v5-dev` checkout is clean at `cd0f615bd1`, so no pull or release
+  adoption was needed.
+- **Blocker re-audit:** The pinned
+  `src/components/inpage-navigation/inpage-navigation.js` still registers
+  `this.handleClickOnToggle` twice on the mobile trigger, and the compiled
+  `assets/ecl-ec.js` retains the same behavior. The local HTML/Twig content and
+  MCP template-family checks remain valid; no local runtime override was
+  introduced.
+- **Scope re-audit:** layout-wrapper, the six upstream page examples, and
+  `recipes.db` remain outside the active six-tool EC contract. No new content
+  rows were identified, and the status counts remain 225 Verified, 15
+  Excluded, 2 Blocked, and zero Missing, Review, Updated, or In progress.
+- **Handoff:** Keep the two inpage-navigation rows Blocked until an upstream
+  bundle fix or an explicitly approved local runtime override is available.
+  The next meaningful batch is another release refresh or an intentional MCP
+  contract expansion.
+
+### S042 — 2026-09-26 — Align package and MCP server metadata
+
+- **Scope:** Align the MCP package version with the completed v5.3.1 content
+  target after confirming that the package manifest, lockfile and server
+  handshake still reported 1.0.0.
+- **Changes:** Updated `package.json`, the lockfile root package metadata and
+  the `McpServer` initialization version in `index.js` to `5.3.1`.
+- **Validation:** JSON/package consistency, `node --check index.js`, `npm ci
+  --dry-run --ignore-scripts`, and `git diff --check` passed. No dependencies
+  changed, and no Laravel code was involved.
+- **Handoff:** Package and MCP handshake metadata now agree with the v5.3.1
+  target. The two inpage-navigation runtime rows remain blocked as recorded
+  in S041.
+
+### S043 — 2026-09-26 — Remove unused provenance docs directory
+
+- **Scope:** Remove the standalone `docs/` directory after confirming it was
+  not read by any MCP handler or included in runtime lookup paths.
+- **Change:** Deleted the 7 KB historical
+  `ecl-v5.3.1-assets.json` checksum/provenance manifest. Updated the assets and
+  start guides to describe the pinned source without pointing to the removed
+  file, and moved the tracker row from Verified to Excluded with the cleanup
+  rationale.
+- **Validation:** Confirmed no active references remain, the file is absent,
+  and the existing package/runtime checks remain unaffected. No component or
+  asset content changed.
+- **Handoff:** The MCP package now ships without `docs/`; the two
+  inpage-navigation runtime rows remain blocked independently of this cleanup.
+
+### S044 — 2026-09-26 — Remove unused recipes database
+
+- **Scope:** Delete the unused `components/recipes.db` file at the user's
+  request.
+- **Finding:** The 104 KB SQLite file contained an empty recipe schema and
+  full-text-search tables, with zero rows and no references from `index.js`,
+  components, guides or package handlers.
+- **Change:** Removed `components/recipes.db` and updated the support row to
+  record the cleanup.
+- **Validation:** Confirmed the file is absent, no active references remain,
+  and `node --check index.js` plus `git diff --check` pass. The file remains
+  recoverable from Git history.
