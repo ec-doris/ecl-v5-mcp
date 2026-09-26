@@ -30,7 +30,10 @@ If WebTools cannot run on the deployment origin, call
 workaround. That guide is a project pattern only; it is not an ECL/WebTools
 production-valid fallback.
 
-Call `guide("assets")` for the complete document setup. ECL's CSS supplies
+Call `guide("assets")` for the complete document setup. The official EC
+[WebTools resource page](https://ec.europa.eu/component-library/ec/resources/webtools/)
+describes WebTools as the separately maintained service layer; the loader and
+icon implementation remain origin-sensitive. ECL's CSS supplies
 `.ecl-icon` sizing, color, and transformations; WebTools supplies the actual
 glyph. Without the WebTools loader, `wt-icon*` classes are not defined by the
 local ECL assets and the icon will not render.

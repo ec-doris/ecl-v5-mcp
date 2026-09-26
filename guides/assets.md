@@ -106,8 +106,12 @@ deliberate font-source override and its own loading checks.
 The English positive and negative EC logos and both favicons match the pinned
 upstream resources. For another language, obtain the matching logo from the
 same release's `images/logo/positive/` or `images/logo/negative/` directory;
-do not substitute an EU logo. The older `resources-ec-favicons` package is
-marked deprecated upstream and is not copied into this package.
+do not substitute an EU logo. See `guide("logos")` for the variant and language
+contract. The older `resources-ec-favicons` package is marked deprecated
+upstream and is not copied into this package.
+
+Use `guide("images")` for content, alternative-text and media-selection
+guidance. It is distinct from the `guide("media")` utility contract.
 
 Icons are delivered by WebTools, separately from the ECL bundles. Load its
 script once and use the `span` classes and accessible labels from

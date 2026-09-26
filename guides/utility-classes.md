@@ -40,13 +40,13 @@ active breakpoint.
 | Border         | 178            | No                     | `guide("border")`     |
 | Clearfix       | 1              | No                     | `guide("clearfix")`   |
 | Dimension      | 8              | No                     | `guide("dimension")`  |
-| Disable scroll | 1              | No                     | This guide            |
+| Disable scroll | 1              | No                     | `guide("disablescroll")` |
 | Display        | 47             | Yes                    | `guide("display")`    |
 | Flex           | 190            | Yes                    | `guide("flex")`       |
 | Float          | 3              | No                     | `guide("float")`      |
 | Media          | 51             | Sizes only             | `guide("media")`      |
-| Print display  | 1              | No                     | This guide            |
-| Screen reader  | 1              | No                     | This guide            |
+| Print display  | 1              | No                     | `guide("print")`     |
+| Screen reader  | 1              | No                     | `guide("screen-reader")` |
 | Shadow         | 6              | No                     | `guide("shadow")`     |
 | Spacing        | 1,575          | Yes                    | `guide("spacing")`    |
 | Typography     | 221            | Built into type styles | `guide("typography")` |
@@ -259,56 +259,11 @@ content: ECL v5.3.1 supplies no focus-reveal companion class. Hidden text should
 clarify the same operation or content rather than give screen-reader users a
 different experience.
 
-### Disable scroll
+### Document utilities
 
-`ecl-u-disablescroll` applies `overflow: hidden !important` to the element:
-
-```html
-<html class="ecl-u-disablescroll">
-  ...
-</html>
-```
-
-For page locking, apply it to the actual scrolling element used by the
-application and remove it when the modal/overlay closes. The utility does not
-manage focus, preserve scrollbar width, remember scroll position, or initialize
-a component.
-
-## Print utilities
-
-The screen utility bundle contains:
-
-```css
-.ecl-u-print-only {
-  display: none !important;
-}
-```
-
-The dedicated print bundle instead contains:
-
-```text
-ecl-u-screen-only              display: none !important
-ecl-u-break-before-{auto|avoid|page}
-ecl-u-break-after-{auto|avoid|page}
-ecl-u-break-inside-{auto|avoid}
-```
-
-The eight break declarations are not marked `!important`, and paged-media
-support is best-effort; browsers may be unable to honor an avoid rule.
-
-Important v5.3.1 integration detail: `ecl-ec-print.css` does not reset
-`ecl-u-print-only`. If `ecl-ec-utilities.css` remains active during printing,
-`ecl-u-print-only` remains hidden. When the screen/print visibility pair is
-needed, scope the bundles to their intended media:
-
-```html
-<link rel="stylesheet" href="assets/ecl-ec-utilities.css" media="screen" />
-<link rel="stylesheet" href="assets/ecl-ec-print.css" media="print" />
-```
-
-That also means screen utility declarations are replaced by the dedicated
-print implementations during printing. Test the application's print output;
-the print spacing scale is intentionally smaller than the screen scale.
+Call `guide("disablescroll")`, `guide("print")` and
+`guide("screen-reader")` for their complete contracts. These utilities do not
+add semantic HTML, ARIA, IDs, component hooks or JavaScript.
 
 ## General rules
 

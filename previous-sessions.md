@@ -1895,3 +1895,46 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   mobile-trigger decision. Next reconcile those remaining coverage gaps and
   complete the final EC-wide delivery, dependency, accessibility and browser
   checks.
+
+### S039 — 2026-09-26 — Batch 38: coverage guides, pending action reconciliation and delivery docs
+
+- **Scope:** Reconcile the remaining utility/resource coverage rows, the
+  add-to-calendar WebTools action, the inpage-navigation runtime finding and
+  package/README delivery documentation against the pinned ECL v5.3.1 target.
+- **Reference inspection:** The official EC site and GitHub release page still
+  identify v5.3.1 as the current target. Tagged source review covered images,
+  logos, html-tag, disablescroll, screen-reader, print, glossary, WebTools,
+  eUI, add-to-calendar and inpage-navigation. The pinned inpage-navigation
+  JavaScript registers `handleClickOnToggle` twice for the mobile trigger; the
+  exact HTML/Twig therefore remain blocked pending an upstream fix or an
+  explicitly approved local runtime override.
+- **Guides and docs:** Added focused `images`, `logos`, `html-tag`,
+  `disablescroll`, `screen-reader` and `print` guides; linked them from the
+  guide index, utility/assets/icon guidance; and recorded the official glossary,
+  WebTools and eUI references. Updated the README to describe the EC-only
+  v5.3.1 MCP package and its current six-tool contract.
+- **Add-to-calendar:** The official WebTools showcase rendered the action menu
+  with Google Calendar, Office 365, Outlook, Yahoo Calendar, Apple Calendar
+  and Download .ics options. Its displayed `application/json` embed contract
+  matches the local example, so `HTML-add-to-calendar` is now Verified without
+  changing the local component file.
+- **MCP checks:** A fresh local stdio client exercised all six tools. It
+  returned 25 guide topics and 71 component IDs; eight selected guide
+  responses matched disk after `__DIR__` substitution; add-to-calendar and
+  inpage-navigation component responses matched disk; the inpage-navigation
+  family returned exactly `inpage-navigation.html.twig`; and the starter
+  retained `ECL.autoInit()`. The separate connected MCP surface was not
+  exposed in this session.
+- **Static and focused checks:** `node --check index.js` and `git diff --check`
+  passed; utility CSS selector assertions passed. `npm test -- --runInBand`
+  remains unavailable because the repository has no project test files, and
+  `npm run lint` remains unavailable because there is no ESLint configuration.
+  No Laravel code changed, so the Laravel suite was not applicable.
+- **Handoff:** Six new guide rows, nine documentation/resource rows, MCP
+  registration and support documentation are Verified. The two
+  inpage-navigation rows are explicitly Blocked by the pinned bundle defect;
+  `TWIG-layout-wrapper` remains Missing; site-header/site-footer rows remain
+  Updated; and support-ignore, recipes, page examples, media and lockfile
+  rows remain Review. Next run the final EC-wide delivery, dependency,
+  accessibility and browser checks and resolve or explicitly exclude each
+  remaining pending row.

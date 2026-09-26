@@ -89,10 +89,12 @@ Returns a focused guide by its filename topic:
 }
 ```
 
-Current topics are `assets`, `background`, `border`, `clearfix`, `colours`,
-`dimension`, `display`, `flex`, `float`, `grid`, `icons`, `media`, `shadow`,
-`spacing`, `start`, `typography`, `utility-classes`, and `z-index`. Use
-`guide_list` rather than assuming a topic exists.
+Current topics include `assets`, `background`, `border`, `clearfix`, `colours`,
+`dimension`, `disablescroll`, `display`, `flex`, `float`, `grid`, `html-tag`,
+`icons`, `icons-without-webtools`, `images`, `logos`, `media`, `print`,
+`screen-reader`, `shadow`, `spacing`, `start`, `typography`,
+`utility-classes`, and `z-index`. Use `guide_list` rather than assuming a topic
+exists; it is the authoritative list.
 
 ## Recommended workflow
 
@@ -115,7 +117,8 @@ Inter fallbacks resolve. The normal EC setup includes:
 
 - reset, main component, color-mode, utility, and print CSS;
 - the EC browser JavaScript bundle;
-- the WebTools loader for icons;
+- the WebTools loader for icons and WebTools-managed actions such as Add to
+  calendar;
 - Duet Date Picker when the datepicker is used;
 - favicons and EC logo assets.
 
@@ -165,6 +168,11 @@ Use the focused guides instead of guessing class names. Common calls are:
 - `guide("display")` and `guide("flex")` for responsive layout;
 - `guide("typography")` and `guide("colours")` for text and color modes;
 - `guide("icons")` for WebTools families and accessibility;
+- `guide("images")` and `guide("logos")` for EC visual-content and branding
+  decisions;
+- `guide("html-tag")` for the optional bare-tag preset;
+- `guide("disablescroll")`, `guide("print")` and `guide("screen-reader")` for
+  document utilities;
 - `guide("utility-classes")` for a cross-guide inventory.
 
 Prefer a component's built-in layout and spacing before layering utilities on
@@ -226,8 +234,10 @@ examples are already rendered and contain no Twig syntax.
 - Unstyled utility: confirm `ecl-ec-utilities.css` is loaded before the main EC
   stylesheet, with the media attribute for the intended output, and that the
   class exists in the relevant focused guide. Some utilities use `!important`.
-- Missing icon: load `https://webtools.europa.eu/load.js` and use the correct
-  standard or family-specific class pattern from `guide("icons")`.
+- Missing icon or WebTools-managed action: load
+  `https://webtools.europa.eu/load.js` on an approved origin and use the
+  relevant contract from `guide("icons")` or the component guide. The loader
+  is external and origin-sensitive.
 - Interactive component does nothing: verify `assets/ecl-ec.js`, the exact
   `data-ecl-auto-init` value and hooks, and the `ECL.autoInit()` call.
 - Broken ARIA relationship: make the instance IDs unique and update every
@@ -243,3 +253,10 @@ the ECL version. Content-file edits are read on each tool call; changes to
 `index.js` require a server restart or client reconnect.
 
 Setup reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/).
+
+For terminology and related EC resources, consult the official
+[glossary](https://ec.europa.eu/component-library/ec/resources/glossary/),
+[eUI resource](https://ec.europa.eu/component-library/ec/resources/eui/) and
+[WebTools resource](https://ec.europa.eu/component-library/ec/resources/webtools/)
+pages. They are reference links, not additional MCP tools or implementation
+scope.
