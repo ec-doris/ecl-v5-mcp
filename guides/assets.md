@@ -159,5 +159,5 @@ application's easy-to-read content rather than loading it on every page.
 
 Reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/)
 and the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1).
-The asset version does not certify every existing component example: the
-incremental content audit is recorded in `__DIR__/update-status.md`.
+The asset version does not certify every component adaptation: verify the
+consuming application's rendered markup and behavior before release.

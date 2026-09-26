@@ -7,9 +7,7 @@ so guide and example edits are visible without rebuilding the server.
 
 The ECL content target is v5.3.1 at commit
 `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`; the MCP package version is
-independent. This repository is updated incrementally. See
-[update-status.md](update-status.md) for audited rows and
-[previous-sessions.md](previous-sessions.md) for the handoff history.
+independent.
 
 ## Installation
 

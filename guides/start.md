@@ -2,11 +2,9 @@
 
 This server provides static EC HTML examples, Twig templates, a starter page,
 bundled CSS/JavaScript/assets, focused guides, and a reusable ECL implementation
-skill. The shared assets target
-**ECL v5.3.1**; the existing examples and other guides are being audited in
-batches from the v5.0.1 baseline. Consult `__DIR__/update-status.md` for each
-item’s verification status. The server does not render arbitrary component
-parameters. Use the eight tool names below; it does not expose tools named
+skill. The shared assets and reference materials target **ECL v5.3.1**. The
+server does not render arbitrary component parameters. Use the eight tool names
+below; it does not expose tools named
 `get_component_examples` or `get_component`.
 
 ## Reusable agent skill
