@@ -61,13 +61,14 @@ Returns a JSON object of matching Twig filenames and source text:
 ```
 
 Use this when inspecting templates for a Twig application, checking their
-recorded version first. The current handler matches filename prefixes: `file`
-also returns `file-upload`, and `site-footer` also returns the EU footer. Select
-the intended EC family and its helpers; do not install every returned entry
-unconditionally. Imported ECL components remain separate dependencies. Tooltip
-has no standalone Twig template, so `component_template("tooltip")` currently
-fails; use its HTML example. These delivery issues remain tracked for a later
-batch. For plain HTML, use `component` instead.
+recorded version first. The current handler uses explicit EC template families:
+`file` does not include `file-upload`, and `site-footer` returns only the EC
+footer and section helpers. Imported ECL components remain separate
+dependencies. Tooltip has no standalone Twig template, so
+`component_template("tooltip")` currently fails; use its HTML example. The
+layout-wrapper Twig helper is an upstream layout reference and is intentionally
+not part of the active component contract. For plain HTML, use `component`
+instead.
 
 ### `guide_list`
 

@@ -1938,3 +1938,47 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   rows remain Review. Next run the final EC-wide delivery, dependency,
   accessibility and browser checks and resolve or explicitly exclude each
   remaining pending row.
+
+### S040 — 2026-09-26 — Batch 39: final delivery, accessibility and scope audit
+
+- **Scope:** Complete the final EC-wide delivery audit for site-header and
+  site-footer HTML/Twig, layout-wrapper coverage, package/provenance rows,
+  example media and non-exposed page examples.
+- **Release check:** The official EC site and GitHub release list still show
+  v5.3.1 as the current release. The pinned v5.3.1 changelog contains the
+  layout-wrapper spacing fix and the site-header missing-search-form guard;
+  no newer target was adopted.
+- **Site-wide verification:** Site-header and site-footer HTML have no
+  duplicate IDs or missing ARIA/label references. The header retains all three
+  EC variants; the footer retains the EC core/harmonised and 15 color-mode
+  roots without EU-branded output. The four EC site-wide Twig files match the
+  pinned source, with only the previously recorded trailing-whitespace
+  normalization in the section helper. Direct browser accessibility trees
+  exposed the expected header/footer controls and links; the starter Search
+  opened/focused its field and closed on Escape, and Menu opened/closed with
+  focus movement.
+- **Scope decisions:** The upstream layout-wrapper is a layout helper with no
+  local caller or active MCP template-family contract, so it is explicitly
+  Excluded rather than copied without a page/layout tool. The six upstream page
+  examples and opaque `recipes.db` are likewise reference/unused data outside
+  the active six-tool EC contract. All component media references were scanned:
+  upstream demo media remains external, bundled EC branding remains local, and
+  the images guide records the replacement/licensing responsibility.
+- **Package checks:** `npm ci --dry-run --ignore-scripts` passed; the upstream
+  symlink is ignored and absent from the package dry-run. `node --check
+  index.js`, `git diff --check`, and the v5.3.1 utility selector assertions
+  passed. No dependency or asset changes were needed. No Laravel code changed,
+  so the Laravel suite was not applicable. The declared Jest command still
+  finds no project test files, and the declared ESLint command still has no
+  configuration, so both remain unavailable as conformance checks.
+- **MCP checks:** A fresh S040 local stdio client exercised all six tools,
+  25 guides, 71 components, nine selected guide responses, four affected
+  component responses, the inpage/site-header/site-footer template families
+  and starter initialization. The separate connected MCP surface was not
+  exposed in this session.
+- **Handoff:** There are no remaining Review, Updated, Missing or In progress
+  rows. The two inpage-navigation rows remain Blocked because the pinned
+  `assets/ecl-ec.js` double-registers the mobile trigger listener; next action
+  is an upstream bundle fix or an explicitly approved local runtime override.
+  On a future release refresh, recheck the pinned target and revisit excluded
+  layout/page/recipes scope only if the MCP contract is intentionally expanded.
