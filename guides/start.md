@@ -1,11 +1,25 @@
 # Building with the ECL EC MCP Server
 
 This server provides static EC HTML examples, Twig templates, a starter page,
-bundled CSS/JavaScript/assets, and focused guides. The shared assets target
+bundled CSS/JavaScript/assets, focused guides, and a reusable ECL implementation
+skill. The shared assets target
 **ECL v5.3.1**; the existing examples and other guides are being audited in
 batches from the v5.0.1 baseline. Consult `__DIR__/update-status.md` for each
 item’s verification status. The server does not render arbitrary component
-parameters. Use the six tool names below; it does not expose tools named `get_component_examples` or `get_component`.
+parameters. Use the eight tool names below; it does not expose tools named
+`get_component_examples` or `get_component`.
+
+## Reusable agent skill
+
+Call `skill_list` to discover the available implementation skills and
+`skill_get` with `id: "ecl-component-development"` to retrieve the complete
+`SKILL.md` file. The skill is intended for incorporation into the consuming
+project's own agent skills directory. It tells an agent how to create reusable
+local ECL components from the server's rendered HTML and Twig foundations,
+including ECL's whitespace-sensitive markup conventions.
+
+The server returns the file content; installation into a particular agent's
+skills directory remains a client- or project-specific operation.
 
 ## Available MCP tools
 
@@ -89,6 +103,44 @@ Returns a focused guide by its filename topic:
   "parameters": { "topic": "spacing" }
 }
 ```
+
+### `skill_list`
+
+Returns the reusable agent skills provided by this server, including their IDs,
+descriptions, files, resource URIs, and valid `skill_get` calls:
+
+```json
+{ "tool": "skill_list", "parameters": {} }
+```
+
+### `skill_get`
+
+Returns the complete `SKILL.md` content for a skill. Save the returned text as
+the skill's `SKILL.md` in the consuming project's supported skills directory
+when the project chooses to install it:
+
+```json
+{
+  "tool": "skill_get",
+  "parameters": { "id": "ecl-component-development" }
+}
+```
+
+## MCP resources
+
+Clients that support MCP resources can read the same content without using a
+tool call. Resources are read-only and are useful for documents that the agent
+may cite, attach, cache, or load on demand. The server exposes:
+
+- `ecl://skill/ecl-component-development`
+- `ecl://starter-template`
+- `ecl://guide/{topic}`
+- `ecl://component/{id}/html`
+- `ecl://component/{id}/twig/{filename}`
+
+The tool and resource paths intentionally overlap. Tools are the compatibility
+path for clients that do not support resources; resources provide a better
+document-oriented path for templates, examples, guides, and the skill itself.
 
 Current topics include `assets`, `background`, `border`, `clearfix`, `colours`,
 `dimension`, `disablescroll`, `display`, `flex`, `float`, `grid`, `html-tag`,

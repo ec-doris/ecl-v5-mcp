@@ -26,8 +26,10 @@ node node_modules/ecl-v5-mcp/index.js
 ```
 
 This server is designed to be used with MCP clients that communicate via stdio.
-It registers six tools: `guide`, `guide_list`, `components_list`, `component`,
-`component_template` and `starter_template`.
+It registers eight tools: `guide`, `guide_list`, `components_list`, `component`,
+`component_template`, `starter_template`, `skill_list` and `skill_get`.
+It also exposes the same read-only content as MCP resources for clients that
+support `resources/list` and `resources/read`.
 
 Configure the client to connect to this server for MCP tool calls.
 
@@ -50,10 +52,27 @@ Be sure to use the full path of the `index.js` file.
 
 ## Working with the content
 
-Call `guide_list` and `components_list` first. Use `component` for rendered HTML
-examples, `component_template` for the exact available EC Twig family, and
-`starter_template` for a complete page shell. The guides cover the v5.3.1
-assets, utilities, colours, icons, branding, images and runtime setup.
+Call `skill_list` and `skill_get` when the consuming agent needs the reusable ECL
+implementation workflow. Then call `guide_list` and `components_list` first.
+Use `component` for rendered HTML examples, `component_template` for the exact
+available EC Twig family, and `starter_template` for a complete page shell. The
+guides cover the v5.3.1 assets, utilities, colours, icons, branding, images and
+runtime setup.
+
+The ECL skill is intended to be incorporated into the consuming project's own
+agent skills directory. It instructs an agent to build reusable local ECL
+components from the server's HTML and Twig foundations; it does not ask the
+agent to copy the MCP repository's component catalogue into the application.
+
+When supported by the MCP client, read-only resources are available at:
+
+- `ecl://skill/ecl-component-development`
+- `ecl://starter-template`
+- `ecl://guide/{topic}`
+- `ecl://component/{id}/html`
+- `ecl://component/{id}/twig/{filename}`
+
+Tools remain available for clients without MCP resource support.
 
 The `europa-component-library` symlink is a separate upstream checkout used for
 tagged-source comparison during maintenance. It is not a runtime dependency
