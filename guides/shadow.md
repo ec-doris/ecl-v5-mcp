@@ -1,7 +1,9 @@
-# ECL Shadow Utilities (EC preset, v5.0.1)
+# ECL Shadow Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+shadow package metadata from the earlier v5.0.1 evidence, but the EC shadow
+source, theme values, print source and story behavior remain unchanged.
 
 The EC preset provides five drop-shadow elevations and one reset class. It does
 not provide responsive, inset, inner, or negative shadow utilities.
@@ -20,8 +22,9 @@ Call `guide("assets")` for the complete asset setup. The six utility rules are
 not in `ecl-ec.css`; they are also included in `ecl-ec-print.css`. No JavaScript
 is required.
 
-When compiling from Sass, use `@ecl/utility-shadow` and its `shadow.scss` entry
-point.
+When compiling from Sass, use the v5.3.1 `@ecl/utility-shadow` package and its
+`shadow.scss` entry point. The EC theme supplies the six public drop-shadow
+values documented below; other themes can expose additional generic families.
 
 ## Classes and EC values
 
@@ -65,7 +68,7 @@ CSS source order rather than HTML class order.
 
 ## Scope and limitations
 
-- EC v5.0.1 emits exactly these six non-responsive classes. Names such as
+- EC v5.3.1 emits exactly these six non-responsive classes. Names such as
   `ecl-u-shadow-inner-1`, `ecl-u-shadow-negative-1`, or
   `ecl-u-shadow-m-2` are not present in the EC assets.
 - The shared Sass utility can generate additional families when a theme defines

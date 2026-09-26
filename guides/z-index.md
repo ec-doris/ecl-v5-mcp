@@ -1,7 +1,9 @@
-# ECL Z-index Utilities (EC preset, v5.0.1)
+# ECL Z-index Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+z-index package metadata from the earlier v5.0.1 evidence, but the EC map,
+Sass source, story and usage contract remain unchanged.
 
 The EC preset provides six non-responsive stacking-order utilities. They set
 only `z-index` and do not establish positioning. Whether the value participates
@@ -20,8 +22,8 @@ Call `guide("assets")` for the complete asset setup. These rules are not in
 `ecl-ec.css` and are also present in `ecl-ec-print.css`. No JavaScript or color
 mode stylesheet is required.
 
-When compiling Sass, use `@ecl/utility-z-index` and its `z-index.scss` entry
-point with the EC theme.
+When compiling Sass, use the v5.3.1 `@ecl/utility-z-index` package and its
+`z-index.scss` entry point with the EC theme.
 
 ## Exact EC classes
 
@@ -34,7 +36,7 @@ point with the EC theme.
 | `ecl-u-z-overlay`    | `z-index: 100 !important`  | Overlay-layer content              |
 | `ecl-u-z-max`        | `z-index: 9999 !important` | Exceptional always-on-top content  |
 
-The compiled v5.0.1 EC assets contain no `ecl-u-z-auto` or
+The compiled v5.3.1 EC assets contain no `ecl-u-z-auto` or
 `ecl-u-z-zero` classes. The shared utility README is stale for the EC theme: it
 also says modal is 20 and omits overlay, while the EC theme and compiled CSS use
 the table above. To reset a utility, remove it; use a project rule if an

@@ -1679,3 +1679,59 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
   remain pending. Next take `GUIDE-media`, `GUIDE-shadow` and `GUIDE-z-index`,
   then continue the remaining utility/design guides, coverage gaps and final
   EC-wide delivery checks.
+
+### S034 — 2026-09-26 — Batch 33: media, shadow and z-index utility guides
+
+- **Scope:** `GUIDE-media`, `GUIDE-shadow` and `GUIDE-z-index`, the next
+  recommended utility/design batch. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** the official [EC component library](https://ec.europa.eu/component-library/ec/)
+  still reports v5.3.1. Tagged review covered the media, shadow and z-index
+  Sass, READMEs, Storybook stories, EC usage/showcase files, package metadata,
+  EC media/z-index/shape maps and the
+  [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md).
+  Media, shadow and z-index source/story files are unchanged from v5.0.1 to
+  v5.3.1; media package metadata and its `@ecl/grid` dependency, plus shadow
+  and z-index package versions, move to 5.3.1. The release changelog has no
+  behavior change for these utilities.
+- **Media guide:** `guides/media.md` now identifies the pinned target and
+  records the six size families across the five EC breakpoints, 77px/100px
+  tokens, four ratios, wrapper/content/iframe behavior, 16 background controls,
+  main/utility/print delivery and the stale upstream `md`/`lg` showcase prose
+  that conflicts with the generated `s/m/l/xl` selectors.
+- **Shadow guide:** `guides/shadow.md` now identifies the pinned target and
+  records the six EC drop-shadow classes, exact `#18274b` theme layers and
+  `--sh-*` aliases, print behavior, EC-only absence of inner/negative families,
+  and the generic shared Sass capability for other themes.
+- **Z-index guide:** `guides/z-index.md` now identifies the pinned target and
+  records the six EC classes and exact values: highlight 1, navigation 10,
+  dropdown 15, modal 50, overlay 100 and max 9999. It explicitly preserves
+  the EC source/compiled values over the stale shared README's auto/zero and
+  modal-20 claims, and documents positioning and stacking-context limits.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 18 guide topics and 71 component IDs; all three selected guide
+  responses matched disk after `__DIR__` substitution and their snippets
+  exposed v5.3.1; the starter retained `ECL.autoInit()`; and the tooltip
+  no-template contract remained intact. The separate connected MCP surface
+  was not exposed in this session.
+- **Static checks:** tagged source/package/changelog review and compiled asset
+  assertions passed for 30 media size classes, four ratio wrappers, the media
+  content helper and 16 background classes in utility/main/print bundles; all
+  six shadow classes and exact theme values in utility/main/print delivery; all
+  six z-index classes and values in utility/print delivery with no z-index
+  utility selectors in the main bundle; and absence of `md`/`lg` media
+  selectors. `node --check index.js` and `git diff --check` passed. No
+  component markup, JavaScript behavior or assets changed, so a browser smoke
+  was not applicable to this documentation-only batch.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable as a
+  conformance suite because the repository has no project test files; `npm run
+  lint` remains unavailable because there is no ESLint configuration. No
+  Laravel code changed, so the Laravel suite was not applicable. No commit,
+  push or publication was made.
+- **Handoff:** all three S034 rows are Verified. `HTML-add-to-calendar` remains
+  Updated pending external WebTools action delivery; the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision; and GUIDE-assets and GUIDE-icons WebTools rendering
+  remain pending. Next take `GUIDE-spacing` and `GUIDE-typography`, then
+  continue the remaining utility/design guides, coverage gaps and final EC-wide
+  delivery checks.

@@ -1,7 +1,9 @@
-# ECL Media Utilities (EC preset, v5.0.1)
+# ECL Media Utilities (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+media package metadata and its grid dependency from the earlier v5.0.1
+evidence, but the media Sass, story and EC showcase contract remain unchanged.
 
 Media utilities provide fixed width/height tokens, four aspect-ratio wrappers,
 and background-image controls. They can be used with images, embeds, or ordinary
@@ -19,8 +21,9 @@ Call `guide("assets")` for the complete asset setup. The supplied EC build also
 contains these rules in `ecl-ec.css` and `ecl-ec-print.css`. No JavaScript is
 required.
 
-When compiling from Sass, use `@ecl/utility-media`; its entry point is
-`media.scss` and it depends on `@ecl/grid` for breakpoints.
+When compiling from Sass, use the v5.3.1 `@ecl/utility-media` package; its
+entry point is `media.scss` and it depends on `@ecl/grid` v5.3.1 for
+breakpoints.
 
 ## Fixed media sizes
 
@@ -75,7 +78,9 @@ The breakpoint infix comes before the size token. For example:
 ```
 
 Use ECL breakpoint names `s`, `m`, `l`, and `xl`; `md` and `lg` forms do not
-exist in the v5.0.1 CSS.
+exist in the v5.3.1 CSS. The pinned EC website showcase source still contains
+`md`/`lg` examples in this section; those examples do not match the generated
+selectors and are intentionally corrected here.
 
 ## Aspect-ratio wrappers
 
@@ -185,7 +190,7 @@ accessible description or content elsewhere.
   ratio wrapper's `display`, direct-iframe rules, and a few positioning rules.
 - Ratios and background controls have no responsive variants; only fixed media
   sizes are generated per breakpoint.
-- The compiled bundle contains 30 size classes, four ratio wrapper classes,
+- The compiled v5.3.1 bundle contains 30 size classes, four ratio wrapper classes,
   `ecl-u-media-content`, and 16 background classes.
 - These utilities do not set `object-fit`, `object-position`, an image source,
   loading behavior, captions, or accessible names.
