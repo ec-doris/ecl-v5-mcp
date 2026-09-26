@@ -1,7 +1,10 @@
-# ECL Icons (EC preset, v5.0.1)
+# ECL Icons (EC preset, v5.3.1)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`; the class/token audit below remains at its stated baseline.
+This guide is audited against the EC preset at v5.3.1, pinned to commit
+`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The target icon Sass and Twig
+contracts are unchanged from the checked-in v5.0.1 evidence; the `@ecl/icon`
+and `@ecl/resources-icons` packages move to v5.3.1 and the Storybook notes now
+reflect the selected controls.
 
 ECL icons are WebTools-rendered glyphs styled and sized by ECL. Their markup is
 a `<span>` containing a WebTools icon class, the ECL base and size classes, and
@@ -16,13 +19,16 @@ Load the EC component CSS and the WebTools loader:
 <script src="https://webtools.europa.eu/load.js"></script>
 ```
 
-In order for Icons to actually display or webtools to even load, the domain 
-of the site has to be localhost or end with "*.europa.eu". Icons are used in 
-many places, like breadcrumbs, mobile navigation, language menu, search, ...
+The WebTools loader is origin-sensitive: in the verified smoke, `localhost` and
+the official `*.europa.eu`/WebTools origins loaded successfully. Icons are used
+in many places, including breadcrumbs, mobile navigation, language menus and
+search. This MCP does not bundle a fallback SVG icon set for non-whitelisted
+origins.
 
-If you want icons to work without being on a whitelisted domain, it is possible.
-However, it is also very complicated. Most vibe coding tools should be able
-to do it.
+If WebTools cannot run on the deployment origin, call
+`guide("icons-without-webtools")` for an explicitly unsupported local-asset
+workaround. That guide is a project pattern only; it is not an ECL/WebTools
+production-valid fallback.
 
 Call `guide("assets")` for the complete document setup. ECL's CSS supplies
 `.ecl-icon` sizing, color, and transformations; WebTools supplies the actual
@@ -39,8 +45,10 @@ For reusable examples from this MCP server, call the real `component` tool with
 }
 ```
 
-When compiling ECL packages, the Twig component is `@ecl/icon` and the icon
-name inventories are published by `@ecl/resources-icons`.
+When compiling ECL packages, the Twig component is `@ecl/icon` v5.3.1 and the
+icon name inventories are published by `@ecl/resources-icons` v5.3.1. The
+tagged resource inventories contain 115 standard names, 29 network names and
+28 EU-member flag entries; the lists below mirror those v5.3.1 files.
 
 ## Standard icon markup
 
@@ -157,7 +165,7 @@ For an icon-only control, name the control and keep the glyph hidden:
 </button>
 ```
 
-When a standalone icon itself must be exposed as an image, the v5.0.1 Twig
+When a standalone icon itself must be exposed as an image, the v5.3.1 Twig
 component uses `aria-hidden="false"`, `role="img"`, and a `title` attribute:
 
 ```html
@@ -174,7 +182,10 @@ word “icon.” The Twig inputs are `as_image`, `icon.title` (or
 `extra_accessibility.title`), and optional `extra_accessibility.description`,
 which is output as `data-desc`. Supplying a title automatically selects image
 semantics. Prefer visible text or an accessible name on the containing control
-where possible.
+where possible. `as_image` without a title only changes `aria-hidden`; provide
+an explicit role and accessible title when complete image semantics are needed.
+The documented `title_id` and `description_id` inputs are not emitted by the
+v5.3.1 Twig template, so do not rely on them for relationships.
 
 ## Standard icons
 

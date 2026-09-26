@@ -1802,3 +1802,96 @@ If verification is incomplete, leave `Updated`/`Blocked` with an actionable note
 - **Static checks:** exact screen/print totals and family counts passed; `node --check index.js` and `git diff --check` passed.
 - **Focused checks:** `npm test -- --runInBand` remains unavailable because the repository has no project test files; `npm run lint` remains unavailable because there is no ESLint configuration. No Laravel code changed, so the Laravel suite was not applicable. No component markup, JavaScript behavior or assets changed, so browser smoke was not applicable. No commit or push was made.
 - **Handoff:** `GUIDE-utility-classes` is Verified. `GUIDE-icons` remains Needs update and its WebTools loader remains blocked by ORB; pending add-to-calendar WebTools delivery, the inpage-navigation mobile-trigger decision and GUIDE-assets remain visible. Next take `GUIDE-icons`, then reconcile the remaining coverage gaps and final EC-wide delivery checks.
+
+### S037 — 2026-09-26 — Batch 36: icons and WebTools delivery
+
+- **Scope:** `GUIDE-icons`, plus the pending WebTools loader verification for
+  `GUIDE-assets`. The pinned target remains v5.3.1 at commit
+  `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+- **Sources:** the official [EC component library](https://ec.europa.eu/component-library/ec/)
+  and its [icon usage page](https://ec.europa.eu/component-library/ec/components/icon/usage/)
+  still report v5.3.1; the [iconography guideline](https://ec.europa.eu/component-library/ec/guidelines/iconography/)
+  and [WebTools icon showcase](https://webtools.europa.eu/showcase/demo/?comp=icons&section=about&demo=how_to_use)
+  were opened read-only; and the [v5.3.1 changelog](https://github.com/ec-europa/europa-component-library/blob/v5.3.1/CHANGELOG.md)
+  was reviewed. Tagged review covered icon Sass/print Sass, Twig, README,
+  Storybook, demo data, tests/snapshots, package metadata, EC icon maps,
+  resource inventories, usage/accessibility/code pages and iconography.
+  Icon source and inventories are unchanged from the checked-in v5.0.1
+  evidence; `@ecl/icon` and `@ecl/resources-icons` metadata move to 5.3.1.
+- **Guide:** `guides/icons.md` now identifies v5.3.1 and the pinned commit,
+  records the 115 standard, 29 network and 28 EU-member flag inventories,
+  package provenance, WebTools origin requirement, exact screen/print sizes,
+  colors, transforms, family naming and accessibility behavior. It records
+  that `as_image` alone does not add complete image semantics and that the
+  documented `title_id`/`description_id` inputs are not emitted by the target
+  Twig template.
+- **Example:** corrected the network-family sample in
+  `components/icon.html` from the legacy unqualified names to the target
+  `wt-icon-networks--facebook` / `ecl-icon-networks--facebook` classes. The
+  local Twig file remains byte-identical to the tagged v5.3.1 source.
+- **Browser checks:** the official WebTools showcase rendered its clock,
+  social and flag demo glyphs. A temporary localhost smoke page loaded the
+  supplied reset, utilities, EC, color-mode and WebTools loader assets and
+  visibly rendered the local icon example, including the corrected network
+  family. The temporary server and browser page were removed after testing.
+- **MCP checks:** a fresh local stdio client exercised all six tools. It
+  returned 18 guide topics and 71 component IDs; the icons guide and component
+  responses matched disk after `__DIR__` substitution; the icon family
+  returned exactly `icon.html.twig`; the guide snippet exposed v5.3.1; and the
+  starter retained `ECL.autoInit()`. The separate connected MCP surface was not
+  exposed in this session.
+- **Static checks:** tagged lists matched exactly: 115 standard, 29 network
+  and 28 flag names. The target Twig matched byte-for-byte; all 15 EC color
+  modes, accessibility branches, extension attributes, eight screen/print
+  size classes, color and transform selectors passed. `node --check index.js`
+  and `git diff --check` passed. No Laravel code changed, so the Laravel suite
+  was not applicable.
+- **Focused checks:** `npm test -- --runInBand` remains unavailable because
+  the repository has no project test files; `npm run lint` remains unavailable
+  because there is no ESLint configuration. No commit, push or publication was
+  made.
+- **Handoff:** `GUIDE-assets` and `GUIDE-icons` are Verified. `HTML-add-to-calendar`
+  remains Updated pending external WebTools action delivery, and the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision. Next reconcile the remaining coverage gaps and
+  final EC-wide delivery, dependency, accessibility and browser checks.
+
+### S038 — 2026-09-26 — Batch 37: unsupported local-icon workaround guide
+
+- **Scope:** Add the requested `Icons without WebTools` guide and link it from
+  the supported icon guide. This is an application-owned workaround guide, not
+  a new ECL/WebTools-supported asset delivery.
+- **Reference inspection:** Read-only inspection covered local WebTools icon
+  CSS, an SVG symbol sprite, a marker-based hydration wrapper and a
+  component-helper utility. The marker pattern hydrates SVG child nodes from
+  `--wt-icon...` CSS variables; the component utility parses the same
+  variables into component-owned inline SVG markup. The captured sprite
+  exposes symbol IDs such as `audio` and `search` for a local `<use>`
+  implementation.
+- **Guide:** Added `guides/icons-without-webtools.md` with a prominent
+  unsupported/non-production-valid disclaimer, source capture and hash
+  ownership, local sprite references, CSS-variable hydration, component helper
+  patterns, loading order, CSP/same-origin risks, accessibility/fallback
+  checks and upgrade responsibilities. Added the cross-link to
+  `guides/icons.md` without changing the supported icon contract.
+- **MCP checks:** A fresh local stdio client exercised all six tools. It
+  returned 19 guide topics and 71 component IDs; both icon guide responses
+  matched disk after `__DIR__` substitution; the new guide was discoverable
+  and contained the disclaimer plus sprite/CSS-hydration sections; the icon
+  component response and exact `icon.html.twig` family key remained correct;
+  and the starter retained `ECL.autoInit()`. The separate connected MCP
+  surface was not exposed in this session.
+- **Static checks:** `node --check index.js` and `git diff --check` passed.
+  The focused Jest command remains unavailable because the repository has no
+  test files; the lint command remains unavailable because no ESLint
+  configuration exists. No Laravel code changed, so the Laravel suite was not
+  applicable. No component markup, JavaScript behavior or shipped assets
+  changed, so browser smoke was not applicable.
+- **Handoff:** `GUIDE-icons-without-webtools` is Verified as documentation
+  delivery only and is explicitly excluded from the v5.3.1 ECL content count.
+  `GUIDE-assets` and `GUIDE-icons` remain Verified. `HTML-add-to-calendar`
+  remains Updated pending external WebTools action delivery, and the two S015
+  inpage-navigation rows remain Updated pending the pinned bundle's duplicate
+  mobile-trigger decision. Next reconcile those remaining coverage gaps and
+  complete the final EC-wide delivery, dependency, accessibility and browser
+  checks.
