@@ -169,9 +169,14 @@ server.registerTool(
     },
   },
   async ({ topic }) => {
-    const filePath = join(__dirname, "guides", `${topic}.md`);
+    const file = `${topic}.md`;
     try {
-      const content = await readFileContent(filePath);
+      // Only serve advertised files; rejects path traversal such as "../x".
+      const files = await readDir(join(__dirname, "guides"));
+      if (!files.includes(file)) {
+        throw new Error(`Unknown guide '${topic}'`);
+      }
+      const content = await readFileContent(join(__dirname, "guides", file));
       const processedContent = content.replace(/__DIR__/g, __dirname);
       return {
         content: [{ type: "text", text: processedContent }],
@@ -304,9 +309,16 @@ server.registerTool(
     },
   },
   async ({ id }) => {
-    const filePath = join(__dirname, "components", `${id}.html`);
+    const file = `${id}.html`;
     try {
-      const content = await readFileContent(filePath);
+      // Only serve advertised files; rejects path traversal such as "../x".
+      const files = await readDir(join(__dirname, "components"));
+      if (!files.includes(file)) {
+        throw new Error(`Unknown component '${id}'`);
+      }
+      const content = await readFileContent(
+        join(__dirname, "components", file),
+      );
       return {
         content: [{ type: "text", text: content }],
       };

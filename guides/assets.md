@@ -1,13 +1,18 @@
 # ECL EC assets — v5.3.1
 
 The bundled EC CSS and JavaScript come from the official v5.3.1 release at
-commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. Copy both directories from
-this MCP package into your application, keeping them as siblings:
+commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. Copy (or download) both
+directories from this MCP server into your application, keeping them as
+siblings:
 
 ```text
 __DIR__/assets/*
 __DIR__/fonts/*
 ```
+
+The location above is a local path when the server runs over stdio, or an
+HTTP(S) URL when it runs over HTTP. Over HTTP, fetch each file listed below
+from that URL; the server does not provide directory listings.
 
 ## Included files and pinned source
 
