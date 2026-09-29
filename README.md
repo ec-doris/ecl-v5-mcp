@@ -153,13 +153,17 @@ runtime setup.
 
 The ECL skill is intended to be incorporated into the consuming project's own
 agent skills directory. It instructs an agent to build reusable local ECL
-components from the server's HTML and Twig foundations; it does not ask the
-agent to copy the MCP repository's component catalogue into the application.
+components from the server's HTML and Twig foundations.
 
-The `europa-component-library` symlink is a separate upstream checkout used for
-tagged-source comparison during maintenance. It is not a runtime dependency
-and is not copied into the published package. The active MCP contract is EC
-only; legacy EU files retained for traceability are not advertised.
+When supported by the MCP client, read-only resources are available at:
+
+- `ecl://skill/ecl-component-development`
+- `ecl://starter-template`
+- `ecl://guide/{topic}`
+- `ecl://component/{id}/html`
+- `ecl://component/{id}/twig/{filename}`
+
+Tools remain available for clients without MCP resource support.
 
 For the supported page setup, copy the `assets/` and `fonts/` directories as
 siblings (or download them from the HTTP server), load the dependencies
