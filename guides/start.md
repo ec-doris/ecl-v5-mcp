@@ -163,7 +163,7 @@ Compare it with the starter and add only missing ECL prerequisites.
 ### 2. Copy and load the assets
 
 Call `guide("assets")` and follow its copy paths and load order. In summary, the
-package's `assets/` and `fonts/` directories must remain siblings so the local
+server's `assets/` and `fonts/` directories must remain siblings so the local
 Inter fallbacks resolve. The normal EC setup includes:
 
 - reset, main component, color-mode, utility, and print CSS;
@@ -300,8 +300,8 @@ examples are already rendered and contain no Twig syntax.
 The shared assets are from ECL v5.3.1, pinned to commit
 `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The provenance manifest is not
 shipped because it is not needed by the MCP runtime. Content-file edits are read
-on each tool call; changes to `index.js` require a server restart or client
-reconnect.
+on each tool call; changes to server code (`index.js` or the Python package in
+`src/`) require a server restart or client reconnect.
 
 Setup reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/).
 

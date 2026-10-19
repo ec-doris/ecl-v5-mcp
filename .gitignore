@@ -61,4 +61,12 @@ Thumbs.db
 dist/
 build/
 
+# Python (FastMCP HTTP server)
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
 europa-component-library

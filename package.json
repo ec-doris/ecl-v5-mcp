@@ -4,6 +4,15 @@
     "description": "MCP server for ECL V5 components and guides",
     "type": "module",
     "main": "index.js",
+    "files": [
+        "index.js",
+        "components/",
+        "guides/",
+        "skills/",
+        "assets/",
+        "fonts/",
+        "starter-template.html"
+    ],
     "scripts": {
         "start": "node index.js",
         "test": "jest",
