@@ -1,7 +1,7 @@
-# ECL Float Utilities (EC preset, v5.3.1)
+# ECL Float Utilities (EC preset, v5.4.0)
 
-This guide is audited against the EC preset at v5.3.1, pinned to commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The v5.3.1 release changes the
+This guide is audited against the EC preset at v5.4.0, pinned to commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The v5.4.0 release changes the
 utility package metadata from the earlier v5.0.1 evidence, but the float Sass
 contract and EC usage page remain unchanged.
 
@@ -23,7 +23,7 @@ Call `guide("assets")` for the complete ECL asset setup. The float rules are in
 `ecl-ec-print.css` for print output. No JavaScript is required.
 
 If ECL is compiled from Sass packages instead of using the bundled assets, use
-the v5.3.1 `@ecl/utility-float` package and its `float.scss` entry point.
+the v5.4.0 `@ecl/utility-float` package and its `float.scss` entry point.
 
 ## Classes
 
@@ -34,7 +34,7 @@ the v5.3.1 `@ecl/utility-float` package and its `float.scss` entry point.
 | `ecl-u-f-none` | `float: none !important`  | Cancel a float applied by another rule or state.                                        |
 
 Use only one float utility on an element at a time. These classes are not
-responsive: ECL v5.3.1 provides no breakpoint variants of them.
+responsive: ECL v5.4.0 provides no breakpoint variants of them.
 
 `left` and `right` are physical directions. They do not switch automatically
 in right-to-left documents. Choose the class deliberately when directionality
@@ -98,7 +98,7 @@ wrap around it. Floated children may not contribute normally to their parent's
 height, so later content can overlap or wrap unexpectedly.
 
 Apply `ecl-u-clearfix` to the **parent** when it must contain its floated
-children. In the companion ECL v5.3.1 clearfix utility, the `::after`
+children. In the companion ECL v5.4.0 clearfix utility, the `::after`
 pseudo-element has `clear: both`, `content: ""`, and `display: block`, all
 marked `!important`.
 

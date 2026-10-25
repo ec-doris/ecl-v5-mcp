@@ -1,7 +1,7 @@
-# ECL EC assets — v5.3.1
+# ECL EC assets — v5.4.0
 
-The bundled EC CSS and JavaScript come from the official v5.3.1 release at
-commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. Copy both directories from
+The bundled EC CSS and JavaScript come from the official v5.4.0 release at
+commit `450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. Copy both directories from
 this MCP package into your application, keeping them as siblings:
 
 ```text
@@ -39,7 +39,7 @@ own component and utility styles.
 The official setup puts all optional styles before the main stylesheet. Keep
 color modes **after** the main stylesheet here: `.ecl-color-mode--*` and `:root`
 have equal specificity, so the main defaults would otherwise override a mode
-applied to `<html>`. This exception was checked against the v5.3.1 CSS; a mode
+applied to `<html>`. This exception was checked against the v5.4.0 CSS; a mode
 on a descendant container also works with this order.
 
 ```html
@@ -92,7 +92,7 @@ and initialize in the same module so initialization waits for the dependency:
 Do not follow a separate `type="module" src="..."` tag with an immediate
 classic-script `ECL.autoInit()` call: modules are deferred and ECL may not yet
 exist. Serve the page over HTTP(S) when using modules. In either setup,
-`ECL.version` reports `5.3.1` once the bundle is loaded. See `guide("start")`
+`ECL.version` reports `5.4.0` once the bundle is loaded. See `guide("start")`
 for initializing components added after the initial page render.
 
 ## Fonts, branding and icons
@@ -148,7 +148,7 @@ The upstream distribution also provides `ecl-ec-default.css` and
 `ecl-ec-default-print.css` for automatically styling supported bare HTML tags
 inside `.ecl`. These files are not bundled here: the supplied examples use
 explicit ECL classes. If your application needs this mode, obtain both files
-from the v5.3.1 release and follow the
+from the v5.4.0 release and follow the
 [HTML-tag guidance](https://ec.europa.eu/component-library/ec/utilities/html-tag/).
 Keep the screen file before the main screen stylesheet and the print partner
 before the main print stylesheet, with the respective media attributes.
@@ -158,6 +158,6 @@ examples. It targets `.ecl-easy-to-read`; adopt it deliberately for an
 application's easy-to-read content rather than loading it on every page.
 
 Reference: [official EC getting started](https://ec.europa.eu/component-library/ec/getting-started/)
-and the [v5.3.1 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.3.1).
+and the [v5.4.0 release](https://github.com/ec-europa/europa-component-library/releases/tag/v5.4.0).
 The asset version does not certify every component adaptation: verify the
 consuming application's rendered markup and behavior before release.

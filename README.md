@@ -1,12 +1,12 @@
 # ECL v5 MCP Server
 
 A Node.js MCP server that provides European Commission (EC) Europa Component
-Library examples, Twig templates, starter markup, v5.3.1 assets and focused
+Library examples, Twig templates, starter markup, v5.4.0 assets and focused
 implementation guides. Content is read from this checkout on every MCP request,
 so guide and example edits are visible without rebuilding the server.
 
-The ECL content target is v5.3.1 at commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`; the MCP package version is
+The ECL content target is v5.4.0 at commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`; the MCP package version is
 independent.
 
 ## Installation
@@ -54,7 +54,7 @@ Call `skill_list` and `skill_get` when the consuming agent needs the reusable EC
 implementation workflow. Then call `guide_list` and `components_list` first.
 Use `component` for rendered HTML examples, `component_template` for the exact
 available EC Twig family, and `starter_template` for a complete page shell. The
-guides cover the v5.3.1 assets, utilities, colours, icons, branding, images and
+guides cover the v5.4.0 assets, utilities, colours, icons, branding, images and
 runtime setup.
 
 The ECL skill is intended to be incorporated into the consuming project's own

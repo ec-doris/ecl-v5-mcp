@@ -1,5 +1,6 @@
 <!-- Default two-column navigation list with mixed link groups -->
 <div class="ecl-navigation-list ecl-navigation-list--col-2">
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <picture class="ecl-picture ecl-navigation-list__picture">
       <img
@@ -71,6 +72,8 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 
 <!-- Three-column list, root extensions, item color mode, and item extensions -->
@@ -79,6 +82,7 @@
   data-example="root-extension"
   data-root-flag
 >
+  <div class="ecl-navigation-list__items">
   <article
     class="ecl-navigation-list__item ecl-color-mode--blue-navy custom-navigation-list__item"
     data-example="item-extension"
@@ -145,10 +149,13 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 
 <!-- No border and image-as-illustration variant -->
 <div class="ecl-navigation-list ecl-navigation-list--col-2">
+  <div class="ecl-navigation-list__items">
   <article
     class="ecl-navigation-list__item ecl-navigation-list__item--no-border ecl-navigation-list__item--image-as-illustration"
   >
@@ -195,10 +202,13 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 
 <!-- Illustration variant -->
 <div class="ecl-navigation-list ecl-navigation-list--col-2">
+  <div class="ecl-navigation-list__items">
   <article
     class="ecl-navigation-list__item ecl-navigation-list__item--illustration"
   >
@@ -227,10 +237,13 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 
 <!-- Unsupported column value and empty-input contract: tagged Twig renders no root for empty items -->
 <div class="ecl-navigation-list">
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div
       class="ecl-content-block ecl-navigation-list__content-block"
@@ -242,12 +255,15 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 
 <!-- EC color modes passed through the root color_mode or extra_classes hooks -->
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--blue"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div
       class="ecl-content-block ecl-navigation-list__content-block"
@@ -264,121 +280,162 @@
       </div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--blue-electric"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Blue electric mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--blue-ocean"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Blue ocean mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--green"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Green mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--green-dark"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Green dark mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--green-lemon"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Green lemon mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--green-pine"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Green pine mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--orange"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Orange mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--purple"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Purple mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--purple-violet"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Purple violet mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--red-crayola"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Red crayola mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--red-tomato"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Red tomato mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--warm-grey"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Warm grey mode</div>
     </div>
   </article>
+
+</div>
 </div>
 <div
   class="ecl-navigation-list ecl-navigation-list--col-2 ecl-color-mode--yellow-gold"
 >
+  <div class="ecl-navigation-list__items">
   <article class="ecl-navigation-list__item">
     <div class="ecl-content-block ecl-navigation-list__content-block">
       <div class="ecl-content-block__description">Yellow gold mode</div>
     </div>
   </article>
+
+</div>
 </div>

@@ -1,13 +1,13 @@
-# ECL Utility Class Index (EC preset, v5.3.1)
+# ECL Utility Class Index (EC preset, v5.4.0)
 
-Setup note: the loading snippet and class audit below target ECL v5.3.1 at
-pinned commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The official EC site
-and compiled assets also report v5.3.1.
+Setup note: the loading snippet and class audit below target ECL v5.4.0 at
+pinned commit `450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The official EC site
+and compiled assets also report v5.4.0.
 
 This is the cross-family index for the EC utility bundle. Use the focused guide
 named in each section for the complete class contract, values, examples, and
-known v5.3.1 defects. All 15 utility package manifests in the pinned source
-are v5.3.1; the matching `@ecl/grid` and mixin dependencies are used where
+known v5.4.0 defects. All 15 utility package manifests in the pinned source
+are v5.4.0; the matching `@ecl/grid` and mixin dependencies are used where
 declared. The focused guides record target-specific token and typography
 changes; this index records the delivered class surface and cross-family rules.
 
@@ -68,7 +68,7 @@ Explicit responsive display, flex, media-size, and spacing classes use:
 | `l`   | 996px         |
 | `xl`  | 1140px        |
 
-There is no EC `2xl` breakpoint or utility infix in v5.3.1. Rules are
+There is no EC `2xl` breakpoint or utility infix in v5.4.0. Rules are
 mobile-first `min-width` rules and continue to larger viewports until
 overridden.
 
@@ -180,7 +180,7 @@ ecl-u-border-color-{family}[-{shade}]
 ```
 
 The numbered `grey-alpha` and `white-alpha` selectors exist but are broken in
-v5.3.1 because they refer to undefined short custom properties. Do not use
+v5.4.0 because they refer to undefined short custom properties. Do not use
 them. Unnumbered `*-alpha` works. Call `guide("background")`, `guide("border")`,
 and `guide("colours")` before choosing a foreground/background combination.
 
@@ -255,7 +255,7 @@ It applies zero border and padding, two clipping declarations, a 1px box,
 all with `!important`.
 
 Do not use it as a substitute for `aria-hidden`, and do not put it on focusable
-content: ECL v5.3.1 supplies no focus-reveal companion class. Hidden text should
+content: ECL v5.4.0 supplies no focus-reveal companion class. Hidden text should
 clarify the same operation or content rather than give screen-reader users a
 different experience.
 

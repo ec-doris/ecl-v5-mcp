@@ -1,7 +1,7 @@
-# ECL Dimension Utilities (EC preset, v5.3.1)
+# ECL Dimension Utilities (EC preset, v5.4.0)
 
-This guide is audited against the EC preset at v5.3.1, pinned to commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The target release changes the
+This guide is audited against the EC preset at v5.4.0, pinned to commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The target release changes the
 utility package metadata from the earlier v5.0.1 evidence but does not change
 the dimension Sass contract.
 
@@ -29,7 +29,7 @@ When compiling from Sass packages, load the standalone entry point:
 @use "@ecl/utility-dimension/dimension";
 ```
 
-ECL v5.3.1 provides no responsive or breakpoint variants of these classes.
+ECL v5.4.0 provides no responsive or breakpoint variants of these classes.
 
 ## Exact class contract
 
@@ -200,7 +200,7 @@ For an arbitrary image, explicitly connect `max-width` to the token:
 />
 ```
 
-The upstream v5.3.1 Storybook demonstration uses this same
+The upstream v5.4.0 Storybook demonstration uses this same
 `max-width: var(--max-w)` connection. Without it, the max-width utility class
 alone would only define an otherwise unused custom property on the image.
 

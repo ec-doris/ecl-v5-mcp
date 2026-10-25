@@ -1,8 +1,8 @@
-# ECL Typography Utilities (EC preset, v5.3.1)
+# ECL Typography Utilities (EC preset, v5.4.0)
 
-Setup note: the loading snippet and audit below target ECL v5.3.1 at pinned
-commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The EC site and compiled
-assets also report v5.3.1.
+Setup note: the loading snippet and audit below target ECL v5.4.0 at pinned
+commit `450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The EC site and compiled
+assets also report v5.4.0.
 
 EC typography uses the Inter variable font and provides semantic heading,
 paragraph, and microcopy styles plus lower-level size, weight, color,
@@ -25,14 +25,17 @@ sibling directories: ECL tries the WebTools-hosted Inter files first and
 fallbacks. Typography utility selectors are not in `ecl-ec.css`. No JavaScript
 is required.
 
-When compiling Sass, use `@ecl/utility-typography` **5.3.1**; its screen entry
+When compiling Sass, use `@ecl/utility-typography` **5.4.0**; its screen entry
 point is `typography.scss` and its print entry point is `typography-print.scss`.
 The package depends on `@ecl/grid`, `@ecl/mixins-color` and
-`@ecl/mixins-typography`, all at **5.3.1**. The v5.3.0 changelog's typography
+`@ecl/mixins-typography`, all at **5.4.0**. The v5.3.0 changelog's typography
 weight change is EU-only; the EC values below remain the pinned target
 contract.
 
-The screen font stack is `Inter, arial, sans-serif`. Responsive semantic type
+In v5.4.0, semantic typography declarations use the `--ff-d` alias, which
+resolves through `--ecl-font-family-default`. The EC theme sets that theme-level
+font-family variable to `Inter, arial, sans-serif`; changing it lets the theme
+font family flow through the typography declarations. Responsive semantic type
 uses these mobile-first tiers:
 
 | Typography tier | Minimum width |
@@ -100,7 +103,7 @@ Each value is `font-size / line-height`:
 | XL — `ecl-u-type-paragraph-xl`, `...-paragraph-lead` | 1.375rem / 2rem   | 1.375rem / 2rem     | 1.375rem / 2rem     | 1.375rem / 2rem    |
 | 2XL — `ecl-u-type-paragraph-2xl`                     | 1.25rem / 1.75rem | 1.25rem / 1.75rem  | 1.375rem / 2rem    | 1.5rem / 2.25rem   |
 
-The v5.3.1 target keeps the XL style at 1.375rem/2rem across all four tiers.
+The v5.4.0 target keeps the XL style at 1.375rem/2rem across all four tiers.
 The earlier v5.0.1 theme reduced it at 480px and 768px; that old behavior is
 not present in the pinned target assets and should not be copied into new EC
 content.
@@ -189,14 +192,14 @@ The EC bundle emits 161 `ecl-u-type-color-*` classes:
 ```
 
 Call `guide("colours")` for exact values, valid color modes, contrast guidance,
-and the complete v5.3.1 alpha warning. In particular, do not use numbered
+and the complete v5.4.0 alpha warning. In particular, do not use numbered
 `ecl-u-type-color-grey-alpha-{shade}` or
 `ecl-u-type-color-white-alpha-{shade}`: an upstream short-name defect makes
 those declarations refer to undefined custom properties. The unnumbered
 `ecl-u-type-color-alpha` works.
 
 There is no `ecl-u-type-color-on-surface-highlight` selector in the compiled
-v5.3.1 EC assets, even though the Storybook control offers that name. Use
+v5.4.0 EC assets, even though the Storybook control offers that name. Use
 `ecl-u-type-highlight` for highlighted text or a valid color custom property in
 project CSS.
 
@@ -245,7 +248,7 @@ emphasis is semantic.
 ### Enhanced blocks
 
 All enhanced variants use the responsive 2XL body style at weight 300 and
-`display: block`. In v5.3.1 each variant also sets `--max-w: none`, so an
+`display: block`. In v5.4.0 each variant also sets `--max-w: none`, so an
 inherited ECL max-width token does not constrain the enhanced block; this is a
 target-release source change and does not alter paragraph utility max-widths:
 
@@ -288,7 +291,7 @@ Paragraph print sizes are XS 9/12pt, S 10.5/15pt, M 12/18pt, L 13.5/18pt, XL
 
 ## Implementation notes
 
-- The compiled v5.3.1 EC utility and print bundles each contain 221 distinct
+- The compiled v5.4.0 EC utility and print bundles each contain 221 distinct
   `ecl-u-type-*` class names: 161 colors and 60 other typography classes.
 - Most size, line-height, color, transformation, decoration, alignment, and
   utility box declarations use `!important`; avoid conflicting utilities.

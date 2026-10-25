@@ -1,13 +1,13 @@
-# ECL EC HTML-tag styling (v5.3.1)
+# ECL EC HTML-tag styling (v5.4.0)
 
 HTML-tag styling is an optional edge-case preset feature, not the default MCP
 asset set. The pinned source is `src/utilities/html-tag/` together with
 `src/presets/ec/src/ec-default.scss` and `ec-default-print.scss` at commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`.
 
 ## Contract
 
-Obtain both optional files from the v5.3.1 EC distribution:
+Obtain both optional files from the v5.4.0 EC distribution:
 
 ```text
 ecl-ec-default.css

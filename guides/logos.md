@@ -1,7 +1,7 @@
-# ECL EC logos (v5.3.1)
+# ECL EC logos (v5.4.0)
 
 The pinned EC logo guideline is backed by `@ecl/resources-ec-logo` at
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. It provides muted logos and
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. It provides muted logos and
 standard EC logos in positive and negative variants for official EU languages
 and other supported languages.
 

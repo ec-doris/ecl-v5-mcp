@@ -1,6 +1,6 @@
-# ECL EC print utilities (v5.3.1)
+# ECL EC print utilities (v5.4.0)
 
-The target package is `@ecl/utility-print` v5.3.1. Print utilities are split
+The target package is `@ecl/utility-print` v5.4.0. Print utilities are split
 between the screen utility bundle and the EC print bundle.
 
 ## Visibility
@@ -21,7 +21,7 @@ bundles with their intended media types so the visibility pair works:
 <link rel="stylesheet" href="assets/ecl-ec-print.css" media="print">
 ```
 
-The v5.3.1 print bundle does not reset `ecl-u-print-only`; leaving the screen
+The v5.4.0 print bundle does not reset `ecl-u-print-only`; leaving the screen
 utility bundle active during print can therefore keep print-only content
 hidden. Follow `guide("assets")` for the full screen/main/color-mode order.
 

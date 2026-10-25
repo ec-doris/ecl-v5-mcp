@@ -1,10 +1,11 @@
-# ECL Icons (EC preset, v5.3.1)
+# ECL Icons (EC preset, v5.4.0)
 
-This guide is audited against the EC preset at v5.3.1, pinned to commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The target icon Sass and Twig
-contracts are unchanged from the checked-in v5.0.1 evidence; the `@ecl/icon`
-and `@ecl/resources-icons` packages move to v5.3.1 and the Storybook notes now
-reflect the selected controls.
+This guide is audited against the EC preset at v5.4.0, pinned to commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The `@ecl/icon` Twig markup
+contract remains stable, while v5.4.0 updates icon color styling to use the CSS
+`color` property and publishes a separate
+Phosphor icon inventory. The standard, network, and flag inventories remain
+available from `@ecl/resources-icons` alongside that new list.
 
 ECL icons are WebTools-rendered glyphs styled and sized by ECL. Their markup is
 a `<span>` containing a WebTools icon class, the ECL base and size classes, and
@@ -48,10 +49,11 @@ For reusable examples from this MCP server, call the real `component` tool with
 }
 ```
 
-When compiling ECL packages, the Twig component is `@ecl/icon` v5.3.1 and the
-icon name inventories are published by `@ecl/resources-icons` v5.3.1. The
-tagged resource inventories contain 115 standard names, 29 network names and
-28 EU-member flag entries; the lists below mirror those v5.3.1 files.
+When compiling ECL packages, the Twig component is `@ecl/icon` v5.4.0 and the
+icon name inventories are published by `@ecl/resources-icons` v5.4.0. The
+tagged resource inventories contain 115 standard names, 29 network names,
+28 EU-member flag entries, and a 28-name Phosphor list; the lists below mirror
+the v5.4.0 files.
 
 ## Standard icon markup
 
@@ -118,10 +120,11 @@ element's font size.
 
 ### Colors
 
-- No ECL color modifier: `.ecl-icon` uses `fill: currentcolor`.
-- `ecl-icon--primary`: uses the active color mode's on-surface primary token,
-  falling back to the EC primary color.
-- `ecl-icon--inverted`: uses white on screen and the inverted color-mode token
+- No ECL color modifier: screen `.ecl-icon` sets both `color` and `fill` to
+  `currentcolor`; print sets `fill: currentcolor`.
+- `ecl-icon--primary`: sets `color` to the active color mode's on-surface
+  primary token, falling back to the EC primary color.
+- `ecl-icon--inverted`: sets white on screen and the inverted color-mode token
   with a white fallback in print.
 
 There is no `ecl-icon--default` CSS rule. In direct markup, omit the modifier
@@ -168,7 +171,7 @@ For an icon-only control, name the control and keep the glyph hidden:
 </button>
 ```
 
-When a standalone icon itself must be exposed as an image, the v5.3.1 Twig
+When a standalone icon itself must be exposed as an image, the v5.4.0 Twig
 component uses `aria-hidden="false"`, `role="img"`, and a `title` attribute:
 
 ```html
@@ -188,7 +191,7 @@ semantics. Prefer visible text or an accessible name on the containing control
 where possible. `as_image` without a title only changes `aria-hidden`; provide
 an explicit role and accessible title when complete image semantics are needed.
 The documented `title_id` and `description_id` inputs are not emitted by the
-v5.3.1 Twig template, so do not rely on them for relationships.
+v5.4.0 Twig template, so do not rely on them for relationships.
 
 ## Standard icons
 
@@ -223,6 +226,22 @@ v5.3.1 Twig template, so do not rely on them for relationships.
 | `star-filled`         | `star-outline`       | `success-filled`    | `success-outline`    |
 | `tag`                 | `trash`              | `upload`            | `warning-filled`     |
 | `warning-outline`     | `warning-round`      | `warning`           |                      |
+
+
+## Phosphor icons
+
+The 5.4.0 `list-phosphor.json` inventory provides these names for the
+`wt-icon-phosphor--{name}` WebTools family:
+
+| Icon 1               | Icon 2              | Icon 3            | Icon 4              |
+| -------------------- | ------------------- | ----------------- | ------------------- |
+| `arrow-down`         | `arrow-left`        | `arrow-right`     | `arrow-up`          |
+| `bell`               | `calendar`          | `camera`          | `check`             |
+| `download`           | `envelope`          | `funnel`          | `gear`              |
+| `heart`              | `house`             | `info`            | `magnifying-glass`  |
+| `minus`              | `pencil-simple`     | `plus`            | `printer`           |
+| `shopping-cart`      | `sliders`           | `star`            | `trash`             |
+| `upload`             | `user`              | `warning`         | `x`                 |
 
 ## EU member flags
 

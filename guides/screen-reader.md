@@ -1,6 +1,6 @@
-# ECL EC screen-reader utility (v5.3.1)
+# ECL EC screen-reader utility (v5.4.0)
 
-The target package is `@ecl/utility-screen-reader` v5.3.1. Use
+The target package is `@ecl/utility-screen-reader` v5.4.0. Use
 `ecl-u-sr-only` for text that should remain available to assistive technology
 while being visually clipped:
 
@@ -13,7 +13,7 @@ two clipping rules, a 1px box, negative margin, hidden overflow, absolute
 positioning, no wrapping and a 1px width. It is a visual technique, not a
 replacement for `aria-hidden`, accessible names, labels or live-region design.
 
-Do not place the class on content that must be keyboard-focusable. ECL v5.3.1
+Do not place the class on content that must be keyboard-focusable. ECL v5.4.0
 does not ship a companion focus-reveal utility. Keep visually hidden text
 short, accurate and equivalent to the visible operation or content; do not
 create a different experience for screen-reader users.

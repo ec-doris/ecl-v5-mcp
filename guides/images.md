@@ -1,8 +1,8 @@
-# ECL EC image guidance (v5.3.1)
+# ECL EC image guidance (v5.4.0)
 
 The pinned EC guideline at `src/website/src/pages/ec/guidelines/images/index.md`
 is content guidance, not a replacement for the media components. The target is
-ECL v5.3.1 at commit `0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`.
+ECL v5.4.0 at commit `450b1a049a5a604b43fe3bab3b4050485e7c8bd9`.
 
 ## Choose an image for a reason
 

@@ -2,7 +2,7 @@
 
 This server provides static EC HTML examples, Twig templates, a starter page,
 bundled CSS/JavaScript/assets, focused guides, and a reusable ECL implementation
-skill. The shared assets and reference materials target **ECL v5.3.1**. The
+skill. The shared assets and reference materials target **ECL v5.4.0**. The
 server does not render arbitrary component parameters. Use the eight tool names
 below; it does not expose tools named
 `get_component_examples` or `get_component`.
@@ -25,7 +25,7 @@ skills directory remains a client- or project-specific operation.
 
 Returns `starter-template.html`, an EC page shell with the required asset
 links, site header, navigation, breadcrumbs, main region, footer, and ECL
-auto-initialization. Its setup uses v5.3.1 assets; the site-wide markup audit is
+auto-initialization. Its setup uses v5.4.0 assets; the site-wide markup audit is
 still pending, so treat it as an integration starting point.
 
 ```json
@@ -253,7 +253,7 @@ ECL.autoInit({ root: document.querySelector("#dynamic-content") });
 ```
 
 The root must contain the component roots: the query scans descendants, not the
-root itself. Already initialized nodes are skipped. In v5.3.1, the returned
+root itself. Already initialized nodes are skipped. In v5.4.0, the returned
 `update()` function reuses the original node list and does **not** discover new
 nodes. Use the component’s lifecycle API when changing or removing an existing
 instance; the returned `destroy()` clears all registered ECL instances, not just
@@ -297,8 +297,8 @@ examples are already rendered and contain no Twig syntax.
 - Layout changes at an unexpected width: ECL is mobile-first; responsive classes
   use `min-width` and continue upward until overridden.
 
-The shared assets are from ECL v5.3.1, pinned to commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05`. The provenance manifest is not
+The shared assets are from ECL v5.4.0, pinned to commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9`. The provenance manifest is not
 shipped because it is not needed by the MCP runtime. Content-file edits are read
 on each tool call; changes to `index.js` require a server restart or client
 reconnect.

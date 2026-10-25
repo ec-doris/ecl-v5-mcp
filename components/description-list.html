@@ -1,11 +1,12 @@
 <!-- Default vertical list with collapsible definition lists -->
-<dl
+<div
   class="ecl-description-list"
   data-ecl-description-list
   data-ecl-description-list-more-label="Show more items"
   data-ecl-description-list-visible-items="2"
   data-ecl-auto-init="DescriptionList"
 >
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Label 01</dt>
   <dd class="ecl-description-list__definition">
     Descriptive text with <a class="ecl-link" href="/example">inline link</a>
@@ -43,7 +44,7 @@
           <span class="ecl-link__label">Standalone link</span>
           <span
             aria-hidden="false"
-            class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+            class="wt-icon-phosphor--arrow-square-out ecl-icon ecl-icon--xs ecl-link__icon ecl-icon-phosphor--arrow-square-out"
             role="img"
             title="Link to an external domain"
           ></span>
@@ -109,7 +110,7 @@
         <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
           <span
             aria-hidden="true"
-            class="wt-icon--facebook ecl-icon ecl-icon--s ecl-link__icon ecl-icon--facebook"
+            class="wt-icon-networks--mastodon ecl-icon ecl-icon--s ecl-link__icon ecl-icon-networks--mastodon"
           ></span>
           <span class="ecl-link__label">social network 1</span>
         </a>
@@ -118,7 +119,7 @@
         <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
           <span
             aria-hidden="true"
-            class="wt-icon--twitter ecl-icon ecl-icon--s ecl-link__icon ecl-icon--twitter"
+            class="wt-icon-networks--linkedin ecl-icon ecl-icon--s ecl-link__icon ecl-icon-networks--linkedin"
           ></span>
           <span class="ecl-link__label">social network 2</span>
         </a>
@@ -127,7 +128,7 @@
         <a class="ecl-link ecl-link--standalone ecl-link--icon" href="/example">
           <span
             aria-hidden="true"
-            class="wt-icon--mastodon ecl-icon ecl-icon--s ecl-link__icon ecl-icon--mastodon"
+            class="wt-icon-networks--bluesky ecl-icon ecl-icon--s ecl-link__icon ecl-icon-networks--bluesky"
           ></span>
           <span class="ecl-link__label">social network 3</span>
         </a>
@@ -188,9 +189,10 @@
     </ul>
   </dd>
 </dl>
+</div>
 
 <!-- Horizontal variant with extension classes and attributes -->
-<dl
+<div
   class="ecl-description-list ecl-description-list--horizontal custom-class custom-class--test"
   data-ecl-description-list
   data-ecl-description-list-more-label="Show more items"
@@ -199,6 +201,7 @@
   data-test="data-test-value"
   data-test-flag
 >
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Horizontal label</dt>
   <dd class="ecl-description-list__definition">Horizontal content</dd>
   <dt class="ecl-description-list__term">Horizontal links</dt>
@@ -230,82 +233,119 @@
     </ul>
   </dd>
 </dl>
+</div>
 
 <!-- Multiple terms for one definition and array text definitions without runtime hooks -->
-<dl class="ecl-description-list">
+<div class="ecl-description-list">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">First term</dt>
   <dt class="ecl-description-list__term">Second term</dt>
   <dd class="ecl-description-list__definition">Part one, part two.</dd>
 </dl>
+</div>
 
 <!-- Optional omission branches: term-only and definition-only -->
-<dl class="ecl-description-list">
+<div class="ecl-description-list">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Term without definition</dt>
 </dl>
-<dl class="ecl-description-list">
+</div>
+<div class="ecl-description-list">
+  <dl class="ecl-description-list__content">
   <dd class="ecl-description-list__definition">Definition without term</dd>
 </dl>
+</div>
 
 <!-- Empty items array renders no description list in tagged Twig. -->
 
 <!-- Compact color-mode roots -->
-<dl class="ecl-description-list ecl-color-mode--blue">
+<div class="ecl-description-list ecl-color-mode--blue">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Blue</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--blue-electric">
+</div>
+<div class="ecl-description-list ecl-color-mode--blue-electric">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Blue electric</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--blue-navy">
+</div>
+<div class="ecl-description-list ecl-color-mode--blue-navy">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Blue navy</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--blue-ocean">
+</div>
+<div class="ecl-description-list ecl-color-mode--blue-ocean">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Blue ocean</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--green">
+</div>
+<div class="ecl-description-list ecl-color-mode--green">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Green</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--green-dark">
+</div>
+<div class="ecl-description-list ecl-color-mode--green-dark">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Green dark</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--green-lemon">
+</div>
+<div class="ecl-description-list ecl-color-mode--green-lemon">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Green lemon</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--green-pine">
+</div>
+<div class="ecl-description-list ecl-color-mode--green-pine">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Green pine</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--orange">
+</div>
+<div class="ecl-description-list ecl-color-mode--orange">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Orange</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--purple">
+</div>
+<div class="ecl-description-list ecl-color-mode--purple">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Purple</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--purple-violet">
+</div>
+<div class="ecl-description-list ecl-color-mode--purple-violet">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Purple violet</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--red-crayola">
+</div>
+<div class="ecl-description-list ecl-color-mode--red-crayola">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Red crayola</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--red-tomato">
+</div>
+<div class="ecl-description-list ecl-color-mode--red-tomato">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Red tomato</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--warm-grey">
+</div>
+<div class="ecl-description-list ecl-color-mode--warm-grey">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Warm grey</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
-<dl class="ecl-description-list ecl-color-mode--yellow-gold">
+</div>
+<div class="ecl-description-list ecl-color-mode--yellow-gold">
+  <dl class="ecl-description-list__content">
   <dt class="ecl-description-list__term">Yellow gold</dt>
   <dd class="ecl-description-list__definition">Color mode sample</dd>
 </dl>
+</div>

@@ -1,6 +1,6 @@
-# ECL EC disable-scroll utility (v5.3.1)
+# ECL EC disable-scroll utility (v5.4.0)
 
-The target package is `@ecl/utility-disablescroll` v5.3.1. Its complete
+The target package is `@ecl/utility-disablescroll` v5.4.0. Its complete
 implementation is one class:
 
 ```css

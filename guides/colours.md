@@ -1,13 +1,13 @@
-# ECL Colours (EC preset, v5.3.1)
+# ECL Colours (EC preset, v5.4.0)
 
-Setup note: the loading snippet follows the v5.3.1 asset contract in
-`guide("assets")`. The audit below uses the pinned v5.3.1 source at commit
-`0b3ca5a9190e1c32ff00fc092380e3a8f3571a05` and the compiled EC assets in this
-MCP. The live EC documentation also reports v5.3.1.
+Setup note: the loading snippet follows the v5.4.0 asset contract in
+`guide("assets")`. The audit below uses the pinned v5.4.0 source at commit
+`450b1a049a5a604b43fe3bab3b4050485e7c8bd9` and the compiled EC assets in this
+MCP. The live EC documentation also reports v5.4.0.
 
 The v5.3.0 colour change that matters for consumers is the removal of
 `--cm-surface-color-mode-lowest`. It is intentionally not documented or used
-below. The v5.3.1 release itself contains no additional colour-token change;
+below. The v5.4.0 release itself contains no additional colour-token change;
 its release fixes are in layout-wrapper spacing and site-header search handling.
 
 ECL EC has two related colour systems:
@@ -129,7 +129,7 @@ are `--c-a-{shade}` and `--c-w-{shade}`.
 
 ### Unnumbered semantic aliases
 
-| Public property           | Internal alias | v5.3.1 value              |
+| Public property           | Internal alias | v5.4.0 value              |
 | ------------------------- | -------------- | ------------------------- |
 | `--ecl-color-primary`     | `--c-p`        | Primary 600, `#0046ff`    |
 | `--ecl-color-secondary`   | `--c-s`        | Secondary 400, `#ffbe5c`  |
@@ -178,14 +178,14 @@ For their exact contracts and special values, call:
 - `guide("border")`
 - `guide("typography")`
 
-## Alpha utility defect in v5.3.1
+## Alpha utility defect in v5.4.0
 
 The public alpha custom properties listed above are valid. However, the
-The v5.3.1 Sass utility generator incorrectly points numbered
+The v5.4.0 Sass utility generator incorrectly points numbered
 `grey-alpha-{shade}` and `white-alpha-{shade}` background, border, and text
 utilities to undefined variables such as `--c-g-alpha` and `--c-w-alpha`.
 
-Do not use these numbered alpha utility classes in v5.3.1:
+Do not use these numbered alpha utility classes in v5.4.0:
 
 ```text
 ecl-u-bg-grey-alpha-{shade}
@@ -288,7 +288,7 @@ Apply one mode class to the region that should inherit it:
 - `ecl-color-mode--red-tomato`
 
 There is no `ecl-color-mode--default` or `ecl-color-mode--dark` class in the
-v5.3.1 stylesheet. Omit the class to use the default tokens.
+v5.4.0 stylesheet. Omit the class to use the default tokens.
 
 ### Mode summary
 
@@ -358,7 +358,7 @@ should change. Removing the class restores inherited/default values.
 
 ## Color-mode utility classes
 
-Only these adaptive tokens have general-purpose utilities in v5.3.1.
+Only these adaptive tokens have general-purpose utilities in v5.4.0.
 
 ### Background
 

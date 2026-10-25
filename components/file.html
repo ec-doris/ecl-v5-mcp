@@ -1,4 +1,4 @@
-<!-- ECL v5.3.1 file examples: default, metadata, labels, translations, image and color modes. -->
+<!-- ECL v5.4.0 file examples: default, metadata, labels, translations, image and color modes. -->
 
 <h3 class="ecl-u-type-heading-3 ecl-u-mb-s">Default file</h3>
 <p class="ecl-u-type-paragraph ecl-u-mb-m">Use the base file layout for a downloadable document without imagery.</p>
@@ -33,10 +33,10 @@
     <div class="ecl-file__info">
       <div class="ecl-file__icon-box"><span class="wt-icon-phosphor--file-pdf ecl-icon ecl-icon--l ecl-icon-phosphor--file-pdf ecl-file__icon" aria-hidden="true"></span></div>
       <div class="ecl-file__content">
-        <div class="ecl-file__labels">
-  <div class="ecl-file__label"><span class="ecl-label ecl-label--highlight">Highlight</span></div>
-  <div class="ecl-file__label"><span class="ecl-label ecl-label--low">Important</span></div>
-</div>
+        <ul class="ecl-file__labels" aria-label="Labels">
+  <li class="ecl-file__label"><span class="ecl-label ecl-label--highlight">Highlight</span></li>
+  <li class="ecl-file__label"><span class="ecl-label ecl-label--low">Important</span></li>
+</ul>
         <div class="ecl-file__title" id="ecl-file-extensions-title">European Commission climate policy report</div>
         <div class="ecl-file__description">A supporting report with a concise description, metadata and taxonomy.</div>
         <ul class="ecl-file__primary-meta">
@@ -132,7 +132,8 @@
   <li class="ecl-file__primary-meta-item">DD Month YYYY</li>
 </ul>
         <div class="ecl-file__lists">
-  <dl class="ecl-description-list" data-ecl-auto-init="DescriptionList" data-ecl-description-list data-ecl-description-list-visible-items="2" data-ecl-description-list-more-label="Show more items">
+  <div class="ecl-description-list" data-ecl-auto-init="DescriptionList" data-ecl-description-list data-ecl-description-list-visible-items="2" data-ecl-description-list-more-label="Show more items">
+  <dl class="ecl-description-list__content">
     <dt class="ecl-description-list__term">Document type</dt>
     <dd class="ecl-description-list__definition ecl-description-list__definition--inline">
       <ul class="ecl-description-list__definition-list" data-ecl-description-list-collapsible>
@@ -142,6 +143,7 @@
       </ul>
     </dd>
   </dl>
+</div>
 </div>
       </div>
     </div>

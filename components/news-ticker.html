@@ -3,7 +3,9 @@
   class="ecl-news-ticker"
   data-ecl-news-ticker="true"
   data-ecl-auto-init="NewsTicker"
+  data-ecl-news-ticker-counter-label="of"
 >
+  <div class="ecl-news-ticker__wrapper">
   <div class="ecl-news-ticker__container">
     <div class="ecl-news-ticker__content">
       <ul class="ecl-news-ticker__slides" id="news-ticker-default-content">
@@ -36,7 +38,7 @@
               class="ecl-link ecl-link--standalone ecl-link--brand ecl-link--icon ecl-news-ticker__slide-text"
             >
               <span
-                class="wt-icon--external ecl-icon ecl-icon--2xs ecl-link__icon ecl-icon--external"
+                class="wt-icon-phosphor--arrow-square-out ecl-icon ecl-icon--xs ecl-link__icon ecl-icon-phosphor--arrow-square-out"
                 aria-hidden="false"
                 title="Link to an external domain"
                 role="img"
@@ -114,25 +116,9 @@
     </div>
   </div>
   <div class="ecl-news-ticker__controls">
-    <div class="ecl-news-ticker__actions">
+    <div class="ecl-slider-pager ecl-news-ticker__actions">
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__prev ecl-button--icon-only"
-        type="button"
-        data-ecl-news-ticker-prev
-      >
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true"
-            >Previous item</span
-          >
-          <span
-            class="wt-icon-phosphor--caret-left ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
-            aria-hidden="true"
-            data-ecl-icon
-          ></span>
-        </span>
-      </button>
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__play ecl-button--icon-only"
+        class="ecl-button ecl-button--secondary ecl-button--neutral ecl-slider-pager__play ecl-news-ticker__play ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-play
       >
@@ -148,7 +134,7 @@
         </span>
       </button>
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__pause ecl-button--icon-only"
+        class="ecl-button ecl-button--secondary ecl-button--neutral ecl-slider-pager__pause ecl-news-ticker__pause ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-pause
       >
@@ -164,7 +150,23 @@
         </span>
       </button>
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__next ecl-button--icon-only"
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-slider-pager__prev ecl-news-ticker__prev ecl-button--icon-only"
+        type="button"
+        data-ecl-news-ticker-prev
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Previous item</span
+          >
+          <span
+            class="wt-icon-phosphor--caret-left ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-slider-pager__next ecl-news-ticker__next ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-next
       >
@@ -178,11 +180,10 @@
         </span>
       </button>
     </div>
-    <div class="ecl-news-ticker__counter" dir="ltr">
-      <span class="ecl-news-ticker__counter--current">1</span> of
-      <span class="ecl-news-ticker__counter--max">6</span>
-    </div>
+    <div class="ecl-news-ticker__counter" dir="ltr"></div>
   </div>
+
+</div>
 </div>
 
 <!-- Single item with custom labels, class, valued and valueless attributes -->
@@ -192,7 +193,9 @@
   data-ecl-auto-init="NewsTicker"
   data-test="single"
   data-ready
+  data-ecl-news-ticker-counter-label="of"
 >
+  <div class="ecl-news-ticker__wrapper">
   <div class="ecl-news-ticker__container">
     <div class="ecl-news-ticker__content">
       <ul class="ecl-news-ticker__slides" id="news-ticker-single-content">
@@ -215,25 +218,9 @@
     </div>
   </div>
   <div class="ecl-news-ticker__controls">
-    <div class="ecl-news-ticker__actions">
+    <div class="ecl-slider-pager ecl-news-ticker__actions">
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__prev ecl-button--icon-only"
-        type="button"
-        data-ecl-news-ticker-prev
-      >
-        <span class="ecl-button__container">
-          <span class="ecl-button__label" data-ecl-label="true"
-            >Previous news</span
-          >
-          <span
-            class="wt-icon-phosphor--caret-left ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
-            aria-hidden="true"
-            data-ecl-icon
-          ></span>
-        </span>
-      </button>
-      <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__play ecl-button--icon-only"
+        class="ecl-button ecl-button--secondary ecl-button--neutral ecl-slider-pager__play ecl-news-ticker__play ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-play
       >
@@ -249,7 +236,7 @@
         </span>
       </button>
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__pause ecl-button--icon-only"
+        class="ecl-button ecl-button--secondary ecl-button--neutral ecl-slider-pager__pause ecl-news-ticker__pause ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-pause
       >
@@ -265,7 +252,23 @@
         </span>
       </button>
       <button
-        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-news-ticker__next ecl-button--icon-only"
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-slider-pager__prev ecl-news-ticker__prev ecl-button--icon-only"
+        type="button"
+        data-ecl-news-ticker-prev
+      >
+        <span class="ecl-button__container">
+          <span class="ecl-button__label" data-ecl-label="true"
+            >Previous news</span
+          >
+          <span
+            class="wt-icon-phosphor--caret-left ecl-icon ecl-icon--m ecl-button__icon ecl-icon-phosphor--caret-left"
+            aria-hidden="true"
+            data-ecl-icon
+          ></span>
+        </span>
+      </button>
+      <button
+        class="ecl-button ecl-button--tertiary ecl-button--neutral ecl-slider-pager__next ecl-news-ticker__next ecl-button--icon-only"
         type="button"
         data-ecl-news-ticker-next
       >
@@ -279,36 +282,80 @@
         </span>
       </button>
     </div>
-    <div class="ecl-news-ticker__counter" dir="ltr">
-      <span class="ecl-news-ticker__counter--current">1</span> sur
-      <span class="ecl-news-ticker__counter--max">1</span>
-    </div>
+    <div class="ecl-news-ticker__counter" dir="ltr"></div>
   </div>
+
+</div>
 </div>
 
 <!-- Empty-items/root-only output contract; intentionally not auto-initialized. -->
-<div class="ecl-news-ticker" data-ecl-news-ticker="true">
+<div class="ecl-news-ticker" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
   <div class="ecl-news-ticker__controls">
-    <div class="ecl-news-ticker__counter" dir="ltr">
-      <span class="ecl-news-ticker__counter--current">1</span> of
-      <span class="ecl-news-ticker__counter--max">0</span>
-    </div>
+    <div class="ecl-news-ticker__counter" dir="ltr"></div>
   </div>
+
+</div>
 </div>
 
 <!-- EC color mode class hooks; these static roots are not auto-initialized. -->
-<div class="ecl-news-ticker ecl-color-mode--blue" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--blue-electric" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--blue-navy" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--blue-ocean" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--green" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--green-dark" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--green-lemon" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--green-pine" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--orange" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--purple" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--purple-violet" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--red-crayola" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--red-tomato" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--warm-grey" data-ecl-news-ticker="true"></div>
-<div class="ecl-news-ticker ecl-color-mode--yellow-gold" data-ecl-news-ticker="true"></div>
+<div class="ecl-news-ticker ecl-color-mode--blue" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--blue-electric" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--blue-navy" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--blue-ocean" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--green" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--green-dark" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--green-lemon" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--green-pine" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--orange" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--purple" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--purple-violet" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--red-crayola" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--red-tomato" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--warm-grey" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
+<div class="ecl-news-ticker ecl-color-mode--yellow-gold" data-ecl-news-ticker="true" data-ecl-news-ticker-counter-label="of">
+  <div class="ecl-news-ticker__wrapper">
+</div>
+</div>
